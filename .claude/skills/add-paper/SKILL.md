@@ -1,21 +1,47 @@
 ---
 name: add-paper
-description: Read a paper PDF from References/Paper_PDFs once and turn it into a structured Markdown note plus an INDEX.md entry, so later sessions never need the PDF. Use when the user says "add this paper", drops a new PDF into References, or runs /add-paper <file>.
-argument-hint: <pdf filename in References/Paper_PDFs, or "all new">
+description: Index every PDF in References/Paper_PDFs that isn't yet in References/INDEX.md. Each paper is read once and turned into a structured Markdown note plus an index row, so later sessions never need the PDF. Use when the user runs /add-paper, says "add/index the new papers", or drops PDFs into References.
+argument-hint: "[optional: specific PDF filename(s) to (re)index]"
 ---
 
-# Add a paper to the reference library
+# Index new papers
 
-Goal: read the PDF **once**, carefully, and capture everything a later session would need, so the PDF only has to be reopened for exact wording or figures.
+Goal: read each PDF **once**, carefully, and capture everything a later session would need, so the PDF only has to be reopened for exact wording or figures.
 
-## Steps
+## 1. Find unindexed PDFs
 
-1. **Find the PDF.** Use `$ARGUMENTS` relative to `References/Paper_PDFs/`. If it is "all new" or empty, list the PDFs that have no note linked from `References/INDEX.md` and process each one.
-2. **Extract the text.** Try the Read tool with `pages` (max 20 per call). If it fails (some PDFs are reported as "password-protected" even when they aren't), run `pdftotext -layout <pdf> <scratchpad>/<name>.txt` and read that. Write to the scratchpad, never into the repo. Run `pdfinfo` first to get the page count. If the extracted text is empty, the PDF is scanned and needs OCR; tell the user.
-3. **Read the entire paper**, including the tables and figure captions.
-4. **Write the note** at `References/notes/<firstauthor>-<year>-<short-title-slug>.md` using the template below. Copy the structure of the existing notes in `References/notes/`.
-5. **Add one row to `References/INDEX.md`**: the citation, a one-line takeaway with topics, and a link to the note.
-6. **Commit** the note and the index together (`Add reference note: <short title>`). The PDF stays untracked because `.gitignore` excludes `*.pdf*`.
+If `$ARGUMENTS` names specific files, process those, even if they are already indexed; in that case replace their existing note and index row. Otherwise, from the repo root, run:
+
+```bash
+cd References/Paper_PDFs && for f in *.pdf; do grep -qF "\`$f\`" ../INDEX.md || echo "$f"; done
+```
+
+A PDF counts as indexed when its exact filename appears in backticks in the INDEX.md **PDF** column. If nothing is printed, say every paper is already indexed and stop. Otherwise, list the files you are about to process.
+
+## 2. Write one note per paper
+
+- **One paper:** follow "Per-paper procedure" yourself.
+- **Two or more papers:** launch one `general-purpose` subagent per paper, in parallel in a single message, so the full texts don't fill this session's context. Give each subagent:
+  - the PDF path
+  - the note path
+  - the "Per-paper procedure", "Note template" and "Rules" sections below, copied out in full
+  - the path of an existing note in `References/notes/`, to copy its style
+  - an instruction **not** to edit INDEX.md and **not** to commit, and to return only the finished INDEX row plus any parts flagged for checking
+
+## 3. Update the index and commit
+
+Only the main session edits `References/INDEX.md`; subagents never do, so parallel edits can't collide. Add one row per paper, keeping the table sorted by first author. Then commit all new notes and the index together. Use `Add reference note: <short title>` for one paper, or `Add reference notes: <n> papers` for several. The PDFs stay untracked because `.gitignore` excludes `*.pdf*`.
+
+Finish by listing each paper with its note link and the parts to check against the PDF.
+
+## Per-paper procedure
+
+1. Run `pdfinfo <pdf>` to get the page count and metadata.
+2. **Extract the text.** Try the Read tool with `pages` (max 20 per call). If it fails (some PDFs are reported as "password-protected" even when they aren't), run `pdftotext -layout <pdf> <scratchpad>/<name>.txt` and read that. Write to the scratchpad, never into the repo. If the extracted text is empty, the PDF is scanned and needs OCR; report this instead of guessing.
+3. Read the **entire** paper, including tables, figure captions and the conclusion.
+4. Write the note at `References/notes/<firstauthor>-<year>-<short-title-slug>.md` (lowercase, hyphens).
+5. Write the INDEX row:
+   `| <Authors short> <year>, *<Title>* (<venue/DOI/arXiv>) | <one-line takeaway; topics> | [note](notes/<file>.md) | \`<exact PDF filename>\` |`
 
 ## Note template
 
@@ -36,5 +62,5 @@ Goal: read the PDF **once**, carefully, and capture everything a later session w
 
 - Paraphrase; quote only short phrases. Every claim and number gets a page reference.
 - PDF extraction often garbles equations and tables. Rebuild them where you can and check them (for example, by recomputing sums), then add a `> ` note saying what to verify against the PDF. Never present a guess as exact.
-- Cross-link related notes and point out where a new paper agrees with or contradicts an existing one.
-- Keep the INDEX entry to one line; it is loaded into every session.
+- Cross-link related notes in `References/notes/` and point out where a paper agrees with or contradicts another.
+- Keep each INDEX row to one line; the index is loaded into every session.
