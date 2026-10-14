@@ -26,3 +26,6 @@
 *.pdf binary
 *.png binary
 *.xlsx binary
+
+# Shell scripts must keep LF endings to run in Git Bash
+*.sh text eol=lf
