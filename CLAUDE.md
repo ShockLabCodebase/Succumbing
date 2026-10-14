@@ -8,7 +8,13 @@ This repository is at an early stage: it has no source code, build system or tes
 
 ## Domain
 
-The work is MATLAB-based (see `.gitattributes`). The reference material is on jet screech: `References/Paper_PDFs/Edgington-Mitchell_waves_in_screeching_jets.pdf`.
+The work is MATLAB-based (see `.gitattributes`). The reference material is on jet screech.
+
+## Reference library
+
+Papers are summarised once into `References/notes/*.md`. Use the notes instead of re-reading the PDFs, and open a PDF only for exact wording, figures or derivations, using the page numbers in the note. Add new papers with `/add-paper <file>` (`.claude/skills/add-paper/`). The index is below:
+
+@References/INDEX.md
 
 ## Repository conventions
 
