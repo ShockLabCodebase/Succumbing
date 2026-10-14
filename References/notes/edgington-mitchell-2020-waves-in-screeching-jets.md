@@ -95,6 +95,7 @@ This project analyses experimental resonance and feedback data (schlieren, acous
   - Run POD on the **transverse** velocity only, so the leading pair is the resonance mode (p. 9).
   - Form the complex mode Φ = φ₁ + iφ₂ (p. 9).
   - FFT it in x and split k_x < 0 from k_x > 0 to get upstream and downstream waves (p. 10, 15).
+  - The paper notes that SPOD couldn't be used because the PIV isn't time-resolved (p. 9). This POD route is the non-time-resolved alternative. With time-resolved schlieren, SPOD or BMD would give the frequency-resolved equivalent, and the same wavenumber split would still apply.
   - This needs no time resolution, so it applies directly to lab PIV of screeching or impinging jets. Use cosine-tapered bandpass filters for individual waves (half-width 1.9D, taper 0.5; p. 17), and treat the results as qualitative because they depend on the filter.
 - **Explaining spatial modulation:** a k_x > 0 high-pass filter removes the standing wave. Any modulation left in the core points to a `k_t+` trapped wave, not shock modulation of the KH wave (p. 20–23). This is a useful check before attributing amplitude modulation in PIV or schlieren to the shocks.
 - **Wave identification checklist:** look for the KH peak at u_p ≈ 0.7 U_j, the guided mode at about −a∞, and `k_t±` at k_kh ± k_s. Use the dashed sonic and shock-spacing lines in the wavenumber spectra as references (Fig. 10, p. 16).
