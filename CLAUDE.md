@@ -20,6 +20,8 @@ My research area is largely around analysing experimental data (time-resolved sc
    - **Time-resolved data** (e.g. high-speed schlieren, acoustics): SPOD and BMD (bispectral mode decomposition).
    - **Non-time-resolved data** (e.g. PIV): POD, often using pairs of POD modes to recover the phase of the oscillation.
 
+**Analysis code:** the group's MATLAB analysis codes are in separate GitHub repositories under `ShockLabCodebase`, one each for schlieren, acoustics, PIV and LES. The LES repo analyses LES data supplied by other research groups. They are cloned on this PC. **Don't read, search or modify those repositories unless the user explicitly asks in that session.** Ask before using them as a reference.
+
 **Modelling matters too:** experiments, modelling and simulation go hand in hand. When summarising papers or analysing data, cover the modelling and simulation side as thoroughly as the experiments: linear stability, resolvent analysis, reduced-order models and LES/DNS, including their assumptions, numerics and how they compare with experiment.
 
 **Lab naming:** "The Shock Lab" is the research group. Its physical lab spaces are the Shock Lab, Combustion Lab and TABLE Lab. When a paper's authors are from the group but the paper doesn't name the space, call it a "Shock Lab group facility", not a specific lab.
