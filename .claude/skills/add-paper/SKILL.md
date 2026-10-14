@@ -62,5 +62,6 @@ Finish by listing each paper with its note link and the parts to check against t
 
 - Paraphrase; quote only short phrases. Every claim and number gets a page reference.
 - PDF extraction often garbles equations and tables. Rebuild them where you can and check them (for example, by recomputing sums), then add a `> ` note saying what to verify against the PDF. Never present a guess as exact.
+- **Facility attribution:** if the experiments come from the Shock Lab group (see "Lab naming" in CLAUDE.md), name the lab space (Shock Lab, Combustion Lab or TABLE Lab) only when the paper states it. Otherwise write "Shock Lab group facility".
 - Cross-link related notes in `References/notes/` and point out where a paper agrees with or contradicts another.
 - Keep each INDEX row to one line; the index is loaded into every session.

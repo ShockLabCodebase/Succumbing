@@ -14,6 +14,8 @@ The work is MATLAB-based (see `.gitattributes`). The reference material is on je
 
 My research area is largely around analysing experimental data (time-resolved schlieren, acoustic measurements, particle image velocimetry) taken here in our lab (The Shock Lab). The types of flows we investigate range from subsonic jets (nozzles), to impinging supersonic jets, supersonic wind tunnels, and flow from non-axisymmetric nozzle geometries. The large focus is on resonance and feedback processes. We often supplement these analyses with reduced order models or high fidelity simulations, but those aren't currently my area of focus. 
 
+**Lab naming:** "The Shock Lab" is the research group. Its physical lab spaces are the Shock Lab, Combustion Lab and TABLE Lab. When a paper's authors are from the group but the paper doesn't name the space, call it a "Shock Lab group facility", not a specific lab.
+
 ## Reference library
 
 Papers are summarised once into `References/notes/*.md`. Use the notes instead of re-reading the PDFs, and open a PDF only for exact wording, figures or derivations, using the page numbers in the note. Run `/add-paper` to index every PDF in `References/Paper_PDFs/` that isn't yet in the index (`.claude/skills/add-paper/`). The index is below:
