@@ -1,6 +1,6 @@
 # Reference index
 
-One line per paper. Read the linked note for detail; open the PDF in `Paper_PDFs/` (local only, not in Git) only when exact wording, figures or derivations are needed. Run `/add-paper` to index any PDFs not listed here. The PDF column must hold the exact filename, because that's how unindexed papers are detected.
+One line per paper. Read the linked note for detail; open the PDF (local only, not in Git) only when exact wording, figures or derivations are needed. Run `/add-paper [folder]` to index any PDFs not listed here. The PDF column holds the index key, which is how unindexed papers are detected: a bare filename (or subpath) means the file is in `Paper_PDFs/`; a full path such as `D:/Papers/x.pdf` points to a PDF elsewhere.
 
 | Paper | Topics | Note | PDF |
 |---|---|---|---|

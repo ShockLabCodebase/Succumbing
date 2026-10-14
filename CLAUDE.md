@@ -32,7 +32,7 @@ My research area is largely around analysing experimental data (time-resolved sc
 
 ## Reference library
 
-Papers are summarised once into `References/notes/*.md`. Use the notes instead of re-reading the PDFs, and open a PDF only for exact wording, figures or derivations, using the page numbers in the note. Run `/add-paper` to index every PDF in `References/Paper_PDFs/` that isn't yet in the index (`.claude/skills/add-paper/`). The index is below:
+Papers are summarised once into `References/notes/*.md`. Use the notes instead of re-reading the PDFs, and open a PDF only for exact wording, figures or derivations, using the page numbers in the note. Run `/add-paper` to index every PDF in `References/Paper_PDFs/` that isn't yet in the index, or `/add-paper <folder>` to index PDFs kept elsewhere; those stay where they are and are recorded by full path (`.claude/skills/add-paper/`). The index is below:
 
 @References/INDEX.md
 
