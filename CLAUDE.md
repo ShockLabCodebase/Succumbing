@@ -19,6 +19,10 @@ My research area is largely around analysing experimental data (time-resolved sc
 2. Then modal decomposition, chosen by data type:
    - **Time-resolved data** (e.g. high-speed schlieren, acoustics): SPOD and BMD (bispectral mode decomposition).
    - **Non-time-resolved data** (e.g. PIV): POD, often using pairs of POD modes to recover the phase of the oscillation.
+3. **Hilbert POD (HPOD)** is a more recent addition. It gives instantaneous frequency and amplitude of key processes, rather than the block-averaged view from SPOD and BMD. One hybrid pipeline:
+   1. Run SPOD.
+   2. Rebuild the data from a chosen subset of SPOD modes and frequencies.
+   3. Run Hilbert POD on the rebuilt data to track how the selected dynamics change over time.
 
 **Analysis code:** the group's MATLAB analysis codes are in separate GitHub repositories under `ShockLabCodebase`, one each for schlieren, acoustics, PIV and LES. The LES repo analyses LES data supplied by other research groups. They are cloned on this PC. **Don't read, search or modify those repositories unless the user explicitly asks in that session.** Ask before using them as a reference.
 
