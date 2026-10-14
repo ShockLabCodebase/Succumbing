@@ -1,0 +1,15 @@
+*.asv
+!spec/*.asv
+
+*.o1*
+!psec/*.o1*
+
+*.log
+!spec/*.log
+
+*.e1*
+!psec/*.e1*
+
+*.pdf*
+!psec/*.pdf*
+
