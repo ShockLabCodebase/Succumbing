@@ -90,4 +90,15 @@ The paper uses PIV measurements of three screeching jets together with global an
 - Coordinates: r from the stability analysis is shown as y to match the PIV.
 
 ## Relevance to this project
-_To be filled in once the project scope is in CLAUDE.md._ Related works cited here: Weightman et al. 2017 (phase lag in impingement), 2018 (POD shear-layer signatures; basis of the transverse-only POD choice) and 2019 (nozzle external geometry and azimuthal mode selection in impinging jets; evidence for free-stream acoustic closure in some impinging cases).
+This project analyses experimental resonance and feedback data (schlieren, acoustics, PIV) from the Shock Lab; see CLAUDE.md.
+- **A method for non-time-resolved PIV:**
+  - Run POD on the **transverse** velocity only, so the leading pair is the resonance mode (p. 9).
+  - Form the complex mode Φ = φ₁ + iφ₂ (p. 9).
+  - FFT it in x and split k_x < 0 from k_x > 0 to get upstream and downstream waves (p. 10, 15).
+  - This needs no time resolution, so it applies directly to lab PIV of screeching or impinging jets. Use cosine-tapered bandpass filters for individual waves (half-width 1.9D, taper 0.5; p. 17), and treat the results as qualitative because they depend on the filter.
+- **Explaining spatial modulation:** a k_x > 0 high-pass filter removes the standing wave. Any modulation left in the core points to a `k_t+` trapped wave, not shock modulation of the KH wave (p. 20–23). This is a useful check before attributing amplitude modulation in PIV or schlieren to the shocks.
+- **Wave identification checklist:** look for the KH peak at u_p ≈ 0.7 U_j, the guided mode at about −a∞, and `k_t±` at k_kh ± k_s. Use the dashed sonic and shock-spacing lines in the wavenumber spectra as references (Fig. 10, p. 16).
+- **Feedback-loop framing:** the paper splits resonance into four processes: downstream wave, downstream reflection, upstream wave, and upstream receptivity at the nozzle (p. 2). Its result that the loop is linear apart from the KH–shock interaction (p. 24) is a baseline to test against for impinging and non-axisymmetric nozzles.
+- **Impinging jets:** guided-mode closure applies to subsonic and supersonic impinging jets. However, some impinging cases close via free-stream acoustic waves (Weightman et al. 2019; p. 2). Nozzle lip thickness affects the resonance (Raman 1997; Weightman et al. 2019; Beneddine et al. 2015; p. 6).
+- **Monash facility, possibly the same lab:** D = 15 mm converging nozzle with a 5 mm lip and a 100:1 contraction (p. 8). The conditions in Table 1 are a reference for A1/A2/C screech staging.
+- **Related works cited:** Weightman et al. 2017 (phase lag in impingement), 2018 (POD shear-layer signatures; basis of the transverse-only POD choice) and 2019 (nozzle external geometry and azimuthal mode selection in impinging jets). Also Edgington-Mitchell et al. 2018a (guided-mode screech closure) and Mancinelli et al. 2019a (screech prediction using guided modes). All are candidates for `/add-paper`.
