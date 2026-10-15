@@ -44,6 +44,8 @@ To check a build end to end:
 
 Test files: `python tests/make_synthetic.py <dir>` writes five small synthetic NPR-sweep files in the v7.3 layout. `python tests/waterfall_test.py <out_dir> <files...>` tests the waterfall and the link back to the viewer.
 
+Icon: `python tools/make_icon.py` redraws `spodviewer/assets/spodviewer.png` and `.ico` (a screech-like spectrum over "ShockLab" in spectral bars; needs Windows' Bahnschrift font). Rebuild afterwards to embed it in the exe.
+
 Run from source: `python run_spodviewer.py [file.mat]`.
 Headless test: `python tests/smoke_test.py <file.mat> <out_dir>`.
 
