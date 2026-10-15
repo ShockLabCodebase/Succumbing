@@ -27,6 +27,7 @@ If nothing is printed, say every paper in that folder is already indexed and sto
 Name notes by paper, not by folder, so a note's path doesn't change if its PDF moves.
 
 - **One paper:** follow "Per-paper procedure" yourself.
+- **Long documents** (theses, reports, books; roughly 80+ pages): map chapters to PDF pages from the contents, then give one subagent per chapter range, in parallel. Each writes a draft section to the scratchpad, and the main session merges the drafts into **one** note. Cite printed page numbers and record the offset between printed and PDF pages in the note's header. If a thesis contains published papers, list them, and mark any that already have their own note.
 - **Two or more papers:** launch one `general-purpose` subagent per paper, in parallel in a single message, so the full texts don't fill this session's context. Give each subagent:
   - the PDF path (to read) and its index key (for the INDEX row)
   - the note path

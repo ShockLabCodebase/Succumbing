@@ -21,7 +21,7 @@ if [ ! -d "$dir" ]; then
   exit 1
 fi
 
-winpath() { local p; p=$(cygpath -m "$1"); printf '%s' "${p#//?/}"; }  # drop long-path prefix
+winpath() { local p; p=$(cygpath -m "$1"); printf '%s' "${p#'//?/'}"; }  # drop long-path prefix
 default_abs=$(winpath "$(cd "$default" && pwd)")
 
 find "$dir" -type f -iname '*.pdf' -print0 | sort -z | while IFS= read -r -d '' f; do
