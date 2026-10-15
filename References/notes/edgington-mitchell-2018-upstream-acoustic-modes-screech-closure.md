@@ -2,7 +2,7 @@
 
 - **Authors:** D. Edgington-Mitchell, V. Jaunet, P. Jordan, A. Towne, J. Soria, D. Honnery (Monash; Institut PPRIME, Poitiers; CTR Stanford)
 - **Source:** J. Fluid Mech. 855, R1 (2018), doi:10.1017/jfm.2018.642. This file is the HAL author draft (hal-02351577, JFM LaTeX style), so its page layout differs from the published Rapids version.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/DEM_JFM_2018_Screech_Closure_Final.pdf` (12 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2018_Upstream-Travelling-Acoustic-Jet-Modes-As-A-Closure-Mechanism-For-Screech.pdf` (12 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the HAL cover sheet, so the draft's printed page n is PDF page n+1.
 - **Tags:** screech, A1/A2 stages, underexpanded jet, guided jet mode (k_TH⁻), upstream-travelling wave, feedback closure, vortex-sheet model, cut-on/cut-off, POD mode pair, streamwise Fourier transform, non-time-resolved PIV
 

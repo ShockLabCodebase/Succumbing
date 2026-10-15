@@ -3,7 +3,7 @@
 - **Authors:** S. L. Brunton (U. Washington), B. R. Noack (LIMSI-CNRS / TU Berlin), P. Koumoutsakos (ETH Zurich)
 - **Source:** Annual Review of Fluid Mechanics 52:477–508 (2020); Review in Advance 12 Sep 2019
 - **DOI:** 10.1146/annurev-fluid-010719-060214
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/annual-rev-machine-learning-fluids.pdf` (34 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Brunton-EtAl_2020_Machine-Learning-For-Fluid-Mechanics.pdf` (34 pp.)
 - **Tags:** review, machine learning, POD/PCA, autoencoder, clustering, DMD, Koopman, SINDy, sparse regression, superresolution, PIV processing, turbulence closure, genetic programming, reinforcement learning, flow control, stochastic optimisation
 
 > Page references are **journal page numbers** (477–508). PDF page = journal page − 476 (e.g. p. 490 is PDF p. 14). Pages 501–508 are the reference list.

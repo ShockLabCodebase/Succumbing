@@ -2,7 +2,7 @@
 
 - **Authors:** P. A. S. Nogueira, P. Jordan, V. Jaunet, A. V. G. Cavalieri, A. Towne, D. Edgington-Mitchell
 - **Source:** arXiv:2106.12690v1 [physics.flu-dyn] (preprint, 23 Jun 2021; JFM style). Funded by ARC Discovery Project DP190102220 (p. 25).
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Petronio_2021_Absolute_Instability_Shock_Flows.pdf` (28 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf` (28 pp.)
 - **Tags:** screech, absolute instability, spatially periodic linear stability (SP-LSA), Floquet analysis, Briggs–Bers saddle point, Kelvin-Helmholtz wavepacket, guided jet mode, shock-cell modulation, oscillator vs amplifier, POD comparison, underexpanded jet
 
 ## Summary

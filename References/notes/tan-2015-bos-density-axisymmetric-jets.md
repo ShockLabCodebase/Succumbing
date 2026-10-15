@@ -3,7 +3,7 @@
 - **Authors:** D. J. Tan, D. Edgington-Mitchell, D. Honnery (LTRAC, Monash University)
 - **Source:** Experiments in Fluids 56:204 (2015). Received 22 Jul 2015, published online 3 Nov 2015.
 - **DOI:** 10.1007/s00348-015-2076-6
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Tan2015_Article_MeasurementOfDensityInAxisymm_BOS.pdf` (11 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf` (11 pp.)
 - **Tags:** background-oriented schlieren, BOS, Abel inversion, adaptive Fourier–Hankel (AFH), quantitative density, Gladstone–Dale, cross-correlation, wavelet-noise background, error analysis, helium jet, fuel injector, self-similarity, density half-radius
 
 ## Summary

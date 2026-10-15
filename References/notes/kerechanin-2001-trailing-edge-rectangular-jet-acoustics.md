@@ -2,7 +2,7 @@
 
 - **Authors:** C. W. Kerechanin II, M. Samimy, J.-H. Kim (The Ohio State University)
 - **Source:** AIAA Journal 39(6), 1065–1070, June 2001. DOI 10.2514/2.1418. Received May 2000. An earlier version is AIAA Paper 2000-0086, and the full data set is in Kerechanin's 2000 M.S. thesis (refs. 27–28).
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Kerechanin_Samimy_Kim_2001_Nozzle_Trailing_Edge_Rectangular_Acoustics.pdf` (6 pp.; network share, not in Git). Page refs below are PDF pages: p. 1 = journal p. 1065, through p. 6 = p. 1070.
+- **PDF:** `References/Paper_PDFs/Kerechanin-EtAl_2001_Effects-Of-Nozzle-Trailing-Edges-On-Acoustic-Field-Of-Supersonic-Rectangular-Jet.pdf` (6 pp.). Page refs below are PDF pages: p. 1 = journal p. 1065, through p. 6 = p. 1070.
 - **Tags:** rectangular jet, non-axisymmetric nozzle, aspect ratio 3, Mach 2, screech, broadband shock-associated noise, mixing noise, passive control, trailing-edge cutouts, streamwise vortices, nozzle symmetry, anechoic chamber, far-field acoustics, OASPL, perceived noise level
 
 ## Summary

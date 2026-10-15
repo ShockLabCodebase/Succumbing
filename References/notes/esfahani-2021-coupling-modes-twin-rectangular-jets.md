@@ -2,7 +2,7 @@
 
 - **Authors:** A. Esfahani, N. Webb, M. Samimy (Gas Dynamics and Turbulence Laboratory (GDTL), Aerospace Research Center, The Ohio State University)
 - **Source:** AIAA SciTech 2021 Forum (virtual), 11–15 Jan 2021. This copy is the authors' final manuscript; no AIAA paper number or DOI is printed in it.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Esfahanietal_Samimy_2021_Coupling_twinrectangularjets_SciTech2021_final.pdf` (21 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Esfahani-EtAl_2021_Coupling-Modes-In-Supersonic-Twin-Rectangular-Jets.pdf` (21 pp.)
 - **Tags:** twin jets, rectangular nozzle, non-axisymmetric, screech, jet coupling, flapping (anti-symmetric) mode, frequency mismatch, beating, intermittency, standing waves, wavelet coherence, near-field acoustics, far-field directivity, BBSAN, schlieren, LAFPA baseline
 
 ## Summary

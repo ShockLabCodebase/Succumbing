@@ -2,7 +2,7 @@
 
 - **Authors:** M. Raiola (Universidad Carlos III de Madrid; KIT), J. Kriegseis (Karlsruhe Institute of Technology)
 - **Source:** arXiv:2507.02487v1 [physics.flu-dyn] (preprint, 3 Jul 2025; JFM style)
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Hilbert_POD_Raiola_2025.pdf` (30 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Raiola-Kriegseis_2025_Hilbert-Proper-Orthogonal-Decomposition-A-Tool-For-Educing-Advective-Wavepackets.pdf` (30 pp.)
 - **Tags:** Hilbert POD (HPOD), analytic signal, Hilbert transform, complex POD, space-only HPOD, travelling wavepackets, instantaneous frequency and amplitude, intermittency, SPOD comparison, non-time-resolved PIV, cylinder wake DNS, turbulent jet LES, jet PIV
 
 ## Summary

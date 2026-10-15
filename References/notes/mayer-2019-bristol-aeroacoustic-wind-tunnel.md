@@ -2,7 +2,7 @@
 
 - **Authors:** Y. D. Mayer, H. Kamliya Jawahar, M. Szőke, S. A. Showkat Ali, M. Azarpeyvand (corresponding author); all at the University of Bristol
 - **Source:** Applied Acoustics 155 (2019) 358–370; doi:10.1016/j.apacoust.2019.06.005. Received 19 Feb 2019, accepted 3 Jun 2019. A preliminary version appeared as AIAA 2018-3138 at the 2018 AIAA/CEAS Aeroacoustics Conference (p. 1; ref. [1], p. 13).
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/BJARF_Design.pdf` (13 pp.; network share, not in Git). Page refs below are PDF pages, and journal page = PDF page + 357. The Read tool reports this PDF as password-protected, so use `pdftotext -layout`, or render pages with `pdftoppm` to see the figures and tables. The acronym in the filename, "BJARF", does not appear in the paper.
+- **PDF:** `References/Paper_PDFs/Mayer-EtAl_2019_Design-And-Performance-Of-An-Aeroacoustic-Wind-Tunnel-Facility-At-The-University.pdf` (13 pp.). Page refs below are PDF pages, and journal page = PDF page + 357. The Read tool reports this PDF as password-protected, so use `pdftotext -layout`, or render pages with `pdftoppm` to see the figures and tables.
 - **Tags:** aeroacoustic wind tunnel, anechoic chamber, open-jet test section, facility design, contraction nozzle design, splitter silencers, rectangular nozzle, hot-wire, turbulence intensity, background (jet) noise, far-field microphone arc, coherence, velocity scaling exponent, trailing-edge noise, cylinder vortex-shedding tone, NACA 0012, BPM model, RANS k–ω SST (OpenFOAM)
 
 ## Summary

@@ -3,7 +3,7 @@
 - **Authors:** B. C. Y. Yeung, O. T. Schmidt (UC San Diego)
 - **Source:** Theor. Comput. Fluid Dyn. 38:355–374 (2024). Received 6 Dec 2023, accepted 15 Apr 2024, published online 21 Jun 2024. Communicated by K. Oberleithner.
 - **DOI:** 10.1007/s00162-024-00695-0
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Adaptive_SPOD_Schmidt.pdf` (20 pp.; network share, not in Git). Page refs below are PDF pages; journal page = PDF page + 354.
+- **PDF:** `References/Paper_PDFs/Yeung-Schmidt_2024_Adaptive-Spectral-Proper-Orthogonal-Decomposition-Of-Broadband-Tonal-Flows.pdf` (20 pp.). Page refs below are PDF pages; journal page = PDF page + 354.
 - **Tags:** SPOD, multitaper spectral estimation, sine (minimum-bias) tapers, DPSS/Slepian tapers, Welch, variance–bias trade-off, adaptive bandwidth, mode convergence, Parseval, lossless/lossy data compression, tonal + broadband spectra, Rossiter tones, open cavity, TR-PIV, subsonic jet LES, KH wavepackets
 
 ## Summary

@@ -1,8 +1,8 @@
 # Closure mechanism of the A1 and A2 modes in jet screech
 
 - **Authors:** P. A. S. Nogueira, V. Jaunet, M. Mancinelli, P. Jordan, D. Edgington-Mitchell (Nogueira and Edgington-Mitchell: LTRAC, Monash; Jaunet, Mancinelli and Jordan: Institut Pprime, Poitiers; p. 1)
-- **Source:** arXiv:2107.06429v1 [physics.flu-dyn] (preprint, 13 Jul 2021; JFM-style draft). The PDF filename says 2022, but the file is the 2021 arXiv v1.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Petronio_2022_Closure_Models_A1_A2_Modes.pdf` (16 pp.; network share, not in Git)
+- **Source:** arXiv:2107.06429v1 [physics.flu-dyn] (preprint, 13 Jul 2021; JFM-style draft). The file is the 2021 arXiv v1.
+- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf` (16 pp.)
 - **Tags:** screech, A1/A2 mode staging, axisymmetric (m = 0) screech, shock-cell wavenumber spectrum, shock-spacing variation, Kelvin-Helmholtz wavepacket, guided jet mode, Tam & Tanna interaction, locally parallel LSA, spatially periodic (Floquet) LSA, absolute instability, saddle point, PIV mean flow, microphone array
 
 ## Summary

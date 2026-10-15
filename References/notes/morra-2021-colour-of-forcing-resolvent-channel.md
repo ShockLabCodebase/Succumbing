@@ -2,7 +2,7 @@
 
 - **Authors:** P. Morra, P. A. S. Nogueira, A. V. G. Cavalieri, D. S. Henningson (KTH FLOW, Stockholm; Instituto Tecnológico de Aeronáutica, São José dos Campos)
 - **Source:** J. Fluid Mech. 907, A24 (2021), doi:10.1017/jfm.2020.802. Received 3 Apr 2020, accepted 16 Sep 2020, published online 2020. Open access (CC BY-NC-ND).
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Petronio_2021_the-colour-of-forcing-statistics-in-resolvent-analyses-of-turbulent-channel-flows.pdf` (30 pp.; network share, not in Git). The file is named after the second author (Petrônio Nogueira); the first author is Morra.
+- **PDF:** `References/Paper_PDFs/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf` (30 pp.).
 - **Tags:** resolvent analysis, nonlinear forcing, forcing colour, cross-spectral density (CSD), SPOD, turbulent channel flow, DNS, eddy viscosity (Cess), lift-up, low-rank forcing, solenoidal projection, Orr–Sommerfeld–Squire, Welch windowing correction, sub-optimal resolvent modes
 
 ## Summary

@@ -2,7 +2,7 @@
 
 - **Authors:** E. Pickering, G. Rigas, P. A. S. Nogueira, A. V. G. Cavalieri, O. T. Schmidt, T. Colonius (Caltech; ITA, Brazil; UC San Diego)
 - **Source:** J. Fluid Mech. (2020) 896, A2; arXiv:1909.09737v2 (17 Jul 2020). Received 18 Sep 2019, accepted 14 Apr 2020 (p. 1). The DOI isn't printed in this arXiv version.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Petronio_2020_Lift_Up_Kelvin_Orr_Turbulent_Jets.pdf` (35 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf` (35 pp.)
 - **Tags:** turbulent jet, lift-up, streaks, streamwise vortices, Kelvin–Helmholtz wavepacket, Orr mechanism, global resolvent analysis, eddy viscosity, SPOD, structural sensitivity, mechanism map, azimuthal wavenumber, LES, subsonic/transonic/supersonic
 
 ## Summary

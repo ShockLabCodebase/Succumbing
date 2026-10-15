@@ -3,7 +3,7 @@
 - **Authors:** M. Mancinelli, V. Jaunet, P. Jordan, A. Towne
 - **Source:** Experiments in Fluids 60:22 (2019); received 18 Oct 2018, published online 3 Jan 2019
 - **DOI:** 10.1007/s00348-018-2673-2
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Mancinelli_2019_Article_Screech-tonePredictionUsingUps.pdf` (9 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf` (9 pp.)
 - **Tags:** screech, A1/A2 staging, underexpanded round jet, guided jet mode, cylindrical vortex-sheet model, resonance model, Kelvin-Helmholtz wavepacket, branch/saddle points, near-field microphone array, azimuthal decomposition, wavelet transform, mode switching, intermittency, quadratic nonlinear interaction
 
 ## Summary

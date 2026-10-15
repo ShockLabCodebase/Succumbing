@@ -2,7 +2,7 @@
 
 - **Authors:** M. Samimy, J.-H. Kim, P. S. Clancy, S. Martens (The Ohio State University)
 - **Source:** AIAA Journal 36(7), 1230–1239, July 1998. DOI 10.2514/2.504. Received Sept. 1997, revised March 1998. More detailed noise results (far and near field) are in AIAA Paper 97-0146 (ref. 45); Kim's 1998 OSU PhD thesis is ref. 36.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Samimy_1998_Rectangular_Jets_Nozzle_Trailing_Edge.pdf` (10 pp.; network share, not in Git). Page refs below are PDF pages: p. 1 = journal p. 1230, through p. 10 = p. 1239.
+- **PDF:** `References/Paper_PDFs/Samimy-EtAl_1998_Passive-Control-Of-Supersonic-Rectangular-Jets-Via-Nozzle-Trailing-Edge.pdf` (10 pp.). Page refs below are PDF pages: p. 1 = journal p. 1230, through p. 10 = p. 1239.
 - **Tags:** rectangular jet, non-axisymmetric nozzle, aspect ratio 3, Mach 2, half-nozzle with splitter plate, trailing-edge cutouts, streamwise vortices, skew-induced vorticity, vorticity transport, mixing enhancement, axis switching, oblique instability, screech, nozzle lip thickness, OASPL, condensation (laser-sheet) visualisation, passive control
 
 ## Summary

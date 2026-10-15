@@ -1,8 +1,8 @@
 # Investigation of supersonic twin-jet coupling using spatial linear stability analysis
 
 - **Authors:** P. A. S. Nogueira, D. M. Edgington-Mitchell (Monash, LTRAC)
-- **Source:** J. Fluid Mech. 918, A38 (2021; published online 14 May 2021, per Cambridge Core listing). The PDF is the JFM-style author manuscript with no date header. Its revisions are marked in red (p. 5, 9, 16), and its PDF creation date is 12 Mar 2021. The newest reference it cites is from 2021 (Nogueira & Cavalieri 2021, JFM 907). The file name says "2022" but the paper is 2021.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Petronio_2022_Twin_Jet_Coupling_Linear_Stability_Analysis.pdf` (25 pp.; network share, not in Git)
+- **Source:** J. Fluid Mech. 918, A38 (2021; published online 14 May 2021, per Cambridge Core listing). The PDF is the JFM-style author manuscript with no date header. Its revisions are marked in red (p. 5, 9, 16), and its PDF creation date is 12 Mar 2021. The newest reference it cites is from 2021 (Nogueira & Cavalieri 2021, JFM 907).
+- **PDF:** `References/Paper_PDFs/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf` (25 pp.)
 - **Tags:** twin jets, jet coupling, screech, underexpanded jet, NPR 5, guided jet mode, Kelvin-Helmholtz wavepacket, spatial linear stability, Floquet ansatz, symmetry-imposed POD, POD phase portrait, shear-thickness mode, wavenumber spectrum, PIV
 
 ## Summary

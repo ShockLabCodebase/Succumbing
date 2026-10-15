@@ -2,7 +2,7 @@
 
 - **Authors:** D. Edgington-Mitchell, T. Wang, P. Nogueira, O. Schmidt, V. Jaunet, D. Duke, P. Jordan, A. Towne
 - **Source:** arXiv:2008.09756 (preprint, 22 Aug 2020; JFM style)
-- **PDF:** `References/Paper_PDFs/Edgington-Mitchell_waves_in_screeching_jets.pdf` (27 pp.)
+- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf` (27 pp.)
 - **Tags:** screech, underexpanded jet, Kelvin-Helmholtz wavepacket, guided jet mode, duct-like/trapped mode, shock-cell interaction, POD, global stability, local stability, PIV
 
 ## Summary

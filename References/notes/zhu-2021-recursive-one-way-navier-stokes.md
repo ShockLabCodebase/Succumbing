@@ -2,7 +2,7 @@
 
 - **Authors:** M. Zhu, A. Towne (University of Michigan)
 - **Source:** arXiv:2111.10040v1 [physics.flu-dyn] (preprint, 19 Nov 2021)
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Zhu_Towne_2021_arxiv.pdf` (36 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Zhu-Towne_2021_Recursive-One-Way-Navier-Stokes-Equations-With-PSE-Like-Cost.pdf` (36 pp.)
 - **Tags:** one-way Navier–Stokes (OWNS), OWNS-R, parabolized stability equations (PSE), spatial marching, projection operator, linearized Navier–Stokes, resolvent analysis, turbulent jet wavepackets, Orr mechanism, jet acoustics, Mack mode, supersonic boundary layer, numerical method
 
 ## Summary

@@ -3,7 +3,7 @@
 - **Authors:** M. Shehzad, S. Lawrence, C. Atkinson, J. Soria (LTRAC, Department of Mechanical and Aerospace Engineering, Monash University)
 - **Source:** Experiments in Fluids 62:208 (2021); received 7 Apr 2021, published online 26 Sep 2021
 - **DOI:** 10.1007/s00348-021-03307-3
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Shehzad_2021_Article_OnAssuringTheAccurateParallelA.pdf` (14 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Shehzad-EtAl_2021_On-Assuring-The-Accurate-Parallel-Alignment-Of-A-Laser-Sheet-For-Planar-And.pdf` (14 pp.)
 - **Tags:** PIV calibration, stereoscopic PIV (SPIV), laser sheet alignment, misalignment error, self-calibration, Soloff polynomial mapping, dewarping, measurement uncertainty, experimental technique
 
 ## Summary

@@ -2,7 +2,7 @@
 
 - **Authors:** S. Davey, C. Atkinson, J. Soria (Laboratory for Turbulence Research in Aerospace and Combustion (LTRAC), Monash University)
 - **Source:** arXiv:2507.19167v1 [physics.flu-dyn] (preprint, 25 Jul 2025)
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Davey_Soria_HPOD_2025.pdf` (37 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Davey-EtAl_2025_Studying-Propagating-Turbulent-Structures-In-The-Near-Wake-Of-A-Sphere-Using.pdf` (37 pp.)
 - **Tags:** Hilbert POD (HPOD), spatial (streamwise) Hilbert transform, analytic signal, POD mode pairing, phase averaging, non-time-resolved PIV, sphere wake, bluff-body wake, flapping, pulsation, water tunnel
 
 ## Summary

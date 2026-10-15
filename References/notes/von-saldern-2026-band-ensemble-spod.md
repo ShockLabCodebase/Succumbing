@@ -2,7 +2,7 @@
 
 - **Authors:** J. G. R. von Saldern (Caltech; TU Berlin), O. T. Schmidt (UC San Diego), P. Godbersen (DLR Göttingen), J. M. Reumschüssel (Cambridge; TU Berlin), T. Colonius (Caltech)
 - **Source:** arXiv:2602.06588v2 [physics.flu-dyn] (preprint, v2 25 Jun 2026; APS style). Open-source MATLAB code: `https://github.com/jakobvonsaldern/bspod` (p. 12, ref. 49)
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Band Ensemble SPOD 2026.pdf` (36 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/VonSaldern-EtAl_2026_Band-Ensemble-Spectral-Proper-Orthogonal-Decomposition-With-Frequency.pdf` (36 pp.)
 - **Tags:** SPOD, band-ensemble SPOD (bSPOD), frequency smoothing, Welch segmentation, multitaper, spectral leakage, bias–variance trade-off, frequency attribution, broadband–tonal flows, open cavity, Rossiter modes, time-resolved PIV, method of snapshots
 
 ## Summary

@@ -2,7 +2,7 @@
 
 - **Authors:** P. A. S. Nogueira, H. W. A. Self, A. Towne, D. Edgington-Mitchell (Monash LTRAC; Towne at University of Michigan)
 - **Source:** arXiv:2110.04914v1 (preprint, 10 Oct 2021; JFM style). Funded by ARC DP190102220 (p. 24).
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Petronio_2021_Wavepacket_Modulation_Shock_Containing_Jets.pdf` (30 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf` (30 pp.)
 - **Tags:** shock-containing jet, wavepacket modulation, Kelvin-Helmholtz wavepacket, parabolised Floquet equations (PFE), PSE, zero-frequency PSE shock cells, spatially periodic LSA, Floquet ansatz, SPOD, LES, broadband shock-associated noise (BBSAN), overexpanded jet, underexpanded jet
 
 ## Summary

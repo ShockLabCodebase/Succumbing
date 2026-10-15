@@ -2,7 +2,7 @@
 
 - **Authors:** L. V. Rolandi, L. Smith, M. Amitay, V. Theofilis, K. Taira (UCLA; Rensselaer Polytechnic Institute; Technion)
 - **Source:** arXiv:2501.04255v1 [physics.flu-dyn] (preprint, 8 Jan 2025; DOI 10.48550/arXiv.2501.04255)
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Recent_Papers/Biglobal_Resolvent_JC_Paper.pdf` (26 pp.; network share, not in Git)
+- **PDF:** `References/Paper_PDFs/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf` (26 pp.)
 - **Tags:** resolvent analysis, discounted resolvent, biglobal (mean-flow) linear analysis, eigenvalue analysis, separated flow, NACA0012 airfoil, shear-layer (KH) amplifier, wake / vortex shedding, resolvent wavemaker, spanwise wavenumber, Reynolds-number scaling, DNS, wall-resolved LES, Chu norm, CharLES
 
 ## Summary
