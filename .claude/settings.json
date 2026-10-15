@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases"
+    ],
+    "allow": [
+      "Read(//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)",
+      "Read(///ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)"
+    ],
+    "deny": [
+      "Edit(//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)",
+      "Write(//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)",
+      "Edit(///ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)",
+      "Write(///ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)"
+    ]
+  }
+}

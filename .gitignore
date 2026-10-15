@@ -13,3 +13,9 @@
 *.pdf*
 !psec/*.pdf*
 
+*.mat*
+!psec/*.mat*
+
+# Obsidian vault settings (per-user)
+.obsidian/
+
