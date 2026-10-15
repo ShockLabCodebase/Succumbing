@@ -12,11 +12,13 @@ This repository is at an early stage. Remote: `https://github.com/ShockLabCodeba
 
 ## Domain
 
-The work is MATLAB-based (see `.gitattributes`). The reference material is on jet screech.
+The work is MATLAB-based (see `.gitattributes`). The reference material is mainly on jet screech and rocket launch noise.
 
 ## My Research Area
 
 My research area is largely around analysing experimental data (time-resolved schlieren, acoustic measurements, particle image velocimetry) taken here in our lab (The Shock Lab). The types of flows we investigate range from subsonic jets (nozzles), to impinging supersonic jets, supersonic wind tunnels, and flow from non-axisymmetric nozzle geometries. The large focus is on resonance and feedback processes. We often supplement these analyses with reduced order models or high fidelity simulations, but those aren't currently my area of focus. 
+
+**Rocket noise modelling** is a second research area. It covers predicting launch-vehicle noise: the empirical and semi-empirical source models that started with NASA SP-8072 (sound power and acoustic efficiency, apparent source location, directivity, spectra), modern successors such as SATURN, and full-scale launch and static-firing measurements used to build and validate them. It connects to the lab work through heated supersonic jet noise (Mach wave radiation, shock-associated noise), plume impingement on flame deflectors and launch pads (cf. the impinging-jet feedback work), and nonlinear propagation. The rocket-noise papers are in `References/Paper_PDFs/Rocket_Noise_Papers/`; the [Lubert et al. 2022 review](References/notes/lubert-2022-supersonic-jet-noise-launch-vehicles-review.md) is the entry point to that literature.
 
 **Typical analysis workflow:**
 1. Basic statistics first (e.g. mean and RMS fields, spectra).
