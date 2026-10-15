@@ -1,6 +1,6 @@
 ---
 name: add-paper
-description: Index every PDF in a folder (default References/Paper_PDFs, or any folder the user names) that isn't yet in References/INDEX.md. Each paper is read once and turned into a structured Markdown note plus an index row, so later sessions never need the PDF. Use when the user runs /add-paper, says "add/index the new papers", or points at a folder of papers.
+description: Index every PDF in a folder (default References/Paper_PDFs, or any folder the user names) that isn't yet in References/INDEX.md. Each paper is read once, its PDF renamed to Authors_Year_Title.pdf, and turned into a structured Markdown note plus an index row, so later sessions never need the PDF. Use when the user runs /add-paper, says "add/index the new papers", or points at a folder of papers.
 argument-hint: "[optional: a folder to scan, or specific PDF file(s) to (re)index]"
 ---
 
@@ -33,21 +33,29 @@ Name notes by paper, not by folder, so a note's path doesn't change if its PDF m
   - the note path
   - the "Per-paper procedure", "Note template" and "Rules" sections below, copied out in full
   - the path of an existing note in `References/notes/`, to copy its style
-  - an instruction **not** to edit INDEX.md and **not** to commit, and to return only the finished INDEX row plus any parts flagged for checking
+  - an instruction to rename the PDF (Per-paper procedure step 4) but **not** to edit INDEX.md and **not** to commit, and to return only the finished INDEX row, the old → new filename, and any parts flagged for checking
 
 ## 3. Update the index and commit
 
 Only the main session edits `References/INDEX.md`; subagents never do, so parallel edits can't collide. Add one row per paper, keeping the table sorted by first author. Then commit all new notes and the index together. Use `Add reference note: <short title>` for one paper, or `Add reference notes: <n> papers` for several. The PDFs stay untracked because `.gitignore` excludes `*.pdf*`, and PDFs outside the repo are never copied in.
 
-Finish by listing each paper with its note link and the parts to check against the PDF.
+Finish by listing each paper with its note link, its old → new PDF filename (and any rename that was skipped or failed), and the parts to check against the PDF.
 
 ## Per-paper procedure
 
 1. Run `pdfinfo <pdf>` to get the page count and metadata.
 2. **Extract the text.** Try the Read tool with `pages` (max 20 per call). If it fails (some PDFs are reported as "password-protected" even when they aren't), run `pdftotext -layout <pdf> <scratchpad>/<name>.txt` and read that. Write to the scratchpad, never into the repo. If the extracted text is empty, the PDF is scanned and needs OCR; report this instead of guessing.
 3. Read the **entire** paper, including tables, figure captions and the conclusion.
-4. Write the note at `References/notes/<firstauthor>-<year>-<short-title-slug>.md` (lowercase, hyphens).
-5. Write the INDEX row:
+4. **Rename the PDF** to `Authors_Year_Title.pdf`, using the authors, year and title from the paper itself (not the old filename or `pdfinfo` metadata, which are often wrong). Underscores separate the three fields only, so:
+   - **Authors:** surnames joined by hyphens: one author `Tam`, two `Raiola-Kriegseis`, three or more `Nogueira-EtAl`. Keep multi-word surnames as one word (`EdgingtonMitchell`, `VonSaldern`).
+   - **Year:** of publication (or the arXiv/thesis year).
+   - **Title:** the full title, words joined by hyphens, first letter of each word capitalised as in the paper; drop punctuation; cut at a word boundary to keep the title part to about 80 characters.
+   - Transliterate accents to plain ASCII (`Brès` → `Bres`) and never use `\ / : * ? " < > |`.
+   - Example: `Raiola-Kriegseis_2025_Hilbert-POD-A-Tool-For-Educing-Advective-Wavepackets-From-Flow-Field-Data.pdf`.
+
+   Rename in place in the same folder with `mv -n` (quote both paths; UNC paths like `//ad.monash.edu/...` work from Git Bash). Skip this if the file already has the right name. If a file with the target name already exists, don't overwrite it: it is probably a duplicate, so stop and report it. If the rename fails (e.g. the file is open elsewhere or the folder is read-only), keep the old name and report it. Then recompute the index key (step 1 rule) from the **new** path and use it everywhere below. When re-indexing a paper that is already in INDEX.md, the row's key must change to the new name too.
+5. Write the note at `References/notes/<firstauthor>-<year>-<short-title-slug>.md` (lowercase, hyphens).
+6. Write the INDEX row:
    `| <Authors short> <year>, *<Title>* (<venue/DOI/arXiv>) | <one-line takeaway; topics> | [note](notes/<file>.md) | \`<index key>\` |`
 
 ## Note template
