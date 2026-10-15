@@ -144,6 +144,35 @@ def parse_filename(name: str) -> list[FlowParam]:
     return out
 
 
+# Tokens that are counts rather than decimal-free codes.
+_INT_TOKENS = {"Nt", "Nfft", "ovlp", "nWin", "file", "Half"}
+_SWEEP_RE = re.compile(r"(?:^|_)([A-Za-z][A-Za-z]*)_(\d+)(?=_|\.|$)")
+# Preferred order when several tokens vary across a set of files.
+SWEEP_PRIORITY = ["NPR", "Mj", "M_j", "M", "Ma", "M_a", "hD", "zD", "sD", "h", "z"]
+
+
+def sweep_tokens(name: str) -> dict[str, tuple[str, float]]:
+    """Numeric filename tokens, e.g. {'NPR': ('29', 2.9), 'zD': ('30', 3.0), 'Nfft': ('4096', 4096)}."""
+    stem = os.path.splitext(os.path.basename(name))[0]
+    out = {}
+    for key, digits in _SWEEP_RE.findall(stem):
+        if key in out:
+            continue
+        val = float(int(digits)) if key in _INT_TOKENS else decode_code(digits)
+        out[key] = (digits, val)
+    return out
+
+
+def read_spectrum(path: str) -> dict:
+    """Small arrays of a SPOD file (St, f, L, metadata) without touching P."""
+    s = SPODFile(path, cache_mb=16)
+    try:
+        return {"path": path, "St": s.St.copy(), "f": None if s.f is None else s.f.copy(),
+                "L": s.L.copy(), "info": s.info}
+    finally:
+        s.close()
+
+
 class _LRU:
     def __init__(self, budget_bytes: int):
         self.budget = budget_bytes

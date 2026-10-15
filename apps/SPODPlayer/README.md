@@ -12,6 +12,12 @@ Run `SPODPlayer.exe`, then open a file (File → Open, drag and drop, or pass th
 - **Wave direction**: `All`, `Downstream (+k)` or `Upstream (−k)` (shortcut `D`). It applies an FFT along x and keeps waves travelling in +x or −x. The two parts add up to the full mode.
 - **Mean-field contours**: contours of `im_mean` drawn over the mode.
 - **Output**: snapshot PNG (or Ctrl+C to copy), MP4 of the phase animation (bundled ffmpeg), and the spectrum as CSV or PNG.
+- **Waterfall** (File → Open waterfall…, Ctrl+Shift+O): select several SPOD files to get a contour of log λ against St (y) and the case parameter (x). Only St and L are read, so this is quick even for large files.
+  - The x-axis is picked from filename tokens that differ between the files (`NPR`, `Mj`, `M`, `Ma`, `hD`, `zD`, `sD`, …; `_zD_30_` → 3.0). You can change it in the *x-axis* list, or use file order or name order. SPOD settings that differ (`Nfft`, `Nt`, `ovlp`) are offered but never chosen by default.
+  - Colour options: log λ, log λ normalised per case (by its maximum or by its integral over St), or the mode's share of the energy at each St. You can also pick the mode, the colour map and St max.
+  - Files with different St grids (e.g. different Nfft) are interpolated onto the finest grid.
+  - Click the waterfall to open that case in the viewer. The click snaps to the strongest bin within ±3 bins (hold Shift to use the exact bin). Double-click a case in the list to open it at the last chosen St. In the viewer, `[` / `]` step to the previous / next case at the same St.
+  - Export the waterfall as PNG, or as CSV (St by case).
 - **Help → File information**: lists everything read from the file, including which diameter and Mach/NPR names were found and how they were decoded.
 
 ### Metadata handling
@@ -34,7 +40,9 @@ build.bat
 The output is `dist\SPODPlayer\` (≈325 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
 
 To check a build end to end:
-`SPODPlayer.exe --selftest <file.mat> <out_dir>` writes `selftest.txt`, a PNG and a short MP4.
+`SPODPlayer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
+
+Test files: `python tests/make_synthetic.py <dir>` writes five small synthetic NPR-sweep files in the v7.3 layout. `python tests/waterfall_test.py <out_dir> <files...>` tests the waterfall and the link back to the viewer.
 
 Run from source: `python run_spodplayer.py [file.mat]`.
 Headless test: `python tests/smoke_test.py <file.mat> <out_dir>`.

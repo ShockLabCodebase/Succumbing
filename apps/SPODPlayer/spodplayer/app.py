@@ -126,6 +126,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self._split_cache: dict = {}
         self._waiting = False
         self._contours: list[pg.IsocurveItem] = []
+        self._waterfalls: list = []
+        self._waterfall = None
         self._last_tick = time.perf_counter()
         self._frames = 0
 
@@ -377,6 +379,8 @@ class MainWindow(QtWidgets.QMainWindow):
         fm = mb.addMenu("&File")
         self.act_open = fm.addAction("&Open…", self.open_dialog, QtGui.QKeySequence.Open)
         self.recent_menu = fm.addMenu("Open &recent")
+        fm.addAction("Open &waterfall (several cases)…", self.open_waterfall_dialog,
+                     QtGui.QKeySequence("Ctrl+Shift+O"))
         self.act_close = fm.addAction("&Close", self.close_file, QtGui.QKeySequence("Ctrl+W"))
         fm.addSeparator()
         self.act_snap = fm.addAction("&Snapshot…", self.snapshot, QtGui.QKeySequence("Ctrl+S"))
@@ -436,6 +440,8 @@ class MainWindow(QtWidgets.QMainWindow):
         sc(Qt.Key_Comma, lambda: self._step_phase(-1))
         sc(Qt.Key_Period, lambda: self._step_phase(+1))
         sc("D", self._cycle_direction)
+        sc(Qt.Key_BracketLeft, lambda: self._step_case(-1))
+        sc(Qt.Key_BracketRight, lambda: self._step_case(+1))
 
     def _set_enabled(self, on: bool):
         for w in (self.display_combo, self.mode_combo, self.st_spin, self.idx_spin,
@@ -469,7 +475,7 @@ class MainWindow(QtWidgets.QMainWindow):
             QtWidgets.QApplication.restoreOverrideCursor()
             self.status_msg.setText("")
             QtWidgets.QMessageBox.critical(self, "Could not open file", f"{path}\n\n{exc}")
-            return
+            return False
         finally:
             QtWidgets.QApplication.restoreOverrideCursor()
         self.close_file()
@@ -480,6 +486,44 @@ class MainWindow(QtWidgets.QMainWindow):
         self.settings.setValue("last_dir", os.path.dirname(path))
         self._add_recent(path)
         self._setup_for_file()
+        return True
+
+    def open_waterfall_dialog(self):
+        start = self.settings.value("last_dir", "")
+        paths, _ = QtWidgets.QFileDialog.getOpenFileNames(
+            self, "Open SPOD results for a waterfall", start, "SPOD results (*.mat);;All files (*)")
+        if paths:
+            self.open_waterfall(paths)
+
+    def open_waterfall(self, paths):
+        from .waterfall import WaterfallWindow
+
+        self.settings.setValue("last_dir", os.path.dirname(paths[0]))
+        win = WaterfallWindow(self, paths)
+        win.setAttribute(Qt.WA_DeleteOnClose)
+        win.destroyed.connect(lambda *_: self._waterfalls.remove(win) if win in self._waterfalls else None)
+        self._waterfalls.append(win)
+        self._waterfall = win
+        win.show()
+        return win
+
+    def show_case(self, path, idx=None, mode=0, source=None):
+        """Show a case at a frequency index and mode (used by the waterfall)."""
+        same = self.spod is not None and (
+            os.path.normcase(os.path.normpath(self.spod.path)) == os.path.normcase(os.path.normpath(path)))
+        if not same and not self.open_file(path):
+            return
+        if source is not None:
+            self._waterfall = source
+        self._set_mode(min(mode, self.spod.n_modes - 1))
+        if idx is not None:
+            self.set_index(int(idx), force=True)
+        self.show()
+        self.raise_()
+
+    def _step_case(self, d):
+        if self._waterfall is not None and self._waterfall in self._waterfalls:
+            self._waterfall.step_case(d)
 
     def close_file(self):
         self.btn_play.setChecked(False)
@@ -1136,9 +1180,11 @@ class MainWindow(QtWidgets.QMainWindow):
             "Space\t\tplay / pause phase animation\n"
             ", / .\t\tstep phase back / forward\n"
             "D\t\tcycle wave direction (all / down / up)\n"
+            "[ / ]\t\tprevious / next case of the last waterfall\n"
             "F\t\tfit image\n"
             "A\t\tauto contrast\n"
             "Ctrl+O\t\topen file\n"
+            "Ctrl+Shift+O\topen several files as a waterfall\n"
             "Ctrl+S\t\tsnapshot\n"
             "Ctrl+Shift+S\tsave video\n"
             "Ctrl+C\t\tcopy image\n\n"
@@ -1184,6 +1230,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def closeEvent(self, ev):
         self.settings.setValue("geometry", self.saveGeometry())
+        for w in list(self._waterfalls):
+            w.close()
         self.close_file()
         super().closeEvent(ev)
 
@@ -1198,7 +1246,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
 def _selftest(app, argv) -> int:
-    """SPODPlayer.exe --selftest <file.mat> <out_dir>: check a packaged build end to end.
+    """SPODPlayer.exe --selftest <file.mat> <out_dir> [more.mat ...]: check a build end to end.
+
+    Extra files after out_dir are combined with the first into a waterfall.
 
     Opens the file, renders a downstream-filtered frame, and writes a snapshot and a
     short video with the bundled ffmpeg. Writes selftest.txt with the result.
@@ -1220,6 +1270,20 @@ def _selftest(app, argv) -> int:
         w.dir_group.button(1).setChecked(True)
         app.processEvents()
         w._render(1200).save(os.path.join(out, "selftest.png"))
+        extra = args[2:]
+        if extra:   # remaining paths: build a waterfall from all files
+            wf = w.open_waterfall([path] + extra)
+            t0 = time.time()
+            while wf.Z is None and time.time() - t0 < 120:
+                app.processEvents()
+                time.sleep(0.01)
+            log.append(f"waterfall: {len(wf.cases)} cases, x-axis {wf.param_combo.currentText()}, "
+                       f"Z {wf.Z.shape}")
+            wf._open(0, int(np.argmax(wf.cases[wf.order[0]]['L'][1:, 0])) + 1)
+            app.processEvents()
+            log.append(f"waterfall -> viewer: {os.path.basename(w.spod.path)} St {w.spod.St[w.idx]:.4f}")
+            wf.grab().save(os.path.join(out, "selftest_waterfall.png"))
+            wf.close()
         ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
         log.append(f"ffmpeg: {ffmpeg}")
         vid = os.path.join(out, "selftest.mp4")
