@@ -1,0 +1,75 @@
+# Settings for the A1/A2 continuation driver. Copy to the case root as
+# continuation.toml; relative paths are relative to this file.
+#
+# Solver units assumed below: lengths in D, rho_inf = c_inf = 1, so
+# p_inf = 1/gamma. Change p_ambient, length_ref and c_amb if the case is
+# scaled differently.
+
+[case]
+mesh = "mesh.pyfrm"
+base_ini = "base.ini"             # production PyFR config (fixed dt!)
+inlet_bc = "inlet"                # the [soln-bcs-inlet] section, sub-in-ftpttang
+p_ambient = 0.7142857142857143    # p_inf in solver units; pt = NPR * p_ambient
+sampler_section = "soln-plugin-sampler"
+sampler_dataset = "probes"
+writer_section = "soln-plugin-writer"
+runs_dir = "runs"
+
+[physics]
+gamma = 1.4
+length_ref = 1.0                  # D in solver units (St = f D / U_j)
+velocity_ref = "isentropic"       # U_j from NPR; or a number for a fixed U_ref
+T0_over_Tamb = 1.0                # cold jet
+c_amb = 1.0
+
+[modes]
+# Strouhal bands (f D / U_j) that isolate each tone. Set them from the
+# spectra of converged A1 and A2 runs; the tones move with NPR, so leave
+# some margin, but keep the bands from overlapping.
+A1 = [0.58, 0.665]
+A2 = [0.665, 0.75]
+pressure_field = "p"
+# Sampler point indices (0-based, in samp-pts order). Each group is averaged,
+# so an azimuthal ring gives the m = 0 component. Several groups (e.g. rings
+# at different x) are averaged after taking amplitudes.
+probe_groups = [[0, 1, 2, 3, 4, 5, 6, 7]]
+band_taper = 0.3                  # raised-cosine edge, fraction of bandwidth
+
+[continuation]
+step = 0.02               # initial NPR step
+min_step = 0.005          # stop bisecting below this NPR gap
+npr_bounds = [1.9, 2.6]   # never go outside these
+transient = 20.0          # D/U_j after each NPR change to ignore
+segment_cycles = 150      # first segment of a visit, after the transient
+extend_cycles = 100       # each extension
+max_extensions = 2
+max_segments = 30         # safety limit for the whole branch
+window_cycles = 10        # smoothing window for ln(A_in/A_out)
+switch_ratio = 2.0        # A_in/A_out at the end of a record that counts as switched
+trend_threshold = 0.01    # d ln(A_in/A_out)/dt (per D/U_j) that earns an extension...
+rise_ratio = 3.0          # ...if A_in/A_out has also grown this much since the transient
+fit_model = "saddle-node" # (1/t_switch)^2 linear in NPR; or "linear"
+fit_points = 3            # switched visits wanted for the fit
+fit_spacing = 0.01        # NPR spacing of extra fit visits beyond the bracket
+
+[slurm]
+submit = true             # false: write job.sh files but don't submit
+sbatch = "sbatch"
+sbatch_args = [
+    "--partition=gpu",
+    "--gres=gpu:1",
+    "--ntasks=1",
+    "--cpus-per-task=4",
+    "--mem=32G",
+    "--time=12:00:00",
+    # "--account=xx00",
+]
+setup = """
+module purge
+module load cuda
+source $HOME/pyfr-venv/bin/activate
+"""
+# {mesh}, {soln} and {ini} are filled in by the driver. For several GPUs,
+# partition the mesh and add -P <name> (and match --ntasks/--gres).
+launch = "srun pyfr restart -b cuda {mesh} {soln} {ini}"
+python = "python"

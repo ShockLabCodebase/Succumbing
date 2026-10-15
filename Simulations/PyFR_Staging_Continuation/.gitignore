@@ -1,0 +1,6 @@
+__pycache__/
+runs/
+*.pyfrm
+*.pyfrs
+*.h5
+*.msh
