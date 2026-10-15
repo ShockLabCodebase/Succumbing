@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This repository is at an early stage. Remote: `https://github.com/ShockLabCodebase/Succumbing` (branch `main`).
 
-- `apps/SPODPlayer/`: Python (PySide6 + pyqtgraph + h5py) viewer for SPOD result `.mat` files, packaged as a standalone exe with PyInstaller. See its README. Use the `spodplayer` conda env at `%USERPROFILE%\anaconda3\envs\spodplayer`. When calling it from Git Bash, put `$ENV`, `$ENV/Library/bin` and `$ENV/Scripts` on PATH, or SSL and DLLs fail. Build with `build.bat`, then verify with `dist\SPODPlayer\SPODPlayer.exe --selftest <file> <out>` and `tests/smoke_test.py`.
+- `apps/SPODViewer/`: Python (PySide6 + pyqtgraph + h5py) viewer for SPOD result `.mat` files, packaged as a standalone exe with PyInstaller. See its README. Use the `spodviewer` conda env at `%USERPROFILE%\anaconda3\envs\spodviewer`. When calling it from Git Bash, put `$ENV`, `$ENV/Library/bin` and `$ENV/Scripts` on PATH, or SSL and DLLs fail. Build with `build.bat`, then verify with `dist\SPODViewer\SPODViewer.exe --selftest <file> <out>` and `tests/smoke_test.py`.
 - `Test_Data/` holds local test files (`.mat` is git-ignored). `Test_Data/SPOD_Results/Data/` has a 5.7 GB older-format SPOD file (`D_eff`, `current_M`, 23 modes in L, 4 in P).
 
 ## Domain

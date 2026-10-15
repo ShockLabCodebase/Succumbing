@@ -13,7 +13,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import numpy as np  # noqa: E402
 from PySide6 import QtWidgets  # noqa: E402
 
-from spodplayer.app import MainWindow  # noqa: E402
+from spodviewer.app import MainWindow  # noqa: E402
 
 
 def wait_until(app, cond, timeout=30):
@@ -26,9 +26,11 @@ def wait_until(app, cond, timeout=30):
 
 
 def main(path, out):
+    if not os.path.exists(path):
+        sys.exit(f"Test file not found: {path}")   # otherwise the error dialog blocks offscreen
     os.makedirs(out, exist_ok=True)
     app = QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv)
-    w = MainWindow(settings_name="SPODPlayer-test")
+    w = MainWindow(settings_name="SPODViewer-test")
     w.resize(1350, 900)
     w.show()
     t = time.time()

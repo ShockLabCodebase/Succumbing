@@ -1,4 +1,4 @@
-"""SPODPlayer main window."""
+"""SPODViewer main window."""
 
 from __future__ import annotations
 
@@ -111,7 +111,7 @@ class VideoDialog(QtWidgets.QDialog):
 
 # --------------------------------------------------------------------------
 class MainWindow(QtWidgets.QMainWindow):
-    def __init__(self, settings_name: str = "SPODPlayer"):
+    def __init__(self, settings_name: str = "SPODViewer"):
         super().__init__()
         self.settings = QtCore.QSettings("ShockLab", settings_name)
         self.spod: SPODFile | None = None
@@ -131,9 +131,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._last_tick = time.perf_counter()
         self._frames = 0
 
-        self.setWindowTitle("SPODPlayer")
+        self.setWindowTitle("SPODViewer")
         self.setAcceptDrops(True)
-        icon = ASSETS / "spodplayer.ico"
+        icon = ASSETS / "spodviewer.ico"
         if icon.exists():
             self.setWindowIcon(QtGui.QIcon(str(icon)))
 
@@ -541,14 +541,14 @@ class MainWindow(QtWidgets.QMainWindow):
             self.spec.removeItem(c)
         self._spec_curves = []
         self._clear_contours()
-        self.setWindowTitle("SPODPlayer")
+        self.setWindowTitle("SPODViewer")
         for lab in self.status_labels.values():
             lab.setText("")
         self._set_enabled(False)
 
     def _setup_for_file(self):
         s, info = self.spod, self.spod.info
-        self.setWindowTitle(f"SPODPlayer — {info.name}")
+        self.setWindowTitle(f"SPODViewer — {info.name}")
         Lb = info.length_label
         Dsub = "e" if Lb == "D_e" else ""
         dl = f"<i>D</i><sub>{Dsub}</sub>" if Dsub else "<i>D</i>"
@@ -1210,8 +1210,8 @@ class MainWindow(QtWidgets.QMainWindow):
         QtWidgets.QMessageBox.information(self, "File information", "\n".join(lines))
 
     def _about(self):
-        QtWidgets.QMessageBox.about(self, "About SPODPlayer", (
-            f"<b>SPODPlayer {__version__}</b><br>"
+        QtWidgets.QMessageBox.about(self, "About SPODViewer", (
+            f"<b>SPODViewer {__version__}</b><br>"
             "Viewer for SPOD results from the Shock Lab schlieren scripts.<br><br>"
             "Modes are animated as Re(P·e<sup>iθ</sup>) with θ = ωt, "
             "following MATLAB's FFT sign convention.<br>"
@@ -1246,7 +1246,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
 def _selftest(app, argv) -> int:
-    """SPODPlayer.exe --selftest <file.mat> <out_dir> [more.mat ...]: check a build end to end.
+    """SPODViewer.exe --selftest <file.mat> <out_dir> [more.mat ...]: check a build end to end.
 
     Extra files after out_dir are combined with the first into a waterfall.
 
@@ -1260,7 +1260,7 @@ def _selftest(app, argv) -> int:
     try:
         import imageio_ffmpeg
 
-        w = MainWindow(settings_name="SPODPlayer-selftest")
+        w = MainWindow(settings_name="SPODViewer-selftest")
         w.show()
         w.open_file(path)
         t0 = time.time()
@@ -1321,11 +1321,11 @@ def main(argv=None):
     if sys.platform == "win32":
         try:
             import ctypes
-            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("ShockLab.SPODPlayer")
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("ShockLab.SPODViewer")
         except Exception:
             pass
     app = QtWidgets.QApplication(argv)
-    app.setApplicationName("SPODPlayer")
+    app.setApplicationName("SPODViewer")
     app.setOrganizationName("ShockLab")
     if "--selftest" in argv:
         return _selftest(app, argv)

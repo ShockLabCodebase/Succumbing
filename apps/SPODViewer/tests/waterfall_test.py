@@ -16,7 +16,7 @@ import numpy as np  # noqa: E402
 from PySide6 import QtCore, QtWidgets  # noqa: E402
 from PySide6.QtCore import Qt  # noqa: E402
 
-from spodplayer.app import MainWindow  # noqa: E402
+from spodviewer.app import MainWindow  # noqa: E402
 
 
 def pump(app, cond=lambda: True, timeout=60):
@@ -50,7 +50,7 @@ class FakeClick:
 def main(out, paths):
     os.makedirs(out, exist_ok=True)
     app = QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv)
-    viewer = MainWindow(settings_name="SPODPlayer-test")
+    viewer = MainWindow(settings_name="SPODViewer-test")
     viewer.resize(1350, 900)
     win = viewer.open_waterfall(paths)
     pump(app, lambda: win.Z is not None)

@@ -1,10 +1,10 @@
-# SPODPlayer
+# SPODViewer
 
 Desktop viewer for SPOD result files from the Shock Lab schlieren scripts (`SPOD_Analysis.m` and older variants): `SPOD_Results/Data/<case>_Nt_..._Nfft_..._ovlp_...mat`. Modelled on FieldsPlayer.
 
 ## Using it
 
-Run `SPODPlayer.exe`, then open a file (File → Open, drag and drop, or pass the path on the command line). Large files are fine: only the frequency being viewed is read, and neighbouring frequencies are loaded in the background.
+Run `SPODViewer.exe`, then open a file (File → Open, drag and drop, or pass the path on the command line). Large files are fine: only the frequency being viewed is read, and neighbouring frequencies are loaded in the background.
 
 - **Spectrum** (bottom): λ against St for each mode, with the most prominent peaks marked. Click or drag the orange line to pick a frequency. You can also use the St/bin boxes, the peak list, ←/→ (one bin) and PgUp/PgDn (peak to peak).
 - **Mode image**: `Real`, `Imaginary`, `Magnitude` or `Phase` of the selected mode (↑/↓ change mode). It is normalised by max |P| by default. The contrast panel and colour maps work as in FieldsPlayer; pogmap and CMRmap are the group's maps.
@@ -29,25 +29,25 @@ Run `SPODPlayer.exe`, then open a file (File → Open, drag and drop, or pass th
 
 ## Building
 
-Uses the `spodplayer` conda environment (Python 3.12 from conda-forge, packages from `requirements.txt` via pip):
+Uses the `spodviewer` conda environment (Python 3.12 from conda-forge, packages from `requirements.txt` via pip):
 
 ```bat
-conda create -n spodplayer -c conda-forge python=3.12 pip
-%USERPROFILE%\anaconda3\envs\spodplayer\python.exe -m pip install -r requirements.txt
+conda create -n spodviewer -c conda-forge python=3.12 pip
+%USERPROFILE%\anaconda3\envs\spodviewer\python.exe -m pip install -r requirements.txt
 build.bat
 ```
 
-The output is `dist\SPODPlayer\` (≈325 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
+The output is `dist\SPODViewer\` (≈325 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
 
 To check a build end to end:
-`SPODPlayer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
+`SPODViewer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
 
 Test files: `python tests/make_synthetic.py <dir>` writes five small synthetic NPR-sweep files in the v7.3 layout. `python tests/waterfall_test.py <out_dir> <files...>` tests the waterfall and the link back to the viewer.
 
-Run from source: `python run_spodplayer.py [file.mat]`.
+Run from source: `python run_spodviewer.py [file.mat]`.
 Headless test: `python tests/smoke_test.py <file.mat> <out_dir>`.
 
 ## Conventions
 
-- MATLAB v7.3 files are HDF5, which reverses dimensions: h5py sees `P` as [mode, x, y, freq] and complex values as a `real`/`imag` compound. `spodplayer/data.py` converts back to MATLAB order with y as rows and x as columns. Older v7 files are loaded whole with scipy.
+- MATLAB v7.3 files are HDF5, which reverses dimensions: h5py sees `P` as [mode, x, y, freq] and complex values as a `real`/`imag` compound. `spodviewer/data.py` converts back to MATLAB order with y as rows and x as columns. Older v7 files are loaded whole with scipy.
 - Time convention: modes at +f multiply e^{+iωt} (MATLAB FFT sign). A downstream wave is therefore e^{−ikx}, which lands at negative FFT wavenumbers. This was checked on test data: in the downstream part, phase falls along x.

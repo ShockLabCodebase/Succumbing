@@ -1,10 +1,10 @@
-# PyInstaller spec for SPODPlayer. Build with build.bat (or: pyinstaller SPODPlayer.spec).
-# Produces dist/SPODPlayer/SPODPlayer.exe plus an _internal folder; copy the whole
-# SPODPlayer folder to share it. Python, Qt, numpy/scipy/h5py and ffmpeg are bundled.
+# PyInstaller spec for SPODViewer. Build with build.bat (or: pyinstaller SPODViewer.spec).
+# Produces dist/SPODViewer/SPODViewer.exe plus an _internal folder; copy the whole
+# SPODViewer folder to share it. Python, Qt, numpy/scipy/h5py and ffmpeg are bundled.
 
 from PyInstaller.utils.hooks import collect_data_files
 
-datas = [("spodplayer/assets", "spodplayer/assets")]
+datas = [("spodviewer/assets", "spodviewer/assets")]
 datas += collect_data_files("imageio_ffmpeg", subdir="binaries")   # ffmpeg.exe
 datas += collect_data_files("pyqtgraph", subdir="colors")           # CET colour maps
 
@@ -20,7 +20,7 @@ excludes = [
 ]
 
 a = Analysis(
-    ["run_spodplayer.py"],
+    ["run_spodviewer.py"],
     pathex=["."],
     datas=datas,
     hiddenimports=["scipy.signal", "scipy.ndimage", "scipy.io", "h5py.defs", "h5py.utils",
@@ -35,10 +35,10 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name="SPODPlayer",
-    icon="spodplayer/assets/spodplayer.ico",
+    name="SPODViewer",
+    icon="spodviewer/assets/spodviewer.ico",
     console=False,
     upx=False,
 )
 
-coll = COLLECT(exe, a.binaries, a.datas, strip=False, upx=False, name="SPODPlayer")
+coll = COLLECT(exe, a.binaries, a.datas, strip=False, upx=False, name="SPODViewer")
