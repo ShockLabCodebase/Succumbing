@@ -4,7 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project status
 
-This repository is at an early stage: it has no source code, build system or tests yet. Update this file once code is added. Remote: `https://github.com/ShockLabCodebase/Succumbing` (branch `main`).
+This repository is at an early stage. Remote: `https://github.com/ShockLabCodebase/Succumbing` (branch `main`).
+
+- `apps/SPODPlayer/`: Python (PySide6 + pyqtgraph + h5py) viewer for SPOD result `.mat` files, packaged as a standalone exe with PyInstaller. See its README. Use the `spodplayer` conda env at `%USERPROFILE%\anaconda3\envs\spodplayer`. When calling it from Git Bash, put `$ENV`, `$ENV/Library/bin` and `$ENV/Scripts` on PATH, or SSL and DLLs fail. Build with `build.bat`, then verify with `dist\SPODPlayer\SPODPlayer.exe --selftest <file> <out>` and `tests/smoke_test.py`.
+- `Test_Data/` holds local test files (`.mat` is git-ignored). `Test_Data/SPOD_Results/Data/` has a 5.7 GB older-format SPOD file (`D_eff`, `current_M`, 23 modes in L, 4 in P).
 
 ## Domain
 
@@ -24,7 +27,12 @@ My research area is largely around analysing experimental data (time-resolved sc
    2. Rebuild the data from a chosen subset of SPOD modes and frequencies.
    3. Run Hilbert POD on the rebuilt data to track how the selected dynamics change over time.
 
-**Analysis code:** the group's MATLAB analysis codes are in separate GitHub repositories under `ShockLabCodebase`, one each for schlieren, acoustics, PIV and LES. The LES repo analyses LES data supplied by other research groups. They are cloned on this PC. **Don't read, search or modify those repositories unless the user explicitly asks in that session.** Ask before using them as a reference.
+**Analysis code:** the group's MATLAB analysis codes are in separate GitHub repositories under `ShockLabCodebase`, one each for schlieren, acoustics, PIV and LES. The LES repo analyses LES data supplied by other research groups. They are cloned at `\\ad.monash.edu\home\User088\joellukw\Documents\Monash_Research_Fellow\Experiments\Shocklab_Codebases`.
+
+- **Reference only:** read and search them freely when it helps (e.g. to match the group's conventions, reuse a function's interface, or check how an analysis is done). Use the Read/Grep/Glob tools for this, not shell commands, so no permission prompts are needed.
+- **Never modify them:** no edits, new files, deletions, or git operations that change state (commit, checkout, pull, stash, etc.), including via shell commands. If a change there seems useful, describe it and let the user make it. Any new code goes in this repository.
+- If you need to know where something is, ask the user rather than searching the filesystem.
+- **Code notes:** summaries of these repos live in `Codebase_Notes/` (one file per repo, with the commit they were read at). Use them instead of re-reading the repos; open the source only for exact code, and update the note if the repo has moved on. Currently: [Schlieren_Processing_Scripts](Codebase_Notes/schlieren-processing-scripts.md).
 
 **Modelling matters too:** experiments, modelling and simulation go hand in hand. When summarising papers or analysing data, cover the modelling and simulation side as thoroughly as the experiments: linear stability, resolvent analysis, reduced-order models and LES/DNS, including their assumptions, numerics and how they compare with experiment.
 
