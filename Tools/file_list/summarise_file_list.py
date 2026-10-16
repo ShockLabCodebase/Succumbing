@@ -1,6 +1,8 @@
 """Find data that has been parked: large files and folders nobody has used for a while.
 
-Reads a CSV from file_list.sh or file_list.ps1 and reports the stale items
+Reads a CSV from file_list.sh or file_list.ps1 (which have already rolled small
+files up into folders; older one-row-per-file listings also work, and are
+rolled up here) and reports the stale items
 (nothing in them used for --days), largest first, with who owns them. An item
 is either
   - a single file of at least --min-size, or
@@ -66,15 +68,19 @@ def merge(into, other):
     into["owners"].update(other["owners"])
 
 
+def home(kind, rel):
+    """The folder a listing row belongs to: a folder row is its own."""
+    return rel if kind == "folder" else posixpath.dirname(rel) or "."
+
+
 def by_size(files, min_size):
-    """Big files on their own; small files rolled up into folders reaching min_size."""
+    """Big items on their own; smaller ones rolled up into folders reaching min_size."""
     items, dirs = {}, defaultdict(new_item)
-    for rel, size, used, owner in files:
+    for kind, rel, size, n, used, owner in files:
         if size >= min_size:
-            items[("file", rel)] = new_item()
-            add(items[("file", rel)], size, used, owner)
+            add(items.setdefault((kind, rel), new_item()), size, used, owner, n)
         else:
-            add(dirs[posixpath.dirname(rel) or "."], size, used, owner)
+            add(dirs[home(kind, rel)], size, used, owner, n)
     # Make sure every ancestor exists, then roll up deepest first.
     for d in list(dirs):
         while d not in (".", ""):
@@ -84,7 +90,7 @@ def by_size(files, min_size):
     for d in sorted(dirs, key=lambda d: -d.count("/") - (d != ".")):
         item = dirs[d]
         if item["bytes"] >= min_size and item["bytes"] > 0:
-            items[("folder", d)] = item
+            merge(items.setdefault(("folder", d), new_item()), item)
         elif d == ".":
             leftover = item
         else:
@@ -95,12 +101,12 @@ def by_size(files, min_size):
 def by_depth(files, depth, min_size):
     """Every file into its folder `depth` levels below the root."""
     groups, leftover = defaultdict(new_item), new_item()
-    for rel, size, used, owner in files:
-        parts = (posixpath.dirname(rel) or ".").split("/")
+    for kind, rel, size, n, used, owner in files:
+        parts = home(kind, rel).split("/")
         key = "/".join(x for x in parts[:depth] if x != ".")
         if len(parts) < depth or not key:  # files above the grouping depth
             key = (key + "/" if key else "") + "(loose files)"
-        add(groups[key], size, used, owner)
+        add(groups[key], size, used, owner, n)
     items = {}
     for k, g in groups.items():
         if g["bytes"] >= min_size:
@@ -135,28 +141,31 @@ def main():
             used = {"latest": max(r["last_access"], r["last_modified"]),
                     "modified": r["last_modified"],
                     "access": r["last_access"]}[a.time]
-            rows.append((r["path"].replace("\\", "/"), int(r["size_bytes"]),
+            # Older listings had one row per file and no kind/files columns.
+            rows.append((r.get("kind") or "file", r["path"].replace("\\", "/").rstrip("/"),
+                         int(r["size_bytes"]), int(r.get("files") or 1),
                          used, r["last_access"], r.get("owner") or "?"))
     if not rows:
-        print("No files in listing.")
+        print("No items in listing.")
         return
 
     now = datetime.now()
     cutoff = (now - timedelta(days=a.days)).strftime(FMT)
+    anchors = [path if kind == "folder" else posixpath.dirname(path) for kind, path, *_ in rows]
     if a.root:
         root = a.root.replace("\\", "/").rstrip("/")
-    elif len(rows) > 1:
-        root = posixpath.commonpath([posixpath.dirname(r[0]) for r in rows])
     else:
-        root = posixpath.dirname(rows[0][0])
+        root = posixpath.commonpath(anchors) if len(rows) > 1 else anchors[0]
 
     # Without owners (e.g. Windows without -Owner), use the top-level folder,
     # which on shared drives is usually one per person.
-    no_owner = all(r[4] == "?" for r in rows)
+    no_owner = all(r[6] == "?" for r in rows)
     files = []
-    for path, size, used, _, owner in rows:
+    for kind, path, size, n, used, _, owner in rows:
         rel = posixpath.relpath(path, root)
-        files.append((rel, size, used, rel.split("/")[0] if no_owner and "/" in rel else owner))
+        top = home(kind, rel).split("/")[0]
+        files.append((kind, rel, size, n, used, top if no_owner and top != "." else owner))
+    rolled_up = any(f[0] == "folder" for f in files)
 
     if a.depth:
         items, leftover = by_depth(files, a.depth, a.min_size)
@@ -176,12 +185,14 @@ def main():
             return ("(top level)" if key == "." else key) + "/"
         return key
 
-    total = sum(f[1] for f in files)
+    total = sum(f[2] for f in files)
     stale_bytes = sum(d["bytes"] for _, d in stale)
     who = "top-level folder" if no_owner else "owner"
     print(f"Root:    {root}")
-    print(f"Files:   {len(files)}, {human(total)}; {len(items)} {grouping} of at least "
-          f"{human(a.min_size)} ({human(leftover['bytes'])} in smaller ones not shown)")
+    print(f"Listed:  {sum(f[3] for f in files)} files, {human(total)}"
+          + (" (items the listing rolled up; smaller ones were never listed)" if rolled_up else ""))
+    print(f"Items:   {len(items)} {grouping} of at least {human(a.min_size)} "
+          f"({human(leftover['bytes'])} in smaller ones not shown)")
     print(f"Stale:   {len(stale)} items, {human(stale_bytes)} "
           f"({100 * stale_bytes / max(total, 1):.0f}%) not used since {cutoff[:10]} "
           f"[{a.days} days, '{a.time}' time]")
@@ -190,7 +201,7 @@ def main():
     # would make everything look in use.
     if a.time != "modified":
         recent = (now - timedelta(days=2)).strftime(FMT)
-        frac = sum(r[3] >= recent for r in rows) / len(rows)
+        frac = sum(r[5] >= recent for r in rows) / len(rows)
         if frac > 0.5:
             print(f"\nWARNING: {frac:.0%} of files were accessed in the last 2 days. Access times may "
                   f"have been updated by the scan itself; consider --time modified.")
