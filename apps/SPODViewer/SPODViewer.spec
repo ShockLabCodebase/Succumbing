@@ -28,6 +28,26 @@ a = Analysis(
     excludes=excludes,
     noarchive=False,
 )
+
+# Qt files the excludes above don't catch: the Quick/QML/Pdf/Network DLLs come in through
+# plugins (virtual keyboard, PDF image format, touch input), opengl32sw is Qt's software
+# OpenGL fallback (only used by OpenGL/Quick rendering) and translations are only for
+# Qt's own dialogs in other languages. None of them is used by this widgets app.
+_drop = (
+    "opengl32sw.dll", "Qt6Pdf.dll", "Qt6Quick.dll", "Qt6Qml.dll", "Qt6QmlMeta.dll",
+    "Qt6QmlModels.dll", "Qt6QmlWorkerScript.dll", "Qt6VirtualKeyboard.dll", "Qt6Network.dll",
+    "qpdf.dll", "qtvirtualkeyboardplugin.dll", "qtuiotouchplugin.dll",
+)
+
+
+def _keep(entry):
+    dest = entry[0].replace("\\", "/")
+    return dest.rsplit("/", 1)[-1] not in _drop and "PySide6/translations/" not in dest
+
+
+a.binaries = [b for b in a.binaries if _keep(b)]
+a.datas = [d for d in a.datas if _keep(d)]
+
 pyz = PYZ(a.pure)
 
 exe = EXE(

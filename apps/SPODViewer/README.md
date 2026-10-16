@@ -37,7 +37,7 @@ conda create -n spodviewer -c conda-forge python=3.12 pip
 build.bat
 ```
 
-The output is `dist\SPODViewer\` (≈325 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
+The output is `dist\SPODViewer\` (≈277 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
 
 To check a build end to end:
 `SPODViewer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
