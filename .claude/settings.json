@@ -4,6 +4,7 @@
       "//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases"
     ],
     "allow": [
+      "Read",
       "Read(//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)",
       "Read(///ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Experiments/Shocklab_Codebases/**)"
     ],
