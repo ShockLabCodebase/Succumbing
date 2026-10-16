@@ -25,6 +25,12 @@ DISPLAYS = ["Real", "Imaginary", "Magnitude", "Phase"]
 DIRECTIONS = [("All", "all"), ("Downstream (+k)", "downstream"), ("Upstream (−k)", "upstream")]
 MODE_COLOURS = ["#1f3a93", "#c0392b", "#27ae60", "#8e44ad", "#d35400", "#16a085"]
 FPS_CHOICES = [5, 10, 15, 24, 30, 60]
+# Interface colour scheme. The plots keep their white background in every theme.
+THEMES = {"System": Qt.ColorScheme.Unknown, "Light": Qt.ColorScheme.Light, "Dark": Qt.ColorScheme.Dark}
+
+
+def apply_theme(name: str):
+    QtGui.QGuiApplication.styleHints().setColorScheme(THEMES.get(name, Qt.ColorScheme.Unknown))
 
 
 def italic(s: str) -> str:
@@ -138,6 +144,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.setWindowIcon(QtGui.QIcon(str(icon)))
 
         self._build_ui()
+        apply_theme(self.settings.value("theme", "System"))
         self._build_menus()
         self._build_shortcuts()
         self.timer = QtCore.QTimer(self)
@@ -413,6 +420,16 @@ class MainWindow(QtWidgets.QMainWindow):
         vm.addSeparator()
         vm.addAction("&Fit image", self._fit, QtGui.QKeySequence("F"))
         vm.addAction("&Auto contrast", lambda: self._auto_levels(force=True), QtGui.QKeySequence("A"))
+        vm.addSeparator()
+        theme_menu = vm.addMenu("&Theme")
+        group = QtGui.QActionGroup(self)
+        current = self.settings.value("theme", "System")
+        for name in THEMES:
+            act = theme_menu.addAction(name)
+            act.setCheckable(True)
+            act.setChecked(name == current)
+            act.triggered.connect(lambda _=False, n=name: self._set_theme(n))
+            group.addAction(act)
 
         sm = mb.addMenu("&Settings")
         sm.addAction("Cache size…", self._cache_dialog)
@@ -424,6 +441,10 @@ class MainWindow(QtWidgets.QMainWindow):
         hm.addAction("Keyboard shortcuts", self._show_keys)
         hm.addAction("File information", self._show_info)
         hm.addAction("About", self._about)
+
+    def _set_theme(self, name: str):
+        self.settings.setValue("theme", name)
+        apply_theme(name)
 
     def _build_shortcuts(self):
         def sc(key, fn):
