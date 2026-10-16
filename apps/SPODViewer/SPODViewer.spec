@@ -2,10 +2,17 @@
 # Produces dist/SPODViewer/SPODViewer.exe plus an _internal folder; copy the whole
 # SPODViewer folder to share it. Python, Qt, numpy/scipy/h5py and ffmpeg are bundled.
 
+import os
+
 from PyInstaller.utils.hooks import collect_data_files
 
-datas = [("spodviewer/assets", "spodviewer/assets")]
-datas += collect_data_files("imageio_ffmpeg", subdir="binaries")   # ffmpeg.exe
+# Minimal ffmpeg (libx264 -> mp4 only) built by tools/build_ffmpeg.sh, used in place of the
+# 84 MB full build that ships with imageio-ffmpeg. rthook_ffmpeg.py points imageio_ffmpeg at it.
+FFMPEG = "build_ffmpeg/ffmpeg.exe"
+if not os.path.isfile(FFMPEG):
+    raise SystemExit(f"{FFMPEG} not found. Build it first with tools/build_ffmpeg.sh (see README).")
+
+datas = [("spodviewer/assets", "spodviewer/assets"), (FFMPEG, "ffmpeg")]
 datas += collect_data_files("pyqtgraph", subdir="colors")           # CET colour maps
 
 excludes = [
@@ -26,6 +33,7 @@ a = Analysis(
     hiddenimports=["scipy.signal", "scipy.ndimage", "scipy.io", "h5py.defs", "h5py.utils",
                    "h5py.h5ac", "h5py._proxy"],
     excludes=excludes,
+    runtime_hooks=["tools/rthook_ffmpeg.py"],
     noarchive=False,
 )
 
@@ -42,7 +50,8 @@ _drop = (
 
 def _keep(entry):
     dest = entry[0].replace("\\", "/")
-    return dest.rsplit("/", 1)[-1] not in _drop and "PySide6/translations/" not in dest
+    return (dest.rsplit("/", 1)[-1] not in _drop and "PySide6/translations/" not in dest
+            and "imageio_ffmpeg/binaries/" not in dest)   # its hook adds the full ffmpeg back
 
 
 a.binaries = [b for b in a.binaries if _keep(b)]

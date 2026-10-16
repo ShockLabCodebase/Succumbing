@@ -9,6 +9,11 @@ if not exist "%ENV%\python.exe" (
   echo then:            "%ENV%\python.exe" -m pip install -r requirements.txt
   exit /b 1
 )
+if not exist "%~dp0build_ffmpeg\ffmpeg.exe" (
+  echo build_ffmpeg\ffmpeg.exe not found. Build it once with tools\build_ffmpeg.sh in the
+  echo MSYS2 MINGW64 shell; see README.md, "Building".
+  exit /b 1
+)
 set "PATH=%ENV%;%ENV%\Library\bin;%ENV%\Scripts;%PATH%"
 cd /d "%~dp0"
 "%ENV%\python.exe" -m PyInstaller --noconfirm --clean SPODViewer.spec || exit /b 1

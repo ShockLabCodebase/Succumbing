@@ -37,7 +37,16 @@ conda create -n spodviewer -c conda-forge python=3.12 pip
 build.bat
 ```
 
-The output is `dist\SPODViewer\` (≈277 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
+`build.bat` needs a minimal ffmpeg first (once). It is built from source with libx264 and only the parts video export uses (raw frames on a pipe → H.264/yuv420p → MP4), ≈5 MB instead of the 84 MB full build in imageio-ffmpeg. Install [MSYS2](https://www.msys2.org) (`winget install MSYS2.MSYS2 --location %LOCALAPPDATA%\msys64` works without admin), then in its MINGW64 shell:
+
+```bash
+pacman -S --needed mingw-w64-x86_64-gcc mingw-w64-x86_64-nasm mingw-w64-x86_64-pkgconf make git diffutils
+bash tools/build_ffmpeg.sh
+```
+
+This writes `build_ffmpeg\ffmpeg.exe` (git-ignored). The spec bundles it and `tools/rthook_ffmpeg.py` points imageio-ffmpeg at it. Like the imageio-ffmpeg build, it is GPL because of x264.
+
+The output is `dist\SPODViewer\` (≈200 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
 
 To check a build end to end:
 `SPODViewer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
