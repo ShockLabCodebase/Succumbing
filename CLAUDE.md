@@ -36,6 +36,7 @@ My research area is largely around analysing experimental data (time-resolved sc
 - **Never modify them:** no edits, new files, deletions, or git operations that change state (commit, checkout, pull, stash, etc.), including via shell commands. If a change there seems useful, describe it and let the user make it. Any new code goes in this repository.
 - If you need to know where something is, ask the user rather than searching the filesystem.
 - **Code notes:** summaries of these repos live in `Codebase_Notes/` (one file per repo, with the commit they were read at). Use them instead of re-reading the repos; open the source only for exact code, and update the note if the repo has moved on. Currently: [Schlieren_Processing_Scripts](Codebase_Notes/schlieren-processing-scripts.md).
+- **Patches:** when the user asks for a fixed version of a file from these repos, write it to `Codebase_Patches/<repo>/<same path>` for the user to copy across, with any tests in `Codebase_Patches/<repo>/tests/`.
 
 **Modelling matters too:** experiments, modelling and simulation go hand in hand. When summarising papers or analysing data, cover the modelling and simulation side as thoroughly as the experiments: linear stability, resolvent analysis, reduced-order models and LES/DNS, including their assumptions, numerics and how they compare with experiment.
 

@@ -3,7 +3,7 @@
 Reference notes so the repo doesn't need re-reading. **Read-only repo: never modify it** (see CLAUDE.md).
 
 - **Path:** `\\ad.monash.edu\home\User088\joellukw\Documents\Monash_Research_Fellow\Experiments\Shocklab_Codebases\Schlieren_Processing_Scripts`
-- **Snapshot:** branch `main` @ `848091de` (read 2026-10-15). If HEAD has moved, re-check the files you rely on before trusting line numbers.
+- **Snapshot:** branch `main` @ `848091de` (read 2026-10-15; `align_fields` re-read in detail 2026-10-16 at the same commit). If HEAD has moved, re-check the files you rely on before trusting line numbers.
 - **Coverage:** all top-level scripts plus the `Functions/` helpers they call, read in full. `Functions/Misc/` only listed (names at the end). `Functions/Wavelet_POD/` and `export_fig/` not read.
 - The repo's own `README.md` is out of date: it uses old script names (`SPOD_for_mat_files.m`, `Schlieren_POD.m`, `BMD_for_mat_files.m`, `Schlieren_Hilbert_POD_Plots.m`, ...). Use these notes for current names.
 - Line numbers (`file:L`) are from the snapshot above.
@@ -60,7 +60,15 @@ Schlieren_Sample_Videos: quick preview mp4s.
 - **Outputs:** `save_folder_outer/<parent>/<main>/Data/<case>_Fields.mat` (v7.3, no compression) + `Figures/Statistics/<case>_Mean_Field.png/.fig`.
 - **Camera specs** (`get_specs`): fps from `<recordRate>` or `fr_rate`, **rounded to nearest 10 Hz**. Defaults x_0 = 600, y_0 = 320 px, D = 12.1 mm, 0.25 mm/px. `n_snapshots_set` caps frames (0 = all).
 - **Readers:** `Read_mraw` (int<bits>, permute to [y,x,t], **flips left–right**; 12-bit packed probably unsupported). `Read_slow` (4096-byte header, per-frame trailer, 8→9-bit companding decode, no flip). `Read_tiff` unused.
-- **Alignment** (`align_fields`, runs if `auto_position ~= "none"` or `do_rotation`, default true): Gaussian-smoothed mean correlated against its own up–down flip over ±4° and ±60 px → rotate everything, recentre rows, rebuild y symmetric about the centre row. **Assumes top–bottom symmetric mean field.** With defaults, **the user's y_0 is discarded** (centre becomes detected axis). `"axial"`/`"both"` re-zeros x at the nozzle exit (first gradient peak of centreline) and crops 15 px upstream.
+- **Alignment** (`Functions/align_fields.m`, called at L277 if `auto_position ~= "none" || do_rotation`). Defaults `auto_position = "none"`, `do_rotation = true`, so it runs by default. Works on the **raw** mean (background is subtracted afterwards).
+  - σ = 4 px Gaussian blur; ROI columns x ∈ [−0.5, 8] D, full height. If `x(1,1) < -4` it assumes x_0 was measured from the other edge and uses mirrored column indices (L16–22).
+  - Rotation + shift search (L24–50): rotate the blurred mean, `flipud`, `corr2` of original vs flip for shifts j = 1…60 (`max_shift`). Angles within ±4° in 0.4°, then 0.04°, then 0.004° steps (3 passes of 21). Axis row = (n_y + j − 30)/2 (j = 31 = no offset), so **the axis can only be found within ≈ −15…+14.5 px of the frame's middle row** (≈ ±0.3 D at defaults).
+  - Sub-pixel (L61, `"transverse"`/`"both"` only): 3-point Gaussian fit → δ in units of j.
+  - Crop/rebuild (L67–88): rows cropped to an odd count centred on `centre_ind = floor(ceil(n_y/2) + (j−30)/2)`; y rebuilt from dy only (y_0 offset discarded), then shifted by δ·dy (wrong, see §9). Every frame of `im_data` rotated (bilinear, int16) and cropped the same way.
+  - `"none"` (default) fixes j = 30 → **y = 0 at row ceil(n_y/2), the middle of the frame; the user's y_0 is discarded** and the last row dropped for even n_y. The L87 comment ("set auto_position = 'none' and define x_0, y_0 manually") only holds if `do_rotation = false` too. x untouched.
+  - `"axial"`/`"both"` (L113–132): centreline = 3 rows at `nozzle_centre` (the +s/2 nozzle for twin jets); signal = raw mean + bg-subtracted mean (= 2·raw − bg). x = 0 at the first peak of d/dx with `MinPeakProminence` 5 counts (absolute, so bit-depth dependent). Assumes nozzle in view, flow left → right, nozzle body darker. Crops to 15 px (≈ 0.3 D) upstream of the exit, removing the near-lip region where upstream-travelling waves show in screech schlieren.
+  - **Assumes a mirror-symmetric mean** (knife edge ⟂ jet axis, ∂ρ/∂x). With a knife edge ∥ jet axis the mean is roughly antisymmetric, the true axis is a correlation minimum, and the max search locks onto the nozzle outline or background.
+  - The L91 comment "via PCA" is wrong; it is this flip-correlation search.
 - **Background:** `use_bg` default false (zeros). Subtracted after alignment. Flat-field mode does int16./int16 → integer division (bug).
 - `rotation_angle` not saved. `Functions/Rename_Photron_Folders.m` is a separate helper script (path hard-coded).
 
@@ -159,6 +167,8 @@ Fix in a copy here, never in the repo; tell the user so they can fix upstream.
 - `Separate_Upstream_Downstream` L143: `file.D_eff` not in SPOD outputs.
 - `SPOD_Plots`: waterfall (L391) and OAE broken for >1 case; peak-video cleanup uses undefined `N`, `filename`.
 - `spod.m` with `restrict_memory=true` (snapshot branch L395): A size mismatch when nsave < nBlocks; temp FFT files never found/deleted (name mismatch L227/281/434).
+- `align_fields` L61: best shift at j = 60 → `correlation(i,j+1)` out of range (`"transverse"`/`"both"`; happens when the axis is > ~15 px from the frame's middle row). L123: no centreline gradient peak → `x_start(1)` errors (`"axial"`/`"both"`).
+- `Misc/Centreline_Comparison.m:71`, `Misc/Schlieren_Adjust_xy_Old_mat.m:54`: old `align_fields` signature (no `background`) → a string lands in `do_rotation`, errors at `align_fields` L8. `Misc/Fix_Alignment.m:34` is current.
 
 **Silently wrong**
 - `bmd_modified_Symmetry` L240/313: L initialised with zeros not NaN before `spmdReduce(@addnan)` → with >1 worker most triads become 0.
@@ -172,6 +182,11 @@ Fix in a copy here, never in the repo; tell the user so they can fix upstream.
 - `tcoeffs` Windows path: `X_proj` not cleared between 50k chunks (affects > 50k snapshots on Windows).
 - POD `Energy` inflated (normalised by 500 retained eigenvalues); svds branch scaling differs.
 - Axis labels swapped in phase portraits (POD_Plots L225–234, Hilbert_POD_Plots L275–293, Instantaneous plots L340–341).
+- `align_fields` sub-pixel (L88) adds δ·dy; the axis moves δ/2 rows per unit j (positive δ → higher row), and the `floor` at L70 drops half a row for odd j. One-line fix: `y1 = y1 - ((size(im_1,1) + transverse_shift + actual_centre - max_shift/2)/2 - centre_ind)*dy` with `dy = y(2,1)-y(1,1)` (note `max_shift/2`; `- max_shift` puts y = 0 15 rows off the axis). Fixed copy with an even/odd crop and an optional FFT sub-pixel shift: `Codebase_Patches/Schlieren_Processing_Scripts/Functions/align_fields.m`. As written, y = 0 can be ~1 px (≈ 0.02 D) off and jumps 1 px depending on which neighbouring shift wins. Best shift at j = 1 → fit done about j = 2.
+- `align_fields` rotation search (L28–50) is biased: it compares raw whole-shift correlation peaks across angles (a tilt that moves part of the axis onto a sample scores higher), and when the axis is off-centre the best window reaches `imrotate`'s zero-filled corners, which grow with the angle. On synthetic fields this gave errors up to ~0.1°. The patch compares fitted (sub-pixel) peaks and pads edges by replication before rotating in the search; it then recovers angles to ≤ 0.001° and the axis to ≤ 0.004 px (`Codebase_Patches/.../tests/test_align_fields.m`). On Test_Data `Twin_Metal_AB_Angled_NPR_30` it found a 0.116° residual tilt whose correction cut mean-field mirror asymmetry by 25%.
+- `align_fields` crop is always odd-length and centred on a whole row → when the axis lies between rows, `y_zero` (nearest row to y = 0, used by the symmetry scripts) is 0.5 px off the axis → slight symmetric/antisymmetric leakage.
+- `align_fields` with defaults discards y_0 (see §3).
+- `align_fields`: `imrotate(...,'crop')` zero corners (up to ~35 px tall at 4° on a 1024 px frame) are never cropped; any non-zero angle, even 0.004°, re-interpolates every frame (slight high-k smoothing, int16 rounding); `do_rotation = false` runs 63 identical 0° passes; `rotation_angle` not saved.
 
 **Unverified / disputed**
 - Possible amplitude-scaling mismatch: `spod.m` now uses a unit-power window × sqrt(dt), while `invspod`/`tcoeffs` use the old Hamming `1/mean(w)` normalisation → reconstructed amplitudes may be off by a constant (~sqrt(dt)·sum(w)/‖w‖). One reader thought amplitude was consistent. Check numerically (reconstruct vs original at a tone) before trusting absolute amplitudes; relative/shape results unaffected.
