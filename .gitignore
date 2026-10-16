@@ -19,3 +19,7 @@
 # Obsidian vault settings (per-user)
 .obsidian/
 
+
+# CAD geometry (local only, like the PDFs)
+*.stp
+*.step

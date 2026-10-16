@@ -39,8 +39,34 @@ Every PyFR job calls the driver when it finishes. The driver analyses the segmen
 | `continuation/slurm.py` | job script and `sbatch` submission |
 | `continuation/__main__.py` | command line |
 | `continuation.example.toml` | settings, with every option explained |
-| `base.example.ini` | the parts of the PyFR config the driver depends on |
+| `base.example.ini` | the parts of the PyFR config the driver depends on, the boundaries and the absorbing layer |
+| `mesh/make_mesh.py` | Gmsh mesh of the nozzle and jet from the STEP file |
 | `tests/` | synthetic tests, with a fake hysteretic jet standing in for PyFR |
+
+## Mesh
+
+`mesh/make_mesh.py` builds the mesh from the nozzle's STEP file (`Simulations/CAD/16mm_Cutdown_for_Mesh.stp`: the 16 mm converging nozzle, a 94:1 contraction from a 155 mm plenum, 1 mm flat lip, a 30° outer cone and the outer body back to 4.7 D upstream of the exit; STEP files are git-ignored, so it is local only). It slices the CAD solid through its axis, so the walls follow the CAD exactly.
+
+- **Units and axes:** D = 1, jet along +x, exit plane at x = 0. The plenum inlet is at x = −4.6875.
+- **Domain:** to x = 40 and r = 15. The plane behind the nozzle body at x = −4.6875 is far field.
+- **Topology:** the (x, r) section is meshed with quads and revolved through 360° (96 elements), so nearly all elements are hexahedra. A butterfly block fills r < 0.3 along the axis, so there are no degenerate elements there. Round the lip, the section is three structured blocks: inside the nozzle over the last 1 D (wall to r = 0.3), and either side of the lip line r = 0.5 out to x = 6. There, cells follow the wall and the shear layer, the lip face has 10 cells across, and the streamwise spacing grows geometrically from 0.004 D at the exit. The plenum and everything else are unstructured quads; a few leftover triangles become prisms.
+- **Sizes** (set in `P` at the top of the script): 0.012 D at the lip; 0.015 D in the shear layer at the exit, growing downstream; 0.03 D in the shock-cell region; 0.2 D in the acoustic near field (r < 7, x < 20, including the whole contraction); coarse in the absorbing layer. The first cell off the inner wall is 0.002 D at the exit (0.01 D at x = −1).
+- **Boundaries:** `inlet`, `wall`, `farfield` and `outlet`, matching `base.example.ini`, which also has the absorbing layer (`[solver-plugin-source]`).
+
+```bash
+pip install gmsh
+python mesh/make_mesh.py ../CAD/16mm_Cutdown_for_Mesh.stp jet.msh            # 2.8M elements, ~6 min, 2.2 GB
+python mesh/make_mesh.py ../CAD/16mm_Cutdown_for_Mesh.stp pilot.msh --scale 3  # 140k elements, seconds
+pyfr import jet.msh jet.pyfrm
+```
+
+`--scale` multiplies every size, and divides the azimuthal count, so a pilot run can test the setup cheaply. `--order` sets the geometric order of the curved elements (default 2). PyFR runs only on Linux and macOS (it needs `fcntl`), so run `pyfr import` on M3.
+
+**Things to decide before production:**
+- **Reynolds number.** The wall-normal layers assume a thin boundary layer at the exit. Set `bl_first`, `bl_first_up` and `h_x0` from the chosen Re_D, and check the inlet boundary layer in a pilot run.
+- **Cost.** At full size the mesh has 2.8 M elements (all hexes but ~200 prisms): 180 M solution points per variable at p = 3, 352 M at p = 4. Most of the cost is the fine streamwise spacing at the exit (`h_x0`), which the blocks carry across the jet and the axis block. The first wall layer (0.002 D) sets the explicit time step. Measure time per D/U_j in a pilot before sizing the GPU request; `n_theta`, `h_x0`, `x_block`, `h_near` and the shear-layer sizes are the main knobs.
+- **Absorbing layer.** Moving `xsp` and `rsp` in the config should leave the A1 tone unchanged.
+- **Inlet reflections.** The total-pressure inlet reflects sound travelling up the nozzle. The contraction weakens it, but it is worth checking in the plenum data, since that is a region of interest.
 
 ## Use on M3
 
@@ -90,6 +116,5 @@ These cover:
 
 - **Sampler HDF5 layout.** The reader expects compound records `t` + `samples (npts, nvars)` with a `fields` attribute. This comes from the PyFR source (`develop` branch, October 2026), not from a run.
 - **End-of-segment solution.** The driver relies on the writer, with `dt-out` equal to the segment length, writing a solution at `tend` after a restart. Check this on the first segment.
-- **Inflow angles.** Check the `theta`/`phi` convention of `sub-in-ftpttang` against the jet axis of the mesh.
 - **Chained submission.** The chain needs `sbatch` to work from inside a job on M3. If it doesn't, set `submit = false` and run `advance` by hand, or from a cron job.
 - **Classification thresholds.** `switch_ratio`, `trend_threshold`, `rise_ratio` and `window_cycles` were tuned on synthetic signals. Re-tune them on the converged A1 and A2 runs: the noise in r for a run that stays in one mode sets how sensitive these can be.
