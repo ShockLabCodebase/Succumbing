@@ -45,7 +45,7 @@ Every PyFR job calls the driver when it finishes. The driver analyses the segmen
 
 ## Mesh
 
-`mesh/make_mesh.py` builds the mesh from the nozzle's STEP file (`Simulations/CAD/16mm_Cutdown_for_Mesh.stp`: the 16 mm converging nozzle, a 94:1 contraction from a 155 mm plenum, 1 mm flat lip, a 30° outer cone and the outer body back to 4.7 D upstream of the exit; STEP files are git-ignored, so it is local only). It slices the CAD solid through its axis, so the walls follow the CAD exactly.
+`mesh/make_mesh.py` builds the mesh from the nozzle's STEP file (`Simulations/CAD/16mm_Cutdown_for_Mesh.stp`: the 16 mm converging nozzle, a 94:1 contraction from a 155 mm plenum, 1 mm flat lip, a 30° outer cone, a 65° face and an outer cylinder of radius 5.3125 D back to 4.7 D upstream of the exit; STEP files are git-ignored, so it is local only). It slices the CAD solid through its axis, so the walls follow the CAD exactly. The one exception: any fillet shorter than 0.05 D becomes a straight chord. A fillet that small gets cells much smaller than their neighbours, and a quad wrapping two segments of one arc folds over once its edges are curved. The current CAD has no fillets; an earlier version had two small ones on the outer body, which caused exactly this. The script checks every element's Jacobian at the end and fails if any is ≤ 0. `pyfr import` doesn't check this, so without the check you would only find out when PyFR stops at the start of a run.
 
 - **Units and axes:** D = 1, jet along +x, exit plane at x = 0. The plenum inlet is at x = −4.6875.
 - **Domain:** to x = 40 and r = 15. The plane behind the nozzle body at x = −4.6875 is far field.
@@ -71,6 +71,13 @@ pyfr import jet.msh jet.pyfrm
 ## Use on M3
 
 The PyFR venv already has numpy and h5py, and PyFR needs Python ≥ 3.11, which provides `tomllib`. So the driver needs nothing extra.
+
+**Environment** (set up in October 2026, in `/fs04/scratch2/qk75/JWeightman/PyFR_Staging`; `source env.sh` there):
+- Python 3.12 from the `miniforge3` module, holding PyFR 3.1, gmsh and mpi4py. mpi4py is built from source against HPC-X's MPI: `MPICC=$(which mpicc) pip install --no-binary mpi4py mpi4py`.
+- Modules: `module purge`, then `module load hpcx/2.50-redhat9-cuda12 cuda/12.8`. Without the purge, the HPC-X module doesn't put `mpicc` on the path.
+- PyFR initialises MPI with `MPI_THREAD_MULTIPLE`. The default UCX in HPC-X refuses that, and Open MPI then falls back to a slower transport ("PML UCX could not be selected"). Putting HPC-X's multithreaded UCX (`ucx/mt/lib`) first on `LD_LIBRARY_PATH` fixes it.
+- `env.sh` also points `TMPDIR`, `XDG_CACHE_HOME` (where PyFR caches its compiled kernels) and the pip cache into that folder.
+- The pilot mesh ran 400 RK45 steps at p = 3 on a desktop-node L4 GPU in 0.79 s per step. The L4 is slow in double precision, so this checks only that things work, not the speed. Measure time per step on an A100 or H100 before sizing jobs.
 
 1. **Prepare the case directory** with `mesh.pyfrm`, `base.ini` (your production config; see `base.example.ini`) and `continuation.toml` (copied from the example). The base config must have:
    - a fixed `dt` with `controller = none`. The sampler records every `nsteps`, so an adaptive dt would give uneven sampling;

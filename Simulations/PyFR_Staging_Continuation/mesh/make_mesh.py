@@ -79,6 +79,10 @@ P = {
     'bl_first_up': 0.01,    # first cell off the wall at x = -x_bl
     'n_wall': 16,           # cells from the wall / lip line to r_core
     'n_lip': 10,            # cells across the lip face and B3
+
+    # CAD fillets shorter than this become straight chords (see
+    # nozzle_profile)
+    'fillet_max': 0.05,
 }
 
 
@@ -139,6 +143,17 @@ def nozzle_profile(step_path):
 
     if abs(here[0] - x_in) > tol:
         raise RuntimeError('wall profile does not end at the inlet plane')
+
+    # Small fillets are far smaller than the cells round them (an earlier
+    # CAD had 0.03-0.04 D ones on the outer body; the current one has none).
+    # Gmsh puts at least two segments on a curved curve, and a quad that
+    # takes two consecutive segments of one smooth arc has a 180-degree
+    # corner once its edges are curved, so its Jacobian is zero or negative.
+    # A chord leaves a real corner, which a quad can straddle.
+    for k, c in enumerate(chain):
+        if (len(c) > 2 and
+                np.sum(np.hypot(*np.diff(c, axis=0).T)) < P['fillet_max']):
+            chain[k] = c[[0, -1]]
 
     # The inner wall starts at the lip's inner corner: the start point on
     # the exit plane with the smallest radius
@@ -519,10 +534,31 @@ def build(step_path, out_path, scale, order):
     gmsh.model.mesh.removeDuplicateNodes()
 
     report()
+    check_jacobians()
     gmsh.option.setNumber('Mesh.MshFileVersion', 4.1)
     gmsh.option.setNumber('Mesh.Binary', 0)
     gmsh.write(out_path)
     gmsh.finalize()
+
+
+def check_jacobians():
+    """Fail if any volume element has a zero or negative Jacobian.
+
+    PyFR stops on these ('Negative mesh Jacobians detected'), but only once
+    a run starts; pyfr import does not check.
+    """
+    types, tags, _ = gmsh.model.mesh.getElements(3)
+    for t, e in zip(types, tags):
+        dj = np.array(gmsh.model.mesh.getElementQualities(e, 'minDetJac'))
+        bad = np.asarray(e)[dj <= 0]
+        if len(bad):
+            _, nodes, _, _ = gmsh.model.mesh.getElement(int(bad[0]))
+            x = np.mean([gmsh.model.mesh.getNode(int(n))[0] for n in nodes],
+                        axis=0)
+            raise RuntimeError(
+                f'{len(bad)} elements with Jacobian <= 0, the first near '
+                f'x = {x[0]:.3f}, r = {math.hypot(x[1], x[2]):.3f}')
+    print('Jacobians: all positive')
 
 
 def report():
