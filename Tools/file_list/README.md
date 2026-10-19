@@ -21,6 +21,23 @@ Finds data parked on shared storage (M3 scratch, RDS Market) so its owners can b
 
    `--depth N` groups everything into folders N levels below the root instead, still dropping folders under `--min-size`. Use it for a coarser, per-person or per-project view. A folder is then judged by its newest file, so old data sitting inside an active folder is missed. That is why `--depth 1` finds less than the default.
 
+## Weekly usage per folder
+
+`weekly_scan.ps1` tracks how much each top-level folder of Market and M3 qk75 scratch holds over time. Each run adds a column (the scan date, sizes in GB) to `Misc/Market_folder_sizes.csv` and `Misc/M3_qk75_folder_sizes.csv`, with one row per folder plus `(loose files)`, `TOTAL` and, for M3, `drive used`/`drive size` from `df`. A run is logged to `Misc/storage_scan.log`. Market is sized with a robocopy list-only dry run over the UNC path. M3 is sized with `du` over SSH (`ssh m3`, key in the Windows ssh-agent), at low priority on the login node, and nothing is written there.
+
+```
+powershell -ExecutionPolicy Bypass -File weekly_scan.ps1 [-Only Market|M3] [-OutDir DIR]
+```
+
+To run it every Sunday at 02:00, run this once in PowerShell. The task runs only while you are logged on, because it needs your network login for Market and your ssh-agent for M3. If the PC was off at 02:00, it starts at the next chance.
+
+```powershell
+$a = New-ScheduledTaskAction -Execute powershell.exe -Argument '-NoProfile -ExecutionPolicy Bypass -File "J:\Succumbing\Tools\file_list\weekly_scan.ps1"'
+$t = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 2am
+$s = New-ScheduledTaskSettingsSet -StartWhenAvailable -ExecutionTimeLimit (New-TimeSpan -Hours 12)
+Register-ScheduledTask -TaskName 'Weekly storage scan' -Action $a -Trigger $t -Settings $s
+```
+
 ## Notes
 
 - **Which time counts as "used".** `--time latest` (the default) takes the later of the access and modified times. Access times are often unreliable. On Windows, antivirus or indexing can update them during the scan itself, and the summariser warns when that seems to have happened. Linux file systems usually update them at most once a day. Use `--time modified` when in doubt: data nobody has written to in six months is a good candidate, even if someone has read it.
