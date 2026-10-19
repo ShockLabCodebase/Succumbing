@@ -184,9 +184,24 @@ TRANSPOSE_ABOVE = 512 * 2**20
 TRANSPOSE_CACHE_BUDGET = 15 * 2**30
 
 
-def transpose_cache_dir() -> str:
+_cache_dir: str | None = None     # set by the viewer from its settings
+_used_dirs: set[str] = set()       # every folder used this session, emptied on exit
+
+
+def default_transpose_cache_dir() -> str:
     base = os.environ.get("LOCALAPPDATA") or tempfile.gettempdir()
     return os.path.join(base, "SPODViewer", "cache")
+
+
+def transpose_cache_dir() -> str:
+    return _cache_dir or default_transpose_cache_dir()
+
+
+def set_transpose_cache_dir(folder: str | None):
+    """Use `folder` for new cache files (None: the default under LOCALAPPDATA)."""
+    global _cache_dir
+    _used_dirs.add(transpose_cache_dir())
+    _cache_dir = os.path.normpath(folder) if folder else None
 
 
 def _transpose_cache_path(path: str, shape) -> str:
@@ -197,17 +212,32 @@ def _transpose_cache_path(path: str, shape) -> str:
     return os.path.join(transpose_cache_dir(), f"{stem}_{digest}.bin")
 
 
-def clear_transpose_cache():
-    """Delete every cache file not held open (e.g. by another viewer window)."""
+def _is_cache_file(name: str) -> bool:
+    return name.endswith(".bin") or name.endswith(".part")
+
+
+def transpose_cache_size() -> int:
     folder = transpose_cache_dir()
     if not os.path.isdir(folder):
-        return
-    for name in os.listdir(folder):
-        if name.endswith((".bin", ".part")):
-            try:
-                os.remove(os.path.join(folder, name))
-            except OSError:
-                pass
+        return 0
+    return sum(os.path.getsize(os.path.join(folder, n)) for n in os.listdir(folder) if _is_cache_file(n))
+
+
+def clear_transpose_cache():
+    """Delete every cache file not held open (e.g. by another viewer window).
+
+    Covers the current folder and any folder used earlier this session. Only
+    files the viewer writes (.bin, .part) are touched, never the folder itself.
+    """
+    for folder in _used_dirs | {transpose_cache_dir()}:
+        if not os.path.isdir(folder):
+            continue
+        for name in os.listdir(folder):
+            if _is_cache_file(name):
+                try:
+                    os.remove(os.path.join(folder, name))
+                except OSError:
+                    pass
 
 
 def _evict_transpose_cache(folder: str, keep: str, need: int):
@@ -215,7 +245,7 @@ def _evict_transpose_cache(folder: str, keep: str, need: int):
     files = []
     for name in os.listdir(folder):
         p = os.path.join(folder, name)
-        if p == keep or not name.endswith((".bin", ".part")):
+        if p == keep or not _is_cache_file(name):
             continue
         try:
             st = os.stat(p)
@@ -472,22 +502,31 @@ class SPODFile:
         """Rewrite P as [freq, mode, y, x] complex64 in the cache file."""
         shape = (self.n_freq, self.n_modes, self.ny, self.nx)
         need = int(np.prod(shape)) * 8
-        folder = os.path.dirname(self._mm_path)
+        # the cache folder may have been changed since the file was opened
+        folder = transpose_cache_dir()
+        self._mm_path = os.path.join(folder, os.path.basename(self._mm_path))
+        _used_dirs.add(folder)
         os.makedirs(folder, exist_ok=True)
+        if os.path.exists(self._mm_path):      # e.g. built by another viewer window
+            self._open_mm()
+            return
         _evict_transpose_cache(folder, keep=self._mm_path, need=need)
         free = shutil.disk_usage(folder).free
         if free < need + 2**30:
             raise OSError(
                 f"This file's modes are stored with all frequencies in each chunk, so they "
                 f"must be rewritten to a {need / 2**30:.1f} GB cache in {folder}, but only "
-                f"{free / 2**30:.1f} GB is free there.")
-        part = self._mm_path + ".part"
+                f"{free / 2**30:.1f} GB is free there. Choose another folder under "
+                f"Settings → Mode cache.")
+        # one .part per process, so two viewer windows never write the same file
+        part = f"{self._mm_path}.{os.getpid()}.part"
         mm = np.memmap(part, dtype=np.complex64, mode="w+", shape=shape)
         try:
-            # Slabs along y (h5 axis 2), aligned to the chunks, about 128 MB each.
+            # Slabs along y (h5 axis 2), aligned to the chunks, about 32 MB each,
+            # so progress is reported often.
             cy = self._P.chunks[2]
             per_row = self.n_modes * self.nx * self.n_freq * 8
-            step = max(cy, (128 * 2**20 // max(per_row, 1)) // cy * cy)
+            step = max(cy, (32 * 2**20 // max(per_row, 1)) // cy * cy)
             for y0 in range(0, self.ny, step):
                 if self._cancel:
                     raise RuntimeError("cancelled")
@@ -510,7 +549,12 @@ class SPODFile:
                 pass
             raise
         del mm
-        os.replace(part, self._mm_path)
+        try:
+            os.replace(part, self._mm_path)
+        except OSError:
+            if not os.path.exists(self._mm_path):
+                raise
+            os.remove(part)     # another window finished first and has it open
         self._open_mm()
 
     def modes_at(self, i: int) -> np.ndarray:

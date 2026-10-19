@@ -15,7 +15,8 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import Qt
 
 from . import __version__, colormaps
-from .data import SPODFile, clear_transpose_cache, split_direction
+from .data import (SPODFile, clear_transpose_cache, set_transpose_cache_dir,
+                   split_direction, transpose_cache_dir, transpose_cache_size)
 
 pg.setConfigOptions(imageAxisOrder="row-major", antialias=True,
                     background="w", foreground="k")
@@ -122,6 +123,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, settings_name: str = "SPODViewer"):
         super().__init__()
         self.settings = QtCore.QSettings("ShockLab", settings_name)
+        set_transpose_cache_dir(self.settings.value("mode_cache_dir", "") or None)
         self.spod: SPODFile | None = None
         self.prefetch: Prefetcher | None = None
         self.idx = 0
@@ -448,7 +450,17 @@ class MainWindow(QtWidgets.QMainWindow):
             group.addAction(act)
 
         sm = mb.addMenu("&Settings")
-        sm.addAction("Cache size…", self._cache_dialog)
+        sm.addAction("Memory cache size…", self._cache_dialog)
+        mc = sm.addMenu("Mode cache folder")
+        cur = mc.addAction("")
+        cur.setEnabled(False)          # shows the current folder and its size
+        mc.addSeparator()
+        mc.addAction("Open folder", self._open_mode_cache)
+        mc.addAction("Change folder…", self._choose_mode_cache)
+        mc.addAction("Use default folder", lambda: self._set_mode_cache(None))
+        mc.aboutToShow.connect(lambda: cur.setText(
+            f"{transpose_cache_dir()}  ({transpose_cache_size() / 2**30:.1f} GB)"))
+        self.mode_cache_menu = mc
         self.act_prefetch = sm.addAction("Prefetch neighbouring frequencies")
         self.act_prefetch.setCheckable(True)
         self.act_prefetch.setChecked(True)
@@ -909,16 +921,22 @@ class MainWindow(QtWidgets.QMainWindow):
     def _show_busy(self, frac):
         """Overlay on the image while the frequency-major cache is built."""
         s = self.spod
+        gb = s.n_freq * s.n_modes * s.ny * s.nx * 8 / 2**30
         if not self.busy.isVisible():
             self.img.clear()
-            gb = s.n_freq * s.n_modes * s.ny * s.nx * 8 / 2**30
-            self.busy_label.setText(
-                "<b>Building mode cache</b><br>"
-                f"This file stores all frequencies together, so its modes are being "
-                f"rewritten once ({gb:.1f} GB, about 1–2 min) for fast access. "
-                "The cache is deleted when SPODViewer closes.")
+            self._busy_t0 = time.perf_counter()
             self.busy.show()
-            self._place_busy()
+        if frac > 0.02:
+            left = (time.perf_counter() - self._busy_t0) * (1 - frac) / frac
+            eta = f"about {left / 60:.0f} min left" if left >= 90 else f"about {left:.0f} s left"
+        else:
+            eta = "estimating time left…"
+        self.busy_label.setText(
+            "<b>Building mode cache</b><br>"
+            "This file stores all frequencies together, so its modes are rewritten once "
+            f"({gb:.1f} GB) for fast access. The cache is deleted when SPODViewer closes.<br><br>"
+            f"{frac * gb:.1f} of {gb:.1f} GB, {eta}")
+        self._place_busy()
         self.busy_bar.setValue(int(round(100 * frac)))
 
     def _place_busy(self):
@@ -1253,6 +1271,23 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.spod.cache.budget = v * 2**20
                 self._update_cache_label()
 
+    # ---- frequency-major cache for files whose chunks hold every frequency
+    def _open_mode_cache(self):
+        folder = transpose_cache_dir()
+        os.makedirs(folder, exist_ok=True)
+        QtGui.QDesktopServices.openUrl(QtCore.QUrl.fromLocalFile(folder))
+
+    def _choose_mode_cache(self):
+        folder = QtWidgets.QFileDialog.getExistingDirectory(
+            self, "Folder for the mode cache", transpose_cache_dir())
+        if folder:
+            self._set_mode_cache(folder)
+
+    def _set_mode_cache(self, folder):
+        set_transpose_cache_dir(folder)
+        self.settings.setValue("mode_cache_dir", folder or "")
+        self.status_msg.setText(f"Mode cache folder: {transpose_cache_dir()}")
+
     def _show_keys(self):
         QtWidgets.QMessageBox.information(self, "Keyboard shortcuts", (
             "Left / Right\tprevious / next frequency bin\n"
@@ -1278,8 +1313,9 @@ class MainWindow(QtWidgets.QMainWindow):
         lines = [f"File: {i.path}",
                  f"Grid: {i.nx} (x) × {i.ny} (y)",
                  f"Frequencies: {i.n_freq}   modes in P: {i.n_modes}   modes in L: {i.n_modes_L}",
-                 f"P storage: {i.p_layout}",
-                 f"Nt: {i.n_snapshots}   Nfft: {i.nfft}   overlap: {i.overlap}   fps: {i.fps}"]
+                 f"P storage: {i.p_layout}"
+                 + (f" in {transpose_cache_dir()}" if "cache" in i.p_layout else ""),
+                 f"Nt:{i.n_snapshots}   Nfft: {i.nfft}   overlap: {i.overlap}   fps: {i.fps}"]
         for p in i.flow:
             lines.append(f"{p.name}: {p.raw} → {p.value:g}  (from {p.source})")
         for k, v in i.diameters.items():

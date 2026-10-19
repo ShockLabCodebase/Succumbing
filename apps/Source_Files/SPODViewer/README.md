@@ -6,7 +6,12 @@ Desktop viewer for SPOD result files from the Shock Lab schlieren scripts (`SPOD
 
 Run `SPODViewer.exe`, then open a file (File → Open, drag and drop, or pass the path on the command line). Large files are fine: only the frequency being viewed is read, and neighbouring frequencies are loaded in the background.
 
-Some files store `P` with every frequency in each HDF5 chunk (e.g. chunks `(10, 1, 3, 257)`), so reading one frequency means decompressing the whole array. The first time such a file is opened, `P` is rewritten frequency-major into `%LOCALAPPDATA%\SPODViewer\cache` (complex64, n_freq × n_modes × ny × nx × 8 bytes, e.g. 6.3 GB for 257 × 10 × 480 × 640). This takes about 1–2 minutes, and the status bar shows progress. After that, every frequency loads instantly. The cache is keyed on the file's path, size and modification time. It is emptied when the viewer closes, so each session builds it again on first open, and it holds at most 15 GB while the viewer runs (least recently used files go first). Help → File information shows the layout (`frequency-major cache`).
+Some files store `P` with every frequency in each HDF5 chunk (e.g. chunks `(10, 1, 3, 257)`; MATLAB picks this shape for some array sizes), so reading one frequency means decompressing the whole array. The first time a frequency of such a file is shown, `P` is rewritten frequency-major into the mode cache folder (complex64, n_freq × n_modes × ny × nx × 8 bytes, e.g. 6.3 GB for 257 × 10 × 480 × 640). A message and progress bar over the image show how much is done and the time left. This reads the whole file once, so it takes from about 1 minute (file already in Windows' memory) to several minutes (slow drive). After that, every frequency loads instantly.
+
+- **Folder**: `%LOCALAPPDATA%\SPODViewer\cache` by default. *Settings → Mode cache folder* shows the folder and its size, opens it, or changes it (e.g. to a drive with more space). The choice is remembered.
+- **Clean-up**: the viewer deletes its cache files (`.bin`, `.part`) when it closes, from every cache folder used in that session, and keeps at most 15 GB while it runs (least recently used files go first). Other files in the folder are never touched.
+- **Waterfall**: only `St` and `L` are read, so no cache is built for the files in a waterfall. A file's cache is built only when it is opened in the viewer (e.g. by clicking the waterfall or with `[` / `]`).
+- Each viewer window writes its own temporary `.part` file, so two windows opening the same file do not clash. Help → File information shows the layout (`frequency-major cache`) and folder.
 
 - **Spectrum** (bottom): λ against St for each mode, with the most prominent peaks marked. Click or drag the orange line to pick a frequency. You can also use the St/bin boxes, the peak list, ←/→ (one bin) and PgUp/PgDn (peak to peak).
 - **Mode image**: `Real`, `Imaginary`, `Magnitude` or `Phase` of the selected mode (↑/↓ change mode). It is normalised by max |P| by default. The contrast panel and colour maps work as in FieldsPlayer; pogmap and CMRmap are the group's maps.
@@ -62,6 +67,7 @@ Headless test: `python tests/smoke_test.py <file.mat> <out_dir>`.
 
 ## Versions
 
+- **0.3** (19 Oct 2026): mode cache folder can be opened and changed (Settings → Mode cache folder). The progress message shows GB done and time left and updates about every 1%. Two windows building the same cache no longer clash.
 - **0.2** (19 Oct 2026): files whose `P` chunks hold every frequency are rewritten into a local frequency-major cache on first view, so each frequency loads instantly afterwards. A message and progress bar show over the image while the cache is built. The cache is deleted when the viewer closes and is capped at 15 GB. The version is shown in the window title.
 - **0.1** (16 Oct 2026): first release (`dist\SPODViewer_0.1.zip`). Its About box says 0.1.0.
 
