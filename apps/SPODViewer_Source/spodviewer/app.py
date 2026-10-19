@@ -15,7 +15,7 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import Qt
 
 from . import __version__, colormaps
-from .data import SPODFile, split_direction
+from .data import SPODFile, clear_transpose_cache, split_direction
 
 pg.setConfigOptions(imageAxisOrder="row-major", antialias=True,
                     background="w", foreground="k")
@@ -49,10 +49,12 @@ class Prefetcher(QtCore.QObject):
 
     loaded = QtCore.Signal(int)
     failed = QtCore.Signal(int, str)
+    progress = QtCore.Signal(float)   # while rewriting P into the frequency-major cache
 
     def __init__(self, spod: SPODFile):
         super().__init__()
         self.spod = spod
+        spod.progress = self.progress.emit
         self._queue: list[int] = []
         self._cv = threading.Condition()
         self._stop = False
@@ -504,6 +506,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.prefetch = Prefetcher(spod)
         self.prefetch.loaded.connect(self._slice_loaded)
         self.prefetch.failed.connect(self._slice_failed)
+        self.prefetch.progress.connect(self._transpose_progress)
         self.settings.setValue("last_dir", os.path.dirname(path))
         self._add_recent(path)
         self._setup_for_file()
@@ -548,6 +551,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def close_file(self):
         self.btn_play.setChecked(False)
+        if self.spod is not None:
+            self.spod.cancel()      # so the prefetch thread stops promptly
         if self.prefetch is not None:
             self.prefetch.stop()
             self.prefetch = None
@@ -856,7 +861,10 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.prefetch.request(self.idx)
             return
         self._waiting = True
-        self.status_labels["state"].setText(f"loading St {s.St[self.idx]:.4f}…")
+        if s.needs_transpose:
+            self.status_labels["state"].setText("preparing modes for fast access (one-off)…")
+        else:
+            self.status_labels["state"].setText(f"loading St {s.St[self.idx]:.4f}…")
         if self.prefetch:
             self.prefetch.request(self.idx, 2 if self.act_prefetch.isChecked() else 0)
 
@@ -870,6 +878,15 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def _slice_failed(self, i, msg):
         self.status_msg.setText(f"Read error at bin {i}: {msg}")
+        if self._waiting and i == self.idx:
+            self._waiting = False
+            self.status_labels["state"].setText("read failed")
+            QtWidgets.QMessageBox.warning(self, "Could not read modes", msg)
+
+    def _transpose_progress(self, frac):
+        if self.spod is not None and self._waiting:
+            self.status_labels["state"].setText(
+                f"preparing modes for fast access (one-off): {100 * frac:.0f}%")
 
     def _update_cache_label(self):
         if self.spod is None:
@@ -1254,6 +1271,7 @@ class MainWindow(QtWidgets.QMainWindow):
         for w in list(self._waterfalls):
             w.close()
         self.close_file()
+        clear_transpose_cache()
         super().closeEvent(ev)
 
     def dragEnterEvent(self, ev):
@@ -1285,7 +1303,7 @@ def _selftest(app, argv) -> int:
         w.show()
         w.open_file(path)
         t0 = time.time()
-        while w._waiting and time.time() - t0 < 60:
+        while w._waiting and time.time() - t0 < 600:   # first open may build the mode cache
             app.processEvents()
             time.sleep(0.01)
         w.dir_group.button(1).setChecked(True)

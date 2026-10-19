@@ -17,8 +17,11 @@ module uses MATLAB ordering with y as rows and x as columns.
 
 from __future__ import annotations
 
+import hashlib
 import os
 import re
+import shutil
+import tempfile
 import threading
 from collections import OrderedDict
 from dataclasses import dataclass, field
@@ -173,6 +176,63 @@ def read_spectrum(path: str) -> dict:
         s.close()
 
 
+# A chunked P whose chunks hold more than this many bytes of modes across their
+# frequencies is rewritten frequency-major into a local cache before viewing.
+TRANSPOSE_ABOVE = 512 * 2**20
+# Total size kept in the cache folder; the least recently used files go first.
+# The viewer also empties the folder when it exits (clear_transpose_cache).
+TRANSPOSE_CACHE_BUDGET = 15 * 2**30
+
+
+def transpose_cache_dir() -> str:
+    base = os.environ.get("LOCALAPPDATA") or tempfile.gettempdir()
+    return os.path.join(base, "SPODViewer", "cache")
+
+
+def _transpose_cache_path(path: str, shape) -> str:
+    st = os.stat(path)
+    key = f"{os.path.normcase(os.path.abspath(path))}|{st.st_size}|{st.st_mtime_ns}|{tuple(shape)}"
+    stem = os.path.splitext(os.path.basename(path))[0][:60]
+    digest = hashlib.sha1(key.encode()).hexdigest()[:12]
+    return os.path.join(transpose_cache_dir(), f"{stem}_{digest}.bin")
+
+
+def clear_transpose_cache():
+    """Delete every cache file not held open (e.g. by another viewer window)."""
+    folder = transpose_cache_dir()
+    if not os.path.isdir(folder):
+        return
+    for name in os.listdir(folder):
+        if name.endswith((".bin", ".part")):
+            try:
+                os.remove(os.path.join(folder, name))
+            except OSError:
+                pass
+
+
+def _evict_transpose_cache(folder: str, keep: str, need: int):
+    """Delete the oldest cache files until `need` more bytes fit in the budget."""
+    files = []
+    for name in os.listdir(folder):
+        p = os.path.join(folder, name)
+        if p == keep or not name.endswith((".bin", ".part")):
+            continue
+        try:
+            st = os.stat(p)
+        except OSError:
+            continue
+        files.append((st.st_atime if name.endswith(".bin") else 0, st.st_size, p))
+    total = sum(f[1] for f in files)
+    for _, size, p in sorted(files):
+        if total + need <= TRANSPOSE_CACHE_BUDGET:
+            break
+        try:
+            os.remove(p)
+            total -= size
+        except OSError:      # still open in another viewer window
+            pass
+
+
 class _LRU:
     def __init__(self, budget_bytes: int):
         self.budget = budget_bytes
@@ -216,6 +276,10 @@ class SPODFile:
         self._io_lock = threading.Lock()
         self._h5 = None
         self._P_mem = None
+        self._mm_path = None     # frequency-major cache file, when P needs one
+        self._P_mm = None
+        self._cancel = False
+        self.progress = None     # optional callable(fraction) while building the cache
         if h5py is not None and h5py.is_hdf5(path):
             self._open_h5(path)
         else:
@@ -268,10 +332,19 @@ class SPODFile:
         self._p_ndim = len(shp)
         self.n_modes, self.nx, self.ny, self.n_freq = n_modes, nx, ny, nf
         self._complex = P.dtype.names is not None and "real" in P.dtype.names
+        per_freq = n_modes * nx * ny * 8
         if P.chunks is None:
             self._layout = "contiguous"
-            per_freq = n_modes * nx * ny * 8
             self._block = int(max(1, min(256, (256 * 2**20) // max(per_freq, 1))))
+        elif self._p_ndim == 4 and nf > 1 and P.chunks[-1] * per_freq > TRANSPOSE_ABOVE:
+            # Each chunk spans many frequencies, so reading one frequency means
+            # decompressing the whole of P. Rewrite it once, frequency-major,
+            # into a local cache file and read from that instead.
+            self._layout = f"chunked {P.chunks}, frequency-major cache"
+            self._block = 1
+            self._mm_path = _transpose_cache_path(path, shp)
+            if os.path.exists(self._mm_path):
+                self._open_mm()
         else:
             self._layout = f"chunked {P.chunks}"
             # read as many frequencies as one chunk holds
@@ -384,12 +457,73 @@ class SPODFile:
         return self.y[:, 0]
 
     def is_cached(self, i: int) -> bool:
-        return self._P_mem is not None or i in self.cache
+        return self._P_mem is not None or self._P_mm is not None or i in self.cache
+
+    @property
+    def needs_transpose(self) -> bool:
+        """True until the frequency-major cache exists, for files that need one."""
+        return self._mm_path is not None and self._P_mm is None
+
+    def _open_mm(self):
+        shape = (self.n_freq, self.n_modes, self.ny, self.nx)
+        self._P_mm = np.memmap(self._mm_path, dtype=np.complex64, mode="r", shape=shape)
+
+    def _build_transposed(self):
+        """Rewrite P as [freq, mode, y, x] complex64 in the cache file."""
+        shape = (self.n_freq, self.n_modes, self.ny, self.nx)
+        need = int(np.prod(shape)) * 8
+        folder = os.path.dirname(self._mm_path)
+        os.makedirs(folder, exist_ok=True)
+        _evict_transpose_cache(folder, keep=self._mm_path, need=need)
+        free = shutil.disk_usage(folder).free
+        if free < need + 2**30:
+            raise OSError(
+                f"This file's modes are stored with all frequencies in each chunk, so they "
+                f"must be rewritten to a {need / 2**30:.1f} GB cache in {folder}, but only "
+                f"{free / 2**30:.1f} GB is free there.")
+        part = self._mm_path + ".part"
+        mm = np.memmap(part, dtype=np.complex64, mode="w+", shape=shape)
+        try:
+            # Slabs along y (h5 axis 2), aligned to the chunks, about 128 MB each.
+            cy = self._P.chunks[2]
+            per_row = self.n_modes * self.nx * self.n_freq * 8
+            step = max(cy, (128 * 2**20 // max(per_row, 1)) // cy * cy)
+            for y0 in range(0, self.ny, step):
+                if self._cancel:
+                    raise RuntimeError("cancelled")
+                y1 = min(y0 + step, self.ny)
+                raw = self._P[:, :, y0:y1, :]                 # [mode, x, y, nf]
+                if self._complex:
+                    arr = raw["real"].astype(np.complex64)
+                    arr.imag = raw["imag"]
+                else:
+                    arr = raw.astype(np.complex64)
+                mm[:, :, y0:y1, :] = arr.transpose(3, 0, 2, 1)   # [nf, mode, y, x]
+                if self.progress is not None:
+                    self.progress(y1 / self.ny)
+            mm.flush()
+        except BaseException:
+            del mm
+            try:
+                os.remove(part)
+            except OSError:
+                pass
+            raise
+        del mm
+        os.replace(part, self._mm_path)
+        self._open_mm()
 
     def modes_at(self, i: int) -> np.ndarray:
         """All modes at frequency index i, as complex64 [mode, y, x]."""
         if self._P_mem is not None:
             return self._P_mem[i]
+        if self._mm_path is not None:
+            if self._P_mm is None:
+                with self._io_lock:
+                    if self._P_mm is None:
+                        self._build_transposed()
+            # copy, so no view keeps the cache file mapped after close()
+            return np.array(self._P_mm[i])
         hit = self.cache.get(i)
         if hit is not None:
             return hit
@@ -428,8 +562,15 @@ class SPODFile:
         order = np.argsort(prom)[::-1][:n]
         return idx[order], prom[order]
 
+    def cancel(self):
+        """Stop a cache rewrite in progress; call before closing."""
+        self._cancel = True
+
     def close(self):
+        self._cancel = True
         self.cache.clear()
+        with self._io_lock:      # wait for a cache rewrite to stop
+            self._P_mm = None
         if self._h5 is not None:
             try:
                 self._h5.close()

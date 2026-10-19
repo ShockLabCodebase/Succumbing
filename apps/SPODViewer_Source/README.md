@@ -6,6 +6,8 @@ Desktop viewer for SPOD result files from the Shock Lab schlieren scripts (`SPOD
 
 Run `SPODViewer.exe`, then open a file (File → Open, drag and drop, or pass the path on the command line). Large files are fine: only the frequency being viewed is read, and neighbouring frequencies are loaded in the background.
 
+Some files store `P` with every frequency in each HDF5 chunk (e.g. chunks `(10, 1, 3, 257)`), so reading one frequency means decompressing the whole array. The first time such a file is opened, `P` is rewritten frequency-major into `%LOCALAPPDATA%\SPODViewer\cache` (complex64, n_freq × n_modes × ny × nx × 8 bytes, e.g. 6.3 GB for 257 × 10 × 480 × 640). This takes about 1–2 minutes, and the status bar shows progress. After that, every frequency loads instantly. The cache is keyed on the file's path, size and modification time. It is emptied when the viewer closes, so each session builds it again on first open, and it holds at most 15 GB while the viewer runs (least recently used files go first). Help → File information shows the layout (`frequency-major cache`).
+
 - **Spectrum** (bottom): λ against St for each mode, with the most prominent peaks marked. Click or drag the orange line to pick a frequency. You can also use the St/bin boxes, the peak list, ←/→ (one bin) and PgUp/PgDn (peak to peak).
 - **Mode image**: `Real`, `Imaginary`, `Magnitude` or `Phase` of the selected mode (↑/↓ change mode). It is normalised by max |P| by default. The contrast panel and colour maps work as in FieldsPlayer; pogmap and CMRmap are the group's maps.
 - **Phase animation**: plays Re(P·e^{iθ}) with θ = ωt over one period. Space plays/pauses, `,`/`.` step.

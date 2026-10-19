@@ -35,7 +35,7 @@ def main(path, out):
     w.show()
     t = time.time()
     w.open_file(path)
-    wait_until(app, lambda: not w._waiting)
+    wait_until(app, lambda: not w._waiting, timeout=600)   # first open may build the mode cache
     print(f"opened + first slice in {time.time() - t:.2f}s; St = {w.spod.St[w.idx]:.4f}")
     print("status:", " | ".join(lab.text() for lab in w.status_labels.values()))
     print("peaks:", [w.peak_combo.itemText(i) for i in range(min(4, w.peak_combo.count()))])
@@ -60,10 +60,10 @@ def main(path, out):
     t = time.time()
     for _ in range(5):
         w.set_index(w.idx + 1)
-        wait_until(app, lambda: not w._waiting)
+        wait_until(app, lambda: not w._waiting, timeout=600)   # first open may build the mode cache
     print(f"5 bin steps in {time.time() - t:.2f}s")
     w._jump_peak(+1)
-    wait_until(app, lambda: not w._waiting)
+    wait_until(app, lambda: not w._waiting, timeout=600)   # first open may build the mode cache
     print(f"next peak -> St {w.spod.St[w.idx]:.4f}")
 
     # animation ticks
