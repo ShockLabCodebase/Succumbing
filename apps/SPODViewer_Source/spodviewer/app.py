@@ -139,7 +139,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._last_tick = time.perf_counter()
         self._frames = 0
 
-        self.setWindowTitle("SPODViewer")
+        self.setWindowTitle(f"SPODViewer {__version__}")
         self.setAcceptDrops(True)
         icon = ASSETS / "spodviewer.ico"
         if icon.exists():
@@ -582,14 +582,14 @@ class MainWindow(QtWidgets.QMainWindow):
             self.spec.removeItem(c)
         self._spec_curves = []
         self._clear_contours()
-        self.setWindowTitle("SPODViewer")
+        self.setWindowTitle(f"SPODViewer {__version__}")
         for lab in self.status_labels.values():
             lab.setText("")
         self._set_enabled(False)
 
     def _setup_for_file(self):
         s, info = self.spod, self.spod.info
-        self.setWindowTitle(f"SPODViewer — {info.name}")
+        self.setWindowTitle(f"SPODViewer {__version__} — {info.name}")
         Lb = info.length_label
         Dsub = "e" if Lb == "D_e" else ""
         dl = f"<i>D</i><sub>{Dsub}</sub>" if Dsub else "<i>D</i>"

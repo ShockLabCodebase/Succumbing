@@ -1,6 +1,6 @@
 # PyInstaller spec for SPODViewer. Build with build.bat (or: pyinstaller SPODViewer.spec).
-# Produces dist/SPODViewer/SPODViewer.exe plus an _internal folder; copy the whole
-# SPODViewer folder to share it. Python, Qt, numpy/scipy/h5py and ffmpeg are bundled.
+# Produces dist/SPODViewer/SPODViewer.exe plus an _internal folder (build.bat then renames the
+# folder dist/SPODViewer_<version>); copy the whole folder to share it. Python, Qt, numpy/scipy/h5py and ffmpeg are bundled.
 
 import os
 

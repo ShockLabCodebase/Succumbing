@@ -48,7 +48,7 @@ bash tools/build_ffmpeg.sh
 
 This writes `build_ffmpeg\ffmpeg.exe` (git-ignored). The spec bundles it and `tools/rthook_ffmpeg.py` points imageio-ffmpeg at it. Like the imageio-ffmpeg build, it is GPL because of x264.
 
-The output is `dist\SPODViewer\` (≈200 MB, including ffmpeg). Copy the whole folder to share it; nothing else needs installing.
+The output is `dist\SPODViewer_<version>\` (≈200 MB, including ffmpeg), with the version taken from `__version__` in `spodviewer/__init__.py`. Copy the whole folder to share it; nothing else needs installing. `build.bat` stops if that folder already exists, so bump the version for each new build (or delete the folder to rebuild the same version). The version also shows in the window title and Help → About.
 
 To check a build end to end:
 `SPODViewer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
@@ -59,6 +59,11 @@ Icon: `python tools/make_icon.py` redraws `spodviewer/assets/spodviewer.png` and
 
 Run from source: `python run_spodviewer.py [file.mat]`.
 Headless test: `python tests/smoke_test.py <file.mat> <out_dir>`.
+
+## Versions
+
+- **0.2** (19 Oct 2026): files whose `P` chunks hold every frequency are rewritten into a local frequency-major cache on first view, so each frequency loads instantly afterwards. A message and progress bar show over the image while the cache is built. The cache is deleted when the viewer closes and is capped at 15 GB. The version is shown in the window title.
+- **0.1** (16 Oct 2026): first release (`dist\SPODViewer_0.1.zip`). Its About box says 0.1.0.
 
 ## Conventions
 
