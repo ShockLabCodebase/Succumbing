@@ -28,5 +28,6 @@ if exist "dist\SPODViewer_%VER%" (
 )
 "%ENV%\python.exe" -m PyInstaller --noconfirm --clean SPODViewer.spec || exit /b 1
 move "dist\SPODViewer" "dist\SPODViewer_%VER%" >nul || exit /b 1
+copy /y "USER_GUIDE.md" "dist\SPODViewer_%VER%\README.md" >nul || exit /b 1
 echo.
 echo Built: %~dp0dist\SPODViewer_%VER%\SPODViewer.exe

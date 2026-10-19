@@ -1,5 +1,7 @@
 # SPODViewer
 
+Developer notes. The user guide that ships with each build is [USER_GUIDE.md](USER_GUIDE.md).
+
 Desktop viewer for SPOD result files from the Shock Lab schlieren scripts (`SPOD_Analysis.m` and older variants): `SPOD_Results/Data/<case>_Nt_..._Nfft_..._ovlp_...mat`. Modelled on FieldsPlayer.
 
 ## Using it
@@ -53,7 +55,7 @@ bash tools/build_ffmpeg.sh
 
 This writes `build_ffmpeg\ffmpeg.exe` (git-ignored). The spec bundles it and `tools/rthook_ffmpeg.py` points imageio-ffmpeg at it. Like the imageio-ffmpeg build, it is GPL because of x264.
 
-The output is `dist\SPODViewer_<version>\` (≈200 MB, including ffmpeg), with the version taken from `__version__` in `spodviewer/__init__.py`. Copy the whole folder to share it; nothing else needs installing. `build.bat` stops if that folder already exists, so bump the version for each new build (or delete the folder to rebuild the same version). The version also shows in the window title and Help → About.
+The output is `dist\SPODViewer_<version>\` (≈200 MB, including ffmpeg), with the version taken from `__version__` in `spodviewer/__init__.py`. Copy the whole folder to share it; nothing else needs installing. `build.bat` stops if that folder already exists, so bump the version for each new build (or delete the folder to rebuild the same version). The version also shows in the window title and Help → About. `build.bat` also copies `USER_GUIDE.md` into the build folder as `README.md`, the guide that ships next to the exe. Update the guide whenever a version changes what users see.
 
 To check a build end to end:
 `SPODViewer.exe --selftest <file.mat> <out_dir> [more.mat ...]` writes `selftest.txt`, a PNG and a short MP4. Extra files are combined into a waterfall, which is also checked.
