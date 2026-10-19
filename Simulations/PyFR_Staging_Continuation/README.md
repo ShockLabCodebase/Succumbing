@@ -42,6 +42,7 @@ Every PyFR job calls the driver when it finishes. The driver analyses the segmen
 | `base.example.ini` | the parts of the PyFR config the driver depends on, the boundaries and the absorbing layer |
 | `mesh/make_mesh.py` | Gmsh mesh of the nozzle and jet from the STEP file |
 | `tests/` | synthetic tests, with a fake hysteretic jet standing in for PyFR |
+| `M3_SETUP.md` | record of the M3 setup: environment, mesh and config problems and their fixes, open decisions |
 
 ## Mesh
 
