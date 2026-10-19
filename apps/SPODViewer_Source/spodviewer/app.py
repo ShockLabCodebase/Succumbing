@@ -164,6 +164,20 @@ class MainWindow(QtWidgets.QMainWindow):
             self.plot.getAxis(ax).setStyle(showValues=False)
         self.img = pg.ImageItem()
         self.plot.addItem(self.img)
+        # shown over the image while P is rewritten into the frequency-major cache
+        self.busy = QtWidgets.QFrame(self.plot)
+        self.busy.setStyleSheet(
+            "QFrame { background: rgba(255, 255, 255, 235); border: 1px solid #999; border-radius: 6px; }"
+            "QLabel { border: none; background: transparent; }")
+        bl = QtWidgets.QVBoxLayout(self.busy)
+        bl.setContentsMargins(20, 16, 20, 16)
+        self.busy_label = QtWidgets.QLabel(alignment=Qt.AlignCenter, wordWrap=True)
+        self.busy_bar = QtWidgets.QProgressBar(minimum=0, maximum=100, textVisible=True)
+        bl.addWidget(self.busy_label)
+        bl.addWidget(self.busy_bar)
+        self.busy.setFixedWidth(420)
+        self.busy.hide()
+        self.plot.installEventFilter(self)
         self.title = pg.TextItem(anchor=(0, 0), color="k")
         self.plot.getPlotItem().setTitle("")
         self.hover = QtWidgets.QLabel("")
@@ -562,6 +576,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self._field = None
         self._field_key = None
         self._split_cache.clear()
+        self.busy.hide()
         self.img.clear()
         for c in self._spec_curves:
             self.spec.removeItem(c)
@@ -862,7 +877,8 @@ class MainWindow(QtWidgets.QMainWindow):
             return
         self._waiting = True
         if s.needs_transpose:
-            self.status_labels["state"].setText("preparing modes for fast access (one-off)…")
+            self.status_labels["state"].setText("building mode cache…")
+            self._show_busy(0.0)
         else:
             self.status_labels["state"].setText(f"loading St {s.St[self.idx]:.4f}…")
         if self.prefetch:
@@ -874,19 +890,46 @@ class MainWindow(QtWidgets.QMainWindow):
         self._update_cache_label()
         if self._waiting and i == self.idx:
             self._waiting = False
+            self.busy.hide()
             self._refresh(levels=True)
 
     def _slice_failed(self, i, msg):
         self.status_msg.setText(f"Read error at bin {i}: {msg}")
         if self._waiting and i == self.idx:
             self._waiting = False
+            self.busy.hide()
             self.status_labels["state"].setText("read failed")
             QtWidgets.QMessageBox.warning(self, "Could not read modes", msg)
 
     def _transpose_progress(self, frac):
         if self.spod is not None and self._waiting:
-            self.status_labels["state"].setText(
-                f"preparing modes for fast access (one-off): {100 * frac:.0f}%")
+            self.status_labels["state"].setText(f"building mode cache: {100 * frac:.0f}%")
+            self._show_busy(frac)
+
+    def _show_busy(self, frac):
+        """Overlay on the image while the frequency-major cache is built."""
+        s = self.spod
+        if not self.busy.isVisible():
+            self.img.clear()
+            gb = s.n_freq * s.n_modes * s.ny * s.nx * 8 / 2**30
+            self.busy_label.setText(
+                "<b>Building mode cache</b><br>"
+                f"This file stores all frequencies together, so its modes are being "
+                f"rewritten once ({gb:.1f} GB, about 1–2 min) for fast access. "
+                "The cache is deleted when SPODViewer closes.")
+            self.busy.show()
+            self._place_busy()
+        self.busy_bar.setValue(int(round(100 * frac)))
+
+    def _place_busy(self):
+        self.busy.adjustSize()
+        r = self.plot.rect()
+        self.busy.move((r.width() - self.busy.width()) // 2, (r.height() - self.busy.height()) // 2)
+
+    def eventFilter(self, obj, ev):
+        if obj is self.plot and ev.type() == QtCore.QEvent.Resize and self.busy.isVisible():
+            self._place_busy()
+        return super().eventFilter(obj, ev)
 
     def _update_cache_label(self):
         if self.spod is None:
