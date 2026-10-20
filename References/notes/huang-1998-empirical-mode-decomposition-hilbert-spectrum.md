@@ -8,7 +8,7 @@ venue: "Proc. R. Soc. Lond. A 454(1971), 903–995"
 bib: {"journal": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences", "volume": "454", "number": "1971", "pages": "903--995"}
 doi: "10.1098/rspa.1998.0193"
 arxiv: ""
-pdf: "Huang-EtAl_1998_The-Empirical-Mode-Decomposition-And-The-Hilbert-Spectrum-For-Nonlinear-And.pdf"
+pdf: "time-frequency-methods/Huang-EtAl_1998_The-Empirical-Mode-Decomposition-And-The-Hilbert-Spectrum-For-Nonlinear-And.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Origin of EMD/Hilbert–Huang: sifting into IMFs so ω = dθ/dt is mea
 
 - **Authors:** N. E. Huang, Z. Shen, S. R. Long, M. C. Wu, H. H. Shih, Q. Zheng, N.-C. Yen, C. C. Tung, H. H. Liu (NASA Goddard and Wallops; Johns Hopkins; NOAA; Univ. Delaware; NRL; NC State; NSWC Carderock)
 - **Source:** Proc. R. Soc. Lond. A 454 (1971), 903–995 (1998), doi:10.1098/rspa.1998.0193. This file is the HAL deposit (hal-04014501, CC BY-NC 4.0), retypeset in LaTeX, so its pagination differs from the journal's.
-- **PDF:** `References/Paper_PDFs/Huang-EtAl_1998_The-Empirical-Mode-Decomposition-And-The-Hilbert-Spectrum-For-Nonlinear-And.pdf` (94 pp.)
+- **PDF:** `References/Paper_PDFs/time-frequency-methods/Huang-EtAl_1998_The-Empirical-Mode-Decomposition-And-The-Hilbert-Spectrum-For-Nonlinear-And.pdf` (94 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the HAL cover sheet, so the printed footer "n | 93" is PDF page n+1.
 - **Tags:** empirical mode decomposition (EMD), intrinsic mode function (IMF), sifting, Hilbert transform, analytic signal, instantaneous frequency, instantaneous amplitude, Hilbert spectrum, Hilbert–Huang transform, marginal spectrum, degree of stationarity, intrawave and interwave frequency modulation, harmonic distortion, non-stationary signals, intermittency, wavelet comparison, end effects, Gibbs phenomenon
 

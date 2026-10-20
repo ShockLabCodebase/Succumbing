@@ -8,7 +8,7 @@ venue: "NASA/TM-2013-216625"
 bib: {"institution": "NASA Ames Research Center", "number": "NASA/TM-2013-216625"}
 doi: ""
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Panda-EtAl_2013_Identification-Of-Noise-Sources-During-Rocket-Engine-Test-Firings-And-A-Rocket-Launch.pdf"
+pdf: "rocket-noise-measurements/Panda-EtAl_2013_Identification-Of-Noise-Sources-During-Rocket-Engine-Test-Firings-And-A-Rocket-Launch.pdf"
 version: "report"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "70-mic phased array at Wallops pad 0A: Antares static-fire noise comes
 
 - **Authors:** Jayanta Panda (NASA Ames Research Center), Robert N. Mosher (NASA Langley Research Center), Barry J. Porter (Aerospace Computing Inc.)
 - **Source:** NASA/TM-2013-216625, NASA Ames Research Center, December 2013. No DOI on the TM. The same study appeared as Panda, Mosher & Porter, "Noise source identification during rocket engine test firings and a rocket launch", *J. Spacecraft and Rockets* 51 (2014); that journal version is not held (download-candidates #95). Precursor: Panda & Mosher 2013, *J. Spacecr. Rockets* 50(5), doi:10.2514/1.A32433 (model-scale Ares I array, ref. [2], p. 23).
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Panda-EtAl_2013_Identification-Of-Noise-Sources-During-Rocket-Engine-Test-Firings-And-A-Rocket-Launch.pdf` (24 pp.). The Read tool reports it as password-protected; use `pdftotext`/`pdftoppm`. **Page refs below are PDF pages; printed page = PDF page − 4** (PDF pp. 1–4 are the cover, STI page, title page and acknowledgments). PDF pp. 23–24 are the reference list.
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Panda-EtAl_2013_Identification-Of-Noise-Sources-During-Rocket-Engine-Test-Firings-And-A-Rocket-Launch.pdf` (24 pp.). The Read tool reports it as password-protected; use `pdftotext`/`pdftoppm`. **Page refs below are PDF pages; printed page = PDF page − 4** (PDF pp. 1–4 are the cover, STI page, title page and acknowledgments). PDF pp. 23–24 are the reference list.
 - **Tags:** rocket noise, launch pad acoustics, microphone phased array, beamforming, conventional beamforming, cross-spectral matrix, spectral estimation method (SEM), coherence, CLEAN-SC, point-spread function, array design, Antares, AJ26/NK-33, static fire, liftoff, flame duct, J-deflector, plume impingement, water injection, rainbirds, sound suppression, infrared imaging, time-dependent source maps, ground reflection, hybrid rocket
 
 ## Summary

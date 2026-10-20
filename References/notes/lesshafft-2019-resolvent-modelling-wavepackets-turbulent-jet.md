@@ -8,7 +8,7 @@ venue: "Phys. Rev. Fluids 4, 063901"
 bib: {"journal": "Physical Review Fluids", "volume": "4", "number": "6", "pages": "063901"}
 doi: "10.1103/PhysRevFluids.4.063901"
 arxiv: "1810.09340"
-pdf: "Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf"
+pdf: "linear-models/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Global resolvent (nozzle included, m = 0) of the M 0.4 Pprime jet vs S
 
 - **Authors:** L. Lesshafft (LadHyX, CNRS / École polytechnique), O. Semeraro (LadHyX; LIMSI, CNRS / Université Paris-Saclay), V. Jaunet (Institut Pprime, Poitiers), A. V. G. Cavalieri (Instituto Tecnológico de Aeronáutica, Brazil), P. Jordan (Institut Pprime)
 - **Source:** Phys. Rev. Fluids 4, 063901 (2019), published as *Resolvent-based modeling of coherent wave packets in a turbulent jet*, doi:10.1103/PhysRevFluids.4.063901. This file is the **arXiv version**, arXiv:1810.09340v2 [physics.flu-dyn] (6 Jun 2019), so its layout and page numbers differ from the journal version.
-- **PDF:** `References/Paper_PDFs/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf` (29 pp.; printed page n = PDF page n)
+- **PDF:** `References/Paper_PDFs/linear-models/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf` (29 pp.; printed page n = PDF page n)
 - **Tags:** global resolvent analysis, optimal forcing and response, sub-optimal modes, Orr mechanism, Kelvin–Helmholtz (shear) instability, nozzle boundary layer receptivity, SPOD from experimental CSD, low-rank CSD model, white-noise forcing hypothesis, rank-1 approximation, partial-state observation, local spatial stability projection, PSE, Mach 0.4 subsonic jet, time-resolved stereo PIV, Bruit et Vent facility
 
 ## Summary

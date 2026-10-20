@@ -8,7 +8,7 @@ venue: "JFM 679, 383–414"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "679", "pages": "383--414"}
 doi: "10.1017/jfm.2011.141"
 arxiv: ""
-pdf: "Oberleithner-EtAl_2011_Three-Dimensional-Coherent-Structures-In-A-Swirling-Jet-Undergoing-Vortex-Breakdown.pdf"
+pdf: "modal-decomposition/Oberleithner-EtAl_2011_Three-Dimensional-Coherent-Structures-In-A-Swirling-Jet-Undergoing-Vortex-Breakdown.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Swirling jet (S 1.22) vortex breakdown: m = 1 global mode at St 0.49 (
 - **Authors:** K. Oberleithner, M. Sieber, C. N. Nayeri, C. O. Paschereit (TU Berlin, Hermann-Föttinger-Institut), C. Petz, H.-C. Hege (Zuse-Institut Berlin), B. R. Noack (Institut Pprime, Poitiers), I. Wygnanski (University of Arizona)
 - **Source:** J. Fluid Mech. 679, 383–414 (2011). Received 25 May 2010, accepted 17 March 2011, first published online 17 May 2011 (p. 1).
 - **DOI:** 10.1017/jfm.2011.141
-- **PDF:** `References/Paper_PDFs/Oberleithner-EtAl_2011_Three-Dimensional-Coherent-Structures-In-A-Swirling-Jet-Undergoing-Vortex-Breakdown.pdf` (32 pp.). Page refs below are PDF pages; journal page = PDF page + 382. The text layer extracts, but the Read tool reports the file as password-protected, so render pages with `pdftoppm` to see equations.
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Oberleithner-EtAl_2011_Three-Dimensional-Coherent-Structures-In-A-Swirling-Jet-Undergoing-Vortex-Breakdown.pdf` (32 pp.). Page refs below are PDF pages; journal page = PDF page + 382. The text layer extracts, but the Read tool reports the file as password-protected, so render pages with `pdftoppm` to see equations.
 - **Tags:** swirling jet, vortex breakdown, recirculation bubble, precessing vortex core, self-excited global mode, supercritical Hopf bifurcation, Landau equation, lock-in, absolute/convective instability, wavemaker, local spatial linear stability, mean-flow stability, Gaster integration (WKB-like), Chebyshev collocation, snapshot POD, POD mode pair, phase portrait, POD-based phase averaging, triple decomposition, azimuthal symmetry, 3D reconstruction from 2D PIV, stereo PIV, hot wire
 
 ## Summary

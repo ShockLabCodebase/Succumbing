@@ -8,7 +8,7 @@ venue: "NASA TM-84521"
 bib: {"institution": "NASA Langley Research Center", "number": "TM-84521", "note": "NTRS 19820025274"}
 doi: ""
 arxiv: ""
-pdf: "Norum-Seiner_1982_Measurements-Of-Mean-Static-Pressure-And-Far-Field-Acoustics-Of-Shock-Containing.pdf"
+pdf: "jet-noise-mechanisms/Norum-Seiner_1982_Measurements-Of-Mean-Static-Pressure-And-Far-Field-Acoustics-Of-Shock-Containing.pdf"
 version: "report"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "NASA Langley data: unheated M_d 1.0/1.5/2.0 conical and contoured nozz
 
 - **Authors:** Thomas D. Norum, John M. Seiner (NASA Langley Research Center, Hampton, Virginia)
 - **Source:** NASA Technical Memorandum 84521, September 1982 (NTRS accession 19820025274). A data report.
-- **PDF:** `References/Paper_PDFs/Norum-Seiner_1982_Measurements-Of-Mean-Static-Pressure-And-Far-Field-Acoustics-Of-Shock-Containing.pdf` (204 pp. in the scan; the report form lists 197)
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Norum-Seiner_1982_Measurements-Of-Mean-Static-Pressure-And-Far-Field-Acoustics-Of-Shock-Containing.pdf` (204 pp. in the scan; the report form lists 197)
 - **Page refs:** PDF page numbers. The report's printed page n is PDF page n + 4 (PDF p. 5 is printed p. 1).
 - **Scan quality:** an NTRS scan with an OCR layer. The 5 pages of prose and Table 1 OCR well. The ~190 pages of plots carry only garbled OCR, so numbers in this note that come from plots were read from page renders and are marked as such.
 - **Tags:** broadband shock-associated noise (BBSAN), screech, screech-suppression tab, shock-cell structure, mean static pressure survey, far-field directivity, OASPL, 1/3-octave and narrowband spectra, convergent and C-D nozzles, conical vs contoured nozzle, unheated jet, validation database

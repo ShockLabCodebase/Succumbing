@@ -8,7 +8,7 @@ venue: "JFM 918"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "918"}
 doi: "10.1017/jfm.2021.324"
 arxiv: "2012.04818"
-pdf: "Wong-EtAl_2021_Wavepacket-Modelling-Of-Broadband-Shock-Associated-Noise-In-Supersonic-Jets.pdf"
+pdf: "jet-noise-mechanisms/Wong-EtAl_2021_Wavepacket-Modelling-Of-Broadband-Shock-Associated-Noise-In-Supersonic-Jets.pdf"
 version: "preprint"
 unverified: ["DOI from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "article number not known"]
 group: true
@@ -27,7 +27,7 @@ summary: "Inside-out BBSAN model: PSE/LES wavepackets × PIV-corrected Pack–Pr
 
 - **Authors:** M. H. Wong (Monash LTRAC), P. Jordan (Institut PPRIME, Poitiers), I. A. Maia (PPRIME), A. V. G. Cavalieri (ITA, São José dos Campos), R. Kirby (Monash), T. C. L. Fava (KTH), D. Edgington-Mitchell (Monash)
 - **Source:** J. Fluid Mech. 918 (2021). This file is the arXiv version, arXiv:2012.04818v1 [physics.flu-dyn] (9 Dec 2020, JFM LaTeX style), so its page layout differs from the published article. The article number and DOI are not printed in this file and were not checked.
-- **PDF:** `References/Paper_PDFs/Wong-EtAl_2021_Wavepacket-Modelling-Of-Broadband-Shock-Associated-Noise-In-Supersonic-Jets.pdf` (37 pp.; 36 MB because of the figures). PDF page numbers equal the printed page numbers.
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Wong-EtAl_2021_Wavepacket-Modelling-Of-Broadband-Shock-Associated-Noise-In-Supersonic-Jets.pdf` (37 pp.; 36 MB because of the figures). PDF page numbers equal the printed page numbers.
 - **Tags:** broadband shock-associated noise (BBSAN), Tam & Tanna mechanism, wavepacket source model, Lighthill acoustic analogy, two-point (CSD) source, Pack–Prandtl vortex-sheet shock cells, parabolised stability equations (PSE), coherence decay, wavepacket jitter, inside-out source eduction, LES (Charles, M_j 1.5), non-time-resolved PIV, azimuthally decomposed far-field acoustics, SPOD, underexpanded jet, screech
 
 ## Summary

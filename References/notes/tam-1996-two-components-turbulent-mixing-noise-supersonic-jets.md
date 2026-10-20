@@ -8,7 +8,7 @@ venue: "AIAA 96-1716 (2nd AIAA/CEAS Aeroacoustics Conf.)"
 bib: {"booktitle": "2nd AIAA/CEAS Aeroacoustics Conference", "note": "AIAA Paper 96-1716, State College, PA, 6–8 May 1996"}
 doi: "10.2514/6.1996-1716"
 arxiv: ""
-pdf: "Tam-EtAl_1996_On-The-Two-Components-Of-Turbulent-Mixing-Noise-From-Supersonic-Jets.pdf"
+pdf: "jet-noise-mechanisms/Tam-EtAl_1996_On-The-Two-Components-Of-Turbulent-Mixing-Noise-From-Supersonic-Jets.pdf"
 version: "conference"
 unverified: ["DOI not printed on the scan; inferred from the AIAA pattern, not checked"]
 group: false
@@ -27,7 +27,7 @@ summary: "Origin of the large-scale (F) and fine-scale (G) similarity spectra, f
 
 - **Authors:** Christopher K. W. Tam, Michel Golebiowski (Florida State University, Tallahassee), John M. Seiner (NASA Langley Research Center)
 - **Source:** AIAA Paper 96-1716, 2nd AIAA/CEAS Aeroacoustics Conference, State College PA, 6–8 May 1996. Conference paper; no DOI is printed on the scan (the AIAA DOI would be 10.2514/6.1996-1716; not checked).
-- **PDF:** `References/Paper_PDFs/Tam-EtAl_1996_On-The-Two-Components-Of-Turbulent-Mixing-Noise-From-Supersonic-Jets.pdf` (18 pp.). An NTRS scan with an OCR layer. The prose OCRs acceptably, but every displayed equation and Table 1 are garbled, so eqs. (1)–(10) and the table below were transcribed from 130–300 dpi page renders.
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Tam-EtAl_1996_On-The-Two-Components-Of-Turbulent-Mixing-Noise-From-Supersonic-Jets.pdf` (18 pp.). An NTRS scan with an OCR layer. The prose OCRs acceptably, but every displayed equation and Table 1 are garbled, so eqs. (1)–(10) and the table below were transcribed from 130–300 dpi page renders.
 - **Page refs:** PDF page numbers. PDF p. 1 is the AIAA cover sheet, so the paper's printed page n is PDF page n+1. Figures are on PDF pp. 13–18.
 - **Tags:** jet mixing noise, two-source model, large-scale similarity spectrum (LSS, F), fine-scale similarity spectrum (FSS, G), Mach wave radiation, instability waves, fine-scale turbulence, directivity, cone of silence, heated supersonic jets, velocity exponent, imperfectly expanded jets, screech, broadband noise amplification, subsonic jets, rectangular and elliptic jets, empirical prediction, NASA Langley Jet Noise Laboratory, narrowband far-field spectra
 

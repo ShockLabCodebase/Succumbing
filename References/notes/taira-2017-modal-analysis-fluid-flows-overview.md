@@ -8,7 +8,7 @@ venue: "AIAA J. 55(12), 4013–4041"
 bib: {"journal": "AIAA Journal", "volume": "55", "number": "12", "pages": "4013--4041"}
 doi: "10.2514/1.J056060"
 arxiv: "1702.01453"
-pdf: "Taira-EtAl_2017_Modal-Analysis-Of-Fluid-Flows-An-Overview.pdf"
+pdf: "modal-decomposition/Taira-EtAl_2017_Modal-Analysis-Of-Fluid-Flows-An-Overview.pdf"
 version: "preprint"
 unverified: ["volume, pages and DOI from the bibliographic record, not this arXiv PDF"]
 group: false
@@ -27,7 +27,7 @@ summary: "Tutorial review in one linear-algebra framework: SVD, pseudospectra, n
 
 - **Authors:** K. Taira (Florida State), S. L. Brunton (Washington), S. T. M. Dawson, C. W. Rowley (Princeton), T. Colonius, B. J. McKeon, O. T. Schmidt (Caltech), S. Gordeyev (Notre Dame), V. Theofilis (Liverpool), L. S. Ukeiley (Florida)
 - **Source:** published in AIAA J. 55(12), 4013–4041 (2017), doi:10.2514/1.J056060 (volume, pages and DOI from the bibliographic record, not the PDF). This file is the **arXiv version**, arXiv:1702.01453v2 [physics.flu-dyn] (9 Aug 2017), in AIAA preprint style, so its pagination differs from the journal.
-- **PDF:** `References/Paper_PDFs/Taira-EtAl_2017_Modal-Analysis-Of-Fluid-Flows-An-Overview.pdf` (43 pp.; page refs are the printed "n of 43", which equal PDF pages)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Taira-EtAl_2017_Modal-Analysis-Of-Fluid-Flows-An-Overview.pdf` (43 pp.; page refs are the printed "n of 43", which equal PDF pages)
 - **Tags:** review, tutorial, EVD, SVD, pseudospectra, non-normality, transient growth, POD, snapshot POD, POD mode pairs, spectral POD (Welch), balanced POD, ERA, DMD, Koopman analysis, global linear stability (biglobal/triglobal), adjoint modes, resolvent analysis, mean-flow resolvent, turbulent jet wavepackets, Galerkin ROM
 
 ## Summary

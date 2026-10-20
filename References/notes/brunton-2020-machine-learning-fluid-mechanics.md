@@ -8,7 +8,7 @@ venue: "Annu. Rev. Fluid Mech. 52, 477–508"
 bib: {"journal": "Annual Review of Fluid Mechanics", "volume": "52", "pages": "477--508"}
 doi: "10.1146/annurev-fluid-010719-060214"
 arxiv: ""
-pdf: "Brunton-EtAl_2020_Machine-Learning-For-Fluid-Mechanics.pdf"
+pdf: "simulation-methods/Brunton-EtAl_2020_Machine-Learning-For-Fluid-Mechanics.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Review of ML in fluids: POD as linear autoencoder, cluster ROMs, DMD/K
 - **Authors:** S. L. Brunton (U. Washington), B. R. Noack (LIMSI-CNRS / TU Berlin), P. Koumoutsakos (ETH Zurich)
 - **Source:** Annual Review of Fluid Mechanics 52:477–508 (2020); Review in Advance 12 Sep 2019
 - **DOI:** 10.1146/annurev-fluid-010719-060214
-- **PDF:** `References/Paper_PDFs/Brunton-EtAl_2020_Machine-Learning-For-Fluid-Mechanics.pdf` (34 pp.)
+- **PDF:** `References/Paper_PDFs/simulation-methods/Brunton-EtAl_2020_Machine-Learning-For-Fluid-Mechanics.pdf` (34 pp.)
 - **Tags:** review, machine learning, POD/PCA, autoencoder, clustering, DMD, Koopman, SINDy, sparse regression, superresolution, PIV processing, turbulence closure, genetic programming, reinforcement learning, flow control, stochastic optimisation
 
 > Page references are **journal page numbers** (477–508). PDF page = journal page − 476 (e.g. p. 490 is PDF p. 14). Pages 501–508 are the reference list.

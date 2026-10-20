@@ -8,7 +8,7 @@ venue: "JFM 1045, A10"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1045", "pages": "A10"}
 doi: "10.1017/jfm.2026.12061"
 arxiv: ""
-pdf: "Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf"
+pdf: "screech/Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Weak |m| = 2 streaks split m = ±1 KH and guided-jet modes into flappi
 
 - **Authors:** P. Nogueira (Monash), B. Yeung (UC San Diego), A. Nekkanti (Caltech), O. Schmidt (UC San Diego), T. Colonius (Caltech), G. Brès (Cadence Design Systems), P. Jordan (Institut Pprime, Poitiers), D. Edgington-Mitchell (Monash) (p. 1)
 - **Source:** J. Fluid Mech. 1045, A10 (2026), doi:10.1017/jfm.2026.12061. Published open-access version (CC BY 4.0). Received 30 May 2025, revised 5 May 2026, accepted 25 Aug 2026 (p. 1). Funding: ARC DECRA DE240100933 (Nogueira), ARC Future Fellowship FT220100679 (Edgington-Mitchell), ONR, NAVAIR (p. 25).
-- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf` (index key `Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf`, 30 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf` (index key `screech/Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf`, 30 pp.)
 - **Page refs:** PDF page n = printed page A10-n.
 - **Tags:** screech, flapping vs helical, |m| = 1 screech (stages B/C/D), precession of the flapping axis, streaks, lift-up, |m| = 2 mean-flow distortion, triad (±1, St) ↔ (2, 0), Floquet-in-azimuth spatial LSA, guided jet (GJ) mode, Kelvin–Helmholtz (KH), wagging vs flapping, heated overexpanded jet, CharLES LES, FW-H, SPOD, SPOD expansion coefficients (convolution / frequency–time analysis), phase tracking, cylindrical-shell SPOD, time-resolved data
 

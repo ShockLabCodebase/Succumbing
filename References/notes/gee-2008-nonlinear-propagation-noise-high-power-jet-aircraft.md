@@ -8,7 +8,7 @@ venue: "JASA 123(6), 4082–4093"
 bib: {"journal": "Journal of the Acoustical Society of America", "volume": "123", "number": "6", "pages": "4082--4093"}
 doi: "10.1121/1.2903871"
 arxiv: ""
-pdf: "Gee-EtAl_2008_The-Role-Of-Nonlinear-Effects-In-The-Propagation-Of-Noise-From-High-Power-Jet-Aircraft.pdf"
+pdf: "rocket-noise-measurements/Gee-EtAl_2008_The-Role-Of-Nonlinear-Effects-In-The-Propagation-Of-Noise-From-High-Power-Jet-Aircraft.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "F-22A run-ups, 23–305 m: generalized Burgers propagation matches 305
 - **Authors:** Kent L. Gee and Victor W. Sparrow (Graduate Program in Acoustics, Penn State; Gee now at BYU Physics and Astronomy), Michael M. James, J. Micah Downing and Christopher M. Hobbs (Wyle Laboratories, Arlington VA; James and Downing now at Blue Ridge Research and Consulting), Thomas B. Gabrielson and Anthony A. Atchley (Penn State)
 - **Source:** J. Acoust. Soc. Am. 123(6), 4082–4093 (June 2008). Received 29 Sep 2007, revised 7 Mar 2008, accepted 10 Mar 2008. Parts were presented at the 2005 ASA/Noise-Con meeting and at the 12th AIAA/CEAS Aeroacoustics Conference (2006) (p. 2).
 - **DOI:** 10.1121/1.2903871
-- **PDF:** `References/Paper_PDFs/Gee-EtAl_2008_The-Role-Of-Nonlinear-Effects-In-The-Propagation-Of-Noise-From-High-Power-Jet-Aircraft.pdf` (13 pp.). PDF p. 1 is a publisher cover sheet. **Page refs below are PDF pages; journal page = PDF page + 4080** (e.g. p. 9 = JASA p. 4089). PDF pp. 12–13 hold the end of the conclusion, the acknowledgements and the references.
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Gee-EtAl_2008_The-Role-Of-Nonlinear-Effects-In-The-Propagation-Of-Noise-From-High-Power-Jet-Aircraft.pdf` (13 pp.). PDF p. 1 is a publisher cover sheet. **Page refs below are PDF pages; journal page = PDF page + 4080** (e.g. p. 9 = JASA p. 4089). PDF pp. 12–13 hold the end of the conclusion, the acknowledgements and the references.
 - **Tags:** jet noise, military jet aircraft, F-22A Raptor, F119 engine, static engine run-up, full-scale measurement, nonlinear propagation, generalized Burgers equation (GBE), acoustic shocks, waveform steepening, atmospheric absorption, one-third-octave spectra, spectral slope, ground reflection, linear vs nonlinear propagation models, Penn State, Wyle, Edwards AFB
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "JFM 855, 953–982"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "855", "pages": "953--982"}
 doi: "10.1017/jfm.2018.675"
 arxiv: "1711.06296"
-pdf: "Schmidt-EtAl_2018_Spectral-Analysis-Of-Jet-Turbulence.pdf"
+pdf: "modal-decomposition/Schmidt-EtAl_2018_Spectral-Analysis-Of-Jet-Turbulence.pdf"
 version: "preprint"
 unverified: ["journal volume, pages and DOI not printed in the held arXiv preprint"]
 group: false
@@ -27,7 +27,7 @@ summary: "SPOD of M_j 0.4/0.9/1.5 jet LES vs mean-flow resolvent (Re 3×10⁴): 
 
 - **Authors:** O. T. Schmidt, A. Towne, G. Rigas, T. Colonius, G. A. Brès (Caltech; CTR Stanford; Cascade Technologies)
 - **Source:** J. Fluid Mech. 855, 953–982 (2018), doi:10.1017/jfm.2018.675. This file is the **arXiv preprint** (arXiv:1711.06296v1, 16 Nov 2017, JFM LaTeX draft with "Guidelines for authors" running heads), so page layout, some wording and possibly figures differ from the published version.
-- **PDF:** `References/Paper_PDFs/Schmidt-EtAl_2018_Spectral-Analysis-Of-Jet-Turbulence.pdf` (32 pp.). Page refs are PDF pages, which equal the printed draft pages.
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Schmidt-EtAl_2018_Spectral-Analysis-Of-Jet-Turbulence.pdf` (32 pp.). Page refs are PDF pages, which equal the printed draft pages.
 - **Tags:** turbulent jet, SPOD, resolvent analysis, global linear analysis, low-rank behaviour, Kelvin–Helmholtz wavepacket, Orr mechanism, critical layer, eigenvalue gap, Chu energy norm, frequency–wavenumber diagram, frequency–axial-distance diagram, spatially restricted SPOD/resolvent, Reynolds number as model parameter, trapped acoustic waves, Tam & Hu upstream waves, Mach wave radiation, LES (Charles), M_j 0.4 / 0.9 / 1.5
 
 ## Summary

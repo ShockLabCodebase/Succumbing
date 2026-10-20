@@ -8,7 +8,7 @@ venue: "JFM 1004, A7"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1004", "pages": "A7"}
 doi: "10.1017/jfm.2024.1166"
 arxiv: ""
-pdf: "Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "AR 2 rectangular and elliptical jets, NPR 2–5: 150 kHz schlieren fro
 
 - **Authors:** S. Mazharmanesh, P. A. S. Nogueira, J. Weightman, D. Edgington-Mitchell (Monash University)
 - **Source:** J. Fluid Mech. 1004, A7 (2025), doi:10.1017/jfm.2024.1166. Published open-access version (CC BY 4.0). Received 18 June 2024, accepted 28 November 2024. Funded by ARC DP220103873.
-- **PDF:** `References/Paper_PDFs/Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf` (index key `Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf`, 25 pp.)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf` (index key `non-axisymmetric-and-twin-jets/Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf`, 25 pp.)
 - **Page refs:** PDF page n is printed page 1004 A7-n.
 - **Tags:** screech, non-axisymmetric jets, rectangular jet AR 2, elliptical jet AR 2, axis switching, multimodal screech, staging, varicose / flapping / wagging, bi-axial flapping mode, quasi-helical mode, high-speed schlieren, multi-view schlieren (nozzle rotation), SPOD, sub-domain SPOD, symmetry inner product
 - **Companion:** a Mazharmanesh 2026 paper is indexed separately; the AIAA 2024 conference precursor (Mazharmanesh et al. 2024, *Multimodal behaviour in screeching elliptical and rectangular jets*) is cited here (p. 3, 24).

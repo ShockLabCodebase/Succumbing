@@ -8,7 +8,7 @@ venue: "arXiv:2604.17851"
 bib: {}
 doi: ""
 arxiv: "2604.17851"
-pdf: "Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf"
 version: "preprint"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "DNS (Re_D 400) of forced AR 2 elliptical jets, D2-split SPOD: AS flapp
 
 - **Authors:** N. Suzuki, A. V. G. Cavalieri, D. M. Edgington-Mitchell, P. A. S. Nogueira (Monash University; Instituto Tecnológico de Aeronáutica, São José dos Campos)
 - **Source:** arXiv:2604.17851v1 [physics.flu-dyn], 20 April 2026. This is a **preprint**, not peer-reviewed. It extends the authors' AIAA/CEAS 2024 conference paper (Suzuki et al. 2024, *Effect of axis switching on the coherent structures of an elliptical jet*), which studied one case with SPOD and PSE (p. 2).
-- **PDF:** `References/Paper_PDFs/Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf` (index key `Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf`, 22 pp., ~15 MB because of the figures)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf` (index key `non-axisymmetric-and-twin-jets/Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf`, 22 pp., ~15 MB because of the figures)
 - **Page refs:** PDF page numbers, which equal the printed page numbers.
 - **Tags:** elliptical jet AR 2, axis switching, incompressible DNS (Dedalus, Re_D 400), forced jet, D2 symmetry (SS/AS/SA/AA), varicose / flapping / wagging (ce₀ / se₁ / ce₁), Mathieu modes, SPOD of pressure, pySPOD, weighted (sub-domain) SPOD, Kelvin–Helmholtz wavepacket, double wavepacket, Orr, St ∝ 1/√x scaling, vorticity thickness, jackknife convergence, harmonic / triadic interaction, simulation-only (no experiment)
 

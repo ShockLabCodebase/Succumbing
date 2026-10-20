@@ -8,7 +8,7 @@ venue: "Trans. JSASS Aerospace Tech. Japan 14(ists30), Po_2_9–Po_2_15"
 bib: {"journal": "Transactions of the Japan Society for Aeronautical and Space Sciences, Aerospace Technology Japan", "volume": "14", "number": "ists30", "pages": "Po_2_9--Po_2_15", "note": "ISTS 30 conference paper"}
 doi: ""
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Gee-EtAl_2016_Development-Of-A-Near-Field-Intensity-Measurement-Capability-For-Static-Rocket-Firings.pdf"
+pdf: "rocket-noise-measurements/Gee-EtAl_2016_Development-Of-A-Near-Field-Intensity-Measurement-Capability-For-Static-Rocket-Firings.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "GEM-60 SRM static firing, 12 PAGE intensity probes: ray-traced source 
 
 - **Authors:** K. L. Gee, E. B. Whiting, T. B. Neilsen (Brigham Young University); M. M. James, A. R. Salton (Blue Ridge Research and Consulting, BRRC)
 - **Source:** Trans. JSASS Aerospace Tech. Japan 14(ists30), pp. Po_2_9–Po_2_15 (2016); received 8 Aug 2015 (p. 1). ISTS 30 conference paper. No DOI printed.
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Gee-EtAl_2016_Development-Of-A-Near-Field-Intensity-Measurement-Capability-For-Static-Rocket-Firings.pdf` (7 pp.; encrypted, so the Read tool refuses it; use `pdftotext`/`pdftoppm`)
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Gee-EtAl_2016_Development-Of-A-Near-Field-Intensity-Measurement-Capability-For-Static-Rocket-Firings.pdf` (7 pp.; encrypted, so the Read tool refuses it; use `pdftotext`/`pdftoppm`)
 - **Tags:** rocket noise, solid rocket motor, GEM-60, static firing, vector acoustic intensity, multimicrophone probe, PAGE method, finite-difference intensity, source localisation, ray tracing, directivity, near field, nonlinear propagation, launch-vehicle vibroacoustics
 
 ## Summary

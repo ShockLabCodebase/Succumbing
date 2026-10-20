@@ -8,7 +8,7 @@ venue: "AIAA 2022-3345 (Aviation)"
 bib: {"booktitle": "AIAA AVIATION 2022 Forum", "note": "AIAA Paper 2022-3345, Chicago, IL, 27 Jun–1 Jul 2022"}
 doi: "10.2514/6.2022-3345"
 arxiv: ""
-pdf: "Yeung-EtAl_2022_Three-Dimensional-Spectral-POD-Of-Supersonic-Twin-Rectangular-Jet-Flow.pdf"
+pdf: "modal-decomposition/Yeung-EtAl_2022_Three-Dimensional-Spectral-POD-Of-Supersonic-Twin-Rectangular-Jet-Flow.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "D2 symmetry split (SS/SA/AS/AA) before 3D SPOD of AR-2 twin-jet LES (M
 - **Authors:** B. C. Y. Yeung, O. T. Schmidt (UC San Diego), G. A. Brès (Cascade Technologies)
 - **Source:** AIAA AVIATION 2022 Forum, Chicago IL & virtual, 27 Jun–1 Jul 2022. Conference paper; ONR award N00014-20-1-2311 (p. 17).
 - **DOI:** 10.2514/6.2022-3345
-- **PDF:** `References/Paper_PDFs/Yeung-EtAl_2022_Three-Dimensional-Spectral-POD-Of-Supersonic-Twin-Rectangular-Jet-Flow.pdf` (18 pp.; local only, not in Git)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Yeung-EtAl_2022_Three-Dimensional-Spectral-POD-Of-Supersonic-Twin-Rectangular-Jet-Flow.pdf` (18 pp.; local only, not in Git)
 - **Tags:** SPOD, 3D SPOD, symmetry decomposition, D2 dihedral symmetry, SS/SA/AS/AA components, twin rectangular jet, AR-2 nozzle, screech, LES, Charles, Chu energy norm, statistical convergence, far-field acoustics, KH wavepackets
 
 ## Summary

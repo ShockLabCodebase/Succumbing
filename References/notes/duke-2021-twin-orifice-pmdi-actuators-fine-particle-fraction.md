@@ -8,7 +8,7 @@ venue: "Int. J. Pharm. (2021)"
 bib: {"journal": "International Journal of Pharmaceutics", "note": "volume and article number not printed in the accepted manuscript"}
 doi: "10.1016/j.ijpharm.2021.120341"
 arxiv: ""
-pdf: "Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf"
+pdf: "diagnostics-and-facilities/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf"
 version: "accepted-manuscript"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Twin 0.22 mm pMDI orifices raise FPF 75% over a 0.33 mm Bespak; 5 kHz 
 
 - **Authors:** D. J. Duke, D. T. Nguyen, L. Gomes dos Reis, D. M. Silva, A. Neild, D. Edgington-Mitchell, P. M. Young, D. R. Honnery (LTRAC and Laboratory for Microsystems, Monash; Woolcock Institute / University of Sydney)
 - **Source:** Int. J. Pharm. (2021), doi:10.1016/j.ijpharm.2021.120341. This file is the accepted manuscript (Elsevier preprint style, dated 3 Feb 2021), so its layout and page numbers differ from the published version.
-- **PDF:** `References/Paper_PDFs/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf` (22 pp.)
+- **PDF:** `References/Paper_PDFs/diagnostics-and-facilities/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf` (22 pp.)
 - **Page refs:** PDF page numbers, which equal the manuscript's printed page numbers.
 - **Tags:** pMDI, flash-boiling spray, twin-orifice nozzle, plume merging (spray collapse), fine particle fraction, Next Generation Impactor, high-speed diffuse back-illumination, extinction imaging, FWHM plume width, cross-correlation velocimetry, micro-injection moulding
 

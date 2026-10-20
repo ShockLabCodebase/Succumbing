@@ -8,7 +8,7 @@ venue: "JFM 917, A29"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "917", "pages": "A29"}
 doi: "10.1017/jfm.2021.232"
 arxiv: "2005.10964"
-pdf: "Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf"
+pdf: "linear-models/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf"
 version: "preprint"
 unverified: ["article number A29 and DOI from memory, not in the PDF"]
 group: false
@@ -28,7 +28,7 @@ summary: "Adjoint-optimal eddy-viscosity field aligns resolvent and SPOD modes o
 - **Authors:** E. Pickering, G. Rigas, O. T. Schmidt, D. Sipp, T. Colonius (Caltech; UC San Diego; ONERA, Meudon) (p. 1)
 - **Source:** J. Fluid Mech. (2021) 917 (published version). This PDF is the arXiv preprint, arXiv:2005.10964v2 [physics.flu-dyn] (8 Jan 2021), in JFM draft style; it prints no article number, DOI or received/accepted dates (p. 1).
   > The published article number (A29) and DOI (10.1017/jfm.2021.232) are from memory, not from this PDF. Check before citing.
-- **PDF:** `References/Paper_PDFs/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf` (index key `Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf`, 34 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf` (index key `linear-models/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf`, 34 pp.)
 - **Tags:** resolvent analysis, eddy viscosity, eddy-viscosity resolvent analysis (EVRA), SPOD, SPOD–resolvent alignment, adjoint/Lagrangian optimisation, data assimilation, field inversion, RANS k–ε, mean-flow consistent eddy viscosity, turbulent Reynolds number, linear damping, forcing colour, Kelvin–Helmholtz, Orr, lift-up, turbulent round jets, LES, subsonic/transonic/supersonic
 
 ## Summary

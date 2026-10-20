@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 121(1), 135–147"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "121", "number": "1", "pages": "135--147"}
 doi: "10.1016/S0022-460X(88)80066-X"
 arxiv: ""
-pdf: "Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf"
+pdf: "screech/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Vortex-sheet (Prandtl–Pack) shock-cell model for any cross-section: 
 
 - **Authors:** C. K. W. Tam (Department of Mathematics, Florida State University)
 - **Source:** J. Sound Vib. 121(1), 135–147 (1988), doi:10.1016/S0022-460X(88)80066-X. First presented as AIAA Paper 86-1866 (10th Aeroacoustics Conference, Seattle, July 1986) (p. 1). Received 7 Oct 1986, revised 22 Apr 1987.
-- **PDF:** `References/Paper_PDFs/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf` (13 pp.). Scanned publisher copy; the text layer is OCR and garbles the equations, so all equations below were read from page renders.
+- **PDF:** `References/Paper_PDFs/screech/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf` (13 pp.). Scanned publisher copy; the text layer is OCR and garbles the equations, so all equations below were read from page renders.
 - **Page refs:** PDF page numbers. PDF p. n is printed journal page 134 + n (PDF p. 1 = p. 135).
 - **Tags:** screech, shock-cell spacing, rectangular jet, elliptic jet, non-axisymmetric jet, aspect ratio, vortex-sheet model, Prandtl–Pack, eigenfunction expansion, Mathieu functions, fully expanded jet size, weakest-link theory, screech frequency prediction, convergent-divergent nozzle, choked (convergent) nozzle, theory only (no new experiments)
 

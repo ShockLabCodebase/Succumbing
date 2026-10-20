@@ -8,7 +8,7 @@ venue: "Phys. Fluids 26, 096101"
 bib: {"journal": "Physics of Fluids", "volume": "26", "pages": "096101"}
 doi: "10.1063/1.4894741"
 arxiv: ""
-pdf: "EdgingtonMitchell-EtAl_2014_The-Underexpanded-Jet-Mach-Disk-And-Its-Associated-Shear-Layer.pdf"
+pdf: "screech/EdgingtonMitchell-EtAl_2014_The-Underexpanded-Jet-Mach-Disk-And-Its-Associated-Shear-Layer.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "NPR 4.2 screeching underexpanded jet, PIV + schlieren: slip line grows
 
 - **Authors:** D. Edgington-Mitchell, D. R. Honnery, J. Soria (Laboratory for Turbulence Research in Aerospace and Combustion (LTRAC), Monash University; Soria also King Abdulaziz University, Jeddah; p. 1)
 - **Source:** Phys. Fluids 26, 096101 (2014), doi:10.1063/1.4894741. Received 3 Apr 2014, accepted 20 Aug 2014, published 9 Sep 2014 (p. 1). Funded by the Australian Research Council (p. 18).
-- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2014_The-Underexpanded-Jet-Mach-Disk-And-Its-Associated-Shear-Layer.pdf` (index key `EdgingtonMitchell-EtAl_2014_The-Underexpanded-Jet-Mach-Disk-And-Its-Associated-Shear-Layer.pdf`, 19 pp.: an AIP cover page plus 18 printed pages)
+- **PDF:** `References/Paper_PDFs/screech/EdgingtonMitchell-EtAl_2014_The-Underexpanded-Jet-Mach-Disk-And-Its-Associated-Shear-Layer.pdf` (index key `screech/EdgingtonMitchell-EtAl_2014_The-Underexpanded-Jet-Mach-Disk-And-Its-Associated-Shear-Layer.pdf`, 19 pp.: an AIP cover page plus 18 printed pages)
 - **Page refs:** printed page numbers 096101-N, written "p. N". **PDF page = printed page + 1** (PDF p. 1 is the publisher's cover sheet).
 - **Tags:** underexpanded jet, convergent nozzle, NPR 4.2, Mach disk, Mach reflection, triple point, slip line, internal annular shear layer, recirculation zone behind the Mach disk, shock–turbulence interaction, Reynolds-stress amplification, anisotropy, screech, helical mode, planar PIV (non-time-resolved), schlieren, snapshot POD, POD mode pair, phase portrait, triple decomposition, restricted-domain POD, particle lag across shocks, velocity PDF
 

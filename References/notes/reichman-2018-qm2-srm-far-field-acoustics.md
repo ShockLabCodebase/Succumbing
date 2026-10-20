@@ -8,7 +8,7 @@ venue: "Proc. Mtgs. Acoust. 29, 045008"
 bib: {"booktitle": "Proceedings of Meetings on Acoustics (172nd ASA Meeting, Honolulu, 2016)", "volume": "29", "pages": "045008", "publisher": "Acoustical Society of America", "note": "paper 2aPA10"}
 doi: "10.1121/2.0000727"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Reichman-EtAl_2018_Acoustic-Measurements-In-The-Far-Field-During-QM-2-Solid-Rocket-Motor-Static-Firing.pdf"
+pdf: "rocket-noise-measurements/Reichman-EtAl_2018_Acoustic-Measurements-In-The-Far-Field-During-QM-2-Solid-Rocket-Motor-Static-Firing.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "SLS booster QM-2 static firing, 80–120° at ~2.5 km: OASPL 118→106
 
 - **Authors:** B. O. Reichman, B. M. Harker, T. B. Neilsen, K. L. Gee (Brigham Young University); W.-S. Ohm (Yonsei University)
 - **Source:** Proc. Mtgs. Acoust. 29, 045008 (2018), doi:10.1121/2.0000727. Paper 2aPA10, 172nd ASA meeting, Honolulu, 28 Nov – 2 Dec 2016 (PDF p. 2). The page footers and copyright line give 2018 and the cover sheet is dated 22 Feb 2018; the cover-sheet citation line prints "(2016)", the meeting year. 2018 is used here.
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Reichman-EtAl_2018_Acoustic-Measurements-In-The-Far-Field-During-QM-2-Solid-Rocket-Motor-Static-Firing.pdf` (11 pp.). PDF p. 1 is the publisher cover sheet, so printed page = PDF page − 1. Page refs below are **PDF pages**.
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Reichman-EtAl_2018_Acoustic-Measurements-In-The-Far-Field-During-QM-2-Solid-Rocket-Motor-Static-Firing.pdf` (11 pp.). PDF p. 1 is the publisher cover sheet, so printed page = PDF page − 1. Page refs below are **PDF pages**.
 - **Tags:** rocket noise, solid rocket motor, SLS five-segment booster, QM-1, QM-2, static firing, far-field acoustics, directivity, OASPL, nonlinear propagation, derivative skewness, crackle, acoustic vector intensity, PAGE method, BYU
 
 ## Summary

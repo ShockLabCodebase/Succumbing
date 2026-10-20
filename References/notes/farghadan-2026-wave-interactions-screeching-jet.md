@@ -8,7 +8,7 @@ venue: "JFM 1040, A40"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1040", "pages": "A40"}
 doi: "10.1017/jfm.2026.11818"
 arxiv: ""
-pdf: "Farghadan-EtAl_2026_Wave-Interactions-In-A-Screeching-Jet.pdf"
+pdf: "screech/Farghadan-EtAl_2026_Wave-Interactions-In-A-Screeching-Jet.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Global, resolvent and bilinear harmonic-resolvent models on a PIV mean
 
 - **Authors:** A. Farghadan, J. Beekman, P. Nogueira, D. Edgington-Mitchell, A. Towne (Farghadan, Towne: University of Michigan; Beekman, Nogueira, Edgington-Mitchell: Monash University; p. 1)
 - **Source:** J. Fluid Mech. 1040, A40 (2026), doi:10.1017/jfm.2026.11818. Published open-access (CC BY) version. Received 5 Mar 2026, accepted 17 Jun 2026 (p. 1).
-- **PDF:** `References/Paper_PDFs/Farghadan-EtAl_2026_Wave-Interactions-In-A-Screeching-Jet.pdf` (30 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Farghadan-EtAl_2026_Wave-Interactions-In-A-Screeching-Jet.pdf` (30 pp.)
 - **Page refs:** PDF page n = printed page A40-n.
 - **Tags:** screech, A1/A2-type axisymmetric (m = 0) screech, global stability, resolvent analysis, harmonic resolvent analysis, bilinear Navier–Stokes (specific volume–pressure), triadic interaction, nonlinear self-interaction forcing, multiple shock-cell wavenumbers (k_s1, k_s2, k_s3), guided jet mode, duct modes, screech harmonics, RSVD-Δt, eddy viscosity, PIV mean flow, non-time-resolved PIV, POD pair
 

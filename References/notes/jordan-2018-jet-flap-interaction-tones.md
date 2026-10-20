@@ -8,7 +8,7 @@ venue: "JFM 853, 333–358"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "853", "pages": "333--358"}
 doi: "10.1017/jfm.2018.566"
 arxiv: ""
-pdf: "Jordan-EtAl_2018_Jet-Flap-Interaction-Tones.pdf"
+pdf: "impinging-jets-and-edge-tones/Jordan-EtAl_2018_Jet-Flap-Interaction-Tones.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "M 0.6–1 jet grazing a plate edge: tones from KH coupling with upstre
 
 - **Authors:** P. Jordan, V. Jaunet, A. Towne, A. V. G. Cavalieri, T. Colonius, O. Schmidt, A. Agarwal (Institut Pprime, Poitiers; CTR Stanford; ITA, Brazil; Caltech; Cambridge)
 - **Source:** J. Fluid Mech. 853, 333–358 (2018), doi:10.1017/jfm.2018.566. Open access (CC BY). Received 16 Oct 2017, published online 23 Aug 2018 (p. 1). The running head reads "Jet–edge interaction tones", but the title is "Jet–flap interaction tones".
-- **PDF:** `References/Paper_PDFs/Jordan-EtAl_2018_Jet-Flap-Interaction-Tones.pdf` (26 pp.; local only, not in Git). Page refs below are PDF pages; journal page = PDF page + 332.
+- **PDF:** `References/Paper_PDFs/impinging-jets-and-edge-tones/Jordan-EtAl_2018_Jet-Flap-Interaction-Tones.pdf` (26 pp.; local only, not in Git). Page refs below are PDF pages; journal page = PDF page + 332.
 - **Tags:** jet–edge / jet–flap interaction, edge tones, subsonic jet resonance, Kelvin–Helmholtz wavepacket, guided jet mode, trapped acoustic waves, k_TH⁻ (Tam & Hu), k_p⁻, k_d⁻, vortex-sheet dispersion relation, soft-walled duct model, resonance condition, reflection coefficient, frequency squeezing, high-frequency cutoff, complex-mode resonance analysis, mode switching, wavelet scalogram, near-field microphone
 
 ## Summary

@@ -17,7 +17,7 @@ The library layout, frontmatter fields, controlled vocabulary and topic-page str
 - PDFs anywhere else: the absolute Windows path with forward slashes, e.g. `D:/Papers/Screech/Tam 1986.pdf`.
 
 **What to process**, depending on `$ARGUMENTS`:
-- **Empty or a folder:** run `library.py unindexed ["<folder>"]` (default `References/Paper_PDFs`, searched recursively). Each output line is `<index key><TAB><path to read>`. If the folder is outside the working directory and access is refused, ask the user to grant access to it (the app will prompt) rather than copying files.
+- **Empty or a folder:** run `library.py unindexed ["<folder>"]` (default `References/Paper_PDFs`, searched recursively; new papers normally sit in `References/Paper_PDFs/Unprocessed/`). Each output line is `<index key><TAB><path to read>`. If the folder is outside the working directory and access is refused, ask the user to grant access to it (the app will prompt) rather than copying files.
 - **Specific PDF file(s):** process those even if already indexed, replacing their note. Work out each key using the rule above.
 
 If nothing is printed, say every paper in that folder is already indexed and stop. Otherwise, list the files you are about to process. Many files will have publisher names (`016105_1_online.pdf`, `annurev-fluid-…pdf`); read the first page to identify them.
@@ -57,8 +57,9 @@ Only the main session edits topic pages, data tables, `SCHEMA.md` and the genera
 2. **Citations:** `library.py cites --write <key> …` for the new notes. This fills their `cites` from their reference lists. Also run plain `library.py cites --write` (all notes) when several papers were added, since older preprints sometimes cite newer versions.
 3. **Topic pages:** for each paper and each of its `topics`, work the subagent's topic contribution into `References/topics/<topic>.md`, following the structure in SCHEMA.md. Put it in the right thread section; don't just append. Revise "Current understanding" or "Disagreements and open questions" if the paper changes them (e.g. new evidence for one side, a contradiction with an existing note). Add the paper's line to "Papers", and update the "Last updated" line and paper count. If a topic page doesn't exist yet, create it from the SCHEMA template (and make sure the topic is in the vocabulary).
 4. **Data tables:** append the subagent's data rows to `References/data/*.csv` (columns in `References/data/README.md`). Check that the header matches and the `note` key is right.
-5. `library.py build` (regenerates `INDEX.md` and `references.bib`), then `library.py check`. Fix every ERROR; fix WARNs about the new notes.
-6. Commit the new notes, topic pages, data tables, `SCHEMA.md` (if changed), `INDEX.md` and `references.bib` together. Use `Add reference note: <short title>` for one paper, or `Add reference notes: <n> papers` for several. The PDFs stay untracked because `.gitignore` excludes `*.pdf*`, and PDFs outside the repo are never copied in.
+5. **File the PDFs:** `library.py file` moves each new PDF in `Paper_PDFs/` into `Paper_PDFs/<first topic>/` and updates the note's `pdf` field and PDF line. Order each note's `topics` most significant first before this.
+6. `library.py build` (regenerates `INDEX.md` and `references.bib`), then `library.py check`. Fix every ERROR; fix WARNs about the new notes.
+7. Commit the new notes, topic pages, data tables, `SCHEMA.md` (if changed), `INDEX.md` and `references.bib` together. Use `Add reference note: <short title>` for one paper, or `Add reference notes: <n> papers` for several. The PDFs stay untracked because `.gitignore` excludes `*.pdf*`, and PDFs outside the repo are never copied in.
 
 Finish by listing each paper with its note link, its old → new PDF filename (and any rename that was skipped or failed), the topic pages it changed (and any change to the consensus or open questions), and the parts to check against the PDF.
 

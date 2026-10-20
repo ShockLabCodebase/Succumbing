@@ -8,7 +8,7 @@ venue: "JFM 689, 97–128"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "689", "pages": "97--128"}
 doi: "10.1017/jfm.2011.401"
 arxiv: ""
-pdf: "Gudmundsson-Colonius_2011_Instability-Wave-Models-For-The-Near-Field-Fluctuations-Of-Turbulent-Jets.pdf"
+pdf: "linear-models/Gudmundsson-Colonius_2011_Instability-Wave-Models-For-The-Near-Field-Fluctuations-Of-Turbulent-Jets.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Linear PSE on Gaussian-fitted PIV mean flows (M 0.5/0.9, cold/hot) mat
 
 - **Authors:** K. Gudmundsson, T. Colonius (California Institute of Technology, Pasadena; Gudmundsson later at the University of Twente)
 - **Source:** J. Fluid Mech. 689, 97–128 (2011), doi:10.1017/jfm.2011.401. Received 16 Nov 2010, accepted 17 Sep 2011, published online 15 Nov 2011 (p. 97). This file is the published JFM version.
-- **PDF:** `References/Paper_PDFs/Gudmundsson-Colonius_2011_Instability-Wave-Models-For-The-Near-Field-Fluctuations-Of-Turbulent-Jets.pdf` (32 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Gudmundsson-Colonius_2011_Instability-Wave-Models-For-The-Near-Field-Fluctuations-Of-Turbulent-Jets.pdf` (32 pp.)
 - **Page refs:** printed journal page numbers (97–128). PDF page = printed page − 96.
 - **Tags:** wavepackets, linear parabolised stability equations (PSE), mean-flow stability analysis, Kelvin–Helmholtz instability, subsonic turbulent round jet, heated jet, near-field pressure, hydrodynamic vs acoustic pressure, phase-speed (wavenumber) filtering, caged microphone array, frequency-domain POD of array data (precursor of SPOD), snapshot POD of non-time-resolved stereo PIV, amplitude matching, Crocco–Busemann, marginal theory of turbulence, NASA Glenn SHJAR
 

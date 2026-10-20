@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 106(1), 119–143"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "106", "number": "1", "pages": "119--143"}
 doi: "10.1016/S0022-460X(86)80177-8"
 arxiv: ""
-pdf: "Krothapalli-EtAl_1986_The-Role-Of-Screech-Tones-In-Mixing-Of-An-Underexpanded-Rectangular-Jet.pdf"
+pdf: "screech/Krothapalli-EtAl_1986_The-Role-Of-Screech-Tones-In-Mixing-Of-An-Underexpanded-Rectangular-Jet.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "AR 16.7 rectangular jet, NPR 2–5.8: peak screech (NPR 3.8) widens mi
 
 - **Authors:** A. Krothapalli, Y. Hsia, D. Baganoff, K. Karamcheti (Dept. of Aeronautics and Astronautics, Stanford University; Krothapalli later at FAMU/FSU; p. 119)
 - **Source:** J. Sound Vib. 106(1), 119–143 (1986), doi:10.1016/S0022-460X(86)80177-8. Received 9 June 1983, revised 30 April 1985 (p. 119). Funded by AFOSR F49620-79-C-0189; Crighton and Tam thanked (p. 142).
-- **PDF:** `References/Paper_PDFs/Krothapalli-EtAl_1986_The-Role-Of-Screech-Tones-In-Mixing-Of-An-Underexpanded-Rectangular-Jet.pdf` (index key `Krothapalli-EtAl_1986_The-Role-Of-Screech-Tones-In-Mixing-Of-An-Underexpanded-Rectangular-Jet.pdf`, 25 pp.). Scanned journal pages with an OCR text layer; figures and Table 1 were checked from rendered page images.
+- **PDF:** `References/Paper_PDFs/screech/Krothapalli-EtAl_1986_The-Role-Of-Screech-Tones-In-Mixing-Of-An-Underexpanded-Rectangular-Jet.pdf` (index key `screech/Krothapalli-EtAl_1986_The-Role-Of-Screech-Tones-In-Mixing-Of-An-Underexpanded-Rectangular-Jet.pdf`, 25 pp.). Scanned journal pages with an OCR text layer; figures and Table 1 were checked from rendered page images.
 - **Page refs:** printed journal pages; PDF page n = printed page 118 + n.
 - **Tags:** screech, rectangular jet, aspect ratio 16.7 and 10, underexpanded convergent nozzle, NPR 2–5.8, jet spreading and mixing enhancement, self-excitation, flapping, minor-axis vs major-axis large-scale structures, Strouhal scaling with aspect ratio, cylindrical wave pattern, double wave pattern, schlieren (spark and phase-locked), near-field microphone, pitot, hot wire / hot film, mean velocity and rms similarity, half-width growth, virtual origin, axis crossover, Crighton elliptic-jet stability
 

@@ -8,7 +8,7 @@ venue: "JASA Express Lett. 3(2), 023601"
 bib: {"journal": "JASA Express Letters", "volume": "3", "number": "2", "pages": "023601"}
 doi: "10.1121/10.0016878"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Gee-EtAl_2023_Space-Launch-System-Acoustics-Far-Field-Noise-Measurements-Of-The-Artemis-I-Launch.pdf"
+pdf: "rocket-noise-measurements/Gee-EtAl_2023_Space-Launch-System-Acoustics-Far-Field-Noise-Measurements-Of-The-Artemis-I-Launch.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "First SLS far-field data (Artemis I, 1.5–5.2 km): ignition overpress
 - **Authors:** K. L. Gee, G. W. Hart, C. F. Cunningham, M. C. Anderson, M. S. Bassett, L. T. Mathews, J. T. Durrant, L. T. Moats (BYU Physics and Astronomy), W. L. Coyle, M. S. Kellison, M. J. Kuffskie (Rollins College Physics)
 - **Source:** JASA Express Letters 3(2), 023601 (2023). Received 29 Nov 2022, accepted 30 Dec 2022, published online 14 Feb 2023 (p. 2). Open access, CC BY. Editor T. B. Neilsen.
 - **DOI:** 10.1121/10.0016878
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Gee-EtAl_2023_Space-Launch-System-Acoustics-Far-Field-Noise-Measurements-Of-The-Artemis-I-Launch.pdf` (8 pp.; p. 1 is a publisher cover sheet, so PDF p. N = journal page 023601-(N−1). Page refs below are PDF pages.)
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Gee-EtAl_2023_Space-Launch-System-Acoustics-Far-Field-Noise-Measurements-Of-The-Artemis-I-Launch.pdf` (8 pp.; p. 1 is a publisher cover sheet, so PDF p. N = journal page 023601-(N−1). Page refs below are PDF pages.)
 - **Tags:** rocket noise, launch vehicle acoustics, SLS, Artemis I, solid rocket booster, ignition overpressure, flame trench, Mach wave radiation, far-field OASPL, one-third-octave spectra, nonlinear propagation, acoustic shocks, crackle, A-weighting, environmental noise prediction, ground-plate microphone, field measurement
 
 ## Summary

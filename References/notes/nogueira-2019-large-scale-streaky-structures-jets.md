@@ -8,7 +8,7 @@ venue: "JFM 873, 211–237"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "873", "pages": "211--237", "note": "HAL author version hal-02351588"}
 doi: "10.1017/jfm.2019.365"
 arxiv: ""
-pdf: "Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf"
+pdf: "linear-models/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "First evidence of lift-up streaks in an M 0.4 jet: dual-plane TR stere
 
 - **Authors:** P. A. S. Nogueira, A. V. G. Cavalieri (ITA, Brazil), P. Jordan, V. Jaunet (Institut PPRIME, Poitiers)
 - **Source:** J. Fluid Mech. 873, 211–237 (2019); doi:10.1017/jfm.2019.365. This copy is the HAL author version (hal-02351588) in JFM draft style, not the typeset article.
-- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf` (28 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf` (28 pp.)
 - **Tags:** streaks, lift-up, streamwise vortices, subsonic jet, M = 0.4, SPOD, resolvent analysis, transient growth, non-modal stability, dual-plane time-resolved stereo PIV, Taylor's hypothesis, azimuthal Fourier decomposition, wall-turbulence analogy
 
 > **Page convention:** page refs are **PDF page numbers**. PDF p. 1 is the HAL cover sheet, so PDF p. N = manuscript p. N−1. They are not the JFM 211–237 page numbers.

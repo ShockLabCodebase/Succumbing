@@ -8,7 +8,7 @@ venue: "Exp. Fluids 62, 183"
 bib: {"journal": "Experiments in Fluids", "volume": "62", "pages": "183"}
 doi: "10.1007/s00348-021-03273-w"
 arxiv: ""
-pdf: "Sun-EtAl_2021_Distortion-Correction-Of-Two-Component-Two-Dimensional-PIV-Using-A-Large-Imaging.pdf"
+pdf: "diagnostics-and-facilities/Sun-EtAl_2021_Distortion-Correction-Of-Two-Component-Two-Dimensional-PIV-Using-A-Large-Imaging.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Lens-distortion mapping for a 47 MPx PIV sensor (bicubic P3 beats rati
 - **Authors:** B. Sun, M. Shehzad, D. Jovic, C. Cuvier, C. Willert, Y. Ostovan, J.-M. Foucaut, C. Atkinson, J. Soria
 - **Source:** Experiments in Fluids 62:183 (2021), published online 14 Aug 2021. Affiliations: LTRAC, Monash; LMFL Lille; DLR Cologne (p. 14).
 - **DOI:** 10.1007/s00348-021-03273-w
-- **PDF:** `References/Paper_PDFs/Sun-EtAl_2021_Distortion-Correction-Of-Two-Component-Two-Dimensional-PIV-Using-A-Large-Imaging.pdf` (14 pp.)
+- **PDF:** `References/Paper_PDFs/diagnostics-and-facilities/Sun-EtAl_2021_Distortion-Correction-Of-Two-Component-Two-Dimensional-PIV-Using-A-Large-Imaging.pdf` (14 pp.)
 - **Tags:** PIV, 2C-2D PIV, large sensor, lens distortion, image dewarping, calibration, mapping function, R2 rational, P3 polynomial, Monte Carlo uncertainty, perspective error, turbulent boundary layer, ZPG-TBL
 
 ## Summary

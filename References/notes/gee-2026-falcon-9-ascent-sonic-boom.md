@@ -8,7 +8,7 @@ venue: "JASA Express Lett. 6(3), 033601"
 bib: {"journal": "JASA Express Letters", "volume": "6", "number": "3", "pages": "033601"}
 doi: "10.1121/10.0043007"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Gee-EtAl_2026_Falcon-9-Ascent-Sonic-Boom-Measurements-In-Ventura-County-California.pdf"
+pdf: "rocket-noise-measurements/Gee-EtAl_2026_Falcon-9-Ascent-Sonic-Boom-Measurements-In-Ventura-County-California.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Falcon 9 ascent booms, 132 recordings over 6 VSFB launches: Friedlande
 - **Authors:** K. L. Gee, M. S. Kellison, M. C. Anderson, L. T. Moats, M. T. Perkins, N. L. Pulsipher, N. F. Carlston, G. W. Hart (BYU Physics and Astronomy); L. K. Hall, O. Cantrell, H. J. Zepeda Villanueva, M. R. McCullah-Boozer, R. H. Budge (CSU Bakersfield Biology); J. C. King, F. A. Zering, Z. T. Zounes, K. C. Mackenthun (US Space Force, Vandenberg SFB)
 - **Source:** JASA Express Lett. 6(3), 033601 (2026). Received 7 Jan 2026, accepted 24 Feb 2026, published online 10 Mar 2026. Open access (CC BY). Editor A. Loubeau.
 - **DOI:** 10.1121/10.0043007
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Gee-EtAl_2026_Falcon-9-Ascent-Sonic-Boom-Measurements-In-Ventura-County-California.pdf` (8 pp.; p. 1 is the publisher cover sheet, so article page 033601-N is PDF page N + 1. Page refs below are PDF pages.)
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Gee-EtAl_2026_Falcon-9-Ascent-Sonic-Boom-Measurements-In-Ventura-County-California.pdf` (8 pp.; p. 1 is the publisher cover sheet, so article page 033601-N is PDF page N + 1. Page refs below are PDF pages.)
 - **Tags:** rocket ascent sonic boom, Falcon 9, Vandenberg SFB, boom focus, Friedlander waveform, prefocus evanescent waves, lateral cutoff, meteorology, launch azimuth, PCBoom, environmental assessment, community noise, low-frequency microphone response, pole-shift filtering, field measurements
 
 ## Summary

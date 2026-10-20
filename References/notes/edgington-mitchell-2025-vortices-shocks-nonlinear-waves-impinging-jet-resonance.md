@@ -8,7 +8,7 @@ venue: "JFM 1015, A56"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1015", "pages": "A56"}
 doi: "10.1017/jfm.2025.10383"
 arxiv: ""
-pdf: "EdgingtonMitchell-EtAl_2025_Vortices-Shocks-And-Non-Linear-Acoustic-Waves-The-Ingredients-For-Resonance-In.pdf"
+pdf: "impinging-jets-and-edge-tones/EdgingtonMitchell-EtAl_2025_Vortices-Shocks-And-Non-Linear-Acoustic-Waves-The-Ingredients-For-Resonance-In.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "TR schlieren of round and AR 2 jets on plate, cylinder, hemisphere: up
 
 - **Authors:** D. M. Edgington-Mitchell, J. L. Weightman, S. Mazharmanesh, P. Nogueira (all Shock Lab, Monash University Dept of Mechanical and Aerospace Engineering; p. 1). The second author is the user.
 - **Source:** J. Fluid Mech. 1015, A56 (2025), doi:10.1017/jfm.2025.10383. Open access (CC BY 4.0). Received 23 Oct 2024, revised 7 Apr 2025, accepted 10 May 2025 (p. 1). It extends the conference paper Edgington-Mitchell, Weightman & Nogueira (2024), AIAA 2024-3375, "Mechanisms of tone generation in impinging supersonic jets" (p. 5, 26).
-- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2025_Vortices-Shocks-And-Non-Linear-Acoustic-Waves-The-Ingredients-For-Resonance-In.pdf` (28 pp.). Page refs below are the journal pages A56-n, which equal the PDF page numbers.
+- **PDF:** `References/Paper_PDFs/impinging-jets-and-edge-tones/EdgingtonMitchell-EtAl_2025_Vortices-Shocks-And-Non-Linear-Acoustic-Waves-The-Ingredients-For-Resonance-In.pdf` (28 pp.). Page refs below are the journal pages A56-n, which equal the PDF page numbers.
 - **Supplementary material:** a JFM Notebook (Jupyter) with exemplar image sequences for Figs 3, 4, 6–15, at https://www.cambridge.org/S0022112025103832/JFM-Notebooks, plus supplementary movies (movie 11 is the raw video behind Fig. 15) (p. 8–23, 25).
 - **Tags:** impinging supersonic jet, impingement tones, aeroacoustic feedback, upstream-propagating wave, guided jet mode, duct-like mode, nonlinear acoustic waves, acoustic shocks, wave coalescence, wave merging (Mach stem), vortex sound, Curle's analogy, wall-jet shocklet, shock leakage, stand-off shock, wall-jet membrane source (Henderson), Powell feedback model, high-speed schlieren, shadowgraph, correlation-based phase averaging, rectangular nozzle, cylindrical and hemispherical impingement surfaces
 

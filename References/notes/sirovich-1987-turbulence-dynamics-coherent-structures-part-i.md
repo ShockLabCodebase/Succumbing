@@ -8,7 +8,7 @@ venue: "Q. Appl. Math. 45(3), 561–571"
 bib: {"journal": "Quarterly of Applied Mathematics", "volume": "45", "number": "3", "pages": "561--571"}
 doi: ""
 arxiv: ""
-pdf: "Sirovich_1987_Turbulence-And-The-Dynamics-Of-Coherent-Structures-Part-I-Coherent-Structures.pdf"
+pdf: "modal-decomposition/Sirovich_1987_Turbulence-And-The-Dynamics-Of-Coherent-Structures-Part-I-Coherent-Structures.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Method of snapshots: POD modes of the two-point correlation from an M 
 
 - **Authors:** Lawrence Sirovich (Brown University; p. 561)
 - **Source:** Quarterly of Applied Mathematics 45(3), 561–571 (October 1987). Received 1 Oct 1986 (p. 561). JSTOR stable URL https://www.jstor.org/stable/43637457 (no DOI printed).
-- **PDF:** `References/Paper_PDFs/Sirovich_1987_Turbulence-And-The-Dynamics-Of-Coherent-Structures-Part-I-Coherent-Structures.pdf` (index key `Sirovich_1987_Turbulence-And-The-Dynamics-Of-Coherent-Structures-Part-I-Coherent-Structures.pdf`, 12 pp.: a JSTOR cover sheet plus the 11 printed pages)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Sirovich_1987_Turbulence-And-The-Dynamics-Of-Coherent-Structures-Part-I-Coherent-Structures.pdf` (index key `modal-decomposition/Sirovich_1987_Turbulence-And-The-Dynamics-Of-Coherent-Structures-Part-I-Coherent-Structures.pdf`, 12 pp.: a JSTOR cover sheet plus the 11 printed pages)
 - **Contents of the PDF:** **Part I only.** Parts II (symmetries and transformations) and III (dynamics and scaling), which follow in the same issue (pages 573–582 and 583–590 from memory; not checked) are *not* in this file; Part I only previews them in its introduction (p. 561–562).
 - **Page refs:** printed page numbers. PDF page n = printed page 559 + n (PDF p. 1 is the JSTOR cover).
 - **Tags:** proper orthogonal decomposition (POD), Karhunen–Loève expansion, principal component analysis, method of snapshots ("strobes"), direct method, two-point spatial correlation tensor, Mercer's theorem, Fredholm theory, Hermitian operator, ergodic hypothesis, optimality / energy capture, low-dimensional attractor, data compression, incompressible eigenfunctions, Galerkin basis, method of partitions

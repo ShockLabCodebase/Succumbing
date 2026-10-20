@@ -8,7 +8,7 @@ venue: "JFM 987, A5"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "987", "pages": "A5"}
 doi: "10.1017/jfm.2024.376"
 arxiv: ""
-pdf: "Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "charLES LES of AR-2 twin rectangular jets (NPR 3): intermittent out-of
 - **Authors:** Jinah Jeun (Center for Turbulence Research, Stanford; correspondence address KTH), Gao Jun Wu, Sanjiva K. Lele (Stanford)
 - **Source:** J. Fluid Mech. 987, A5 (2024). Received 28 Sep 2022, revised 28 Feb 2024, accepted 10 Apr 2024. Open access (CC BY 4.0).
 - **DOI:** 10.1017/jfm.2024.376
-- **PDF:** `References/Paper_PDFs/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf` (26 pp.; local only, not in Git)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf` (26 pp.; local only, not in Git)
 - **Tags:** twin jets, rectangular jet, aspect ratio 2, screech, jet coupling, out-of-phase coupling, intermittency, Hilbert transform, instantaneous phase, D2 symmetry decomposition, SPOD, ensemble-averaged SPOD, streamwise Fourier decomposition, guided jet mode, free-stream acoustic mode, duct-like mode, spatial cross-correlation, points of return, LES (charLES), overexpanded jet, NPR 3
 
 ## Summary

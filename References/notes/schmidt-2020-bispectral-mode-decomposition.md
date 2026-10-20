@@ -8,7 +8,7 @@ venue: "Nonlinear Dyn. 102"
 bib: {"journal": "Nonlinear Dynamics", "volume": "102"}
 doi: ""
 arxiv: "2002.04146"
-pdf: "Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf"
+pdf: "modal-decomposition/Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf"
 version: "preprint"
 unverified: ["journal DOI and pages not printed in the arXiv preprint"]
 group: false
@@ -28,7 +28,7 @@ summary: "BMD: numerical radius of the bispectral density matrix gives mode bisp
 - **Authors:** O. T. Schmidt (University of California San Diego)
 - **Source:** published in *Nonlinear Dynamics* 102 (2020). This note is from the **arXiv version**, arXiv:2002.04146v4 [physics.flu-dyn] (25 Nov 2020); page numbers below refer to it, not to the journal.
 - **DOI / arXiv:** arXiv:2002.04146 (journal DOI not printed in the preprint)
-- **PDF:** `References/Paper_PDFs/Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf` (index key `Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf`, 36 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf` (index key `modal-decomposition/Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf`, 36 pp.)
 - **Tags:** bispectral mode decomposition (BMD), bispectrum, triadic interaction, quadratic phase coupling, sum and difference interactions, mode bispectrum, cross-frequency field, interaction map, summed mode spectrum, numerical radius, Welch estimator, cross-bispectral BMD, azimuthal triads, subharmonic and ultraharmonic generation, cylinder wake DNS, flat-plate PIV, transitional jet LES, MATLAB code
 
 ## Summary

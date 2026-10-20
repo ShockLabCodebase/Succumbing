@@ -8,7 +8,7 @@ venue: "JFM (2022), arXiv version held"
 bib: {"journal": "Journal of Fluid Mechanics"}
 doi: "10.1017/jfm.2022.58"
 arxiv: "2107.06429"
-pdf: "Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf"
+pdf: "screech/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf"
 version: "preprint"
 unverified: ["DOI and year from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 936, A10: unchecked)"]
 group: true
@@ -27,7 +27,7 @@ summary: "A2 screech closes via a secondary shock wavenumber k_sh2 from downstre
 
 - **Authors:** P. A. S. Nogueira, V. Jaunet, M. Mancinelli, P. Jordan, D. Edgington-Mitchell (Nogueira and Edgington-Mitchell: LTRAC, Monash; Jaunet, Mancinelli and Jordan: Institut Pprime, Poitiers; p. 1)
 - **Source:** arXiv:2107.06429v1 [physics.flu-dyn] (preprint, 13 Jul 2021; JFM-style draft). The file is the 2021 arXiv v1.
-- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf` (16 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf` (16 pp.)
 - **Tags:** screech, A1/A2 mode staging, axisymmetric (m = 0) screech, shock-cell wavenumber spectrum, shock-spacing variation, Kelvin-Helmholtz wavepacket, guided jet mode, Tam & Tanna interaction, locally parallel LSA, spatially periodic (Floquet) LSA, absolute instability, saddle point, PIV mean flow, microphone array
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "JFM 999, A47"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "999", "pages": "A47"}
 doi: "10.1017/jfm.2024.797"
 arxiv: ""
-pdf: "Nogueira-EtAl_2024_Guided-Jet-Waves.pdf"
+pdf: "linear-models/Nogueira-EtAl_2024_Guided-Jet-Waves.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Guided-jet mode is in-jet sound totally reflected by the shear layer (
 
 - **Authors:** P. A. S. Nogueira, A. V. G. Cavalieri, E. Martini, A. Towne, P. Jordan, D. Edgington-Mitchell (Monash; ITA, São José dos Campos; Institut PPrime, Poitiers; University of Michigan)
 - **Source:** J. Fluid Mech. 999, A47 (2024), doi:10.1017/jfm.2024.797. Published open-access version (CC BY 4.0). Received 19 Nov 2023, accepted 25 Jun 2024.
-- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2024_Guided-Jet-Waves.pdf` (39 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Nogueira-EtAl_2024_Guided-Jet-Waves.pdf` (39 pp.)
 - **Page refs:** PDF page n = printed page "999 A47-n".
 - **Tags:** guided jet mode (k_TH⁻, k_p⁻), duct-like modes, upstream-travelling wave, acoustic scattering, total internal reflection, shear-layer impedance, soft/hard-wall duct, vortex sheet (single, double, cylindrical), branch point, saddle point, energy flux, screech, impingement tones, subsonic jet resonance, oblique waves, theory only
 

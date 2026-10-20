@@ -8,7 +8,7 @@ venue: "IEEE Trans. Plasma Sci. PS-7(2), 120–131"
 bib: {"journal": "IEEE Transactions on Plasma Science", "volume": "7", "number": "2", "pages": "120--131"}
 doi: "10.1109/TPS.1979.4317207"
 arxiv: ""
-pdf: "Kim-Powers_1979_Digital-Bispectral-Analysis-And-Its-Applications-To-Nonlinear-Wave-Interactions.pdf"
+pdf: "modal-decomposition/Kim-Powers_1979_Digital-Bispectral-Analysis-And-Its-Applications-To-Nonlinear-Wave-Interactions.pdf"
 version: "published"
 unverified: ["DOI from the PDF metadata, not printed on the paper"]
 group: false
@@ -27,7 +27,7 @@ summary: "Origin of the bicoherence: bispectrum as third-order cumulant spectrum
 
 - **Authors:** Young C. Kim and Edward J. Powers (Department of Electrical Engineering and Electronics Research Center, The University of Texas at Austin; p. 120)
 - **Source:** IEEE Transactions on Plasma Science PS-7(2), 120–131, June 1979. doi:10.1109/TPS.1979.4317207 (DOI from the PDF metadata; the paper prints only the code 0018-9480/79/0600-0120). Received 6 Sep 1978, revised 23 Mar 1979 (p. 120). Funded by the DoD Joint Services Electronics Program (AFOSR contract F49620-77-C-0101) and the Texas Atomic Energy Research Foundation (p. 120).
-- **PDF:** `References/Paper_PDFs/Kim-Powers_1979_Digital-Bispectral-Analysis-And-Its-Applications-To-Nonlinear-Wave-Interactions.pdf` (index key `Kim-Powers_1979_Digital-Bispectral-Analysis-And-Its-Applications-To-Nonlinear-Wave-Interactions.pdf`, 12 pp.). IEEE Xplore download, scanned with a text layer.
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Kim-Powers_1979_Digital-Bispectral-Analysis-And-Its-Applications-To-Nonlinear-Wave-Interactions.pdf` (index key `modal-decomposition/Kim-Powers_1979_Digital-Bispectral-Analysis-And-Its-Applications-To-Nonlinear-Wave-Interactions.pdf`, 12 pp.). IEEE Xplore download, scanned with a text layer.
 - **Page refs:** printed journal pages, **PDF page n = journal page 119 + n** (PDF p. 1 = p. 120). Journal p. 131 (PDF p. 12) holds the reference list and the first page of the next article (Robertson et al., neutral atom spectrometers), which is not part of this paper.
 - **Tags:** bispectrum, bicoherence, squared bicoherence as fraction of power, cumulants and cumulant spectra, higher-order spectra, quadratic phase coupling, three-wave coupling, sum and difference interactions, harmonic generation, coupling coefficient, least-squares (quadratic regression) estimation, estimator bias and variance, Welch-type ensemble averaging, Hanning window, symmetry region of the bispectrum, synthetic test signals, plasma fluctuations, drift waves, ion acoustic waves, Langmuir probes, foundational method paper
 

@@ -8,7 +8,7 @@ venue: "AIAA J. 47(6), 1445–1460"
 bib: {"journal": "AIAA Journal", "volume": "47", "number": "6", "pages": "1445--1460"}
 doi: "10.2514/1.38634"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Casalino-EtAl_2009_Hybrid-Empirical-Computational-Aeroacoustics-Methodology-For-Rocket-Noise-Modeling.pdf"
+pdf: "rocket-noise-models/Casalino-EtAl_2009_Hybrid-Empirical-Computational-Aeroacoustics-Methodology-For-Rocket-Noise-Modeling.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Vega lift-off: Eldred/Varnier empirical sources propagated by immersed
 - **Authors:** D. Casalino, M. Barbarino (CIRA, Italian Aerospace Research Center, Capua), M. Genito (European Launch Vehicle S.p.A., Colleferro), V. Ferrara (Avio S.p.A., Colleferro)
 - **Source:** AIAA Journal 47(6), 1445–1460, June 2009. Presented as AIAA Paper 2008-2939 at the 14th AIAA/CEAS Aeroacoustics Conference, Vancouver, May 2008 (p. 1). The conference paper is ref. [29].
 - **DOI:** 10.2514/1.38634
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Casalino-EtAl_2009_Hybrid-Empirical-Computational-Aeroacoustics-Methodology-For-Rocket-Noise-Modeling.pdf` (16 pp.). Page refs below are PDF pages; journal page = PDF page + 1444.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Casalino-EtAl_2009_Hybrid-Empirical-Computational-Aeroacoustics-Methodology-For-Rocket-Noise-Modeling.pdf` (16 pp.). Page refs below are PDF pages; journal page = PDF page + 1444.
 - **Tags:** rocket noise, launch vehicle lift-off, Vega, P80 solid rocket motor, Eldred NASA SP-8072, Varnier reference length, acoustic efficiency, Mach wave radiation, source distribution along plume, jet deflector, launch pad scattering, frequency-domain CAA, Green's function discretization (GFD), immersed boundary, Pierce wave equation, Lilley/Pridmore-Brown, RANS mean flow, PML, one-third octave spectra, source localisation
 
 ## Summary

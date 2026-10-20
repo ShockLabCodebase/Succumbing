@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 309, 852–857"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "309", "pages": "852--857", "note": "Short communication"}
 doi: "10.1016/j.jsv.2007.06.078"
 arxiv: ""
-pdf: "Kandula_2008_Near-Field-Acoustics-Of-Clustered-Rocket-Engines.pdf"
+pdf: "rocket-noise-models/Kandula_2008_Near-Field-Acoustics-Of-Clustered-Rocket-Engines.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Journal version of the two-zone clustered-nozzle model: isolated + mer
 - **Authors:** Max Kandula (ASRC, Kennedy Space Center, FL), sole author (p. 852). The acknowledgements note that his 1973–1982 papers appeared under the name "K. Mastanaiah" (p. 857).
 - **Source:** Journal of Sound and Vibration 309 (2008) 852–857, **Short Communication**. Received 3 Feb 2006, revised 6 Oct 2006, accepted 27 Jun 2007, online 24 Sep 2007 (p. 852). Partly funded by AFRL Wright-Patterson AFB (p. 857).
 - **DOI:** 10.1016/j.jsv.2007.06.078
-- **PDF:** `Kandula_2008_Near-Field-Acoustics-Of-Clustered-Rocket-Engines.pdf` (in `References/Paper_PDFs/`; 6 pp., born-digital, clean text layer; equations and figures checked against page images). Page numbers below are the printed journal pages 852–857 (PDF page = printed − 851).
+- **PDF:** `rocket-noise-models/Kandula_2008_Near-Field-Acoustics-Of-Clustered-Rocket-Engines.pdf` (in `References/Paper_PDFs/`; 6 pp., born-digital, clean text layer; equations and figures checked against page images). Page numbers below are the printed journal pages 852–857 (PDF page = printed − 851).
 - **Conference precursor:** [Kandula, Vu & Lindsay 2005](kandula-2005-near-field-acoustics-clustered-rocket-engines.md), which this paper identifies as **AIAA 2005-3091, 11th AIAA/CEAS Aeroacoustics Conference, Monterey, CA, May 2005** (ref. [13], p. 857), and says it is "derived primarily from" (p. 853). That note's PDF prints no venue or paper number, so this reference fills the gap. This is the paper cited as "Kandula 2008a" by [Lubert et al. 2022](lubert-2022-supersonic-jet-noise-launch-vehicles-review.md).
 - **Tags:** rocket noise, launch vehicle, clustered nozzles, multiple jets, jet merging, two-zone model, Eldred 1963 (ASD-TDR-62-578), NASA SP-8072, equivalent nozzle diameter, double-peaked spectrum, near-field acoustic loads, ground reflection, image source, reflection coefficient, vehicle surface reflection, semi-empirical prediction, ELV, one-third octave spectra, coaxial-jet four-source analogy
 

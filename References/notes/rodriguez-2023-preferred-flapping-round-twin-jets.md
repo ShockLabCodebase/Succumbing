@@ -8,7 +8,7 @@ venue: "JFM 977, A4"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "977", "pages": "A4"}
 doi: "10.1017/jfm.2023.935"
 arxiv: ""
-pdf: "Rodriguez-EtAl_2023_On-The-Preferred-Flapping-Motion-Of-Round-Twin-Jets.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Rodriguez-EtAl_2023_On-The-Preferred-Flapping-Motion-Of-Round-Twin-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Twin round jet local LST (2D LNS, twin vortex sheet): coupling splits 
 
 - **Authors:** D. Rodríguez (Universidad Politécnica de Madrid), M. N. Stavropoulos, P. A. S. Nogueira, D. M. Edgington-Mitchell (Monash, LTRAC), P. Jordan (Institut Pprime, Poitiers)
 - **Source:** J. Fluid Mech. 977, A4 (2023), doi:10.1017/jfm.2023.935. Published open-access version (CC BY 4.0). Received 14 Oct 2022, accepted 4 Nov 2023. A conference version is Rodríguez et al. 2022, AIAA 2022-3084.
-- **PDF:** `References/Paper_PDFs/Rodriguez-EtAl_2023_On-The-Preferred-Flapping-Motion-Of-Round-Twin-Jets.pdf` (22 pp.)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Rodriguez-EtAl_2023_On-The-Preferred-Flapping-Motion-Of-Round-Twin-Jets.pdf` (22 pp.)
 - **Page refs:** the printed page "977 A4-n" is PDF page n.
 - **Tags:** twin jets, jet coupling, flapping vs helical, m = 1 Kelvin–Helmholtz, local spatial linear stability, locally parallel LST, symmetry families SS/AS/SA/AA, vortex-sheet model, Graf's addition theorem, Michalke tanh profile, Crocco–Busemann, shear-layer thickness, Mach number and temperature ratio, perfectly expanded jets, theory only (no new experiment)
 

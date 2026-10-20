@@ -8,7 +8,7 @@ venue: "Exp. Fluids 62, 208"
 bib: {"journal": "Experiments in Fluids", "volume": "62", "pages": "208"}
 doi: "10.1007/s00348-021-03307-3"
 arxiv: ""
-pdf: "Shehzad-EtAl_2021_On-Assuring-The-Accurate-Parallel-Alignment-Of-A-Laser-Sheet-For-Planar-And.pdf"
+pdf: "diagnostics-and-facilities/Shehzad-EtAl_2021_On-Assuring-The-Accurate-Parallel-Alignment-Of-A-Laser-Sheet-For-Planar-And.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Aligns the laser sheet to the calibration target before calibrating (s
 - **Authors:** M. Shehzad, S. Lawrence, C. Atkinson, J. Soria (LTRAC, Department of Mechanical and Aerospace Engineering, Monash University)
 - **Source:** Experiments in Fluids 62:208 (2021); received 7 Apr 2021, published online 26 Sep 2021
 - **DOI:** 10.1007/s00348-021-03307-3
-- **PDF:** `References/Paper_PDFs/Shehzad-EtAl_2021_On-Assuring-The-Accurate-Parallel-Alignment-Of-A-Laser-Sheet-For-Planar-And.pdf` (14 pp.)
+- **PDF:** `References/Paper_PDFs/diagnostics-and-facilities/Shehzad-EtAl_2021_On-Assuring-The-Accurate-Parallel-Alignment-Of-A-Laser-Sheet-For-Planar-And.pdf` (14 pp.)
 - **Tags:** PIV calibration, stereoscopic PIV (SPIV), laser sheet alignment, misalignment error, self-calibration, Soloff polynomial mapping, dewarping, measurement uncertainty, experimental technique
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "JFM 926, A26"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "926", "pages": "A26"}
 doi: "10.1017/jfm.2021.681"
 arxiv: "2011.03644"
-pdf: "Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf"
+pdf: "time-frequency-methods/Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf"
 version: "preprint"
 unverified: ["JFM volume, article number and DOI from memory, not in this arXiv PDF"]
 group: false
@@ -27,7 +27,7 @@ summary: "SPOD-based reconstruction on M 0.4 jet LES: frequency-domain inversion
 
 - **Authors:** A. Nekkanti, O. T. Schmidt (Dept. of Mechanical and Aerospace Engineering, UC San Diego)
 - **Source:** J. Fluid Mech. 926, A26 (2021), doi:10.1017/jfm.2021.681. This file is the **arXiv version**, arXiv:2011.03644v2 [physics.flu-dyn] (4 May 2021, JFM style), so page layout and possibly wording differ from the JFM article. Page refs below are arXiv PDF pages (printed page n = PDF page n).
-- **PDF:** `References/Paper_PDFs/Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf` (index key `Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf`, 35 pp.)
+- **PDF:** `References/Paper_PDFs/time-frequency-methods/Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf` (index key `time-frequency-methods/Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf`, 35 pp.)
 - **Tags:** SPOD (Welch / Towne–Schmidt), inverse SPOD, frequency-domain reconstruction, time-domain reconstruction, oblique projection, expansion coefficients, overlap ambiguity, window-weighted overlap-add, Hamming window, edge effects, low-rank reconstruction, denoising, eigenvalue hard-thresholding, noise floor, data compression, frequency–time analysis, SPOD spectrogram, convolution / sliding-window SPOD, intermittency, prewhitening, trapped acoustic modes, M 0.4 turbulent jet LES, time-resolved data
 
 > JFM volume/article number and DOI (926, A26, 10.1017/jfm.2021.681) are from my knowledge of the published paper, not from this PDF, which only carries the arXiv stamp. Check before citing.

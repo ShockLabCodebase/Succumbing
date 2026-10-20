@@ -8,7 +8,7 @@ venue: "JFM 197, 453–477"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "197", "pages": "453--477"}
 doi: "10.1017/S0022112088003325"
 arxiv: ""
-pdf: "Papamoschou-Roshko_1988_The-Compressible-Turbulent-Shear-Layer-An-Experimental-Study.pdf"
+pdf: "jet-noise-mechanisms/Papamoschou-Roshko_1988_The-Compressible-Turbulent-Shear-Layer-An-Experimental-Study.pdf"
 version: "published"
 unverified: ["DOI from the standard citation, not printed on the scan"]
 group: false
@@ -27,7 +27,7 @@ summary: "Defines the convective Mach number M_c (U_c from an isentropic saddle-
 
 - **Authors:** D. Papamoschou, A. Roshko (Graduate Aeronautical Laboratories, California Institute of Technology)
 - **Source:** J. Fluid Mech. 197, 453–477 (1988), doi:10.1017/S0022112088003325 (DOI from the standard citation, not printed on the scan). Received 2 Sep 1987, revised 20 May 1988.
-- **PDF:** `References/Paper_PDFs/Papamoschou-Roshko_1988_The-Compressible-Turbulent-Shear-Layer-An-Experimental-Study.pdf` (25 pp.). A scanned copy (Caltech) with an OCR text layer; the OCR drops every displayed equation and garbles Table 1, so equations and the table below were transcribed from page renders.
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Papamoschou-Roshko_1988_The-Compressible-Turbulent-Shear-Layer-An-Experimental-Study.pdf` (25 pp.). A scanned copy (Caltech) with an OCR text layer; the OCR drops every displayed equation and garbles Table 1, so equations and the table below were transcribed from page renders.
 - **Page refs:** PDF page numbers. Journal page = PDF page + 452 (PDF p. 1 = p. 453).
 - **Tags:** convective Mach number, compressible mixing layer, plane shear layer, growth-rate reduction, compressibility effects, large-scale structures, schlieren (20 ns spark), Pitot-thickness, two-stream supersonic facility, heterogeneous gases (He, N₂, Ar), density ratio, velocity ratio, vortex-sheet stability, Bogdanoff, Gropengiesser, oblique waves, Mach wave radiation (background)
 

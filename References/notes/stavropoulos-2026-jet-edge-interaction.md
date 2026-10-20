@@ -8,7 +8,7 @@ venue: "arXiv:2603.24135"
 bib: {"note": "Under consideration for publication in J. Fluid Mech."}
 doi: ""
 arxiv: "2603.24135"
-pdf: "Stavropoulos-EtAl_2026_Jet-Edge-Interaction-Linear-And-Non-Linear-Frequency-Selection-Mechanisms.pdf"
+pdf: "impinging-jets-and-edge-tones/Stavropoulos-EtAl_2026_Jet-Edge-Interaction-Linear-And-Non-Linear-Frequency-Selection-Mechanisms.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Subsonic jet grazing a plate edge, M_j 0.4–1: PSD, bicoherence and g
 
 - **Authors:** M. N. Stavropoulos (Institut Pprime), A. V. G. Cavalieri (ITA, Brazil), L. Lesshafft (LadHyX, École Polytechnique), P. Jordan (Institut Pprime)
 - **Source:** arXiv:2603.24135v1 [physics.flu-dyn], 25 Mar 2026; "under consideration for publication in J. Fluid Mech." (p. 1). Preprint in JFM template; no DOI yet.
-- **PDF:** `References/Paper_PDFs/Stavropoulos-EtAl_2026_Jet-Edge-Interaction-Linear-And-Non-Linear-Frequency-Selection-Mechanisms.pdf` (29 pp.; local only, not in Git). The old file name misspelt the first author as "Stravropoulos".
+- **PDF:** `References/Paper_PDFs/impinging-jets-and-edge-tones/Stavropoulos-EtAl_2026_Jet-Edge-Interaction-Linear-And-Non-Linear-Frequency-Selection-Mechanisms.pdf` (29 pp.; local only, not in Git). The old file name misspelt the first author as "Stravropoulos".
 - **Tags:** installed jet, jet-edge interaction, jet-flap tones, subsonic jet, resonance, feedback loop, guided jet modes, k⁻_th / k⁻_d / k⁻_p, saddle points, cylindrical vortex-sheet model, phase criterion, bicoherence, bispectrum, triadic interaction, harmonics, mode switching, hysteresis, wavelet (bump), intermittency, single far-field microphone
 
 ## Summary

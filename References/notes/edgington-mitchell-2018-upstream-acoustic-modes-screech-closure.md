@@ -8,7 +8,7 @@ venue: "JFM 855, R1"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "855", "pages": "R1"}
 doi: "10.1017/jfm.2018.642"
 arxiv: ""
-pdf: "EdgingtonMitchell-EtAl_2018_Upstream-Travelling-Acoustic-Jet-Modes-As-A-Closure-Mechanism-For-Screech.pdf"
+pdf: "screech/EdgingtonMitchell-EtAl_2018_Upstream-Travelling-Acoustic-Jet-Modes-As-A-Closure-Mechanism-For-Screech.pdf"
 version: "preprint"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "NPR 2.10/2.25 PIV: POD pair + k_x split isolate a weak upstream acoust
 
 - **Authors:** D. Edgington-Mitchell, V. Jaunet, P. Jordan, A. Towne, J. Soria, D. Honnery (Monash; Institut PPRIME, Poitiers; CTR Stanford)
 - **Source:** J. Fluid Mech. 855, R1 (2018), doi:10.1017/jfm.2018.642. This file is the HAL author draft (hal-02351577, JFM LaTeX style), so its page layout differs from the published Rapids version.
-- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2018_Upstream-Travelling-Acoustic-Jet-Modes-As-A-Closure-Mechanism-For-Screech.pdf` (12 pp.)
+- **PDF:** `References/Paper_PDFs/screech/EdgingtonMitchell-EtAl_2018_Upstream-Travelling-Acoustic-Jet-Modes-As-A-Closure-Mechanism-For-Screech.pdf` (12 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the HAL cover sheet, so the draft's printed page n is PDF page n+1.
 - **Tags:** screech, A1/A2 stages, underexpanded jet, guided jet mode (k_TH⁻), upstream-travelling wave, feedback closure, vortex-sheet model, cut-on/cut-off, POD mode pair, streamwise Fourier transform, non-time-resolved PIV
 

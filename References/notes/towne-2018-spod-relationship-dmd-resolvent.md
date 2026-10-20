@@ -8,7 +8,7 @@ venue: "JFM 847, 821–867"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "847", "pages": "821--867"}
 doi: "10.1017/jfm.2018.283"
 arxiv: "1708.04393"
-pdf: "Towne-EtAl_2018_Spectral-Proper-Orthogonal-Decomposition-And-Its-Relationship-To-Dynamic-Mode.pdf"
+pdf: "modal-decomposition/Towne-EtAl_2018_Spectral-Proper-Orthogonal-Decomposition-And-Its-Relationship-To-Dynamic-Mode.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Core SPOD reference: Welch-block algorithm; SPOD modes are space–tim
 
 - **Authors:** A. Towne (Center for Turbulence Research, Stanford), O. T. Schmidt, T. Colonius (Caltech)
 - **Source:** J. Fluid Mech. 847, 821–867 (2018), doi:10.1017/jfm.2018.283. This file is the **arXiv version**, arXiv:1708.04393v2 [physics.flu-dyn] (1 Jun 2018), so its page layout differs from the JFM version. Page refs below are arXiv PDF pages (printed page n = PDF page n).
-- **PDF:** `References/Paper_PDFs/Towne-EtAl_2018_Spectral-Proper-Orthogonal-Decomposition-And-Its-Relationship-To-Dynamic-Mode.pdf` (47 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Towne-EtAl_2018_Spectral-Proper-Orthogonal-Decomposition-And-Its-Relationship-To-Dynamic-Mode.pdf` (47 pp.)
 - **Tags:** SPOD (Lumley space–time POD), space-only POD, cross-spectral density, Welch's method, block size and overlap, windowing, method of snapshots, DMD, exact DMD, Koopman, ensemble DMD, resolvent analysis, white-noise forcing, coloured forcing, resolvent expansion coefficients, linearised Ginzburg–Landau, M 0.4 turbulent jet LES, wavepackets, low-rank behaviour, Chu energy norm
 
 ## Summary

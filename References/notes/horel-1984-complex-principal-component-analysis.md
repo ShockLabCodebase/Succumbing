@@ -8,7 +8,7 @@ venue: "J. Clim. Appl. Meteorol. 23(12), 1660–1673"
 bib: {"journal": "Journal of Climate and Applied Meteorology", "volume": "23", "number": "12", "pages": "1660--1673", "publisher": "American Meteorological Society"}
 doi: ""
 arxiv: ""
-pdf: "Horel_1984_Complex-Principal-Component-Analysis-Theory-And-Examples.pdf"
+pdf: "time-frequency-methods/Horel_1984_Complex-Principal-Component-Analysis-Theory-And-Examples.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Origin of complex (Hilbert) PCA, i.e. HPOD_t: band-passed analytic sig
 
 - **Authors:** J. D. Horel (Climate Research Group, Scripps Institution of Oceanography, UC San Diego)
 - **Source:** Journal of Climate and Applied Meteorology 23(12), 1660–1673, December 1984 (American Meteorological Society). JSTOR stable URL 26181146; DOI not printed in the PDF (it is the JSTOR copy).
-- **PDF:** `References/Paper_PDFs/Horel_1984_Complex-Principal-Component-Analysis-Theory-And-Examples.pdf` (15 pp.: a JSTOR cover page, then printed pp. 1660–1673). **Page refs below are printed journal pages; PDF page = printed page − 1658.**
+- **PDF:** `References/Paper_PDFs/time-frequency-methods/Horel_1984_Complex-Principal-Component-Analysis-Theory-And-Examples.pdf` (15 pp.: a JSTOR cover page, then printed pp. 1660–1673). **Page refs below are printed journal pages; PDF page = printed page − 1658.**
 - **Tags:** complex principal components (CPC), complex EOF, Hilbert EOF, Hilbert POD (HPOD) origin, analytic signal, Hilbert transform, quadrature function, travelling vs standing waves, frequency-domain PCA (FDPC, proto-SPOD), complex correlation matrix, varimax rotation of complex PCs (RCPC), regionalisation, end effects and tapering, band-pass Hilbert transform, intermittent pulses, sampling errors, eigenvalue degeneracy, phase ambiguity, synthetic test cases, climate data
 
 ## Summary

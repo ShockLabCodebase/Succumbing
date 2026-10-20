@@ -8,7 +8,7 @@ venue: "Exp. Fluids 60, 22"
 bib: {"journal": "Experiments in Fluids", "volume": "60", "pages": "22"}
 doi: "10.1007/s00348-018-2673-2"
 arxiv: ""
-pdf: "Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf"
+pdf: "screech/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "KH + guided-jet-mode vortex-sheet resonance model predicts A1/A2 scree
 - **Authors:** M. Mancinelli, V. Jaunet, P. Jordan, A. Towne
 - **Source:** Experiments in Fluids 60:22 (2019); received 18 Oct 2018, published online 3 Jan 2019
 - **DOI:** 10.1007/s00348-018-2673-2
-- **PDF:** `References/Paper_PDFs/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf` (9 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf` (9 pp.)
 - **Tags:** screech, A1/A2 staging, underexpanded round jet, guided jet mode, cylindrical vortex-sheet model, resonance model, Kelvin-Helmholtz wavepacket, branch/saddle points, near-field microphone array, azimuthal decomposition, wavelet transform, mode switching, intermittency, quadratic nonlinear interaction
 
 ## Summary

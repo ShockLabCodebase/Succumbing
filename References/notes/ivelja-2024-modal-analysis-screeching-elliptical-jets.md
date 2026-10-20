@@ -8,7 +8,7 @@ venue: "JFM 1000, A68"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1000", "pages": "A68"}
 doi: "10.1017/jfm.2024.1039"
 arxiv: ""
-pdf: "Ivelja-EtAl_2024_Modal-Analysis-Of-Screeching-Elliptical-Jets.pdf"
+pdf: "screech/Ivelja-EtAl_2024_Modal-Analysis-Of-Screeching-Elliptical-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "AR 2 elliptical jet, NPR 2.6/3.4: PIV POD pair + k_x filter isolate se
 
 - **Authors:** R. Ivelja, D. Edgington-Mitchell, M. Maigler, P.A.S. Nogueira (Monash LTRAC, Clayton; Universität der Bundeswehr München, Neubiberg)
 - **Source:** J. Fluid Mech. 1000, A68 (2024), doi:10.1017/jfm.2024.1039. Published open-access version (CC BY 4.0).
-- **PDF:** `References/Paper_PDFs/Ivelja-EtAl_2024_Modal-Analysis-Of-Screeching-Elliptical-Jets.pdf` (31 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Ivelja-EtAl_2024_Modal-Analysis-Of-Screeching-Elliptical-Jets.pdf` (31 pp.)
 - **Page refs:** PDF page n = printed page A68-n.
 - **Tags:** screech, elliptical jet (AR 2), flapping (se₁) mode, guided jet mode (GJM), Kelvin–Helmholtz, non-time-resolved PIV, snapshot POD pair, symmetry-imposed POD, streamwise Fourier filtering, Floquet-in-azimuth spatial LSA, Mathieu-function modes, RANS mean flow (OpenFOAM/HiSA), GJM existence region vs x, axis switching
 

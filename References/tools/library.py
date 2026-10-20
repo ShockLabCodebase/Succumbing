@@ -6,6 +6,7 @@
   check              check frontmatter, vocabulary, PDFs, links, topic pages, CSVs, duplicates
   unindexed [DIR]    list PDFs (default References/Paper_PDFs, recursive) with no note,
                      one "<index key><TAB><path>" per line
+  file [--dry]       move each indexed PDF into Paper_PDFs/<primary topic>/ and update its note
   find [filters]     list notes matching every filter, e.g.
                        find --methods SPOD --data schlieren-TR --flow rectangular-jet
                        find --topics screech --since 2018 --text staging
@@ -344,7 +345,9 @@ def cmd_check(args):
             except OSError:
                 exists = False
             if not exists:
-                (w if re.match(r"^([A-Za-z]:/|//)", n.pdf) else e)(f"PDF not found: {n.pdf}")
+                (w if is_external(n.pdf) else e)(f"PDF not found: {n.pdf}")
+            elif not is_external(n.pdf) and n.pdf != filed_key(n):
+                w(f"PDF is not in its primary-topic folder: run library.py file")
         else:
             w("no pdf key")
         if n.doi:
@@ -429,6 +432,47 @@ def cmd_unindexed(args):
         return 1
     for k, p in list_unindexed(folder):
         print(f"{k}\t{p}")
+    return 0
+
+
+# ---------------------------------------------------------------- file
+
+def is_external(key):
+    return bool(re.match(r"^([A-Za-z]:/|//)", key))
+
+
+def filed_key(n):
+    """Where an indexed PDF belongs: Paper_PDFs/<first topic>/<filename>."""
+    return f"{n.topics[0] if n.topics else 'Other'}/{n.pdf.rsplit('/', 1)[-1]}"
+
+
+def cmd_file(args):
+    """Move each indexed PDF in Paper_PDFs into the folder of its primary (first) topic."""
+    moved = 0
+    for n in load_notes():
+        if not n.meta or not n.pdf or is_external(n.pdf):
+            continue
+        new = filed_key(n)
+        if new == n.pdf:
+            continue
+        src, dst = PDFS / n.pdf, PDFS / new
+        if not src.exists():
+            print(f"{n.key}: PDF not found: {n.pdf}")
+            continue
+        if dst.exists():
+            print(f"{n.key}: {new} already exists; left in place")
+            continue
+        print(f"{n.pdf} -> {new}")
+        if args.dry:
+            continue
+        dst.parent.mkdir(exist_ok=True)
+        os.rename(src, dst)
+        raw = n.path.read_bytes().decode("utf-8")
+        raw = raw.replace(f"Paper_PDFs/{n.pdf}", f"Paper_PDFs/{new}").replace(f"`{n.pdf}`", f"`{new}`")
+        n.path.write_bytes(raw.encode("utf-8"))
+        set_field(n.path, "pdf", new)
+        moved += 1
+    print(f"{'Would move' if args.dry else 'Moved'} PDFs as listed ({moved} moved).")
     return 0
 
 
@@ -583,12 +627,14 @@ def main():
     f.add_argument("--until", type=int)
     f.add_argument("--group", action="store_true", help="Shock Lab group papers only")
     f.add_argument("--long", action="store_true")
+    fl = sub.add_parser("file")
+    fl.add_argument("--dry", action="store_true")
     c = sub.add_parser("cites")
     c.add_argument("--write", action="store_true")
     c.add_argument("keys", nargs="*")
     args = ap.parse_args()
     return {"build": cmd_build, "check": cmd_check, "unindexed": cmd_unindexed,
-            "find": cmd_find, "cites": cmd_cites}[args.cmd](args)
+            "file": cmd_file, "find": cmd_find, "cites": cmd_cites}[args.cmd](args)
 
 
 if __name__ == "__main__":

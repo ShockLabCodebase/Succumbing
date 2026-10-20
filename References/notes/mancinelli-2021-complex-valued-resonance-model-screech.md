@@ -8,7 +8,7 @@ venue: "JFM 928"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "928"}
 doi: ""
 arxiv: "2012.01342"
-pdf: "Mancinelli-EtAl_2021_A-Complex-Valued-Resonance-Model-For-Axisymmetric-Screech-Tones-In-Supersonic-Jets.pdf"
+pdf: "screech/Mancinelli-EtAl_2021_A-Complex-Valued-Resonance-Model-For-Axisymmetric-Screech-Tones-In-Supersonic-Jets.pdf"
 version: "preprint"
 unverified: ["journal DOI, article number and pages not printed in this arXiv version"]
 group: false
@@ -28,7 +28,7 @@ summary: "Complex-ω guided-mode screech model, M_j 1–1.8: finite-thickness co
 - **Authors:** M. Mancinelli, V. Jaunet, P. Jordan (Institut Pprime, CNRS–Université de Poitiers–ENSMA), A. Towne (University of Michigan) (p. 1)
 - **Source:** J. Fluid Mech. 928 (2021). This file is the **arXiv version**, arXiv:2012.01342v2 [physics.flu-dyn], 29 Sep 2021, in JFM draft style (p. 1), so page numbers differ from the journal. Other notes in the library cite the v1 preprint as "Mancinelli et al. (2020)".
 - **DOI / arXiv:** arXiv:2012.01342. The journal DOI is not printed in this file.
-- **PDF:** `Mancinelli-EtAl_2021_A-Complex-Valued-Resonance-Model-For-Axisymmetric-Screech-Tones-In-Supersonic-Jets.pdf` (28 pp.). Page refs are PDF pages, which equal the printed page numbers.
+- **PDF:** `screech/Mancinelli-EtAl_2021_A-Complex-Valued-Resonance-Model-For-Axisymmetric-Screech-Tones-In-Supersonic-Jets.pdf` (28 pp.). Page refs are PDF pages, which equal the printed page numbers.
 - **Tags:** screech, A1/A2 staging, TM tone, underexpanded round jet, convergent nozzle, guided jet mode (k_p⁻), Kelvin–Helmholtz wave, resonance model, reflection coefficients, complex frequency, temporal growth of the loop, vortex sheet, finite-thickness compressible Rayleigh equation, shear-layer momentum thickness, temperature ratio, branch and saddle points, Prandtl–Pack shock spacing, wave-interaction model, near-field azimuthal microphone array, cross-bicoherence, mean-flow PIV
 
 ## Summary

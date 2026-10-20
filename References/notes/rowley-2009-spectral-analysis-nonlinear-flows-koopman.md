@@ -8,7 +8,7 @@ venue: "JFM 641, 115–127"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "641", "pages": "115--127"}
 doi: "10.1017/S0022112009992059"
 arxiv: ""
-pdf: "Rowley-EtAl_2009_Spectral-Analysis-Of-Nonlinear-Flows.pdf"
+pdf: "modal-decomposition/Rowley-EtAl_2009_Spectral-Analysis-Of-Nonlinear-Flows.pdf"
 version: "published"
 unverified: ["volume page range not printed in the held early-view PDF; from the bibliographic record"]
 group: false
@@ -27,7 +27,7 @@ summary: "Koopman theory behind DMD: snapshot companion-matrix Arnoldi gives Koo
 
 - **Authors:** C. W. Rowley (Princeton), I. Mezić (UC Santa Barbara), S. Bagheri, P. Schlatter, D. S. Henningson (Linné Flow Centre, KTH)
 - **Source:** J. Fluid Mech. 641, 115–127 (2009), doi:10.1017/S0022112009992059. The PDF is the early-view version ("page 1 of 13"), so the volume page range is from the bibliographic record, not the PDF; page refs below use the printed 1–13 numbering, which equals the PDF page number.
-- **PDF:** `References/Paper_PDFs/Rowley-EtAl_2009_Spectral-Analysis-Of-Nonlinear-Flows.pdf` (13 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Rowley-EtAl_2009_Spectral-Analysis-Of-Nonlinear-Flows.pdf` (13 pp.)
 - **Tags:** Koopman operator, Koopman modes, dynamic mode decomposition (DMD), Arnoldi / Krylov methods, companion matrix, Ritz values, Vandermonde matrix, DFT equivalence, attractor, global modes vs Koopman modes, POD comparison, jet in crossflow, DNS, self-sustained oscillation, quadratic frequency interactions, time-resolved data
 
 ## Summary

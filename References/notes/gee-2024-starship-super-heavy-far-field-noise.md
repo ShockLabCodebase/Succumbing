@@ -8,7 +8,7 @@ venue: "JASA Express Lett. 4(11), 113601"
 bib: {"journal": "JASA Express Letters", "volume": "4", "number": "11", "pages": "113601"}
 doi: "10.1121/10.0034453"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Gee-EtAl_2024_Starship-Super-Heavy-Acoustics-Far-Field-Noise-Measurements-During-Launch.pdf"
+pdf: "rocket-noise-measurements/Gee-EtAl_2024_Starship-Super-Heavy-Acoustics-Far-Field-Noise-Measurements-During-Launch.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Starship Flight 5 at 9.7–35.5 km: EA model 9 dB under on L_Z,max, 18
 - **Authors:** K. L. Gee, N. L. Pulsipher, M. S. Kellison, L. T. Mathews, M. C. Anderson, G. W. Hart (Department of Physics and Astronomy, Brigham Young University)
 - **Source:** JASA Express Letters 4(11), 113601 (2024). Received 23 Oct 2024, accepted 4 Nov 2024, published online 15 Nov 2024 (p. 2). Editor: A. Loubeau.
 - **DOI:** 10.1121/10.0034453
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Gee-EtAl_2024_Starship-Super-Heavy-Acoustics-Far-Field-Noise-Measurements-During-Launch.pdf` (9 pp.). Page refs below are PDF pages: p. 1 is a publisher cover sheet, so article page 113601-n is PDF page n+1.
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Gee-EtAl_2024_Starship-Super-Heavy-Acoustics-Far-Field-Noise-Measurements-During-Launch.pdf` (9 pp.). Page refs below are PDF pages: p. 1 is a publisher cover sheet, so article page 113601-n is PDF page n+1.
 - **Tags:** rocket noise, launch vehicle, Starship Super Heavy, Raptor 2, clustered nozzles, far-field acoustics, crackle, infrasound, sonic boom, flyback boom, booster landing burn, environmental assessment, RNOISE, SEL, A-weighting, perceived level, SLS, Falcon 9, field measurements
 
 ## Summary

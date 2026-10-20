@@ -8,7 +8,7 @@ venue: "JFM 896, A2"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "896", "pages": "A2"}
 doi: ""
 arxiv: "1909.09737"
-pdf: "Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf"
+pdf: "linear-models/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "SPOD of M_j 0.4/0.9/1.5 jet LES + global resolvent with TKE eddy visco
 
 - **Authors:** E. Pickering, G. Rigas, P. A. S. Nogueira, A. V. G. Cavalieri, O. T. Schmidt, T. Colonius (Caltech; ITA, Brazil; UC San Diego)
 - **Source:** J. Fluid Mech. (2020) 896, A2; arXiv:1909.09737v2 (17 Jul 2020). Received 18 Sep 2019, accepted 14 Apr 2020 (p. 1). The DOI isn't printed in this arXiv version.
-- **PDF:** `References/Paper_PDFs/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf` (35 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf` (35 pp.)
 - **Tags:** turbulent jet, lift-up, streaks, streamwise vortices, Kelvin–Helmholtz wavepacket, Orr mechanism, global resolvent analysis, eddy viscosity, SPOD, structural sensitivity, mechanism map, azimuthal wavenumber, LES, subsonic/transonic/supersonic
 
 ## Summary

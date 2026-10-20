@@ -8,7 +8,7 @@ venue: "Int. J. Numer. Meth. Fluids 63(1), 1–21"
 bib: {"journal": "International Journal for Numerical Methods in Fluids", "volume": "63", "number": "1", "pages": "1--21"}
 doi: "10.1002/fld.2069"
 arxiv: ""
-pdf: "Greenshields-EtAl_2010_Implementation-Of-Semi-Discrete-Non-Staggered-Central-Schemes-In-A-Colocated.pdf"
+pdf: "simulation-methods/Greenshields-EtAl_2010_Implementation-Of-Semi-Discrete-Non-Staggered-Central-Schemes-In-A-Colocated.pdf"
 version: "accepted-manuscript"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "The rhoCentralFoam paper: KT/KNP central schemes on colocated polyhedr
 
 - **Authors:** C. J. Greenshields, H. G. Weller, L. Gasparini, J. M. Reese (University of Strathclyde; OpenCFD Ltd; Fondmetal Technologies)
 - **Source:** Int. J. Numer. Meth. Fluids 63(1):1–21 (2010), DOI 10.1002/fld.2069. This copy is the peer-reviewed accepted version from Edinburgh Research Explorer (preprint layout, not the journal typesetting). It is the reference paper for OpenFOAM's `rhoCentralFoam` solver.
-- **PDF:** `References/Paper_PDFs/Greenshields-EtAl_2010_Implementation-Of-Semi-Discrete-Non-Staggered-Central-Schemes-In-A-Colocated.pdf` (35 pp.)
+- **PDF:** `References/Paper_PDFs/simulation-methods/Greenshields-EtAl_2010_Implementation-Of-Semi-Discrete-Non-Staggered-Central-Schemes-In-A-Colocated.pdf` (35 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the repository cover sheet, so the printed preprint page number = PDF page − 2. Figures are collected at the end (PDF p. 25–35).
 - **Tags:** OpenFOAM, rhoCentralFoam, central schemes, Kurganov–Tadmor (KT), Kurganov–Noelle–Petrova (KNP), central-upwind, finite volume, colocated, polyhedral mesh, TVD flux limiter, van Leer, Minmod, V-scheme, shock capturing, compressible Navier–Stokes, operator splitting, underexpanded jet, Mach disc, forward-facing step, hypersonic double cone, validation
 

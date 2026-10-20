@@ -8,7 +8,7 @@ venue: "Phys. Rev. Fluids 5, 073401"
 bib: {"journal": "Physical Review Fluids", "volume": "5", "pages": "073401"}
 doi: "10.1103/PhysRevFluids.5.073401"
 arxiv: "1911.06530"
-pdf: "RezayHaghdoost-EtAl_2020_Dynamic-Evolution-Of-A-Transient-Supersonic-Trailing-Jet-Induced-By-A-Strong.pdf"
+pdf: "simulation-methods/RezayHaghdoost-EtAl_2020_Dynamic-Evolution-Of-A-Transient-Supersonic-Trailing-Jet-Induced-By-A-Strong.pdf"
 version: "preprint"
 unverified: ["journal volume, article number and DOI not printed in the held arXiv preprint"]
 group: true
@@ -27,7 +27,7 @@ summary: "Shock-tube starting jet, M_s 1.71–2.15: TR schlieren and cut-cell Eu
 
 - **Authors:** M. Rezay Haghdoost (TU Berlin, Laboratory for Flow Instabilities and Dynamics), D. Edgington-Mitchell (Monash University), M. Nadolski and R. Klein (Freie Universität Berlin), K. Oberleithner (TU Berlin) (p. 1)
 - **Source:** Phys. Rev. Fluids 5, 073401 (2020), doi:10.1103/PhysRevFluids.5.073401. This file is the arXiv preprint (arXiv:1911.06530v1, dated 18 Nov 2019, REVTeX layout), so its page layout and possibly some wording differ from the published version.
-- **PDF:** `References/Paper_PDFs/RezayHaghdoost-EtAl_2020_Dynamic-Evolution-Of-A-Transient-Supersonic-Trailing-Jet-Induced-By-A-Strong.pdf` (21 pp.). Page refs are PDF page numbers, which equal the preprint's printed page numbers.
+- **PDF:** `References/Paper_PDFs/simulation-methods/RezayHaghdoost-EtAl_2020_Dynamic-Evolution-Of-A-Transient-Supersonic-Trailing-Jet-Induced-By-A-Strong.pdf` (21 pp.). Page refs are PDF page numbers, which equal the preprint's printed page numbers.
 - **Tags:** transient underexpanded jet, starting jet, shock tube / pulse detonation engine (PDE) exhaust, shock diffraction, vortex ring, vortex-ring-embedded shock (VRES), counter-rotating vortex rings (CRVRs), Mach reflection, triple point, second triple point, shocklet, shock leakage, time-resolved schlieren, numerical schlieren, Euler simulation, cut-cell AMR, transient oblique shock (TOS) model, Rankine–Hugoniot
 
 ## Summary

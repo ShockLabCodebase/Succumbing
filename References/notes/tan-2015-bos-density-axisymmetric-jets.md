@@ -8,7 +8,7 @@ venue: "Exp. Fluids 56, 204"
 bib: {"journal": "Experiments in Fluids", "volume": "56", "pages": "204"}
 doi: "10.1007/s00348-015-2076-6"
 arxiv: ""
-pdf: "Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf"
+pdf: "diagnostics-and-facilities/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf"
 version: "published"
 unverified: []
 group: true
@@ -28,7 +28,7 @@ summary: "Single-camera BOS → adaptive Fourier–Hankel Abel inversion → Gla
 - **Authors:** D. J. Tan, D. Edgington-Mitchell, D. Honnery (LTRAC, Monash University)
 - **Source:** Experiments in Fluids 56:204 (2015). Received 22 Jul 2015, published online 3 Nov 2015.
 - **DOI:** 10.1007/s00348-015-2076-6
-- **PDF:** `References/Paper_PDFs/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf` (11 pp.)
+- **PDF:** `References/Paper_PDFs/diagnostics-and-facilities/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf` (11 pp.)
 - **Tags:** background-oriented schlieren, BOS, Abel inversion, adaptive Fourier–Hankel (AFH), quantitative density, Gladstone–Dale, cross-correlation, wavelet-noise background, error analysis, helium jet, fuel injector, self-similarity, density half-radius
 
 ## Summary

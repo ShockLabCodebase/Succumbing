@@ -8,7 +8,7 @@ venue: "JFM 944, A39"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "944", "pages": "A39"}
 doi: "10.1017/jfm.2022.484"
 arxiv: ""
-pdf: "Thethy-EtAl_2022_Diffraction-Of-Shock-Waves-Through-A-Non-Quiescent-Medium.pdf"
+pdf: "simulation-methods/Thethy-EtAl_2022_Diffraction-Of-Shock-Waves-Through-A-Non-Quiescent-Medium.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "PDC shock diffracting into a moving jet: schlieren, PIV, Euler and mod
 
 - **Authors:** B. S. Thethy, M. Rezay Haghdoost, R. Kirby, B. Seo, M. Nadolski, C. Zenker, M. Oevermann, R. Klein, K. Oberleithner, D. Edgington-Mitchell (LTRAC, Monash; TU Berlin; FU Berlin; BTU Cottbus-Senftenberg)
 - **Source:** J. Fluid Mech. 944, A39 (2022), doi:10.1017/jfm.2022.484. Published open-access version (CC BY 4.0).
-- **PDF:** `References/Paper_PDFs/Thethy-EtAl_2022_Diffraction-Of-Shock-Waves-Through-A-Non-Quiescent-Medium.pdf` (41 pp.)
+- **PDF:** `References/Paper_PDFs/simulation-methods/Thethy-EtAl_2022_Diffraction-Of-Shock-Waves-Through-A-Non-Quiescent-Medium.pdf` (41 pp.)
 - **Page refs:** PDF page numbers, which equal the printed article page numbers (A39-n is PDF p. n).
 - **Tags:** shock diffraction, non-quiescent background flow, pulse-detonation combustor (PDC), converging nozzle, shock curvature angle (Skews), geometrical shock dynamics (GSD), CCW relation, compressible Euler simulation, cut-cell MUSCL, shock distortion, weak-shock limit, blast-wave decay, expansion characteristic, shock–vortex interaction, transient supersonic jet, high-speed schlieren, high-speed PIV, shock tracking
 

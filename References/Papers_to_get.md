@@ -1,6 +1,6 @@
 # Papers to get
 
-Papers still to obtain from the original 100-paper candidate list (Oct 2026). The other 84 are either indexed or saved in `Paper_PDFs/` waiting for `/add-paper`. Save new PDFs into `Paper_PDFs/` (rocket-noise papers into `Paper_PDFs/Rocket_Noise_Papers/`) under any name, run `/add-paper`, then remove the paper from this list.
+Papers still to obtain from the original 100-paper candidate list (Oct 2026). The other 84 are either indexed or saved in `Paper_PDFs/` waiting for `/add-paper`. Save new PDFs into `Paper_PDFs/Unprocessed/` under any name, run `/add-paper` (which files each indexed PDF under its primary topic), then remove the paper from this list.
 
 DOIs were checked against Crossref. Where Crossref returned only an earlier conference version, the DOI column says so and gives that version's DOI, which may help you find the journal paper. All of these are probably paywalled (fetch through Monash library) unless the note says otherwise.
 

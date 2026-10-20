@@ -8,7 +8,7 @@ venue: "arXiv:2206.11801"
 bib: {"note": "Data: Deep Blue Data, University of Michigan, http://deepblue.lib.umich.edu/data/collections/kk91fk98z"}
 doi: ""
 arxiv: "2206.11801"
-pdf: "Towne-EtAl_2022_A-Database-For-Reduced-Complexity-Modeling-Of-Fluid-Flows.pdf"
+pdf: "modal-decomposition/Towne-EtAl_2022_A-Database-For-Reduced-Complexity-Modeling-Of-Fluid-Flows.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Public ~8 TB database of 6 time-resolved sets (M_j 0.9 jet LES, TBL DN
 
 - **Authors:** A. Towne, S. T. M. Dawson, G. A. Brès, A. Lozano-Durán, T. Saxton-Fox, A. Parthasarathy, A. R. Jones, H. Biler, C.-A. Yeh, H. D. Patel, K. Taira
 - **Source:** arXiv:2206.11801v1 (preprint, 23 Jun 2022; AIAA-journal style). Data: Deep Blue Data, University of Michigan, http://deepblue.lib.umich.edu/data/collections/kk91fk98z (web or Globus)
-- **PDF:** `References/Paper_PDFs/Towne-EtAl_2022_A-Database-For-Reduced-Complexity-Modeling-Of-Fluid-Flows.pdf` (49 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Towne-EtAl_2022_A-Database-For-Reduced-Complexity-Modeling-Of-Fluid-Flows.pdf` (49 pp.)
 - **Tags:** open database, reduced-complexity modelling, LES, DNS, time-resolved PIV, turbulent jet (M_j = 0.9), trapped acoustic waves, turbulent boundary layer, pitching airfoil, gust encounter, NACA 0012 separated flow, SPOD, resolvent analysis, global stability, POD, DMD, conditional projection averaging, information-theoretic causality, system identification, compressed sensing, Küssner model
 
 ## Summary

@@ -11,7 +11,8 @@ How the reference library is laid out, and the metadata every note carries. `Ref
 | `data/*.csv` | Numbers collected across papers (screech tones, shock spacing, rocket-noise parameters), each row citing note + page | `/add-paper` appends; see `data/README.md` |
 | `INDEX.md` | One line per paper, **generated** from frontmatter | `python References/tools/library.py build` only |
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |
-| `Paper_PDFs/` | The PDFs (local only, git-ignored) | user / `/add-paper` renames |
+| `Paper_PDFs/<topic>/` | Indexed PDFs, one copy each, filed by the note's first (most significant) topic (local only, git-ignored) | `library.py file` |
+| `Paper_PDFs/Unprocessed/` | New PDFs waiting for `/add-paper`, under any name | user |
 | `Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
 | `notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
 | `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s References/tools`) | |
@@ -60,7 +61,7 @@ summary: "Practical SPOD–Welch guide: N_FFT bias vs variance, 50% overlap, Ham
 | `venue` | Short human-readable venue, e.g. `"JFM 945, A8"`, `"AIAA 2021-1234"`, `"arXiv:2507.19167"`, `"PhD thesis, Monash"`. |
 | `bib` | BibTeX fields not covered elsewhere: `journal`, `booktitle`, `volume`, `number`, `pages` (use `--`), `publisher`, `institution`, `school`, `note`. Only what is known. |
 | `doi`, `arxiv` | Bare DOI (`10.1017/...`) and arXiv id (`2507.19167`); `""` if none. |
-| `pdf` | The **index key**: path relative to `Paper_PDFs/` for PDFs there (e.g. `"Rocket_Noise_Papers/Gee-EtAl_2023_....pdf"`), or the absolute path with forward slashes for PDFs elsewhere. `/add-paper` uses it to tell which PDFs are already indexed. |
+| `pdf` | The **index key**: path relative to `Paper_PDFs/` for PDFs there (e.g. `"rocket-noise-measurements/Gee-EtAl_2023_....pdf"`), or the absolute path with forward slashes for PDFs elsewhere. `/add-paper` uses it to tell which PDFs are already indexed. |
 | `version` | Which version the held PDF is: `published` (publisher's version of record), `accepted-manuscript` (author's accepted or final version), `preprint` (arXiv/HAL version of a published paper, or an unpublished preprint), `conference` (a conference paper, including Proceedings of Meetings on Acoustics), `thesis`, `report`. |
 | `unverified` | Citation details (DOI, volume, pages, year) that did **not** come from the PDF, e.g. `["DOI and pages from memory"]`. `[]` when all came from the PDF. The BibTeX entry carries these as a warning. |
 | `group` | `true` if the paper is Shock Lab group work: D. Edgington-Mitchell (or D. Mitchell) is an author, or the paper is by a group member (e.g. the user's thesis). Papers from other Monash labs (e.g. Soria's LTRAC turbulence work without Edgington-Mitchell) are `false`. |
@@ -70,7 +71,7 @@ summary: "Practical SPOD–Welch guide: N_FFT bias vs variance, 50% overlap, Ham
 | `flow` | Flow configuration and regime (vocabulary below). |
 | `phenomena` | Physics studied (vocabulary below). |
 | `params` | Key conditions as strings: `M_j`, `M_d`, `NPR`, `TR` (stagnation/ambient temperature ratio), `T_j/T_∞` (static jet/ambient temperature ratio), `AR`, `s/D` (twin spacing), `z/D` or `h/D` (impingement distance), `Re`, `St`, `D_e`, vehicle names, etc. Ranges as `"2.1–3.4"`. |
-| `topics` | Topic pages (`topics/<name>.md`) this paper belongs in (vocabulary below). Every paper with a topic must be discussed on that page. |
+| `topics` | Topic pages (`topics/<name>.md`) this paper belongs in (vocabulary below), **most significant first**: the first topic decides the folder the PDF is filed in. Every paper with a topic must be discussed on that page. |
 | `related` | Other notes in this library the paper is closely tied to (builds on, contradicts, same data, same group thread). Judgement, from the note's content. |
 | `cites` | Notes in this library that the paper's reference list cites. **Filled by** `library.py cites`; do not edit by hand. |
 | `summary` | One line, at most about 160 characters: the takeaway, in the style of the old index rows. Goes into `INDEX.md`. |

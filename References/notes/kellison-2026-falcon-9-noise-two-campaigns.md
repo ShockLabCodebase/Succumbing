@@ -8,7 +8,7 @@ venue: "AIAA 2026-3443 (Aeroacoustics Conf.)"
 bib: {"booktitle": "32nd AIAA/CEAS Aeroacoustics Conference, Brussels", "publisher": "American Institute of Aeronautics and Astronautics", "note": "AIAA Paper 2026-3443"}
 doi: "10.2514/6.2026-3443"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Kellison-EtAl_2026_Falcon-9-Noise-Characterization-From-Two-Measurement-Campaigns.pdf"
+pdf: "rocket-noise-measurements/Kellison-EtAl_2026_Falcon-9-Noise-Characterization-From-Two-Measurement-Campaigns.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Two Falcon 9 launches, 28 stations at 0.2–38.6 km: IOP, launch, flyb
 - **Authors:** M. S. Kellison, K. L. Gee, G. W. Hart (Brigham Young University, Physics and Astronomy)
 - **Source:** 32nd AIAA/CEAS Aeroacoustics Conference, Brussels, 26–29 May 2026, AIAA Paper 2026-3443
 - **DOI:** 10.2514/6.2026-3443
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Kellison-EtAl_2026_Falcon-9-Noise-Characterization-From-Two-Measurement-Campaigns.pdf` (21 pp.)
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Kellison-EtAl_2026_Falcon-9-Noise-Characterization-From-Two-Measurement-Campaigns.pdf` (21 pp.)
 - **Tags:** rocket noise, launch vehicle, Falcon 9, Merlin 1D, far-field acoustics, Mach-wave radiation, convective Mach number, directivity, frequency-dependent directivity index, sound power, acoustic efficiency, Strouhal scaling, crackle, nonlinear propagation, ignition overpressure, sonic boom, landing noise, SATURN, McInerny model, Oertel convective Mach number
 
 ## Summary

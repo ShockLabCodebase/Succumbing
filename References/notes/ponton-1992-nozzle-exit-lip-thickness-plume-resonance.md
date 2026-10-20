@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 154(3), 531–549"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "154", "number": "3", "pages": "531--549"}
 doi: "10.1016/0022-460X(92)90784-U"
 arxiv: ""
-pdf: "Ponton-Seiner_1992_The-Effects-Of-Nozzle-Exit-Lip-Thickness-On-Plume-Resonance.pdf"
+pdf: "screech/Ponton-Seiner_1992_The-Effects-Of-Nozzle-Exit-Lip-Thickness-On-Plume-Resonance.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Lip thickness t/D 0.015–0.625 on an underexpanded sonic jet: thick l
 
 - **Authors:** M. K. Ponton, J. M. Seiner (NASA Langley Research Center, Hampton, Virginia)
 - **Source:** Journal of Sound and Vibration 154(3), 531–549 (1992). Received 30 January 1990, revised 12 March 1991. DOI 10.1016/0022-460X(92)90784-U (from the PII on the PDF).
-- **PDF:** `References/Paper_PDFs/Ponton-Seiner_1992_The-Effects-Of-Nozzle-Exit-Lip-Thickness-On-Plume-Resonance.pdf` (19 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Ponton-Seiner_1992_The-Effects-Of-Nozzle-Exit-Lip-Thickness-On-Plume-Resonance.pdf` (19 pp.)
 - **Page refs:** printed journal pages (531–549). PDF page = printed page − 530.
 - **Scan quality:** a 2003 Elsevier scan with an OCR layer. The prose OCRs well. Figures, both momentum-thickness equations and all axis numbers were read from page renders; numbers taken from plots are marked as such.
 - **Tags:** jet screech, nozzle lip thickness, receptivity, feedback loop, screech staging (A0, A1, A2, B, C, D modes), mode switching, toroidal vs helical modes, underexpanded sonic jet, near-field microphone, nozzle-lip surface pressure, broadband shock-associated noise (BBSAN), mixing noise, compressible momentum thickness, Pitot and static-pressure probes, initial shear layer, NASA Langley Anechoic Noise Facility

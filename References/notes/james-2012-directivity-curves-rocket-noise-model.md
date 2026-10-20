@@ -8,7 +8,7 @@ venue: "Proc. Mtgs. Acoust. 18, 040008"
 bib: {"booktitle": "Proceedings of Meetings on Acoustics (164th ASA Meeting, Kansas City)", "volume": "18", "pages": "040008", "publisher": "Acoustical Society of America", "note": "Talk 3aNS3, 2012; proceedings paper published 31 March 2014"}
 doi: "10.1121/1.4870986"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/James-EtAl_2012_Modification-Of-Directivity-Curves-For-A-Rocket-Noise-Model.pdf"
+pdf: "rocket-noise-models/James-EtAl_2012_Modification-Of-Directivity-Curves-For-A-Rocket-Noise-Model.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "RSRM directivity at 80 D_e is not far field at low frequency; re-refer
 - **Authors:** M. M. James (Blue Ridge Research and Consulting, corresponding), A. R. Salton, K. L. Gee, T. B. Neilsen, S. A. McInerny, R. J. Kenny. Affiliations other than the corresponding author are not printed; the acknowledgements name a Blue Ridge Research and Consulting / Brigham Young University team, with NASA Stennis SBIR support (p. 12).
 - **Source:** Proc. Mtgs. Acoust. 18, 040008 (2012); talk 3aNS3 at the 164th ASA Meeting, Kansas City, 22–26 Oct 2012. The proceedings paper was received 20 Jan 2014 and published 31 Mar 2014, and the page footers print "(2014)" (p. 1). The citation year 2012 is used here.
 - **DOI:** 10.1121/1.4870986
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/James-EtAl_2012_Modification-Of-Directivity-Curves-For-A-Rocket-Noise-Model.pdf` (13 pp., no cover sheet). Page references below are the paper's printed page numbers, which equal the PDF page numbers in this file.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/James-EtAl_2012_Modification-Of-Directivity-Curves-For-A-Rocket-Noise-Model.pdf` (13 pp., no cover sheet). Page references below are the paper's printed page numbers, which equal the PDF page numbers in this file.
 - **Repaired file:** the publisher's download (kept alongside as `pma.v18.i1.040008_1.online.pdf.orig`, 14 pp. with a cover sheet) has a broken final incremental update (the download stamp) that points pages 2–13 at missing content objects, so they render blank. The indexed PDF is that download truncated at its first `%%EOF` (byte 1367157), i.e. the original 13-page article; it renders correctly. Re-downloading does not help, as the publisher's file has the same fault.
 - **Tags:** rocket noise, solid rocket motor, Space Shuttle RSRM, NASA SP-8072, distributed source method (DSM-1, DSM-2), directivity index, apparent source location, geometric far field, OASPL prediction, convective Mach number, Mach-wave radiation, nonlinear propagation, launch-vehicle vibroacoustics, empirical model
 

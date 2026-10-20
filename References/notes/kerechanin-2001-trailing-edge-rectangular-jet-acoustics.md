@@ -8,7 +8,7 @@ venue: "AIAA J. 39(6), 1065–1070"
 bib: {"journal": "AIAA Journal", "volume": "39", "number": "6", "pages": "1065--1070"}
 doi: "10.2514/2.1418"
 arxiv: ""
-pdf: "Kerechanin-EtAl_2001_Effects-Of-Nozzle-Trailing-Edges-On-Acoustic-Field-Of-Supersonic-Rectangular-Jet.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Kerechanin-EtAl_2001_Effects-Of-Nozzle-Trailing-Edges-On-Acoustic-Field-Of-Supersonic-Rectangular-Jet.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "AR-3 Mach 2 rectangular jet with trailing-edge cutouts: up to 12 dB qu
 
 - **Authors:** C. W. Kerechanin II, M. Samimy, J.-H. Kim (The Ohio State University)
 - **Source:** AIAA Journal 39(6), 1065–1070, June 2001. DOI 10.2514/2.1418. Received May 2000. An earlier version is AIAA Paper 2000-0086, and the full data set is in Kerechanin's 2000 M.S. thesis (refs. 27–28).
-- **PDF:** `References/Paper_PDFs/Kerechanin-EtAl_2001_Effects-Of-Nozzle-Trailing-Edges-On-Acoustic-Field-Of-Supersonic-Rectangular-Jet.pdf` (6 pp.). Page refs below are PDF pages: p. 1 = journal p. 1065, through p. 6 = p. 1070.
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Kerechanin-EtAl_2001_Effects-Of-Nozzle-Trailing-Edges-On-Acoustic-Field-Of-Supersonic-Rectangular-Jet.pdf` (6 pp.). Page refs below are PDF pages: p. 1 = journal p. 1065, through p. 6 = p. 1070.
 - **Tags:** rectangular jet, non-axisymmetric nozzle, aspect ratio 3, Mach 2, screech, broadband shock-associated noise, mixing noise, passive control, trailing-edge cutouts, streamwise vortices, nozzle symmetry, anechoic chamber, far-field acoustics, OASPL, perceived noise level
 
 ## Summary

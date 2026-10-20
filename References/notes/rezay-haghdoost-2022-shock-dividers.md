@@ -8,7 +8,7 @@ venue: "Shock Waves 32, 195–211"
 bib: {"journal": "Shock Waves", "volume": "32", "pages": "195--211"}
 doi: "10.1007/s00193-021-01062-2"
 arxiv: ""
-pdf: "RezayHaghdoost-EtAl_2022_Numerical-And-Experimental-Evaluation-Of-Shock-Dividers.pdf"
+pdf: "simulation-methods/RezayHaghdoost-EtAl_2022_Numerical-And-Experimental-Evaluation-Of-Shock-Dividers.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "M_s 1.61 shock split by a two-branch duct (width ratio 1/2/4): 2D cut-
 
 - **Authors:** M. Rezay Haghdoost, B. S. Thethy, M. Nadolski, B. Seo, C. O. Paschereit, R. Klein, D. Edgington-Mitchell, K. Oberleithner (TU Berlin; LTRAC, Monash; FU Berlin)
 - **Source:** Shock Waves 32, 195–211 (2022), doi:10.1007/s00193-021-01062-2. Published open-access version (CC BY 4.0). Received 30 March 2020, published online 17 January 2022.
-- **PDF:** `References/Paper_PDFs/RezayHaghdoost-EtAl_2022_Numerical-And-Experimental-Evaluation-Of-Shock-Dividers.pdf` (17 pp.)
+- **PDF:** `References/Paper_PDFs/simulation-methods/RezayHaghdoost-EtAl_2022_Numerical-And-Experimental-Evaluation-Of-Shock-Dividers.pdf` (17 pp.)
 - **Page refs:** PDF page numbers. PDF p. N is printed journal page N + 194 (PDF p. 1 = p. 195).
 - **Tags:** shock tube, shock divider, bifurcated duct, shock diffraction, Mach reflection, Prandtl–Meyer expansion, geometrical shock dynamics (GSD), Euler CFD, MUSCL, cut-cell method, high-speed schlieren, LED schlieren, time-resolved total pressure probe, pulse detonation combustor (PDC), pressure gain combustion
 

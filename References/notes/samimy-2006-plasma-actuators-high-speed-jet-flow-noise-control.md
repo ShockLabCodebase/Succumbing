@@ -8,7 +8,7 @@ venue: "NASA/TM-2006-214367 (AIAA 2006-2846)"
 bib: {"institution": "NASA Glenn Research Center", "number": "NASA/TM-2006-214367", "note": "Also AIAA Paper 2006-2846, 3rd AIAA Flow Control Conference, San Francisco, 2006"}
 doi: ""
 arxiv: ""
-pdf: "Samimy-EtAl_2006_Flow-And-Noise-Control-In-High-Speed-And-High-Reynolds-Number-Jets-Using-Plasma.pdf"
+pdf: "jet-noise-mechanisms/Samimy-EtAl_2006_Flow-And-Noise-Control-In-High-Speed-And-High-Reynolds-Number-Jets-Using-Plasma.pdf"
 version: "report"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "LAFPA plasma forcing scaled from a 1 in. GDTL jet to a 7.5 in. NASA NA
 - **Authors:** M. Samimy, J. Kastner, J.-H. Kim, Y. Utkin, I. Adamovich (Gas Dynamics and Turbulence Laboratory (GDTL), The Ohio State University); C. A. Brown (NASA Glenn Research Center)
 - **Source:** NASA/TM-2006-214367, December 2006; also AIAA Paper 2006-2846, 3rd AIAA Flow Control Conference, San Francisco, 5–8 June 2006 (cover and title pages). It is a preliminary conference paper, reviewed only by NASA "technical management" (title-page verso).
 - **Related journal paper (not held):** Samimy, Kim, Kastner, Adamovich & Utkin 2007, *Active control of high-speed and high-Reynolds-number jets using plasma actuators*, J. Fluid Mech. 578 (listed in `References/Papers_to_get.md`). This TM is its precursor. The JFM paper presents the fuller GDTL study with the same localized arc filament plasma actuators; *my reading from the citations here (refs Samimy et al. 2006a, b) is that it builds on the Mach 0.9 and Mach 1.3 GDTL work, not on the NASA scale-up tests, but check that once the JFM paper is held.*
-- **PDF:** `References/Paper_PDFs/Samimy-EtAl_2006_Flow-And-Noise-Control-In-High-Speed-And-High-Reynolds-Number-Jets-Using-Plasma.pdf` (29 pp.: NASA cover, STI page, title page, acknowledgements, 22 numbered pages, SF-298 report page, blank pages)
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Samimy-EtAl_2006_Flow-And-Noise-Control-In-High-Speed-And-High-Reynolds-Number-Jets-Using-Plasma.pdf` (29 pp.: NASA cover, STI page, title page, acknowledgements, 22 numbered pages, SF-298 report page, blank pages)
 - **Page refs:** printed TM page numbers. PDF page = printed page + 4 (printed p. 1 is PDF p. 5).
 - **Tags:** active flow control, localized arc filament plasma actuators (LAFPA), jet noise, subsonic jet, high Reynolds number, jet column (preferred-mode) instability, initial shear-layer instability, azimuthal mode forcing (m = 0, ±1, 1–3, ±2, ±4, 4, 8), actuator scaling, NASA Nozzle Acoustic Test Rig (NATR), GDTL, near-field pressure, far-field acoustics, PIV, potential-core length, TKE
 

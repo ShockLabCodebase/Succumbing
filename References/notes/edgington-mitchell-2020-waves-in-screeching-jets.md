@@ -8,7 +8,7 @@ venue: "JFM 913, A7"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "913", "pages": "A7"}
 doi: "10.1017/jfm.2020.1175"
 arxiv: "2008.09756"
-pdf: "EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf"
+pdf: "screech/EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf"
 version: "preprint"
 unverified: ["DOI from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number from other notes (E-M 2022/2023), not the PDF"]
 group: true
@@ -27,7 +27,7 @@ summary: "PIV POD + k_x split of A1/A2/C screeching jets: guided mode and duct-l
 
 - **Authors:** D. Edgington-Mitchell, T. Wang, P. Nogueira, O. Schmidt, V. Jaunet, D. Duke, P. Jordan, A. Towne
 - **Source:** arXiv:2008.09756 (preprint, 22 Aug 2020; JFM style)
-- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf` (27 pp.)
+- **PDF:** `References/Paper_PDFs/screech/EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf` (27 pp.)
 - **Tags:** screech, underexpanded jet, Kelvin-Helmholtz wavepacket, guided jet mode, duct-like/trapped mode, shock-cell interaction, POD, global stability, local stability, PIV
 
 ## Summary

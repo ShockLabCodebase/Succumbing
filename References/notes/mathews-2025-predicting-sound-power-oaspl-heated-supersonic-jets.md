@@ -8,7 +8,7 @@ venue: "JASA 158(1), 371–379"
 bib: {"journal": "The Journal of the Acoustical Society of America", "volume": "158", "number": "1", "pages": "371--379"}
 doi: "10.1121/10.0037192"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Mathews-Gee_2025_Methods-For-Predicting-Overall-Sound-Power-And-Maximum-Overall-Sound-Pressure-Levels.pdf"
+pdf: "rocket-noise-models/Mathews-Gee_2025_Methods-For-Predicting-Overall-Sound-Power-And-Maximum-Overall-Sound-Pressure-Levels.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Acoustic-efficiency model OAPWL = 115.9 + 10log(ηρU_e³D_e²) → OA
 - **Authors:** Logan T. Mathews, Kent L. Gee (Brigham Young University, Dept. of Physics and Astronomy)
 - **Source:** J. Acoust. Soc. Am. 158(1), 371–379 (July 2025). Received 29 Mar 2025, published online 14 Jul 2025. Editor: Con Doolan.
 - **DOI:** 10.1121/10.0037192
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Mathews-Gee_2025_Methods-For-Predicting-Overall-Sound-Power-And-Maximum-Overall-Sound-Pressure-Levels.pdf` (10 pp.; PDF page 1 is a publisher cover sheet). Page refs below are **journal pages**; PDF page = journal page − 369.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Mathews-Gee_2025_Methods-For-Predicting-Overall-Sound-Power-And-Maximum-Overall-Sound-Pressure-Levels.pdf` (10 pp.; PDF page 1 is a publisher cover sheet). Page refs below are **journal pages**; PDF page = journal page − 369.
 - **Also:** this paper is Chapter 5 of Mathews' 2025 BYU PhD thesis; see [mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md](mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md).
 - **Tags:** rocket noise, jet noise, overall sound power level (OAPWL), OASPLmax, acoustic efficiency, Franken/McInerny/SP-8072 models, directivity index, ground reflection factor, exit vs fully-expanded parameters, Atlas V, Vulcan Centaur, F404/T-7A, weak-shock decay, empirical model
 

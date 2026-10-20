@@ -8,7 +8,7 @@ venue: "AIAA 2009-3161 (Aeroacoustics Conf.)"
 bib: {"booktitle": "15th AIAA/CEAS Aeroacoustics Conference", "publisher": "American Institute of Aeronautics and Astronautics", "note": "AIAA Paper 2009-3161"}
 doi: ""
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Kenny-EtAl_2009_Measurement-And-Characterization-Of-Space-Shuttle-Solid-Rocket-Motor-Plume-Acoustics.pdf"
+pdf: "rocket-noise-measurements/Kenny-EtAl_2009_Measurement-And-Characterization-Of-Space-Shuttle-Solid-Rocket-Motor-Plume-Acoustics.pdf"
 version: "conference"
 unverified: ["paper number and conference only on the slide footers; year inferred from PDF creation date and citations, not printed on the paper"]
 group: false
@@ -27,7 +27,7 @@ summary: "First full-scale RSRM static-firing acoustics (3 tests): positive skew
 
 - **Authors:** R. Jeremy Kenny (NASA Marshall Space Flight Center), Chris Hobbs and Ken Plotkin (Wyle Laboratories), Debbie Pilkey (ATK Space Systems)
 - **Source:** AIAA Paper 2009-3161, 2009 AIAA Aeroacoustics Conference (15th AIAA/CEAS, May 2009). The paper number and conference name are printed on the slide footers and title slide (p. 23–40), not on the paper itself. The year is supported by the PDF creation date (17 Jun 2009), the newest citations (AIAA 2009-3160/3163/3164, May 2009, p. 17) and the Ares I/Constellation context. The old filename's "2016" is wrong.
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Kenny-EtAl_2009_Measurement-And-Characterization-Of-Space-Shuttle-Solid-Rocket-Motor-Plume-Acoustics.pdf` (40 pp.). It is a composite file: an extended abstract (p. 1–5), the AIAA paper (p. 6–22; printed pages 1–17, so printed page = PDF page − 5) and the conference slides (p. 23–40). Page refs below are PDF pages.
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Kenny-EtAl_2009_Measurement-And-Characterization-Of-Space-Shuttle-Solid-Rocket-Motor-Plume-Acoustics.pdf` (40 pp.). It is a composite file: an extended abstract (p. 1–5), the AIAA paper (p. 6–22; printed pages 1–17, so printed page = PDF page − 5) and the conference slides (p. 23–40). Page refs below are PDF pages.
 - **Tags:** rocket noise, solid rocket motor, RSRM, Space Shuttle, Ares I, lift-off acoustics, NASA SP-8072, static firing, full-scale measurement, near-field array, far-field directivity, OASPL, positive skewness, nonlinear propagation, ground reflection, wind effects, nozzle vectoring, beamforming (planned)
 
 ## Summary

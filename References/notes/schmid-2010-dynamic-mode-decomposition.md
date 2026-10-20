@@ -8,7 +8,7 @@ venue: "JFM 656, 5–28"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "656", "pages": "5--28", "note": "Held copy is the HAL deposit hal-01020654 of the published pages"}
 doi: "10.1017/S0022112010001217"
 arxiv: ""
-pdf: "Schmid_2010_Dynamic-Mode-Decomposition-Of-Numerical-And-Experimental-Data.pdf"
+pdf: "modal-decomposition/Schmid_2010_Dynamic-Mode-Decomposition-Of-Numerical-And-Experimental-Data.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Founding DMD paper: SVD-projected companion-matrix fit of one linear m
 
 - **Authors:** P. J. Schmid (LadHyX, CNRS–École Polytechnique, Palaiseau)
 - **Source:** J. Fluid Mech. 656, 5–28 (2010), doi:10.1017/S0022112010001217. This file is the HAL deposit (hal-01020654, submitted 9 Jul 2014). It reproduces the published JFM typeset pages behind a one-page HAL cover sheet.
-- **PDF:** `References/Paper_PDFs/Schmid_2010_Dynamic-Mode-Decomposition-Of-Numerical-And-Experimental-Data.pdf` (25 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Schmid_2010_Dynamic-Mode-Decomposition-Of-Numerical-And-Experimental-Data.pdf` (25 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the HAL cover, so the journal's printed page n is PDF page n − 3 (journal pp. 5–28 = PDF pp. 2–25).
 - **Tags:** dynamic mode decomposition (DMD), Krylov sequence, companion matrix, Arnoldi, POD projection, Ritz values, global stability modes, Koopman, POPs / linear inverse modelling, subdomain analysis, spatial DMD, Floquet multipliers, sampling-rate rules, plane Poiseuille flow, open cavity, time-resolved PIV, membrane wake, jet between two cylinders, DMD vs POD
 

@@ -8,7 +8,7 @@ venue: "J. Spacecr. Rockets 52(2)"
 bib: {"journal": "Journal of Spacecraft and Rockets", "volume": "52", "number": "2"}
 doi: "10.2514/1.A32864"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Tsutsumi-EtAl_2015_Study-On-Acoustic-Prediction-And-Reduction-Of-Epsilon-Launch-Vehicle-At-Lift-Off.pdf"
+pdf: "rocket-noise-models/Tsutsumi-EtAl_2015_Study-On-Acoustic-Prediction-And-Reduction-Of-Epsilon-Launch-Vehicle-At-Lift-Off.pdf"
 version: "accepted-manuscript"
 unverified: ["issue number, page range and DOI from memory, not printed in the manuscript", "given names not printed in the manuscript (initials only)"]
 group: false
@@ -28,7 +28,7 @@ summary: "1/42 SRM subscale tests (same U_e, Re > 10⁵ ⇒ same SPL) plus RANS/
 - **Authors:** Seiji Tsutsumi (JAXA Engineering Digital Innovation Center, Sagamihara), Tatsuya Ishii (JAXA Institute of Aeronautical Technology, Chofu), Kyoichi Ui (JAXA Space Transportation Mission Directorate, Tsukuba), Shin-ichiro Tokudome (JAXA ISAS, Sagamihara), Kenichi Wada (Science Service Inc., Tokyo). Given names are not printed in the manuscript (initials only).
 - **Source:** Published as J. Spacecr. Rockets 52(2), 2015 (AIAA). This file is the **author manuscript** (accepted version, file name "SMAP2-JSR-rev14", footer "This document is provided by JAXA") from the JAXA repository, not the typeset article. doi:10.2514/1.A32864
   > Volume 52 comes from the download list (entry #97); the issue number, page range and DOI are from memory and not printed in the manuscript. Verify against the published article before citing.
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Tsutsumi-EtAl_2015_Study-On-Acoustic-Prediction-And-Reduction-Of-Epsilon-Launch-Vehicle-At-Lift-Off.pdf` (36 pp.; index key `Rocket_Noise_Papers/Tsutsumi-EtAl_2015_Study-On-Acoustic-Prediction-And-Reduction-Of-Epsilon-Launch-Vehicle-At-Lift-Off.pdf`). Page refs are manuscript PDF pages: text pp. 1–17, references pp. 17–20, figures and tables pp. 21–36. The PDF is copy-enabled but encrypted, so the Read tool refuses it; use `pdftotext`/`pdftoppm`. pdftotext garbles every equation and the nomenclature list; equations below were rebuilt from rendered pages 5–9.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Tsutsumi-EtAl_2015_Study-On-Acoustic-Prediction-And-Reduction-Of-Epsilon-Launch-Vehicle-At-Lift-Off.pdf` (36 pp.; index key `rocket-noise-models/Tsutsumi-EtAl_2015_Study-On-Acoustic-Prediction-And-Reduction-Of-Epsilon-Launch-Vehicle-At-Lift-Off.pdf`). Page refs are manuscript PDF pages: text pp. 1–17, references pp. 17–20, figures and tables pp. 21–36. The PDF is copy-enabled but encrypted, so the Read tool refuses it; use `pdftotext`/`pdftoppm`. pdftotext garbles every equation and the nomenclature list; equations below were rebuilt from rendered pages 5–9.
 - **Tags:** rocket noise, lift-off acoustics, Epsilon, M-V, solid rocket motor, subscale testing (1/42), similarity / scaling laws, Fresnel number, launch-pad design, flame deflector, jet impingement, wall jet, Mach wave radiation, ground reflection, front cover, fairing acoustic environment, hybrid RANS/LES, compact differencing, SLAU, FW-H, NASA SP-8072, Varnier
 
 ## Summary

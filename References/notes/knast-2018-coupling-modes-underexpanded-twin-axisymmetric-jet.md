@@ -8,7 +8,7 @@ venue: "AIAA J. 56(9), 3524–3535"
 bib: {"journal": "AIAA Journal", "volume": "56", "number": "9", "pages": "3524--3535"}
 doi: "10.2514/1.J056434"
 arxiv: ""
-pdf: "Knast-EtAl_2018_Coupling-Modes-Of-An-Underexpanded-Twin-Axisymmetric-Jet.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Knast-EtAl_2018_Coupling-Modes-Of-An-Underexpanded-Twin-Axisymmetric-Jet.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Round twin jets, S/D 3 and 6: four coupling modes (anti/symmetric flap
 
 - **Authors:** T. Knast, G. Bell, M. Wong, C. M. Leb, J. Soria, D. R. Honnery, D. Edgington-Mitchell (all Monash University, Laboratory for Turbulence Research in Aerospace and Combustion; p. 1)
 - **Source:** AIAA Journal 56(9), 3524–3535 (September 2018), doi:10.2514/1.J056434. Received 15 Jun 2017, revised 9 Mar 2018, accepted 10 Mar 2018, published online 25 Jun 2018 (p. 1). Funded by the ARC Discovery (DP150101726) and LIEF schemes (p. 11). Associate editor D. Papamoschou. The PDF is the published version as downloaded via Monash (open-access repository copy).
-- **PDF:** `References/Paper_PDFs/Knast-EtAl_2018_Coupling-Modes-Of-An-Underexpanded-Twin-Axisymmetric-Jet.pdf` (index key `Knast-EtAl_2018_Coupling-Modes-Of-An-Underexpanded-Twin-Axisymmetric-Jet.pdf`, 12 pp.)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Knast-EtAl_2018_Coupling-Modes-Of-An-Underexpanded-Twin-Axisymmetric-Jet.pdf` (index key `non-axisymmetric-and-twin-jets/Knast-EtAl_2018_Coupling-Modes-Of-An-Underexpanded-Twin-Axisymmetric-Jet.pdf`, 12 pp.)
 - **Page refs:** "p. N" is the PDF page; printed journal page = 3523 + N.
 - **Tags:** twin jets, round twin jets, screech, staging, coupling modes, nozzle spacing, flapping, helical, symmetric/antisymmetric coupling, acoustic phase, coherence, Welch cross-spectrum, schlieren, two-point correlation, x–t diagrams, Hough transform, convective velocity, standing wave, shock-cell spacing, Powell model, Gao & Li model, intermittent coupling
 

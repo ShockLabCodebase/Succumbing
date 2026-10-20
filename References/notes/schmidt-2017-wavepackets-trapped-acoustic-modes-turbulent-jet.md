@@ -8,7 +8,7 @@ venue: "JFM 825, 1153–1181"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "825", "pages": "1153--1181"}
 doi: "10.1017/jfm.2017.407"
 arxiv: ""
-pdf: "Schmidt-EtAl_2017_Wavepackets-And-Trapped-Acoustic-Modes-In-A-Turbulent-Jet-Coherent-Structure.pdf"
+pdf: "linear-models/Schmidt-EtAl_2017_Wavepackets-And-Trapped-Acoustic-Modes-In-A-Turbulent-Jet-Coherent-Structure.pdf"
 version: "accepted-manuscript"
 unverified: ["DOI and journal page range not printed in the held Caltech author copy"]
 group: false
@@ -28,7 +28,7 @@ summary: "M_j 0.9 jet LES vs mean-flow global stability: SPOD gives the KH wavep
 - **Authors:** O. T. Schmidt, A. Towne, T. Colonius, A. V. G. Cavalieri, P. Jordan, G. A. Brès (Caltech; CTR Stanford; ITA São José dos Campos; Institut Pprime, Poitiers; Cascade Technologies)
 - **Source:** J. Fluid Mech. 825, 1153–1181 (2017). This file is the Caltech Library author copy in JFM layout (received 12 May 2016, accepted 7 June 2017; p. 1). Its pages carry no journal page numbers.
 - **DOI:** 10.1017/jfm.2017.407 (not printed in this copy; verify).
-- **PDF:** `References/Paper_PDFs/Schmidt-EtAl_2017_Wavepackets-And-Trapped-Acoustic-Modes-In-A-Turbulent-Jet-Coherent-Structure.pdf` (29 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Schmidt-EtAl_2017_Wavepackets-And-Trapped-Acoustic-Modes-In-A-Turbulent-Jet-Coherent-Structure.pdf` (29 pp.)
 - **Page refs:** PDF page numbers (p. 1 is the title page).
 - **Tags:** subsonic jet (M_j 0.9), trapped acoustic waves, duct modes, potential-core resonance, Kelvin–Helmholtz wavepacket, global linear stability of the mean flow, adjoint modes, direct–adjoint product (wavemaker), local spatio-temporal stability, saddle points / zero group velocity, frequency–wavenumber diagram, SPOD, cross-spectral density, LES (Charles), Bruit et Vent near-field microphones, Reynolds-number sensitivity
 

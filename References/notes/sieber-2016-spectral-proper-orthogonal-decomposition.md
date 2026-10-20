@@ -8,7 +8,7 @@ venue: "JFM 792, 798–828"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "792", "pages": "798--828"}
 doi: "10.1017/jfm.2016.103"
 arxiv: "1508.04642"
-pdf: "Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf"
+pdf: "modal-decomposition/Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf"
 version: "preprint"
 unverified: ["JFM volume, pages and DOI not in this arXiv v1 PDF", "published author order (Sieber, Paschereit, Oberleithner) differs from the arXiv PDF (Sieber, Oberleithner, Paschereit)"]
 group: false
@@ -27,7 +27,7 @@ summary: "Time-domain SPOD (not Towne/Schmidt): diagonal filter N_f on the snaps
 
 - **Authors:** M. Sieber, K. Oberleithner, C. O. Paschereit (TU Berlin, Institut für Strömungsmechanik und Technische Akustik, Hermann-Föttinger-Institut). Author order is as printed on this arXiv PDF; the published JFM article lists Sieber, Paschereit & Oberleithner.
 - **Source:** J. Fluid Mech. 792, 798–828 (2016), doi:10.1017/jfm.2016.103. This file is the arXiv preprint arXiv:1508.04642v1 [physics.flu-dyn] (19 Aug 2015, "under consideration for publication in J. Fluid Mech."), so wording, page numbers and possibly details differ from the published version.
-- **PDF:** `References/Paper_PDFs/Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf` (index key `Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf`, 28 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf` (index key `modal-decomposition/Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf`, 28 pp.)
 - **Tags:** SPOD (time-domain / "Sieber" SPOD), filtered snapshot correlation matrix, POD–DFT continuum, Toeplitz/circulant limit, mode pairing, harmonic correlation, DMD of temporal coefficients, analytic coefficient, instantaneous phase and frequency, intermittency, frequency jitter, noise rejection, data completion, spatial (multi-time-delay) SPOD for sensor arrays, time-resolved PIV, swirl combustor, Gurney flap wake, fluidic oscillator
 
 > **Not the same method as Towne/Schmidt SPOD.** This is the *time-domain filtered POD*: snapshot POD with a low-pass filter applied along the diagonals of the correlation matrix. It returns real modes with smooth time coefficients b_i(t). The frequency-domain (Welch/cross-spectral) SPOD of Towne, Schmidt & Colonius (2018), used in [schmidt-2018](schmidt-2018-spectral-analysis-jet-turbulence.md), [yeung-2024](yeung-2024-adaptive-spod-broadband-tonal.md) and the group's codes, returns one set of complex modes per frequency. The two share a name and both span POD↔Fourier, but are different decompositions.

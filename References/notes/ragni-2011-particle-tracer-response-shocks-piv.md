@@ -8,7 +8,7 @@ venue: "Exp. Fluids 50, 53–64"
 bib: {"journal": "Experiments in Fluids", "volume": "50", "pages": "53--64"}
 doi: "10.1007/s00348-010-0892-2"
 arxiv: ""
-pdf: "Ragni-EtAl_2011_Particle-Tracer-Response-Across-Shocks-Measured-By-PIV.pdf"
+pdf: "diagnostics-and-facilities/Ragni-EtAl_2011_Particle-Tracer-Response-Across-Shocks-Measured-By-PIV.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Mach 2 oblique-shock test: exponential slip gives τ_p; unbiased if wi
 
 - **Authors:** D. Ragni, F. Schrijer, B. W. van Oudheusden, F. Scarano (Faculty of Aerospace Engineering, Delft University of Technology)
 - **Source:** Exp. Fluids 50:53–64 (2011), doi:10.1007/s00348-010-0892-2. Open access (published online 20 May 2010).
-- **PDF:** `References/Paper_PDFs/Ragni-EtAl_2011_Particle-Tracer-Response-Across-Shocks-Measured-By-PIV.pdf` (12 pp.)
+- **PDF:** `References/Paper_PDFs/diagnostics-and-facilities/Ragni-EtAl_2011_Particle-Tracer-Response-Across-Shocks-Measured-By-PIV.pdf` (12 pp.)
 - **Page refs:** printed journal page numbers (53–64). PDF page = printed page − 52.
 - **Tags:** PIV in supersonic flow, seeding, particle slip, particle relaxation time τ_p and length ξ_p, oblique shock wave (OSW) test, spatial and temporal resolution bias, ensemble correlation, PTV, aero-optical aberration, TiO₂, SiO₂, DEHS, dehydration, particle filter
 

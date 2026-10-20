@@ -8,7 +8,7 @@ venue: "JFM 983, A17"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "983", "pages": "A17"}
 doi: "10.1017/jfm.2024.129"
 arxiv: ""
-pdf: "Stavropoulos-EtAl_2024_On-The-Behaviour-Of-The-Upstream-Travelling-Waves-In-Merging-Twin-Jet-Systems.pdf"
+pdf: "linear-models/Stavropoulos-EtAl_2024_On-The-Behaviour-Of-The-Upstream-Travelling-Waves-In-Merging-Twin-Jet-Systems.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Planar vortex-sheet and round Floquet LSA (M_j 1.16): merging twin jet
 
 - **Authors:** M. N. Stavropoulos, E. Martini, D. M. Edgington-Mitchell, J. Weightman, P. Jordan, P. A. S. Nogueira (LTRAC, Monash; Institut Pprime, Poitiers)
 - **Source:** J. Fluid Mech. 983, A17 (2024), doi:10.1017/jfm.2024.129. Published open-access (CC BY) version. Received 26 June 2023, accepted 30 January 2024.
-- **PDF:** `References/Paper_PDFs/Stavropoulos-EtAl_2024_On-The-Behaviour-Of-The-Upstream-Travelling-Waves-In-Merging-Twin-Jet-Systems.pdf` (18 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Stavropoulos-EtAl_2024_On-The-Behaviour-Of-The-Upstream-Travelling-Waves-In-Merging-Twin-Jet-Systems.pdf` (18 pp.)
 - **Page refs:** PDF page numbers, which equal the printed article pages (983 A17-n is PDF p. n).
 - **Tags:** twin jets, guided jet mode (k_p⁻), upstream-travelling wave, existence region, branch point (cut-on), saddle point (cut-off), jet separation, symmetry (SS/SA), planar vortex sheet, finite-thickness spatial LSA, Floquet ansatz, elliptical jet, equivalent geometry, screech, theory only (no experiments)
 

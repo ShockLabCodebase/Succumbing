@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 110(2), 309–321"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "110", "number": "2", "pages": "309--321"}
 doi: "10.1016/S0022-460X(86)80212-7"
 arxiv: ""
-pdf: "Tam-EtAl_1986_Proposed-Relationship-Between-Broadband-Shock-Associated-Noise-And-Screech-Tones.pdf"
+pdf: "screech/Tam-EtAl_1986_Proposed-Relationship-Between-Broadband-Shock-Associated-Noise-And-Screech-Tones.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Screech as the θ → 180° limit of BBSAN: BBSAN peaks at shock Fouri
 
 - **Authors:** C. K. W. Tam (Department of Mathematics, Florida State University), J. M. Seiner, J. C. Yu (NASA Langley Research Center)
 - **Source:** J. Sound Vib. 110(2), 309–321 (1986), doi:10.1016/S0022-460X(86)80212-7. Received 28 Feb 1985, revised Nov 1985.
-- **PDF:** `References/Paper_PDFs/Tam-EtAl_1986_Proposed-Relationship-Between-Broadband-Shock-Associated-Noise-And-Screech-Tones.pdf` (13 pp.). A scanned publisher PDF with an OCR layer. The prose OCRs well; eqs. (2.4), (3.4), (3.5) and Figs. 1–7 are garbled in the text layer, so they were transcribed from 110 dpi page renders.
+- **PDF:** `References/Paper_PDFs/screech/Tam-EtAl_1986_Proposed-Relationship-Between-Broadband-Shock-Associated-Noise-And-Screech-Tones.pdf` (13 pp.). A scanned publisher PDF with an OCR layer. The prose OCRs well; eqs. (2.4), (3.4), (3.5) and Figs. 1–7 are garbled in the text layer, so they were transcribed from 110 dpi page renders.
 - **Page refs:** PDF page numbers. The journal's printed page n is PDF page n − 308 (PDF p. 1 = printed p. 309).
 - **Tags:** screech, broadband shock-associated noise (BBSAN), Tam & Tanna interaction model, instability waves / large-scale structures, shock-cell wavenumber, multiple BBSAN peaks, spectral half-width, directivity, weakest-link theory, screech frequency formula, D_j scaling, helical mode, hot jets, Norum & Seiner data, locally parallel stability theory
 

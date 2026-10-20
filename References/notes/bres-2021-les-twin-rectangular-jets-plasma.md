@@ -8,7 +8,7 @@ venue: "AIAA 2021-2149 (Aviation)"
 bib: {"booktitle": "AIAA Aviation 2021 Forum"}
 doi: "10.2514/6.2021-2149"
 arxiv: ""
-pdf: "Bres-EtAl_2021_Towards-Large-Eddy-Simulations-Of-Supersonic-Jets-From-Twin-Rectangular-Nozzle.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Bres-EtAl_2021_Towards-Large-Eddy-Simulations-Of-Supersonic-Jets-From-Twin-Rectangular-Nozzle.pdf"
 version: "conference"
 unverified: ["PDF prints no paper number or venue: AIAA 2021-2149, DOI and Aviation 2021 Forum inferred, not verified"]
 group: false
@@ -27,7 +27,7 @@ summary: "Blind wall-modelled LES (Charles, 65M cells) of OSU AR-2 twin jets, M_
 
 - **Authors:** G. A. Brès (Cascade Technologies), B. C. Y. Yeung, O. T. Schmidt (UC San Diego), A. Esfahani, N. Webb, M. Samimy (Ohio State University), T. Colonius (Caltech)
 - **Source:** AIAA conference paper, 2021 (AIAA Aviation 2021 Forum by date; the PDF prints no paper number or venue. Likely AIAA 2021-2149, DOI 10.2514/6.2021-2149, but this is unverified). Funded by ONR (N00014-19-1-2207 for OSU experiments, N00014-20-1-2311 for the LES) (p. 16).
-- **PDF:** `References/Paper_PDFs/Bres-EtAl_2021_Towards-Large-Eddy-Simulations-Of-Supersonic-Jets-From-Twin-Rectangular-Nozzle.pdf` (17 pp.)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Bres-EtAl_2021_Towards-Large-Eddy-Simulations-Of-Supersonic-Jets-From-Twin-Rectangular-Nozzle.pdf` (17 pp.)
 - **Tags:** LES, wall-modelled LES, twin rectangular jets, aspect ratio 2, supersonic jet (M_j = 1.5), screech, jet noise, FW-H, far-field and near-field acoustics, non-axisymmetric nozzle, plasma actuation (LAFPA), heat-source model, Voronoi mesh, Charles solver, grid resolution study, OSU
 
 ## Summary

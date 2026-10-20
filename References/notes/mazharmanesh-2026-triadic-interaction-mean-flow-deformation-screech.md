@@ -8,7 +8,7 @@ venue: "JFM 1039, A24"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1039", "pages": "A24"}
 doi: "10.1017/jfm.2026.11796"
 arxiv: ""
-pdf: "Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf"
+pdf: "screech/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "150 kHz schlieren of A1/A2 staging (NPR 2.20) and an AR 2 elliptical j
 
 - **Authors:** S. Mazharmanesh, P. A. S. Nogueira, J. Weightman, B. Yeung, O. T. Schmidt, D. Edgington-Mitchell (Mazharmanesh, Nogueira, Weightman, Edgington-Mitchell: Monash University; Yeung, Schmidt: UC San Diego; p. 1)
 - **Source:** J. Fluid Mech. 1039, A24 (2026), doi:10.1017/jfm.2026.11796. Published open-access version (CC BY 4.0). Received 18 Dec 2025, revised 10 Jun 2026, accepted 11 Jun 2026 (p. 1). Funded by ARC DP220103873 and ONR N00014-23-1-2457 (p. 24).
-- **PDF:** `References/Paper_PDFs/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf` (index key `Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf`, 29 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf` (index key `screech/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf`, 29 pp.)
 - **Page refs:** PDF page n is printed page 1039 A24-n.
 - **Supplementary:** Jupyter notebook and video of the reconstructed short-time mean for Fig. 7 (JFM Notebooks; p. 12, 24).
 - **Tags:** screech, A1/A2 staging, multimodal screech, intermittency, mutual exclusivity, mean-flow distortion, short-time mean, difference self-interaction, triadic interaction, guided jet mode, shock-cell wavenumber, suboptimal shock peak, elliptical jet AR 2, flapping and quasi-helical modes, high-speed schlieren, SPOD, SPOD frequency–time analysis, JPDF of SPOD coefficients, bispectral mode decomposition (BMD), bicoherence BMD, interaction map, two-way coupling

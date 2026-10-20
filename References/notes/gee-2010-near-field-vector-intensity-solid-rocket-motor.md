@@ -8,7 +8,7 @@ venue: "JASA 128(2), EL69–EL74"
 bib: {"journal": "Journal of the Acoustical Society of America", "volume": "128", "number": "2", "pages": "EL69--EL74"}
 doi: "10.1121/1.3436491"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Gee-EtAl_2010_Near-Field-Vector-Intensity-Measurements-Of-A-Small-Solid-Rocket-Motor.pdf"
+pdf: "rocket-noise-measurements/Gee-EtAl_2010_Near-Field-Vector-Intensity-Measurements-Of-A-Small-Solid-Rocket-Motor.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "Tetrahedral intensity probes within ~6D of a 12.7 cm solid rocket moto
 - **Authors:** K. L. Gee, J. H. Giraud, J. D. Blotter, S. D. Sommerfeldt (Brigham Young University)
 - **Source:** J. Acoust. Soc. Am. 128(2), EL69–EL74 (2010), JASA Express Letters; received 18 Feb 2010, accepted 3 May 2010, published online 29 July 2010 (p. 2).
 - **DOI:** 10.1121/1.3436491
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Gee-EtAl_2010_Near-Field-Vector-Intensity-Measurements-Of-A-Small-Solid-Rocket-Motor.pdf` (7 pp.; p. 1 is a publisher cover sheet, so PDF p. 2–7 = journal pages EL69–EL74. Page refs below are PDF pages.)
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Gee-EtAl_2010_Near-Field-Vector-Intensity-Measurements-Of-A-Small-Solid-Rocket-Motor.pdf` (7 pp.; p. 1 is a publisher cover sheet, so PDF p. 2–7 = journal pages EL69–EL74. Page refs below are PDF pages.)
 - **Tags:** rocket noise, solid rocket motor, vector acoustic intensity, tetrahedral intensity probe, near field, source localisation, directivity, refraction, two-source (fine-scale / large-scale) jet noise model, OASPL, static firing
 
 ## Summary

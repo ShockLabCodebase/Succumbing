@@ -8,7 +8,7 @@ venue: "JFM 964, A2"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "964", "pages": "A2"}
 doi: "10.1017/jfm.2023.275"
 arxiv: ""
-pdf: "Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -28,7 +28,7 @@ summary: "TR schlieren of A1/A2 twin round jets (s/D 2–6, NPR 2.02–2.41): SI
 - **Authors:** Tsz Y. M. Wong, M. N. Stavropoulos, J. R. Beekman, A. Towne, P. A. S. Nogueira, J. Weightman, D. Edgington-Mitchell (Monash, LTRAC; University of Michigan)
 - **Source:** J. Fluid Mech. 964, A2 (2023). Received 20 Oct 2022, revised 21 Mar 2023, accepted 26 Mar 2023. Open access (CC BY 4.0), published version.
 - **DOI:** 10.1017/jfm.2023.275
-- **PDF:** `References/Paper_PDFs/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf` (43 pp.; local only, not in Git)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf` (43 pp.; local only, not in Git)
 - **Page refs:** PDF page n is printed page 964 A2-n.
 - **Not to be confused with** [wong-2021-wavepacket-modelling-bbsan](wong-2021-wavepacket-modelling-bbsan.md), which is by Marcus Wong.
 - **Tags:** twin jets, round jets, screech, A1/A2 staging, coupling symmetry (SS/SA), intermittency, symmetry switching, uncoupling, illusory coupling, beating, time-resolved schlieren, snapshot POD, SPOD, continuous wavelet transform, complex Morlet, symmetry imposition, half-domain POD, conditional sampling, facility sensitivity

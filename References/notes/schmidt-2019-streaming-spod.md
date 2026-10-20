@@ -8,7 +8,7 @@ venue: "Comput. Phys. Commun. 237, 98–109"
 bib: {"journal": "Computer Physics Communications", "volume": "237", "pages": "98--109"}
 doi: "10.1016/j.cpc.2018.11.009"
 arxiv: "1711.04199"
-pdf: "Schmidt-Towne_2019_An-Efficient-Streaming-Algorithm-For-Spectral-Proper-Orthogonal-Decomposition.pdf"
+pdf: "modal-decomposition/Schmidt-Towne_2019_An-Efficient-Streaming-Algorithm-For-Spectral-Proper-Orthogonal-Decomposition.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Streaming SPOD: running DFT sums + rank-1 incremental SVD of each CSD,
 
 - **Authors:** O. T. Schmidt (University of California San Diego), A. Towne (University of Michigan)
 - **Source:** Comput. Phys. Commun. 237, 98–109 (2019), doi:10.1016/j.cpc.2018.11.009. This file is the **arXiv preprint** (arXiv:1711.04199v3 [physics.flu-dyn], 11 Jan 2019, Elsevier preprint layout), so page numbers and possibly wording differ from the published version.
-- **PDF:** `References/Paper_PDFs/Schmidt-Towne_2019_An-Efficient-Streaming-Algorithm-For-Spectral-Proper-Orthogonal-Decomposition.pdf` (30 pp.). Page refs are PDF pages, which equal the preprint's printed page numbers.
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Schmidt-Towne_2019_An-Efficient-Streaming-Algorithm-For-Spectral-Proper-Orthogonal-Decomposition.pdf` (30 pp.). Page refs are PDF pages, which equal the preprint's printed page numbers.
 - **Tags:** SPOD, streaming / incremental / online algorithm, Welch's method, cross-spectral density (CSD), incremental SVD (Brand 2006), rank-1 update, modified Gram–Schmidt, eigenbasis truncation, memory cost, convergence metrics, turbulent jet LES (M 0.9, Charles), optical flow, stepped spillway, measurement noise, time-resolved data, TR-PIV
 
 ## Summary

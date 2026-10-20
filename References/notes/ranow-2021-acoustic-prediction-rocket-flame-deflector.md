@@ -8,7 +8,7 @@ venue: "MSc thesis, KTH"
 bib: {"school": "KTH Royal Institute of Technology, Stockholm", "note": "TRITA-ITM-EX 2021:417"}
 doi: ""
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Ranow_2021_Acoustic-Prediction-Methods-For-Rocket-Flame-Deflector-Design.pdf"
+pdf: "rocket-noise-models/Ranow_2021_Acoustic-Prediction-Methods-For-Rocket-Flame-Deflector-Design.pdf"
 version: "thesis"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "SP-8072 DSM plus Sutherland efficiency, Varnier core cut at impingemen
 
 - **Authors:** Fredrik Ranow (KTH Royal Institute of Technology). Supervisors Jens Fridh (KTH) and Simon Westerlund (SSC); examiner Björn Laumert. Host company: Swedish Space Corporation (SSC), for the planned expansion of the Esrange launch facilities (p. 2, title page).
 - **Source:** MSc thesis (Examensarbete inom maskinteknik, avancerad nivå, 30 hp), KTH School of Industrial Engineering and Management, Stockholm. Dated 22 June 2021; report number TRITA-ITM-EX 2021:417. Swedish title: *Prediktionsmodeller för utformning av flamdeflektorer*. No DOI.
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Ranow_2021_Acoustic-Prediction-Methods-For-Rocket-Flame-Deflector-Design.pdf` (99 pp.). Front matter is PDF p. 1–14 (abstracts, contents, lists). **Printed page = PDF page − 14** (checked: printed p. 2 is PDF p. 16 and printed p. 47 is PDF p. 61; the batch brief's "−15" is off by one). Main text is printed p. 1–50, references p. 51–53, p. 54 blank, Appendix A (MATLAB code) p. 55–84 (PDF 69–98), PDF p. 99 is the back cover. Page refs below are **printed** pages.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Ranow_2021_Acoustic-Prediction-Methods-For-Rocket-Flame-Deflector-Design.pdf` (99 pp.). Front matter is PDF p. 1–14 (abstracts, contents, lists). **Printed page = PDF page − 14** (checked: printed p. 2 is PDF p. 16 and printed p. 47 is PDF p. 61; the batch brief's "−15" is off by one). Main text is printed p. 1–50, references p. 51–53, p. 54 blank, Appendix A (MATLAB code) p. 55–84 (PDF 69–98), PDF p. 99 is the back cover. Page refs below are **printed** pages.
 - **Tags:** rocket launch noise, lift-off acoustics, flame deflector, flame duct, launch pad, NASA SP-8072, distributed source method (DSM), source-allocating method (SAM), acoustic efficiency, supersonic core length, fully expanded jet diameter, core termination at impingement, directivity (Plotkin–Sutherland, Smith fit), acoustic reflectivity, ray tracing, cylinder diffraction, Ares I / Ares I-X, Merlin 1D, semi-empirical prediction, MATLAB
 
 ## Summary

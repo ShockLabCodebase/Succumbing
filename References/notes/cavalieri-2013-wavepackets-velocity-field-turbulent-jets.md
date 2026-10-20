@@ -8,7 +8,7 @@ venue: "JFM 730, 559–592"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "730", "pages": "559--592"}
 doi: "10.1017/jfm.2013.346"
 arxiv: ""
-pdf: "Cavalieri-EtAl_2013_Wavepackets-In-The-Velocity-Field-Of-Turbulent-Jets.pdf"
+pdf: "linear-models/Cavalieri-EtAl_2013_Wavepackets-In-The-Velocity-Field-Of-Turbulent-Jets.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "M 0.4–0.6 jets, TR cross-plane PIV + mic ring: energy peaks at mδ�
 
 - **Authors:** A. V. G. Cavalieri (Institut PPrime, Poitiers; ITA, São José dos Campos), D. Rodríguez (Caltech; Universidad Politécnica de Madrid), P. Jordan (Institut PPrime), T. Colonius (Caltech), Y. Gervais (Institut PPrime)
 - **Source:** J. Fluid Mech. 730, 559–592 (2013), doi:10.1017/jfm.2013.346. Received 30 Nov 2012, published online 2 Aug 2013. This file is the published JFM version.
-- **PDF:** `References/Paper_PDFs/Cavalieri-EtAl_2013_Wavepackets-In-The-Velocity-Field-Of-Turbulent-Jets.pdf` (34 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Cavalieri-EtAl_2013_Wavepackets-In-The-Velocity-Field-Of-Turbulent-Jets.pdf` (34 pp.)
 - **Page refs:** printed journal page numbers (559–592). PDF page = journal page − 558.
 - **Tags:** subsonic turbulent jet, wavepackets, Kelvin–Helmholtz instability, linear parabolised stability equations (PSE), mean-flow linearisation, azimuthal Fourier decomposition, time-resolved stereo PIV (cross-stream planes), hot-wire, microphone ring, flow–acoustic correlation, axisymmetric superdirectivity, radial compactness, frequency-domain (spectral) POD in r, aliasing correction, model–data inner-product metric, wavepacket jitter
 

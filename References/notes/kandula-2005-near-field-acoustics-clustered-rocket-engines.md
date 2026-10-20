@@ -8,7 +8,7 @@ venue: "AIAA 2005-3091 (Aeroacoustics Conf.)"
 bib: {"booktitle": "11th AIAA/CEAS Aeroacoustics Conference, Monterey, CA", "publisher": "American Institute of Aeronautics and Astronautics", "note": "AIAA 2005-3091; NASA NTRS 20120000605"}
 doi: ""
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Kandula-EtAl_2005_Near-Field-Acoustical-Characterization-Of-Clustered-Rocket-Engines.pdf"
+pdf: "rocket-noise-models/Kandula-EtAl_2005_Near-Field-Acoustical-Characterization-Of-Clustered-Rocket-Engines.pdf"
 version: "conference"
 unverified: ["PDF prints no year, venue or paper number: year from the NTRS record, AIAA 2005-3091 and conference from ref. [13] of Kandula 2008 (JSV 309)"]
 group: false
@@ -28,7 +28,7 @@ summary: "Two-zone clustered-nozzle model (Eldred): isolated jets + merged equiv
 - **Authors:** Max Kandula (Sierra Lobo, Inc. (USTDC), Kennedy Space Center), Bruce T. Vu (NASA John F. Kennedy Space Center; Lead, Launch Systems Testbed), Halie K. Lindsay (North Carolina A&T State University, graduate student)
 - **Source:** AIAA conference paper, NASA Technical Reports Server record 20120000605; dated 2005 from the NTRS record and the original filename. **The PDF itself prints no year, venue, paper number or DOI** (each page footer reads only "American Institute of Aeronautics and Astronautics"); the newest reference cited is from 2003 (p. 6–7). Funded partly by AFRL Wright-Patterson AFB (p. 6).
   - Related journal paper, now in the library as [kandula-2008](kandula-2008-near-field-acoustics-clustered-rocket-engines.md): Kandula, *Near-field acoustics of clustered rocket engines*, J. Sound Vib. 309 (2008), doi:10.1016/j.jsv.2007.06.078. It is cited as "Kandula 2008a" in the Lubert et al. (2022) review. This 2005 paper is short (6 pages of text) and is probably the conference precursor rather than a longer version.
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Kandula-EtAl_2005_Near-Field-Acoustical-Characterization-Of-Clustered-Rocket-Engines.pdf` (12 pp.; scanned with an OCR text layer, so the extracted equations are garbled; equations below were read from page images). Text p. 1–6, references p. 6–7, figures p. 8–12.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Kandula-EtAl_2005_Near-Field-Acoustical-Characterization-Of-Clustered-Rocket-Engines.pdf` (12 pp.; scanned with an OCR text layer, so the extracted equations are garbled; equations below were read from page images). Text p. 1–6, references p. 6–7, figures p. 8–12.
 - **Tags:** rocket noise, launch vehicle, clustered nozzles, multiple jets, jet merging, two-zone model, Eldred 1963 (ASD-TDR-62-578), NASA SP-8072, equivalent nozzle diameter, double-peaked spectrum, near-field acoustic loads, ground reflection, reflection coefficient, vehicle surface reflection, RAPT (Rocket Acoustic Prediction Tool), semi-empirical prediction, ELV, one-third octave spectra
 
 ## Summary

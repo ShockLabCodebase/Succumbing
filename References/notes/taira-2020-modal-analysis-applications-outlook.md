@@ -8,7 +8,7 @@ venue: "AIAA J. 58(3), 998–1022"
 bib: {"journal": "AIAA Journal", "volume": "58", "number": "3", "pages": "998--1022"}
 doi: "10.2514/1.J058462"
 arxiv: "1903.05750"
-pdf: "Taira-EtAl_2020_Modal-Analysis-Of-Fluid-Flows-Applications-And-Outlook.pdf"
+pdf: "modal-decomposition/Taira-EtAl_2020_Modal-Analysis-Of-Fluid-Flows-Applications-And-Outlook.pdf"
 version: "preprint"
 unverified: ["issue, pages and DOI from the bibliographic record, not this arXiv PDF"]
 group: false
@@ -27,7 +27,7 @@ summary: "Sequel to the 2017 overview on interpreting results: POD = DMD on limi
 
 - **Authors:** K. Taira (UCLA; Florida State), M. S. Hemati (Minnesota), S. L. Brunton (Washington), Y. Sun (Minnesota), K. Duraisamy (Michigan), S. Bagheri (KTH), S. T. M. Dawson (Illinois Inst. Tech.; Caltech), C.-A. Yeh (UCLA; Florida State)
 - **Source:** published in AIAA J. 58(3), 998–1022 (2020), doi:10.2514/1.J058462 (issue, pages and DOI are from the bibliographic record, not the PDF; check them). This file is the **arXiv version**, arXiv:1903.05750v2 [physics.flu-dyn] (26 Jul 2019), in AIAA preprint style, so its pagination differs from the journal.
-- **PDF:** `References/Paper_PDFs/Taira-EtAl_2020_Modal-Analysis-Of-Fluid-Flows-Applications-And-Outlook.pdf` (37 pp.; page refs are the printed "n of 37", which equal PDF pages)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Taira-EtAl_2020_Modal-Analysis-Of-Fluid-Flows-Applications-And-Outlook.pdf` (37 pp.; page refs are the printed "n of 37", which equal PDF pages)
 - **Tags:** review, applications, POD, DMD, POD–DMD equivalence on limit cycles, global linear stability, Floquet analysis, pseudospectra, transient growth, resolvent analysis, discounted (finite-time) resolvent, balanced POD, Galerkin ROM, shift mode, SINDy, cylinder wake, channel flow, Tollmien–Schlichting waves, airfoil separation control, tip vortex, open cavity, Rossiter modes, flow control, machine learning, randomized algorithms, closure, hyper-reduction
 
 ## Summary

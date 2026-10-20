@@ -8,7 +8,7 @@ venue: "Phys. Fluids 29, 020706"
 bib: {"journal": "Physics of Fluids", "volume": "29", "pages": "020706"}
 doi: "10.1063/1.4974518"
 arxiv: ""
-pdf: "Berry-EtAl_2017_Application-Of-POD-On-Time-Resolved-Schlieren-In-Supersonic-Multi-Stream-Rectangular.pdf"
+pdf: "modal-decomposition/Berry-EtAl_2017_Application-Of-POD-On-Time-Resolved-Schlieren-In-Supersonic-Multi-Stream-Rectangular.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Snapshot POD of 50–100 kHz schlieren of a three-stream SERN jet (M_j
 
 - **Authors:** M. G. Berry, A. S. Magstadt, M. N. Glauser (Department of Mechanical and Aerospace Engineering, Syracuse University; p. 1)
 - **Source:** Physics of Fluids 29, 020706 (2017), doi:10.1063/1.4974518. Received 18 Jul 2016, accepted 16 Dec 2016, published online 13 Feb 2017 (p. 1). Funded by AFOSR grant FA9550-15-1-0435 (p. 9).
-- **PDF:** `References/Paper_PDFs/Berry-EtAl_2017_Application-Of-POD-On-Time-Resolved-Schlieren-In-Supersonic-Multi-Stream-Rectangular.pdf` (index key `Berry-EtAl_2017_Application-Of-POD-On-Time-Resolved-Schlieren-In-Supersonic-Multi-Stream-Rectangular.pdf`, 11 PDF pages = AIP cover page + 10 printed pages)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Berry-EtAl_2017_Application-Of-POD-On-Time-Resolved-Schlieren-In-Supersonic-Multi-Stream-Rectangular.pdf` (index key `modal-decomposition/Berry-EtAl_2017_Application-Of-POD-On-Time-Resolved-Schlieren-In-Supersonic-Multi-Stream-Rectangular.pdf`, 11 PDF pages = AIP cover page + 10 printed pages)
 - **Page refs:** printed page 020706-N, written "p. N" below, is PDF page N + 1.
 - **Tags:** rectangular supersonic jet, three-stream engine, single expansion ramp nozzle (SERN), aft deck, sonic wall jet, splitter-plate shedding, Kelvin–Helmholtz, time-resolved schlieren, pulsed LED, snapshot POD, POD of scalar (schlieren intensity) fields, POD mode pairs, POD as a filter for light-intensity drift, time-resolved POD coefficients by projection, aliasing, flapping mode, corner vortices, anechoic chamber
 

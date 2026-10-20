@@ -8,7 +8,7 @@ venue: "JASA 150(1), 620–633"
 bib: {"journal": "The Journal of the Acoustical Society of America", "volume": "150", "number": "1", "pages": "620--633"}
 doi: "10.1121/10.0005658"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Mathews-EtAl_2021_Characterization-Of-Falcon-9-Launch-Vehicle-Noise-From-Far-Field-Measurements.pdf"
+pdf: "rocket-noise-measurements/Mathews-EtAl_2021_Characterization-Of-Falcon-9-Launch-Vehicle-Noise-From-Far-Field-Measurements.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Three VSFB Falcon 9 launches at 7–14 km: peak directivity ≈64° ma
 
 - **Authors:** L. T. Mathews, K. L. Gee, G. W. Hart (Brigham Young University, Dept. of Physics and Astronomy)
 - **Source:** J. Acoust. Soc. Am. 150(1), 620–633 (July 2021), Special Collection on Supersonic Jet Noise. Received 29 Mar 2021, published online 27 Jul 2021. DOI: 10.1121/10.0005658
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Mathews-EtAl_2021_Characterization-Of-Falcon-9-Launch-Vehicle-Noise-From-Far-Field-Measurements.pdf` (15 pp.; PDF p. 1 is a publisher cover sheet). Page refs below are **journal page numbers** (620–633); PDF page = journal page − 618.
+- **PDF:** `References/Paper_PDFs/rocket-noise-measurements/Mathews-EtAl_2021_Characterization-Of-Falcon-9-Launch-Vehicle-Noise-From-Far-Field-Measurements.pdf` (15 pp.; PDF p. 1 is a publisher cover sheet). Page refs below are **journal page numbers** (620–633); PDF page = journal page − 618.
 - **Tags:** rocket noise, launch vehicle, Falcon 9, Merlin 1D, far-field acoustics, OASPL directivity, Mach wave radiation, Oertel convective Mach number, forward-flight effect, sound power, radiation efficiency, peak-frequency scaling, Strouhal / Helmholtz number, NASA SP-8072, terrain shielding, thin-barrier diffraction, acoustic shocks, nonlinear propagation
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "JASA 151(2), 752–791"
 bib: {"journal": "The Journal of the Acoustical Society of America", "volume": "151", "number": "2", "pages": "752--791"}
 doi: "10.1121/10.0009160"
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Lubert-EtAl_2022_Supersonic-Jet-Noise-From-Launch-Vehicles-50-Years-Since-NASA-SP-8072.pdf"
+pdf: "rocket-noise-models/Lubert-EtAl_2022_Supersonic-Jet-Noise-From-Launch-Vehicles-50-Years-Since-NASA-SP-8072.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Rocket-noise review 50 years after SP-8072: η≈0.5%, source 17–22 
 
 - **Authors:** Caroline P. Lubert (James Madison Univ.; partly at Univ. of Plymouth), Kent L. Gee (Brigham Young Univ.), Seiji Tsutsumi (JAXA)
 - **Source:** J. Acoust. Soc. Am. 151(2), 752–791 (2022), review article in the JASA Special Issue on Supersonic Jet Noise. Received 26 Mar 2021, published online 4 Feb 2022. doi:10.1121/10.0009160
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Lubert-EtAl_2022_Supersonic-Jet-Noise-From-Launch-Vehicles-50-Years-Since-NASA-SP-8072.pdf` (41 pp.). PDF p. 1 is a publisher cover sheet. **Page refs below are PDF pages; journal page = PDF page + 750** (e.g. p. 14 = JASA p. 764). PDF pp. 35–41 are the reference list.
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Lubert-EtAl_2022_Supersonic-Jet-Noise-From-Launch-Vehicles-50-Years-Since-NASA-SP-8072.pdf` (41 pp.). PDF p. 1 is a publisher cover sheet. **Page refs below are PDF pages; journal page = PDF page + 750** (e.g. p. 14 = JASA p. 764). PDF pp. 35–41 are the reference list.
 - **Tags:** rocket noise, launch vehicle acoustics, NASA SP-8072, DSM-1/DSM-2, acoustic radiation efficiency, sound power, Mach wave radiation, convective Mach number, Oertel convective Mach number, peak directivity, source location, near-field vector intensity, acoustical holography, beamforming, nonlinear propagation, acoustic shocks, similarity spectra (LSS/FSS), clustered nozzles, plume shielding, impinging supersonic jet, flame deflector, flame duct, launch platform, water injection, subscale testing, LES/CAA of launch pads, reduced-order models, wavepackets, SPOD, resolvent, review
 
 ## Summary

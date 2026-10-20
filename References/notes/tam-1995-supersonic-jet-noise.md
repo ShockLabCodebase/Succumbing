@@ -8,7 +8,7 @@ venue: "Annu. Rev. Fluid Mech. 27, 17–43"
 bib: {"journal": "Annual Review of Fluid Mechanics", "volume": "27", "pages": "17--43"}
 doi: "10.1146/annurev.fl.27.010195.000313"
 arxiv: ""
-pdf: "Tam_1995_Supersonic-Jet-Noise.pdf"
+pdf: "jet-noise-mechanisms/Tam_1995_Supersonic-Jet-Noise.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Review: mixing noise as Mach waves from instability waves (45–60°),
 
 - **Authors:** Christopher K. W. Tam (Department of Mathematics, Florida State University, Tallahassee)
 - **Source:** Annu. Rev. Fluid Mech. 27, 17–43 (1995), doi:10.1146/annurev.fl.27.010195.000313. Publisher PDF from annualreviews.org (a scan with a ClearScan text layer). There is **no cover page**: PDF p. 1 is printed p. 17. A download watermark runs down the left margin of every page.
-- **PDF:** `References/Paper_PDFs/Tam_1995_Supersonic-Jet-Noise.pdf` (27 pp.)
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Tam_1995_Supersonic-Jet-Noise.pdf` (27 pp.)
 - **Page refs:** printed journal page numbers. PDF page = printed page − 16. The text layer garbles every displayed equation and most figure labels, so eqs. 2–4, 5–6 and 7–13 below were transcribed from 110 dpi page renders.
 - **Tags:** supersonic jet noise, turbulent mixing noise, large turbulence structures, instability waves, stochastic instability-wave model, Mach wave radiation, wavy-wall analogy, fine-scale turbulence, broadband shock-associated noise (BBSAN), shock-cell structure, vortex-sheet (Prandtl–Pack) shock-cell model, waveguide modes, screech, feedback loop, screech frequency formula, mode switching, toroidal/helical/flapping modes, jet temperature effects, review
 

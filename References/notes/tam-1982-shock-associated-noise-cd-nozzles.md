@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 81(3), 337–358"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "81", "number": "3", "pages": "337--358"}
 doi: "10.1016/0022-460X(82)90244-9"
 arxiv: ""
-pdf: "Tam-Tanna_1982_Shock-Associated-Noise-Of-Supersonic-Jets-From-Convergent-Divergent-Nozzles.pdf"
+pdf: "jet-noise-mechanisms/Tam-Tanna_1982_Shock-Associated-Noise-Of-Supersonic-Jets-From-Convergent-Divergent-Nozzles.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Origin of the BBSAN mechanism: instability waves × Pack shock cells g
 
 - **Authors:** C. K. W. Tam, H. K. Tanna (Lockheed-Georgia Company, Marietta, Georgia; Tam's permanent address is the Department of Mathematics, Florida State University) (p. 1)
 - **Source:** J. Sound Vib. 81(3), 337–358 (1982), doi:10.1016/0022-460X(82)90244-9. Received 29 Sept 1980, revised 30 July 1981 (p. 1). Lockheed internal R&D funding (p. 21).
-- **PDF:** `References/Paper_PDFs/Tam-Tanna_1982_Shock-Associated-Noise-Of-Supersonic-Jets-From-Convergent-Divergent-Nozzles.pdf` (22 pp.). A scanned publisher PDF with an OCR layer. The prose OCRs well; the displayed equations and all figures are garbled, so equations and figure readings below come from 110 dpi page renders.
+- **PDF:** `References/Paper_PDFs/jet-noise-mechanisms/Tam-Tanna_1982_Shock-Associated-Noise-Of-Supersonic-Jets-From-Convergent-Divergent-Nozzles.pdf` (22 pp.). A scanned publisher PDF with an OCR layer. The prose OCRs well; the displayed equations and all figures are garbled, so equations and figure readings below come from 110 dpi page renders.
 - **Page refs:** PDF page numbers. The journal's printed page n is PDF page n − 336 (PDF p. 1 is printed p. 337).
 - **Tags:** broadband shock-associated noise (BBSAN), shock-cell noise, Tam & Tanna mechanism, Mach wave radiation, wavy-wall analogy, instability-wave / large-scale structure model, Pack shock-cell solution, shock-cell wavenumbers, peak-frequency formula, (M_j² − M_d²)² intensity scaling, C-D nozzle off-design, overexpanded and underexpanded jets, heated jets, Harper-Bourne & Fisher, far-field 1/3-octave acoustics
 

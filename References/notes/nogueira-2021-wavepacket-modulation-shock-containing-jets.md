@@ -8,7 +8,7 @@ venue: "Phys. Rev. Fluids 7, 074608"
 bib: {"journal": "Physical Review Fluids", "volume": "7", "pages": "074608"}
 doi: "10.1103/PhysRevFluids.7.074608"
 arxiv: "2110.04914"
-pdf: "Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf"
+pdf: "linear-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf"
 version: "preprint"
 unverified: ["DOI and year from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF; volume and article number read from the DOI"]
 group: true
@@ -27,7 +27,7 @@ summary: "Parabolised Floquet equations on a zero-frequency-PSE shock-cell base 
 
 - **Authors:** P. A. S. Nogueira, H. W. A. Self, A. Towne, D. Edgington-Mitchell (Monash LTRAC; Towne at University of Michigan)
 - **Source:** arXiv:2110.04914v1 (preprint, 10 Oct 2021; JFM style). Funded by ARC DP190102220 (p. 24).
-- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf` (30 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf` (30 pp.)
 - **Tags:** shock-containing jet, wavepacket modulation, Kelvin-Helmholtz wavepacket, parabolised Floquet equations (PFE), PSE, zero-frequency PSE shock cells, spatially periodic LSA, Floquet ansatz, SPOD, LES, broadband shock-associated noise (BBSAN), overexpanded jet, underexpanded jet
 
 ## Summary

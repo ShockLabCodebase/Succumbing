@@ -8,7 +8,7 @@ venue: "Prog. Aerosp. Sci. 34, 45–106"
 bib: {"journal": "Progress in Aerospace Sciences", "volume": "34", "pages": "45--106"}
 doi: "10.1016/S0376-0421(98)00002-5"
 arxiv: ""
-pdf: "Raman_1998_Advances-In-Understanding-Supersonic-Jet-Screech-Review-And-Perspective.pdf"
+pdf: "screech/Raman_1998_Advances-In-Understanding-Supersonic-Jet-Screech-Review-And-Perspective.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Pre-2000 screech review: frequency predictable (Powell, Tam, Massey) b
 
 - **Authors:** Ganesh Raman (NYMA, Inc., Experimental Fluid Dynamics Section, NASA Lewis Research Center Group, Brook Park, Ohio; p. 45)
 - **Source:** Progress in Aerospace Sciences 34, 45–106 (1998), doi:10.1016/S0376-0421(98)00002-5 (PII S0376-0421(98)00002-5).
-- **PDF:** `References/Paper_PDFs/Raman_1998_Advances-In-Understanding-Supersonic-Jet-Screech-Review-And-Perspective.pdf` (62 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Raman_1998_Advances-In-Understanding-Supersonic-Jet-Screech-Review-And-Perspective.pdf` (62 pp.)
 - **Page refs:** the journal's printed page numbers (45–106). PDF page = printed page − 44 (PDF p. 1 is printed p. 45). The text layer extracts well with `pdftotext`; equations are garbled in the text layer and were read from page renders.
 - **Tags:** screech, review, Powell feedback loop, phase and amplitude criteria, limit cycle, receptivity, staging (A1, A2, B, C, D), symmetric vs antisymmetric rectangular modes, shock modulation of instability waves, multiple tones, mode switching, wavelets, bicoherence, shock-cell spacing (vortex sheet, multiple scales, waveguide modes), screech frequency formulas (Powell, Tam, Massey, flight, hot jets), unsteady shock motion, broadband shock-associated noise (BBSAN), acoustic near field, standing waves, feedback shock, source location, nozzle lip thickness, reflectors, bevelled/complex rectangular nozzles, twin-jet coupling, mixing enhancement, induced screech, Euler simulation (FCT), modular screech model
 

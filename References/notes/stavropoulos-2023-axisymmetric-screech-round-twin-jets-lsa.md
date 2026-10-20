@@ -8,7 +8,7 @@ venue: "JFM 965, A11"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "965", "pages": "A11"}
 doi: "10.1017/jfm.2023.398"
 arxiv: ""
-pdf: "Stavropoulos-EtAl_2023_The-Axisymmetric-Screech-Tones-Of-Round-Twin-Jets-Examined-Via-Linear-Stability.pdf"
+pdf: "screech/Stavropoulos-EtAl_2023_The-Axisymmetric-Screech-Tones-Of-Round-Twin-Jets-Examined-Via-Linear-Stability.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Twin-jet vortex-sheet (Bessel addition) and Floquet tanh LSA of A1/A2 
 
 - **Authors:** M. N. Stavropoulos, M. Mancinelli, P. Jordan, V. Jaunet, J. Weightman, D. M. Edgington-Mitchell, P. A. S. Nogueira (Monash LTRAC; Roma Tre; Institut Pprime, Poitiers)
 - **Source:** J. Fluid Mech. 965, A11 (2023), doi:10.1017/jfm.2023.398. Published open-access (CC BY) version. Builds on the 28th AIAA/CEAS Aeroacoustics 2022 conference paper 2022-3071 by the same group.
-- **PDF:** `References/Paper_PDFs/Stavropoulos-EtAl_2023_The-Axisymmetric-Screech-Tones-Of-Round-Twin-Jets-Examined-Via-Linear-Stability.pdf` (29 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Stavropoulos-EtAl_2023_The-Axisymmetric-Screech-Tones-Of-Round-Twin-Jets-Examined-Via-Linear-Stability.pdf` (29 pp.)
 - **Page refs:** PDF page n = printed page 965 A11-n.
 - **Tags:** twin jets, round converging nozzles, A1/A2 axisymmetric screech, guided jet mode (k_p⁻), Kelvin–Helmholtz, spatial linear stability, twin-jet vortex sheet, Bessel addition theorem, finite-thickness (tanh) model, Floquet ansatz in azimuth, SS/SA symmetries, branch and saddle points, existence region, resonance phase criterion, screech-frequency prediction, far-field acoustics, PIV mean-flow fit
 

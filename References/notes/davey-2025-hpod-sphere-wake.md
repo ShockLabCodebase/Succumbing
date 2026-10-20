@@ -8,7 +8,7 @@ venue: "arXiv:2507.19167"
 bib: {}
 doi: ""
 arxiv: "2507.19167"
-pdf: "Davey-EtAl_2025_Studying-Propagating-Turbulent-Structures-In-The-Near-Wake-Of-A-Sphere-Using.pdf"
+pdf: "time-frequency-methods/Davey-EtAl_2025_Studying-Propagating-Turbulent-Structures-In-The-Near-Wake-Of-A-Sphere-Using.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Streamwise (space-only) Hilbert POD of 1 Hz PIV of a sphere wake (Re_D
 
 - **Authors:** S. Davey, C. Atkinson, J. Soria (Laboratory for Turbulence Research in Aerospace and Combustion (LTRAC), Monash University)
 - **Source:** arXiv:2507.19167v1 [physics.flu-dyn] (preprint, 25 Jul 2025)
-- **PDF:** `References/Paper_PDFs/Davey-EtAl_2025_Studying-Propagating-Turbulent-Structures-In-The-Near-Wake-Of-A-Sphere-Using.pdf` (37 pp.)
+- **PDF:** `References/Paper_PDFs/time-frequency-methods/Davey-EtAl_2025_Studying-Propagating-Turbulent-Structures-In-The-Near-Wake-Of-A-Sphere-Using.pdf` (37 pp.)
 - **Tags:** Hilbert POD (HPOD), spatial (streamwise) Hilbert transform, analytic signal, POD mode pairing, phase averaging, non-time-resolved PIV, sphere wake, bluff-body wake, flapping, pulsation, water tunnel
 
 ## Summary

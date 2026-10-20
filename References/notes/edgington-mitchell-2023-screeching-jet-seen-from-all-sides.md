@@ -8,7 +8,7 @@ venue: "JFM 954, F1"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "954", "pages": "F1", "note": "Focus on Fluids commentary on Léon et al. 2022, JFM 947, A36"}
 doi: "10.1017/jfm.2022.964"
 arxiv: ""
-pdf: "EdgingtonMitchell_2023_The-Screeching-Jet-Seen-From-All-Sides.pdf"
+pdf: "screech/EdgingtonMitchell_2023_The-Screeching-Jet-Seen-From-All-Sides.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Commentary on Léon et al. 2022: six-view holographic interferometry g
 
 - **Authors:** D. Edgington-Mitchell (Monash University)
 - **Source:** J. Fluid Mech. 954, F1 (2023; published online December 2022), doi:10.1017/jfm.2022.964. This is a *Focus on Fluids* commentary on Léon, Donjat, Olchewsky, Desse, Nicolas & Champagnat (2022), *Three-dimensional density field of a screeching under-expanded jet in helical mode using multi-view digital holographic interferometry*, J. Fluid Mech. 947, A36. Open access.
-- **PDF:** `References/Paper_PDFs/EdgingtonMitchell_2023_The-Screeching-Jet-Seen-From-All-Sides.pdf` (index key `EdgingtonMitchell_2023_The-Screeching-Jet-Seen-From-All-Sides.pdf`, 6 pp.)
+- **PDF:** `References/Paper_PDFs/screech/EdgingtonMitchell_2023_The-Screeching-Jet-Seen-From-All-Sides.pdf` (index key `screech/EdgingtonMitchell_2023_The-Screeching-Jet-Seen-From-All-Sides.pdf`, 6 pp.)
 - **Page refs:** the journal's printed pages are F1-1 to F1-6, which match PDF pages 1–6.
 - **Tags:** screech, C mode, helical m = ±1, highly underexpanded jet, Mach disk, tomographic digital holographic interferometry (TDHI), density measurement, azimuthal Fourier decomposition, Radon transform, POD, helicity switching, intermittency, tomographic BOS, schlieren, experiments vs LES
 

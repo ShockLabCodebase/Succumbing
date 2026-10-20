@@ -8,7 +8,7 @@ venue: "JFM 658, 336–382"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "658", "pages": "336--382"}
 doi: "10.1017/S002211201000176X"
 arxiv: "1001.3100"
-pdf: "McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf"
+pdf: "linear-models/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf"
 version: "preprint"
 unverified: ["published title, volume, pages and DOI not in this arXiv preprint (titled 'A critical layer model for turbulent pipe flow')"]
 group: false
@@ -27,7 +27,7 @@ summary: "Origin of mean-flow resolvent analysis: nonlinearity as forcing about 
 
 - **Authors:** B. J. McKeon (GALCIT, California Institute of Technology), A. S. Sharma (Department of Aeronautics, Imperial College London)
 - **Source:** published as *A critical-layer framework for turbulent pipe flow*, J. Fluid Mech. 658, 336–382 (2010), doi:10.1017/S002211201000176X. This file is the arXiv preprint, arXiv:1001.3100v1 [physics.flu-dyn] (18 Jan 2010), titled *A critical layer model for turbulent pipe flow* (JFM LaTeX style, "under consideration"). Wording, section numbers and figure numbers may differ from the published version.
-- **PDF:** `References/Paper_PDFs/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf` (44 pp.). Page refs are PDF pages, which equal the printed preprint page numbers.
+- **PDF:** `References/Paper_PDFs/linear-models/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf` (44 pp.). Page refs are PDF pages, which equal the printed preprint page numbers.
 - **Tags:** resolvent analysis (origin), input–output analysis, nonlinear term as forcing, singular value decomposition (Schmidt decomposition), optimal forcing and response, mean-flow linear operator, critical layer, wall layer, Orr–Sommerfeld scaling, non-normality, pseudospectra, very-large-scale motions (VLSMs), near-wall cycle, inner/outer scaling, amplitude modulation, Taylor's hypothesis, turbulent pipe flow, Princeton Superpipe
 
 ## Summary

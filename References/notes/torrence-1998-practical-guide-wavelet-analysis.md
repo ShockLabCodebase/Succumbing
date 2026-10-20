@@ -8,7 +8,7 @@ venue: "Bull. Am. Meteorol. Soc. 79(1), 61–78"
 bib: {"journal": "Bulletin of the American Meteorological Society", "volume": "79", "number": "1", "pages": "61--78"}
 doi: "10.1175/1520-0477(1998)079<0061:APGTWA>2.0.CO;2"
 arxiv: ""
-pdf: "Torrence-Compo_1998_A-Practical-Guide-To-Wavelet-Analysis.pdf"
+pdf: "time-frequency-methods/Torrence-Compo_1998_A-Practical-Guide-To-Wavelet-Analysis.pdf"
 version: "published"
 unverified: ["DOI not printed in the PDF; taken from the standard citation"]
 group: false
@@ -27,7 +27,7 @@ summary: "Standard CWT how-to: Morlet/Paul/DOG via FFT, scale→period (Morlet �
 
 - **Authors:** C. Torrence, G. P. Compo (Program in Atmospheric and Oceanic Sciences, University of Colorado, Boulder)
 - **Source:** Bulletin of the American Meteorological Society 79(1), 61–78 (January 1998). DOI 10.1175/1520-0477(1998)079<0061:APGTWA>2.0.CO;2 (the DOI is not printed in the PDF; it is given from the standard citation).
-- **PDF:** `References/Paper_PDFs/Torrence-Compo_1998_A-Practical-Guide-To-Wavelet-Analysis.pdf` (18 pp.)
+- **PDF:** `References/Paper_PDFs/time-frequency-methods/Torrence-Compo_1998_A-Practical-Guide-To-Wavelet-Analysis.pdf` (18 pp.)
 - **Page refs:** journal page numbers 61–78. PDF page = journal page − 60.
 - **Tags:** continuous wavelet transform (CWT), Morlet, Paul, DOG / Mexican hat, windowed Fourier transform, scalogram, wavelet power spectrum, cone of influence (COI), scale-to-Fourier-period conversion, reconstruction, red noise (AR(1)), chi-square significance, confidence intervals, global wavelet spectrum, scale-averaged wavelet power, degrees of freedom, wavelet filtering, power Hovmöller, cross-wavelet spectrum, wavelet coherence and phase, nonstationarity, intermittency, time-resolved data
 

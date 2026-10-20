@@ -8,7 +8,7 @@ venue: "JFM (2021), arXiv version held"
 bib: {"journal": "Journal of Fluid Mechanics"}
 doi: "10.1017/jfm.2021.887"
 arxiv: "2106.12690"
-pdf: "Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf"
+pdf: "screech/Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf"
 version: "preprint"
 unverified: ["DOI from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 930, A10, 2022: unchecked)"]
 group: true
@@ -27,7 +27,7 @@ summary: "Floquet LSA of a sinusoidal shock-cell jet: a KH–guided-mode saddle 
 
 - **Authors:** P. A. S. Nogueira, P. Jordan, V. Jaunet, A. V. G. Cavalieri, A. Towne, D. Edgington-Mitchell
 - **Source:** arXiv:2106.12690v1 [physics.flu-dyn] (preprint, 23 Jun 2021; JFM style). Funded by ARC Discovery Project DP190102220 (p. 25).
-- **PDF:** `References/Paper_PDFs/Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf` (28 pp.)
+- **PDF:** `References/Paper_PDFs/screech/Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf` (28 pp.)
 - **Tags:** screech, absolute instability, spatially periodic linear stability (SP-LSA), Floquet analysis, Briggs–Bers saddle point, Kelvin-Helmholtz wavepacket, guided jet mode, shock-cell modulation, oscillator vs amplifier, POD comparison, underexpanded jet
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "arXiv:2501.04255"
 bib: {"note": "arXiv:2501.04255v1 [physics.flu-dyn]"}
 doi: "10.48550/arXiv.2501.04255"
 arxiv: "2501.04255"
-pdf: "Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf"
+pdf: "linear-models/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Discounted biglobal resolvent of NACA0012 DNS/LES mean flows, Re 1000â
 
 - **Authors:** L. V. Rolandi, L. Smith, M. Amitay, V. Theofilis, K. Taira (UCLA; Rensselaer Polytechnic Institute; Technion)
 - **Source:** arXiv:2501.04255v1 [physics.flu-dyn] (preprint, 8 Jan 2025; DOI 10.48550/arXiv.2501.04255)
-- **PDF:** `References/Paper_PDFs/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf` (26 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf` (26 pp.)
 - **Tags:** resolvent analysis, discounted resolvent, biglobal (mean-flow) linear analysis, eigenvalue analysis, separated flow, NACA0012 airfoil, shear-layer (KH) amplifier, wake / vortex shedding, resolvent wavemaker, spanwise wavenumber, Reynolds-number scaling, DNS, wall-resolved LES, Chu norm, CharLES
 
 ## Summary

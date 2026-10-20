@@ -8,7 +8,7 @@ venue: "PhD thesis, Brigham Young University"
 bib: {"school": "Brigham Young University", "note": "BYU ScholarsArchive ETD 11034, https://scholarsarchive.byu.edu/etd/11034"}
 doi: ""
 arxiv: ""
-pdf: "Rocket_Noise_Papers/Mathews_2025_Acoustic-Characterization-And-Modeling-Of-Heated-Supersonic-Tactical-Jet.pdf"
+pdf: "rocket-noise-models/Mathews_2025_Acoustic-Characterization-And-Modeling-Of-Heated-Supersonic-Tactical-Jet.pdf"
 version: "thesis"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "Installed F404 at afterburner: holography + OLVR show quasi-independen
 
 - **Author:** Logan Troy Mathews. PhD, Department of Physics and Astronomy, Brigham Young University, 2025 (posted 2025-08-20; BYU ScholarsArchive ETD 11034, https://scholarsarchive.byu.edu/etd/11034). Chair: Kent L. Gee.
 - **Source:** PhD thesis (multiple-paper format; Ch. 2–5 are reprints of published papers, Ch. 6 is a stand-alone paper with no venue given).
-- **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Mathews_2025_Acoustic-Characterization-And-Modeling-Of-Heated-Supersonic-Tactical-Jet.pdf` (130 pp.)
+- **PDF:** `References/Paper_PDFs/rocket-noise-models/Mathews_2025_Acoustic-Characterization-And-Modeling-Of-Heated-Supersonic-Tactical-Jet.pdf` (130 pp.)
 - **Page refs:** printed page numbers throughout. **PDF page = printed page + 11** (printed p. 1 = PDF p. 12). Front matter is cited by roman numeral.
 - **Funding:** ONR N00014-21-1-2069 (Code 351 Jet Noise Reduction); T-7A measurements by the Advanced Pilot Training System Program Office and AFRL; DoD ORISE appointment (pp. 22, 40). Ch. 3 thanks Daniel Edgington-Mitchell (Monash) for discussion (p. 40).
 - **Code:** SATURN (MATLAB) at https://github.com/logmath/saturn (p. 109).

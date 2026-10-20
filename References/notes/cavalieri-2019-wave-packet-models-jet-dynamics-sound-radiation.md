@@ -8,7 +8,7 @@ venue: "Appl. Mech. Rev. 71(2), 020802"
 bib: {"journal": "Applied Mechanics Reviews", "volume": "71", "number": "2", "pages": "020802"}
 doi: "10.1115/1.4042736"
 arxiv: ""
-pdf: "Cavalieri-EtAl_2019_Wave-Packet-Models-For-Jet-Dynamics-And-Sound-Radiation.pdf"
+pdf: "linear-models/Cavalieri-EtAl_2019_Wave-Packet-Models-For-Jet-Dynamics-And-Sound-Radiation.pdf"
 version: "accepted-manuscript"
 unverified: ["volume, issue, article number and DOI from memory, not printed in this accepted manuscript"]
 group: false
@@ -27,7 +27,7 @@ summary: "Tutorial review: wavepacket line sources (superdirectivity, Mach waves
 
 - **Authors:** A. V. G. Cavalieri (Instituto Tecnológico de Aeronáutica, São José dos Campos, Brazil), P. Jordan (Institut Pprime, CNRS / Université de Poitiers / ENSMA), L. Lesshafft (LadHyX, CNRS / École polytechnique)
 - **Source:** Applied Mechanics Reviews 71(2), 020802 (2019), doi:10.1115/1.4042736 (journal details from memory, not printed in this file; verify). This file is the **accepted manuscript** (ASME manuscript ID AMR-18-1137, LaTeX, created 1 Feb 2019), so layout and page numbers differ from the journal version. Page refs below are PDF pages.
-- **PDF:** `References/Paper_PDFs/Cavalieri-EtAl_2019_Wave-Packet-Models-For-Jet-Dynamics-And-Sound-Radiation.pdf` (33 pp.: text p. 1–29, references p. 29–33)
+- **PDF:** `References/Paper_PDFs/linear-models/Cavalieri-EtAl_2019_Wave-Packet-Models-For-Jet-Dynamics-And-Sound-Radiation.pdf` (33 pp.: text p. 1–29, references p. 29–33)
 - **Code:** Matlab/Octave scripts example1.m–example14.m reproduce nearly every figure (ftp://161.24.15.247/Andre/AMR_Wavepackets and the journal's supplementary material; p. 1).
 - **Tags:** review/tutorial, wavepackets, Lighthill acoustic analogy, line-source model, acoustic matching, superdirectivity, Mach wave radiation, convective Mach number, jitter, coherence decay, two-point CSD, SPOD, low-rank reconstruction, resolvent analysis, input–output analysis, stochastic forcing, white-noise hypothesis, gain separation, non-normality, linearised Ginzburg–Landau equation, local/absolute/global stability, Chebyshev collocation, coupled flow–acoustic resolvent, subsonic vs supersonic jets, installed jets, trapped acoustic waves
 

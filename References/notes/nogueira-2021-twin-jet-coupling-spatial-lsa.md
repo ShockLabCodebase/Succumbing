@@ -8,7 +8,7 @@ venue: "JFM 918, A38"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "918", "pages": "A38"}
 doi: "10.1017/jfm.2021.366"
 arxiv: ""
-pdf: "Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf"
 version: "accepted-manuscript"
 unverified: ["volume, article number and online date from the Cambridge Core listing, not printed in the PDF", "DOI from References/group_papers.md (ORCID/OpenAlex)"]
 group: true
@@ -27,7 +27,7 @@ summary: "Twin round jets, NPR 5, s/D 3: symmetry-imposed POD + k_x split give K
 
 - **Authors:** P. A. S. Nogueira, D. M. Edgington-Mitchell (Monash, LTRAC)
 - **Source:** J. Fluid Mech. 918, A38 (2021; published online 14 May 2021, per Cambridge Core listing). The PDF is the JFM-style author manuscript with no date header. Its revisions are marked in red (p. 5, 9, 16), and its PDF creation date is 12 Mar 2021. The newest reference it cites is from 2021 (Nogueira & Cavalieri 2021, JFM 907).
-- **PDF:** `References/Paper_PDFs/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf` (25 pp.)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf` (25 pp.)
 - **Tags:** twin jets, jet coupling, screech, underexpanded jet, NPR 5, guided jet mode, Kelvin-Helmholtz wavepacket, spatial linear stability, Floquet ansatz, symmetry-imposed POD, POD phase portrait, shear-thickness mode, wavenumber spectrum, PIV
 
 ## Summary

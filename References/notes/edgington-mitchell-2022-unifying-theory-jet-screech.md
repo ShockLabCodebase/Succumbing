@@ -8,7 +8,7 @@ venue: "JFM 945, A8"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "945", "pages": "A8"}
 doi: "10.1017/jfm.2022.549"
 arxiv: ""
-pdf: "EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf"
+pdf: "screech/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf"
 version: "published"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Staging unified: guided jet mode closes at k_kh − k_s1 (A1, B) or su
 
 - **Authors:** D. Edgington-Mitchell, X. Li, N. Liu, F. He, T. Y. Wong, J. Mackenzie, P. Nogueira (Edgington-Mitchell, Wong, Mackenzie, Nogueira: Monash University; Li, Liu, He: Tsinghua University, Beijing; p. 1)
 - **Source:** J. Fluid Mech. 945, A8 (2022), doi:10.1017/jfm.2022.549. Open access (CC BY 4.0). Received 12 Nov 2021, accepted 3 Jun 2022.
-- **PDF:** `References/Paper_PDFs/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf` (24 pp.). Page refs below are the journal pages A8-n, which equal the PDF page numbers.
+- **PDF:** `References/Paper_PDFs/screech/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf` (24 pp.). Page refs below are the journal pages A8-n, which equal the PDF page numbers.
 - **Tags:** screech, mode staging (A1/A2/B/C), multimodal screech, guided jet mode (G-JM), triadic interaction, Tam & Tanna (1982), shock-cell wavenumber spectrum, suboptimal shock peaks, standing waves, duct-like mode, high-speed schlieren, SPOD, DMD, streamwise Fourier transform, sliding-window wavenumber transform, elliptical and rectangular jets, shock leakage, screech directivity
 
 ## Summary

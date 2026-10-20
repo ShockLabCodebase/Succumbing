@@ -8,7 +8,7 @@ venue: "Comput. Phys. Commun. 185(11), 3028–3040"
 bib: {"journal": "Computer Physics Communications", "volume": "185", "number": "11", "pages": "3028--3040"}
 doi: "10.1016/j.cpc.2014.07.011"
 arxiv: "1312.1638"
-pdf: "Witherden-EtAl_2014_PyFR-An-Open-Source-Framework-For-Solving-Advection-Diffusion-Type-Problems.pdf"
+pdf: "simulation-methods/Witherden-EtAl_2014_PyFR-An-Open-Source-Framework-For-Solving-Advection-Diffusion-Type-Problems.pdf"
 version: "preprint"
 unverified: ["CPC issue, pages and DOI from memory; not printed in the arXiv file"]
 group: false
@@ -27,7 +27,7 @@ summary: "PyFR v0.1.0: Python flux reconstruction on mixed curved unstructured g
 
 - **Authors:** F. D. Witherden, A. M. Farrington, P. E. Vincent (Department of Aeronautics, Imperial College London)
 - **Source:** published in Computer Physics Communications 185 (2014). This file is the **arXiv version**, arXiv:1312.1638v2 [physics.comp-ph] (7 May 2014), so its layout and page numbers differ from the CPC article. *(CPC issue, pages and DOI not printed in this file; to my knowledge they are 185(11), 3028–3040, doi:10.1016/j.cpc.2014.07.011. Check before citing.)*
-- **PDF:** `References/Paper_PDFs/Witherden-EtAl_2014_PyFR-An-Open-Source-Framework-For-Solving-Advection-Diffusion-Type-Problems.pdf` (33 pp.)
+- **PDF:** `References/Paper_PDFs/simulation-methods/Witherden-EtAl_2014_PyFR-An-Open-Source-Framework-For-Solving-Advection-Diffusion-Type-Problems.pdf` (33 pp.)
 - **Page refs:** PDF page numbers, which equal the printed page numbers in this preprint.
 - **Tags:** PyFR, flux reconstruction (FR), high-order methods, discontinuous Galerkin, spectral difference, unstructured mixed grids, curved elements, GPU/CUDA, OpenMP, MPI, Mako templating DSL, runtime code generation, GEMM, compressible Navier–Stokes, LDG viscous fluxes, Rusanov Riemann solver, super accuracy, Couette flow, cylinder Re 3900, scalability, solver reference
 

@@ -8,7 +8,7 @@ venue: "AIAA Aviation 2021 Forum"
 bib: {"booktitle": "AIAA Aviation 2021 Forum", "note": "Authors' final manuscript; AIAA paper number not printed"}
 doi: ""
 arxiv: ""
-pdf: "Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf"
+pdf: "non-axisymmetric-and-twin-jets/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "LAFPA forcing at screech (St_e 0.41) of AR-2 twin jets at M_j 1.35: sy
 
 - **Authors:** A. Esfahani, N. Webb, M. Samimy (Gas Dynamics and Turbulence Laboratory (GDTL), Aerospace Research Center, The Ohio State University)
 - **Source:** AIAA Aviation 2021 Forum, 2–6 Aug 2021 (conference paper; author's final manuscript, PDF created 23 Jun 2021). The AIAA paper number and DOI are not printed in this PDF. Funded by ONR (N00014-19-1-2207) (p. 18).
-- **PDF:** `References/Paper_PDFs/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf` (20 pp.)
+- **PDF:** `References/Paper_PDFs/non-axisymmetric-and-twin-jets/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf` (20 pp.)
 - **Tags:** twin jets, rectangular nozzle, low aspect ratio, overexpanded supersonic jet, screech, jet coupling, feedback loop, intermittency, active flow control, plasma actuators (LAFPA), near-field acoustics, wavelet coherence, high-speed schlieren, SPOD
 - **Companion paper:** [esfahani-2021-coupling-modes-twin-rectangular-jets.md](esfahani-2021-coupling-modes-twin-rectangular-jets.md) (SciTech 2021, ref. [23]). It holds the baseline coupling-mode survey over M_j that this paper summarises in Fig. 8.
 

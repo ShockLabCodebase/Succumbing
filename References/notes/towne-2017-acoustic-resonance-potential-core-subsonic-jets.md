@@ -8,7 +8,7 @@ venue: "JFM 825, 1113–1152"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "825", "pages": "1113--1152"}
 doi: "10.1017/jfm.2017.346"
 arxiv: ""
-pdf: "Towne-EtAl_2017_Acoustic-Resonance-In-The-Potential-Core-Of-Subsonic-Jets.pdf"
+pdf: "linear-models/Towne-EtAl_2017_Acoustic-Resonance-In-The-Potential-Core-Of-Subsonic-Jets.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "M 0.9 jet LES plus LEE, vortex-sheet and soft-duct Briggs–Bers model
 
 - **Authors:** A. Towne, A. V. G. Cavalieri, P. Jordan, T. Colonius, O. Schmidt, V. Jaunet, G. A. Brès (Caltech; ITA, São José dos Campos; Institut PPRIME, Poitiers; Cascade Technologies)
 - **Source:** J. Fluid Mech. 825, 1113–1152 (2017), doi:10.1017/jfm.2017.346. Published version (Cambridge Core download).
-- **PDF:** `References/Paper_PDFs/Towne-EtAl_2017_Acoustic-Resonance-In-The-Potential-Core-Of-Subsonic-Jets.pdf` (40 pp.)
+- **PDF:** `References/Paper_PDFs/linear-models/Towne-EtAl_2017_Acoustic-Resonance-In-The-Potential-Core-Of-Subsonic-Jets.pdf` (40 pp.)
 - **Page refs:** PDF page numbers. The printed journal page is PDF page + 1112 (PDF p. 1 = p. 1113).
 - **Tags:** trapped acoustic waves, guided jet mode, duct-like modes (k⁺, k⁻), discrete free-stream mode, potential-core resonance, near-nozzle tones, subsonic jet (M 0.9), Briggs–Bers spatiotemporal analysis, saddle points, cut-on/cut-off, absolute frequency, linearized Euler (mean-flow) stability, cylindrical vortex sheet, soft (pressure-release) duct, WKB weakly non-parallel model, turning points, tunnelling, LES (Charles), azimuthal Fourier decomposition, frequency–wavenumber spectrum, phase-velocity filtering
 

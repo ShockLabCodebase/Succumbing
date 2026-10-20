@@ -8,7 +8,7 @@ venue: "AIAA J. 58(3), 1023–1033"
 bib: {"journal": "AIAA Journal", "volume": "58", "number": "3", "pages": "1023--1033"}
 doi: "10.2514/1.J058809"
 arxiv: ""
-pdf: "Schmidt-Colonius_2020_Guide-To-Spectral-Proper-Orthogonal-Decomposition.pdf"
+pdf: "modal-decomposition/Schmidt-Colonius_2020_Guide-To-Spectral-Proper-Orthogonal-Decomposition.pdf"
 version: "published"
 unverified: ["volume/issue/pages from memory, not in this Article in Advance PDF"]
 group: false
@@ -27,7 +27,7 @@ summary: "Practical SPOD–Welch guide: N_FFT bias vs variance, 50% overlap, Ham
 
 - **Authors:** O. T. Schmidt (University of California San Diego), T. Colonius (California Institute of Technology)
 - **Source:** AIAA Journal 58(3), 1023–1033 (2020), doi:10.2514/1.J058809. Open Access. This file is the "Article in Advance" version (published online 27 Jan 2020), paginated 1–11; page refs below are those numbers, which equal the PDF page numbers.
-- **PDF:** `References/Paper_PDFs/Schmidt-Colonius_2020_Guide-To-Spectral-Proper-Orthogonal-Decomposition.pdf` (11 pp.)
+- **PDF:** `References/Paper_PDFs/modal-decomposition/Schmidt-Colonius_2020_Guide-To-Spectral-Proper-Orthogonal-Decomposition.pdf` (11 pp.)
 - **Tags:** SPOD, Welch's method, cross-spectral density, Karhunen–Loève, method of snapshots, block length N_FFT, overlap, Hamming window, window correction factor, spectral leakage, aliasing, bias–variance trade-off, confidence intervals (chi-squared), low-rank behaviour, inner product / norms (Chu energy norm), large data, streaming SPOD, turbulent jet LES, VAWT PIV, MATLAB `spod`
 
 > Volume/issue/page numbers (58(3), 1023–1033) are from my knowledge of the published issue, not from this PDF, which only shows "Article in Advance / 1–11". Check before citing.

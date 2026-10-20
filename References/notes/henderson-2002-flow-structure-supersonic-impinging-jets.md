@@ -8,7 +8,7 @@ venue: "AIAA conference preprint 2002 (NTRS 20020088423)"
 bib: {"note": "AIAA 2002 conference preprint, paper number not printed; NTRS 20020088423; precursor of JFM 542 (2005)"}
 doi: ""
 arxiv: ""
-pdf: "Henderson-EtAl_2002_An-Experimental-Investigation-Of-The-Flow-Structure-Of-Supersonic-Impinging-Jets.pdf"
+pdf: "impinging-jets-and-edge-tones/Henderson-EtAl_2002_An-Experimental-Investigation-Of-The-Flow-Structure-Of-Supersonic-Impinging-Jets.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "NPR 4.03 jet on a large plate (SHJAR): phase-averaged PIV and shadowgr
 
 - **Authors:** Brenda Henderson (Kettering University, Mechanical Engineering), James Bridges and Mark Wernet. The title block lists only Kettering; the footnotes behind the asterisks are not in this copy. Bridges and Wernet were at NASA Glenn Research Center, where the work was done (p. 2, 6).
 - **Source:** AIAA conference preprint, 2002 (header "AIAA 2002-", with the paper number left blank; NTRS 20020088423). It is the precursor of the journal paper Henderson, Bridges & Wernet (2005), *An experimental study of the oscillatory flow structure of tone-producing supersonic impinging jets*, J. Fluid Mech. 542, doi:10.1017/S0022112005006385, which is **not held** in this library (entry #39 in `References/download_candidates.md`).
-- **PDF:** `References/Paper_PDFs/Henderson-EtAl_2002_An-Experimental-Investigation-Of-The-Flow-Structure-Of-Supersonic-Impinging-Jets.pdf` (12 pp.). It is an OCR'd scan (Acrobat Paper Capture), so `pdftotext` output is garbled and the Read tool reports it as password-protected; render pages to images instead.
+- **PDF:** `References/Paper_PDFs/impinging-jets-and-edge-tones/Henderson-EtAl_2002_An-Experimental-Investigation-Of-The-Flow-Structure-Of-Supersonic-Impinging-Jets.pdf` (12 pp.). It is an OCR'd scan (Acrobat Paper Capture), so `pdftotext` output is garbled and the Read tool reports it as password-protected; render pages to images instead.
 - **Page refs:** PDF pages. Text is on p. 1–6 (printed page numbers match); the figures are on p. 7–12, which carry no page numbers.
 - **Tags:** supersonic impinging jet, large-plate impingement tones, L1 tones, zones of silence, Mach disk oscillation, standoff shock, annular shock, recirculation (stagnation) bubble, contact surface, wall-jet sound source, Powell feedback criterion, phase-locked shadowgraph, phase-averaged PIV, subtracted (coherent) velocity fields, non-time-resolved PIV, NASA Glenn SHJAR
 

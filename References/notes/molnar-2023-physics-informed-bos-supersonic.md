@@ -8,7 +8,7 @@ venue: "Exp. Fluids 64, 14"
 bib: {"journal": "Experiments in Fluids", "volume": "64", "pages": "14"}
 doi: "10.1007/s00348-022-03554-y"
 arxiv: ""
-pdf: "Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf"
+pdf: "diagnostics-and-facilities/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf"
 version: "published"
 unverified: []
 group: false
@@ -28,7 +28,7 @@ summary: "PINN with a unified-BOS data loss and Euler physics loss gives ρ, u, 
 - **Authors:** J. P. Molnar, L. Venkatakrishnan, B. E. Schmidt, T. A. Sipkens, S. J. Grauer (Penn State; CSIR-NAL Bangalore; Case Western Reserve; NRC Canada)
 - **Source:** Experiments in Fluids 64:14 (2023; received 5 Aug 2022, published online 5 Jan 2023)
 - **DOI:** 10.1007/s00348-022-03554-y
-- **PDF:** `References/Paper_PDFs/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf` (24 pp.; local only, not in Git)
+- **PDF:** `References/Paper_PDFs/diagnostics-and-facilities/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf` (24 pp.; local only, not in Git)
 - **Tags:** background-oriented schlieren, BOS, physics-informed neural network, PINN, data assimilation, unified BOS, optical flow, wOFA, Abel inversion, Sipkens kernel, Tikhonov regularization, Euler equations, irrotationality, cone-cylinder, Prandtl–Meyer expansion fan, Mach 2, synthetic phantoms, nonlinear ray tracing, SU2
 
 ## Summary

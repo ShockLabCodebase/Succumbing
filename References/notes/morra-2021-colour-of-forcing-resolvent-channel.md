@@ -8,7 +8,7 @@ venue: "JFM 907, A24"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "907", "pages": "A24"}
 doi: "10.1017/jfm.2020.802"
 arxiv: ""
-pdf: "Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf"
+pdf: "linear-models/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf"
 version: "published"
 unverified: []
 group: false
@@ -27,7 +27,7 @@ summary: "DNS nonlinear-forcing CSD (Re_τ 179, 543) through the resolvent recov
 
 - **Authors:** P. Morra, P. A. S. Nogueira, A. V. G. Cavalieri, D. S. Henningson (KTH FLOW, Stockholm; Instituto Tecnológico de Aeronáutica, São José dos Campos)
 - **Source:** J. Fluid Mech. 907, A24 (2021), doi:10.1017/jfm.2020.802. Received 3 Apr 2020, accepted 16 Sep 2020, published online 2020. Open access (CC BY-NC-ND).
-- **PDF:** `References/Paper_PDFs/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf` (30 pp.).
+- **PDF:** `References/Paper_PDFs/linear-models/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf` (30 pp.).
 - **Tags:** resolvent analysis, nonlinear forcing, forcing colour, cross-spectral density (CSD), SPOD, turbulent channel flow, DNS, eddy viscosity (Cess), lift-up, low-rank forcing, solenoidal projection, Orr–Sommerfeld–Squire, Welch windowing correction, sub-optimal resolvent modes
 
 ## Summary
