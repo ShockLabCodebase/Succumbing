@@ -93,6 +93,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - **Rocket noise:** impinging-jet waves are shocks at birth, linking to crackle; the open question is why the loop does not survive in hot, overexpanded plumes on inclined deflectors.
 
 ## Papers
+- [Ho 1981](../notes/ho-1981-dynamics-impinging-jet-feedback-phenomenon.md): M ≤ 0.9 jet on a plate; 0.62U structures and sonic upstream waves phase-lock at the lip; integer-N stages and stage switching (synthesis pending).
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md) (not tagged): lip thickness changes screech staging; reflection off the exit face.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md) (not tagged): lip-thickness and reflector effects on screech.
 - [Henderson 2002](../notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): cycle of an NPR 4.03 large-plate tone; wall-jet source at 2.6R; Powell N + p ≈ 4.4; zone of silence.

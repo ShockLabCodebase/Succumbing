@@ -20,7 +20,7 @@ phenomena: ["KH-wavepackets", "Orr"]
 params: {"Re": "1000–5000 (radius-based)", "m": "0–2", "theta/R": "0.043"}
 topics: ["linear-models"]
 related: ["lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "nogueira-2021-absolute-instability-shock-containing-jets", "morra-2021-colour-of-forcing-resolvent-channel"]
-cites: ["gudmundsson-2011-instability-wave-models-near-field-jets"]
+cites: ["gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows"]
 summary: "Global resolvent of an incompressible model jet with nozzle pipe: no resonating global mode; the preferred mode is a pseudo-resonance, peak gain St ≈ 0.43–0.46, Orr forcing in the pipe BL"
 ---
 # The preferred mode of incompressible jets: linear frequency response analysis

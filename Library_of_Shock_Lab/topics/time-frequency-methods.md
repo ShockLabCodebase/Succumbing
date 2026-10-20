@@ -189,6 +189,7 @@ Time-resolved schlieren, microphones and LES support every row. Non-time-resolve
 - [Torrence 1998](../notes/torrence-1998-practical-guide-wavelet-analysis.md): wavelet practice. Cone of influence, χ² significance, band-averaged power, cross-wavelet phase.
 - [Sieber 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-filtered SPOD. Analytic coefficient pairs that keep intermittency within one pair.
 - [Nekkanti 2021](../notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md): SPOD reconstruction, denoising and convolution spectrograms. Step 2 of the pipeline.
+- [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): band-pass Hilbert envelope and phase of microphone signals track intermittent twin-jet coupling; interruption statistics (synthesis pending).
 - [Wong 2023](../notes/wong-2023-steady-unsteady-coupling-twin-round-jets.md): POD → CWT, conditional POD and the beat test, applied to twin-jet coupling.
 - [Davey 2025](../notes/davey-2025-hpod-sphere-wake.md): space-only HPOD on PIV. A POD-pairing test and its artefacts.
 - [Raiola 2025](../notes/raiola-2025-hilbert-pod.md): HPOD_t versus HPOD_x, the reduction to SPOD, and intermittent temporal modes. Step 3 of the pipeline.

@@ -121,6 +121,7 @@ The LES cannot give dwell-time statistics (1–4 s, about 10⁴–10⁵ D/U_j). 
 - [Krothapalli 1986](../notes/krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet.md): screech enhances spreading of a high-AR rectangular jet; early evidence that screech changes the mean flow.
 - [Tam 1986](../notes/tam-1986-bbsan-screech-relationship.md): screech as the upstream limit of BBSAN; weakest-link frequency formula.
 - [Tam 1988](../notes/tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets.md): shock-cell spacing and screech formula for rectangular and elliptical jets.
+- [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): framework behind the absolute-instability (saddle) view of screech (synthesis pending).
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): lip thickness changes mode ranges and amplitudes; receptivity reference.
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): review of the free-stream-closure picture; mode switching by instability growth; amplitude unpredictable.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): pre-2000 review; frequency predictable, amplitude and staging not.
@@ -132,6 +133,7 @@ The LES cannot give dwell-time statistics (1–4 s, about 10⁴–10⁵ D/U_j). 
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): first evidence that the G-JM closes A1 and A2.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): twin-jet staging; U_c constant across modes while λ_SW/s changes.
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model; A1/A2 mutually exclusive switching.
+- [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES screech St matches experiment; diagonal and minor-axis antisymmetric modes of rectangular jets (synthesis pending).
 - [Edgington-Mitchell 2021, shock leakage](../notes/edgington-mitchell-2021-generation-screech-tones-shock-leakage.md): shock leakage seen directly; first leak at inter-vortex saddles, 3rd–5th cell; closure untested.
 - [Edgington-Mitchell 2021, waves](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): three waves at k_kh, k_kh ± k_s; global stability on PIV mean within 1 %.
 - [Esfahani 2021, control](../notes/esfahani-2021-control-twin-rectangular-jet-coupling.md): plasma forcing sets screech and coupling loops in twin rectangular jets.
@@ -140,6 +142,7 @@ The LES cannot give dwell-time statistics (1–4 s, about 10⁴–10⁵ D/U_j). 
 - [Nogueira 2021, absolute instability](../notes/nogueira-2021-absolute-instability-shock-containing-jets.md): screech as a KH–G-JM saddle; nozzle sets amplitude only.
 - [Nogueira 2021, twin jets](../notes/nogueira-2021-twin-jet-coupling-spatial-lsa.md): G-JM band selects twin-jet coupling symmetry at NPR 5.
 - [Brès 2021](../notes/bres-2021-les-twin-rectangular-jets-plasma.md): blind twin-rectangular LES that matches the measured screech tones.
+- [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): twin round-jet screech coupling is intermittent, not a fixed phase; Hilbert-conditioned PIV POD (synthesis pending).
 - [Edgington-Mitchell 2022](../notes/edgington-mitchell-2022-unifying-theory-jet-screech.md): unifying theory: stages close on different shock peaks; multimodality.
 - [Nogueira 2022](../notes/nogueira-2021-closure-mechanism-a1-a2-screech.md): A2 closes on a secondary shock wavenumber; ω0i ranks A1 over A2.
 - [Nogueira 2022, wavepacket modulation](../notes/nogueira-2021-wavepacket-modulation-shock-containing-jets.md): parabolised Floquet model of shock modulation of KH wavepackets.

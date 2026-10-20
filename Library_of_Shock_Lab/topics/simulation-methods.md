@@ -89,6 +89,7 @@ All simulation output here is time-resolved, so it suits SPOD, BMD, k–ω maps 
 ## Papers
 - [Greenshields et al. 2010](../notes/greenshields-2010-central-schemes-polyhedral-fv.md): `rhoCentralFoam` numerics; KNP + van Leer; Ladenburg Mach disc within 3%.
 - [Witherden et al. 2014](../notes/witherden-2014-pyfr-flux-reconstruction-framework.md): PyFR v0.1.0; FR on GPUs; solver reference for the staging LES.
+- [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): implicit LES of AR 2 rectangular jets with the nozzle; compared with Cincinnati PIV and far-field data (synthesis pending).
 - [Brunton et al. 2020](../notes/brunton-2020-machine-learning-fluid-mechanics.md): review of ML in fluid mechanics; cautions on extrapolation.
 - [Rezay Haghdoost et al. 2020](../notes/rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet.md): 3D cut-cell Euler of a starting jet; TOS model; constant-inflow control run.
 - [Brès et al. 2021](../notes/bres-2021-les-twin-rectangular-jets-plasma.md): blind wall-modelled Charles LES of screeching twin rectangular jets; the reference LES recipe.

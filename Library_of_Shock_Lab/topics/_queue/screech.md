@@ -15,3 +15,50 @@ The source agrees with leakage imaging for A2: 4th cell in both ([edgington-mitc
 The b (N = m = 3) versus B (N = m = 4) split of the flapping cases rests on N alone, with no tone jump (St 0.31 → 0.30 between M_j 1.35 and 1.37; Table 2 calls all of them B). Treat it as tentative.
 
 The paper does not overturn the current understanding. It adds to item 4 (staging), the Staging, Frequency-prediction and Shock-leakage/source-location sections, and the open question on reflection point versus k_s2.
+
+## bell-2021-intermittent-modal-coupling-screeching-twin-jets (queued 2026-10-20)
+
+- **Twin-jet staging in the m = 1 range** (s/D = 3).
+  - Knast's acoustic data jump at NPR 3.4 and 4.4 (p. 7). Coherence reveals weaker continuous branches ("processes") that coexist across the jumps.
+  - A process is one loop with fixed azimuthal modes, coupling and effective source (p. 9).
+  - The paper lists three candidate staging mechanisms, without testing any (p. 9): a change of azimuthal mode or coupling; a change in the number of structures in the loop (Gao & Li; [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md)); a change from free-stream to guided-mode return (Shen & Tam).
+- **Intermittency between coupling states.** It peaks between two coupling states and is put down to competition between two global modes (p. 29). This is the twin-jet case of the page's "Selection, hysteresis and switching" question. Unlike single-jet A1/A2 (Mancinelli 2019; Mazharmanesh 2026), the tones here coexist and are uncorrelated (p. 16).
+- **Process 1 locks only briefly.** It behaves as a limit cycle (σ_amp ≈ 1 dB, σ_phase 2–6°) only at NPR 2.9–3.4, where it is also loudest (≈ 170 dB, Fig. 6b, read). It is noise-like right after its onset at NPR 2.3, which follows the jump from the St ≈ 0.65–0.78 A-type tones to St 0.46. This matches the "intermittent near a stage boundary" pattern of [Wong 2023](../notes/wong-2023-steady-unsteady-coupling-twin-round-jets.md) at A1/A2 (note's reading of Fig. 27).
+- **Facility sensitivity.**
+  - Identical nozzles in two Monash rigs shift the onset of the lower tone (p. 17–18).
+  - OSU changes the staging most at NPR 3.0–4.0 (p. 35).
+  - Both support the page's advice to record the outer nozzle shape, upstream surfaces and enclosure.
+- **POD pairs to tones.** A POD wavelength with u_c = 0.6u_j assigns PIV mode pairs to tones within 0.01 in St (Table 2). Two coupled modes with about 10% different wavelengths at the same u_c give tones 5–15% apart. No stability or resonance model is computed.
+
+## gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets (queued 2026-10-20)
+
+- **Guided-mode closure extended to rectangular and heated jets**, though only by band membership. The paper assumes, after Shen & Tam (2002) and Gojon et al. (2018, round), that upstream neutral acoustic modes of the ideally expanded planar jet close the loop. Two lines of evidence:
+  - the NPR 3 tones lie in the A1 band of a planar vortex sheet (Fig. 21, p. 26);
+  - frequency–wavenumber spectra of LES pressure inside the jet peak on k = −ω/a₀ at the tones (Figs 22–25, p. 26–31).
+
+  This agrees with [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md), [Nogueira 2024](../notes/nogueira-2024-guided-jet-waves.md) (which cites these planar branch points, p. 23) and [Jeun 2024](../notes/jeun-2024-screech-coupling-closure-rectangular-twin-jets.md). It is weaker than them:
+  - no eigenfunction comparison;
+  - a 10h window gives Δkh_j ≈ 0.6, which cannot separate in-jet sound at −ω/a₀ from a nearby A1 wave (my estimate).
+- **Frequency right, amplitude wrong.** The LES matches the measured St at all six conditions to within 0.01 (Table 4, p. 24). But its screech grows from 151 to 177 dB/St with TR 1 → 3 where the experiment falls (p. 18–19). This contradicts the "heating weakens screech" consensus ([Tam 1995](../notes/tam-1995-supersonic-jet-noise.md), p. 39–40) and adds to the open "Amplitude" question.
+  - The likely suspects (my speculation) are the untripped, weakly turbulent exit boundary layer (1.75 % peak, p. 8) and the lower Re of the hot cases. That makes this a caution for LES-based resonance maps.
+- **Convection velocity falls with heating**: broadband u_c/u_j 0.80 → 0.64 for TR 1 → 3 (Table 2, p. 16). Tam's formula with these values is within 10 % (Table 3, p. 19).
+- **Heated plumes and the guided-mode band.** On the open question of whether the G-JM band misses hot plumes: heating lowers the bands (Fig. 20, p. 25), and the hot underexpanded tones (Jet4TR2, Jet4TR3) fall below the A1 lower limit by my arithmetic. The authors attribute this to the thin-shear-layer idealisation (p. 26).
+- **Staging-like change.** A "jump" from diagonal (TR 1) to minor-axis flapping (TR ≥ 2) is linked by the authors to Raman's (1997) mode II → I. It rests on four TR points.
+
+## huerre-1990-local-global-instabilities-spatially-developing-flows (queued 2026-10-20)
+
+- **Not a screech paper.** It never mentions screech or supersonic jets. It is, however, the framework behind the page's "Absolute instability and global modes" section and its "Self-excited or forced" question.
+- **What it implies for Nogueira 2021.** Eq. 39 (p. 494) makes the positive *local* Floquet ω₀,ᵢ of `nogueira-2021-absolute-instability-shock-containing-jets` a necessary but not sufficient condition for a global mode. The global frequency is ω₀ at the complex saddle X_s of ω₀(X) (eq. 38, p. 493). The 2–6% match between the local saddle and the tone then implies that ω₀,r varies little along x, the same conjecture the authors make for wakes (p. 502). This is my inference.
+- **Ranking of evidence for self-excitation** (§7.1, p. 516–518), which lab tests and the PyFR LES can follow with NPR as the control parameter:
+  1. single-point spectra (weakest);
+  2. lock-in sweeps;
+  3. response against forcing amplitude, flat for an oscillator and slope 1 for an amplifier (Fig. 21);
+  4. saturated amplitude against the control parameter as √(R − R_Gc) (eq. 58, Fig. 18b);
+  5. conclusive transient experiments that fit the Landau equation (eq. 47) and check it at every point. An NPR step in the continuation driver is such an experiment.
+- **Staging.** The theory and all its examples are supercritical Hopf; subcritical cases are "far more complicated" and no example was known (p. 517). A1/A2 bistability and hysteresis therefore lie outside the paper. Three results are relevant to mode competition:
+  - global modes come in families O(ε) apart (eq. 46, p. 496);
+  - a self-excited hot jet carries two modes, MI and MII, with separate onsets (S ≈ 0.73 and 0.62–0.63, read from Fig. 18b, p. 513);
+  - single-sensor feedback that suppresses one global mode tends to destabilise another (p. 518–519).
+- **Two classes of global instability.** The paper separates global instability from a local absolute pocket from global instability by pressure feedback off surfaces (edge, collar and cavity tones; p. 498). This maps onto the page's split between the saddle view (Nogueira 2021, 2022) and resonance-loop models (`mancinelli-2021-complex-valued-resonance-model-screech`). The classification is mine, and the two classes are not exclusive.
+- **LES boundary check.** Spatial simulations can self-excite through outflow-to-inflow pressure feedback (Buell & Huerre 1988; Fig. 8, p. 498). The PyFR staging runs should be checked for this: domain length, sponge and outflow treatment.
+- **Effect on open questions.** It reframes, but does not resolve, "Self-excited or forced": only global properties are measurable (p. 516). The slightly stable mean-flow mode of `farghadan-2026-wave-interactions-screeching-jet` is not a direct test, because this theory linearises about base flows near onset.

@@ -148,6 +148,7 @@ Tam & Tanna proposed the product picture, in which KH × shock gives k ± λ_n (
 ## Papers
 
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): convective Mach number; vortex-sheet vs finite-thickness stabilisation at high M_c.
+- [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): review of absolute/convective and local/global instability; Briggs–Bers pinch; WKB saddle sets the global frequency (synthesis pending).
 - [McKeon & Sharma 2010](../notes/mckeon-2010-critical-layer-framework-turbulent-pipe-flow.md): origin of mean-flow resolvent (nonlinearity as forcing; critical layer).
 - [Gudmundsson & Colonius 2011](../notes/gudmundsson-2011-instability-wave-models-near-field-jets.md): PSE on PIV mean flows matches POD-filtered near-field pressure; fails below St 0.2.
 - [Oberleithner 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): mean-flow LSA reproduces a self-excited global mode measured by POD-pair PIV.
@@ -164,6 +165,7 @@ Tam & Tanna proposed the product picture, in which KH × shock gives k ± λ_n (
 - [Lesshafft 2019](../notes/lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet.md): resolvent with nozzle vs TR-PIV SPOD; leading mode matched, suboptimals not.
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): vortex-sheet KH–guided-mode screech model.
 - [Nogueira 2019](../notes/nogueira-2019-large-scale-streaky-structures-jets.md): lift-up streaks from local resolvent and transient growth vs SPOD.
+- [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): planar vortex-sheet A1 guided-mode band explains the heated rectangular-jet mode change (synthesis pending).
 - [Pickering 2020](../notes/pickering-2020-lift-up-kh-orr-jets.md): eddy-viscosity resolvent map of lift-up, KH and Orr.
 - [Taira 2020](../notes/taira-2020-modal-analysis-applications-outlook.md): interpreting mean-flow modes; discounted resolvent.
 - [Edgington-Mitchell 2021](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): global LSA on a PIV mean flow; k_kh ± k_s waves; St within 1%.

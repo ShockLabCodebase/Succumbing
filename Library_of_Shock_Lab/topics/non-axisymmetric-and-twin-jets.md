@@ -147,10 +147,12 @@ Trailing-edge cutouts on AR 3 Mach 2 nozzles make streamwise vortices only off-d
 - [Kerechanin 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): acoustics of the same cutouts; nozzle symmetry decides whether screech is suppressed or amplified.
 - [Berry 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): POD of TR schlieren of a multi-stream rectangular jet; flapping without screech, aliasing.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): four coupling modes of round twins; phase jumps without frequency jumps.
+- [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES of AR 2 C-D rectangular jets, NPR 3 and 4, TR 1–3; flapping turns from diagonal to minor-axis with heating (synthesis pending).
 - [Brès 2021](../notes/bres-2021-les-twin-rectangular-jets-plasma.md): blind LES of OSU AR 2 twins; acoustic validation.
 - [Esfahani 2021, coupling modes](../notes/esfahani-2021-coupling-modes-twin-rectangular-jets.md): AR 2 twin coupling map against M_j; beating at frequency mismatch.
 - [Esfahani 2021, control](../notes/esfahani-2021-control-twin-rectangular-jet-coupling.md): plasma forcing sets or breaks coupling.
 - [Nogueira 2021](../notes/nogueira-2021-twin-jet-coupling-spatial-lsa.md): SI-POD plus Floquet LSA; guided-mode bands select twin coupling.
+- [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): round twin jets at s/D 3; the coupling phase anomaly is intermittent switching between symmetric, antisymmetric and uncoupled states (synthesis pending).
 - [Edgington-Mitchell 2022](../notes/edgington-mitchell-2022-unifying-theory-jet-screech.md): staging in AR 2 elliptical jets; no staging at AR 4.
 - [Yeung 2022](../notes/yeung-2022-3d-spod-twin-rectangular-jet.md): D2-symmetric SPOD; screech in AA/AS.
 - [Rodríguez 2023](../notes/rodriguez-2023-preferred-flapping-round-twin-jets.md): why twin round jets flap; KH preference maps.

@@ -133,6 +133,7 @@ Ray-traced near-pad arrays, plus wavenumber-filtered SPOD of heated-jet LES to s
 - [Samimy et al. 2006](../notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
 - [Cavalieri et al. 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): low-energy m = 0/1 linear wavepackets carry the low-angle sound.
 - [Cavalieri et al. 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; Mach waves, superdirectivity, jitter.
+- [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES far field of heated rectangular jets; BBSAN and Mach-wave angles against semi-empirical formulas (synthesis pending).
 - [Wong et al. 2021](../notes/wong-2021-wavepacket-modelling-bbsan.md): group's inside-out wavepacket × shock-cell BBSAN model; jitter fills the dips.
 - [Mathews 2025](../notes/mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md): full-scale BSN sources at shock cells, failed spacing formulas, rocket Mach waves and nonlinear losses.
 

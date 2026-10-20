@@ -20,7 +20,7 @@ phenomena: ["KH-wavepackets", "Orr"]
 params: {"M_j": "0.9 (jet)", "St": "0.35 (jet)", "M_∞": "4.5 (boundary layer)"}
 topics: ["linear-models"]
 related: ["towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2022-database-reduced-complexity-modeling", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "rolandi-2025-biglobal-resolvent-naca0012", "morra-2021-colour-of-forcing-resolvent-channel", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "gudmundsson-2011-instability-wave-models-near-field-jets"]
-cites: ["edgington-mitchell-2020-waves-in-screeching-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["edgington-mitchell-2020-waves-in-screeching-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "OWNS-R spatial marching at PSE-like cost/memory but keeps all downstream modes (KH, Orr, acoustics); M 0.9 jet and M 4.5 boundary layer; no upstream modes"
 ---
 # Recursive one-way Navier–Stokes equations with PSE-like cost

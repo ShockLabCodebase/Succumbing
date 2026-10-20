@@ -186,6 +186,7 @@ The algorithm is: subtract the mean, impose symmetries, split into blocks, windo
 - [Schmidt & Colonius 2020](../notes/schmidt-2020-guide-spod.md): Welch SPOD guide.
 - [Taira et al. 2020](../notes/taira-2020-modal-analysis-applications-outlook.md): interpreting outputs; POD pair = DMD on limit cycles.
 - [Nekkanti & Schmidt 2021](../notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md): SPOD denoising; reconstruction (time-frequency page).
+- [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): non-TR PIV POD conditioned on the Hilbert phase of microphones separates coupling states (synthesis pending).
 - [Towne et al. 2022](../notes/towne-2022-database-reduced-complexity-modeling.md): benchmark database with SPOD/DMD/resolvent demos.
 - [Yeung et al. 2022](../notes/yeung-2022-3d-spod-twin-rectangular-jet.md): D2 split before 3-D SPOD.
 - [Yeung & Schmidt 2024](../notes/yeung-2024-adaptive-spod-broadband-tonal.md): adaptive multitaper SPOD.

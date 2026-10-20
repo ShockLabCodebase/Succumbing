@@ -20,7 +20,7 @@ phenomena: ["screech", "staging", "coupling", "flapping", "helical"]
 params: {"NPR": "2.3–5.5", "M_j": "1.36–1.70", "s/D": "3, 6", "D": "10 mm"}
 topics: ["non-axisymmetric-and-twin-jets", "screech"]
 related: ["wong-2023-steady-unsteady-coupling-twin-round-jets", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "stavropoulos-2024-upstream-waves-merging-twin-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "rodriguez-2023-preferred-flapping-round-twin-jets", "esfahani-2021-coupling-modes-twin-rectangular-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "jeun-2024-screech-coupling-closure-rectangular-twin-jets"]
-cites: ["tam-1995-supersonic-jet-noise"]
+cites: ["mercier-2017-screech-feedback-loop-underexpanded-round-jets", "tam-1995-supersonic-jet-noise"]
 summary: "Round twin jets, S/D 3 and 6: four coupling modes (anti/symmetric flapping, co/counter-rotating helical) from schlieren correlation; phase jumps without frequency jumps; U_c/U_j ≈ 0.58"
 ---
 # Coupling Modes of an Underexpanded Twin Axisymmetric Jet

@@ -20,7 +20,7 @@ phenomena: ["helical", "coherent-structures", "global-mode"]
 params: {"Re": "20 000", "S": "1.22", "St": "0.49", "m": "1", "D": "51 mm"}
 topics: ["modal-decomposition", "linear-models"]
 related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2021-twin-jet-coupling-spatial-lsa", "weightman-2019-sound-production-impinging-supersonic-jets", "sieber-2016-spectral-proper-orthogonal-decomposition", "davey-2025-hpod-sphere-wake", "raiola-2025-hilbert-pod", "nogueira-2021-absolute-instability-shock-containing-jets"]
-cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+cites: ["huerre-1990-local-global-instabilities-spatially-developing-flows", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
 summary: "Swirling jet (S 1.22) vortex breakdown: m = 1 global mode at St 0.49 (Hopf, lock-in); mean-flow spatial LSA matches POD-pair phase average of stereo PIV; 3D helix from 2D planes"
 ---
 # Three-dimensional coherent structures in a swirling jet undergoing vortex breakdown: stability analysis and empirical mode construction

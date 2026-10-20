@@ -20,7 +20,7 @@ phenomena: ["screech", "staging", "guided-jet-mode"]
 params: {"NPR": "2.10, 2.25", "M_j": "1.09, 1.14", "Re": "4.4–4.7×10⁵", "St": "0.65, 0.63", "D": "15 mm"}
 topics: ["screech", "linear-models"]
 related: ["edgington-mitchell-2020-waves-in-screeching-jets", "mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2022-unifying-theory-jet-screech", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "jordan-2018-jet-flap-interaction-tones"]
-cites: ["jordan-2018-jet-flap-interaction-tones", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+cites: ["jordan-2018-jet-flap-interaction-tones", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "NPR 2.10/2.25 PIV: POD pair + k_x split isolate a weak upstream acoustic wave matching the (0,2) guided jet mode; all A1/A2 tones lie in its cut-on band, so it closes both"
 ---
 # Upstream-travelling acoustic jet modes as a closure mechanism for screech
