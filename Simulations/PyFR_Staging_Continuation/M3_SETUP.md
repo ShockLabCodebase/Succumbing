@@ -14,7 +14,7 @@ A record of getting from the STEP file to PyFR running on MASSIVE M3 (October 20
 | Mesh script, config template, driver | this folder, in Git |
 | CAD | `Simulations/CAD/16mm_Cutdown_for_Mesh.stp` (local only; a copy is in `mesh/` on M3) |
 
-**Storage rules:** use only project qk75, write only inside `PyFR_Staging`, and stop if qk75 scratch goes over 99%. `bin/check_quota.sh` checks this, and every script calls it before writing. qk75 scratch was at 92–93% of 10 TB, rising during the day from other users' files.
+**Storage rules:** use only project qk75, write only inside `PyFR_Staging`, and stop if qk75 scratch goes over 99%. `bin/check_quota.sh` checks this, and every script calls it before writing. qk75 scratch has varied between 75% and 99% of 10 TB as other users' files come and go.
 
 ## 1. Access
 
@@ -66,24 +66,57 @@ Built by `mesh/make_mesh.py` from the STEP file: the (x, r) section is meshed wi
 - **Reynolds number.** The experiment is at Re_D ≈ 5 × 10⁵ (cold jet, 16 mm nozzle, NPR 2.1–2.25). PyFR 3.1 has no wall model, and resolving a turbulent nozzle boundary layer at that Re would need wall cells 20–40× finer. Suggested: Re_D ≈ 10⁵, with a laminar exit boundary layer of realistic thickness, plus a check at 5 × 10⁴. The staging NPR depends more on the exit boundary layer than on Re itself. With constant viscosity, `mu = 1.215 / Re_D` at NPR 2.1; it stays fixed as NPR changes.
 - **GPUs.** qk75 can use the `gpu` partition (A100 80 GB, L40S, A40) and `m3h` (H100). The `shortq` QOS (30 min, ≤ 10 GPUs) suits short tests. A100 and H100 are fast in double precision. L40S, A40 and L4 are about 10× slower in double but fast in single, which PyFR supports and which is probably enough here. The timing tests below decide this.
 
-## 6. Timing tests (submitted, results pending)
+## 6. Timing tests
 
-Three `shortq` jobs:
-- 1 × A100: pilot and production, double and single;
-- 2 × A100: production, double and single;
-- 1 × L40S: pilot in single and double, production in single.
+Each case runs a 5-step warm-up (so kernel compilation is excluded) and then two lengths, so startup cancels out of the time per step. The script also records peak GPU memory. All jobs used the `shortq` QOS (30 min, each case capped at 10 min).
 
-Each case runs at two lengths, so startup cancels out of the time per step. The script also records peak GPU memory. The only figure so far is the L4: the pilot takes 0.79 s per step in double and 0.29 s in single, with about 30 s of startup.
+| Mesh | GPUs | Precision | s per step | Peak memory per GPU | Notes |
+|---|---|---|---|---|---|
+| Pilot (140 k) | 1 × L4 | double / single | 0.79 / 0.29 | | smoke test |
+| Pilot | 1 × L40S | double / single | 0.246 / 0.098 | | |
+| Pilot | 2 × L40S | single | 0.047 | 2.5 GB | 2.1× speed-up |
+| Pilot | 2 × A100 | single | 0.029 | 2.5 GB | |
+| Production (2.8 M) | 1 × L40S | single | — | | out of memory (48 GB card) |
+| Production | 2 × L40S | single | ≈ 1.3 (rough) | 35 GB | startup ≈ 8.5 min |
+| Production | 2 × A100 | double | — | 78 GB | out of memory |
+| Production | 2 × A100 | single | — | 68 GB | startup over 10 min, so the case timed out |
 
-*Results to be added here.*
+Problems and fixes:
+
+- **Arrays too large.** The production runs first stopped with "Allocation too large for normal backend memory-model". Some of PyFR's arrays are over 4 GB, which the default memory model refuses. Fix: `[backend] memory-model = large`, now in `base.example.ini`.
+- **Kernel compilation distorted the first timings.** PyFR compiles its GPU kernels on the first steps, which made the short runs look slow. Fix: the warm-up run.
+- **Later cases were skipped.** `mpirun`, inside the script's loop over cases, read the rest of the case list from standard input, so the loop ended after the first case. Fix: `< /dev/null` on every `mpirun` and `pyfr` call.
+- **Memory.** The production mesh needs about 70 GB in single precision and about 140 GB in double. So single precision needs at least 2 × L40S or 1 × A100 80 GB (with little to spare), and double needs at least 2 × H100 or 3–4 × A100.
+- **Startup is slow** (8.5 to over 10 minutes for the production mesh), mostly reading the mesh and setting up. This doesn't matter for long runs but doesn't fit a 30-minute test job.
+
+**Cost.** At about 1.3 s per step on 2 × L40S and dt between 5 × 10⁻⁵ and 10⁻⁴, one jet time unit (D/U_j) takes 3.5–7 hours, so a converged staging point would take weeks to months of GPU time. Options: p = 2 instead of 3, a coarser wall spacing and axial cell size, or more GPUs.
+
+## 7. Pilot physics run (NPR 2.1)
+
+Pilot mesh, p = 3, single precision on 1 × L40S, dt = 1.6 × 10⁻⁴, 12 hours (t = 0 to 64 D/c∞, about 11 min per time unit). The run was stable: dt up to at least 3.2 × 10⁻⁴ was stable in short tests.
+
+- **Issue: an impulsive start over-pressurised the plenum.** The first attempt started from ambient everywhere, with the inlet at NPR 2.1. The plenum is nearly closed (94:1 contraction), and the inlet condition only lets flow in, so the starting transient pushed plenum pressure to 2.4–3.0 and heated it (c_pT₀ up to 3.08 against 2.5). Draining that would take hundreds of time units.
+- **Fix: reservoir-state start.** The initial condition now holds the plenum and nozzle at the reservoir state (p and ρ at NPR 2.1, at rest) and ambient outside, with a smooth step a short way inside the exit (x ≈ −0.25 D). The step follows the nozzle wall, taken from the CAD profile. A check on the t = 0 solution confirms the plenum and nozzle are at 2.100, outside is at 1.000, and the step lies only inside the nozzle.
+- **Issue: `fmax` in the initial condition.** PyFR evaluates `[soln-ics]` with NumPy, which knows `max` but not `fmax` (the GPU kernels use `fmax`). Fix: `max` in the initial condition.
+- **Issue: probe files locked.** PyFR keeps the sampler's HDF5 files open, so they can't be read during a run, and a run killed at the time limit leaves them flagged as open. `h5clear -s -i` on a copy recovers them.
+
+Results:
+
+- **The plenum holds NPR 2.1.** After t ≈ 15 it stays at 2.10 ± 0.03, with c_pT₀ = 2.50, so the plenum neither drains nor heats.
+- **The jet is established.** The exit Mach number is about 1.1 (M_j = 1.09), and 6–8 shock cells about 0.5 D long are clearly visible (Pack's estimate is 0.56 D). The shear layer rolls up from about x = 0.5 D and the potential core breaks down around x = 5–6 D. The starting vortex left the near field by t ≈ 25.
+- **No clear screech tone yet.** The lip-probe m = 0 spectrum has a broad bump at St ≈ 0.7, and the near-field probe at (0, 3D) peaks at St 0.71, which is where A1 should be. But the peak is only a few times above the broadband level, and the record (t = 25–64) is only about 25 A1 cycles. The pilot mesh is also coarse beyond x ≈ 6 D. A longer run, restarted from t = 64, would settle whether the tone locks in.
+
+Figures (z = 0 slices of Mach number, numerical schlieren and pressure, plus probe histories and spectra) are made by `pilot_run/plot_pilot.py` on M3.
 
 ## Still to decide or do
 
 1. Re_D and the exit boundary-layer thickness. That sets `mu`, and possibly the wall cell sizes.
-2. GPU type, number of GPUs and precision, from the timing results.
-3. Whether MPI's session directory can go on node-local `/tmp` for multi-GPU runs.
-4. Converge A1 at NPR 2.10 and A2 at NPR 2.25. Then:
+2. GPU type, number of GPUs and precision. Single precision on 2 × L40S works, but the production mesh is expensive at about 1.3 s per step (section 6). The 1 × A100 production timing is still to come. It will need a longer job than `shortq` allows, because startup alone takes over 10 minutes.
+3. Whether to make the production mesh cheaper (p = 2, coarser cells) before committing GPU time.
+4. Whether to extend the pilot to check that A1 screech locks in.
+5. Whether MPI's session directory can go on node-local `/tmp` for multi-GPU runs.
+6. Converge A1 at NPR 2.10 and A2 at NPR 2.25. Then:
    - re-tune the driver's switching thresholds;
    - set `continuation.toml` (account qk75, partition, QOS, gres);
    - launch the up and down branches.
-5. Delete the two leftovers from the first install: `~/.conda/environments.txt`, and `/tmp/jweightman-conda.log` on m3f101.
+7. Delete the two leftovers from the first install: `~/.conda/environments.txt`, and `/tmp/jweightman-conda.log` on m3f101.
