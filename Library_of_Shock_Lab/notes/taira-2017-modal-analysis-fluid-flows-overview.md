@@ -18,7 +18,7 @@ methods: ["POD", "POD-pair", "SPOD", "DMD", "Koopman", "LSA-global", "resolvent"
 flow: ["generic"]
 phenomena: ["coherent-structures"]
 params: {}
-topics: ["modal-decomposition", "linear-models"]
+topics: ["modal-decomposition", "linear-operator-methods"]
 related: ["taira-2020-modal-analysis-applications-outlook", "schmid-2010-dynamic-mode-decomposition", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent", "brunton-2020-machine-learning-fluid-mechanics", "schmidt-2020-guide-spod", "morra-2021-colour-of-forcing-resolvent-channel"]
 cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow"]
 summary: "Tutorial review in one linear-algebra framework: SVD, pseudospectra, non-normality; POD, SPOD, balanced POD/ERA, DMD, Koopman, global LSA, mean-flow resolvent; data needs of each"

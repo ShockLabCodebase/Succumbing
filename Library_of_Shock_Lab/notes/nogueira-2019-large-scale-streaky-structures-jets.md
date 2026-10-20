@@ -8,7 +8,7 @@ venue: "JFM 873, 211–237"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "873", "pages": "211--237", "note": "HAL author version hal-02351588"}
 doi: "10.1017/jfm.2019.365"
 arxiv: ""
-pdf: "linear-models/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf"
+pdf: "linear-operator-methods/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["SPOD", "PSD", "symmetry-decomposition", "resolvent", "transient-growt
 flow: ["round-jet", "subsonic"]
 phenomena: ["streaks"]
 params: {"M_j": "0.4", "Re": "4.6×10⁵", "D": "50 mm"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods"]
 related: ["pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "morra-2021-colour-of-forcing-resolvent-channel", "marshall-2024-prediction-streaks-rectangular-jets", "nogueira-2026-flapping-motion-screeching-round-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow"]
 cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "First evidence of lift-up streaks in an M 0.4 jet: dual-plane TR stereo PIV, SPOD (St→0, m≥3), matched by local resolvent and transient growth (rolls → streaks)"
@@ -27,7 +27,7 @@ summary: "First evidence of lift-up streaks in an M 0.4 jet: dual-plane TR stere
 
 - **Authors:** P. A. S. Nogueira, A. V. G. Cavalieri (ITA, Brazil), P. Jordan, V. Jaunet (Institut PPRIME, Poitiers)
 - **Source:** J. Fluid Mech. 873, 211–237 (2019); doi:10.1017/jfm.2019.365. This copy is the HAL author version (hal-02351588) in JFM draft style, not the typeset article.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf` (28 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Nogueira-EtAl_2019_Large-Scale-Streaky-Structures-In-Turbulent-Jets.pdf` (28 pp.)
 - **Tags:** streaks, lift-up, streamwise vortices, subsonic jet, M = 0.4, SPOD, resolvent analysis, transient growth, non-modal stability, dual-plane time-resolved stereo PIV, Taylor's hypothesis, azimuthal Fourier decomposition, wall-turbulence analogy
 
 > **Page convention:** page refs are **PDF page numbers**. PDF p. 1 is the HAL cover sheet, so PDF p. N = manuscript p. N−1. They are not the JFM 211–237 page numbers.

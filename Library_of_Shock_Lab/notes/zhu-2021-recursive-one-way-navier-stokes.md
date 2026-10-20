@@ -8,7 +8,7 @@ venue: "arXiv:2111.10040"
 bib: {}
 doi: ""
 arxiv: "2111.10040"
-pdf: "linear-models/Zhu-Towne_2021_Recursive-One-Way-Navier-Stokes-Equations-With-PSE-Like-Cost.pdf"
+pdf: "linear-operator-methods/Zhu-Towne_2021_Recursive-One-Way-Navier-Stokes-Equations-With-PSE-Like-Cost.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["OWNS", "PSE", "numerics"]
 flow: ["round-jet", "subsonic", "wall-bounded", "supersonic"]
 phenomena: ["KH-wavepackets", "Orr"]
 params: {"M_j": "0.9 (jet)", "St": "0.35 (jet)", "M_∞": "4.5 (boundary layer)"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods"]
 related: ["towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2022-database-reduced-complexity-modeling", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "rolandi-2025-biglobal-resolvent-naca0012", "morra-2021-colour-of-forcing-resolvent-channel", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "gudmundsson-2011-instability-wave-models-near-field-jets"]
 cites: ["edgington-mitchell-2020-waves-in-screeching-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "OWNS-R spatial marching at PSE-like cost/memory but keeps all downstream modes (KH, Orr, acoustics); M 0.9 jet and M 4.5 boundary layer; no upstream modes"
@@ -27,7 +27,7 @@ summary: "OWNS-R spatial marching at PSE-like cost/memory but keeps all downstre
 
 - **Authors:** M. Zhu, A. Towne (University of Michigan)
 - **Source:** arXiv:2111.10040v1 [physics.flu-dyn] (preprint, 19 Nov 2021)
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Zhu-Towne_2021_Recursive-One-Way-Navier-Stokes-Equations-With-PSE-Like-Cost.pdf` (36 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Zhu-Towne_2021_Recursive-One-Way-Navier-Stokes-Equations-With-PSE-Like-Cost.pdf` (36 pp.)
 - **Tags:** one-way Navier–Stokes (OWNS), OWNS-R, parabolized stability equations (PSE), spatial marching, projection operator, linearized Navier–Stokes, resolvent analysis, turbulent jet wavepackets, Orr mechanism, jet acoustics, Mack mode, supersonic boundary layer, numerical method
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "JFM 658, 336–382"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "658", "pages": "336--382"}
 doi: "10.1017/S002211201000176X"
 arxiv: "1001.3100"
-pdf: "linear-models/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf"
+pdf: "linear-operator-methods/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf"
 version: "preprint"
 unverified: ["published title, volume, pages and DOI not in this arXiv preprint (titled 'A critical layer model for turbulent pipe flow')"]
 group: false
@@ -18,7 +18,7 @@ methods: ["resolvent"]
 flow: ["wall-bounded"]
 phenomena: ["coherent-structures", "streaks"]
 params: {"Re": "75×10³–10×10⁶ (main cases 75×10³ and 410×10³)", "R⁺": "1800 and 8500 (main cases)"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods", "linear-models"]
 related: ["morra-2021-colour-of-forcing-resolvent-channel", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "nogueira-2019-large-scale-streaky-structures-jets", "rolandi-2025-biglobal-resolvent-naca0012", "towne-2018-spod-relationship-dmd-resolvent"]
 cites: []
 summary: "Origin of mean-flow resolvent analysis: nonlinearity as forcing about the Superpipe mean; VLSM is the first critical mode, c ≈ (2/3)U_CL, peak at y⁺ ≈ 0.8 R⁺^(2/3)"
@@ -27,7 +27,7 @@ summary: "Origin of mean-flow resolvent analysis: nonlinearity as forcing about 
 
 - **Authors:** B. J. McKeon (GALCIT, California Institute of Technology), A. S. Sharma (Department of Aeronautics, Imperial College London)
 - **Source:** published as *A critical-layer framework for turbulent pipe flow*, J. Fluid Mech. 658, 336–382 (2010), doi:10.1017/S002211201000176X. This file is the arXiv preprint, arXiv:1001.3100v1 [physics.flu-dyn] (18 Jan 2010), titled *A critical layer model for turbulent pipe flow* (JFM LaTeX style, "under consideration"). Wording, section numbers and figure numbers may differ from the published version.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf` (44 pp.). Page refs are PDF pages, which equal the printed preprint page numbers.
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf` (44 pp.). Page refs are PDF pages, which equal the printed preprint page numbers.
 - **Tags:** resolvent analysis (origin), input–output analysis, nonlinear term as forcing, singular value decomposition (Schmidt decomposition), optimal forcing and response, mean-flow linear operator, critical layer, wall layer, Orr–Sommerfeld scaling, non-normality, pseudospectra, very-large-scale motions (VLSMs), near-wall cycle, inner/outer scaling, amplitude modulation, Taylor's hypothesis, turbulent pipe flow, Princeton Superpipe
 
 ## Summary

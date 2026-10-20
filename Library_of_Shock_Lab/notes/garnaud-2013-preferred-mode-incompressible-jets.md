@@ -8,7 +8,7 @@ venue: "JFM 716, 189–202"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "716", "pages": "189--202", "note": "Held PDF is the HAL author version hal-00756811"}
 doi: "10.1017/jfm.2012.540"
 arxiv: ""
-pdf: "linear-models/Garnaud-EtAl_2013_The-Preferred-Mode-Of-Incompressible-Jets-Linear-Frequency-Response-Analysis.pdf"
+pdf: "linear-operator-methods/Garnaud-EtAl_2013_The-Preferred-Mode-Of-Incompressible-Jets-Linear-Frequency-Response-Analysis.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["resolvent", "LSA-global", "LSA-local"]
 flow: ["round-jet", "subsonic"]
 phenomena: ["KH-wavepackets", "Orr"]
 params: {"Re": "1000–5000 (radius-based)", "m": "0–2", "theta/R": "0.043"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods"]
 related: ["lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "nogueira-2021-absolute-instability-shock-containing-jets", "morra-2021-colour-of-forcing-resolvent-channel"]
 cites: ["gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "michalke-1984-survey-jet-instability-theory"]
 summary: "Global resolvent of an incompressible model jet with nozzle pipe: no resonating global mode; the preferred mode is a pseudo-resonance, peak gain St ≈ 0.43–0.46, Orr forcing in the pipe BL"
@@ -27,7 +27,7 @@ summary: "Global resolvent of an incompressible model jet with nozzle pipe: no r
 
 - **Authors:** X. Garnaud, L. Lesshafft, P. J. Schmid, P. Huerre (LadHyX, École Polytechnique – CNRS, Palaiseau)
 - **Source:** J. Fluid Mech. 716, 189–202 (2013), doi:10.1017/jfm.2012.540. This file is the HAL author version (hal-00756811v1, deposited 23 Nov 2012, headed "Under consideration for publication in J. Fluid Mech."), so its page layout and possibly some figure details differ from the published paper.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Garnaud-EtAl_2013_The-Preferred-Mode-Of-Incompressible-Jets-Linear-Frequency-Response-Analysis.pdf` (14 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Garnaud-EtAl_2013_The-Preferred-Mode-Of-Incompressible-Jets-Linear-Frequency-Response-Analysis.pdf` (14 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the HAL cover sheet, so the draft's printed page n is PDF page n+1.
 - **Tags:** jet preferred mode, global resolvent analysis, optimal harmonic forcing, pseudo-resonance, non-normality, global stability spectrum, pseudomodes, Kelvin–Helmholtz wavepacket, shear-layer vs jet-column mode, Orr mechanism, nozzle-pipe receptivity, mean-flow linearisation, incompressible axisymmetric jet, azimuthal wavenumber m, FreeFEM++/SLEPc
 

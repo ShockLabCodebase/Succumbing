@@ -8,7 +8,7 @@ venue: "arXiv:2501.04255"
 bib: {"note": "arXiv:2501.04255v1 [physics.flu-dyn]"}
 doi: "10.48550/arXiv.2501.04255"
 arxiv: "2501.04255"
-pdf: "linear-models/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf"
+pdf: "linear-operator-methods/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["resolvent", "LSA-global", "PSD"]
 flow: ["airfoil", "wake", "shear-layer", "subsonic"]
 phenomena: ["KH-wavepackets", "coherent-structures"]
 params: {"Re": "1000–10000", "alpha": "9°, 14°", "M": "0.1"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods"]
 related: ["taira-2020-modal-analysis-applications-outlook", "edgington-mitchell-2020-waves-in-screeching-jets", "pickering-2020-lift-up-kh-orr-jets", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2018-spod-relationship-dmd-resolvent"]
 cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Discounted biglobal resolvent of NACA0012 DNS/LES mean flows, Re 1000–10000: short horizons pick the shear layer (St ≈ 0.027√Re), long ones the wake mode; resolvent wavemaker"
@@ -27,7 +27,7 @@ summary: "Discounted biglobal resolvent of NACA0012 DNS/LES mean flows, Re 1000�
 
 - **Authors:** L. V. Rolandi, L. Smith, M. Amitay, V. Theofilis, K. Taira (UCLA; Rensselaer Polytechnic Institute; Technion)
 - **Source:** arXiv:2501.04255v1 [physics.flu-dyn] (preprint, 8 Jan 2025; DOI 10.48550/arXiv.2501.04255)
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf` (26 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf` (26 pp.)
 - **Tags:** resolvent analysis, discounted resolvent, biglobal (mean-flow) linear analysis, eigenvalue analysis, separated flow, NACA0012 airfoil, shear-layer (KH) amplifier, wake / vortex shedding, resolvent wavemaker, spanwise wavenumber, Reynolds-number scaling, DNS, wall-resolved LES, Chu norm, CharLES
 
 ## Summary

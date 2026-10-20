@@ -8,7 +8,7 @@ venue: "Phys. Rev. Fluids 4, 063901"
 bib: {"journal": "Physical Review Fluids", "volume": "4", "number": "6", "pages": "063901"}
 doi: "10.1103/PhysRevFluids.4.063901"
 arxiv: "1810.09340"
-pdf: "linear-models/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf"
+pdf: "linear-operator-methods/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["resolvent", "SPOD", "LSA-local"]
 flow: ["round-jet", "subsonic"]
 phenomena: ["KH-wavepackets", "Orr"]
 params: {"M_j": "0.4", "Re": "4.6×10⁵", "D": "50 mm", "m": "0", "St": "0.2–0.7"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods"]
 related: ["pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent", "garnaud-2013-preferred-mode-incompressible-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "nogueira-2019-large-scale-streaky-structures-jets", "morra-2021-colour-of-forcing-resolvent-channel"]
 cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "garnaud-2013-preferred-mode-incompressible-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "sieber-2016-spectral-proper-orthogonal-decomposition", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Global resolvent (nozzle included, m = 0) of the M 0.4 Pprime jet vs SPOD of TR stereo PIV: optimal = KH fed by Orr forcing in the nozzle BL; SPOD mode 1 matched at St 0.4–0.7, mode 2 not"
@@ -27,7 +27,7 @@ summary: "Global resolvent (nozzle included, m = 0) of the M 0.4 Pprime jet vs S
 
 - **Authors:** L. Lesshafft (LadHyX, CNRS / École polytechnique), O. Semeraro (LadHyX; LIMSI, CNRS / Université Paris-Saclay), V. Jaunet (Institut Pprime, Poitiers), A. V. G. Cavalieri (Instituto Tecnológico de Aeronáutica, Brazil), P. Jordan (Institut Pprime)
 - **Source:** Phys. Rev. Fluids 4, 063901 (2019), published as *Resolvent-based modeling of coherent wave packets in a turbulent jet*, doi:10.1103/PhysRevFluids.4.063901. This file is the **arXiv version**, arXiv:1810.09340v2 [physics.flu-dyn] (6 Jun 2019), so its layout and page numbers differ from the journal version.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf` (29 pp.; printed page n = PDF page n)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf` (29 pp.; printed page n = PDF page n)
 - **Tags:** global resolvent analysis, optimal forcing and response, sub-optimal modes, Orr mechanism, Kelvin–Helmholtz (shear) instability, nozzle boundary layer receptivity, SPOD from experimental CSD, low-rank CSD model, white-noise forcing hypothesis, rank-1 approximation, partial-state observation, local spatial stability projection, PSE, Mach 0.4 subsonic jet, time-resolved stereo PIV, Bruit et Vent facility
 
 ## Summary

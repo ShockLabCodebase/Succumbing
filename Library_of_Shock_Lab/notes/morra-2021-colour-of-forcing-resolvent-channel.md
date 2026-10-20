@@ -8,7 +8,7 @@ venue: "JFM 907, A24"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "907", "pages": "A24"}
 doi: "10.1017/jfm.2020.802"
 arxiv: ""
-pdf: "linear-models/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf"
+pdf: "linear-operator-methods/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["resolvent", "SPOD", "eddy-viscosity"]
 flow: ["wall-bounded"]
 phenomena: ["streaks", "coherent-structures"]
 params: {"Re_τ": "179, 543"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods", "linear-models"]
 related: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "nogueira-2019-large-scale-streaky-structures-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2018-spectral-analysis-jet-turbulence"]
 cites: ["cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "DNS nonlinear-forcing CSD (Re_τ 179, 543) through the resolvent recovers the response exactly; forcing is coloured, rank-2, projects onto sub-optimals; cross-components cancel"
@@ -27,7 +27,7 @@ summary: "DNS nonlinear-forcing CSD (Re_τ 179, 543) through the resolvent recov
 
 - **Authors:** P. Morra, P. A. S. Nogueira, A. V. G. Cavalieri, D. S. Henningson (KTH FLOW, Stockholm; Instituto Tecnológico de Aeronáutica, São José dos Campos)
 - **Source:** J. Fluid Mech. 907, A24 (2021), doi:10.1017/jfm.2020.802. Received 3 Apr 2020, accepted 16 Sep 2020, published online 2020. Open access (CC BY-NC-ND).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf` (30 pp.).
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf` (30 pp.).
 - **Tags:** resolvent analysis, nonlinear forcing, forcing colour, cross-spectral density (CSD), SPOD, turbulent channel flow, DNS, eddy viscosity (Cess), lift-up, low-rank forcing, solenoidal projection, Orr–Sommerfeld–Squire, Welch windowing correction, sub-optimal resolvent modes
 
 ## Summary

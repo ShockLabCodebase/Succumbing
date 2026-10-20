@@ -8,7 +8,7 @@ venue: "JFM 896, A2"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "896", "pages": "A2"}
 doi: ""
 arxiv: "1909.09737"
-pdf: "linear-models/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf"
+pdf: "linear-operator-methods/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf"
 version: "preprint"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["SPOD", "resolvent", "eddy-viscosity", "symmetry-decomposition"]
 flow: ["round-jet", "subsonic", "supersonic"]
 phenomena: ["streaks", "KH-wavepackets", "Orr"]
 params: {"M_j": "0.4, 0.9, 1.5", "Re": "4.5×10⁵–1.76×10⁶"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods"]
 related: ["nogueira-2019-large-scale-streaky-structures-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "morra-2021-colour-of-forcing-resolvent-channel", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "garnaud-2013-preferred-mode-incompressible-jets", "towne-2018-spod-relationship-dmd-resolvent", "nogueira-2026-flapping-motion-screeching-round-jets"]
 cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "michalke-1984-survey-jet-instability-theory", "nogueira-2019-large-scale-streaky-structures-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "SPOD of M_j 0.4/0.9/1.5 jet LES + global resolvent with TKE eddy viscosity map lift-up (St/m ≲ 0.1), KH and Orr regimes; dominant streak m falls roughly as 1/x"
@@ -27,7 +27,7 @@ summary: "SPOD of M_j 0.4/0.9/1.5 jet LES + global resolvent with TKE eddy visco
 
 - **Authors:** E. Pickering, G. Rigas, P. A. S. Nogueira, A. V. G. Cavalieri, O. T. Schmidt, T. Colonius (Caltech; ITA, Brazil; UC San Diego)
 - **Source:** J. Fluid Mech. (2020) 896, A2; arXiv:1909.09737v2 (17 Jul 2020). Received 18 Sep 2019, accepted 14 Apr 2020 (p. 1). The DOI isn't printed in this arXiv version.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf` (35 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf` (35 pp.)
 - **Tags:** turbulent jet, lift-up, streaks, streamwise vortices, Kelvin–Helmholtz wavepacket, Orr mechanism, global resolvent analysis, eddy viscosity, SPOD, structural sensitivity, mechanism map, azimuthal wavenumber, LES, subsonic/transonic/supersonic
 
 ## Summary

@@ -8,7 +8,7 @@ venue: "JFM 917, A29"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "917", "pages": "A29"}
 doi: "10.1017/jfm.2021.232"
 arxiv: "2005.10964"
-pdf: "linear-models/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf"
+pdf: "linear-operator-methods/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf"
 version: "preprint"
 unverified: ["article number A29 and DOI from memory, not in the PDF"]
 group: false
@@ -18,7 +18,7 @@ methods: ["resolvent", "eddy-viscosity", "SPOD"]
 flow: ["round-jet", "subsonic", "supersonic"]
 phenomena: ["KH-wavepackets", "Orr", "streaks"]
 params: {"M_j": "0.4, 0.9, 1.5", "Re": "4.5×10⁵–1.76×10⁶", "St": "0.05–1", "m": "0–5"}
-topics: ["linear-models"]
+topics: ["linear-operator-methods", "linear-models"]
 related: ["pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2018-spod-relationship-dmd-resolvent", "towne-2022-database-reduced-complexity-modeling", "rolandi-2025-biglobal-resolvent-naca0012", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet"]
 cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "garnaud-2013-preferred-mode-incompressible-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Adjoint-optimal eddy-viscosity field aligns resolvent and SPOD modes of M_j 0.4–1.5 jet LES (Orr ~10%→80%, KH 96%); RANS k–ε μ_T × 0.2 is near-optimal; forcing still not white"
@@ -28,7 +28,7 @@ summary: "Adjoint-optimal eddy-viscosity field aligns resolvent and SPOD modes o
 - **Authors:** E. Pickering, G. Rigas, O. T. Schmidt, D. Sipp, T. Colonius (Caltech; UC San Diego; ONERA, Meudon) (p. 1)
 - **Source:** J. Fluid Mech. (2021) 917 (published version). This PDF is the arXiv preprint, arXiv:2005.10964v2 [physics.flu-dyn] (8 Jan 2021), in JFM draft style; it prints no article number, DOI or received/accepted dates (p. 1).
   > The published article number (A29) and DOI (10.1017/jfm.2021.232) are from memory, not from this PDF. Check before citing.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf` (index key `linear-models/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf`, 34 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf` (index key `linear-operator-methods/Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf`, 34 pp.)
 - **Tags:** resolvent analysis, eddy viscosity, eddy-viscosity resolvent analysis (EVRA), SPOD, SPOD–resolvent alignment, adjoint/Lagrangian optimisation, data assimilation, field inversion, RANS k–ε, mean-flow consistent eddy viscosity, turbulent Reynolds number, linear damping, forcing colour, Kelvin–Helmholtz, Orr, lift-up, turbulent round jets, LES, subsonic/transonic/supersonic
 
 ## Summary

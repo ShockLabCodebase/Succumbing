@@ -18,7 +18,7 @@ methods: ["POD", "DMD", "LSA-global", "LSA-Floquet", "resolvent", "transient-gro
 flow: ["wake", "wall-bounded", "airfoil", "cavity", "generic"]
 phenomena: ["coherent-structures", "cavity-tones"]
 params: {}
-topics: ["modal-decomposition", "linear-models"]
+topics: ["modal-decomposition", "linear-operator-methods"]
 related: ["taira-2017-modal-analysis-fluid-flows-overview", "schmid-2010-dynamic-mode-decomposition", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "brunton-2020-machine-learning-fluid-mechanics", "rolandi-2025-biglobal-resolvent-naca0012", "towne-2018-spod-relationship-dmd-resolvent", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2022-database-reduced-complexity-modeling"]
 cites: ["brunton-2020-machine-learning-fluid-mechanics", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmidt-2018-spectral-analysis-jet-turbulence"]
 summary: "Sequel to the 2017 overview on interpreting results: POD = DMD on limit cycles; global/Floquet stability, pseudospectra, BPOD vs POD Galerkin; discounted resolvent; cavity Rossiter control"

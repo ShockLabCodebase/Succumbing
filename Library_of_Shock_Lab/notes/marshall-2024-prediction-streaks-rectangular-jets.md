@@ -8,7 +8,7 @@ venue: "Research Square preprint"
 bib: {"publisher": "Research Square", "note": "Preprint, not peer-reviewed"}
 doi: "10.21203/rs.3.rs-4197686/v1"
 arxiv: ""
-pdf: "linear-models/Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf"
+pdf: "linear-operator-methods/Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf"
 version: "preprint"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["resolvent", "symmetry-decomposition"]
 flow: ["rectangular-jet"]
 phenomena: ["streaks"]
 params: {"AR": "1–5", "St": "0", "shear-thickness factor s": "1–10", "corner exponent χ": "2–32"}
-topics: ["linear-models", "non-axisymmetric-and-twin-jets"]
+topics: ["linear-operator-methods", "non-axisymmetric-and-twin-jets"]
 related: ["nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "morra-2021-colour-of-forcing-resolvent-channel", "nogueira-2026-flapping-motion-screeching-round-jets"]
 cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Cross-plane incompressible resolvent (ω = 0, D2 split) on tanh rectangular jets: AS/SA dipole streaks lead; corner sharpness barely matters, so corner vortices are not linear streaks"
@@ -27,7 +27,7 @@ summary: "Cross-plane incompressible resolvent (ω = 0, D2 split) on tanh rectan
 
 - **Authors:** C. Marshall, D. Edgington-Mitchell, P. Nogueira (Department of Mechanical and Aerospace Engineering, Monash University)
 - **Source:** Research Square **preprint**, posted 5 April 2024, doi:10.21203/rs.3.rs-4197686/v1, CC BY 4.0 (PDF p. 1). This version is **not peer-reviewed**. The manuscript still has unresolved cross-references ("Eq. (??)", p. 7) and an empty "Acknowledgments/Declarations" section (p. 24), so treat details as draft.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf` (index key `linear-models/Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf`, 32 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-operator-methods/Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf` (index key `linear-operator-methods/Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf`, 32 pp.)
 - **Page refs:** PDF page numbers. PDF p. 1 is the Research Square cover sheet, so the manuscript's printed page n is PDF page n+1.
 - **Tags:** streaks, lift-up, streamwise vortices (rolls), rectangular jet, aspect ratio, corner vortices, corner curvature, shear-layer thickness, 2D cross-plane (bi-global) resolvent analysis, incompressible, locally parallel, ω = 0 and k_x = 0, D2 symmetry (SS/SA/AS/AA), forcing weighting, Chebyshev pseudo-spectral, GPU, model-only (no data)
 

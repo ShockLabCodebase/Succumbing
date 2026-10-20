@@ -252,7 +252,8 @@ Each value is a page in `topics/`.
 - `screech`: screech mechanism, closure, frequency prediction, staging, mode switching, amplitude
 - `non-axisymmetric-and-twin-jets`: rectangular, elliptical and twin jets; flapping; coupling; axis switching
 - `impinging-jets-and-edge-tones`: impinging jets, jet–edge and jet–flap tones, other jet–surface feedback
-- `linear-models`: linear stability, resolvent, PSE/OWNS, guided-jet-wave theory, wavepacket models
+- `linear-models`: mean-flow linear theory and wave models: local stability, vortex sheets, absolute instability, Floquet/shock-cell models, guided-jet-wave theory, wavepacket models
+- `linear-operator-methods`: operator methods on the linearised equations: global stability, resolvent analysis (forcing, eddy viscosity), PSE/PFE/OWNS, harmonic resolvent
 - `jet-noise-mechanisms`: mixing noise, Mach wave radiation, BBSAN, crackle in jets
 - `modal-decomposition`: POD, SPOD and variants, DMD, BMD, Koopman: algorithms and practice
 - `time-frequency-methods`: Hilbert transform, HPOD, EMD, wavelets, SPOD reconstruction/filtering, intermittency tracking

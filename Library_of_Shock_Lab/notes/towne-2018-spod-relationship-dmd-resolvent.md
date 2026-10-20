@@ -18,7 +18,7 @@ methods: ["SPOD", "POD", "DMD", "resolvent", "PSD"]
 flow: ["round-jet", "subsonic", "generic"]
 phenomena: ["KH-wavepackets"]
 params: {"M_j": "0.4", "Re": "1×10⁶"}
-topics: ["modal-decomposition", "linear-models"]
+topics: ["modal-decomposition", "linear-operator-methods"]
 related: ["schmidt-2020-guide-spod", "schmidt-2018-spectral-analysis-jet-turbulence", "sieber-2016-spectral-proper-orthogonal-decomposition", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "morra-2021-colour-of-forcing-resolvent-channel", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmid-2010-dynamic-mode-decomposition", "raiola-2025-hilbert-pod"]
 cites: ["garnaud-2013-preferred-mode-incompressible-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview"]
 summary: "Core SPOD reference: Welch-block algorithm; SPOD modes are space–time coherent, POD modes are not; SPOD = optimally averaged ensemble DMD; SPOD = resolvent only for white forcing; M 0.4 jet LES"
