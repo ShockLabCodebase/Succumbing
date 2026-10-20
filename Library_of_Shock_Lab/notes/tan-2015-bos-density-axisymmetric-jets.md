@@ -8,7 +8,7 @@ venue: "Exp. Fluids 56, 204"
 bib: {"journal": "Experiments in Fluids", "volume": "56", "pages": "204"}
 doi: "10.1007/s00348-015-2076-6"
 arxiv: ""
-pdf: "diagnostics-and-facilities/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf"
+pdf: "schlieren-and-density-imaging/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf"
 version: "published"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["Abel-inversion", "statistics"]
 flow: ["round-jet", "subsonic"]
 phenomena: []
 params: {"NPR": "2–4", "Re": "230; 6000–9000", "D": "20 mm; 0.5 mm", "gas": "helium"}
-topics: ["diagnostics-and-facilities"]
+topics: ["schlieren-and-density-imaging"]
 related: ["raffel-2015-background-oriented-schlieren-review", "molnar-2023-physics-informed-bos-supersonic", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2023-screeching-jet-seen-from-all-sides"]
 cites: []
 summary: "Single-camera BOS → adaptive Fourier–Hankel Abel inversion → Gladstone–Dale mean density; average before inverting; synthetic error maps; He jets 4–9% error"
@@ -28,7 +28,7 @@ summary: "Single-camera BOS → adaptive Fourier–Hankel Abel inversion → Gla
 - **Authors:** D. J. Tan, D. Edgington-Mitchell, D. Honnery (LTRAC, Monash University)
 - **Source:** Experiments in Fluids 56:204 (2015). Received 22 Jul 2015, published online 3 Nov 2015.
 - **DOI:** 10.1007/s00348-015-2076-6
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/diagnostics-and-facilities/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf` (11 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/schlieren-and-density-imaging/Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf` (11 pp.)
 - **Tags:** background-oriented schlieren, BOS, Abel inversion, adaptive Fourier–Hankel (AFH), quantitative density, Gladstone–Dale, cross-correlation, wavelet-noise background, error analysis, helium jet, fuel injector, self-similarity, density half-radius
 
 ## Summary

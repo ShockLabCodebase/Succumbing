@@ -18,7 +18,7 @@ methods: ["POD", "POD-pair", "PSD"]
 flow: ["rectangular-jet", "multi-stream-jet", "supersonic", "ideally-expanded"]
 phenomena: ["coherent-structures", "flapping"]
 params: {"M_j": "1.6 (bulk), 1.0 (third stream)", "Re": "2.74×10⁶", "D_h": "44.1 mm", "f_s": "50–100 kHz"}
-topics: ["modal-decomposition", "non-axisymmetric-and-twin-jets", "diagnostics-and-facilities"]
+topics: ["modal-decomposition", "non-axisymmetric-and-twin-jets", "schlieren-and-density-imaging"]
 related: ["sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2020-guide-spod", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "samimy-1998-rectangular-jet-trailing-edge-control", "kerechanin-2001-trailing-edge-rectangular-jet-acoustics"]
 cites: ["krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
 summary: "Snapshot POD of 50–100 kHz schlieren of a three-stream SERN jet (M_j 1.6, aft deck): mode pair holds St 3.4 splitter-plate tone, aliased at 50 kHz; flapping at St 0.46–0.70"

@@ -8,7 +8,7 @@ venue: "Int. J. Pharm. (2021)"
 bib: {"journal": "International Journal of Pharmaceutics", "note": "volume and article number not printed in the accepted manuscript"}
 doi: "10.1016/j.ijpharm.2021.120341"
 arxiv: ""
-pdf: "diagnostics-and-facilities/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf"
+pdf: "schlieren-and-density-imaging/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf"
 version: "accepted-manuscript"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["statistics"]
 flow: ["spray", "twin-jet"]
 phenomena: ["jet-merging"]
 params: {"orifice": "2 × 0.22 mm (twin), 0.33 mm (single)", "propellant": "HFA-134a + 15% w/w ethanol", "f_s": "5 kHz"}
-topics: ["diagnostics-and-facilities"]
+topics: ["schlieren-and-density-imaging"]
 related: ["nogueira-2021-twin-jet-coupling-spatial-lsa", "esfahani-2021-coupling-modes-twin-rectangular-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "tan-2015-bos-density-axisymmetric-jets"]
 cites: []
 summary: "Twin 0.22 mm pMDI orifices raise FPF 75% over a 0.33 mm Bespak; 5 kHz extinction imaging shows one merged plume; half-velocity distance x_1/2 predicts FPF (R² 0.997)"
@@ -27,7 +27,7 @@ summary: "Twin 0.22 mm pMDI orifices raise FPF 75% over a 0.33 mm Bespak; 5 kHz 
 
 - **Authors:** D. J. Duke, D. T. Nguyen, L. Gomes dos Reis, D. M. Silva, A. Neild, D. Edgington-Mitchell, P. M. Young, D. R. Honnery (LTRAC and Laboratory for Microsystems, Monash; Woolcock Institute / University of Sydney)
 - **Source:** Int. J. Pharm. (2021), doi:10.1016/j.ijpharm.2021.120341. This file is the accepted manuscript (Elsevier preprint style, dated 3 Feb 2021), so its layout and page numbers differ from the published version.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/diagnostics-and-facilities/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf` (22 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/schlieren-and-density-imaging/Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf` (22 pp.)
 - **Page refs:** PDF page numbers, which equal the manuscript's printed page numbers.
 - **Tags:** pMDI, flash-boiling spray, twin-orifice nozzle, plume merging (spray collapse), fine particle fraction, Next Generation Impactor, high-speed diffuse back-illumination, extinction imaging, FWHM plume width, cross-correlation velocimetry, micro-injection moulding
 

@@ -8,7 +8,7 @@ venue: "Exp. Fluids 64, 14"
 bib: {"journal": "Experiments in Fluids", "volume": "64", "pages": "14"}
 doi: "10.1007/s00348-022-03554-y"
 arxiv: ""
-pdf: "diagnostics-and-facilities/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf"
+pdf: "schlieren-and-density-imaging/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["ML", "Abel-inversion", "optical-modelling"]
 flow: ["supersonic", "wind-tunnel", "external-flow"]
 phenomena: ["shock-waves"]
 params: {"M": "2", "model": "15° cone-cylinder; 20° Prandtl–Meyer corner (synthetic)"}
-topics: ["diagnostics-and-facilities", "simulation-methods"]
+topics: ["schlieren-and-density-imaging", "simulation-methods"]
 related: ["tan-2015-bos-density-axisymmetric-jets", "raffel-2015-background-oriented-schlieren-review", "brunton-2020-machine-learning-fluid-mechanics", "sun-2021-distortion-correction-large-sensor-piv"]
 cites: ["raffel-2015-background-oriented-schlieren-review"]
 summary: "PINN with a unified-BOS data loss and Euler physics loss gives ρ, u, v, p from one image pair; Mach 2 cone and Prandtl–Meyer fan; density error 3.75% vs 6.12% Tikhonov, 8.34% Abel"
@@ -28,7 +28,7 @@ summary: "PINN with a unified-BOS data loss and Euler physics loss gives ρ, u, 
 - **Authors:** J. P. Molnar, L. Venkatakrishnan, B. E. Schmidt, T. A. Sipkens, S. J. Grauer (Penn State; CSIR-NAL Bangalore; Case Western Reserve; NRC Canada)
 - **Source:** Experiments in Fluids 64:14 (2023; received 5 Aug 2022, published online 5 Jan 2023)
 - **DOI:** 10.1007/s00348-022-03554-y
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/diagnostics-and-facilities/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf` (24 pp.; local only, not in Git)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/schlieren-and-density-imaging/Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf` (24 pp.; local only, not in Git)
 - **Tags:** background-oriented schlieren, BOS, physics-informed neural network, PINN, data assimilation, unified BOS, optical flow, wOFA, Abel inversion, Sipkens kernel, Tikhonov regularization, Euler equations, irrotationality, cone-cylinder, Prandtl–Meyer expansion fan, Mach 2, synthetic phantoms, nonlinear ray tracing, SU2
 
 ## Summary

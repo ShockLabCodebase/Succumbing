@@ -258,5 +258,6 @@ Each value is a page in `topics/`.
 - `time-frequency-methods`: Hilbert transform, HPOD, EMD, wavelets, SPOD reconstruction/filtering, intermittency tracking
 - `rocket-noise-models`: SP-8072 and successors (DSM, SATURN, efficiency, directivity, source location), CAA/LES predictions
 - `rocket-noise-measurements`: full-scale launch and static-firing measurements, sonic booms, nonlinear propagation
-- `diagnostics-and-facilities`: schlieren, BOS, PIV practice, calibration, facility design
+- `diagnostics-and-facilities`: PIV practice in shock-containing flow (tracer response, calibration, sample size and phase), facility design and acoustic environment
+- `schlieren-and-density-imaging`: schlieren and time-resolved schlieren practice, BOS, Abel inversion, tomography, interferometry, base-flow density, synthetic schlieren and image–simulation matching
 - `simulation-methods`: CFD/LES numerics, solvers, ML for flows, shock-dynamics computations

@@ -8,7 +8,7 @@ venue: "Exp. Fluids 56, 60"
 bib: {"journal": "Experiments in Fluids", "volume": "56", "pages": "60", "note": "Open access"}
 doi: "10.1007/s00348-015-1927-5"
 arxiv: ""
-pdf: "diagnostics-and-facilities/Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf"
+pdf: "schlieren-and-density-imaging/Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["Abel-inversion", "tomography"]
 flow: ["generic"]
 phenomena: []
 params: {}
-topics: ["diagnostics-and-facilities"]
+topics: ["schlieren-and-density-imaging"]
 related: ["tan-2015-bos-density-axisymmetric-jets", "molnar-2023-physics-informed-bos-supersonic", "edgington-mitchell-2020-waves-in-screeching-jets"]
 cites: []
 summary: "BOS review: displacement/blur optics (f/11, 3–5 px dots), 2–3% full-scale error, 50:1 range; Abel, Poisson and tomographic density, stereo, RBOS, kHz–MHz BOS, velocimetry"
@@ -28,7 +28,7 @@ summary: "BOS review: displacement/blur optics (f/11, 3–5 px dots), 2–3% ful
 - **Authors:** M. Raffel (Institute of Aerodynamics and Flow Technology, DLR Göttingen)
 - **Source:** Experiments in Fluids 56:60 (2015), review article, open access. Received 27 Jan 2015, published online 6 Mar 2015.
 - **DOI:** 10.1007/s00348-015-1927-5
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/diagnostics-and-facilities/Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf` (index key `diagnostics-and-facilities/Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf`, 17 pp.; local only, not in Git)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/schlieren-and-density-imaging/Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf` (index key `schlieren-and-density-imaging/Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf`, 17 pp.; local only, not in Git)
 - **Tags:** background-oriented schlieren, BOS, review, synthetic schlieren, cross-correlation, image blur, depth of field, Gladstone–Dale, Poisson integration, Abel inversion, tomographic BOS, filtered back-projection, ART, stereo BOS, epipolar geometry, pulsed LED, retroreflective BOS (RBOS), high-framing-rate BOS, BOS velocimetry, density tagging velocimetry, colour BOS (CBOS), natural-background BOS, reference-free BOS, free-surface BOS
 
 ## Summary

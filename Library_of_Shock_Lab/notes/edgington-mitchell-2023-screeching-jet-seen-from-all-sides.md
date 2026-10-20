@@ -18,7 +18,7 @@ methods: ["tomography", "symmetry-decomposition", "POD"]
 flow: ["round-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "helical", "intermittency"]
 params: {}
-topics: ["screech", "diagnostics-and-facilities"]
+topics: ["screech", "schlieren-and-density-imaging"]
 related: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "tan-2015-bos-density-axisymmetric-jets", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "jeun-2024-screech-coupling-closure-rectangular-twin-jets"]
 cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2020-waves-in-screeching-jets", "gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets", "jordan-2018-jet-flap-interaction-tones", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "Commentary on Léon et al. 2022: six-view holographic interferometry gives the 3D density of a C-mode jet; m = ±1 proves the helix, POD shows frequent helicity reversals"
