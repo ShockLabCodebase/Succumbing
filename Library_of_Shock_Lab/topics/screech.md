@@ -128,6 +128,7 @@ The LES cannot give dwell-time statistics (1–4 s, about 10⁴–10⁵ D/U_j). 
 - [Kerechanin 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): symmetric and asymmetric trailing-edge cutouts amplify or suppress rectangular-jet screech.
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): helical screech mode reaches the Mach-disk shear layer; no recirculation bubble.
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): theory of trapped and guided waves and their saddle-bounded bands.
+- [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): source at the 4th shock tip for A1 and A2; integer-period loop with m = 4 → 5 at the A1/A2 jump (synthesis pending).
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): first evidence that the G-JM closes A1 and A2.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): twin-jet staging; U_c constant across modes while λ_SW/s changes.
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model; A1/A2 mutually exclusive switching.

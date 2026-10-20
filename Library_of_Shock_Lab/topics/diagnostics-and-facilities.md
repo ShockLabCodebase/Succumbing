@@ -299,6 +299,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Raffel 2015](../notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; set-up recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../notes/tan-2015-bos-density-axisymmetric-jets.md): group single-camera BOS → Abel → mean density recipe with synthetic error map.
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): 50–100 kHz schlieren POD; aliasing; POD removes intensity drift (not tagged).
+- [Mercier et al. 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): 220–430 kfps thin-strip schlieren; near-field two-microphone phase averaging; LMFA anechoic jet (synthesis pending).
 - [Edgington-Mitchell et al. 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): standard group PIV settings for screech (not tagged).
 - [Knast et al. 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): HPV-1 bursts, x–t convection speeds, two-view correlations (not tagged).
 - [Mayer et al. 2019](../notes/mayer-2019-bristol-aeroacoustic-wind-tunnel.md): anechoic open-jet facility design and acoustic data-quality checks.
