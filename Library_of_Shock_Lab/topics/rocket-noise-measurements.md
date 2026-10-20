@@ -97,6 +97,7 @@ No paper uses SPOD, wavelets or Hilbert envelopes, so intermittent features (cra
 
 ## Papers
 
+- [McInerny & Ölçmen 2005](../notes/mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation.md): Titan IV and Scout launch waveforms obey the weak-shock rise-rate law out to 15 km; propagation must carry shocks (synthesis pending).
 - [Gee 2008](../notes/gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft.md): F-22A run-ups; first full-scale demonstration of nonlinear propagation (Burgers vs linear model).
 - [Kenny 2009](../notes/kenny-2009-space-shuttle-srm-plume-acoustics.md): first RSRM static-firing database; skewness, vectoring, 23 D_n near-field peak, ~50° directivity.
 - [Haynes 2009](../notes/haynes-2009-sp-8072-dsm-ii-ares-i-lift-off.md) (not tagged): RSRM 305 m arc as SP-8072 directivity; Saturn V lift-off spectra.

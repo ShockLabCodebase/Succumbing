@@ -145,6 +145,7 @@ Trailing-edge cutouts on AR 3 Mach 2 nozzles make streamwise vortices only off-d
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): review; antisymmetric rectangular modes, bevelled nozzles, early twin rectangular coupling.
 - [Samimy 1998](../notes/samimy-1998-rectangular-jet-trailing-edge-control.md): AR 3 trailing-edge cutouts; streamwise vortices, mixing, axis switching.
 - [Kerechanin 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): acoustics of the same cutouts; nozzle symmetry decides whether screech is suppressed or amplified.
+- [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 elliptic jet at NPR 2.2: flapping gives the St 0.52 tone; a slower helical-like POD pair after the shocks makes no tone (synthesis pending).
 - [Berry 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): POD of TR schlieren of a multi-stream rectangular jet; flapping without screech, aliasing.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): four coupling modes of round twins; phase jumps without frequency jumps.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES of AR 2 C-D rectangular jets, NPR 3 and 4, TR 1–3; flapping turns from diagonal to minor-axis with heating (synthesis pending).

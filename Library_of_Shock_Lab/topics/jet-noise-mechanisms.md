@@ -130,6 +130,7 @@ Ray-traced near-pad arrays, plus wavenumber-filtered SPOD of heated-jet LES to s
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): pre-wavepacket synthesis of mixing noise, BBSAN and screech.
 - [Tam et al. 1996](../notes/tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md): large- and fine-scale similarity spectra and amplitude scalings.
 - [Kerechanin et al. 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts change mixing noise, BBSAN and screech of an AR 3 jet.
+- [Ray 2005](../notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): LEE with PSE-wave × shock-mode sources; BBSAN lobe at the local Mach angle of k_t − k_s; ring-source lobes at high St (synthesis pending).
 - [Samimy et al. 2006](../notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
 - [Cavalieri et al. 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): low-energy m = 0/1 linear wavepackets carry the low-angle sound.
 - [Cavalieri et al. 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; Mach waves, superdirectivity, jitter.

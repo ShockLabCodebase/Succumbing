@@ -149,6 +149,7 @@ Tam & Tanna proposed the product picture, in which KH × shock gives k ± λ_n (
 
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): convective Mach number; vortex-sheet vs finite-thickness stabilisation at high M_c.
 - [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): review of absolute/convective and local/global instability; Briggs–Bers pinch; WKB saddle sets the global frequency (synthesis pending).
+- [Ray 2005](../notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): LEE with PSE-wave × shock-mode sources; BBSAN lobe at the local Mach angle of k_t − k_s; ring-source lobes at high St (synthesis pending).
 - [McKeon & Sharma 2010](../notes/mckeon-2010-critical-layer-framework-turbulent-pipe-flow.md): origin of mean-flow resolvent (nonlinearity as forcing; critical layer).
 - [Gudmundsson & Colonius 2011](../notes/gudmundsson-2011-instability-wave-models-near-field-jets.md): PSE on PIV mean flows matches POD-filtered near-field pressure; fails below St 0.2.
 - [Oberleithner 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): mean-flow LSA reproduces a self-excited global mode measured by POD-pair PIV.

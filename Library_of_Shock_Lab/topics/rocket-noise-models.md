@@ -159,6 +159,7 @@ No model uses modal decomposition or anything time-resolved beyond slow-time lev
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): origin of the convective Mach number; its M_c is the "supersonic" family closest to the Falcon 9 peak angle.
 - [Tam 1996](../notes/tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md): lab large- and fine-scale similarity spectra; found unsuitable for rockets, but a modified form is used for ground factors.
 - [Kandula 2005](../notes/kandula-2005-near-field-acoustics-clustered-rocket-engines.md): two-zone clustered-nozzle model on SP-8072 with ground reflection; RAPT tool.
+- [McInerny & Ölçmen 2005](../notes/mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation.md): Titan IV and Scout launch waveforms obey the weak-shock rise-rate law out to 15 km; propagation must carry shocks (synthesis pending).
 - [Kandula 2008](../notes/kandula-2008-near-field-acoustics-clustered-rocket-engines.md): journal version with the corrected merging-length equation; the citable source.
 - [Casalino 2009](../notes/casalino-2009-hybrid-empirical-caa-rocket-noise.md): Eldred and Varnier sources with CAA Green's functions of the Vega pad; captures pad confinement, still 2–3 dB high.
 - [Haynes & Kenny 2009](../notes/haynes-2009-sp-8072-dsm-ii-ares-i-lift-off.md): DSM-2 with halved core, core terminated at the deflector and RSRM directivity; checked against Saturn V.

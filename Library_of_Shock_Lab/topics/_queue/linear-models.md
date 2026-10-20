@@ -34,3 +34,14 @@
   - pressure feedback from surfaces (edge, collar and cavity tones; eq. 48);
   - outflow-to-inflow pressure coupling in spatial simulations, a spurious "computational box" resonance (Buell & Huerre 1988; Fig. 8).
 - **Frequency-selection debate.** Pierrehumbert (max ω₀,ᵢ), Koch (ω₀ at the absolute/convective boundary) and the authors (complex saddle) disagree. Hannemann & Oertel's simulation supports Koch, which the authors concede "appears to contradict" them (p. 502). This is linear-theory background to "What selects the screech frequency?". It does not change the page's consensus.
+
+## ray-2005-instability-wave-shock-cell-interaction-sound (queued 2026-10-21)
+
+The paper is the library's earliest use of linear PSE wavepackets as a BBSAN source, and a precursor of wong-2021-wavepacket-modelling-bbsan.
+- **Model structure.** Axisymmetric PSE and locally parallel "quasi-viscous" zero-frequency shock modes (Tam, Jackson & Seiner 1985) share a RANS mean. They are coupled one-way, as quadratic product sources, in an inhomogeneous LEE solved with a Chebyshev–Fourier spectral code (eqs. 2–3, p. 2–3).
+- **Check against a parallel solution.** A locally parallel inhomogeneous Rayleigh-equation (Lilley–Goldstein) Green's function, with the mean profile from one station (x/D ≈ 4), matches the LEE at St 0.6. At St 0.9 the lobe angles still match but the amplitudes do not (Fig. 6, p. 9). This is either a non-parallel effect or, as the authors argue, ring-source interference.
+- **Radial structure of the PSE wavepacket matters.** At St 0.6 the u_x eigenfunction moves onto the axis by x/D 6; at St 0.9 it stays in the shear layer and peaks near x/D 1.5 (Fig. 2, p. 5–6). So the radial shape of the wavepacket, and not only its wavenumber, sets the directivity.
+- **Shock mode.** The first shock-mode eigenvalue hardly changes with heating (Fig. 8, p. 10). Its wavelength at the nozzle, about 1.02D, is close to the vortex-sheet 1.04D_j (my arithmetic).
+- **Contrast with PFE.** In nogueira-2021-wavepacket-modulation-shock-containing-jets the shocks modulate the wavepacket inside the operator and lengthen its envelope. Here the wavepacket is unmodulated: one-way coupling on a presumably shock-free mean. Eq. 8a makes level and directivity depend strongly on the envelope length L (p. 5), which shows why the PFE lengthening matters for BBSAN predictions.
+- **Caveat for forced linear runs.** The forced LEE also excites its own KH waves, which radiate a downstream Mach-wave lobe (p. 7).
+- **Link to the screech questions** (my derivation, not the paper's claim). The local condition θ_M = 180° is c_s1 = −1, i.e. k_t − k_s = −ω/a∞. That is Tam's screech closure condition (mercier-2017-screech-feedback-loop-underexpanded-round-jets, eq. 3.3). A Fig. 7-style θ_M(x) map from SPOD k_t(x) and mean k_s(x) would be a cheap test of "which shock wavenumber closes which stage". The paper itself does not change the page's open questions.
