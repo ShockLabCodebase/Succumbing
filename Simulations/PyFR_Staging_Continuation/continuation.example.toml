@@ -14,6 +14,10 @@ sampler_section = "soln-plugin-sampler"
 sampler_dataset = "probes"
 writer_section = "soln-plugin-writer"
 runs_dir = "runs"
+# Sampling interval (solver time) for every sampler and the time average:
+# the driver sets their nsteps to sample_dt/dt, which must be a whole
+# number. 0 keeps the nsteps in the base config.
+sample_dt = 0.02
 
 [physics]
 gamma = 1.4
@@ -70,6 +74,8 @@ module load cuda
 source $HOME/pyfr-venv/bin/activate
 """
 # {mesh}, {soln} and {ini} are filled in by the driver. For several GPUs,
-# partition the mesh and add -P <name> (and match --ntasks/--gres).
+# partition the mesh and add -P <name> (and match --ntasks/--gres). For the
+# lsrk-* time-stepping schemes, run tools/pyfr_lsrk.py in place of pyfr:
+#   launch = "srun python /path/to/tools/pyfr_lsrk.py restart -b cuda {mesh} {soln} {ini}"
 launch = "srun pyfr restart -b cuda {mesh} {soln} {ini}"
 python = "python"

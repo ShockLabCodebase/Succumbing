@@ -30,40 +30,44 @@ def velocity_ref(cfg, npr):
     return float(ph['velocity_ref'])
 
 
+# PyFR's sampler doesn't store the variable names; with format = primitive
+# (which check_base insists on) they are these, in this order
+PRIMITIVE_3D = ('rho', 'u', 'v', 'w', 'p')
+
+
 def read_sampler(paths, field='p', dataset=None):
     """Read and join PyFR sampler HDF5 series.
 
-    PyFR stores one compound record per sample, with fields 't' and
-    'samples' (npts, nvars), and the variable names in the 'fields'
-    attribute.
+    PyFR 3.1 writes, for a dataset name D, the samples D (nt, npts, nvars),
+    the times D_t (nt,) and the points D_p (npts, ndims). The variables are
+    the primitive ones, unless D has a 'fields' attribute naming them.
 
     Returns t (n,), y (n, npts) and the sample points (or None).
     """
     ts, ys, pts = [], [], None
     for path in paths:
         with h5py.File(path, 'r') as f:
-            if dataset is not None:
-                dset = f[dataset]
-            else:
-                names = [k for k in f if isinstance(f[k], h5py.Dataset)]
+            if dataset is None:
+                names = [k for k in f if isinstance(f[k], h5py.Dataset)
+                         and f'{k}_t' in f]
                 if len(names) != 1:
                     raise ValueError(f'{path}: give the dataset name, found '
                                      f'{names}')
-                dset = f[names[0]]
+                dataset = names[0]
 
-            fields = dset.attrs['fields']
+            dset = f[dataset]
+            fields = dset.attrs.get('fields', ','.join(PRIMITIVE_3D))
             if isinstance(fields, bytes):
                 fields = fields.decode()
             fields = [s.strip() for s in str(fields).split(',')]
             if field not in fields:
                 raise KeyError(f'{path}: field {field!r} not in {fields}')
 
-            rec = dset[...]
-            ts.append(np.asarray(rec['t'], dtype=float))
-            ys.append(np.asarray(rec['samples'][:, :, fields.index(field)],
+            ts.append(np.asarray(f[f'{dataset}_t'][...], dtype=float))
+            ys.append(np.asarray(dset[:, :, fields.index(field)],
                                  dtype=float))
-            if 'pts' in dset.attrs:
-                pts = np.asarray(dset.attrs['pts'])
+            if f'{dataset}_p' in f:
+                pts = np.asarray(f[f'{dataset}_p'][...])
 
     t, y = np.concatenate(ts), np.concatenate(ys)
 

@@ -1,6 +1,7 @@
 """Write the PyFR config for one segment from the base config."""
 
 import configparser
+import os
 
 from .settings import absp
 
@@ -11,6 +12,26 @@ def _read(path):
     with open(path) as f:
         ini.read_file(f)
     return ini
+
+
+def _plugins(ini, name):
+    """Sections of one plugin type, e.g. soln-plugin-sampler and -sampler-*."""
+    sect = f'soln-plugin-{name}'
+    return [s for s in ini.sections() if s == sect or s.startswith(sect + '-')]
+
+
+def _nsteps(cfg, ini):
+    """Steps per sample from case.sample_dt, or None to keep the base's."""
+    sample_dt = float(cfg['case']['sample_dt'])
+    if sample_dt <= 0:
+        return None
+
+    dt = ini.getfloat('solver-time-integrator', 'dt')
+    n = round(sample_dt/dt)
+    if n < 1 or abs(n*dt - sample_dt) > 1e-6*sample_dt:
+        raise ValueError(f'case.sample_dt = {sample_dt} is not a whole number '
+                         f'of steps of dt = {dt}')
+    return n
 
 
 def check_base(cfg, path):
@@ -29,15 +50,40 @@ def check_base(cfg, path):
         if not ini.has_section(sect):
             issues.append(f'no [{sect}] section')
 
+    s = case['sampler_section']
+    if ini.get(s, 'format', fallback='primitive') != 'primitive':
+        issues.append(f'[{s}] format is not primitive, which the analysis '
+                      'assumes')
+
     ti = 'solver-time-integrator'
     if ini.get(ti, 'controller', fallback='none') != 'none':
         issues.append(f'[{ti}] controller is not none: the sampler samples '
                       'every nsteps, so an adaptive dt gives uneven sampling')
 
+    try:
+        _nsteps(cfg, ini)
+    except ValueError as e:
+        issues.append(str(e))
+
+    if float(case['sample_dt']) <= 0:
+        nsteps = {s: ini.get(s, 'nsteps', fallback=None)
+                  for s in _plugins(ini, 'sampler')}
+        if len(set(nsteps.values())) > 1:
+            issues.append(f'samplers sample at different rates: {nsteps}')
+
+    names = [os.path.basename(ini.get(s, 'file'))
+             for s in ini.sections() if s.startswith('soln-plugin-')
+             and s != case['sampler_section'] and ini.has_option(s, 'file')]
+    names.append('samples.h5')          # the driver's name for the main one
+    if len(set(names)) < len(names):
+        issues.append(f'plugin output files share a name: {names}')
+
     return issues
 
 
-def write_segment_ini(cfg, out_path, npr, t_start, t_end, seg_dir_rel):
+def write_segment_ini(cfg, out_path, npr, t_start, t_end, seg_dir_rel,
+                      avg_from=None):
+    """Segment config; time averages start at avg_from (default t_start)."""
     case = cfg['case']
     ini = _read(absp(cfg, case['base_ini']))
 
@@ -48,10 +94,29 @@ def write_segment_ini(cfg, out_path, npr, t_start, t_end, seg_dir_rel):
     ini.set(ti, 'tstart', repr(float(t_start)))
     ini.set(ti, 'tend', repr(float(t_end)))
 
+    # Every plugin that writes a file writes it in the segment folder
+    for sect in ini.sections():
+        if sect.startswith('soln-plugin-') and ini.has_option(sect, 'file'):
+            name = os.path.basename(ini.get(sect, 'file'))
+            ini.set(sect, 'file', f'{seg_dir_rel}/{name}')
+
     s = case['sampler_section']
     ini.set(s, 'file', f'{seg_dir_rel}/samples.h5')
     ini.set(s, 'file-format', 'hdf5')
     ini.set(s, 'file-dataset', case['sampler_dataset'])
+
+    nsteps = _nsteps(cfg, ini)
+    if nsteps is not None:
+        for sect in _plugins(ini, 'sampler') + _plugins(ini, 'tavg'):
+            ini.set(sect, 'nsteps', str(nsteps))
+
+    # One average per segment, from the end of the transient (or the start
+    # of an extension) to the end of the segment
+    t_avg = float(t_start if avg_from is None else avg_from)
+    for sect in _plugins(ini, 'tavg'):
+        ini.set(sect, 'basedir', seg_dir_rel)
+        ini.set(sect, 'tstart', repr(t_avg))
+        ini.set(sect, 'dt-out', repr(float(t_end) - t_avg))
 
     # One solution at the end of the segment, which the next one starts from
     w = case['writer_section']

@@ -14,7 +14,7 @@ A record of getting from the STEP file to PyFR running on MASSIVE M3 (October 20
 | Mesh script, config template, driver | this folder, in Git |
 | CAD | `Simulations/CAD/16mm_Cutdown_for_Mesh.stp` (local only; a copy is in `mesh/` on M3) |
 
-**Storage rules:** use only project qk75, write only inside `PyFR_Staging`, and stop if qk75 scratch goes over 99%. `bin/check_quota.sh` checks this, and every script calls it before writing. qk75 scratch has varied between 75% and 99% of 10 TB as other users' files come and go.
+**Storage rules:** use only project qk75, write only inside `PyFR_Staging`, and stop if qk75 scratch goes over 99%. `bin/check_quota.sh` checks this, and every script calls it before writing. It also reports the size of the whole `JWeightman` folder and prints a FLAG line at 400 GB, a warning only. qk75 scratch has varied between 75% and 99% of 10 TB as other users' files come and go.
 
 ## 1. Access
 
@@ -63,7 +63,7 @@ Built by `mesh/make_mesh.py` from the STEP file: the (x, r) section is meshed wi
 
 ## 5. Choosing the run conditions (open)
 
-- **Reynolds number.** The experiment is at Re_D ≈ 5 × 10⁵ (cold jet, 16 mm nozzle, NPR 2.1–2.25). PyFR 3.1 has no wall model, and resolving a turbulent nozzle boundary layer at that Re would need wall cells 20–40× finer. Suggested: Re_D ≈ 10⁵, with a laminar exit boundary layer of realistic thickness, plus a check at 5 × 10⁴. The staging NPR depends more on the exit boundary layer than on Re itself. With constant viscosity, `mu = 1.215 / Re_D` at NPR 2.1; it stays fixed as NPR changes.
+- **Reynolds number.** The experiment is at Re_D ≈ 5 × 10⁵ (cold jet, 16 mm nozzle, NPR 2.1–2.25). PyFR 3.1 has no wall model, and resolving a turbulent nozzle boundary layer at that Re would need wall cells 20–40× finer. Suggested: Re_D ≈ 10⁵, with a laminar exit boundary layer of realistic thickness, plus a check at 5 × 10⁴. The staging NPR depends more on the exit boundary layer than on Re itself. With Sutherland viscosity referenced to the jet temperature at NPR 2.1 (as in `base.example.ini`), `mu = 1.208 / Re_D`; it stays fixed as NPR changes.
 - **GPUs.** qk75 can use the `gpu` partition (A100 80 GB, L40S, A40) and `m3h` (H100). The `shortq` QOS (30 min, ≤ 10 GPUs) suits short tests. A100 and H100 are fast in double precision. L40S, A40 and L4 are about 10× slower in double but fast in single, which PyFR supports and which is probably enough here. The timing tests below decide this.
 
 ## 6. Timing tests

@@ -17,7 +17,7 @@ import numpy as np
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 
-from continuation import analysis, branch, settings  # noqa: E402
+from continuation import analysis, branch, iniedit, settings  # noqa: E402
 
 
 ST1, ST2 = 0.63, 0.70
@@ -32,17 +32,20 @@ def tones(t, a1, a2, rng, noise=0.05):
 
 
 def write_sampler(path, t, p):
-    """Write a file laid out like PyFR's sampler HDF5 output."""
+    """Write a file laid out like PyFR 3.1's sampler HDF5 output."""
     nvars = 5
-    dtype = np.dtype([('t', 'f8'), ('samples', 'f8', (NPTS, nvars))])
-    rec = np.zeros(len(t), dtype=dtype)
-    rec['t'] = t
-    rec['samples'][:, :, 0] = 1.0
-    rec['samples'][:, :, 4] = p
+    samples = np.zeros((len(t), NPTS, nvars))
+    samples[:, :, 0] = 1.0
+    samples[:, :, 4] = p
     with h5py.File(path, 'w') as f:
-        d = f.create_dataset('probes', data=rec, maxshape=(None,))
-        d.attrs['fields'] = 'rho,u,v,w,p'
-        d.attrs['pts'] = np.zeros((NPTS, 3))
+        d = f.create_dataset('probes', data=samples, maxshape=(None, NPTS,
+                                                               nvars))
+        ts = f.create_dataset('probes_t', data=t, maxshape=(None,))
+        ps = f.create_dataset('probes_p', data=np.zeros((NPTS, 3)))
+        ts.make_scale('t')
+        ps.make_scale('pts')
+        d.dims[0].attach_scale(ts)
+        d.dims[1].attach_scale(ps)
 
 
 class FakeJet:
@@ -210,6 +213,70 @@ class TestBranch(unittest.TestCase):
         self.assertIn(f"pt = {v['npr']*self.cfg['case']['p_ambient']!r}",
                       text)
         self.assertIn('file-format = hdf5', text)
+
+        # The time average starts after the transient (D/U_j, U_ref = 1)
+        seg = v['segments'][0]
+        self.assertAlmostEqual(seg['avg_from'], seg['t_start'] + 5.0)
+        ext = [s for w in state['visits'] for s in w['segments'][1:]]
+        for s in ext:
+            self.assertEqual(s['avg_from'], s['t_start'])
+
+
+class TestIniEdit(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.mkdtemp()
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp)
+
+    def segment_ini(self, cfg, avg_from=None):
+        out = os.path.join(self.tmp, 'segment.ini')
+        iniedit.write_segment_ini(cfg, out, 2.1, 10.0, 30.0, 'runs/up/s001',
+                                  avg_from=avg_from)
+        return iniedit._read(out)
+
+    def test_outputs_go_to_segment(self):
+        cfg = make_case(self.tmp)
+        self.assertEqual(iniedit.check_base(cfg, os.path.join(self.tmp,
+                                                              'base.ini')), [])
+        ini = self.segment_ini(cfg, avg_from=15.0)
+
+        files = {s: ini.get(s, 'file') for s in ini.sections()
+                 if ini.has_option(s, 'file')}
+        self.assertEqual(files['soln-plugin-sampler'],
+                         'runs/up/s001/samples.h5')
+        self.assertEqual(files['soln-plugin-sampler-shear'],
+                         'runs/up/s001/samples_shear.h5')
+        self.assertTrue(all(f.startswith('runs/up/s001/')
+                            for f in files.values()), files)
+        self.assertEqual(len(set(files.values())), len(files))
+
+        t = 'soln-plugin-tavg'
+        self.assertEqual(ini.get(t, 'basedir'), 'runs/up/s001')
+        self.assertEqual(ini.getfloat(t, 'tstart'), 15.0)
+        self.assertEqual(ini.getfloat(t, 'dt-out'), 15.0)
+
+    def test_sample_dt_sets_nsteps(self):
+        cfg = make_case(self.tmp, extra='[case]\nsample_dt = 0.02')
+        ini = iniedit._read(os.path.join(self.tmp, 'base.ini'))
+        ini.set('solver-time-integrator', 'dt', '8e-05')
+        with open(os.path.join(self.tmp, 'base.ini'), 'w') as f:
+            ini.write(f)
+
+        ini = self.segment_ini(cfg)
+        for s in ini.sections():
+            if s.startswith(('soln-plugin-sampler', 'soln-plugin-tavg')):
+                self.assertEqual(ini.getint(s, 'nsteps'), 250, s)
+        self.assertEqual(ini.getfloat('soln-plugin-tavg', 'tstart'), 10.0)
+
+    def test_sample_dt_must_fit_dt(self):
+        cfg = make_case(self.tmp, extra='[case]\nsample_dt = 0.02')
+        ini = iniedit._read(os.path.join(self.tmp, 'base.ini'))
+        ini.set('solver-time-integrator', 'dt', '3e-04')
+        with open(os.path.join(self.tmp, 'base.ini'), 'w') as f:
+            ini.write(f)
+        issues = iniedit.check_base(cfg, os.path.join(self.tmp, 'base.ini'))
+        self.assertTrue(any('sample_dt' in i for i in issues), issues)
 
 
 if __name__ == '__main__':

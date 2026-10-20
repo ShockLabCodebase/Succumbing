@@ -15,6 +15,9 @@ DEFAULTS = {
         'sampler_dataset': 'probes',
         'writer_section': 'soln-plugin-writer',
         'runs_dir': 'runs',
+        # Sampling interval for every sampler and the time average; 0 keeps
+        # the nsteps in the base config
+        'sample_dt': 0.0,
     },
     'physics': {
         'gamma': 1.4,

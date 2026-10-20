@@ -113,13 +113,14 @@ def init(cfg, branch, mode, npr, solution, t0, direction=None):
     return state
 
 
-def _new_segment(cfg, state, visit, t_start, soln, length):
+def _new_segment(cfg, state, visit, t_start, soln, length, avg_from=None):
     state['nseg'] += 1
     sid = f"s{state['nseg']:03d}"
     seg_dir = os.path.join(branch_dir(cfg, state['branch']),
                            f"{sid}_npr{visit['npr']:.4f}")
     seg = {'id': sid, 'dir': rel(cfg, seg_dir), 'soln_in': soln,
            't_start': float(t_start), 't_end': float(t_start + length),
+           'avg_from': float(t_start if avg_from is None else avg_from),
            'status': 'pending', 'job': None, 'soln_out': None}
     visit['segments'].append(seg)
     return seg
@@ -133,10 +134,11 @@ def _new_visit(cfg, state, npr, purpose):
          'status': 'running', 'result': None, 'used': False}
     state['visits'].append(v)
 
-    length = (_to_time(cfg, npr, co['transient'])
-              + _cycles_to_time(cfg, npr, state['outgoing'],
-                                co['segment_cycles']))
-    return _new_segment(cfg, state, v, frm['t'], frm['solution'], length)
+    transient = _to_time(cfg, npr, co['transient'])
+    length = transient + _cycles_to_time(cfg, npr, state['outgoing'],
+                                         co['segment_cycles'])
+    return _new_segment(cfg, state, v, frm['t'], frm['solution'], length,
+                        avg_from=frm['t'] + transient)
 
 
 def _extend(cfg, state, visit):
@@ -188,7 +190,8 @@ def _launch(cfg, state, seg, launcher):
 
     ini = os.path.join(seg_dir, 'segment.ini')
     iniedit.write_segment_ini(cfg, ini, visit['npr'], seg['t_start'],
-                              seg['t_end'], seg['dir'])
+                              seg['t_end'], seg['dir'],
+                              avg_from=seg.get('avg_from'))
 
     script = os.path.join(seg_dir, 'job.sh')
     with open(script, 'w', newline='\n') as f:

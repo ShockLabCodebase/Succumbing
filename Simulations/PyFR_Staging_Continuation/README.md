@@ -41,6 +41,7 @@ Every PyFR job calls the driver when it finishes. The driver analyses the segmen
 | `continuation.example.toml` | settings, with every option explained |
 | `base.example.ini` | the parts of the PyFR config the driver depends on, the boundaries and the absorbing layer |
 | `mesh/make_mesh.py` | Gmsh mesh of the nozzle and jet from the STEP file |
+| `tools/pyfr_lsrk.py`, `tools/lsrk_coeffs.json` | runs PyFR with extra low-storage Runge–Kutta schemes (`lsrk-o3s8-r0p1`), in place of the `pyfr` command |
 | `tests/` | synthetic tests, with a fake hysteretic jet standing in for PyFR |
 | `M3_SETUP.md` | record of the M3 setup: environment, mesh and config problems and their fixes, open decisions |
 
@@ -85,6 +86,14 @@ The PyFR venv already has numpy and h5py, and PyFR needs Python ≥ 3.11, which 
    - a `sub-in-ftpttang` inlet. The driver sets `pt = NPR × p_ambient`;
    - a sampler with a ring (or rings) of probes near the lip, sampling at least about 10 times per tone cycle;
    - a writer section. The driver sets it to write one solution at the end of each segment.
+
+   **What each segment writes**, all in its folder `runs/<branch>/<segment>/`:
+   - one solution at the end;
+   - every probe set (`samples.h5`, the lip ring the driver analyses, plus `samples_shear.h5`, `samples_farfield.h5`, `samples_nozzle.h5` and `samples_axis.h5` in `base.example.ini`). The driver rewrites each plugin's `file` into the segment folder, so the sets need distinct file names;
+   - one time average (`tavg-<t>.pyfrs`): the mean flow and second moments from the end of the transient (or the start of an extension) to the end of the segment. On the production mesh it is about 8 GB;
+   - `residual.csv`.
+
+   Set `case.sample_dt` in the settings to have the driver set every sampler's and the time average's `nsteps` to `sample_dt/dt`; it must be a whole number of steps.
 2. **Converge one A1 state and one A2 state** with ordinary PyFR runs, for example at NPR 2.10 and 2.25. Check each with the `analyse` command below, and set the `[modes]` St bands from their spectra.
 3. **Start each branch:**
    ```bash
@@ -115,14 +124,14 @@ The CSV holds t (D/U_j from the NPR change), A1, A2 and the smoothed ln(A_in/A_o
 python -m unittest discover -s tests -v
 ```
 These cover:
-- a synthetic ring of probes that persists, switches, or switches slowly;
+- a synthetic ring of probes, in PyFR 3.1's sampler layout (checked against the pilot's files), that persists, switches, or switches slowly;
 - joining segments that overlap by one sample;
 - the saddle-node fit;
+- the segment configs: every plugin's output goes to the segment folder, the time average starts after the transient, and `sample_dt` sets `nsteps` (or is refused when it isn't a whole number of steps);
 - a full up branch against a fake jet with NPR_c = 2.163. The branch brackets the limit to [2.160, 2.165], and the fit gives 2.1628.
 
 ## Not yet checked against a real PyFR run
 
-- **Sampler HDF5 layout.** The reader expects compound records `t` + `samples (npts, nvars)` with a `fields` attribute. This comes from the PyFR source (`develop` branch, October 2026), not from a run.
 - **End-of-segment solution.** The driver relies on the writer, with `dt-out` equal to the segment length, writing a solution at `tend` after a restart. Check this on the first segment.
 - **Chained submission.** The chain needs `sbatch` to work from inside a job on M3. If it doesn't, set `submit = false` and run `advance` by hand, or from a cron job.
 - **Classification thresholds.** `switch_ratio`, `trend_threshold`, `rise_ratio` and `window_cycles` were tuned on synthetic signals. Re-tune them on the converged A1 and A2 runs: the noise in r for a run that stays in one mode sets how sensitive these can be.
