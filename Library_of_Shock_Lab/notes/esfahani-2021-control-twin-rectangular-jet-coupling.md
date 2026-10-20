@@ -8,7 +8,7 @@ venue: "AIAA Aviation 2021 Forum"
 bib: {"booktitle": "AIAA Aviation 2021 Forum", "note": "Authors' final manuscript; AIAA paper number not printed"}
 doi: ""
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf"
+pdf: "twin-jet-coupling/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf"
 version: "conference"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["PSD", "coherence", "wavelets", "SPOD"]
 flow: ["twin-jet", "rectangular-jet", "supersonic", "overexpanded"]
 phenomena: ["screech", "coupling", "flapping", "intermittency", "noise-control"]
 params: {"M_j": "1.35", "M_d": "1.5", "NPR": "2.97", "AR": "2", "s/D_e": "2.25", "TR": "1", "St_e": "0.41"}
-topics: ["non-axisymmetric-and-twin-jets", "screech"]
+topics: ["twin-jet-coupling", "screech"]
 related: ["esfahani-2021-coupling-modes-twin-rectangular-jets", "bres-2021-les-twin-rectangular-jets-plasma", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control", "samimy-1998-rectangular-jet-trailing-edge-control", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure"]
 cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "bell-2021-intermittent-modal-coupling-screeching-twin-jets", "esfahani-2021-coupling-modes-twin-rectangular-jets", "gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control", "schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "LAFPA forcing at screech (St_e 0.41) of AR-2 twin jets at M_j 1.35: symmetric in-phase forcing ends intermittency (+8 dB); anti-symmetric out-of-phase forcing decouples the jets"
@@ -27,7 +27,7 @@ summary: "LAFPA forcing at screech (St_e 0.41) of AR-2 twin jets at M_j 1.35: sy
 
 - **Authors:** A. Esfahani, N. Webb, M. Samimy (Gas Dynamics and Turbulence Laboratory (GDTL), Aerospace Research Center, The Ohio State University)
 - **Source:** AIAA Aviation 2021 Forum, 2–6 Aug 2021 (conference paper; author's final manuscript, PDF created 23 Jun 2021). The AIAA paper number and DOI are not printed in this PDF. Funded by ONR (N00014-19-1-2207) (p. 18).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf` (20 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/twin-jet-coupling/Esfahani-EtAl_2021_Control-Of-Coupling-In-Twin-Rectangular-Supersonic-Jets.pdf` (20 pp.)
 - **Tags:** twin jets, rectangular nozzle, low aspect ratio, overexpanded supersonic jet, screech, jet coupling, feedback loop, intermittency, active flow control, plasma actuators (LAFPA), near-field acoustics, wavelet coherence, high-speed schlieren, SPOD
 - **Companion paper:** [esfahani-2021-coupling-modes-twin-rectangular-jets.md](esfahani-2021-coupling-modes-twin-rectangular-jets.md) (SciTech 2021, ref. [23]). It holds the baseline coupling-mode survey over M_j that this paper summarises in Fig. 8.
 

@@ -18,7 +18,7 @@ methods: ["statistics", "PSD", "phase-averaging"]
 flow: ["rectangular-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "flapping", "coherent-structures", "mixing-enhancement"]
 params: {"NPR": "2–5.8", "M_j": "1.05–1.8", "AR": "16.7, 10", "D": "3 mm, 5 mm", "St": "0.12 at peak screech"}
-topics: ["screech", "non-axisymmetric-and-twin-jets"]
+topics: ["screech", "non-axisymmetric-jets"]
 related: ["tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "raman-1998-supersonic-jet-screech-review", "samimy-1998-rectangular-jet-trailing-edge-control", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "kerechanin-2001-trailing-edge-rectangular-jet-acoustics"]
 cites: []
 summary: "AR 16.7 rectangular jet, NPR 2–5.8: peak screech (NPR 3.8) widens minor-axis spread to 36°; flapping near nozzle, major-axis oscillation at 80 D, both St ≈ 0.12 on own dimension"

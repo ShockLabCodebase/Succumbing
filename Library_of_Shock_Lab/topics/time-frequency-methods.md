@@ -12,7 +12,7 @@ How to follow the amplitude, phase and frequency of coherent structures through 
 - Sieber's time-filtered SPOD;
 - how the library's resonance papers used these tools to track intermittency, mode switching and coupling.
 
-It is organised around the group's SPOD → reconstruction → Hilbert POD pipeline (CLAUDE.md). The SPOD, BMD and DMD algorithms themselves are in [modal-decomposition](modal-decomposition.md). The physics of staging, coupling and switching is in [screech](screech.md), [non-axisymmetric-and-twin-jets](non-axisymmetric-and-twin-jets.md) and [impinging-jets-and-edge-tones](impinging-jets-and-edge-tones.md).
+It is organised around the group's SPOD → reconstruction → Hilbert POD pipeline (CLAUDE.md). The SPOD, BMD and DMD algorithms themselves are in [modal-decomposition](modal-decomposition.md). The physics of staging, coupling and switching is in [screech](screech.md), [twin-jet-coupling](twin-jet-coupling.md) and [impinging-jets-and-edge-tones](impinging-jets-and-edge-tones.md).
 
 ## Current understanding
 1. **Instantaneous frequency needs a narrow-band signal.** A Hilbert instantaneous frequency means something only for a locally symmetric, single-component signal. A local offset or a "riding" second component gives spurious or even negative frequency ([Huang 1998](../notes/huang-1998-empirical-mode-decomposition-hilbert-spectrum.md), p. 12–14). Every Hilbert step therefore needs a narrow-banding step first. In the library that step is one of:

@@ -18,7 +18,7 @@ methods: ["shock-cell-model", "vortex-sheet", "resonance-model"]
 flow: ["rectangular-jet", "elliptical-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "shock-cells"]
 params: {"M_j": "1.1–1.8", "M_d": "1", "AR": "5.83, 12.75 (comparison data)"}
-topics: ["screech", "non-axisymmetric-and-twin-jets"]
+topics: ["screech", "non-axisymmetric-jets"]
 related: ["tam-1986-bbsan-screech-relationship", "tam-1982-shock-associated-noise-cd-nozzles", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "mancinelli-2019-screech-prediction-upstream-modes", "esfahani-2021-coupling-modes-twin-rectangular-jets", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets"]
 cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship"]
 summary: "Vortex-sheet (Prandtl–Pack) shock-cell model for any cross-section: rectangular sine and elliptic Mathieu modes; spacing set by the minor dimension; weakest-link screech St matches rectangular jets"

@@ -8,7 +8,7 @@ venue: "AIAA J. 36(7), 1230–1239"
 bib: {"journal": "AIAA Journal", "volume": "36", "number": "7", "pages": "1230--1239"}
 doi: "10.2514/2.504"
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/Samimy-EtAl_1998_Passive-Control-Of-Supersonic-Rectangular-Jets-Via-Nozzle-Trailing-Edge.pdf"
+pdf: "non-axisymmetric-jets/Samimy-EtAl_1998_Passive-Control-Of-Supersonic-Rectangular-Jets-Via-Nozzle-Trailing-Edge.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["statistics", "PSD"]
 flow: ["rectangular-jet", "supersonic", "underexpanded", "overexpanded", "ideally-expanded"]
 phenomena: ["noise-control", "screech", "axis-switching", "BBSAN", "mixing-enhancement"]
 params: {"M_d": "2", "M_j": "1.5–2.5", "AR": "3", "TR": "1 (cold)"}
-topics: ["non-axisymmetric-and-twin-jets", "screech"]
+topics: ["non-axisymmetric-jets", "screech"]
 related: ["kerechanin-2001-trailing-edge-rectangular-jet-acoustics", "raman-1998-supersonic-jet-screech-review", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "esfahani-2021-coupling-modes-twin-rectangular-jets"]
 cites: []
 summary: "AR 3 Mach 2 half-nozzle with one-sided trailing-edge cutouts: off-design streamwise vortices raise mixing up to ~50%; V-notch removes M_j 1.75 screech; condensation imaging, mics"
@@ -27,7 +27,7 @@ summary: "AR 3 Mach 2 half-nozzle with one-sided trailing-edge cutouts: off-desi
 
 - **Authors:** M. Samimy, J.-H. Kim, P. S. Clancy, S. Martens (The Ohio State University)
 - **Source:** AIAA Journal 36(7), 1230–1239, July 1998. DOI 10.2514/2.504. Received Sept. 1997, revised March 1998. More detailed noise results (far and near field) are in AIAA Paper 97-0146 (ref. 45); Kim's 1998 OSU PhD thesis is ref. 36.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/Samimy-EtAl_1998_Passive-Control-Of-Supersonic-Rectangular-Jets-Via-Nozzle-Trailing-Edge.pdf` (10 pp.). Page refs below are PDF pages: p. 1 = journal p. 1230, through p. 10 = p. 1239.
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-jets/Samimy-EtAl_1998_Passive-Control-Of-Supersonic-Rectangular-Jets-Via-Nozzle-Trailing-Edge.pdf` (10 pp.). Page refs below are PDF pages: p. 1 = journal p. 1230, through p. 10 = p. 1239.
 - **Tags:** rectangular jet, non-axisymmetric nozzle, aspect ratio 3, Mach 2, half-nozzle with splitter plate, trailing-edge cutouts, streamwise vortices, skew-induced vorticity, vorticity transport, mixing enhancement, axis switching, oblique instability, screech, nozzle lip thickness, OASPL, condensation (laser-sheet) visualisation, passive control
 
 ## Summary

@@ -18,7 +18,7 @@ methods: ["resolvent", "symmetry-decomposition"]
 flow: ["rectangular-jet"]
 phenomena: ["streaks"]
 params: {"AR": "1–5", "St": "0", "shear-thickness factor s": "1–10", "corner exponent χ": "2–32"}
-topics: ["linear-operator-methods", "non-axisymmetric-and-twin-jets"]
+topics: ["linear-operator-methods", "non-axisymmetric-jets"]
 related: ["nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "morra-2021-colour-of-forcing-resolvent-channel", "nogueira-2026-flapping-motion-screeching-round-jets"]
 cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Cross-plane incompressible resolvent (ω = 0, D2 split) on tanh rectangular jets: AS/SA dipole streaks lead; corner sharpness barely matters, so corner vortices are not linear streaks"

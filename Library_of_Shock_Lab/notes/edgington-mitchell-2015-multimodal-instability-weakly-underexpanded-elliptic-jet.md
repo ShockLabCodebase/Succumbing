@@ -8,7 +8,7 @@ venue: "AIAA J. 53(9), 2739–2749"
 bib: {"journal": "AIAA Journal", "volume": "53", "number": "9", "pages": "2739--2749"}
 doi: "10.2514/1.J053738"
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/EdgingtonMitchell-EtAl_2015_Multimodal-Instability-In-The-Weakly-Underexpanded-Elliptic-Jet.pdf"
+pdf: "non-axisymmetric-jets/EdgingtonMitchell-EtAl_2015_Multimodal-Instability-In-The-Weakly-Underexpanded-Elliptic-Jet.pdf"
 version: "published"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["statistics", "PSD", "coherence", "POD", "POD-pair"]
 flow: ["elliptical-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "flapping", "helical", "axis-switching", "multimodal", "shock-cells", "KH-wavepackets", "shock-leakage", "coherent-structures"]
 params: {"NPR": "2.2", "M_j": "≈1.12 (isentropic, my calculation; not stated)", "AR": "2", "D_e": "14.14 mm (2√(ab), 20 × 10 mm ellipse)", "Re": "≈4×10⁵ (on D_e)", "St": "0.52 (f D_e/U_j)", "TR": "≈1 (air at ambient temperature)"}
-topics: ["non-axisymmetric-and-twin-jets", "screech"]
+topics: ["non-axisymmetric-jets", "screech"]
 related: ["ivelja-2024-modal-analysis-screeching-elliptical-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "suzuki-2026-coherent-structures-axis-switching-elliptical-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "rodriguez-2023-preferred-flapping-round-twin-jets", "nogueira-2026-flapping-motion-screeching-round-jets", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mercier-2017-screech-feedback-loop-underexpanded-round-jets"]
 cites: ["edgington-mitchell-2014-coherent-structure-helical-screech-mode", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "papamoschou-1988-compressible-turbulent-shear-layer", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
 summary: "AR 2 elliptic jet, NPR 2.2, schlieren + PIV POD: flapping (λ 1.2D) gives the St 0.52 screech; a slower helical-like pair (λ 2.4D) peaks after the shocks, no tone"
@@ -27,7 +27,7 @@ summary: "AR 2 elliptic jet, NPR 2.2, schlieren + PIV POD: flapping (λ 1.2D) gi
 
 - **Authors:** Daniel Edgington-Mitchell, Damon R. Honnery, Julio Soria, Department of Mechanical and Aerospace Engineering, Monash University, Melbourne (Soria also at King Abdulaziz University, Jeddah) (p. 2739). Shock Lab group work; the experiments are in the "Laboratory for Turbulence Research in Aerospace and Combustion supersonic jet facility" (p. 2740), so the facility field reads "Shock Lab group facility (LTRAC supersonic jet facility)". No lab space (Shock Lab, Combustion Lab, TABLE Lab) is named.
 - **Source:** AIAA Journal 53(9), September 2015, 2739–2749, doi:10.2514/1.J053738. Presented as AIAA Paper 2014-2891 at the 20th AIAA/CEAS Aeroacoustics Conference, Atlanta, 16–20 June 2014. Received 29 July 2014, revised 24 Oct 2014, accepted 28 Oct 2014, online 28 Jan 2015. Associate editor D. Papamoschou (p. 2739, 2749).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/EdgingtonMitchell-EtAl_2015_Multimodal-Instability-In-The-Weakly-Underexpanded-Elliptic-Jet.pdf` (index key `non-axisymmetric-and-twin-jets/EdgingtonMitchell-EtAl_2015_Multimodal-Instability-In-The-Weakly-Underexpanded-Elliptic-Jet.pdf`, 11 pp., publisher's version with an ARC download stamp). Page refs are journal pages; **PDF page = journal page − 2738**. The text layer scrambles Table 1, the equations and all figure labels. Table 1, eqs. 1–7 and Figs 2–16 were checked on rendered pages.
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-jets/EdgingtonMitchell-EtAl_2015_Multimodal-Instability-In-The-Weakly-Underexpanded-Elliptic-Jet.pdf` (index key `non-axisymmetric-jets/EdgingtonMitchell-EtAl_2015_Multimodal-Instability-In-The-Weakly-Underexpanded-Elliptic-Jet.pdf`, 11 pp., publisher's version with an ARC download stamp). Page refs are journal pages; **PDF page = journal page − 2738**. The text layer scrambles Table 1, the equations and all figure labels. Table 1, eqs. 1–7 and Figs 2–16 were checked on rendered pages.
 - **Tags:** elliptical jet AR 2, weakly underexpanded, screech, flapping about the major-axis plane, helical-like mode, multimodal instability, axis switching, three-dimensional shock structure, high-resolution and ultra-high-speed schlieren, two-point spatial correlation, coherent-structure spacing, convective velocity, planar PIV (major- and minor-axis planes), snapshot POD of transverse velocity, POD-pair phase portrait, triple decomposition, coherent vorticity, shock leakage
 
 ## Summary

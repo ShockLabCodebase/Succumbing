@@ -8,7 +8,7 @@ venue: "JFM 964, A2"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "964", "pages": "A2"}
 doi: "10.1017/jfm.2023.275"
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf"
+pdf: "twin-jet-coupling/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["POD", "SPOD", "wavelets", "symmetry-decomposition", "conditional-samp
 flow: ["twin-jet", "round-jet", "supersonic", "underexpanded"]
 phenomena: ["coupling", "screech", "staging", "mode-switching", "intermittency"]
 params: {"NPR": "2.02–2.41", "M_j": "1.05–1.20", "s/D": "2, 3, 4, 6"}
-topics: ["non-axisymmetric-and-twin-jets", "screech", "time-frequency-methods"]
+topics: ["twin-jet-coupling", "screech", "time-frequency-methods"]
 related: ["nogueira-2021-twin-jet-coupling-spatial-lsa", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "edgington-mitchell-2022-unifying-theory-jet-screech", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "esfahani-2021-coupling-modes-twin-rectangular-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "torrence-1998-practical-guide-wavelet-analysis"]
 cites: ["bell-2021-intermittent-modal-coupling-screeching-twin-jets", "berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "morra-2021-colour-of-forcing-resolvent-channel", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "nogueira-2021-twin-jet-coupling-spatial-lsa", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "TR schlieren of A1/A2 twin round jets (s/D 2–6, NPR 2.02–2.41): SI-POD, Morlet CWT and SPOD find steady, SS↔SA switching (0.3–0.63% St shift) and uncoupled states; beating fakes coupling"
@@ -28,7 +28,7 @@ summary: "TR schlieren of A1/A2 twin round jets (s/D 2–6, NPR 2.02–2.41): SI
 - **Authors:** Tsz Y. M. Wong, M. N. Stavropoulos, J. R. Beekman, A. Towne, P. A. S. Nogueira, J. Weightman, D. Edgington-Mitchell (Monash, LTRAC; University of Michigan)
 - **Source:** J. Fluid Mech. 964, A2 (2023). Received 20 Oct 2022, revised 21 Mar 2023, accepted 26 Mar 2023. Open access (CC BY 4.0), published version.
 - **DOI:** 10.1017/jfm.2023.275
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf` (43 pp.; local only, not in Git)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/twin-jet-coupling/Wong-EtAl_2023_Steady-And-Unsteady-Coupling-In-Twin-Weakly-Underexpanded-Round-Jets.pdf` (43 pp.; local only, not in Git)
 - **Page refs:** PDF page n is printed page 964 A2-n.
 - **Not to be confused with** [wong-2021-wavepacket-modelling-bbsan](wong-2021-wavepacket-modelling-bbsan.md), which is by Marcus Wong.
 - **Tags:** twin jets, round jets, screech, A1/A2 staging, coupling symmetry (SS/SA), intermittency, symmetry switching, uncoupling, illusory coupling, beating, time-resolved schlieren, snapshot POD, SPOD, continuous wavelet transform, complex Morlet, symmetry imposition, half-domain POD, conditional sampling, facility sensitivity

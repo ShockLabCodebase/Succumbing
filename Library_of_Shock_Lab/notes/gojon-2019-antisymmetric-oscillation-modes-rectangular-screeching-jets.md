@@ -8,7 +8,7 @@ venue: "AIAA J. 57(8), 3422–3441"
 bib: {"journal": "AIAA Journal", "volume": "57", "number": "8", "pages": "3422--3441", "note": "Author's version held: HAL hal-03162269, OATAO 27049"}
 doi: "10.2514/1.J057514"
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/Gojon-EtAl_2019_Antisymmetric-Oscillation-Modes-In-Rectangular-Screeching-Jets.pdf"
+pdf: "non-axisymmetric-jets/Gojon-EtAl_2019_Antisymmetric-Oscillation-Modes-In-Rectangular-Screeching-Jets.pdf"
 version: "accepted-manuscript"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["statistics", "PSD", "coherence", "symmetry-decomposition", "wavenumbe
 flow: ["rectangular-jet", "supersonic", "overexpanded", "underexpanded", "heated"]
 phenomena: ["screech", "flapping", "guided-jet-mode", "shock-cells", "axis-switching", "standing-waves", "Mach-wave-radiation", "BBSAN", "mixing-noise", "directivity"]
 params: {"AR": "2", "M_d": "1.5", "NPR": "3 (overexpanded), 4 (underexpanded)", "M_j": "1.36, 1.56", "TR": "1, 2, 2.5, 3 (T₀/T∞, T∞ = 293 K)", "T_j/T_∞": "0.67–2.19", "h": "12.95 mm", "D_eq": "√(8/π)h = 20.67 mm", "Re": "2.48×10⁵–1.24×10⁶ (u_j D_eq/ν_j)", "St": "0.12–0.36 (f D_eq/u_j)", "u_c/u_j": "0.80–0.64 (NPR 3, TR 1–3)", "grid": "160M nodes"}
-topics: ["non-axisymmetric-and-twin-jets", "screech", "linear-models", "jet-noise-mechanisms", "simulation-methods"]
+topics: ["non-axisymmetric-jets", "screech", "linear-models", "jet-noise-mechanisms", "simulation-methods"]
 related: ["jeun-2024-screech-coupling-closure-rectangular-twin-jets", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "esfahani-2021-coupling-modes-twin-rectangular-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "stavropoulos-2024-upstream-waves-merging-twin-jets", "raman-1998-supersonic-jet-screech-review", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "nogueira-2026-flapping-motion-screeching-round-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "bres-2021-les-twin-rectangular-jets-plasma"]
 cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "LES of AR 2 C-D rectangular jets, NPR 3/4, TR 1–3: screech St matches expt; flapping goes diagonal → minor-axis with heat; planar vortex-sheet A1 band explains it"
@@ -29,7 +29,7 @@ summary: "LES of AR 2 C-D rectangular jets, NPR 3/4, TR 1–3: screech St matche
 - **Source:** AIAA Journal 57(8), 3422–3441 (2019), doi:10.2514/1.J057514 (HAL and OATAO cover pages, p. 1–2).
   - Computations on CNRS Turing, Occigen (GENCI-CINES A0042A07178) and Eos (CALMIP 2018-p1425). Florian Baier (Cincinnati) supplied the experimental data (p. 32).
   - The benchmark tests of the dissipation scheme are in the conference precursor, Gojon, Baier, Gutmark & Mihaescu, AIAA 2017-0002 (p. 6, ref. 29). The round-jet companion is Gojon, Bogey & Mihaescu 2018, AIAA J. 56(7), 2918–2924 (p. 5, ref. 18).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/Gojon-EtAl_2019_Antisymmetric-Oscillation-Modes-In-Rectangular-Screeching-Jets.pdf` (35 pp., author's accepted version from HAL/OATAO; local only).
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-jets/Gojon-EtAl_2019_Antisymmetric-Oscillation-Modes-In-Rectangular-Screeching-Jets.pdf` (35 pp., author's accepted version from HAL/OATAO; local only).
   - **Page refs are PDF pages.** p. 1–2 are the HAL and OATAO covers, the paper runs p. 3–31, and acknowledgements and references are p. 32–35. Journal page numbers are not printed.
   - The text layer garbles every equation and table. Eqs. 1–16, Tables 1–5 and Figs 1–25 were checked against rendered pages.
 - **Tags:** rectangular jet, aspect ratio 2, convergent–divergent nozzle, M_d 1.5, over- and underexpanded, heated jet, temperature ratio, implicit LES, artificial dissipation, Jameson–Ducros sensor, grid convergence, FW-H, screech, flapping, diagonal flapping, axis switching, shock-cell length, convection velocity, Mach wave radiation, BBSAN, mixing noise, Fourier mode at the screech frequency, planar vortex sheet, Tam & Norum dispersion relation, neutral acoustic wave modes, guided jet mode, allowable frequency bands, frequency–wavenumber spectra, University of Cincinnati
@@ -251,7 +251,7 @@ All transcribed from rendered pages (PDF p. 6, 13, 15, 18, 20, 24, 25).
 - h_j, b_j, A_j: dimensions and area of the ideally expanded equivalent rectangular jet.
 - x: coordinate along the major axis; y: along the minor axis; z: jet axis.
   - The *minor-axis plane* is x = 0, containing y and z. The *major-axis plane* is y = 0.
-  - "Flapping along the minor axis" is the motion across the small dimension, antisymmetric in y (AS in the single-jet D2 convention of the [non-axisymmetric topic page](../topics/non-axisymmetric-and-twin-jets.md)). Diagonal flapping is antisymmetric in both x and y (AA) (my mapping).
+  - "Flapping along the minor axis" is the motion across the small dimension, antisymmetric in y (AS in the single-jet D2 convention of the [non-axisymmetric topic page](../topics/non-axisymmetric-jets.md)). Diagonal flapping is antisymmetric in both x and y (AA) (my mapping).
 - M_j, u_j, T_j, a_j, ρ_j, ν_j: ideally expanded Mach number, velocity, temperature, sound speed, density, kinematic viscosity. M_d = 1.5 design Mach number. a₀, ρ₀: ambient sound speed and density.
 - NPR = p₀/p∞; TR: "temperature ratio", equal to T₀/T∞ by my check of Table 1.
 - St = fD_eq/u_j; St_hj = fh_j/u_j. Re = u_jD_eq/ν_j.

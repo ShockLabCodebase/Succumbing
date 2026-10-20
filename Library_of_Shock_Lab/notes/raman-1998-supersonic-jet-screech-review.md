@@ -18,7 +18,7 @@ methods: ["resonance-model", "shock-cell-model", "wavelets", "bispectrum", "phas
 flow: ["round-jet", "rectangular-jet", "twin-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "mode-switching", "shock-cells", "BBSAN", "coupling", "receptivity"]
 params: {}
-topics: ["screech", "non-axisymmetric-and-twin-jets"]
+topics: ["screech", "non-axisymmetric-jets", "twin-jet-coupling"]
 related: ["edgington-mitchell-2022-unifying-theory-jet-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets"]
 cites: ["krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1995-supersonic-jet-noise"]
 summary: "Pre-2000 screech review: frequency predictable (Powell, Tam, Massey) but amplitude not, so feedback and receptivity (lip, reflectors) control it; staging unexplained; twin-jet coupling"

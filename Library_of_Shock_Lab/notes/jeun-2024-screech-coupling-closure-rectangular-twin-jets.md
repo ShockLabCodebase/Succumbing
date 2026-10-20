@@ -8,7 +8,7 @@ venue: "JFM 987, A5"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "987", "pages": "A5"}
 doi: "10.1017/jfm.2024.376"
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf"
+pdf: "twin-jet-coupling/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["SPOD", "Hilbert-transform", "symmetry-decomposition", "wavenumber-fil
 flow: ["twin-jet", "rectangular-jet", "supersonic", "overexpanded"]
 phenomena: ["screech", "coupling", "intermittency", "guided-jet-mode", "flapping", "triadic-interaction"]
 params: {"NPR": "3", "M_d": "1.5", "AR": "2", "s/h": "3.5", "St": "0.373"}
-topics: ["non-axisymmetric-and-twin-jets", "screech"]
+topics: ["twin-jet-coupling", "screech"]
 related: ["yeung-2022-3d-spod-twin-rectangular-jet", "esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "bres-2021-les-twin-rectangular-jets-plasma", "nogueira-2021-twin-jet-coupling-spatial-lsa", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
 cites: ["bell-2021-intermittent-modal-coupling-screeching-twin-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "esfahani-2021-control-twin-rectangular-jet-coupling", "esfahani-2021-coupling-modes-twin-rectangular-jets", "gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2024-guided-jet-waves", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "wong-2023-steady-unsteady-coupling-twin-round-jets", "yeung-2022-3d-spod-twin-rectangular-jet"]
 summary: "charLES LES of AR-2 twin rectangular jets (NPR 3): intermittent out-of-phase coupling (Hilbert Δφ, D2 AA vs AS); phase-locked SPOD k_x split shows guided-jet-mode closure"
@@ -28,7 +28,7 @@ summary: "charLES LES of AR-2 twin rectangular jets (NPR 3): intermittent out-of
 - **Authors:** Jinah Jeun (Center for Turbulence Research, Stanford; correspondence address KTH), Gao Jun Wu, Sanjiva K. Lele (Stanford)
 - **Source:** J. Fluid Mech. 987, A5 (2024). Received 28 Sep 2022, revised 28 Feb 2024, accepted 10 Apr 2024. Open access (CC BY 4.0).
 - **DOI:** 10.1017/jfm.2024.376
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf` (26 pp.; local only, not in Git)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/twin-jet-coupling/Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf` (26 pp.; local only, not in Git)
 - **Tags:** twin jets, rectangular jet, aspect ratio 2, screech, jet coupling, out-of-phase coupling, intermittency, Hilbert transform, instantaneous phase, D2 symmetry decomposition, SPOD, ensemble-averaged SPOD, streamwise Fourier decomposition, guided jet mode, free-stream acoustic mode, duct-like mode, spatial cross-correlation, points of return, LES (charLES), overexpanded jet, NPR 3
 
 ## Summary

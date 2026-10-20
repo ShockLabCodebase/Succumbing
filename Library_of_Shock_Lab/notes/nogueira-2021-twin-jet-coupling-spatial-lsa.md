@@ -8,7 +8,7 @@ venue: "JFM 918, A38"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "918", "pages": "A38"}
 doi: "10.1017/jfm.2021.366"
 arxiv: ""
-pdf: "non-axisymmetric-and-twin-jets/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf"
+pdf: "twin-jet-coupling/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf"
 version: "accepted-manuscript"
 unverified: ["volume, article number and online date from the Cambridge Core listing, not printed in the PDF", "DOI from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex)"]
 group: true
@@ -18,7 +18,7 @@ methods: ["POD", "POD-pair", "symmetry-decomposition", "wavenumber-filtering", "
 flow: ["twin-jet", "round-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "coupling", "guided-jet-mode", "KH-wavepackets", "flapping"]
 params: {"NPR": "5.0", "M_j": "≈1.71 (isentropic estimate)", "s/D": "3", "D": "10 mm", "St": "0.19"}
-topics: ["non-axisymmetric-and-twin-jets", "screech", "linear-models"]
+topics: ["twin-jet-coupling", "screech", "linear-models"]
 related: ["stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "stavropoulos-2024-upstream-waves-merging-twin-jets", "rodriguez-2023-preferred-flapping-round-twin-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2021-absolute-instability-shock-containing-jets"]
 cites: ["bell-2021-intermittent-modal-coupling-screeching-twin-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "raman-1998-supersonic-jet-screech-review", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "Twin round jets, NPR 5, s/D 3: symmetry-imposed POD + k_x split give KH and k_kh − k_s upstream waves; azimuthal-Floquet LSA: guided-mode bands, not KH, select 1SS coupling"
@@ -27,7 +27,7 @@ summary: "Twin round jets, NPR 5, s/D 3: symmetry-imposed POD + k_x split give K
 
 - **Authors:** P. A. S. Nogueira, D. M. Edgington-Mitchell (Monash, LTRAC)
 - **Source:** J. Fluid Mech. 918, A38 (2021; published online 14 May 2021, per Cambridge Core listing). The PDF is the JFM-style author manuscript with no date header. Its revisions are marked in red (p. 5, 9, 16), and its PDF creation date is 12 Mar 2021. The newest reference it cites is from 2021 (Nogueira & Cavalieri 2021, JFM 907).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/non-axisymmetric-and-twin-jets/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf` (25 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/twin-jet-coupling/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf` (25 pp.)
 - **Tags:** twin jets, jet coupling, screech, underexpanded jet, NPR 5, guided jet mode, Kelvin-Helmholtz wavepacket, spatial linear stability, Floquet ansatz, symmetry-imposed POD, POD phase portrait, shear-thickness mode, wavenumber spectrum, PIV
 
 ## Summary

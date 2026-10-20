@@ -250,7 +250,8 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 ### `topics`
 Each value is a page in `topics/`.
 - `screech`: screech mechanism, closure, frequency prediction, staging, mode switching, amplitude
-- `non-axisymmetric-and-twin-jets`: rectangular, elliptical and twin jets; flapping; coupling; axis switching
+- `non-axisymmetric-jets`: single rectangular and elliptical jets: flapping, wagging and helical modes, axis switching, single-jet models, nozzle-shape control
+- `twin-jet-coupling`: twin round and rectangular jets: coupling states (SS/SA/AS/AA), intermittency and switching between them, twin-jet models and LES
 - `impinging-jets-and-edge-tones`: impinging jets, jet–edge and jet–flap tones, other jet–surface feedback
 - `linear-models`: mean-flow linear theory and wave models: local stability, vortex sheets, absolute instability, Floquet/shock-cell models, guided-jet-wave theory, wavepacket models
 - `linear-operator-methods`: operator methods on the linearised equations: global stability, resolvent analysis (forcing, eddy viscosity), PSE/PFE/OWNS, harmonic resolvent
@@ -262,3 +263,8 @@ Each value is a page in `topics/`.
 - `diagnostics-and-facilities`: PIV practice in shock-containing flow (tracer response, calibration, sample size and phase), facility design and acoustic environment
 - `schlieren-and-density-imaging`: schlieren and time-resolved schlieren practice, BOS, Abel inversion, tomography, interferometry, base-flow density, synthetic schlieren and image–simulation matching
 - `simulation-methods`: CFD/LES numerics, solvers, ML for flows, shock-dynamics computations
+
+## Retired topic names
+
+Never use these, and never recreate their pages. A note (for example a draft in `notes/_incoming/`) that still carries one gets the replacement instead:
+- `non-axisymmetric-and-twin-jets` (split 2026-10-21): `non-axisymmetric-jets` for single rectangular or elliptical jets, `twin-jet-coupling` for twin jets, or both.
