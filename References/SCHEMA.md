@@ -7,7 +7,8 @@ How the reference library is laid out, and the metadata every note carries. `Ref
 | Path | What it is | Who writes it |
 | --- | --- | --- |
 | `notes/<slug>.md` | One note per paper: YAML frontmatter + structured body | `/add-paper` |
-| `topics/<topic>.md` | Living review of one research thread across papers (consensus, disagreements, open questions) | `/add-paper` updates it for each new paper; `/lit` may extend it |
+| `topics/<topic>.md` | Living review of one research thread across papers (consensus, disagreements, open questions) | `/add-paper` revises it in batches; `/lit` may extend it |
+| `topics/_queue/<topic>.md` | Topic contributions from newly indexed papers, waiting for the next batch revision of that page | `/add-paper` |
 | `data/*.csv` | Numbers collected across papers (screech tones, shock spacing, rocket-noise parameters), each row citing note + page | `/add-paper` appends; see `data/README.md` |
 | `INDEX.md` | One line per paper, **generated** from frontmatter | `python References/tools/library.py build` only |
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |

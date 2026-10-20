@@ -25,7 +25,7 @@ If no topic page fits, say so and fall back to `find` plus Grep over `References
 
 ## 2. Read only what you need
 
-- Read the topic page first; it says which papers matter and where they disagree.
+- Read the topic page first; it says which papers matter and where they disagree. Papers marked "(synthesis pending)" are not yet worked into the page: read their contributions in `References/topics/_queue/<topic>.md` too.
 - For each paper, read the note's Summary and Key findings, and the sections the question needs (Setup / method for conditions, Key equations for models). Grep inside a note for specific terms rather than reading all of it.
 - If answering needs more than about six notes in depth, give the question and the list of note paths to a `general-purpose` subagent and ask it for a cited synthesis (claims with note key + page, agreements, contradictions), so the full notes don't fill this session.
 - Open a PDF (path from the note's `pdf` field; see SCHEMA for how keys map to files) only for exact wording, a figure, or a derivation the note doesn't have, using the page numbers in the note.

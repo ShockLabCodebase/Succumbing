@@ -400,12 +400,18 @@ def cmd_check(args):
             errors.append("references.bib is out of date: run library.py build")
 
     unindexed = list_unindexed(PDFS, notes)
+    queue = {f.stem: len(re.findall(r"^## ", f.read_text(encoding="utf-8"), re.M))
+             for f in sorted((TOPICS / "_queue").glob("*.md"))} if (TOPICS / "_queue").exists() else {}
     for w in warnings:
         print("WARN ", w)
     for e in errors:
         print("ERROR", e)
     print(f"{len(notes)} notes, {len(errors)} errors, {len(warnings)} warnings, "
           f"{len(unindexed)} PDFs in Paper_PDFs without a note (run /add-paper).")
+    if queue:
+        due = [t for t, k in queue.items() if k >= 5]
+        print("Topic contributions queued: " + ", ".join(f"{t} {k}" for t, k in queue.items())
+              + (f". Due for revision (5+): {', '.join(due)}." if due else "."))
     return 1 if errors else 0
 
 

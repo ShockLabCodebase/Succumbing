@@ -8,7 +8,7 @@ venue: "PhD thesis, Monash University"
 bib: {"school": "Monash University", "note": "Dept of Mechanical & Aerospace Engineering (LTRAC); thesis by publication"}
 doi: ""
 arxiv: ""
-pdf: "//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Theses/Thesis_Joel_Weightman_Final.pdf"
+pdf: "impinging-jets-and-edge-tones/Weightman_2019_The-Sound-Production-Mechanisms-Of-Impinging-Supersonic-Jets.pdf"
 version: "thesis"
 unverified: []
 group: true
@@ -27,7 +27,7 @@ summary: "Impinging-jet feedback (NPR 3.4–3.6, z/D 3.5–5): POD pairs, shear 
 
 - **Author:** Joel L. Weightman. This is the user's own PhD thesis. Supervisors: D. Edgington-Mitchell and J. Soria (p. v).
 - **Source:** PhD (Engineering) thesis, Monash University, Dept of Mechanical & Aerospace Engineering. The title page names the Laboratory for Turbulence Research in Aerospace and Combustion (LTRAC). The declaration is dated 09/05/2019.
-- **PDF:** `//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Theses/Thesis_Joel_Weightman_Final.pdf`. It has 221 PDF pages, is 128 MB, and was made with pdfTeX.
+- **PDF:** `References/Paper_PDFs/impinging-jets-and-edge-tones/Weightman_2019_The-Sound-Production-Mechanisms-Of-Impinging-Supersonic-Jets.pdf`. It has 221 PDF pages, is 128 MB, and was made with pdfTeX.
 - **Page refs:** "(p. N)" means the **printed** thesis page, and **PDF page = printed + 31**. The front matter uses roman numerals.
   - Appendix D's two conference reprints (PDF 197–221) have no thesis page numbers. They are cited by implied page plus the paper's own page, e.g. "(p. 184; P17:6)".
   - The reprinted journal papers keep their own numbering. Exp. Fluids page k = printed 40+k. JFM 862 page J = printed J−360. JFM 815 page R1-n = printed 124+n.
