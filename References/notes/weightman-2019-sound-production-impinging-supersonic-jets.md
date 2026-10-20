@@ -14,7 +14,7 @@ unverified: []
 group: true
 facility: "Shock Lab group facility (LTRAC Gas Jet and Supersonic Jet Facilities)"
 data: ["PIV", "schlieren-TR", "microphones-far"]
-methods: ["statistics", "PSD", "POD", "POD-pair", "phase-averaging", "wavenumber-filtering", "resonance-model", "propagation-model"]
+methods: ["statistics", "PSD", "POD", "POD-pair", "phase-averaging", "wavenumber-filtering", "resonance-model", "ray-tracing"]
 flow: ["impinging-jet", "round-jet", "supersonic", "underexpanded"]
 phenomena: ["impingement-tones", "helical", "flapping", "shock-leakage", "intermittency", "coherent-structures", "shocklet", "receptivity"]
 params: {"NPR": "3.0–5.0", "M_j": "1.36–1.59", "z/D": "2–5", "t/D": "0.1, 0.33, 7", "D": "15 mm", "Re": "7.4×10⁵–1.06×10⁶"}

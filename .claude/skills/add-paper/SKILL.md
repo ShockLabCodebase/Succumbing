@@ -17,7 +17,7 @@ The library layout, frontmatter fields, controlled vocabulary and topic-page str
 - PDFs anywhere else: the absolute Windows path with forward slashes, e.g. `D:/Papers/Screech/Tam 1986.pdf`.
 
 **What to process**, depending on `$ARGUMENTS`:
-- **Empty or a folder:** run `library.py unindexed ["<folder>"]` (default `References/Paper_PDFs`, searched recursively; new papers normally sit in `References/Paper_PDFs/Unprocessed/`). Each output line is `<index key><TAB><path to read>`. If the folder is outside the working directory and access is refused, ask the user to grant access to it (the app will prompt) rather than copying files.
+- **Empty or a folder:** run `library.py unindexed ["<folder>"]` (default `References/Paper_PDFs`, searched recursively; new papers normally sit in `References/Paper_PDFs/_Unprocessed/`). Each output line is `<index key><TAB><path to read>`. If the folder is outside the working directory and access is refused, ask the user to grant access to it (the app will prompt) rather than copying files.
 - **Specific PDF file(s):** process those even if already indexed, replacing their note. Work out each key using the rule above.
 
 If nothing is printed, say every paper in that folder is already indexed and stop. Otherwise, list the files you are about to process. Many files will have publisher names (`016105_1_online.pdf`, `annurev-fluid-…pdf`); read the first page to identify them.

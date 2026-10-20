@@ -102,3 +102,12 @@ Each item names the notes that disagree. Check against the PDFs and fix the wron
 - M_j at NPR 3.4: 1.42 (Weightman thesis) vs 1.45 (E-M 2020; isentropic 1.45). Nozzle contraction ratio 81 or 240 (thesis) vs ≈100 (E-M 2020).
 - Weightman thesis, within-note: cylinder-case U_j 460.8 m/s vs isentropic ≈420 m/s; difference tone St 0.140 (p. 33) vs 0.144 (p. 70); shocklet at y/D 1.43 vs "1.3D".
 - Ranow 2021 overprediction of Ares I: 7–10 dB (summary) vs 5–10 dB (body).
+
+## edgington-mitchell-2021-generation-screech-tones-shock-leakage (added Oct 2026)
+- Table 1: C-mode St 0.30 at NPR 3.4 vs 0.26 for the same PIV dataset in edgington-mitchell-2020; Re 5.2 vs 4.7 ×10⁵ (NPR 2.25) and 8.1 vs 8.6 ×10⁵ (NPR 3.4). St printed as f_s U_j/D_j (p. 6), a typo.
+- p. 12: initial ray wavevector "set to the local Mach angle": μ or 90° − μ? (same ambiguity in the Weightman thesis note).
+- Eq. 2.8 keeps only ω_s yet the filtered schlieren show sharp fronts; frame count, record length and windowing not stated.
+- Twin-jet case: p. 4 says one 15 mm nozzle for all measurements, but the twin jet needs two (Bell 2018 / Knast 2018 twin nozzles are 10 mm).
+- Anechoic rig named SJAF (p. 5) and SAJF (p. 6); Gas Jet Facility walls 60D from the centreline here vs a 42D cage in the thesis note.
+- "95% of cases leak at the 3rd–5th cell" (p. 30) vs the r̄ − 2σ case leaking mostly at about the 6th cell.
+- Figure-read values: Fig. 2 tone levels and St; Fig. 11 leak at x/D ≈ 4.3; Fig. 18 positions; symmetry of the Fig. 4 POD pairs. POD variable and snapshot count not stated; C-mode field of view 10.0D × 2.2D (Table 2) but plots stop at x/D ≈ 6.5.

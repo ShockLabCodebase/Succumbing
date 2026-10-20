@@ -12,7 +12,7 @@ How the reference library is laid out, and the metadata every note carries. `Ref
 | `INDEX.md` | One line per paper, **generated** from frontmatter | `python References/tools/library.py build` only |
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |
 | `Paper_PDFs/<topic>/` | Indexed PDFs, one copy each, filed by the note's first (most significant) topic (local only, git-ignored) | `library.py file` |
-| `Paper_PDFs/Unprocessed/` | New PDFs waiting for `/add-paper`, under any name | user |
+| `Paper_PDFs/_Unprocessed/` | New PDFs waiting for `/add-paper`, under any name | user |
 | `Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
 | `notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
 | `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s References/tools`) | |
@@ -185,7 +185,9 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `resonance-model`: phase-criterion / feedback-loop frequency models (screech, impingement, edge tones)
 - `shock-cell-model`: Pack/Prandtl, Tam, PSE or vortex-sheet shock-cell models
 - `empirical-model`: SP-8072-type and other empirical/semi-empirical noise models
-- `propagation-model`: atmospheric, nonlinear or ground-reflection propagation models, ray tracing
+- `propagation-model`: atmospheric, nonlinear or ground-reflection acoustic propagation models
+- `ray-tracing`: geometrical-acoustics (eikonal) ray tracing through measured or modelled flows
+- `FTLE`: finite-time Lyapunov exponents, Lagrangian coherent structures
 - `FW-H`: Ffowcs Williams–Hawkings / Kirchhoff surface integrals
 - `acoustic-analogy`: Lighthill-type analogies and wavepacket source models
 - `GSD`: geometric shock dynamics
