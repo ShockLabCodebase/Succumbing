@@ -145,6 +145,7 @@ Trailing-edge cutouts on AR 3 Mach 2 nozzles make streamwise vortices only off-d
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): review; antisymmetric rectangular modes, bevelled nozzles, early twin rectangular coupling.
 - [Samimy 1998](../notes/samimy-1998-rectangular-jet-trailing-edge-control.md): AR 3 trailing-edge cutouts; streamwise vortices, mixing, axis switching.
 - [Kerechanin 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): acoustics of the same cutouts; nozzle symmetry decides whether screech is suppressed or amplified.
+- [Alkislar 2003](../notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet, phase-locked stereo PIV: flapping-vortex circulation, streamwise vortices, axis switching (synthesis pending).
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 elliptic jet at NPR 2.2: flapping gives the St 0.52 tone; a slower helical-like POD pair after the shocks makes no tone (synthesis pending).
 - [Berry 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): POD of TR schlieren of a multi-stream rectangular jet; flapping without screech, aliasing.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): four coupling modes of round twins; phase jumps without frequency jumps.
@@ -164,6 +165,7 @@ Trailing-edge cutouts on AR 3 Mach 2 nozzles make streamwise vortices only off-d
 - [Marshall 2024](../notes/marshall-2024-prediction-streaks-rectangular-jets.md): cross-plane resolvent streaks in rectangular jets (preprint).
 - [Stavropoulos 2024](../notes/stavropoulos-2024-upstream-waves-merging-twin-jets.md): merging twin jets behave like an equivalent AR 2 ellipse.
 - [Mazharmanesh 2025](../notes/mazharmanesh-2025-screech-modes-non-axisymmetric-jets.md): multi-view SPOD; bi-axial flapping and quasi-helical modes.
+- [Nogueira 2025](../notes/nogueira-2025-screech-military-style-rectangular-nozzles.md): AR 2 sharp-throat C-D rectangular jet; four screech tones; LSA weakest link on PIV mean predicts flapping (synthesis pending).
 - [Mazharmanesh 2026](../notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md) (not tagged): mutually exclusive elliptical-jet tones, each with its own mean flow.
 - [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md) (not tagged): streaks fix the flapping axis of round jets; same Floquet mechanism.
 - [Suzuki 2026](../notes/suzuki-2026-coherent-structures-axis-switching-elliptical-jets.md): DNS; axis switching creates a new flapping mode (preprint).

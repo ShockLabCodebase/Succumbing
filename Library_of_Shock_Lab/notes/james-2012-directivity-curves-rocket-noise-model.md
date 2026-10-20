@@ -20,7 +20,7 @@ phenomena: ["directivity", "source-location"]
 params: {"vehicle": "Space Shuttle RSRM", "D_e": "3.88 m", "U_e": "2454 m/s", "arc radius": "80 D_e"}
 topics: ["rocket-noise-models", "rocket-noise-measurements"]
 related: ["haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics", "gee-2012-reusable-srm-noise-spectral-statistical", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2016-near-field-intensity-static-rocket-firings", "reichman-2018-qm2-srm-far-field-acoustics", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
-cites: ["gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics"]
+cites: ["gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics", "mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation"]
 summary: "RSRM directivity at 80 D_e is not far field at low frequency; re-referencing angles to a frequency-dependent source moves the SP-8072 OASPL peak from 51° to 65°; far field beyond 200–300 D_e"
 ---
 # Modification of directivity curves for a rocket noise model

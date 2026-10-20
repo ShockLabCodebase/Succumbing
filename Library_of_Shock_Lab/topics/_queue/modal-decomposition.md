@@ -11,3 +11,15 @@
   - Single-jet POD will merge structures about 10% apart in wavelength.
   - The 650 joint-quartile snapshots, against the 594 expected for independent jets, measure how weak the coupling is.
 - **Two cheap tools.** A POD wavelength with a measured u_c assigns frequencies to pairs where no time-resolved data exist (Table 2). Phase-binned reconstructions (10° bins, 20 modes, pair phase; p. 28) follow the group's POD-pair phase-averaging route.
+
+## edgington-mitchell-2014-coherent-structure-helical-screech-mode (queued 2026-10-21)
+
+This is the first application of the group's POD-pair triple decomposition to a screeching jet, adapted from [Oberleithner 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md):
+- Snapshot POD of 8000 uncorrelated PIV fields is run on the **transverse velocity only**, because that separates the leading pair much more cleanly with essentially unchanged shapes (p. 834).
+- The pair holds 15.3% + 13.7% against 2.5% for mode 3, close to Oberleithner's 15.0/14.9%. The (a₁, a₂)/⟨r_m⟩ portrait is a ring; (a₁, a₃) shows no structure (Figs 8–9, p. 835).
+- The phase is â e^{iφ} = a₁ + i a₂ (eq. 4.11).
+- The coherent field is rebuilt from the two spatial modes alone; the coefficients serve only to prove the coupling. Everything else is "random" (p. 834–835). So harmonics, pair-amplitude modulation and k_x < 0 content outside the pair all go into u″.
+- The paper does not say how the u components of a v-only POD were obtained.
+- It adds a spatial use of EMD: it splits the radially integrated coherent axial stress along x into shock modulation and growth (p. 836–837). The usual EMD caveats (end effects, mode mixing; [Huang 1998](../notes/huang-1998-empirical-mode-decomposition-hilbert-spectrum.md)) apply with only about seven periods.
+
+It also shows a limit for the page: a single plane through the axis gives the same ring-shaped pair for a helix and for a flapping mode, so POD pairs cannot recover helicity. [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md) later showed that the v-only choice hides the shear-thickness mode. It agrees with, and does not change, the page's "Snapshot POD and POD pairs" account. It is the citable origin of "v-only POD" in the group's screech work.

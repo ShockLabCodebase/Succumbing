@@ -175,6 +175,7 @@ The algorithm is: subtract the mean, impose symmetries, split into blocks, windo
 - [Rowley et al. 2009](../notes/rowley-2009-spectral-analysis-nonlinear-flows-koopman.md): Koopman basis of DMD.
 - [Schmid 2010](../notes/schmid-2010-dynamic-mode-decomposition.md): founding DMD; subdomain and spatial DMD.
 - [Oberleithner et al. 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): POD-pair phase averaging of PIV.
+- [Edgington-Mitchell 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): C-mode PIV at NPR 3.4: POD triple decomposition; coherent vorticity at cells 2–4 proposed to pick sources (synthesis pending).
 - [Sieber et al. 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-domain SPOD.
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): POD of time-resolved schlieren; aliasing, drift.
 - [Taira et al. 2017](../notes/taira-2017-modal-analysis-fluid-flows-overview.md): tutorial overview of all methods.

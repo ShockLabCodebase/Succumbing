@@ -20,7 +20,7 @@ phenomena: ["edge-tones", "guided-jet-mode", "KH-wavepackets", "mode-switching",
 params: {"M_j": "0.6–1.0", "L/D": "2, 3, 4", "D": "50 mm"}
 topics: ["impinging-jets-and-edge-tones", "linear-models"]
 related: ["stavropoulos-2026-jet-edge-interaction", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2024-guided-jet-waves", "weightman-2019-sound-production-impinging-supersonic-jets"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "huerre-1990-local-global-instabilities-spatially-developing-flows", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "edgington-mitchell-2014-coherent-structure-helical-screech-mode", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "huerre-1990-local-global-instabilities-spatially-developing-flows", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "M 0.6–1 jet grazing a plate edge: tones from KH coupling with upstream jet modes (k_TH⁻, k_p⁻), not free-stream sound; vortex-sheet phase model; high-St cutoff by wave trapping"
 ---
 # Jet–flap interaction tones

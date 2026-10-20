@@ -20,7 +20,7 @@ phenomena: ["guided-jet-mode", "KH-wavepackets"]
 params: {"M_j": "0.9", "Re": "≈10⁶ (LES); 10⁵ (stability)", "T_j/T∞": "1", "m": "0–4"}
 topics: ["linear-models"]
 related: ["towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2022-database-reduced-complexity-modeling", "jordan-2018-jet-flap-interaction-tones", "pickering-2020-lift-up-kh-orr-jets", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2020-waves-in-screeching-jets", "towne-2018-spod-relationship-dmd-resolvent"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "michalke-1984-survey-jet-instability-theory", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "M_j 0.9 jet LES vs mean-flow global stability: SPOD gives the KH wavepacket, near-nozzle CSD gives trapped acoustic duct modes (m, n_r, n_x) from k⁺/k⁻ beating; explains near-nozzle tones"
 ---
 # Wavepackets and trapped acoustic modes in a turbulent jet: coherent structure eduction and global stability

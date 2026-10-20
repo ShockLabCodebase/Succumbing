@@ -20,7 +20,7 @@ phenomena: ["directivity", "acoustic-efficiency", "Mach-wave-radiation", "mixing
 params: {"vehicle": "Falcon 9 (9 × Merlin 1D)", "M_j": "3.38", "M_e": "3.53", "D_e": "0.92 m (equivalent 2.76 m)", "T_j": "1879 K", "range": "7–14 km"}
 topics: ["rocket-noise-measurements", "rocket-noise-models"]
 related: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "kellison-2026-falcon-9-noise-two-campaigns", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "james-2012-directivity-curves-rocket-noise-model", "kenny-2009-space-shuttle-srm-plume-acoustics", "gee-2026-falcon-9-ascent-sonic-boom", "gee-2023-sls-artemis-i-far-field-noise"]
-cites: ["gee-2016-near-field-intensity-static-rocket-firings", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics", "tam-1995-supersonic-jet-noise", "tsutsumi-2015-epsilon-liftoff-acoustics"]
+cites: ["gee-2016-near-field-intensity-static-rocket-firings", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics", "mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation", "tam-1995-supersonic-jet-noise", "tsutsumi-2015-epsilon-liftoff-acoustics"]
 summary: "Three VSFB Falcon 9 launches at 7–14 km: peak directivity ≈64° matched by Oertel M_co minus vehicle Mach; OAPWL 196 dB (η ≈ 0.34%); OASPL_max models within 1–2 dB; f_pk 21 Hz"
 ---
 # Characterization of Falcon 9 launch vehicle noise from far-field measurements

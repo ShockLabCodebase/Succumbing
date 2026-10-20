@@ -147,6 +147,7 @@ Tam & Tanna proposed the product picture, in which KH × shock gives k ± λ_n (
 
 ## Papers
 
+- [Michalke 1984](../notes/michalke-1984-survey-jet-instability-theory.md): spatial LSA review of round jets: Michalke profiles, R/θ, Mach number, heating, flight, divergence, nozzle feedback (synthesis pending).
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): convective Mach number; vortex-sheet vs finite-thickness stabilisation at high M_c.
 - [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): review of absolute/convective and local/global instability; Briggs–Bers pinch; WKB saddle sets the global frequency (synthesis pending).
 - [Ray 2005](../notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): LEE with PSE-wave × shock-mode sources; BBSAN lobe at the local Mach angle of k_t − k_s; ring-source lobes at high St (synthesis pending).
@@ -186,6 +187,7 @@ Tam & Tanna proposed the product picture, in which KH × shock gives k ± λ_n (
 - [Nogueira 2024](../notes/nogueira-2024-guided-jet-waves.md): physics of the guided-jet wave (total reflection, impedance duct, energy flux).
 - [Stavropoulos 2024](../notes/stavropoulos-2024-upstream-waves-merging-twin-jets.md): merging twin jets turn the guided mode into a mode of an equivalent jet.
 - [Rolandi 2025](../notes/rolandi-2025-biglobal-resolvent-naca0012.md): discounted biglobal resolvent; error of mean-flow eigenvalues.
+- [Nogueira 2025](../notes/nogueira-2025-screech-military-style-rectangular-nozzles.md): AR 2 sharp-throat C-D rectangular jet; four screech tones; LSA weakest link on PIV mean predicts flapping (synthesis pending).
 - [Farghadan 2026](../notes/farghadan-2026-wave-interactions-screeching-jet.md): global, resolvent and harmonic resolvent of a screeching jet; triads and harmonics.
 - [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md): streak-induced flapping/wagging split; LES check.
 - Not tagged: [Tam & Tanna 1982](../notes/tam-1982-shock-associated-noise-cd-nozzles.md) (KH × shock product waves), [Tam 1986](../notes/tam-1986-bbsan-screech-relationship.md) (local LSA screech formula, weakest link), [Towne 2022](../notes/towne-2022-database-reduced-complexity-modeling.md) (SPOD vs resolvent and trapped-wave demos), [Edgington-Mitchell 2022](../notes/edgington-mitchell-2022-unifying-theory-jet-screech.md) (suboptimal shock peaks), [Mazharmanesh 2026](../notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md) (BMD-derived k_S), [Stavropoulos 2026](../notes/stavropoulos-2026-jet-edge-interaction.md) (competing guided-wave loops at edges).

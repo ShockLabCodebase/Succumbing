@@ -20,3 +20,15 @@ Ray, Cheung & Lele compute the Tam & Tanna mechanism from first principles, with
 - **Second shock mode.** Mode 2 radiates (lobe S2) only in the St 0.9 isothermal case (p. 9). This refines the Wong note's remark that Ray & Lele 2007 lacked the n = 2 mode: the 2005 paper included it and judged it minor at a single frequency.
 - **Shock spacing in overexpanded C-D jets** (open question on the page). TJS modes on a RANS mean reproduce Norum & Seiner's overexpanded M_d 1.5 train for about five cells (Fig. 3, p. 6–7), so they are a candidate model at mild overexpansion.
 - **Caveats.** The paper is self-declared preliminary: I2 is unconverged, H1 is under-resolved, and the sound is not compared with acoustic measurements (p. 9–10, 13). The printed heated wavenumber shift also has a doubtful sign (p. 10).
+
+## michalke-1984-survey-jet-instability-theory (queued 2026-10-21)
+
+Michalke 1984 supplies the instability-wave side of Mach-wave radiation for M ≤ 1.2. The outer solution (eqs. 28–31, p. 175) gives oblique near-field fronts with wave speed c_w = a∞M_c cos μ. This equals a∞ only for neutral waves with M_c > 1. Growing waves have c_w < a∞, although μ still reaches 30–45° for a thin layer at M = 1.2 (Fig. 18, p. 176).
+
+Michalke's M_c is c_ph/a∞, a phase Mach number in the ambient frame. It is not the structure-frame convective Mach number of papamoschou-1988-compressible-turbulent-shear-layer, and the page should not mix the two. He says these fronts should be visible in schlieren at high subsonic M but "should not be denoted as sound waves" (p. 176). The radiated part of a growing and decaying wave needs the uniformly valid analysis of Tam & Morris 1980 (p. 192), i.e. the envelope-driven radiation of tam-1995-supersonic-jet-noise and cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.
+
+The flight similarity σ = 1 + 1.4U∞/ΔU (eq. 32) collapses both the linear growth curves and measured turbulent pressure spectra and coherence in a jet with external flow (Fig. 26, p. 181–182; spectral peak at fD/(ΔUσ) ≈ 0.4). It is the basis of the Michel–Michalke flight model that mathews-2021-falcon-9-far-field-noise (p. 629) uses to estimate a ~23% downward peak-frequency shift for an ascending Falcon 9.
+
+Heating destabilises the spatial waves: peak −α_iθ is 0.14 against 0.113 at T_o/T∞ = 2 (Fig. 19, p. 177–178). That is consistent with hot jets radiating more large-scale noise, but it is shown only for M = 0 and laminar profiles.
+
+The paper changes no consensus item on the page. It gives the linear-theory reasons behind the Mach-wave and flight-effect items, and it flags a practical caution for the *Methods and data* section: pressure fronts seen outside a jet in schlieren need a phase-speed check before they are called sound.

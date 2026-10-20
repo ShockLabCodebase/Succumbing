@@ -140,7 +140,9 @@ The LES cannot give dwell-time statistics (1–4 s, about 10⁴–10⁵ D/U_j). 
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): pre-2000 review; frequency predictable, amplitude and staging not.
 - [Samimy 1998](../notes/samimy-1998-rectangular-jet-trailing-edge-control.md): a V-notch removes and a thick lip revives AR 3 screech; detail on [non-axisymmetric-and-twin-jets](non-axisymmetric-and-twin-jets.md).
 - [Kerechanin 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): symmetric and asymmetric trailing-edge cutouts amplify or suppress rectangular-jet screech.
+- [Alkislar 2003](../notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet, phase-locked stereo PIV: flapping-vortex circulation, streamwise vortices, axis switching (synthesis pending).
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): helical screech mode reaches the Mach-disk shear layer; no recirculation bubble.
+- [Edgington-Mitchell 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): C-mode PIV at NPR 3.4: POD triple decomposition; coherent vorticity at cells 2–4 proposed to pick sources (synthesis pending).
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 elliptic jet at NPR 2.2: flapping gives the St 0.52 tone; a slower helical-like POD pair after the shocks makes no tone; flapping vorticity peaks before the 3rd shock.
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): theory of trapped and guided waves and their saddle-bounded bands.
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): source at the 4th shock tip for A1 and A2; integer-period loop with m = 4 → 5 at the A1/A2 jump; U_c rises along the jet.
@@ -168,6 +170,7 @@ The LES cannot give dwell-time statistics (1–4 s, about 10⁴–10⁵ D/U_j). 
 - [Jeun 2024](../notes/jeun-2024-screech-coupling-closure-rectangular-twin-jets.md): LES shows G-JM closure and intermittent coupling in twin rectangular jets.
 - [Nogueira 2024](../notes/nogueira-2024-guided-jet-waves.md): physics of the G-JM; why screech always needs it.
 - [Mazharmanesh 2025](../notes/mazharmanesh-2025-screech-modes-non-axisymmetric-jets.md): screech mode classes and multimodality in AR 2 jets from rotated schlieren views.
+- [Nogueira 2025](../notes/nogueira-2025-screech-military-style-rectangular-nozzles.md): AR 2 sharp-throat C-D rectangular jet; four screech tones; LSA weakest link on PIV mean predicts flapping (synthesis pending).
 - [Farghadan 2026](../notes/farghadan-2026-wave-interactions-screeching-jet.md): global, resolvent and harmonic-resolvent models; loops on several shock wavenumbers; harmonics.
 - [Mazharmanesh 2026](../notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md): mutually exclusive loops with their own short-time means; BMD k_S.
 - [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md): streaks fix the flapping axis of |m| = 1 screech; precession in LES.

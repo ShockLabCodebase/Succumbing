@@ -20,7 +20,7 @@ phenomena: ["coherent-structures", "flapping"]
 params: {"Re": "7780 (Re_D)", "D": "40 mm", "U∞": "200 mm/s"}
 topics: ["time-frequency-methods", "modal-decomposition"]
 related: ["raiola-2025-hilbert-pod", "horel-1984-complex-principal-component-analysis", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "weightman-2019-sound-production-impinging-supersonic-jets", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
-cites: ["horel-1984-complex-principal-component-analysis", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+cites: ["edgington-mitchell-2014-coherent-structure-helical-screech-mode", "horel-1984-complex-principal-component-analysis", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
 summary: "Streamwise (space-only) Hilbert POD of 1 Hz PIV of a sphere wake (Re_D 7780) identifies POD pairs; cheaper test: Hilbert-transform each POD mode, mutual ∓0.5π matches"
 ---
 # Studying propagating turbulent structures in the near wake of a sphere using Hilbert proper orthogonal decomposition

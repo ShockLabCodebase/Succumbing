@@ -293,9 +293,11 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Krothapalli et al. 1986](../notes/krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet.md): microphone-triggered phase-locked schlieren of a rectangular jet (not tagged).
 - [Samimy et al. 1998](../notes/samimy-1998-rectangular-jet-trailing-edge-control.md): condensation imaging with per-nozzle normalisation (not tagged).
 - [Henderson et al. 2002](../notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): phase-locked shadowgraph; PIV binned by microphone phase (not tagged).
+- [Alkislar 2003](../notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet, phase-locked stereo PIV: flapping-vortex circulation, streamwise vortices, axis switching (synthesis pending).
 - [Oberleithner et al. 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): 3D helix from 800 non-TR stereo-PIV snapshots via a POD pair (not tagged).
 - [Ragni et al. 2011](../notes/ragni-2011-particle-tracer-response-shocks-piv.md): oblique-shock tracer-response test; τ_p of common seeders; SR, TR ≤ 1 criteria.
 - [Edgington-Mitchell et al. 2014](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): smoke τ_p ≈ 2 µs and at least 8% artificial fluctuation across a Mach disk (not tagged).
+- [Edgington-Mitchell 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): C-mode PIV at NPR 3.4: POD triple decomposition; coherent vorticity at cells 2–4 proposed to pick sources (synthesis pending).
 - [Raffel 2015](../notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; set-up recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../notes/tan-2015-bos-density-axisymmetric-jets.md): group single-camera BOS → Abel → mean density recipe with synthetic error map.
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): 50–100 kHz schlieren POD; aliasing; POD removes intensity drift (not tagged).

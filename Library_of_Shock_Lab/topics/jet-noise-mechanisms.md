@@ -125,6 +125,7 @@ Ray-traced near-pad arrays, plus wavenumber-filtered SPOD of heated-jet LES to s
 ## Papers
 - [Norum & Seiner 1982](../notes/norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets.md): Langley benchmark data (shock-cell pressure, OASPL, narrowband spectra, tab on/off) behind BBSAN and screech models.
 - [Tam & Tanna 1982](../notes/tam-1982-shock-associated-noise-cd-nozzles.md): origin of the BBSAN mechanism, peak-frequency formula and β⁴ law.
+- [Michalke 1984](../notes/michalke-1984-survey-jet-instability-theory.md): spatial LSA review of round jets: Michalke profiles, R/θ, Mach number, heating, flight, divergence, nozzle feedback (synthesis pending).
 - [Tam et al. 1986](../notes/tam-1986-bbsan-screech-relationship.md): multiple BBSAN peaks from shock Fourier modes; screech as the BBSAN upstream limit.
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): defines the convective Mach number behind Mach-wave directivity.
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): pre-wavepacket synthesis of mixing noise, BBSAN and screech.
