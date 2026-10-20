@@ -54,6 +54,49 @@ def main(path, out):
         app.processEvents()
         print(f"direction {key:10s} rms {float(np.sqrt(np.mean(w.img.image ** 2))):.4f}")
     w.dir_group.button(0).setChecked(True)
+
+    # wavenumber spectrum window and custom k ranges
+    w.set_k_ranges([])
+    w.show_kspectrum()
+    app.processEvents()
+    kw = w._kwin
+    print(f"k-spectrum: {kw.k.size} bins, k {kw.k[0]:.1f}..{kw.k[-1]:.1f}, grey {len(kw._grey)} (all)")
+    w.set_direction("downstream")
+    app.processEvents()
+    print(f"downstream: grey {len(kw._grey)}, {kw.kept_label.text()}")
+    w.set_direction("bands")          # no ranges yet: adds one around the strongest k
+    app.processEvents()
+    assert len(w.k_ranges) == 1 and kw._direction() == "bands"
+    rms_band = float(np.sqrt(np.mean(w.img.image ** 2)))
+    print(f"custom: ranges {w.k_ranges}, grey {len(kw._grey)}, rms {rms_band:.4f}, {kw.kept_label.text()}")
+    kw.add_range()
+    a, b = w.k_ranges[1]
+    kw.table.item(1, 1).setText(f"{b + 1:.3f}")     # typed edit of the second range
+    app.processEvents()
+    assert abs(w.k_ranges[1][1] - (b + 1)) < 1e-3, w.k_ranges
+    edge = kw._edges[0][1]
+    lo, hi = edge.getRegion()
+    edge.setRegion((lo - 0.5, hi))                   # as if dragged in the line plot
+    edge.sigRegionChangeFinished.emit(edge)
+    app.processEvents()
+    assert abs(kw._edges[0][0].getRegion()[0] - (lo - 0.5)) < 1e-6, "map edge follows the line edge"
+    assert abs(w.k_ranges[0][0] - (lo - 0.5)) < 1e-6
+    print(f"two ranges {[[round(v, 3) for v in r] for r in w.k_ranges]}, grey {len(kw._grey)}, "
+          f"{kw.kept_label.text()}")
+    kw.split.grab().save(os.path.join(out, "kspectrum.png"))
+    w._render(1200).save(os.path.join(out, "snapshot_kranges.png"))
+    kw._remove_selected()
+    assert len(w.k_ranges) == 1
+    w.set_direction("all")
+    app.processEvents()
+
+    from spodviewer.app import ModeCacheDialog
+    dlg = ModeCacheDialog(w, None, 15)
+    print("mode cache dialog:", dlg.shown_folder(), "|", dlg.usage.text())
+    dlg.limit.setValue(500)
+    assert dlg.limit.value() == 100
+    dlg.close()
+
     w._set_mode(1)
     app.processEvents()
     print("mode ->", w.mode + 1)

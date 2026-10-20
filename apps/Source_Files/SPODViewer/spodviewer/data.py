@@ -23,6 +23,7 @@ import re
 import shutil
 import tempfile
 import threading
+import time
 from collections import OrderedDict
 from dataclasses import dataclass, field
 
@@ -166,12 +167,37 @@ def sweep_tokens(name: str) -> dict[str, tuple[str, float]]:
     return out
 
 
+# Names of saved vectors that can serve as the frequency axis (St, St_SRP, f, freq_..., ...).
+_FREQ_AXIS_RE = re.compile(r"^(st|f|freq|frequency|strouhal)(_|$)", re.IGNORECASE)
+
+
+def _freq_axis(name: str, value, n_freq: int):
+    """`value` as a frequency axis of length n_freq, or None if it is not one.
+
+    It must be a numeric vector named like a frequency (_FREQ_AXIS_RE) with one
+    value per frequency, finite and strictly increasing, so each eigenvalue keeps
+    its own frequency.
+    """
+    if not _FREQ_AXIS_RE.match(name):
+        return None
+    a = np.asarray(value)
+    if a.dtype.kind not in "fiu" or a.size != n_freq or sorted(a.shape)[:-1] != [1] * (a.ndim - 1):
+        return None
+    a = a.astype(float).ravel()
+    if n_freq < 2 or not np.all(np.isfinite(a)) or not np.all(np.diff(a) > 0):
+        return None
+    return a
+
+
 def read_spectrum(path: str) -> dict:
-    """Small arrays of a SPOD file (St, f, L, metadata) without touching P."""
+    """Small arrays of a SPOD file (St, f, L, metadata) without touching P.
+
+    "axes" holds every vector usable as the frequency axis, St first.
+    """
     s = SPODFile(path, cache_mb=16)
     try:
         return {"path": path, "St": s.St.copy(), "f": None if s.f is None else s.f.copy(),
-                "L": s.L.copy(), "info": s.info}
+                "L": s.L.copy(), "info": s.info, "axes": dict(s.freq_axes)}
     finally:
         s.close()
 
@@ -179,9 +205,14 @@ def read_spectrum(path: str) -> dict:
 # A chunked P whose chunks hold more than this many bytes of modes across their
 # frequencies is rewritten frequency-major into a local cache before viewing.
 TRANSPOSE_ABOVE = 512 * 2**20
+# Modes put in that cache the first time a file is viewed (one cache file per
+# mode). Others are added on request; each addition reads the whole file again.
+FIRST_CACHED_MODES = 2
 # Total size kept in the cache folder; the least recently used files go first.
 # The viewer also empties the folder when it exits (clear_transpose_cache).
+# Users can set it within CACHE_BUDGET_GB_RANGE (set_transpose_cache_budget).
 TRANSPOSE_CACHE_BUDGET = 15 * 2**30
+CACHE_BUDGET_GB_RANGE = (10, 100)
 
 
 _cache_dir: str | None = None     # set by the viewer from its settings
@@ -204,20 +235,38 @@ def set_transpose_cache_dir(folder: str | None):
     _cache_dir = os.path.normpath(folder) if folder else None
 
 
-def _transpose_cache_path(path: str, shape) -> str:
+def transpose_cache_budget() -> int:
+    return TRANSPOSE_CACHE_BUDGET
+
+
+def set_transpose_cache_budget(gb: float):
+    """Keep at most `gb` GB (clamped to CACHE_BUDGET_GB_RANGE) in the cache folder.
+
+    Files over a lowered limit are deleted at once, oldest first, unless still open.
+    """
+    global TRANSPOSE_CACHE_BUDGET
+    lo, hi = CACHE_BUDGET_GB_RANGE
+    TRANSPOSE_CACHE_BUDGET = int(min(max(float(gb), lo), hi) * 2**30)
+    folder = transpose_cache_dir()
+    if os.path.isdir(folder):
+        _evict_transpose_cache(folder, keep=(), need=0)
+
+
+def _transpose_cache_path(path: str, shape, mode: int) -> str:
+    """Cache file of one mode (0-based) of a SPOD file, in the current cache folder."""
     st = os.stat(path)
     key = f"{os.path.normcase(os.path.abspath(path))}|{st.st_size}|{st.st_mtime_ns}|{tuple(shape)}"
     stem = os.path.splitext(os.path.basename(path))[0][:60]
     digest = hashlib.sha1(key.encode()).hexdigest()[:12]
-    return os.path.join(transpose_cache_dir(), f"{stem}_{digest}.bin")
+    return os.path.join(transpose_cache_dir(), f"{stem}_{digest}_m{mode + 1}.bin")
 
 
 def _is_cache_file(name: str) -> bool:
     return name.endswith(".bin") or name.endswith(".part")
 
 
-def transpose_cache_size() -> int:
-    folder = transpose_cache_dir()
+def transpose_cache_size(folder: str | None = None) -> int:
+    folder = folder or transpose_cache_dir()
     if not os.path.isdir(folder):
         return 0
     return sum(os.path.getsize(os.path.join(folder, n)) for n in os.listdir(folder) if _is_cache_file(n))
@@ -240,19 +289,25 @@ def clear_transpose_cache():
                     pass
 
 
-def _evict_transpose_cache(folder: str, keep: str, need: int):
-    """Delete the oldest cache files until `need` more bytes fit in the budget."""
-    files = []
+def _evict_transpose_cache(folder: str, keep, need: int):
+    """Delete the oldest cache files until `need` more bytes fit in the budget.
+
+    Files in `keep` (e.g. the other modes of the file being cached) count
+    towards the budget but are never deleted.
+    """
+    keep = {os.path.normcase(p) for p in keep}
+    files, total = [], 0
     for name in os.listdir(folder):
         p = os.path.join(folder, name)
-        if p == keep or not _is_cache_file(name):
+        if not _is_cache_file(name):
             continue
         try:
             st = os.stat(p)
         except OSError:
             continue
-        files.append((st.st_atime if name.endswith(".bin") else 0, st.st_size, p))
-    total = sum(f[1] for f in files)
+        total += st.st_size
+        if os.path.normcase(p) not in keep:
+            files.append((st.st_atime if name.endswith(".bin") else 0, st.st_size, p))
     for _, size, p in sorted(files):
         if total + need <= TRANSPOSE_CACHE_BUDGET:
             break
@@ -306,8 +361,11 @@ class SPODFile:
         self._io_lock = threading.Lock()
         self._h5 = None
         self._P_mem = None
-        self._mm_path = None     # frequency-major cache file, when P needs one
-        self._P_mm = None
+        self.uses_mode_cache = False   # True when P is read from frequency-major cache files
+        self._P_mm: dict[int, np.memmap] = {}   # mode -> cache [freq, y, x]
+        self.wanted_modes: set[int] = set()       # modes the next cache build writes
+        self.building = False
+        self.last_build_s = None       # how long the last cache build took
         self._cancel = False
         self.progress = None     # optional callable(fraction) while building the cache
         if h5py is not None and h5py.is_hdf5(path):
@@ -329,8 +387,12 @@ class SPODFile:
             return f[name][()] if name in f else None
 
         self._scalars = {}
+        self._vectors = {}       # frequency-axis candidates, checked in _finish_info
         for k in f.keys():
             ds = f[k]
+            if (isinstance(ds, h5py.Dataset) and _FREQ_AXIS_RE.match(k) and ds.ndim <= 2
+                    and ds.dtype.kind in "fiu" and 1 < ds.size <= 2**20):
+                self._vectors[k] = ds[()]
             if isinstance(ds, h5py.Dataset) and ds.size <= 64:
                 cls = ds.attrs.get("MATLAB_class", b"")
                 cls = cls.decode() if isinstance(cls, bytes) else str(cls)
@@ -372,9 +434,12 @@ class SPODFile:
             # into a local cache file and read from that instead.
             self._layout = f"chunked {P.chunks}, frequency-major cache"
             self._block = 1
-            self._mm_path = _transpose_cache_path(path, shp)
-            if os.path.exists(self._mm_path):
-                self._open_mm()
+            self.uses_mode_cache = True
+            self.wanted_modes = set(range(min(FIRST_CACHED_MODES, n_modes)))
+            for m in range(n_modes):          # e.g. left by another viewer window
+                p = _transpose_cache_path(path, shp, m)
+                if os.path.exists(p):
+                    self._open_mode(m, p)
         else:
             self._layout = f"chunked {P.chunks}"
             # read as many frequencies as one chunk holds
@@ -387,10 +452,13 @@ class SPODFile:
         if "P" not in d:
             raise ValueError("Not a SPOD result file: missing P")
         self._scalars = {}
+        self._vectors = {}
         for k, v in d.items():
             if k.startswith("__"):
                 continue
             a = np.asarray(v)
+            if _FREQ_AXIS_RE.match(k) and a.dtype.kind in "fiu" and a.size > 1:
+                self._vectors[k] = a
             if a.dtype.kind in "US":
                 self._scalars[k] = _to_str(a)
             elif a.dtype.kind in "fiu" and a.size == 1:
@@ -476,6 +544,15 @@ class SPODFile:
         )
         if self.f is None and self.info.fps and self.info.nfft:
             self.f = np.arange(self.n_freq) * self.info.fps / self.info.nfft
+        # vectors usable as the frequency axis (e.g. St_SRP), St first, then f
+        nf = self.L.shape[0]
+        self.freq_axes = {"St": self.St}
+        if self.f is not None and self.f.size == nf:
+            self.freq_axes["f"] = self.f
+        for k, v in self._vectors.items():
+            a = _freq_axis(k, v, nf)
+            if a is not None and k not in self.freq_axes:
+                self.freq_axes[k] = a
 
     # ------------------------------------------------------------------ data
     @property
@@ -486,31 +563,67 @@ class SPODFile:
     def y_vec(self) -> np.ndarray:
         return self.y[:, 0]
 
-    def is_cached(self, i: int) -> bool:
-        return self._P_mem is not None or self._P_mm is not None or i in self.cache
+    def is_cached(self, i: int, mode: int = 0) -> bool:
+        """True if mode `mode` at frequency `i` can be shown without reading the file."""
+        if self.uses_mode_cache:
+            return mode in self._P_mm
+        return self._P_mem is not None or i in self.cache
 
     @property
-    def needs_transpose(self) -> bool:
-        """True until the frequency-major cache exists, for files that need one."""
-        return self._mm_path is not None and self._P_mm is None
+    def cached_modes(self) -> list[int]:
+        return sorted(self._P_mm)
 
-    def _open_mm(self):
-        shape = (self.n_freq, self.n_modes, self.ny, self.nx)
-        self._P_mm = np.memmap(self._mm_path, dtype=np.complex64, mode="r", shape=shape)
+    def needs_build(self, mode: int) -> bool:
+        """True if showing `mode` first needs its frequency-major cache file built."""
+        return self.uses_mode_cache and mode not in self._P_mm
 
-    def _build_transposed(self):
-        """Rewrite P as [freq, mode, y, x] complex64 in the cache file."""
-        shape = (self.n_freq, self.n_modes, self.ny, self.nx)
-        need = int(np.prod(shape)) * 8
+    def modes_to_build(self, mode: int) -> list[int]:
+        """Modes the next build writes if `mode` is asked for (0-based, sorted)."""
+        return sorted(m for m in self.wanted_modes | {mode} if m not in self._P_mm)
+
+    @property
+    def mode_cache_bytes(self) -> int:
+        """Size of one mode's cache file."""
+        return self.n_freq * self.ny * self.nx * 8
+
+    def _open_mode(self, m: int, path: str):
+        shape = (self.n_freq, self.ny, self.nx)
+        self._P_mm[m] = np.memmap(path, dtype=np.complex64, mode="r", shape=shape)
+
+    def _build_transposed(self, modes):
+        """Rewrite the given modes of P as [freq, y, x] complex64, one cache file each.
+
+        Every chunk of P holds all modes, so this reads the whole of P however
+        many modes are written.
+        """
+        shape = (self.n_freq, self.ny, self.nx)
         # the cache folder may have been changed since the file was opened
         folder = transpose_cache_dir()
-        self._mm_path = os.path.join(folder, os.path.basename(self._mm_path))
         _used_dirs.add(folder)
         os.makedirs(folder, exist_ok=True)
-        if os.path.exists(self._mm_path):      # e.g. built by another viewer window
-            self._open_mm()
+        todo = {}
+        for m in sorted(modes):
+            p = _transpose_cache_path(self.path, self._P.shape, m)
+            if m in self._P_mm:
+                continue
+            if os.path.exists(p):              # e.g. built by another viewer window
+                self._open_mode(m, p)
+            else:
+                todo[m] = p
+        if not todo:
             return
-        _evict_transpose_cache(folder, keep=self._mm_path, need=need)
+        need = self.mode_cache_bytes * len(todo)
+        mine = [_transpose_cache_path(self.path, self._P.shape, m) for m in self._P_mm]
+        names = ", ".join(str(m + 1) for m in todo)
+        if need + self.mode_cache_bytes * len(mine) > TRANSPOSE_CACHE_BUDGET:
+            raise OSError(
+                f"This file's modes are stored with all frequencies in each chunk, so they "
+                f"must be rewritten to a cache ({self.mode_cache_bytes / 2**30:.2f} GB per mode). "
+                f"Mode(s) {names} with the {len(mine)} already cached would need "
+                f"{(need + self.mode_cache_bytes * len(mine)) / 2**30:.1f} GB, but the mode cache "
+                f"is limited to {TRANSPOSE_CACHE_BUDGET / 2**30:.0f} GB. Raise the limit under "
+                f"Settings → Mode cache.")
+        _evict_transpose_cache(folder, keep=mine, need=need)
         free = shutil.disk_usage(folder).free
         if free < need + 2**30:
             raise OSError(
@@ -519,55 +632,84 @@ class SPODFile:
                 f"{free / 2**30:.1f} GB is free there. Choose another folder under "
                 f"Settings → Mode cache.")
         # one .part per process, so two viewer windows never write the same file
-        part = f"{self._mm_path}.{os.getpid()}.part"
-        mm = np.memmap(part, dtype=np.complex64, mode="w+", shape=shape)
+        parts = {m: f"{p}.{os.getpid()}.part" for m, p in todo.items()}
+        mms = {}
+        t0 = time.perf_counter()
+        self.building = True
         try:
-            # Slabs along y (h5 axis 2), aligned to the chunks, about 32 MB each,
-            # so progress is reported often.
-            cy = self._P.chunks[2]
-            per_row = self.n_modes * self.nx * self.n_freq * 8
-            step = max(cy, (32 * 2**20 // max(per_row, 1)) // cy * cy)
-            for y0 in range(0, self.ny, step):
+            for m, part in parts.items():
+                mms[m] = np.memmap(part, dtype=np.complex64, mode="w+", shape=shape)
+            # Slabs along x (h5 axis 1), aligned to the chunks, about 32 MB each, so
+            # progress is reported often. HDF5 stores the chunks with y varying
+            # fastest, so x-slabs read the file front to back. y-slabs jumped
+            # ~18 MB between neighbouring chunks: on a USB hard drive that was a
+            # seek per chunk, 12 min instead of ~1 min for a 6 GB file.
+            cx = self._P.chunks[1]
+            per_col = self.n_modes * self.ny * self.n_freq * 8
+            step = max(cx, (32 * 2**20 // max(per_col, 1)) // cx * cx)
+            for x0 in range(0, self.nx, step):
                 if self._cancel:
                     raise RuntimeError("cancelled")
-                y1 = min(y0 + step, self.ny)
-                raw = self._P[:, :, y0:y1, :]                 # [mode, x, y, nf]
-                if self._complex:
-                    arr = raw["real"].astype(np.complex64)
-                    arr.imag = raw["imag"]
-                else:
-                    arr = raw.astype(np.complex64)
-                mm[:, :, y0:y1, :] = arr.transpose(3, 0, 2, 1)   # [nf, mode, y, x]
+                x1 = min(x0 + step, self.nx)
+                raw = self._P[:, x0:x1, :, :]                 # [mode, x, y, nf]
+                for m, mm in mms.items():
+                    if self._complex:
+                        arr = raw["real"][m].astype(np.complex64)
+                        arr.imag = raw["imag"][m]
+                    else:
+                        arr = raw[m].astype(np.complex64)
+                    mm[:, :, x0:x1] = arr.transpose(2, 1, 0)      # [nf, y, x]
                 if self.progress is not None:
-                    self.progress(y1 / self.ny)
-            mm.flush()
+                    self.progress(x1 / self.nx)
+            for mm in mms.values():
+                mm.flush()
         except BaseException:
-            del mm
-            try:
-                os.remove(part)
-            except OSError:
-                pass
+            mm = None
+            mms.clear()
+            for part in parts.values():
+                try:
+                    os.remove(part)
+                except OSError:
+                    pass
             raise
-        del mm
-        try:
-            os.replace(part, self._mm_path)
-        except OSError:
-            if not os.path.exists(self._mm_path):
-                raise
-            os.remove(part)     # another window finished first and has it open
-        self._open_mm()
+        finally:
+            self.building = False
+        mm = None       # drop every reference so Windows lets the files be renamed
+        mms.clear()
+        for m, p in todo.items():
+            try:
+                os.replace(parts[m], p)
+            except OSError:
+                if not os.path.exists(p):
+                    raise
+                os.remove(parts[m])     # another window finished first and has it open
+            self._open_mode(m, p)
+        self.last_build_s = time.perf_counter() - t0
+
+    def mode_at(self, i: int, mode: int) -> np.ndarray:
+        """One mode at frequency index i, as complex64 [y, x].
+
+        For files that need the frequency-major cache, this builds it first if
+        `mode` is not cached yet, together with any other modes in wanted_modes.
+        """
+        if self.uses_mode_cache:
+            if mode not in self._P_mm:
+                with self._io_lock:
+                    if mode not in self._P_mm:
+                        self._build_transposed(self.wanted_modes | {mode})
+            # copy, so no view keeps the cache file mapped after close()
+            return np.array(self._P_mm[mode][i])
+        return self.modes_at(i)[mode]
 
     def modes_at(self, i: int) -> np.ndarray:
-        """All modes at frequency index i, as complex64 [mode, y, x]."""
+        """All modes at frequency index i, as complex64 [mode, y, x].
+
+        Not for files that use the frequency-major cache (see mode_at).
+        """
         if self._P_mem is not None:
             return self._P_mem[i]
-        if self._mm_path is not None:
-            if self._P_mm is None:
-                with self._io_lock:
-                    if self._P_mm is None:
-                        self._build_transposed()
-            # copy, so no view keeps the cache file mapped after close()
-            return np.array(self._P_mm[i])
+        if self.uses_mode_cache:
+            return np.stack([self.mode_at(i, m) for m in range(self.n_modes)])
         hit = self.cache.get(i)
         if hit is not None:
             return hit
@@ -614,7 +756,7 @@ class SPODFile:
         self._cancel = True
         self.cache.clear()
         with self._io_lock:      # wait for a cache rewrite to stop
-            self._P_mm = None
+            self._P_mm = {}
         if self._h5 is not None:
             try:
                 self._h5.close()
@@ -637,18 +779,71 @@ def split_direction(field: np.ndarray, x_vec: np.ndarray, direction: str,
 
     field: complex [..., nx] with x along the last axis.
     """
-    if direction not in ("downstream", "upstream"):
+    return filter_wavenumbers(field, x_vec, direction, pad_factor=pad_factor)
+
+
+def wavenumber_nfft(nx: int, pad_factor: int = 4) -> int:
+    return pad_factor * int(2 ** np.ceil(np.log2(max(nx, 2))))
+
+
+def wavenumber_axis(x_vec: np.ndarray, nfft: int) -> np.ndarray:
+    """Wavenumber k of each FFT bin, in FFT order, in rad per unit of x.
+
+    The sign is flipped from the FFT's so that k > 0 is a wave travelling in +x
+    (downstream), matching the "Downstream (+k)" labels: see split_direction.
+    """
+    n = x_vec.size
+    dx = abs(float(x_vec[-1] - x_vec[0])) / (n - 1) if n > 1 else 1.0
+    return -2 * np.pi * np.fft.fftfreq(nfft, d=dx or 1.0)
+
+
+def wavenumber_weights(k: np.ndarray, direction: str, ranges=()) -> np.ndarray:
+    """Weight (0 to 1) given to each bin of `k` (from wavenumber_axis).
+
+    direction: "all", "downstream" (k > 0), "upstream" (k < 0), or "bands",
+    which keeps every bin inside any (k_lo, k_hi) of `ranges` and zeroes the rest.
+    For the up/downstream split, the k = 0 and Nyquist bins get 0.5 so the two
+    parts sum to the original field.
+    """
+    if direction == "downstream":
+        w = (k > 0).astype(float)
+    elif direction == "upstream":
+        w = (k < 0).astype(float)
+    elif direction == "bands":
+        w = np.zeros(k.shape)
+        for lo, hi in ranges:
+            lo, hi = min(lo, hi), max(lo, hi)
+            w[(k >= lo) & (k <= hi)] = 1.0
+        return w
+    else:
+        return np.ones(k.shape)
+    w[0] = 0.5
+    w[k.size // 2] = 0.5
+    return w
+
+
+def wavenumber_spectrum(field: np.ndarray, x_vec: np.ndarray, pad_factor: int = 4):
+    """FFT of a complex mode along x: (k, F), with k from wavenumber_axis and F [..., nfft]."""
+    if x_vec.size > 1 and x_vec[-1] < x_vec[0]:
+        field = field[..., ::-1]
+    nfft = wavenumber_nfft(field.shape[-1], pad_factor)
+    return wavenumber_axis(x_vec, nfft), np.fft.fft(field, nfft, axis=-1)
+
+
+def filter_wavenumbers(field: np.ndarray, x_vec: np.ndarray, direction: str, ranges=(),
+                       pad_factor: int = 4) -> np.ndarray:
+    """Zero the wavenumbers outside the chosen direction or k ranges (see wavenumber_weights).
+
+    The field is zero-padded along x to pad_factor times the next power of 2,
+    transformed, weighted and transformed back. Each band has sharp edges, so a
+    narrow band rings in x (a sinc spread of about 2 pi / band width).
+    """
+    if direction not in ("downstream", "upstream", "bands"):
         return field
     flip = x_vec.size > 1 and x_vec[-1] < x_vec[0]
-    if flip:
-        field = field[..., ::-1]
     nx = field.shape[-1]
-    nfft = pad_factor * int(2 ** np.ceil(np.log2(max(nx, 2))))
-    F = np.fft.fft(field, nfft, axis=-1)
-    k = np.fft.fftfreq(nfft)
-    w = np.where(k < 0, 1.0, 0.0) if direction == "downstream" else np.where(k > 0, 1.0, 0.0)
-    w[0] = 0.5
-    w[nfft // 2] = 0.5
+    k, F = wavenumber_spectrum(field, x_vec, pad_factor)
+    w = wavenumber_weights(k, direction, ranges)
     out = np.fft.ifft(F * w, axis=-1)[..., :nx].astype(np.complex64)
     if flip:
         out = out[..., ::-1]

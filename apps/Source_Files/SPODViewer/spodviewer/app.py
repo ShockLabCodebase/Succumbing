@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 import sys
 import threading
 import time
@@ -15,15 +16,18 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import Qt
 
 from . import __version__, colormaps
-from .data import (SPODFile, clear_transpose_cache, set_transpose_cache_dir,
-                   split_direction, transpose_cache_dir, transpose_cache_size)
+from .data import (CACHE_BUDGET_GB_RANGE, SPODFile, clear_transpose_cache,
+                   default_transpose_cache_dir, filter_wavenumbers, set_transpose_cache_budget,
+                   set_transpose_cache_dir, transpose_cache_budget, transpose_cache_dir,
+                   transpose_cache_size)
 
 pg.setConfigOptions(imageAxisOrder="row-major", antialias=True,
                     background="w", foreground="k")
 
 ASSETS = Path(__file__).resolve().parent / "assets"
 DISPLAYS = ["Real", "Imaginary", "Magnitude", "Phase"]
-DIRECTIONS = [("All", "all"), ("Downstream (+k)", "downstream"), ("Upstream (−k)", "upstream")]
+DIRECTIONS = [("All", "all"), ("Downstream (+k)", "downstream"), ("Upstream (−k)", "upstream"),
+              ("Custom k ranges", "bands")]
 MODE_COLOURS = ["#1f3a93", "#c0392b", "#27ae60", "#8e44ad", "#d35400", "#16a085"]
 FPS_CHOICES = [5, 10, 15, 24, 30, 60]
 # Interface colour scheme. The plots keep their white background in every theme.
@@ -62,12 +66,13 @@ class Prefetcher(QtCore.QObject):
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
 
-    def request(self, idx: int, neighbours: int = 2):
+    def request(self, idx: int, neighbours: int = 2, mode: int = 0):
+        """Load frequency idx (and its neighbours) for `mode` (it matters for the mode cache)."""
         n = self.spod.n_freq
         order = [idx]
         for d in range(1, neighbours + 1):
             order += [idx + d, idx - d]
-        order = [i for i in order if 0 <= i < n]
+        order = [(i, mode) for i in order if 0 <= i < n]
         with self._cv:
             self._queue = order          # newest request replaces the old queue
             self._cv.notify()
@@ -86,12 +91,12 @@ class Prefetcher(QtCore.QObject):
                     self._cv.wait()
                 if self._stop:
                     return
-                idx = self._queue.pop(0)
-            if self.spod.is_cached(idx):
+                idx, mode = self._queue.pop(0)
+            if self.spod.is_cached(idx, mode):
                 self.loaded.emit(idx)
                 continue
             try:
-                self.spod.modes_at(idx)
+                self.spod.mode_at(idx, mode)
             except Exception as exc:  # pragma: no cover
                 self.failed.emit(idx, str(exc))
                 continue
@@ -119,11 +124,81 @@ class VideoDialog(QtWidgets.QDialog):
 
 
 # --------------------------------------------------------------------------
+class ModeCacheDialog(QtWidgets.QDialog):
+    """Folder and size limit of the frequency-major mode cache."""
+
+    def __init__(self, parent, folder: str | None, limit_gb: int):
+        super().__init__(parent)
+        self.setWindowTitle("Mode cache")
+        self.folder = folder            # None: the default folder
+        form = QtWidgets.QFormLayout(self)
+        intro = QtWidgets.QLabel(
+            "Files whose modes are stored with all frequencies together are rewritten into "
+            "this folder the first time they are viewed. The cache is deleted when SPODViewer "
+            "closes.", wordWrap=True)
+        form.addRow(intro)
+        self.path = QtWidgets.QLineEdit(readOnly=True)
+        self.path.setMinimumWidth(380)
+        browse = QtWidgets.QPushButton("Browse…")
+        default = QtWidgets.QPushButton("Default")
+        row = QtWidgets.QHBoxLayout()
+        row.addWidget(self.path, 1)
+        row.addWidget(browse)
+        row.addWidget(default)
+        form.addRow("Folder", row)
+        lo, hi = CACHE_BUDGET_GB_RANGE
+        self.limit = QtWidgets.QSpinBox(minimum=lo, maximum=hi, value=int(limit_gb), suffix=" GB")
+        self.limit.setToolTip("Most disk space the cache may use. The least recently used "
+                              "files are deleted first. A file needing more than this cannot be viewed.")
+        form.addRow("Maximum size", self.limit)
+        self.usage = QtWidgets.QLabel(wordWrap=True)
+        form.addRow(self.usage)
+        bb = QtWidgets.QDialogButtonBox(QtWidgets.QDialogButtonBox.Ok | QtWidgets.QDialogButtonBox.Cancel)
+        bb.accepted.connect(self.accept)
+        bb.rejected.connect(self.reject)
+        form.addRow(bb)
+        browse.clicked.connect(self._browse)
+        default.clicked.connect(lambda: self._set_folder(None))
+        self.limit.valueChanged.connect(lambda _: self._update_usage())
+        self._set_folder(folder)
+
+    def shown_folder(self) -> str:
+        return os.path.normpath(self.folder) if self.folder else default_transpose_cache_dir()
+
+    def _browse(self):
+        folder = QtWidgets.QFileDialog.getExistingDirectory(self, "Folder for the mode cache",
+                                                            self.shown_folder())
+        if folder:
+            self._set_folder(folder)
+
+    def _set_folder(self, folder):
+        self.folder = folder or None
+        self.path.setText(self.shown_folder() + ("  (default)" if not self.folder else ""))
+        self._update_usage()
+
+    def _update_usage(self):
+        folder = self.shown_folder()
+        probe = folder
+        while probe and not os.path.isdir(probe):     # the default folder may not exist yet
+            parent = os.path.dirname(probe)
+            probe = parent if parent != probe else ""
+        used = transpose_cache_size(folder) / 2**30
+        text = f"In use: {used:.1f} GB."
+        if probe:
+            free = shutil.disk_usage(probe).free / 2**30
+            text += f"  Free on that drive: {free:.0f} GB."
+            if free + used < self.limit.value():
+                text += "<br><font color='#c0392b'>The drive has less free space than the maximum.</font>"
+        self.usage.setText(text)
+
+
+# --------------------------------------------------------------------------
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, settings_name: str = "SPODViewer"):
         super().__init__()
         self.settings = QtCore.QSettings("ShockLab", settings_name)
         set_transpose_cache_dir(self.settings.value("mode_cache_dir", "") or None)
+        set_transpose_cache_budget(self.settings.value("mode_cache_gb", 15, type=int))
         self.spod: SPODFile | None = None
         self.prefetch: Prefetcher | None = None
         self.idx = 0
@@ -134,6 +209,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._field = None
         self._norm = 1.0
         self._split_cache: dict = {}
+        self._base = None                   # unfiltered oriented mode behind self._field
+        self.k_ranges = self._load_k_ranges()
+        self._kwin = None                   # wavenumber spectrum window, made on first use
         self._waiting = False
         self._contours: list[pg.IsocurveItem] = []
         self._waterfalls: list = []
@@ -326,6 +404,9 @@ class MainWindow(QtWidgets.QMainWindow):
                 rb.setChecked(True)
             self.dir_group.addButton(rb, i)
             dl.addWidget(rb)
+        self.btn_kspec = QtWidgets.QPushButton("k-spectrum…")
+        self.btn_kspec.setToolTip("Show the wavenumber spectrum along x and choose the k ranges kept (K)")
+        dl.addWidget(self.btn_kspec)
 
         out = QtWidgets.QGroupBox("Output")
         ol = QtWidgets.QHBoxLayout(out)
@@ -389,7 +470,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.btn_step_back.clicked.connect(lambda: self._step_phase(-1))
         self.btn_step_fwd.clicked.connect(lambda: self._step_phase(+1))
         self.fps_combo.currentIndexChanged.connect(self._fps_changed)
-        self.dir_group.idToggled.connect(lambda _id, on: on and self._refresh(levels=True))
+        self.dir_group.idToggled.connect(self._direction_toggled)
+        self.btn_kspec.clicked.connect(self.show_kspectrum)
         self.btn_flip_x.toggled.connect(lambda on: self._flip("x", on))
         self.btn_flip_y.toggled.connect(lambda on: self._flip("y", on))
         self.btn_snap.clicked.connect(self.snapshot)
@@ -436,6 +518,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.act_peaks.setChecked(True)
         self.act_peaks.toggled.connect(lambda _: self._draw_spectrum())
         vm.addSeparator()
+        self.act_kspec = vm.addAction("&Wavenumber spectrum…", self.show_kspectrum, QtGui.QKeySequence("K"))
         vm.addAction("&Fit image", self._fit, QtGui.QKeySequence("F"))
         vm.addAction("&Auto contrast", lambda: self._auto_levels(force=True), QtGui.QKeySequence("A"))
         vm.addSeparator()
@@ -451,15 +534,15 @@ class MainWindow(QtWidgets.QMainWindow):
 
         sm = mb.addMenu("&Settings")
         sm.addAction("Memory cache size…", self._cache_dialog)
-        mc = sm.addMenu("Mode cache folder")
+        mc = sm.addMenu("Mode cache")
         cur = mc.addAction("")
-        cur.setEnabled(False)          # shows the current folder and its size
+        cur.setEnabled(False)          # shows the current folder, its size and the limit
         mc.addSeparator()
         mc.addAction("Open folder", self._open_mode_cache)
-        mc.addAction("Change folder…", self._choose_mode_cache)
-        mc.addAction("Use default folder", lambda: self._set_mode_cache(None))
+        mc.addAction("Folder and maximum size…", self._mode_cache_dialog)
         mc.aboutToShow.connect(lambda: cur.setText(
-            f"{transpose_cache_dir()}  ({transpose_cache_size() / 2**30:.1f} GB)"))
+            f"{transpose_cache_dir()}  ({transpose_cache_size() / 2**30:.1f} of "
+            f"{transpose_cache_budget() / 2**30:.0f} GB)"))
         self.mode_cache_menu = mc
         self.act_prefetch = sm.addAction("Prefetch neighbouring frequencies")
         self.act_prefetch.setCheckable(True)
@@ -497,11 +580,12 @@ class MainWindow(QtWidgets.QMainWindow):
                   self.peak_combo, self.btn_prev_bin, self.btn_next_bin, self.btn_prev_peak,
                   self.btn_next_peak, self.phase_slider, self.btn_play, self.btn_step_back,
                   self.btn_step_fwd, self.btn_snap, self.btn_video, self.btn_spec,
-                  self.btn_auto, self.btn_fit):
+                  self.btn_auto, self.btn_fit, self.btn_kspec):
             w.setEnabled(on)
         for b in self.dir_group.buttons():
             b.setEnabled(on)
-        for a in (self.act_close, self.act_snap, self.act_copy, self.act_video, self.act_spec):
+        for a in (self.act_close, self.act_snap, self.act_copy, self.act_video, self.act_spec,
+                  self.act_kspec):
             a.setEnabled(on)
 
     # ================================================================ files
@@ -587,7 +671,10 @@ class MainWindow(QtWidgets.QMainWindow):
             self.spod = None
         self._field = None
         self._field_key = None
+        self._base = None
         self._split_cache.clear()
+        if self._kwin is not None:
+            self._kwin.clear()
         self.busy.hide()
         self.img.clear()
         for c in self._spec_curves:
@@ -616,6 +703,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.mode_combo.clear()
         for m in range(info.n_modes):
             self.mode_combo.addItem(f"{m + 1}")
+        self._update_mode_labels()
         self.mode_combo.setCurrentIndex(0)
         self.mode_combo.blockSignals(False)
         self.mode = 0
@@ -853,10 +941,71 @@ class MainWindow(QtWidgets.QMainWindow):
             return
         if m == self.mode and self._field is not None:
             return
+        if not self._mode_cache_ok(m):
+            self.mode_combo.blockSignals(True)
+            self.mode_combo.setCurrentIndex(self.mode)    # stay on the cached mode
+            self.mode_combo.blockSignals(False)
+            return
         self.mode = m
         self._draw_spectrum()
         self._update_freq_label()
-        self._refresh(levels=True)
+        self._request()        # shows it, or loads it first (e.g. a mode not in the mode cache)
+
+    def _mode_cache_ok(self, m) -> bool:
+        """For files read through the mode cache: ask before caching a mode that is not in it.
+
+        Only the first FIRST_CACHED_MODES modes are cached when a file is first
+        viewed. Adding another reads the whole file again, so the user chooses
+        to cache this mode, all remaining modes (same read), or neither.
+        """
+        s = self.spod
+        if not s.needs_build(m) or m in s.wanted_modes:
+            return True
+        if not (s.cached_modes or s.building):
+            s.wanted_modes.add(m)          # first build not started: include it at no extra cost
+            return True
+        rest = [k for k in range(s.n_modes) if k not in s.cached_modes]
+        per = s.mode_cache_bytes / 2**30
+        took = (f" The last build took about {max(1, round(s.last_build_s / 60))} min."
+                if s.last_build_s else "")
+        choice = self._ask_cache_mode(
+            m, f"Mode {m + 1} is not in the mode cache yet. To save space, only modes "
+            f"{', '.join(str(k + 1) for k in s.cached_modes) or '1–2'} were cached.<br><br>"
+            f"Caching another mode means reading the whole file again, which takes as long as "
+            f"the first build, whether one mode or all of them are added.{took}<br><br>"
+            f"Mode {m + 1} adds {per:.2f} GB; all {len(rest)} remaining modes add "
+            f"{per * len(rest):.1f} GB (limit {transpose_cache_budget() / 2**30:.0f} GB).",
+            len(rest))
+        if choice == "one":
+            s.wanted_modes.add(m)
+        elif choice == "all":
+            s.wanted_modes.update(rest)
+        else:
+            return False
+        return True
+
+    def _ask_cache_mode(self, m, text, n_rest) -> str:
+        """'one', 'all' or '' (cancel). Separate so tests can answer it."""
+        box = QtWidgets.QMessageBox(self)
+        box.setWindowTitle("Cache another mode?")
+        box.setIcon(QtWidgets.QMessageBox.Question)
+        box.setTextFormat(Qt.RichText)
+        box.setText(text)
+        one = box.addButton(f"Cache mode {m + 1}", QtWidgets.QMessageBox.AcceptRole)
+        every = box.addButton(f"Cache all {n_rest} remaining modes", QtWidgets.QMessageBox.AcceptRole)
+        box.addButton(QtWidgets.QMessageBox.Cancel)
+        box.setDefaultButton(one)
+        box.exec()
+        return {one: "one", every: "all"}.get(box.clickedButton(), "")
+
+    def _update_mode_labels(self):
+        """Mark modes that are not in the mode cache yet."""
+        s = self.spod
+        if s is None:
+            return
+        for m in range(self.mode_combo.count()):
+            self.mode_combo.setItemText(
+                m, f"{m + 1}" + (" (not cached)" if s.needs_build(m) and s.cached_modes else ""))
 
     def _cycle_direction(self):
         if self.spod is None:
@@ -867,6 +1016,63 @@ class MainWindow(QtWidgets.QMainWindow):
     def _direction(self) -> str:
         b = self.dir_group.checkedButton()
         return b.property("key") if b else "all"
+
+    def set_direction(self, key: str):
+        self.dir_group.button([k for _, k in DIRECTIONS].index(key)).setChecked(True)
+
+    def _direction_toggled(self, _id, on):
+        if not on:
+            return
+        if self._direction() == "bands" and not self.k_ranges and self.spod is not None:
+            self.show_kspectrum()
+            self._kwin.add_range()      # start from a range around the strongest k
+        self._refresh(levels=True)
+        if self._kwin is not None:
+            self._kwin.sync_direction()
+
+    # ---- wavenumber spectrum window and custom k ranges
+    def show_kspectrum(self):
+        from .kspectrum import KSpectrumWindow
+
+        if self.spod is None:
+            return
+        if self._kwin is None:
+            self._kwin = KSpectrumWindow(self)
+            g = self.settings.value("kspec_geometry")
+            if g is not None:
+                self._kwin.restoreGeometry(g)
+        self._kwin.show()
+        self._kwin.raise_()
+        self._kwin.activateWindow()
+
+    def spectrum_source(self):
+        """(key, oriented unfiltered mode, increasing x) of the mode on screen, or None."""
+        if self.spod is None or self._waiting or self._base is None or self._field_key is None:
+            return None
+        idx, mode = self._field_key[:2]
+        return (self.spod.path, idx, mode), self._base, np.sort(self.spod.x_vec)
+
+    def set_k_ranges(self, ranges):
+        """Kept (k_lo, k_hi) ranges for "Custom k ranges", in the units of the k axis."""
+        self.k_ranges = [sorted((float(a), float(b))) for a, b in ranges]
+        self.settings.setValue("k_ranges", ";".join(f"{a:.6g}:{b:.6g}" for a, b in self.k_ranges))
+        if self._direction() == "bands":
+            self._refresh(levels=True)
+
+    def _load_k_ranges(self):
+        out = []
+        for part in str(self.settings.value("k_ranges", "") or "").split(";"):
+            try:
+                a, b = (float(v) for v in part.split(":"))
+                out.append(sorted((a, b)))
+            except ValueError:
+                pass
+        return out
+
+    def _ranges_key(self):
+        if self._direction() != "bands":
+            return ()
+        return tuple((round(a, 6), round(b, 6)) for a, b in self.k_ranges)
 
     def _update_freq_label(self):
         s = self.spod
@@ -881,26 +1087,30 @@ class MainWindow(QtWidgets.QMainWindow):
     # ================================================================ loading
     def _request(self):
         s = self.spod
-        if s.is_cached(self.idx):
+        if s.is_cached(self.idx, self.mode):
             self._waiting = False
+            self.busy.hide()      # e.g. back to a cached mode while another is being built
             self._refresh(levels=True)
             if self.prefetch and self.act_prefetch.isChecked():
-                self.prefetch.request(self.idx)
+                self.prefetch.request(self.idx, mode=self.mode)
             return
         self._waiting = True
-        if s.needs_transpose:
+        if s.needs_build(self.mode):
+            self._building = s.modes_to_build(self.mode)
             self.status_labels["state"].setText("building mode cache…")
             self._show_busy(0.0)
         else:
             self.status_labels["state"].setText(f"loading St {s.St[self.idx]:.4f}…")
         if self.prefetch:
-            self.prefetch.request(self.idx, 2 if self.act_prefetch.isChecked() else 0)
+            self.prefetch.request(self.idx, 2 if self.act_prefetch.isChecked() else 0, self.mode)
 
     def _slice_loaded(self, i):
         if self.spod is None:
             return
         self._update_cache_label()
-        if self._waiting and i == self.idx:
+        if self.spod.uses_mode_cache:
+            self._update_mode_labels()
+        if self._waiting and i == self.idx and self.spod.is_cached(i, self.mode):
             self._waiting = False
             self.busy.hide()
             self._refresh(levels=True)
@@ -921,7 +1131,10 @@ class MainWindow(QtWidgets.QMainWindow):
     def _show_busy(self, frac):
         """Overlay on the image while the frequency-major cache is built."""
         s = self.spod
-        gb = s.n_freq * s.n_modes * s.ny * s.nx * 8 / 2**30
+        modes = getattr(self, "_building", None) or s.modes_to_build(self.mode)
+        gb = s.mode_cache_bytes * len(modes) / 2**30
+        names = (f"mode {modes[0] + 1}" if len(modes) == 1
+                 else f"modes {', '.join(str(m + 1) for m in modes)}")
         if not self.busy.isVisible():
             self.img.clear()
             self._busy_t0 = time.perf_counter()
@@ -933,9 +1146,10 @@ class MainWindow(QtWidgets.QMainWindow):
             eta = "estimating time left…"
         self.busy_label.setText(
             "<b>Building mode cache</b><br>"
-            "This file stores all frequencies together, so its modes are rewritten once "
-            f"({gb:.1f} GB) for fast access. The cache is deleted when SPODViewer closes.<br><br>"
-            f"{frac * gb:.1f} of {gb:.1f} GB, {eta}")
+            "This file stores all frequencies together, so the whole file is read once and "
+            f"{names} rewritten ({gb:.1f} GB) for fast access. Other modes are cached when you "
+            "choose them. The cache is deleted when SPODViewer closes.<br><br>"
+            f"{100 * frac:.0f}% read, {eta}")
         self._place_busy()
         self.busy_bar.setValue(int(round(100 * frac)))
 
@@ -960,25 +1174,26 @@ class MainWindow(QtWidgets.QMainWindow):
     def _current_field(self):
         """Complex field for (freq, mode, direction), plus the normalisation."""
         s = self.spod
-        key = (self.idx, self.mode, self._direction())
+        key = (self.idx, self.mode, self._direction(), self._ranges_key())
         if key == self._field_key and self._field is not None:
             return self._field, self._norm
-        base = s.modes_at(self.idx)[self.mode]
-        base = self._orient(base)
+        if self._base is not None and self._field_key is not None and key[:2] == self._field_key[:2]:
+            base = self._base
+        else:
+            base = self._orient(s.mode_at(self.idx, self.mode))
         direction = key[2]
         if direction == "all":
             fld = base
         else:
-            ck = key
-            fld = self._split_cache.get(ck)
+            fld = self._split_cache.get(key)
             if fld is None:
                 # x is already oriented to increase along columns
-                fld = split_direction(base, np.sort(s.x_vec), direction)
+                fld = filter_wavenumbers(base, np.sort(s.x_vec), direction, self.k_ranges)
                 if len(self._split_cache) > 64:
                     self._split_cache.clear()
-                self._split_cache[ck] = fld
+                self._split_cache[key] = fld
         norm = float(np.abs(base).max()) or 1.0
-        self._field_key, self._field, self._norm = key, fld, norm
+        self._field_key, self._field, self._norm, self._base = key, fld, norm, base
         return fld, norm
 
     def _theta(self) -> float:
@@ -999,7 +1214,7 @@ class MainWindow(QtWidgets.QMainWindow):
         return np.angle(fld * rot).astype(np.float32)
 
     def _refresh(self, levels: bool = False):
-        if self.spod is None or self._waiting or not self.spod.is_cached(self.idx):
+        if self.spod is None or self._waiting or not self.spod.is_cached(self.idx, self.mode):
             return
         frame = self._frame()
         self.img.setImage(frame, autoLevels=False)
@@ -1007,11 +1222,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self._auto_levels()
         self.status_labels["state"].setText("playing" if self.timer.isActive() else "paused")
         self._update_cache_label()
+        if self._kwin is not None:
+            self._kwin.update_spectrum()     # only recomputes when frequency or mode changed
 
     _user_levels = None
 
     def _auto_levels(self, force: bool = False):
-        if self.spod is None or not self.spod.is_cached(self.idx):
+        if self.spod is None or not self.spod.is_cached(self.idx, self.mode):
             return
         fld, norm = self._current_field()
         disp = self.display_combo.currentText()
@@ -1122,7 +1339,9 @@ class MainWindow(QtWidgets.QMainWindow):
         stem = os.path.splitext(s.info.name)[0]
         d = self._direction()
         tag = f"_St_{s.St[self.idx]:.4f}_mode_{self.mode + 1}_{self.display_combo.currentText()}"
-        if d != "all":
+        if d == "bands":
+            tag += "_kranges"
+        elif d != "all":
             tag += f"_{d}"
         return stem + tag
 
@@ -1277,16 +1496,20 @@ class MainWindow(QtWidgets.QMainWindow):
         os.makedirs(folder, exist_ok=True)
         QtGui.QDesktopServices.openUrl(QtCore.QUrl.fromLocalFile(folder))
 
-    def _choose_mode_cache(self):
-        folder = QtWidgets.QFileDialog.getExistingDirectory(
-            self, "Folder for the mode cache", transpose_cache_dir())
-        if folder:
-            self._set_mode_cache(folder)
+    def _mode_cache_dialog(self):
+        dlg = ModeCacheDialog(self, self.settings.value("mode_cache_dir", "") or None,
+                              round(transpose_cache_budget() / 2**30))
+        if dlg.exec() == QtWidgets.QDialog.Accepted:
+            self._set_mode_cache(dlg.folder, dlg.limit.value())
 
-    def _set_mode_cache(self, folder):
+    def _set_mode_cache(self, folder, limit_gb=None):
         set_transpose_cache_dir(folder)
         self.settings.setValue("mode_cache_dir", folder or "")
-        self.status_msg.setText(f"Mode cache folder: {transpose_cache_dir()}")
+        if limit_gb is not None:
+            set_transpose_cache_budget(limit_gb)
+            self.settings.setValue("mode_cache_gb", int(limit_gb))
+        self.status_msg.setText(f"Mode cache: {transpose_cache_dir()}, "
+                                f"at most {transpose_cache_budget() / 2**30:.0f} GB")
 
     def _show_keys(self):
         QtWidgets.QMessageBox.information(self, "Keyboard shortcuts", (
@@ -1295,7 +1518,8 @@ class MainWindow(QtWidgets.QMainWindow):
             "Up / Down\tprevious / next SPOD mode\n"
             "Space\t\tplay / pause phase animation\n"
             ", / .\t\tstep phase back / forward\n"
-            "D\t\tcycle wave direction (all / down / up)\n"
+            "D\t\tcycle wave direction (all / down / up / custom k)\n"
+            "K\t\twavenumber spectrum window\n"
             "[ / ]\t\tprevious / next case of the last waterfall\n"
             "F\t\tfit image\n"
             "A\t\tauto contrast\n"
@@ -1315,6 +1539,9 @@ class MainWindow(QtWidgets.QMainWindow):
                  f"Frequencies: {i.n_freq}   modes in P: {i.n_modes}   modes in L: {i.n_modes_L}",
                  f"P storage: {i.p_layout}"
                  + (f" in {transpose_cache_dir()}" if "cache" in i.p_layout else ""),
+                 *([f"Modes cached: {', '.join(str(m + 1) for m in self.spod.cached_modes) or 'none yet'}"
+                    f"  ({self.spod.mode_cache_bytes / 2**30:.2f} GB each)"]
+                   if self.spod.uses_mode_cache else []),
                  f"Nt:{i.n_snapshots}   Nfft: {i.nfft}   overlap: {i.overlap}   fps: {i.fps}"]
         for p in i.flow:
             lines.append(f"{p.name}: {p.raw} → {p.value:g}  (from {p.source})")
@@ -1333,7 +1560,8 @@ class MainWindow(QtWidgets.QMainWindow):
             "Modes are animated as Re(P·e<sup>iθ</sup>) with θ = ωt, "
             "following MATLAB's FFT sign convention.<br>"
             "The wave-direction split takes an FFT along x and keeps negative (downstream) "
-            "or positive (upstream) FFT wavenumbers, i.e. waves travelling in +x or −x."))
+            "or positive (upstream) FFT wavenumbers, i.e. waves travelling in +x or −x. "
+            "The wavenumber spectrum window shows k with the sign flipped, so k > 0 is downstream."))
 
     def _restore(self):
         g = self.settings.value("geometry")
@@ -1347,6 +1575,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def closeEvent(self, ev):
         self.settings.setValue("geometry", self.saveGeometry())
+        if self._kwin is not None:
+            self.settings.setValue("kspec_geometry", self._kwin.saveGeometry())
+            self._kwin.close()
         for w in list(self._waterfalls):
             w.close()
         self.close_file()
@@ -1382,9 +1613,20 @@ def _selftest(app, argv) -> int:
         w.show()
         w.open_file(path)
         t0 = time.time()
-        while w._waiting and time.time() - t0 < 600:   # first open may build the mode cache
+        while w._waiting and time.time() - t0 < 3600:   # first open may build the mode cache (slow drives: many minutes)
             app.processEvents()
             time.sleep(0.01)
+        old_ranges = w.k_ranges
+        w.set_k_ranges([])
+        w.show_kspectrum()
+        w.set_direction("bands")     # adds a range around the strongest k
+        app.processEvents()
+        nk = w._kwin.k.size if w._kwin.k is not None else "no"
+        log.append(f"k-spectrum: {nk} bins, ranges {w.k_ranges}, "
+                   f"{w._kwin.kept_label.text()}")
+        w._kwin.split.grab().save(os.path.join(out, "selftest_kspectrum.png"))
+        w._kwin.close()
+        w.set_k_ranges(old_ranges)
         w.dir_group.button(1).setChecked(True)
         app.processEvents()
         w._render(1200).save(os.path.join(out, "selftest.png"))
@@ -1429,6 +1671,10 @@ def _selftest(app, argv) -> int:
         log.append(traceback.format_exc())
         log.append(f"FAILED: {exc}")
         code = 1
+        try:
+            w.close_file()      # stop a cache build in progress, or the process never exits
+        except Exception:
+            pass
     with open(os.path.join(out, "selftest.txt"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(log) + "\n")
     return code

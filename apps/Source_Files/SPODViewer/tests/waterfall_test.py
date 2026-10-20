@@ -77,6 +77,30 @@ def main(out, paths):
         pump(app, lambda: not viewer._waiting)
         print("stepped case ->", os.path.basename(viewer.spod.path), f"St={viewer.spod.St[viewer.idx]:.4f}")
 
+    # y-axis: frequency vectors with one value per frequency (synthetic files: St, f, St_SRP)
+    ys = [win.y_combo.itemData(i) for i in range(win.y_combo.count())]
+    print("y-axis options:", ys)
+    assert ys[0] == "St" and "St_short" not in ys
+    if "St_SRP" in ys:
+        St_max = win.st_max.value()
+        win.y_combo.setCurrentIndex(ys.index("St_SRP"))
+        app.processEvents()
+        c0 = win.cases[win.order[0]]
+        assert np.allclose(win.St, c0["axes"]["St_SRP"][1:]), "rows follow St_SRP"
+        assert abs(win.st_max.value() / St_max - 1.25) < 0.01, win.st_max.value()
+        win._open(0, 50)
+        pump(app, lambda: not viewer._waiting)
+        assert viewer.idx == 50
+        assert abs(win.marker.data["y"][0] - c0["axes"]["St_SRP"][50]) < 1e-9
+        print(f"St_SRP: rows {win.St[0]:.4f}..{win.St[-1]:.4f}, max {win.st_max.value():g}, "
+              f"label {win.st_max_label.text()!r}")
+    if "f" in ys:
+        win.y_combo.setCurrentIndex(ys.index("f"))
+        app.processEvents()
+        print(f"f: rows {win.St[0]:.3g}..{win.St[-1]:.3g}, label {win.plot.getAxis('left').labelText!r}")
+    win.y_combo.setCurrentIndex(0)
+    app.processEvents()
+
     for i in range(win.scale_combo.count()):
         win.scale_combo.setCurrentIndex(i)
         app.processEvents()

@@ -1,7 +1,8 @@
 """Waterfall of SPOD spectra across a set of cases (NPR, height, ...).
 
-Each case contributes one column: log10 of the chosen mode's eigenvalue against St.
-Clicking a point opens that case at that St in the main viewer.
+Each case contributes one column: log10 of the chosen mode's eigenvalue against St
+(or another frequency axis saved in the files, such as f or St_SRP).
+Clicking a point opens that case at that frequency in the main viewer.
 """
 
 from __future__ import annotations
@@ -65,9 +66,11 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.cases: list[dict] = []
         self.order = np.array([], int)
         self.xvals = np.array([])
-        self.St = np.array([])
+        self.St = np.array([])     # y-axis values of the rows of Z (St unless changed)
         self.Z = None
-        self._sel = None
+        self._sel = None           # (column, frequency index in that case) last opened
+        self._yscale = 1.0
+        self._y_top = 1.0          # largest y value over the cases, for keeping "max" in proportion
         self.setWindowTitle(f"SPOD waterfall — {len(paths)} files")
         if not viewer.windowIcon().isNull():
             self.setWindowIcon(viewer.windowIcon())
@@ -92,6 +95,8 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.param_combo = QtWidgets.QComboBox()
         self.param_combo.setMinimumContentsLength(18)
         self.param_combo.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLengthWithIcon)
+        self.y_combo = QtWidgets.QComboBox()
+        self.y_combo.setToolTip("Frequency vectors found in every file, with one value per frequency")
         self.mode_spin = QtWidgets.QSpinBox(minimum=1, maximum=1, value=1)
         self.scale_combo = QtWidgets.QComboBox()
         for label, key in SCALINGS:
@@ -104,13 +109,15 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.chk_lines = QtWidgets.QCheckBox("Case lines")
         self.chk_lines.setChecked(True)
         self.btn_auto = QtWidgets.QPushButton("Auto contrast")
-        self.btn_png = QtWidgets.QPushButton("Save image…")
+        self.btn_png = QtWidgets.QPushButton("Save figure…")
         self.btn_csv = QtWidgets.QPushButton("Export CSV…")
 
         row = QtWidgets.QHBoxLayout()
-        for lab, w in (("x-axis", self.param_combo), ("Mode", self.mode_spin),
-                       ("Colour", self.scale_combo), ("Map", self.cmap_combo), ("St max", self.st_max)):
-            row.addWidget(QtWidgets.QLabel(lab))
+        self.st_max_label = QtWidgets.QLabel("St max")
+        for lab, w in (("x-axis", self.param_combo), ("y-axis", self.y_combo), ("Mode", self.mode_spin),
+                       ("Colour", self.scale_combo), ("Map", self.cmap_combo),
+                       (self.st_max_label, self.st_max)):
+            row.addWidget(lab if isinstance(lab, QtWidgets.QLabel) else QtWidgets.QLabel(lab))
             row.addWidget(w)
             row.addSpacing(6)
         row.addWidget(self.chk_lines)
@@ -141,6 +148,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.statusBar().addWidget(self.hover, 1)
 
         self.param_combo.currentIndexChanged.connect(lambda _: self._arrange())
+        self.y_combo.currentIndexChanged.connect(lambda _: self._y_changed())
         self.mode_spin.valueChanged.connect(lambda _: self._compute())
         self.scale_combo.currentIndexChanged.connect(lambda _: self._compute())
         self.cmap_combo.currentTextChanged.connect(lambda n: self.cbar.setColorMap(colormaps.get(n)))
@@ -183,6 +191,15 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.mode_spin.setMaximum(min(c["L"].shape[1] for c in ok))
         St_hi = max(c["St"].max() for c in ok)
         self.st_max.setMaximum(St_hi)
+        # candidate y-axes: frequency vectors present in every file (St first)
+        self.y_combo.blockSignals(True)
+        self.y_combo.clear()
+        common = [k for k in ok[0]["axes"] if all(k in c["axes"] for c in ok)]
+        # (the dicts arrive key-sorted through the Qt signal, so order them here)
+        for k in sorted(common, key=lambda k: (k != "St", k != "f", k.lower())):
+            self.y_combo.addItem(k, k)
+        self.y_combo.blockSignals(False)
+        self._y_top = St_hi
         # candidate x-axes: tokens present in every file that vary between files
         common = set.intersection(*(set(c["tokens"]) for c in ok))
         varying = [k for k in common
@@ -210,6 +227,45 @@ class WaterfallWindow(QtWidgets.QMainWindow):
     # ------------------------------------------------------------------ data
     def _param(self) -> str:
         return self.param_combo.currentData() or "__index__"
+
+    def _y_key(self) -> str:
+        return self.y_combo.currentData() or "St"
+
+    def _y(self, c) -> np.ndarray:
+        """The chosen frequency axis of a case, in display units."""
+        return c["axes"].get(self._y_key(), c["St"]) * self._yscale
+
+    def _y_label(self, html=True) -> str:
+        key = self._y_key()
+        if key.lower().startswith("f"):
+            unit = "kHz" if self._yscale == 1e-3 else "Hz"
+            name = f"<i>{key}</i>" if html else key
+            return f"{name} ({unit})"
+        if not html:
+            return key
+        base, _, sub = key.partition("_")
+        return f"<i>{base}</i>" + (f"<sub>{sub}</sub>" if sub else "")
+
+    def _y_changed(self):
+        """Switch the y-axis, keeping "max" at the same fraction of the range."""
+        if not self.cases:
+            return
+        frac = self.st_max.value() / self._y_top if self._y_top else 1.0
+        key = self._y_key()
+        top = max(c["axes"][key].max() for c in self.cases)
+        self._yscale = 1e-3 if key.lower().startswith("f") and top > 1e4 else 1.0
+        top *= self._yscale
+        self._y_top = top
+        decimals = int(np.clip(2 - np.floor(np.log10(top)), 0, 4)) if top > 0 else 2
+        self.st_max.blockSignals(True)
+        self.st_max.setDecimals(decimals)
+        self.st_max.setMinimum(10.0 ** -decimals)
+        self.st_max.setMaximum(top)
+        self.st_max.setSingleStep(10.0 ** (np.floor(np.log10(top)) - 1) if top > 0 else 0.1)
+        self.st_max.setValue(min(top, max(frac * top, 10.0 ** -decimals)))
+        self.st_max.blockSignals(False)
+        self.st_max_label.setText(f"{self._y_label(html=False).split(' (')[0]} max")
+        self._compute()
 
     def _arrange(self):
         if not self.cases:
@@ -248,7 +304,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self._compute()
 
     def _common_St(self):
-        Sts = [self.cases[j]["St"] for j in self.order]
+        Sts = [self._y(self.cases[j]) for j in self.order]
         same = all(s.shape == Sts[0].shape and np.allclose(s, Sts[0], rtol=1e-6) for s in Sts)
         if same:
             return Sts[0], same
@@ -273,15 +329,16 @@ class WaterfallWindow(QtWidgets.QMainWindow):
                 if how == "max":
                     v = v / v[1:].max()
                 elif how == "sum":
-                    v = v / np.trapezoid(v, c["St"])
+                    v = v / np.trapezoid(v, self._y(c))
                 v = np.log10(np.clip(v, 1e-300, None))
             if not same:
-                v = np.interp(St, c["St"], v, left=np.nan, right=np.nan)
+                v = np.interp(St, self._y(c), v, left=np.nan, right=np.nan)
             cols.append(v)
         Z = np.column_stack(cols)          # [St, case]
         if St.size and St[0] == 0:
             Z, St = Z[1:], St[1:]           # DC dominates log plots
         self.St, self.Z = St, Z
+        self.plot.setLabel("left", self._y_label())
         label = self.scale_combo.currentText()
         if how != "frac":
             label = label.replace("λ", f"λ<sub>{m + 1}</sub>", 1)
@@ -359,7 +416,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
             return
         col, row, _ = hit
         c = self.cases[self.order[col]]
-        self.hover.setText(f"{self.xvals[col]:g}   St {self.St[row]:.4f}   value {self.Z[row, col]:.3g}"
+        self.hover.setText(f"{self.xvals[col]:g}   {self._y_label(html=False)} {self.St[row]:.4g}   value {self.Z[row, col]:.3g}"
                            f"   {os.path.basename(c['path'])}")
 
     def _clicked(self, ev):
@@ -371,7 +428,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         col, row, _ = hit
         # snap to the case's own St bins, nearest local maximum within a few bins
         c = self.cases[self.order[col]]
-        St_c = c["St"]
+        St_c = self._y(c)
         i = int(np.argmin(np.abs(St_c - self.St[row])))
         if not (ev.modifiers() & Qt.ShiftModifier):
             m = self.mode_spin.value() - 1
@@ -382,34 +439,36 @@ class WaterfallWindow(QtWidgets.QMainWindow):
     def _list_open(self, item):
         col = self.case_list.row(item)
         c = self.cases[self.order[col]]
-        St_target = self._sel[1] if self._sel is not None else None
-        i = int(np.argmin(np.abs(c["St"] - St_target))) if St_target is not None else None
+        i = None
+        if self._sel is not None and self._sel[1] is not None:
+            target = self._y(self.cases[self.order[self._sel[0]]])[self._sel[1]]
+            i = int(np.argmin(np.abs(self._y(c) - target)))
         self._open(col, i)
 
     def _open(self, col, i):
         c = self.cases[self.order[col]]
-        St_val = float(c["St"][i]) if i is not None else None
-        self._sel = (col, St_val)
+        self._sel = (col, i)
         self._update_marker()
         self.case_list.setCurrentRow(col)
-        self.info.setText(f"Opened {os.path.basename(c['path'])}" +
-                          (f" at St {St_val:.4f}" if St_val is not None else ""))
+        self.info.setText(f"Opened {os.path.basename(c['path'])}" + (
+            f" at {self._y_label(html=False)} {self._y(c)[i]:.4g}" if i is not None else ""))
         self.viewer.show_case(c["path"], i, self.mode_spin.value() - 1, source=self)
 
     def _update_marker(self):
         if self._sel is None or self._sel[1] is None:
             self.marker.setData([], [])
             return
-        col, St_val = self._sel
-        self.marker.setData([self._xpos[col]], [St_val])
+        col, i = self._sel
+        self.marker.setData([self._xpos[col]], [self._y(self.cases[self.order[col]])[i]])
 
     def step_case(self, d):
-        """Open the neighbouring case at the same St (called from the viewer)."""
-        if self._sel is None:
+        """Open the neighbouring case at the same frequency (called from the viewer)."""
+        if self._sel is None or self._sel[1] is None:
             return
+        target = self._y(self.cases[self.order[self._sel[0]]])[self._sel[1]]
         col = int(np.clip(self._sel[0] + d, 0, len(self.order) - 1))
         c = self.cases[self.order[col]]
-        i = int(np.argmin(np.abs(c["St"] - self._sel[1])))
+        i = int(np.argmin(np.abs(self._y(c) - target)))
         self._open(col, i)
 
     # ------------------------------------------------------------------ export
@@ -426,7 +485,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         path, _ = QtWidgets.QFileDialog.getSaveFileName(self, "Export waterfall", "waterfall.csv", "CSV (*.csv)")
         if not path:
             return
-        head = "St," + ",".join(f"{v:g}" for v in self.xvals)
+        head = self._y_label(html=False).replace(" ", "_") + "," + ",".join(f"{v:g}" for v in self.xvals)
         np.savetxt(path, np.column_stack([self.St, self.Z]), delimiter=",", header=head,
                    comments="", fmt="%.6g")
         with open(path, "a", encoding="utf-8") as fh:

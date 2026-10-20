@@ -13,7 +13,7 @@ import h5py
 import numpy as np
 
 
-def write(path, St, L, P, x, y, im_mean, scalars):
+def write(path, St, L, P, x, y, im_mean, scalars, vectors=None, chunks=None):
     cdt = np.dtype([("real", "<f4"), ("imag", "<f4")])
     with h5py.File(path, "w", userblock_size=512) as f:
         def put(name, arr, cls):
@@ -24,13 +24,15 @@ def write(path, St, L, P, x, y, im_mean, scalars):
         Pc = np.empty(P.shape[::-1], cdt)            # MATLAB [f, y, x, m] -> h5 [m, x, y, f]
         Pt = P.transpose(3, 2, 1, 0)
         Pc["real"], Pc["imag"] = Pt.real, Pt.imag
-        d = f.create_dataset("P", data=Pc, chunks=(P.shape[3], 16, P.shape[1], 1))
+        d = f.create_dataset("P", data=Pc, chunks=chunks or (P.shape[3], 16, P.shape[1], 1))
         d.attrs["MATLAB_class"] = np.bytes_("single")
         put("x", x.T, "double")
         put("y", y.T, "double")
         put("im_mean", im_mean.T.astype(np.float32), "single")
         for k, v in scalars.items():
             put(k, np.array([[v]], float), "double")
+        for k, v in (vectors or {}).items():         # extra frequency axes, MATLAB column vectors
+            put(k, np.asarray(v, float)[None, :], "double")
 
 
 def main(out):
@@ -62,7 +64,9 @@ def main(out):
         name = f"Synthetic_Jet_NPR_{code}_Nt_20000_Nfft_{nfft}_ovlp_50.mat"
         write(os.path.join(out, name), St, L, P, x, y, im_mean,
               {"NPR": int(code), "D": 10.0, "fps": fps, "nfft": nfft, "overlap": 50,
-               "n_snapshots": 20000})
+               "n_snapshots": 20000},
+              # St_short has the wrong length, so the waterfall must not offer it
+              {"f": f, "St_SRP": St * 1.25, "St_short": St[:-1]})
         print(name)
 
 
