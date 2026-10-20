@@ -37,3 +37,7 @@ apps/*.zip
 
 # Another group member's PyFR setup, shared for reference (118 MB, not ours to publish)
 Simulations/Possible_Reference_Setup/
+
+# /add-paper work in progress (notes awaiting fold-in) and the overnight run's lock, log and skip list
+**/notes/_incoming/
+.claude/overnight/
