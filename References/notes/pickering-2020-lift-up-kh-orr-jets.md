@@ -1,3 +1,28 @@
+---
+key: "pickering-2020-lift-up-kh-orr-jets"
+title: "Lift-up, Kelvin–Helmholtz and Orr mechanisms in turbulent jets"
+authors: ["Pickering, E.", "Rigas, G.", "Nogueira, P. A. S.", "Cavalieri, A. V. G.", "Schmidt, O. T.", "Colonius, T."]
+year: 2020
+type: "article"
+venue: "JFM 896, A2"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "896", "pages": "A2"}
+doi: ""
+arxiv: "1909.09737"
+pdf: "Pickering-EtAl_2020_Lift-Up-Kelvin-Helmholtz-And-Orr-Mechanisms-In-Turbulent-Jets.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: "Charles LES (Cascade)"
+data: ["LES"]
+methods: ["SPOD", "resolvent", "eddy-viscosity", "symmetry-decomposition"]
+flow: ["round-jet", "subsonic", "supersonic"]
+phenomena: ["streaks", "KH-wavepackets", "Orr"]
+params: {"M_j": "0.4, 0.9, 1.5", "Re": "4.5×10⁵–1.76×10⁶"}
+topics: ["linear-models"]
+related: ["nogueira-2019-large-scale-streaky-structures-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "morra-2021-colour-of-forcing-resolvent-channel", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "garnaud-2013-preferred-mode-incompressible-jets", "towne-2018-spod-relationship-dmd-resolvent", "nogueira-2026-flapping-motion-screeching-round-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "SPOD of M_j 0.4/0.9/1.5 jet LES + global resolvent with TKE eddy viscosity map lift-up (St/m ≲ 0.1), KH and Orr regimes; dominant streak m falls roughly as 1/x"
+---
 # Lift-up, Kelvin–Helmholtz and Orr mechanisms in turbulent jets
 
 - **Authors:** E. Pickering, G. Rigas, P. A. S. Nogueira, A. V. G. Cavalieri, O. T. Schmidt, T. Colonius (Caltech; ITA, Brazil; UC San Diego)

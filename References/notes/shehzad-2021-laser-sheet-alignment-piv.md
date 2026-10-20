@@ -1,3 +1,28 @@
+---
+key: "shehzad-2021-laser-sheet-alignment-piv"
+title: "On assuring the accurate parallel alignment of a laser sheet for planar and stereoscopic particle image velocimetry"
+authors: ["Shehzad, M.", "Lawrence, S.", "Atkinson, C.", "Soria, J."]
+year: 2021
+type: "article"
+venue: "Exp. Fluids 62, 208"
+bib: {"journal": "Experiments in Fluids", "volume": "62", "pages": "208"}
+doi: "10.1007/s00348-021-03307-3"
+arxiv: ""
+pdf: "Shehzad-EtAl_2021_On-Assuring-The-Accurate-Parallel-Alignment-Of-A-Laser-Sheet-For-Planar-And.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "LTRAC, Monash University"
+data: ["PIV", "PIV-stereo"]
+methods: ["calibration"]
+flow: ["generic"]
+phenomena: []
+params: {}
+topics: ["diagnostics-and-facilities"]
+related: ["sun-2021-distortion-correction-large-sensor-piv", "davey-2025-hpod-sphere-wake", "ragni-2011-particle-tracer-response-shocks-piv"]
+cites: []
+summary: "Aligns the laser sheet to the calibration target before calibrating (slit + three photodetectors), removing the need for self-calibration; SPIV uncertainty < 5.9 µm (0.09 px)"
+---
 # On assuring the accurate parallel alignment of a laser sheet for planar and stereoscopic particle image velocimetry
 
 - **Authors:** M. Shehzad, S. Lawrence, C. Atkinson, J. Soria (LTRAC, Department of Mechanical and Aerospace Engineering, Monash University)

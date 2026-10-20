@@ -1,3 +1,28 @@
+---
+key: "gee-2024-starship-super-heavy-far-field-noise"
+title: "Starship super heavy acoustics: Far-field noise measurements during launch and the first-ever booster catch"
+authors: ["Gee, K. L.", "Pulsipher, N. L.", "Kellison, M. S.", "Mathews, L. T.", "Anderson, M. C.", "Hart, G. W."]
+year: 2024
+type: "article"
+venue: "JASA Express Lett. 4(11), 113601"
+bib: {"journal": "JASA Express Letters", "volume": "4", "number": "11", "pages": "113601"}
+doi: "10.1121/10.0034453"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Gee-EtAl_2024_Starship-Super-Heavy-Acoustics-Far-Field-Noise-Measurements-During-Launch.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Starbase OLP-A, Boca Chica, Texas (Starship Flight 5)"
+data: ["full-scale", "microphones-far"]
+methods: ["statistics", "empirical-model"]
+flow: ["launch-vehicle", "rocket-plume", "heated", "clustered-jets"]
+phenomena: ["sonic-boom", "crackle", "nonlinear-propagation", "infrasound"]
+params: {"vehicle": "Starship Super Heavy (Flight 5)", "thrust": "74.4 MN", "engines": "33 Raptor 2", "distance": "9.7–35.5 km"}
+topics: ["rocket-noise-measurements"]
+related: ["gee-2023-sls-artemis-i-far-field-noise", "gee-2026-falcon-9-ascent-sonic-boom", "mathews-2021-falcon-9-far-field-noise", "kellison-2026-falcon-9-noise-two-campaigns", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: ["gee-2023-sls-artemis-i-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise"]
+summary: "Starship Flight 5 at 9.7–35.5 km: EA model 9 dB under on L_Z,max, 18 dB over on SEL_A; flyback boom near 10 psf; landing burn as loud as liftoff; ≈4–6 SLS launches"
+---
 # Starship super heavy acoustics: Far-field noise measurements during launch and the first-ever booster catch
 
 - **Authors:** K. L. Gee, N. L. Pulsipher, M. S. Kellison, L. T. Mathews, M. C. Anderson, G. W. Hart (Department of Physics and Astronomy, Brigham Young University)

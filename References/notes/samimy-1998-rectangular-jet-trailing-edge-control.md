@@ -1,3 +1,28 @@
+---
+key: "samimy-1998-rectangular-jet-trailing-edge-control"
+title: "Passive Control of Supersonic Rectangular Jets via Nozzle Trailing-Edge Modifications"
+authors: ["Samimy, M.", "Kim, J.-H.", "Clancy, P. S.", "Martens, S."]
+year: 1998
+type: "article"
+venue: "AIAA J. 36(7), 1230–1239"
+bib: {"journal": "AIAA Journal", "volume": "36", "number": "7", "pages": "1230--1239"}
+doi: "10.2514/2.504"
+arxiv: ""
+pdf: "Samimy-EtAl_1998_Passive-Control-Of-Supersonic-Rectangular-Jets-Via-Nozzle-Trailing-Edge.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "OSU Aeronautical and Astronautical Research Laboratory"
+data: ["condensation-imaging", "microphones-far"]
+methods: ["statistics", "PSD"]
+flow: ["rectangular-jet", "supersonic", "underexpanded", "overexpanded", "ideally-expanded"]
+phenomena: ["noise-control", "screech", "axis-switching", "BBSAN", "mixing-enhancement"]
+params: {"M_d": "2", "M_j": "1.5–2.5", "AR": "3", "TR": "1 (cold)"}
+topics: ["non-axisymmetric-and-twin-jets", "screech"]
+related: ["kerechanin-2001-trailing-edge-rectangular-jet-acoustics", "raman-1998-supersonic-jet-screech-review", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "esfahani-2021-coupling-modes-twin-rectangular-jets"]
+cites: []
+summary: "AR 3 Mach 2 half-nozzle with one-sided trailing-edge cutouts: off-design streamwise vortices raise mixing up to ~50%; V-notch removes M_j 1.75 screech; condensation imaging, mics"
+---
 # Passive Control of Supersonic Rectangular Jets via Nozzle Trailing-Edge Modifications
 
 - **Authors:** M. Samimy, J.-H. Kim, P. S. Clancy, S. Martens (The Ohio State University)

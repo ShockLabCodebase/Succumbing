@@ -1,3 +1,28 @@
+---
+key: "james-2012-directivity-curves-rocket-noise-model"
+title: "Modification of directivity curves for a rocket noise model"
+authors: ["James, M. M.", "Salton, A. R.", "Gee, K. L.", "Neilsen, T. B.", "McInerny, S. A.", "Kenny, R. J."]
+year: 2012
+type: "conference"
+venue: "Proc. Mtgs. Acoust. 18, 040008"
+bib: {"booktitle": "Proceedings of Meetings on Acoustics (164th ASA Meeting, Kansas City)", "volume": "18", "pages": "040008", "publisher": "Acoustical Society of America", "note": "Talk 3aNS3, 2012; proceedings paper published 31 March 2014"}
+doi: "10.1121/1.4870986"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/James-EtAl_2012_Modification-Of-Directivity-Curves-For-A-Rocket-Noise-Model.pdf"
+version: "conference"
+unverified: []
+group: false
+facility: "Space Shuttle RSRM static firings (archival data)"
+data: ["full-scale", "microphones-far", "microphones-near"]
+methods: ["empirical-model", "PSD"]
+flow: ["rocket-plume", "supersonic", "heated"]
+phenomena: ["directivity", "source-location"]
+params: {"vehicle": "Space Shuttle RSRM", "D_e": "3.88 m", "U_e": "2454 m/s", "arc radius": "80 D_e"}
+topics: ["rocket-noise-models", "rocket-noise-measurements"]
+related: ["haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics", "gee-2012-reusable-srm-noise-spectral-statistical", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2016-near-field-intensity-static-rocket-firings", "reichman-2018-qm2-srm-far-field-acoustics", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: ["gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics"]
+summary: "RSRM directivity at 80 D_e is not far field at low frequency; re-referencing angles to a frequency-dependent source moves the SP-8072 OASPL peak from 51° to 65°; far field beyond 200–300 D_e"
+---
 # Modification of directivity curves for a rocket noise model
 
 - **Authors:** M. M. James (Blue Ridge Research and Consulting, corresponding), A. R. Salton, K. L. Gee, T. B. Neilsen, S. A. McInerny, R. J. Kenny. Affiliations other than the corresponding author are not printed; the acknowledgements name a Blue Ridge Research and Consulting / Brigham Young University team, with NASA Stennis SBIR support (p. 12).

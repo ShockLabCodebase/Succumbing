@@ -1,3 +1,28 @@
+---
+key: "sieber-2016-spectral-proper-orthogonal-decomposition"
+title: "Spectral proper orthogonal decomposition"
+authors: ["Sieber, M.", "Paschereit, C. O.", "Oberleithner, K."]
+year: 2016
+type: "article"
+venue: "JFM 792, 798–828"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "792", "pages": "798--828"}
+doi: "10.1017/jfm.2016.103"
+arxiv: "1508.04642"
+pdf: "Sieber-EtAl_2016_Spectral-Proper-Orthogonal-Decomposition.pdf"
+version: "preprint"
+unverified: ["JFM volume, pages and DOI not in this arXiv v1 PDF", "published author order (Sieber, Paschereit, Oberleithner) differs from the arXiv PDF (Sieber, Oberleithner, Paschereit)"]
+group: false
+facility: "TU Berlin Hermann-Föttinger-Institut"
+data: ["PIV-TR"]
+methods: ["SPOD-time", "POD", "POD-pair", "DMD"]
+flow: ["swirling-jet", "wake", "airfoil", "generic"]
+phenomena: ["coherent-structures", "intermittency"]
+params: {"Re": "58,000 (swirl combustor), 180,000 (Gurney flap), 37,000 (fluidic oscillator)"}
+topics: ["modal-decomposition", "time-frequency-methods"]
+related: ["oberleithner-2011-swirling-jet-vortex-breakdown-stability", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2020-guide-spod", "von-saldern-2026-band-ensemble-spod", "raiola-2025-hilbert-pod", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "schmid-2010-dynamic-mode-decomposition"]
+cites: ["huang-1998-empirical-mode-decomposition-hilbert-spectrum", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+summary: "Time-domain SPOD (not Towne/Schmidt): diagonal filter N_f on the snapshot correlation matrix spans POD to DFT; smooth mode pairs keep jitter and intermittency; DMD pairing"
+---
 # Spectral proper orthogonal decomposition
 
 - **Authors:** M. Sieber, K. Oberleithner, C. O. Paschereit (TU Berlin, Institut für Strömungsmechanik und Technische Akustik, Hermann-Föttinger-Institut). Author order is as printed on this arXiv PDF; the published JFM article lists Sieber, Paschereit & Oberleithner.

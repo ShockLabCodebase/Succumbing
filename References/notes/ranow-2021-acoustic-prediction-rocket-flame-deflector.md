@@ -1,3 +1,28 @@
+---
+key: "ranow-2021-acoustic-prediction-rocket-flame-deflector"
+title: "Acoustic Prediction Methods for Rocket Flame Deflector Design"
+authors: ["Ranow, Fredrik"]
+year: 2021
+type: "thesis-msc"
+venue: "MSc thesis, KTH"
+bib: {"school": "KTH Royal Institute of Technology, Stockholm", "note": "TRITA-ITM-EX 2021:417"}
+doi: ""
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Ranow_2021_Acoustic-Prediction-Methods-For-Rocket-Flame-Deflector-Design.pdf"
+version: "thesis"
+unverified: []
+group: false
+facility: ""
+data: ["model-only"]
+methods: ["empirical-model", "propagation-model"]
+flow: ["rocket-plume", "launch-vehicle", "impinging-jet", "supersonic", "heated"]
+phenomena: ["directivity", "source-location", "acoustic-efficiency", "mixing-noise", "installation-effects"]
+params: {"vehicle": "Ares I (validation); Merlin 1D example", "M_e": "3.54 (Merlin 1D)", "deflector": "30°"}
+topics: ["rocket-noise-models"]
+related: ["haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "casalino-2009-hybrid-empirical-caa-rocket-noise", "james-2012-directivity-curves-rocket-noise-model", "kenny-2009-space-shuttle-srm-plume-acoustics", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: ["casalino-2009-hybrid-empirical-caa-rocket-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "tam-1982-shock-associated-noise-cd-nozzles", "tsutsumi-2015-epsilon-liftoff-acoustics"]
+summary: "SP-8072 DSM plus Sutherland efficiency, Varnier core cut at impingement, Plotkin–Sutherland directivity, diffraction, duct ray tracing; 7–10 dB high vs Ares I; MATLAB code"
+---
 # Acoustic Prediction Methods for Rocket Flame Deflector Design
 
 - **Authors:** Fredrik Ranow (KTH Royal Institute of Technology). Supervisors Jens Fridh (KTH) and Simon Westerlund (SSC); examiner Björn Laumert. Host company: Swedish Space Corporation (SSC), for the planned expansion of the Esrange launch facilities (p. 2, title page).

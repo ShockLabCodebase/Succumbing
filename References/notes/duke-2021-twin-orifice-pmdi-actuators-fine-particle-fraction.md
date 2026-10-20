@@ -1,3 +1,28 @@
+---
+key: "duke-2021-twin-orifice-pmdi-actuators-fine-particle-fraction"
+title: "Increasing the fine particle fraction of pressurised metered dose inhaler solutions with novel actuator shapes"
+authors: ["Duke, D. J.", "Nguyen, D. T.", "Gomes dos Reis, L.", "Silva, D. M.", "Neild, A.", "Edgington-Mitchell, D.", "Young, P. M.", "Honnery, D. R."]
+year: 2021
+type: "article"
+venue: "Int. J. Pharm. (2021)"
+bib: {"journal": "International Journal of Pharmaceutics", "note": "volume and article number not printed in the accepted manuscript"}
+doi: "10.1016/j.ijpharm.2021.120341"
+arxiv: ""
+pdf: "Duke-EtAl_2021_Increasing-The-Fine-Particle-Fraction-Of-Pressurised-Metered-Dose-Inhaler-Solutions.pdf"
+version: "accepted-manuscript"
+unverified: []
+group: true
+facility: "Shock Lab group facility (LTRAC)"
+data: ["extinction-imaging"]
+methods: ["statistics"]
+flow: ["spray", "twin-jet"]
+phenomena: ["jet-merging"]
+params: {"orifice": "2 × 0.22 mm (twin), 0.33 mm (single)", "propellant": "HFA-134a + 15% w/w ethanol", "f_s": "5 kHz"}
+topics: ["diagnostics-and-facilities"]
+related: ["nogueira-2021-twin-jet-coupling-spatial-lsa", "esfahani-2021-coupling-modes-twin-rectangular-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "tan-2015-bos-density-axisymmetric-jets"]
+cites: []
+summary: "Twin 0.22 mm pMDI orifices raise FPF 75% over a 0.33 mm Bespak; 5 kHz extinction imaging shows one merged plume; half-velocity distance x_1/2 predicts FPF (R² 0.997)"
+---
 # Increasing the fine particle fraction of pressurised metered dose inhaler solutions with novel actuator shapes
 
 - **Authors:** D. J. Duke, D. T. Nguyen, L. Gomes dos Reis, D. M. Silva, A. Neild, D. Edgington-Mitchell, P. M. Young, D. R. Honnery (LTRAC and Laboratory for Microsystems, Monash; Woolcock Institute / University of Sydney)

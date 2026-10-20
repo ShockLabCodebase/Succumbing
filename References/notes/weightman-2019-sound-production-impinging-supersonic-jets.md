@@ -1,3 +1,28 @@
+---
+key: "weightman-2019-sound-production-impinging-supersonic-jets"
+title: "The Sound Production Mechanisms of Impinging Supersonic Jets"
+authors: ["Weightman, Joel L."]
+year: 2019
+type: "thesis-phd"
+venue: "PhD thesis, Monash University"
+bib: {"school": "Monash University", "note": "Dept of Mechanical & Aerospace Engineering (LTRAC); thesis by publication"}
+doi: ""
+arxiv: ""
+pdf: "//ad.monash.edu/home/User088/joellukw/Documents/Monash_Research_Fellow/Literature/Theses/Thesis_Joel_Weightman_Final.pdf"
+version: "thesis"
+unverified: []
+group: true
+facility: "Shock Lab group facility (LTRAC Gas Jet and Supersonic Jet Facilities)"
+data: ["PIV", "schlieren-TR", "microphones-far"]
+methods: ["statistics", "PSD", "POD", "POD-pair", "phase-averaging", "wavenumber-filtering", "resonance-model", "propagation-model"]
+flow: ["impinging-jet", "round-jet", "supersonic", "underexpanded"]
+phenomena: ["impingement-tones", "helical", "flapping", "shock-leakage", "intermittency", "coherent-structures", "shocklet", "receptivity"]
+params: {"NPR": "3.0–5.0", "M_j": "1.36–1.59", "z/D": "2–5", "t/D": "0.1, 0.33, 7", "D": "15 mm", "Re": "7.4×10⁵–1.06×10⁶"}
+topics: ["impinging-jets-and-edge-tones", "modal-decomposition", "diagnostics-and-facilities"]
+related: ["edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "henderson-2002-flow-structure-supersonic-impinging-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "raiola-2025-hilbert-pod"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "gudmundsson-2011-instability-wave-models-near-field-jets", "henderson-2002-flow-structure-supersonic-impinging-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "papamoschou-1988-compressible-turbulent-shear-layer", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+summary: "Impinging-jet feedback (NPR 3.4–3.6, z/D 3.5–5): POD pairs, shear thickness mode; lip geometry picks helical vs toroidal via acoustic path; shock leakage and wall-jet shocklet set phase lag"
+---
 # The Sound Production Mechanisms of Impinging Supersonic Jets
 
 - **Author:** Joel L. Weightman. This is the user's own PhD thesis. Supervisors: D. Edgington-Mitchell and J. Soria (p. v).

@@ -1,3 +1,28 @@
+---
+key: "rowley-2009-spectral-analysis-nonlinear-flows-koopman"
+title: "Spectral analysis of nonlinear flows"
+authors: ["Rowley, C. W.", "Mezić, I.", "Bagheri, S.", "Schlatter, P.", "Henningson, D. S."]
+year: 2009
+type: "article"
+venue: "JFM 641, 115–127"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "641", "pages": "115--127"}
+doi: "10.1017/S0022112009992059"
+arxiv: ""
+pdf: "Rowley-EtAl_2009_Spectral-Analysis-Of-Nonlinear-Flows.pdf"
+version: "published"
+unverified: ["volume page range not printed in the held early-view PDF; from the bibliographic record"]
+group: false
+facility: "KTH Fourier–Chebyshev spectral DNS"
+data: ["DNS"]
+methods: ["DMD", "Koopman", "POD", "LSA-global"]
+flow: ["jet-in-crossflow"]
+phenomena: ["coherent-structures"]
+params: {"R": "3 (V_jet/U_∞)", "Re_δ*": "165"}
+topics: ["modal-decomposition"]
+related: ["schmid-2010-dynamic-mode-decomposition", "towne-2018-spod-relationship-dmd-resolvent", "taira-2017-modal-analysis-fluid-flows-overview", "brunton-2020-machine-learning-fluid-mechanics", "towne-2022-database-reduced-complexity-modeling"]
+cites: []
+summary: "Koopman theory behind DMD: snapshot companion-matrix Arnoldi gives Koopman modes (DFT for periodic data); jet-in-crossflow DNS gives single-frequency modes, unlike POD or global modes"
+---
 # Spectral analysis of nonlinear flows
 
 - **Authors:** C. W. Rowley (Princeton), I. Mezić (UC Santa Barbara), S. Bagheri, P. Schlatter, D. S. Henningson (Linné Flow Centre, KTH)
@@ -127,7 +152,7 @@ This is the founding reference for DMD and its Koopman interpretation. CLAUDE.md
 - **Relation to POD and SPOD:**
   - The POD time coefficient beats at f₁ ± f₂ (Fig. 4, p. 11), the same problem that motivates SPOD and HPOD. It parallels the multi-frequency POD modes in [raiola-2025](raiola-2025-hilbert-pod.md) and the mixed POD pairs warned about in the screech PIV notes.
   - The DFT equivalence for periodic data (p. 4, 7) is the link to SPOD. A later result not in this paper (Chen, Tu & Rowley 2012) shows that companion-matrix DMD of mean-subtracted data reduces to a DFT, which is a reason to keep the mean in or use an optimised or SVD-based variant.
-  - For SPOD variants built for tonal-plus-broadband flows, see [yeung-2024](yeung-2024-adaptive-spod-broadband-tonal.md) and [von-saldern-2026](von-saldern-2026-band-ensemble-spod.md). The SPOD–DMD–resolvent relationship paper (Towne, Schmidt & Colonius 2018) is cited in several notes but not yet indexed.
+  - For SPOD variants built for tonal-plus-broadband flows, see [yeung-2024](yeung-2024-adaptive-spod-broadband-tonal.md) and [von-saldern-2026](von-saldern-2026-band-ensemble-spod.md). The SPOD–DMD–resolvent relationship paper is [Towne, Schmidt & Colonius 2018](towne-2018-spod-relationship-dmd-resolvent.md).
 - **Modelling and simulation side:**
   - Linear global modes about the unstable *steady* state mispredict the wall frequency by a factor of about 2.5 (0.043 vs 0.017) and the shear-layer frequency by about 20% (0.169 vs 0.141) (p. 11). This is the base-flow vs attractor problem; mean-flow stability (as in [oberleithner-2011](oberleithner-2011-swirling-jet-vortex-breakdown-stability.md)) and resolvent analysis on the mean flow ([rolandi-2025](rolandi-2025-biglobal-resolvent-naca0012.md), [pickering-2020](pickering-2020-lift-up-kh-orr-jets.md)) are the usual fixes.
   - The DNS is a low-Re laminar-to-transitional flow with two clean limit-cycle frequencies, an easy case. Behaviour on broadband turbulence or noisy experimental data, and sensitivity to snapshot count, are not tested. [towne-2022](towne-2022-database-reduced-complexity-modeling.md) applies this companion-matrix DMD to 16,000 airfoil-wake snapshots and notes that projected (POD-based) DMD is more stable, consistent with this paper's own remark on numerical stability (p. 5).

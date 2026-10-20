@@ -1,3 +1,28 @@
+---
+key: "morra-2021-colour-of-forcing-resolvent-channel"
+title: "The colour of forcing statistics in resolvent analyses of turbulent channel flows"
+authors: ["Morra, P.", "Nogueira, P. A. S.", "Cavalieri, A. V. G.", "Henningson, D. S."]
+year: 2021
+type: "article"
+venue: "JFM 907, A24"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "907", "pages": "A24"}
+doi: "10.1017/jfm.2020.802"
+arxiv: ""
+pdf: "Morra-EtAl_2021_The-Colour-Of-Forcing-Statistics-In-Resolvent-Analyses-Of-Turbulent-Channel.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "DNS (SIMSON and Channelflow 2.0, SNIC resources)"
+data: ["DNS"]
+methods: ["resolvent", "SPOD", "eddy-viscosity"]
+flow: ["wall-bounded"]
+phenomena: ["streaks", "coherent-structures"]
+params: {"Re_τ": "179, 543"}
+topics: ["linear-models"]
+related: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "nogueira-2019-large-scale-streaky-structures-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2018-spectral-analysis-jet-turbulence"]
+cites: ["cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "DNS nonlinear-forcing CSD (Re_τ 179, 543) through the resolvent recovers the response exactly; forcing is coloured, rank-2, projects onto sub-optimals; cross-components cancel"
+---
 # The colour of forcing statistics in resolvent analyses of turbulent channel flows
 
 - **Authors:** P. Morra, P. A. S. Nogueira, A. V. G. Cavalieri, D. S. Henningson (KTH FLOW, Stockholm; Instituto Tecnológico de Aeronáutica, São José dos Campos)

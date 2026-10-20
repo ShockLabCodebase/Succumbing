@@ -1,3 +1,28 @@
+---
+key: "taira-2017-modal-analysis-fluid-flows-overview"
+title: "Modal analysis of fluid flows: an overview"
+authors: ["Taira, K.", "Brunton, S. L.", "Dawson, S. T. M.", "Rowley, C. W.", "Colonius, T.", "McKeon, B. J.", "Schmidt, O. T.", "Gordeyev, S.", "Theofilis, V.", "Ukeiley, L. S."]
+year: 2017
+type: "review"
+venue: "AIAA J. 55(12), 4013–4041"
+bib: {"journal": "AIAA Journal", "volume": "55", "number": "12", "pages": "4013--4041"}
+doi: "10.2514/1.J056060"
+arxiv: "1702.01453"
+pdf: "Taira-EtAl_2017_Modal-Analysis-Of-Fluid-Flows-An-Overview.pdf"
+version: "preprint"
+unverified: ["volume, pages and DOI from the bibliographic record, not this arXiv PDF"]
+group: false
+facility: ""
+data: ["none"]
+methods: ["POD", "POD-pair", "SPOD", "DMD", "Koopman", "LSA-global", "resolvent", "transient-growth", "ROM"]
+flow: ["generic"]
+phenomena: ["coherent-structures"]
+params: {}
+topics: ["modal-decomposition", "linear-models"]
+related: ["taira-2020-modal-analysis-applications-outlook", "schmid-2010-dynamic-mode-decomposition", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent", "brunton-2020-machine-learning-fluid-mechanics", "schmidt-2020-guide-spod", "morra-2021-colour-of-forcing-resolvent-channel"]
+cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow"]
+summary: "Tutorial review in one linear-algebra framework: SVD, pseudospectra, non-normality; POD, SPOD, balanced POD/ERA, DMD, Koopman, global LSA, mean-flow resolvent; data needs of each"
+---
 # Modal analysis of fluid flows: an overview
 
 - **Authors:** K. Taira (Florida State), S. L. Brunton (Washington), S. T. M. Dawson, C. W. Rowley (Princeton), T. Colonius, B. J. McKeon, O. T. Schmidt (Caltech), S. Gordeyev (Notre Dame), V. Theofilis (Liverpool), L. S. Ukeiley (Florida)

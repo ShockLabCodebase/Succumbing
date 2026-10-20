@@ -1,3 +1,28 @@
+---
+key: "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance"
+title: "Vortices, shocks and non-linear acoustic waves: the ingredients for resonance in impinging compressible jets"
+authors: ["Edgington-Mitchell, D. M.", "Weightman, J. L.", "Mazharmanesh, S.", "Nogueira, P."]
+year: 2025
+type: "article"
+venue: "JFM 1015, A56"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "1015", "pages": "A56"}
+doi: "10.1017/jfm.2025.10383"
+arxiv: ""
+pdf: "EdgingtonMitchell-EtAl_2025_Vortices-Shocks-And-Non-Linear-Acoustic-Waves-The-Ingredients-For-Resonance-In.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["schlieren-TR", "shadowgraph", "PIV"]
+methods: ["phase-averaging", "conditional-sampling", "shock-relations"]
+flow: ["impinging-jet", "round-jet", "rectangular-jet", "subsonic", "supersonic", "underexpanded", "ideally-expanded"]
+phenomena: ["impingement-tones", "guided-jet-mode", "shock-leakage", "nonlinear-propagation", "shocklet"]
+params: {"NPR": "2.5–6", "M_j": "0.86–0.90 (subsonic cases)", "z/D": "2–4.5", "AR": "1, 2", "Re": "3.0–8.6×10⁵", "D_e": "8.7–15 mm", "t/D_e": "0.3–0.6"}
+topics: ["impinging-jets-and-edge-tones"]
+related: ["weightman-2019-sound-production-impinging-supersonic-jets", "henderson-2002-flow-structure-supersonic-impinging-jets", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "jordan-2018-jet-flap-interaction-tones", "stavropoulos-2026-jet-edge-interaction", "mancinelli-2019-screech-prediction-upstream-modes"]
+cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "henderson-2002-flow-structure-supersonic-impinging-jets", "jordan-2018-jet-flap-interaction-tones", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2024-guided-jet-waves", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+summary: "TR schlieren of round and AR 2 jets on plate, cylinder, hemisphere: upstream waves are shocks (M_s≈1.07) from leakage, vortex sound or wall-jet shocklet; guided mode only for in-core sources"
+---
 # Vortices, shocks and non-linear acoustic waves: the ingredients for resonance in impinging compressible jets
 
 - **Authors:** D. M. Edgington-Mitchell, J. L. Weightman, S. Mazharmanesh, P. Nogueira (all Shock Lab, Monash University Dept of Mechanical and Aerospace Engineering; p. 1). The second author is the user.
@@ -145,7 +170,7 @@ This is the user's own group paper (second author) and the direct sequel to his 
   - The Weightman et al. (2016) cylinder PIV is re-used to show the freestream wave is a weak shock, M_s ≈ 1.07 (p. 10). The NPR is missing in the text; the thesis note lists the cylinder case at z/D 3.5.
   - Lip thickness matters: all nozzles here have thick lips (t/D_e 0.3–0.6) (p. 6), consistent with the thesis finding that external geometry selects helical vs toroidal modes. This paper finds no clean link between mechanism and azimuthal mode (p. 25).
 - **Henderson:** [henderson-2002](henderson-2002-flow-structure-supersonic-impinging-jets.md) is the precursor of Henderson et al. (2005), whose wall-jet "membrane" source near r ≈ 1.3D is mechanism (iii) here. This paper does not confirm it, only hypothesises it as the origin of the diffuse coalescing waves (p. 23–24). Henderson's observation that tones vanish in zones of silence, and that higher Mach can switch resonance off, is cited as a caution against reading the shocklet trend too far (p. 25). Henderson's oscillating Mach disk and collapsing annular shock relate to the stand-off-shock leakage and the annular-shock inset of Fig. 1.
-- **Guided-mode literature:** this paper and [edgington-mitchell-2018](edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md) / [edgington-mitchell-2020](edgington-mitchell-2020-waves-in-screeching-jets.md) are consistent: guided-mode closure holds when the source is in the core (screech, subsonic impingement). [edgington-mitchell-2022](edgington-mitchell-2022-unifying-theory-jet-screech.md) also treats shock leakage as a nonlinear radiation mechanism in screech; here leakage is part of the loop itself. [jordan-2018](jordan-2018-jet-flap-interaction-tones.md) and [stavropoulos-2026](stavropoulos-2026-jet-edge-interaction.md) are the subsonic jet–edge analogues where guided-mode closure works. [mancinelli-2019](mancinelli-2019-screech-prediction-upstream-modes.md)'s guided-mode frequency prediction would be expected to fail for the shocklet/leakage cases. The Nogueira et al. (2024) "Guided jet waves" paper (JFM 999 A47) underpins the argument and is not yet in the library; a `/add-paper` candidate. [nogueira-2021-absolute-instability-shock-containing-jets](nogueira-2021-absolute-instability-shock-containing-jets.md) gives the stability-theory side of shock-containing jets.
+- **Guided-mode literature:** this paper and [edgington-mitchell-2018](edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md) / [edgington-mitchell-2020](edgington-mitchell-2020-waves-in-screeching-jets.md) are consistent: guided-mode closure holds when the source is in the core (screech, subsonic impingement). [edgington-mitchell-2022](edgington-mitchell-2022-unifying-theory-jet-screech.md) also treats shock leakage as a nonlinear radiation mechanism in screech; here leakage is part of the loop itself. [jordan-2018](jordan-2018-jet-flap-interaction-tones.md) and [stavropoulos-2026](stavropoulos-2026-jet-edge-interaction.md) are the subsonic jet–edge analogues where guided-mode closure works. [mancinelli-2019](mancinelli-2019-screech-prediction-upstream-modes.md)'s guided-mode frequency prediction would be expected to fail for the shocklet/leakage cases. [Nogueira et al. (2024)](nogueira-2024-guided-jet-waves.md), *Guided-jet waves* (JFM 999 A47), underpins the argument. [nogueira-2021-absolute-instability-shock-containing-jets](nogueira-2021-absolute-instability-shock-containing-jets.md) gives the stability-theory side of shock-containing jets.
 - **Data and method implications for the user's workflow:**
   - Everything here is **time-resolved** schlieren/shadowgraph (50–200 kfps) analysed frame by frame; no SPOD, BMD or POD. The key messages for modal analysis:
     - The upstream wave can switch between sharp and diffuse **within one cycle** (p. 11), pairs can merge or not at one condition (p. 13, 21), and a strong wave may not take part in the loop (p. 24–25). Block-averaged SPOD at the tone frequency will blend these states into one mode, and the nonlinear fronts will spread energy into harmonics. BMD is a natural tool for the harmonic and triadic content of these shock-like waves.

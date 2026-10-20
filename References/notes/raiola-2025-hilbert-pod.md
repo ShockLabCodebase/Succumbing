@@ -1,3 +1,28 @@
+---
+key: "raiola-2025-hilbert-pod"
+title: "Hilbert Proper Orthogonal Decomposition: a tool for educing advective wavepackets from flow field data"
+authors: ["Raiola, M.", "Kriegseis, J."]
+year: 2025
+type: "preprint"
+venue: "arXiv:2507.02487"
+bib: {"note": "arXiv:2507.02487v1 [physics.flu-dyn]"}
+doi: ""
+arxiv: "2507.02487"
+pdf: "Raiola-Kriegseis_2025_Hilbert-Proper-Orthogonal-Decomposition-A-Tool-For-Educing-Advective-Wavepackets.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: ""
+data: ["DNS", "LES", "PIV"]
+methods: ["HPOD", "Hilbert-transform", "POD", "PSD"]
+flow: ["round-jet", "wake", "subsonic"]
+phenomena: ["KH-wavepackets", "intermittency", "coherent-structures"]
+params: {"M": "0.9 (jet LES)", "Re": "100 (cylinder DNS); 33,000 (jet PIV)"}
+topics: ["time-frequency-methods", "modal-decomposition"]
+related: ["davey-2025-hpod-sphere-wake", "horel-1984-complex-principal-component-analysis", "towne-2018-spod-relationship-dmd-resolvent", "towne-2022-database-reduced-complexity-modeling", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "edgington-mitchell-2020-waves-in-screeching-jets"]
+cites: ["cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "horel-1984-complex-principal-component-analysis", "schmid-2010-dynamic-mode-decomposition", "schmidt-2020-guide-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent", "towne-2022-database-reduced-complexity-modeling"]
+summary: "HPOD = POD of the analytic signal; new space-only version (Hilbert in x) works on snapshot PIV; reduces to SPOD for stationary advecting waves; instantaneous amplitude/frequency"
+---
 # Hilbert Proper Orthogonal Decomposition: a tool for educing advective wavepackets from flow field data
 
 - **Authors:** M. Raiola (Universidad Carlos III de Madrid; KIT), J. Kriegseis (Karlsruhe Institute of Technology)

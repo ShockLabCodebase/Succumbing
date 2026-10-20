@@ -1,3 +1,28 @@
+---
+key: "pickering-2021-optimal-eddy-viscosity-resolvent-jets"
+title: "Optimal eddy viscosity for resolvent-based models of coherent structures in turbulent jets"
+authors: ["Pickering, E.", "Rigas, G.", "Schmidt, O. T.", "Sipp, D.", "Colonius, T."]
+year: 2021
+type: "article"
+venue: "JFM 917, A29"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "917", "pages": "A29"}
+doi: "10.1017/jfm.2021.232"
+arxiv: "2005.10964"
+pdf: "Pickering-EtAl_2021_Optimal-Eddy-Viscosity-For-Resolvent-Based-Models-Of-Coherent-Structures.pdf"
+version: "preprint"
+unverified: ["article number A29 and DOI from memory, not in the PDF"]
+group: false
+facility: "Charles LES (Cascade); Fluent RANS"
+data: ["LES", "RANS"]
+methods: ["resolvent", "eddy-viscosity", "SPOD"]
+flow: ["round-jet", "subsonic", "supersonic"]
+phenomena: ["KH-wavepackets", "Orr", "streaks"]
+params: {"M_j": "0.4, 0.9, 1.5", "Re": "4.5×10⁵–1.76×10⁶", "St": "0.05–1", "m": "0–5"}
+topics: ["linear-models"]
+related: ["pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2018-spod-relationship-dmd-resolvent", "towne-2022-database-reduced-complexity-modeling", "rolandi-2025-biglobal-resolvent-naca0012", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "garnaud-2013-preferred-mode-incompressible-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Adjoint-optimal eddy-viscosity field aligns resolvent and SPOD modes of M_j 0.4–1.5 jet LES (Orr ~10%→80%, KH 96%); RANS k–ε μ_T × 0.2 is near-optimal; forcing still not white"
+---
 # Optimal eddy viscosity for resolvent-based models of coherent structures in turbulent jets
 
 - **Authors:** E. Pickering, G. Rigas, O. T. Schmidt, D. Sipp, T. Colonius (Caltech; UC San Diego; ONERA, Meudon) (p. 1)

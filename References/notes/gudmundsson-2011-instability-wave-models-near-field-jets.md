@@ -1,3 +1,28 @@
+---
+key: "gudmundsson-2011-instability-wave-models-near-field-jets"
+title: "Instability wave models for the near-field fluctuations of turbulent jets"
+authors: ["Gudmundsson, K.", "Colonius, T."]
+year: 2011
+type: "article"
+venue: "JFM 689, 97–128"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "689", "pages": "97--128"}
+doi: "10.1017/jfm.2011.401"
+arxiv: ""
+pdf: "Gudmundsson-Colonius_2011_Instability-Wave-Models-For-The-Near-Field-Fluctuations-Of-Turbulent-Jets.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "NASA Glenn SHJAR"
+data: ["PIV", "PIV-stereo", "mic-array", "microphones-near"]
+methods: ["PSE", "POD", "SPOD", "wavenumber-filtering", "symmetry-decomposition"]
+flow: ["round-jet", "subsonic", "heated"]
+phenomena: ["KH-wavepackets"]
+params: {"M_a": "0.5, 0.9", "T_j/T_inf": "0.85–1.76", "Re": "2e5–1.6e6", "m": "0–2", "St": "0.2–0.65 (agreement)"}
+topics: ["linear-models"]
+related: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent", "pickering-2020-lift-up-kh-orr-jets", "zhu-2021-recursive-one-way-navier-stokes", "nogueira-2021-wavepacket-modulation-shock-containing-jets"]
+cites: []
+summary: "Linear PSE on Gaussian-fitted PIV mean flows (M 0.5/0.9, cold/hot) matches POD-filtered near-field array pressure for 0.2<St<0.65, m 0–2: wavepackets are linear on the mean flow"
+---
 # Instability wave models for the near-field fluctuations of turbulent jets
 
 - **Authors:** K. Gudmundsson, T. Colonius (California Institute of Technology, Pasadena; Gudmundsson later at the University of Twente)

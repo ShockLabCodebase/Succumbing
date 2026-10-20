@@ -1,3 +1,28 @@
+---
+key: "greenshields-2010-central-schemes-polyhedral-fv"
+title: "Implementation of semi-discrete, non-staggered central schemes in a colocated, polyhedral, finite volume framework, for high-speed viscous flows"
+authors: ["Greenshields, C. J.", "Weller, H. G.", "Gasparini, L.", "Reese, J. M."]
+year: 2010
+type: "article"
+venue: "Int. J. Numer. Meth. Fluids 63(1), 1–21"
+bib: {"journal": "International Journal for Numerical Methods in Fluids", "volume": "63", "number": "1", "pages": "1--21"}
+doi: "10.1002/fld.2069"
+arxiv: ""
+pdf: "Greenshields-EtAl_2010_Implementation-Of-Semi-Discrete-Non-Staggered-Central-Schemes-In-A-Colocated.pdf"
+version: "accepted-manuscript"
+unverified: []
+group: false
+facility: "OpenFOAM (rhoCentralFoam)"
+data: ["Euler", "LNS"]
+methods: ["numerics"]
+flow: ["shock-tube", "round-jet", "supersonic", "underexpanded", "external-flow", "hypersonic"]
+phenomena: ["Mach-disk", "shock-waves"]
+params: {"cases": "Sod shock tube; Mach 3 forward-facing step; Ladenburg underexpanded jet (D 10 mm); Mach 11.3 double cone"}
+topics: ["simulation-methods"]
+related: ["witherden-2014-pyfr-flux-reconstruction-framework", "bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2020-waves-in-screeching-jets", "rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet"]
+cites: []
+summary: "The rhoCentralFoam paper: KT/KNP central schemes on colocated polyhedral FV, van Leer TVD + V-scheme, implicit diffusion split; KNP ≈ Roe accuracy; Ladenburg Mach disc within 3%"
+---
 # Implementation of semi-discrete, non-staggered central schemes in a colocated, polyhedral, finite volume framework, for high-speed viscous flows
 
 - **Authors:** C. J. Greenshields, H. G. Weller, L. Gasparini, J. M. Reese (University of Strathclyde; OpenCFD Ltd; Fondmetal Technologies)

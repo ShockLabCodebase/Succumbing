@@ -1,3 +1,28 @@
+---
+key: "gee-2026-falcon-9-ascent-sonic-boom"
+title: "Falcon 9 ascent sonic boom measurements in Ventura County, California"
+authors: ["Gee, K. L.", "Kellison, M. S.", "Anderson, M. C.", "Moats, L. T.", "Perkins, M. T.", "Pulsipher, N. L.", "Carlston, N. F.", "Hart, G. W.", "Hall, L. K.", "Cantrell, O.", "Zepeda Villanueva, H. J.", "McCullah-Boozer, M. R.", "Budge, R. H.", "King, J. C.", "Zering, F. A.", "Zounes, Z. T.", "Mackenthun, K. C."]
+year: 2026
+type: "article"
+venue: "JASA Express Lett. 6(3), 033601"
+bib: {"journal": "JASA Express Letters", "volume": "6", "number": "3", "pages": "033601"}
+doi: "10.1121/10.0043007"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Gee-EtAl_2026_Falcon-9-Ascent-Sonic-Boom-Measurements-In-Ventura-County-California.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Ventura County ground stations (Falcon 9 launches from VSFB SLC-4)"
+data: ["full-scale", "microphones-far"]
+methods: ["statistics", "propagation-model"]
+flow: ["launch-vehicle"]
+phenomena: ["sonic-boom"]
+params: {"vehicle": "Falcon 9 (Starlink, NROL-186)", "launches": "6", "azimuth": "144°, 155°", "stations": "16–25 per launch"}
+topics: ["rocket-noise-measurements"]
+related: ["gee-2024-starship-super-heavy-far-field-noise", "kellison-2026-falcon-9-noise-two-campaigns", "mathews-2021-falcon-9-far-field-noise", "gee-2023-sls-artemis-i-far-field-noise"]
+cites: ["gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise"]
+summary: "Falcon 9 ascent booms, 132 recordings over 6 VSFB launches: Friedlander focus booms up to 1.90 psf, rumbles mostly <0.5 psf; wind and azimuth set the carpet; PCBoom only marginal"
+---
 # Falcon 9 ascent sonic boom measurements in Ventura County, California
 
 - **Authors:** K. L. Gee, M. S. Kellison, M. C. Anderson, L. T. Moats, M. T. Perkins, N. L. Pulsipher, N. F. Carlston, G. W. Hart (BYU Physics and Astronomy); L. K. Hall, O. Cantrell, H. J. Zepeda Villanueva, M. R. McCullah-Boozer, R. H. Budge (CSU Bakersfield Biology); J. C. King, F. A. Zering, Z. T. Zounes, K. C. Mackenthun (US Space Force, Vandenberg SFB)

@@ -1,3 +1,28 @@
+---
+key: "schmid-2010-dynamic-mode-decomposition"
+title: "Dynamic mode decomposition of numerical and experimental data"
+authors: ["Schmid, P. J."]
+year: 2010
+type: "article"
+venue: "JFM 656, 5–28"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "656", "pages": "5--28", "note": "Held copy is the HAL deposit hal-01020654 of the published pages"}
+doi: "10.1017/S0022112010001217"
+arxiv: ""
+pdf: "Schmid_2010_Dynamic-Mode-Decomposition-Of-Numerical-And-Experimental-Data.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Linearised NS solvers; unnamed wind tunnel (membrane-wake TR-PIV); EdF (jet between cylinders TR-PIV)"
+data: ["PIV-TR", "LNS"]
+methods: ["DMD", "POD", "LSA-global"]
+flow: ["generic", "wall-bounded", "cavity", "wake"]
+phenomena: ["coherent-structures"]
+params: {"Re": "10,000 (Poiseuille); 4500 (cavity); 3000 (cylinder jet)"}
+topics: ["modal-decomposition"]
+related: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "towne-2018-spod-relationship-dmd-resolvent", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2022-database-reduced-complexity-modeling", "brunton-2020-machine-learning-fluid-mechanics"]
+cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+summary: "Founding DMD paper: SVD-projected companion-matrix fit of one linear map between equispaced snapshots; matches global modes on linearised Poiseuille and cavity; spatial DMD; TR-PIV vs POD"
+---
 # Dynamic mode decomposition of numerical and experimental data
 
 - **Authors:** P. J. Schmid (LadHyX, CNRS–École Polytechnique, Palaiseau)

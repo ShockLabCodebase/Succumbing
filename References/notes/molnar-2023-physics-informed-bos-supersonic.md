@@ -1,3 +1,28 @@
+---
+key: "molnar-2023-physics-informed-bos-supersonic"
+title: "Estimating density, velocity, and pressure fields in supersonic flows using physics-informed BOS"
+authors: ["Molnar, J. P.", "Venkatakrishnan, L.", "Schmidt, B. E.", "Sipkens, T. A.", "Grauer, S. J."]
+year: 2023
+type: "article"
+venue: "Exp. Fluids 64, 14"
+bib: {"journal": "Experiments in Fluids", "volume": "64", "pages": "14"}
+doi: "10.1007/s00348-022-03554-y"
+arxiv: ""
+pdf: "Molnar-EtAl_2023_Estimating-Density-Velocity-And-Pressure-Fields-In-Supersonic-Flows-Using-Physics.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "NAL Bangalore trisonic wind tunnel"
+data: ["BOS", "Euler"]
+methods: ["ML", "Abel-inversion", "optical-modelling"]
+flow: ["supersonic", "wind-tunnel", "external-flow"]
+phenomena: ["shock-waves"]
+params: {"M": "2", "model": "15° cone-cylinder; 20° Prandtl–Meyer corner (synthetic)"}
+topics: ["diagnostics-and-facilities", "simulation-methods"]
+related: ["tan-2015-bos-density-axisymmetric-jets", "raffel-2015-background-oriented-schlieren-review", "brunton-2020-machine-learning-fluid-mechanics", "sun-2021-distortion-correction-large-sensor-piv"]
+cites: ["raffel-2015-background-oriented-schlieren-review"]
+summary: "PINN with a unified-BOS data loss and Euler physics loss gives ρ, u, v, p from one image pair; Mach 2 cone and Prandtl–Meyer fan; density error 3.75% vs 6.12% Tikhonov, 8.34% Abel"
+---
 # Estimating density, velocity, and pressure fields in supersonic flows using physics-informed BOS
 
 - **Authors:** J. P. Molnar, L. Venkatakrishnan, B. E. Schmidt, T. A. Sipkens, S. J. Grauer (Penn State; CSIR-NAL Bangalore; Case Western Reserve; NRC Canada)

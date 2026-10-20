@@ -1,3 +1,28 @@
+---
+key: "taira-2020-modal-analysis-applications-outlook"
+title: "Modal analysis of fluid flows: applications and outlook"
+authors: ["Taira, K.", "Hemati, M. S.", "Brunton, S. L.", "Sun, Y.", "Duraisamy, K.", "Bagheri, S.", "Dawson, S. T. M.", "Yeh, C.-A."]
+year: 2020
+type: "review"
+venue: "AIAA J. 58(3), 998–1022"
+bib: {"journal": "AIAA Journal", "volume": "58", "number": "3", "pages": "998--1022"}
+doi: "10.2514/1.J058462"
+arxiv: "1903.05750"
+pdf: "Taira-EtAl_2020_Modal-Analysis-Of-Fluid-Flows-Applications-And-Outlook.pdf"
+version: "preprint"
+unverified: ["issue, pages and DOI from the bibliographic record, not this arXiv PDF"]
+group: false
+facility: ""
+data: ["none"]
+methods: ["POD", "DMD", "LSA-global", "LSA-Floquet", "resolvent", "transient-growth", "ML", "ROM"]
+flow: ["wake", "wall-bounded", "airfoil", "cavity", "generic"]
+phenomena: ["coherent-structures", "cavity-tones"]
+params: {}
+topics: ["modal-decomposition", "linear-models"]
+related: ["taira-2017-modal-analysis-fluid-flows-overview", "schmid-2010-dynamic-mode-decomposition", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "brunton-2020-machine-learning-fluid-mechanics", "rolandi-2025-biglobal-resolvent-naca0012", "towne-2018-spod-relationship-dmd-resolvent", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2022-database-reduced-complexity-modeling"]
+cites: ["brunton-2020-machine-learning-fluid-mechanics", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmidt-2018-spectral-analysis-jet-turbulence"]
+summary: "Sequel to the 2017 overview on interpreting results: POD = DMD on limit cycles; global/Floquet stability, pseudospectra, BPOD vs POD Galerkin; discounted resolvent; cavity Rossiter control"
+---
 # Modal analysis of fluid flows: applications and outlook
 
 - **Authors:** K. Taira (UCLA; Florida State), M. S. Hemati (Minnesota), S. L. Brunton (Washington), Y. Sun (Minnesota), K. Duraisamy (Michigan), S. Bagheri (KTH), S. T. M. Dawson (Illinois Inst. Tech.; Caltech), C.-A. Yeh (UCLA; Florida State)

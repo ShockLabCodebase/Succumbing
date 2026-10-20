@@ -1,3 +1,28 @@
+---
+key: "yeung-2022-3d-spod-twin-rectangular-jet"
+title: "Three-Dimensional Spectral POD of Supersonic Twin-Rectangular Jet Flow"
+authors: ["Yeung, B. C. Y.", "Schmidt, O. T.", "Brès, G. A."]
+year: 2022
+type: "conference"
+venue: "AIAA 2022-3345 (Aviation)"
+bib: {"booktitle": "AIAA AVIATION 2022 Forum", "note": "AIAA Paper 2022-3345, Chicago, IL, 27 Jun–1 Jul 2022"}
+doi: "10.2514/6.2022-3345"
+arxiv: ""
+pdf: "Yeung-EtAl_2022_Three-Dimensional-Spectral-POD-Of-Supersonic-Twin-Rectangular-Jet-Flow.pdf"
+version: "conference"
+unverified: []
+group: false
+facility: "Charles LES (Cascade)"
+data: ["LES"]
+methods: ["SPOD", "symmetry-decomposition"]
+flow: ["twin-jet", "rectangular-jet", "supersonic", "ideally-expanded"]
+phenomena: ["screech", "flapping", "coupling", "KH-wavepackets"]
+params: {"M_j": "1.5", "NPR": "3.671", "AR": "2", "TR": "1", "Re": "1.07×10⁶"}
+topics: ["modal-decomposition", "non-axisymmetric-and-twin-jets"]
+related: ["bres-2021-les-twin-rectangular-jets-plasma", "esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "yeung-2024-adaptive-spod-broadband-tonal", "schmidt-2020-guide-spod", "suzuki-2026-coherent-structures-axis-switching-elliptical-jets"]
+cites: ["bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "esfahani-2021-control-twin-rectangular-jet-coupling", "esfahani-2021-coupling-modes-twin-rectangular-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "D2 symmetry split (SS/SA/AS/AA) before 3D SPOD of AR-2 twin-jet LES (M_j 1.5): exact, 4× less memory; St 0.3 screech only in AA/AS (minor-axis flapping)"
+---
 # Three-Dimensional Spectral POD of Supersonic Twin-Rectangular Jet Flow
 
 - **Authors:** B. C. Y. Yeung, O. T. Schmidt (UC San Diego), G. A. Brès (Cascade Technologies)

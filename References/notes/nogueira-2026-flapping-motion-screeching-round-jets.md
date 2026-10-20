@@ -1,3 +1,28 @@
+---
+key: "nogueira-2026-flapping-motion-screeching-round-jets"
+title: "Flapping motion in screeching round jets"
+authors: ["Nogueira, P.", "Yeung, B.", "Nekkanti, A.", "Schmidt, O.", "Colonius, T.", "Brès, G.", "Jordan, P.", "Edgington-Mitchell, D."]
+year: 2026
+type: "article"
+venue: "JFM 1045, A10"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "1045", "pages": "A10"}
+doi: "10.1017/jfm.2026.12061"
+arxiv: ""
+pdf: "Nogueira-EtAl_2026_Flapping-Motion-In-Screeching-Round-Jets.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "CharLES LES (Cadence, formerly Cascade)"
+data: ["LES"]
+methods: ["LSA-Floquet", "SPOD", "symmetry-decomposition", "FW-H", "PSD"]
+flow: ["round-jet", "supersonic", "overexpanded", "heated"]
+phenomena: ["screech", "flapping", "streaks", "guided-jet-mode", "KH-wavepackets", "mean-flow-deformation", "precession"]
+params: {"M_j": "1.35", "M_d": "1.5", "TR": "2.53", "Re": "7.6×10⁵", "St": "0.265", "m": "±1"}
+topics: ["screech", "linear-models", "time-frequency-methods"]
+related: ["nogueira-2019-large-scale-streaky-structures-jets", "rodriguez-2023-preferred-flapping-round-twin-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "edgington-mitchell-2023-screeching-jet-seen-from-all-sides", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "nogueira-2019-large-scale-streaky-structures-jets", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2024-guided-jet-waves", "pickering-2020-lift-up-kh-orr-jets", "rodriguez-2023-preferred-flapping-round-twin-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "stavropoulos-2024-upstream-waves-merging-twin-jets", "tam-1982-shock-associated-noise-cd-nozzles", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2022-3d-spod-twin-rectangular-jet"]
+summary: "Weak |m| = 2 streaks split m = ±1 KH and guided-jet modes into flapping/wagging (azimuthal-Floquet LSA); M_j 1.35 heated LES: screech flapping axis precesses with the streaks"
+---
 # Flapping motion in screeching round jets
 
 - **Authors:** P. Nogueira (Monash), B. Yeung (UC San Diego), A. Nekkanti (Caltech), O. Schmidt (UC San Diego), T. Colonius (Caltech), G. Brès (Cadence Design Systems), P. Jordan (Institut Pprime, Poitiers), D. Edgington-Mitchell (Monash) (p. 1)

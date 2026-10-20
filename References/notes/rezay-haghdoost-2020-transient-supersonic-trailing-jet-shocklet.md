@@ -1,3 +1,28 @@
+---
+key: "rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet"
+title: "Dynamic evolution of a transient supersonic trailing jet induced by a strong incident shock wave"
+authors: ["Rezay Haghdoost, M.", "Edgington-Mitchell, D.", "Nadolski, M.", "Klein, R.", "Oberleithner, K."]
+year: 2020
+type: "article"
+venue: "Phys. Rev. Fluids 5, 073401"
+bib: {"journal": "Physical Review Fluids", "volume": "5", "pages": "073401"}
+doi: "10.1103/PhysRevFluids.5.073401"
+arxiv: "1911.06530"
+pdf: "RezayHaghdoost-EtAl_2020_Dynamic-Evolution-Of-A-Transient-Supersonic-Trailing-Jet-Induced-By-A-Strong.pdf"
+version: "preprint"
+unverified: ["journal volume, article number and DOI not printed in the held arXiv preprint"]
+group: true
+facility: "TU Berlin hydrogen–air PDE run as a shock tube; LSC_AMR cut-cell Euler"
+data: ["schlieren-TR", "Euler", "pressure-probe"]
+methods: ["shock-relations"]
+flow: ["shock-tube", "round-jet", "underexpanded", "supersonic"]
+phenomena: ["Mach-disk", "shock-leakage", "shock-diffraction", "shocklet"]
+params: {"M_s": "1.71–2.15", "D": "30 mm"}
+topics: ["simulation-methods"]
+related: ["rezay-haghdoost-2022-shock-dividers", "thethy-2022-shock-diffraction-non-quiescent-medium", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "weightman-2019-sound-production-impinging-supersonic-jets", "edgington-mitchell-2022-unifying-theory-jet-screech"]
+cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer"]
+summary: "Shock-tube starting jet, M_s 1.71–2.15: TR schlieren and cut-cell Euler show a second triple point and shocklet, set by reflected-shock rotation (transient oblique-shock model)"
+---
 # Dynamic evolution of a transient supersonic trailing jet induced by a strong incident shock wave
 
 - **Authors:** M. Rezay Haghdoost (TU Berlin, Laboratory for Flow Instabilities and Dynamics), D. Edgington-Mitchell (Monash University), M. Nadolski and R. Klein (Freie Universität Berlin), K. Oberleithner (TU Berlin) (p. 1)
@@ -134,7 +159,7 @@ This project analyses resonance and feedback in Shock Lab group experiments (sch
   - Numerical schlieren by path-integrating ∂ρ/∂x is a simple way to compare CFD with schlieren like for like; it's worth reusing for the PyFR staging LES (`Simulations/PyFR_Staging_Continuation/`).
 - **Modelling side:** inviscid Euler with cut-cell AMR reproduces the shock structure and even slipstream KH roll-up and pairing (via numerical dissipation), but resolution isn't reported, so the vortex details shouldn't be over-read. The inflow is calibrated by a 1D reactive model against one total-pressure probe; the constant-inflow run is a clean way to separate supply transients from jet dynamics. The TOS model is a qualitative, 1D, locally quasi-steady estimate; its validation is agreement in trends of p2 with the CFD, not quantitative errors.
 - **Rocket noise:** transient starting jets are relevant to ignition overpressure at launch (cf. the ignition-overpressure discussion in [Lubert et al. 2022](lubert-2022-supersonic-jet-noise-launch-vehicles-review.md) and the SLS ignition overpressure in [Gee et al. 2023](gee-2023-sls-artemis-i-far-field-noise.md)), although this paper says nothing about the radiated pressure.
-- **Related:** the same group's shock-divider study (Rezay Haghdoost et al. 2022, *Numerical and experimental evaluation of shock dividers*, also in `Paper_PDFs/`) uses the same PDE/shock-tube rig and solver. The Mach disk shear layer of a steady underexpanded jet is in Edgington-Mitchell, Honnery & Soria (2014, ref. [16]). [Tan et al. 2015](tan-2015-bos-density-axisymmetric-jets.md) gives a route to quantitative density in such jets.
+- **Related:** the same group's shock-divider study ([Rezay Haghdoost et al. 2022](rezay-haghdoost-2022-shock-dividers.md), *Numerical and experimental evaluation of shock dividers*) uses the same PDE/shock-tube rig and solver. The Mach disk shear layer of a steady underexpanded jet is in [Edgington-Mitchell, Honnery & Soria (2014)](edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md) (ref. [16]). [Tan et al. 2015](tan-2015-bos-density-axisymmetric-jets.md) gives a route to quantitative density in such jets.
 - **Related works cited, candidates for `/add-paper`:** Ishii et al. 1999 (pulse jets, Mach disk in the trailing jet); Dora et al. 2014 (slipstream instability and CRVRs); Zhang et al. 2019 (JFM 871, initial structures of a highly underexpanded jet); Brouillette & Hebert 1997; Kleine et al. 2010; Edgington-Mitchell 2019 (IJA review of screech and impinging-jet resonance); Rezay Haghdoost et al. 2019 (AIAA SciTech, PDE exhaust schlieren and PIV).
 
 - **See also:** [rezay-haghdoost-2022](rezay-haghdoost-2022-shock-dividers.md), the shock-divider follow-up from the same PDC programme.

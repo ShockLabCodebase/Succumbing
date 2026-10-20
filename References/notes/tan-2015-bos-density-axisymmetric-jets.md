@@ -1,3 +1,28 @@
+---
+key: "tan-2015-bos-density-axisymmetric-jets"
+title: "Measurement of density in axisymmetric jets using a novel background-oriented schlieren (BOS) technique"
+authors: ["Tan, D. J.", "Edgington-Mitchell, D.", "Honnery, D."]
+year: 2015
+type: "article"
+venue: "Exp. Fluids 56, 204"
+bib: {"journal": "Experiments in Fluids", "volume": "56", "pages": "204"}
+doi: "10.1007/s00348-015-2076-6"
+arxiv: ""
+pdf: "Tan-EtAl_2015_Measurement-Of-Density-In-Axisymmetric-Jets-Using-A-Novel-Background-Oriented.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["BOS"]
+methods: ["Abel-inversion", "statistics"]
+flow: ["round-jet", "subsonic"]
+phenomena: []
+params: {"NPR": "2–4", "Re": "230; 6000–9000", "D": "20 mm; 0.5 mm", "gas": "helium"}
+topics: ["diagnostics-and-facilities"]
+related: ["raffel-2015-background-oriented-schlieren-review", "molnar-2023-physics-informed-bos-supersonic", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2023-screeching-jet-seen-from-all-sides"]
+cites: []
+summary: "Single-camera BOS → adaptive Fourier–Hankel Abel inversion → Gladstone–Dale mean density; average before inverting; synthetic error maps; He jets 4–9% error"
+---
 # Measurement of density in axisymmetric jets using a novel background-oriented schlieren (BOS) technique
 
 - **Authors:** D. J. Tan, D. Edgington-Mitchell, D. Honnery (LTRAC, Monash University)

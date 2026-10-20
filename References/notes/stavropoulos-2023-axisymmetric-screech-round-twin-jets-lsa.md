@@ -1,3 +1,28 @@
+---
+key: "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa"
+title: "The axisymmetric screech tones of round twin jets examined via linear stability theory"
+authors: ["Stavropoulos, M. N.", "Mancinelli, M.", "Jordan, P.", "Jaunet, V.", "Weightman, J.", "Edgington-Mitchell, D. M.", "Nogueira, P. A. S."]
+year: 2023
+type: "article"
+venue: "JFM 965, A11"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "965", "pages": "A11"}
+doi: "10.1017/jfm.2023.398"
+arxiv: ""
+pdf: "Stavropoulos-EtAl_2023_The-Axisymmetric-Screech-Tones-Of-Round-Twin-Jets-Examined-Via-Linear-Stability.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["microphones-far", "PIV"]
+methods: ["LSA-local", "LSA-Floquet", "vortex-sheet", "resonance-model", "PSD"]
+flow: ["twin-jet", "round-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "staging", "guided-jet-mode", "coupling", "KH-wavepackets"]
+params: {"NPR": "2–2.5", "M_j": "1.05–1.22", "s/D": "2, 3, 4, 6", "TR": "1", "D": "8 mm"}
+topics: ["screech", "non-axisymmetric-and-twin-jets", "linear-models"]
+related: ["stavropoulos-2024-upstream-waves-merging-twin-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2021-closure-mechanism-a1-a2-screech", "wong-2023-steady-unsteady-coupling-twin-round-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "rodriguez-2023-preferred-flapping-round-twin-jets"]
+cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "jordan-2018-jet-flap-interaction-tones", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "rodriguez-2023-preferred-flapping-round-twin-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "yeung-2022-3d-spod-twin-rectangular-jet"]
+summary: "Twin-jet vortex-sheet (Bessel addition) and Floquet tanh LSA of A1/A2 screech, M_j 1.05–1.2, S 2–6: SS k_p⁻ (0,2) band bounds the tones; phase criterion matches; SS vs SA unresolved"
+---
 # The axisymmetric screech tones of round twin jets examined via linear stability theory
 
 - **Authors:** M. N. Stavropoulos, M. Mancinelli, P. Jordan, V. Jaunet, J. Weightman, D. M. Edgington-Mitchell, P. A. S. Nogueira (Monash LTRAC; Roma Tre; Institut Pprime, Poitiers)

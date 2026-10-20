@@ -1,3 +1,28 @@
+---
+key: "towne-2017-acoustic-resonance-potential-core-subsonic-jets"
+title: "Acoustic resonance in the potential core of subsonic jets"
+authors: ["Towne, A.", "Cavalieri, A. V. G.", "Jordan, P.", "Colonius, T.", "Schmidt, O.", "Jaunet, V.", "Brès, G. A."]
+year: 2017
+type: "article"
+venue: "JFM 825, 1113–1152"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "825", "pages": "1113--1152"}
+doi: "10.1017/jfm.2017.346"
+arxiv: ""
+pdf: "Towne-EtAl_2017_Acoustic-Resonance-In-The-Potential-Core-Of-Subsonic-Jets.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Charles LES (Cascade); validation at PPRIME Bruit & Vent"
+data: ["LES", "microphones-near"]
+methods: ["PSD", "symmetry-decomposition", "wavenumber-filtering", "LSA-local", "vortex-sheet"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["guided-jet-mode"]
+params: {"M_j": "0.9", "T_j/T_∞": "1", "Re": "1×10⁶", "m": "0, 1"}
+topics: ["linear-models", "screech", "impinging-jets-and-edge-tones"]
+related: ["schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "jordan-2018-jet-flap-interaction-tones", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2020-waves-in-screeching-jets", "stavropoulos-2026-jet-edge-interaction", "towne-2022-database-reduced-complexity-modeling"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet"]
+summary: "M 0.9 jet LES plus LEE, vortex-sheet and soft-duct Briggs–Bers models: trapped duct modes and upstream guided k⁻ mode; S1/S2 saddles bound near-nozzle tones; tones only for 0.82 < M < 1"
+---
 # Acoustic resonance in the potential core of subsonic jets
 
 - **Authors:** A. Towne, A. V. G. Cavalieri, P. Jordan, T. Colonius, O. Schmidt, V. Jaunet, G. A. Brès (Caltech; ITA, São José dos Campos; Institut PPRIME, Poitiers; Cascade Technologies)

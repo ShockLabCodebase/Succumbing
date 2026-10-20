@@ -1,3 +1,28 @@
+---
+key: "gee-2010-near-field-vector-intensity-solid-rocket-motor"
+title: "Near-field vector intensity measurements of a small solid rocket motor"
+authors: ["Gee, K. L.", "Giraud, J. H.", "Blotter, J. D.", "Sommerfeldt, S. D."]
+year: 2010
+type: "article"
+venue: "JASA 128(2), EL69–EL74"
+bib: {"journal": "Journal of the Acoustical Society of America", "volume": "128", "number": "2", "pages": "EL69--EL74"}
+doi: "10.1121/1.3436491"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Gee-EtAl_2010_Near-Field-Vector-Intensity-Measurements-Of-A-Small-Solid-Rocket-Motor.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "ATK small motor test facility, Promontory, Utah"
+data: ["subscale", "intensity-probe", "microphones-near"]
+methods: ["vector-intensity", "PSD"]
+flow: ["rocket-plume", "heated"]
+phenomena: ["source-location", "directivity"]
+params: {"D_e": "12.7 cm", "motor": "solid, RSRM propellant", "burn": "≈2.5 s"}
+topics: ["rocket-noise-measurements"]
+related: ["gee-2016-near-field-intensity-static-rocket-firings", "gee-2012-reusable-srm-noise-spectral-statistical", "kenny-2009-space-shuttle-srm-plume-acoustics", "james-2012-directivity-curves-rocket-noise-model", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: []
+summary: "Tetrahedral intensity probes within ~6D of a 12.7 cm solid rocket motor plume: source region shrinks and moves upstream with frequency; radiation ≈44–51°; refraction near the plume"
+---
 # Near-field vector intensity measurements of a small solid rocket motor
 
 - **Authors:** K. L. Gee, J. H. Giraud, J. D. Blotter, S. D. Sommerfeldt (Brigham Young University)

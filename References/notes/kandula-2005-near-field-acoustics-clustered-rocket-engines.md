@@ -1,8 +1,33 @@
+---
+key: "kandula-2005-near-field-acoustics-clustered-rocket-engines"
+title: "Near-Field Acoustical Characterization of Clustered Rocket Engines"
+authors: ["Kandula, Max", "Vu, Bruce T.", "Lindsay, Halie K."]
+year: 2005
+type: "conference"
+venue: "AIAA 2005-3091 (Aeroacoustics Conf.)"
+bib: {"booktitle": "11th AIAA/CEAS Aeroacoustics Conference, Monterey, CA", "publisher": "American Institute of Aeronautics and Astronautics", "note": "AIAA 2005-3091; NASA NTRS 20120000605"}
+doi: ""
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Kandula-EtAl_2005_Near-Field-Acoustical-Characterization-Of-Clustered-Rocket-Engines.pdf"
+version: "conference"
+unverified: ["PDF prints no year, venue or paper number: year from the NTRS record, AIAA 2005-3091 and conference from ref. [13] of Kandula 2008 (JSV 309)"]
+group: false
+facility: ""
+data: ["model-only"]
+methods: ["empirical-model", "propagation-model"]
+flow: ["rocket-plume", "launch-vehicle", "supersonic", "heated", "clustered-jets"]
+phenomena: ["mixing-noise", "jet-merging"]
+params: {"nozzles": "4 (ELV test case)", "ground reflection coefficient": "0.5"}
+topics: ["rocket-noise-models"]
+related: ["kandula-2008-near-field-acoustics-clustered-rocket-engines", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "james-2012-directivity-curves-rocket-noise-model", "ranow-2021-acoustic-prediction-rocket-flame-deflector", "casalino-2009-hybrid-empirical-caa-rocket-noise", "kellison-2026-falcon-9-noise-two-campaigns", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets"]
+cites: []
+summary: "Two-zone clustered-nozzle model (Eldred): isolated jets + merged equivalent jet, each via SP-8072, give a double-peaked near-field spectrum; ground reflection adds ≤5 dB; RAPT GUI"
+---
 # Near-Field Acoustical Characterization of Clustered Rocket Engines
 
 - **Authors:** Max Kandula (Sierra Lobo, Inc. (USTDC), Kennedy Space Center), Bruce T. Vu (NASA John F. Kennedy Space Center; Lead, Launch Systems Testbed), Halie K. Lindsay (North Carolina A&T State University, graduate student)
 - **Source:** AIAA conference paper, NASA Technical Reports Server record 20120000605; dated 2005 from the NTRS record and the original filename. **The PDF itself prints no year, venue, paper number or DOI** (each page footer reads only "American Institute of Aeronautics and Astronautics"); the newest reference cited is from 2003 (p. 6–7). Funded partly by AFRL Wright-Patterson AFB (p. 6).
-  - Related journal paper, **not held**: Kandula, *Near-field acoustics of clustered rocket engines*, J. Sound Vib. 309 (2008), doi:10.1016/j.jsv.2007.06.078 (candidate #100 in `References/download_candidates.md`). It is cited as "Kandula 2008a" in the Lubert et al. (2022) review. This 2005 paper is short (6 pages of text) and is probably the conference precursor rather than a longer version.
+  - Related journal paper, now in the library as [kandula-2008](kandula-2008-near-field-acoustics-clustered-rocket-engines.md): Kandula, *Near-field acoustics of clustered rocket engines*, J. Sound Vib. 309 (2008), doi:10.1016/j.jsv.2007.06.078 (candidate #100 in `References/download_candidates.md`). It is cited as "Kandula 2008a" in the Lubert et al. (2022) review. This 2005 paper is short (6 pages of text) and is probably the conference precursor rather than a longer version.
 - **PDF:** `References/Paper_PDFs/Rocket_Noise_Papers/Kandula-EtAl_2005_Near-Field-Acoustical-Characterization-Of-Clustered-Rocket-Engines.pdf` (12 pp.; scanned with an OCR text layer, so the extracted equations are garbled; equations below were read from page images). Text p. 1–6, references p. 6–7, figures p. 8–12.
 - **Tags:** rocket noise, launch vehicle, clustered nozzles, multiple jets, jet merging, two-zone model, Eldred 1963 (ASD-TDR-62-578), NASA SP-8072, equivalent nozzle diameter, double-peaked spectrum, near-field acoustic loads, ground reflection, reflection coefficient, vehicle surface reflection, RAPT (Rocket Acoustic Prediction Tool), semi-empirical prediction, ELV, one-third octave spectra
 
@@ -92,4 +117,4 @@ None in the paper. The RAPT example inputs above (Fig. 4b) are the only tabulate
 - **Lab twin/multi-jet work:** the model treats plume interaction as pure merging (mass/momentum/energy) with no coupling, screech or shielding. Twin-jet coupling studies ([Nogueira & Edgington-Mitchell 2021](nogueira-2021-twin-jet-coupling-spatial-lsa.md), [Esfahani et al. 2021](esfahani-2021-coupling-modes-twin-rectangular-jets.md), [Jeun et al. 2024](jeun-2024-screech-coupling-closure-rectangular-twin-jets.md)) show interaction physics that is absent here; Lubert et al. note screech is not seen at full scale, so for rockets the merging picture may be adequate.
 - **Data dependence of methods:** none of the analysis here is time-resolved: everything is one-third-octave, block-averaged spectra (time-averaged SPL). The double peak in a near-field spectrum is a static signature of two source regions. In lab multi-jet schlieren or acoustics (time-resolved), SPOD could test the two-zone picture directly: modes at the high-frequency peak should be localised near the individual nozzles and modes at the low-frequency peak downstream of merging. Spatial filtering of SPOD reconstructions by zone, then Hilbert POD, could show whether the merged-plume source is intermittent. With non-time-resolved PIV, the mean field alone could check the predicted merging length x₄ and combined-jet velocity (eqs. 1, 4).
 - **Modelling side:** the model is purely empirical-integral (control-volume balances plus empirical source spectra). No LES, stability analysis or propagation physics beyond spherical spreading and an image source. A wavepacket or LES-based extension (as called for by Lubert et al.) would be needed to capture shielding, azimuthal asymmetry and coupling.
-- **Follow-ups, candidates for `/add-paper`:** Kandula 2008 JSV 309 (#100, not held); Eldred et al. 1963 ASD-TDR-62-578 (original two-zone model); Potter & Crocker 1966 NASA CR-566; Kandula & Vu 2003 AIAA-2003-3288 (scaling laws); Fisher, Preston & Bryce 1998 (coaxial-jet four-source model, JSV 209).
+- **Follow-ups, candidates for `/add-paper`:** Eldred et al. 1963 ASD-TDR-62-578 (original two-zone model); Potter & Crocker 1966 NASA CR-566; Kandula & Vu 2003 AIAA-2003-3288 (scaling laws); Fisher, Preston & Bryce 1998 (coaxial-jet four-source model, JSV 209).

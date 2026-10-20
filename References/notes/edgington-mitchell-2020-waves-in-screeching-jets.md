@@ -1,3 +1,28 @@
+---
+key: "edgington-mitchell-2020-waves-in-screeching-jets"
+title: "Waves in screeching jets"
+authors: ["Edgington-Mitchell, D.", "Wang, T.", "Nogueira, P.", "Schmidt, O.", "Jaunet, V.", "Duke, D.", "Jordan, P.", "Towne, A."]
+year: 2021
+type: "article"
+venue: "JFM 913, A7"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "913", "pages": "A7"}
+doi: "10.1017/jfm.2020.1175"
+arxiv: "2008.09756"
+pdf: "EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf"
+version: "preprint"
+unverified: ["DOI from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number from other notes (E-M 2022/2023), not the PDF"]
+group: true
+facility: "Shock Lab group facility"
+data: ["PIV"]
+methods: ["POD", "POD-pair", "wavenumber-filtering", "LSA-global", "LSA-local"]
+flow: ["round-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "guided-jet-mode", "shock-cells", "KH-wavepackets", "triadic-interaction", "global-mode"]
+params: {"NPR": "2.10, 2.25, 3.40", "M_j": "1.09, 1.14, 1.45", "Re": "4.4–8.6×10⁵", "St": "0.67, 0.65, 0.26", "D": "15 mm"}
+topics: ["screech", "linear-models"]
+related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "tam-1982-shock-associated-noise-cd-nozzles", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "weightman-2019-sound-production-impinging-supersonic-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "nogueira-2024-guided-jet-waves"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "gudmundsson-2011-instability-wave-models-near-field-jets", "jordan-2018-jet-flap-interaction-tones", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tan-2015-bos-density-axisymmetric-jets", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "PIV POD + k_x split of A1/A2/C screeching jets: guided mode and duct-like mode at k_kh ∓ k_s (Tam & Tanna confirmed); global LSA on the PIV mean flow gets St within 1%"
+---
 # Waves in screeching jets
 
 - **Authors:** D. Edgington-Mitchell, T. Wang, P. Nogueira, O. Schmidt, V. Jaunet, D. Duke, P. Jordan, A. Towne

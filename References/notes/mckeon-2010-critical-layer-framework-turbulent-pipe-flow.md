@@ -1,3 +1,28 @@
+---
+key: "mckeon-2010-critical-layer-framework-turbulent-pipe-flow"
+title: "A critical-layer framework for turbulent pipe flow"
+authors: ["McKeon, B. J.", "Sharma, A. S."]
+year: 2010
+type: "article"
+venue: "JFM 658, 336–382"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "658", "pages": "336--382"}
+doi: "10.1017/S002211201000176X"
+arxiv: "1001.3100"
+pdf: "McKeon-Sharma_2010_A-Critical-Layer-Model-For-Turbulent-Pipe-Flow.pdf"
+version: "preprint"
+unverified: ["published title, volume, pages and DOI not in this arXiv preprint (titled 'A critical layer model for turbulent pipe flow')"]
+group: false
+facility: ""
+data: ["model-only"]
+methods: ["resolvent"]
+flow: ["wall-bounded"]
+phenomena: ["coherent-structures", "streaks"]
+params: {"Re": "75×10³–10×10⁶ (main cases 75×10³ and 410×10³)", "R⁺": "1800 and 8500 (main cases)"}
+topics: ["linear-models"]
+related: ["morra-2021-colour-of-forcing-resolvent-channel", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "nogueira-2019-large-scale-streaky-structures-jets", "rolandi-2025-biglobal-resolvent-naca0012", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: []
+summary: "Origin of mean-flow resolvent analysis: nonlinearity as forcing about the Superpipe mean; VLSM is the first critical mode, c ≈ (2/3)U_CL, peak at y⁺ ≈ 0.8 R⁺^(2/3)"
+---
 # A critical-layer framework for turbulent pipe flow
 
 - **Authors:** B. J. McKeon (GALCIT, California Institute of Technology), A. S. Sharma (Department of Aeronautics, Imperial College London)

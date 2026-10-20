@@ -1,3 +1,28 @@
+---
+key: "kerechanin-2001-trailing-edge-rectangular-jet-acoustics"
+title: "Effects of Nozzle Trailing Edges on Acoustic Field of Supersonic Rectangular Jet"
+authors: ["Kerechanin, II, C. W.", "Samimy, M.", "Kim, J.-H."]
+year: 2001
+type: "article"
+venue: "AIAA J. 39(6), 1065–1070"
+bib: {"journal": "AIAA Journal", "volume": "39", "number": "6", "pages": "1065--1070"}
+doi: "10.2514/2.1418"
+arxiv: ""
+pdf: "Kerechanin-EtAl_2001_Effects-Of-Nozzle-Trailing-Edges-On-Acoustic-Field-Of-Supersonic-Rectangular-Jet.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "OSU GDTL anechoic chamber"
+data: ["microphones-far"]
+methods: ["PSD"]
+flow: ["rectangular-jet", "supersonic", "underexpanded", "ideally-expanded", "overexpanded"]
+phenomena: ["screech", "BBSAN", "mixing-noise", "noise-control"]
+params: {"M_d": "2.0 (1.93 measured)", "M_j": "1.75, 2.0, 2.5", "AR": "3", "D_eq": "18.6 mm"}
+topics: ["non-axisymmetric-and-twin-jets", "jet-noise-mechanisms", "screech"]
+related: ["samimy-1998-rectangular-jet-trailing-edge-control", "esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control"]
+cites: []
+summary: "AR-3 Mach 2 rectangular jet with trailing-edge cutouts: up to 12 dB quieter at 30° when underexpanded; overexpanded screech removed by one-sided cuts, amplified by symmetric ones"
+---
 # Effects of Nozzle Trailing Edges on Acoustic Field of Supersonic Rectangular Jet
 
 - **Authors:** C. W. Kerechanin II, M. Samimy, J.-H. Kim (The Ohio State University)

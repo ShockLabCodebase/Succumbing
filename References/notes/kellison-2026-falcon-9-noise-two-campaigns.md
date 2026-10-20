@@ -1,3 +1,28 @@
+---
+key: "kellison-2026-falcon-9-noise-two-campaigns"
+title: "Falcon 9 Noise Characterization from Two Measurement Campaigns"
+authors: ["Kellison, M. S.", "Gee, K. L.", "Hart, G. W."]
+year: 2026
+type: "conference"
+venue: "AIAA 2026-3443 (Aeroacoustics Conf.)"
+bib: {"booktitle": "32nd AIAA/CEAS Aeroacoustics Conference, Brussels", "publisher": "American Institute of Aeronautics and Astronautics", "note": "AIAA Paper 2026-3443"}
+doi: "10.2514/6.2026-3443"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Kellison-EtAl_2026_Falcon-9-Noise-Characterization-From-Two-Measurement-Campaigns.pdf"
+version: "conference"
+unverified: []
+group: false
+facility: "Falcon 9 launches from SLC-4, Vandenberg (BYU field measurements)"
+data: ["full-scale", "microphones-far"]
+methods: ["PSD", "empirical-model"]
+flow: ["launch-vehicle", "rocket-plume", "supersonic", "heated", "clustered-jets"]
+phenomena: ["directivity", "acoustic-efficiency", "Mach-wave-radiation", "ignition-overpressure", "sonic-boom", "crackle", "nonlinear-propagation"]
+params: {"vehicle": "Falcon 9 Block 5", "D_e": "0.92 m", "D_eff": "2.76 m", "U_e": "2984 m/s", "M_j": "3.465", "range": "0.2–38.6 km"}
+topics: ["rocket-noise-measurements", "rocket-noise-models"]
+related: ["mathews-2021-falcon-9-far-field-noise", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "gee-2026-falcon-9-ascent-sonic-boom", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "james-2012-directivity-curves-rocket-noise-model"]
+cites: ["gee-2016-near-field-intensity-static-rocket-firings", "gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "james-2012-directivity-curves-rocket-noise-model", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn"]
+summary: "Two Falcon 9 launches, 28 stations at 0.2–38.6 km: IOP, launch, flyback boom, landing; SATURN validated; directivity peak 64°; L_W 195.4 dB, η 0.30%, peak Sr 0.010"
+---
 # Falcon 9 Noise Characterization from Two Measurement Campaigns
 
 - **Authors:** M. S. Kellison, K. L. Gee, G. W. Hart (Brigham Young University, Physics and Astronomy)

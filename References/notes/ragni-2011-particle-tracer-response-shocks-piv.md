@@ -1,3 +1,28 @@
+---
+key: "ragni-2011-particle-tracer-response-shocks-piv"
+title: "Particle tracer response across shocks measured by PIV"
+authors: ["Ragni, D.", "Schrijer, F.", "van Oudheusden, B. W.", "Scarano, F."]
+year: 2011
+type: "article"
+venue: "Exp. Fluids 50, 53–64"
+bib: {"journal": "Experiments in Fluids", "volume": "50", "pages": "53--64"}
+doi: "10.1007/s00348-010-0892-2"
+arxiv: ""
+pdf: "Ragni-EtAl_2011_Particle-Tracer-Response-Across-Shocks-Measured-By-PIV.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "TU Delft ST-15 supersonic wind tunnel"
+data: ["PIV"]
+methods: ["calibration", "statistics"]
+flow: ["supersonic", "wind-tunnel"]
+phenomena: []
+params: {"M": "2", "wedge": "9°", "T_0": "275 K"}
+topics: ["diagnostics-and-facilities"]
+related: ["weightman-2019-sound-production-impinging-supersonic-jets", "henderson-2002-flow-structure-supersonic-impinging-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "tan-2015-bos-density-axisymmetric-jets"]
+cites: []
+summary: "Mach 2 oblique-shock test: exponential slip gives τ_p; unbiased if window ≤ ξ_p and Δt ≤ τ_p; DEHS and stored powders ≈ 2–3 µs, dried filtered TiO₂/SiO₂ 0.56/0.37 µs; PTV 4× spread"
+---
 # Particle tracer response across shocks measured by PIV
 
 - **Authors:** D. Ragni, F. Schrijer, B. W. van Oudheusden, F. Scarano (Faculty of Aerospace Engineering, Delft University of Technology)

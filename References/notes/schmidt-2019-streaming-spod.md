@@ -1,3 +1,28 @@
+---
+key: "schmidt-2019-streaming-spod"
+title: "An efficient streaming algorithm for spectral proper orthogonal decomposition"
+authors: ["Schmidt, O. T.", "Towne, A."]
+year: 2019
+type: "article"
+venue: "Comput. Phys. Commun. 237, 98–109"
+bib: {"journal": "Computer Physics Communications", "volume": "237", "pages": "98--109"}
+doi: "10.1016/j.cpc.2018.11.009"
+arxiv: "1711.04199"
+pdf: "Schmidt-Towne_2019_An-Efficient-Streaming-Algorithm-For-Spectral-Proper-Orthogonal-Decomposition.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: ""
+data: ["LES", "PIV-TR"]
+methods: ["SPOD"]
+flow: ["round-jet", "subsonic", "generic"]
+phenomena: ["coherent-structures"]
+params: {"M_j": "0.9", "Re": "1.01×10⁶"}
+topics: ["modal-decomposition"]
+related: ["schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2022-database-reduced-complexity-modeling", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "yeung-2024-adaptive-spod-broadband-tonal", "von-saldern-2026-band-ensemble-spod", "yeung-2022-3d-spod-twin-rectangular-jet"]
+cites: ["schmidt-2018-spectral-analysis-jet-turbulence", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Streaming SPOD: running DFT sums + rank-1 incremental SVD of each CSD, truncated to d modes; one snapshot in memory, gaps allowed; d = 5 matches batch on M 0.9 jet LES"
+---
 # An efficient streaming algorithm for spectral proper orthogonal decomposition
 
 - **Authors:** O. T. Schmidt (University of California San Diego), A. Towne (University of Michigan)

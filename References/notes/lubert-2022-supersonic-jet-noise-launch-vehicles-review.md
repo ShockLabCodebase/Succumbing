@@ -1,3 +1,28 @@
+---
+key: "lubert-2022-supersonic-jet-noise-launch-vehicles-review"
+title: "Supersonic jet noise from launch vehicles: 50 years since NASA SP-8072"
+authors: ["Lubert, Caroline P.", "Gee, Kent L.", "Tsutsumi, Seiji"]
+year: 2022
+type: "review"
+venue: "JASA 151(2), 752–791"
+bib: {"journal": "The Journal of the Acoustical Society of America", "volume": "151", "number": "2", "pages": "752--791"}
+doi: "10.1121/10.0009160"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Lubert-EtAl_2022_Supersonic-Jet-Noise-From-Launch-Vehicles-50-Years-Since-NASA-SP-8072.pdf"
+version: "published"
+unverified: []
+group: false
+facility: ""
+data: ["none"]
+methods: ["empirical-model", "vector-intensity", "beamforming"]
+flow: ["rocket-plume", "launch-vehicle", "supersonic", "heated", "overexpanded", "impinging-jet"]
+phenomena: ["mixing-noise", "Mach-wave-radiation", "directivity", "source-location", "acoustic-efficiency", "nonlinear-propagation", "noise-control"]
+params: {}
+topics: ["rocket-noise-models", "rocket-noise-measurements", "impinging-jets-and-edge-tones"]
+related: ["mathews-2021-falcon-9-far-field-noise", "james-2012-directivity-curves-rocket-noise-model", "gee-2016-near-field-intensity-static-rocket-firings", "kenny-2009-space-shuttle-srm-plume-acoustics", "casalino-2009-hybrid-empirical-caa-rocket-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "tsutsumi-2015-epsilon-liftoff-acoustics", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn"]
+cites: ["casalino-2009-hybrid-empirical-caa-rocket-noise", "gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "henderson-2002-flow-structure-supersonic-impinging-jets", "kandula-2005-near-field-acoustics-clustered-rocket-engines", "kenny-2009-space-shuttle-srm-plume-acoustics", "mathews-2021-falcon-9-far-field-noise", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "panda-2013-noise-sources-rocket-test-firings-launch-phased-array", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "ranow-2021-acoustic-prediction-rocket-flame-deflector", "schmidt-2018-spectral-analysis-jet-turbulence", "taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "tam-1995-supersonic-jet-noise", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "tsutsumi-2015-epsilon-liftoff-acoustics"]
+summary: "Rocket-noise review 50 years after SP-8072: η≈0.5%, source 17–22 D_e (SP-8072 curve wrong), Oertel-M_c directivity ~65°; no screech, BBSAN or impingement tones at full scale"
+---
 # Supersonic jet noise from launch vehicles: 50 years since NASA SP-8072
 
 - **Authors:** Caroline P. Lubert (James Madison Univ.; partly at Univ. of Plymouth), Kent L. Gee (Brigham Young Univ.), Seiji Tsutsumi (JAXA)

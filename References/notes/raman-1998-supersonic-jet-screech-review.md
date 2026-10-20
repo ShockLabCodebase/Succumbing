@@ -1,3 +1,28 @@
+---
+key: "raman-1998-supersonic-jet-screech-review"
+title: "Advances in understanding supersonic jet screech: review and perspective"
+authors: ["Raman, Ganesh"]
+year: 1998
+type: "review"
+venue: "Prog. Aerosp. Sci. 34, 45–106"
+bib: {"journal": "Progress in Aerospace Sciences", "volume": "34", "pages": "45--106"}
+doi: "10.1016/S0376-0421(98)00002-5"
+arxiv: ""
+pdf: "Raman_1998_Advances-In-Understanding-Supersonic-Jet-Screech-Review-And-Perspective.pdf"
+version: "published"
+unverified: []
+group: false
+facility: ""
+data: ["none"]
+methods: ["resonance-model", "shock-cell-model", "wavelets", "bispectrum", "phase-averaging"]
+flow: ["round-jet", "rectangular-jet", "twin-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "staging", "mode-switching", "shock-cells", "BBSAN", "coupling", "receptivity"]
+params: {}
+topics: ["screech", "non-axisymmetric-and-twin-jets"]
+related: ["edgington-mitchell-2022-unifying-theory-jet-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets"]
+cites: ["krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1995-supersonic-jet-noise"]
+summary: "Pre-2000 screech review: frequency predictable (Powell, Tam, Massey) but amplitude not, so feedback and receptivity (lip, reflectors) control it; staging unexplained; twin-jet coupling"
+---
 # Advances in understanding supersonic jet screech: review and perspective
 
 - **Authors:** Ganesh Raman (NYMA, Inc., Experimental Fluid Dynamics Section, NASA Lewis Research Center Group, Brook Park, Ohio; p. 45)

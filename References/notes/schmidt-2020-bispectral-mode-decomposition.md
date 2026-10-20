@@ -1,3 +1,28 @@
+---
+key: "schmidt-2020-bispectral-mode-decomposition"
+title: "Bispectral mode decomposition of nonlinear flows"
+authors: ["Schmidt, O. T."]
+year: 2020
+type: "article"
+venue: "Nonlinear Dyn. 102"
+bib: {"journal": "Nonlinear Dynamics", "volume": "102"}
+doi: ""
+arxiv: "2002.04146"
+pdf: "Schmidt_2020_Bispectral-Mode-Decomposition-Of-Nonlinear-Flows.pdf"
+version: "preprint"
+unverified: ["journal DOI and pages not printed in the arXiv preprint"]
+group: false
+facility: ""
+data: ["DNS", "PIV-TR", "LES", "synthetic"]
+methods: ["BMD", "bispectrum", "symmetry-decomposition"]
+flow: ["wake", "round-jet", "generic"]
+phenomena: ["triadic-interaction", "mean-flow-deformation", "coherent-structures"]
+params: {"Re": "500 (cylinder), 3600 (jet)"}
+topics: ["modal-decomposition"]
+related: ["schmidt-2020-guide-spod", "kim-1979-digital-bispectral-analysis-nonlinear-wave-interactions", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "stavropoulos-2026-jet-edge-interaction", "mancinelli-2021-complex-valued-resonance-model-screech", "morra-2021-colour-of-forcing-resolvent-channel", "schmid-2010-dynamic-mode-decomposition"]
+cites: ["kim-1979-digital-bispectral-analysis-nonlinear-wave-interactions", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "BMD: numerical radius of the bispectral density matrix gives mode bispectrum, bispectral modes, interaction maps; tells sum from difference triads; jet LES ½f₀, 3/2 f₀"
+---
 # Bispectral mode decomposition of nonlinear flows
 
 - **Authors:** O. T. Schmidt (University of California San Diego)

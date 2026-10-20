@@ -1,3 +1,28 @@
+---
+key: "rodriguez-2023-preferred-flapping-round-twin-jets"
+title: "On the preferred flapping motion of round twin jets"
+authors: ["Rodríguez, D.", "Stavropoulos, M. N.", "Nogueira, P. A. S.", "Edgington-Mitchell, D. M.", "Jordan, P."]
+year: 2023
+type: "article"
+venue: "JFM 977, A4"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "977", "pages": "A4"}
+doi: "10.1017/jfm.2023.935"
+arxiv: ""
+pdf: "Rodriguez-EtAl_2023_On-The-Preferred-Flapping-Motion-Of-Round-Twin-Jets.pdf"
+version: "published"
+unverified: []
+group: true
+facility: ""
+data: ["model-only"]
+methods: ["LSA-local", "vortex-sheet", "symmetry-decomposition"]
+flow: ["twin-jet", "round-jet", "supersonic", "ideally-expanded", "heated"]
+phenomena: ["flapping", "helical", "coupling", "KH-wavepackets"]
+params: {"M_j": "1–2 (U_j/c∞)", "s/D": "1.8–10", "T_j/T∞": "1–4", "St": "0.1–1", "R/θ": "3–12.5"}
+topics: ["non-axisymmetric-and-twin-jets", "linear-models"]
+related: ["nogueira-2021-twin-jet-coupling-spatial-lsa", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "stavropoulos-2024-upstream-waves-merging-twin-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "wong-2023-steady-unsteady-coupling-twin-round-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "nogueira-2026-flapping-motion-screeching-round-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "gudmundsson-2011-instability-wave-models-near-field-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "schmidt-2018-spectral-analysis-jet-turbulence", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "tam-1982-shock-associated-noise-cd-nozzles", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+summary: "Twin round jet local LST (2D LNS, twin vortex sheet): coupling splits the m = 1 SS/AS/SA/AA modes so flapping beats helical; stripes in St·s/D; SA1 sinuous flapping favoured"
+---
 # On the preferred flapping motion of round twin jets
 
 - **Authors:** D. Rodríguez (Universidad Politécnica de Madrid), M. N. Stavropoulos, P. A. S. Nogueira, D. M. Edgington-Mitchell (Monash, LTRAC), P. Jordan (Institut Pprime, Poitiers)

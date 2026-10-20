@@ -1,3 +1,28 @@
+---
+key: "jordan-2018-jet-flap-interaction-tones"
+title: "Jet–flap interaction tones"
+authors: ["Jordan, P.", "Jaunet, V.", "Towne, A.", "Cavalieri, A. V. G.", "Colonius, T.", "Schmidt, O.", "Agarwal, A."]
+year: 2018
+type: "article"
+venue: "JFM 853, 333–358"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "853", "pages": "333--358"}
+doi: "10.1017/jfm.2018.566"
+arxiv: ""
+pdf: "Jordan-EtAl_2018_Jet-Flap-Interaction-Tones.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Pprime Bruit et Vent jet-noise facility"
+data: ["microphones-near", "microphones-far"]
+methods: ["PSD", "wavelets", "vortex-sheet", "resonance-model"]
+flow: ["round-jet", "jet-edge", "subsonic"]
+phenomena: ["edge-tones", "guided-jet-mode", "KH-wavepackets", "mode-switching", "intermittency"]
+params: {"M_j": "0.6–1.0", "L/D": "2, 3, 4", "D": "50 mm"}
+topics: ["impinging-jets-and-edge-tones", "linear-models"]
+related: ["stavropoulos-2026-jet-edge-interaction", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2024-guided-jet-waves", "weightman-2019-sound-production-impinging-supersonic-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+summary: "M 0.6–1 jet grazing a plate edge: tones from KH coupling with upstream jet modes (k_TH⁻, k_p⁻), not free-stream sound; vortex-sheet phase model; high-St cutoff by wave trapping"
+---
 # Jet–flap interaction tones
 
 - **Authors:** P. Jordan, V. Jaunet, A. Towne, A. V. G. Cavalieri, T. Colonius, O. Schmidt, A. Agarwal (Institut Pprime, Poitiers; CTR Stanford; ITA, Brazil; Caltech; Cambridge)

@@ -1,3 +1,28 @@
+---
+key: "mayer-2019-bristol-aeroacoustic-wind-tunnel"
+title: "Design and performance of an aeroacoustic wind tunnel facility at the University of Bristol"
+authors: ["Mayer, Y. D.", "Kamliya Jawahar, H.", "Szőke, M.", "Showkat Ali, S. A.", "Azarpeyvand, M."]
+year: 2019
+type: "article"
+venue: "Appl. Acoust. 155, 358–370"
+bib: {"journal": "Applied Acoustics", "volume": "155", "pages": "358--370"}
+doi: "10.1016/j.apacoust.2019.06.005"
+arxiv: ""
+pdf: "Mayer-EtAl_2019_Design-And-Performance-Of-An-Aeroacoustic-Wind-Tunnel-Facility-At-The-University.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "University of Bristol aeroacoustic wind tunnel"
+data: ["hot-wire", "microphones-far", "RANS"]
+methods: ["facility-design", "statistics", "PSD", "coherence", "empirical-model"]
+flow: ["wind-tunnel", "subsonic", "airfoil"]
+phenomena: ["mixing-noise", "vortex-shedding"]
+params: {"U": "≤120 m/s (Nozzle 1), ≤40 m/s (Nozzle 2)", "nozzle exit": "600 × 200 mm, 500 × 775 mm", "TI": "0.09%, 0.12%", "anechoic cut-off": "160 Hz"}
+topics: ["diagnostics-and-facilities"]
+related: ["rolandi-2025-biglobal-resolvent-naca0012", "kerechanin-2001-trailing-edge-rectangular-jet-acoustics"]
+cites: []
+summary: "Bristol closed-circuit open-jet anechoic tunnel (160 Hz cut-off, ≤120 m/s, TI 0.09%): Su contraction, silencers, jet-noise background, plate, cylinder and NACA 0012 benchmarks"
+---
 # Design and performance of an aeroacoustic wind tunnel facility at the University of Bristol
 
 - **Authors:** Y. D. Mayer, H. Kamliya Jawahar, M. Szőke, S. A. Showkat Ali, M. Azarpeyvand (corresponding author); all at the University of Bristol

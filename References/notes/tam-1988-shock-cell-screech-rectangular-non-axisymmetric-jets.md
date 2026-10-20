@@ -1,3 +1,28 @@
+---
+key: "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets"
+title: "The shock-cell structures and screech tone frequencies of rectangular and non-axisymmetric supersonic jets"
+authors: ["Tam, C. K. W."]
+year: 1988
+type: "article"
+venue: "J. Sound Vib. 121(1), 135–147"
+bib: {"journal": "Journal of Sound and Vibration", "volume": "121", "number": "1", "pages": "135--147"}
+doi: "10.1016/S0022-460X(88)80066-X"
+arxiv: ""
+pdf: "Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf"
+version: "published"
+unverified: []
+group: false
+facility: ""
+data: ["none"]
+methods: ["shock-cell-model", "vortex-sheet", "resonance-model"]
+flow: ["rectangular-jet", "elliptical-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "shock-cells"]
+params: {"M_j": "1.1–1.8", "M_d": "1", "AR": "5.83, 12.75 (comparison data)"}
+topics: ["screech", "non-axisymmetric-and-twin-jets"]
+related: ["tam-1986-bbsan-screech-relationship", "tam-1982-shock-associated-noise-cd-nozzles", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "mancinelli-2019-screech-prediction-upstream-modes", "esfahani-2021-coupling-modes-twin-rectangular-jets", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets"]
+cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship"]
+summary: "Vortex-sheet (Prandtl–Pack) shock-cell model for any cross-section: rectangular sine and elliptic Mathieu modes; spacing set by the minor dimension; weakest-link screech St matches rectangular jets"
+---
 # The shock-cell structures and screech tone frequencies of rectangular and non-axisymmetric supersonic jets
 
 - **Authors:** C. K. W. Tam (Department of Mathematics, Florida State University)

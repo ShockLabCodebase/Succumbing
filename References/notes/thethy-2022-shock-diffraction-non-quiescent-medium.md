@@ -1,3 +1,28 @@
+---
+key: "thethy-2022-shock-diffraction-non-quiescent-medium"
+title: "Diffraction of shock waves through a non-quiescent medium"
+authors: ["Thethy, B. S.", "Rezay Haghdoost, M.", "Kirby, R.", "Seo, B.", "Nadolski, M.", "Zenker, C.", "Oevermann, M.", "Klein, R.", "Oberleithner, K.", "Edgington-Mitchell, D."]
+year: 2022
+type: "article"
+venue: "JFM 944, A39"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "944", "pages": "A39"}
+doi: "10.1017/jfm.2022.484"
+arxiv: ""
+pdf: "Thethy-EtAl_2022_Diffraction-Of-Shock-Waves-Through-A-Non-Quiescent-Medium.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Valveless H2–air PDC (location not stated; probably TU Berlin)"
+data: ["schlieren-TR", "PIV-TR", "Euler"]
+methods: ["GSD", "statistics"]
+flow: ["shock-tube", "round-jet", "subsonic"]
+phenomena: ["shock-diffraction"]
+params: {"M_0": "2.41–2.62 (exp.); 1.001–5 (GSD)", "M_b": "0.14–0.38 (exp.); 0–3 (GSD)", "D": "30 mm"}
+topics: ["simulation-methods"]
+related: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "rezay-haghdoost-2022-shock-dividers", "edgington-mitchell-2022-unifying-theory-jet-screech", "weightman-2019-sound-production-impinging-supersonic-jets", "ragni-2011-particle-tracer-response-shocks-piv", "greenshields-2010-central-schemes-polyhedral-fv"]
+cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "rezay-haghdoost-2022-shock-dividers"]
+summary: "PDC shock diffracting into a moving jet: schlieren, PIV, Euler and modified GSD show background flow (not nozzle focusing) distorts the front; Skews m₀ generalised for M_b"
+---
 # Diffraction of shock waves through a non-quiescent medium
 
 - **Authors:** B. S. Thethy, M. Rezay Haghdoost, R. Kirby, B. Seo, M. Nadolski, C. Zenker, M. Oevermann, R. Klein, K. Oberleithner, D. Edgington-Mitchell (LTRAC, Monash; TU Berlin; FU Berlin; BTU Cottbus-Senftenberg)

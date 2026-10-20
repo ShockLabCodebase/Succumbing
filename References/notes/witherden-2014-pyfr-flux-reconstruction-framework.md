@@ -1,3 +1,28 @@
+---
+key: "witherden-2014-pyfr-flux-reconstruction-framework"
+title: "PyFR: An open source framework for solving advection–diffusion type problems on streaming architectures using the flux reconstruction approach"
+authors: ["Witherden, F. D.", "Farrington, A. M.", "Vincent, P. E."]
+year: 2014
+type: "article"
+venue: "Comput. Phys. Commun. 185(11), 3028–3040"
+bib: {"journal": "Computer Physics Communications", "volume": "185", "number": "11", "pages": "3028--3040"}
+doi: "10.1016/j.cpc.2014.07.011"
+arxiv: "1312.1638"
+pdf: "Witherden-EtAl_2014_PyFR-An-Open-Source-Framework-For-Solving-Advection-Diffusion-Type-Problems.pdf"
+version: "preprint"
+unverified: ["CPC issue, pages and DOI from memory; not printed in the arXiv file"]
+group: false
+facility: ""
+data: ["DNS", "Euler"]
+methods: ["numerics"]
+flow: ["generic", "wake"]
+phenomena: []
+params: {"order": "℘ = 1–4", "Re": "200 (Couette); 3900 (cylinder)"}
+topics: ["simulation-methods"]
+related: ["greenshields-2010-central-schemes-polyhedral-fv", "bres-2021-les-twin-rectangular-jets-plasma", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "towne-2022-database-reduced-complexity-modeling", "nogueira-2021-closure-mechanism-a1-a2-screech", "mancinelli-2021-complex-valued-resonance-model-screech"]
+cites: []
+summary: "PyFR v0.1.0: Python flux reconstruction on mixed curved unstructured grids, GEMM plus runtime CUDA/OpenMP kernels; Rusanov + LDG; design-order Couette; scales to 104 GPUs; PyFR LES solver reference"
+---
 # PyFR: An open source framework for solving advection–diffusion type problems on streaming architectures using the flux reconstruction approach
 
 - **Authors:** F. D. Witherden, A. M. Farrington, P. E. Vincent (Department of Aeronautics, Imperial College London)

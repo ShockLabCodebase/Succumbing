@@ -1,3 +1,28 @@
+---
+key: "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet"
+title: "Wavepackets and trapped acoustic modes in a turbulent jet: coherent structure eduction and global stability"
+authors: ["Schmidt, O. T.", "Towne, A.", "Colonius, T.", "Cavalieri, A. V. G.", "Jordan, P.", "Brès, G. A."]
+year: 2017
+type: "article"
+venue: "JFM 825, 1153–1181"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "825", "pages": "1153--1181"}
+doi: "10.1017/jfm.2017.407"
+arxiv: ""
+pdf: "Schmidt-EtAl_2017_Wavepackets-And-Trapped-Acoustic-Modes-In-A-Turbulent-Jet-Coherent-Structure.pdf"
+version: "accepted-manuscript"
+unverified: ["DOI and journal page range not printed in the held Caltech author copy"]
+group: false
+facility: "Charles LES (Cascade); Bruit et Vent (Pprime) near-field spectra"
+data: ["LES", "microphones-near", "mic-array"]
+methods: ["SPOD", "coherence", "PSD", "LSA-global", "LSA-local", "wavenumber-filtering"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["guided-jet-mode", "KH-wavepackets"]
+params: {"M_j": "0.9", "Re": "≈10⁶ (LES); 10⁵ (stability)", "T_j/T∞": "1", "m": "0–4"}
+topics: ["linear-models"]
+related: ["towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2022-database-reduced-complexity-modeling", "jordan-2018-jet-flap-interaction-tones", "pickering-2020-lift-up-kh-orr-jets", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2020-waves-in-screeching-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+summary: "M_j 0.9 jet LES vs mean-flow global stability: SPOD gives the KH wavepacket, near-nozzle CSD gives trapped acoustic duct modes (m, n_r, n_x) from k⁺/k⁻ beating; explains near-nozzle tones"
+---
 # Wavepackets and trapped acoustic modes in a turbulent jet: coherent structure eduction and global stability
 
 - **Authors:** O. T. Schmidt, A. Towne, T. Colonius, A. V. G. Cavalieri, P. Jordan, G. A. Brès (Caltech; CTR Stanford; ITA São José dos Campos; Institut Pprime, Poitiers; Cascade Technologies)
@@ -181,7 +206,7 @@ The paper is a reference case for resonance in subsonic jets. It is also an earl
 - **Same LES database elsewhere:** this is the Brès et al. M_j 0.9 jet in [towne-2022-database-reduced-complexity-modeling.md](towne-2022-database-reduced-complexity-modeling.md), whose jet demo summarises this paper and Towne et al. (2017). It is also used in [raiola-2025-hilbert-pod.md](raiola-2025-hilbert-pod.md), [pickering-2020-lift-up-kh-orr-jets.md](pickering-2020-lift-up-kh-orr-jets.md) and [yeung-2024-adaptive-spod-broadband-tonal.md](yeung-2024-adaptive-spod-broadband-tonal.md). The stored grid is 656 × 138 × 128 here and in the Raiola note, but 626 × 138 × 128 in the Towne 2022 note; one of them is a typo. The trapped waves make it a good test case for a schlieren-style pipeline, since the k–St bands of Fig. 11 are a known target.
 - **Facility:** the experimental spectra are from Bruit et Vent at Institut Pprime (the same nozzle as Jordan et al. 2018) and from Suzuki & Colonius (2006). No Shock Lab group facility is involved.
 - **Related works cited, candidates for `/add-paper`:**
-  - Towne et al. 2017, *Acoustic resonance in the potential core of subsonic jets* (JFM 825, 1113–1152), the companion local/weakly non-parallel theory paper.
+  - [Towne et al. 2017](towne-2017-acoustic-resonance-potential-core-subsonic-jets.md), *Acoustic resonance in the potential core of subsonic jets* (JFM 825, 1113–1152), the companion local/weakly non-parallel theory paper (now in the library).
   - Tam & Hu 1989 (three families of waves); Suzuki & Colonius 2006 (near-field array tones).
   - Nichols & Lele 2011 (global modes of a supersonic jet); Garnaud et al. 2013a,b.
   - Brès et al. 2017/2018 (the LES); Schmidt et al. 2018 (*Spectral analysis of jet turbulence*); Towne, Schmidt & Colonius 2018 (SPOD).

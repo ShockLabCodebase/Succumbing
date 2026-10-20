@@ -1,3 +1,28 @@
+---
+key: "huang-1998-empirical-mode-decomposition-hilbert-spectrum"
+title: "The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis"
+authors: ["Huang, N. E.", "Shen, Z.", "Long, S. R.", "Wu, M. C.", "Shih, H. H.", "Zheng, Q.", "Yen, N.-C.", "Tung, C. C.", "Liu, H. H."]
+year: 1998
+type: "article"
+venue: "Proc. R. Soc. Lond. A 454(1971), 903–995"
+bib: {"journal": "Proceedings of the Royal Society of London. Series A: Mathematical, Physical and Engineering Sciences", "volume": "454", "number": "1971", "pages": "903--995"}
+doi: "10.1098/rspa.1998.0193"
+arxiv: ""
+pdf: "Huang-EtAl_1998_The-Empirical-Mode-Decomposition-And-The-Hilbert-Spectrum-For-Nonlinear-And.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: ""
+data: ["field-data"]
+methods: ["EMD", "Hilbert-transform", "wavelets"]
+flow: ["generic"]
+phenomena: ["intermittency"]
+params: {}
+topics: ["time-frequency-methods"]
+related: ["horel-1984-complex-principal-component-analysis", "raiola-2025-hilbert-pod", "davey-2025-hpod-sphere-wake", "torrence-1998-practical-guide-wavelet-analysis", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "stavropoulos-2026-jet-edge-interaction"]
+cites: []
+summary: "Origin of EMD/Hilbert–Huang: sifting into IMFs so ω = dθ/dt is meaningful; Hilbert and marginal spectra, degree of stationarity; intrawave FM not harmonics; fails for close tones"
+---
 # The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis
 
 - **Authors:** N. E. Huang, Z. Shen, S. R. Long, M. C. Wu, H. H. Shih, Q. Zheng, N.-C. Yen, C. C. Tung, H. H. Liu (NASA Goddard and Wallops; Johns Hopkins; NOAA; Univ. Delaware; NRL; NC State; NSWC Carderock)

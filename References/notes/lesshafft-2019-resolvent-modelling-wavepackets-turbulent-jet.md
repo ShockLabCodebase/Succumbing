@@ -1,3 +1,28 @@
+---
+key: "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet"
+title: "Resolvent-based modeling of coherent wave packets in a turbulent jet"
+authors: ["Lesshafft, L.", "Semeraro, O.", "Jaunet, V.", "Cavalieri, A. V. G.", "Jordan, P."]
+year: 2019
+type: "article"
+venue: "Phys. Rev. Fluids 4, 063901"
+bib: {"journal": "Physical Review Fluids", "volume": "4", "number": "6", "pages": "063901"}
+doi: "10.1103/PhysRevFluids.4.063901"
+arxiv: "1810.09340"
+pdf: "Lesshafft-EtAl_2019_Resolvent-Based-Modelling-Of-Coherent-Wavepackets-In-A-Turbulent-Jet.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: "Pprime Bruit et Vent jet-noise facility"
+data: ["PIV-TR", "PIV-stereo", "pressure-probe"]
+methods: ["resolvent", "SPOD", "LSA-local"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["KH-wavepackets", "Orr"]
+params: {"M_j": "0.4", "Re": "4.6×10⁵", "D": "50 mm", "m": "0", "St": "0.2–0.7"}
+topics: ["linear-models"]
+related: ["pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent", "garnaud-2013-preferred-mode-incompressible-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "nogueira-2019-large-scale-streaky-structures-jets", "morra-2021-colour-of-forcing-resolvent-channel"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "garnaud-2013-preferred-mode-incompressible-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "sieber-2016-spectral-proper-orthogonal-decomposition", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Global resolvent (nozzle included, m = 0) of the M 0.4 Pprime jet vs SPOD of TR stereo PIV: optimal = KH fed by Orr forcing in the nozzle BL; SPOD mode 1 matched at St 0.4–0.7, mode 2 not"
+---
 # Resolvent-based modelling of coherent wavepackets in a turbulent jet
 
 - **Authors:** L. Lesshafft (LadHyX, CNRS / École polytechnique), O. Semeraro (LadHyX; LIMSI, CNRS / Université Paris-Saclay), V. Jaunet (Institut Pprime, Poitiers), A. V. G. Cavalieri (Instituto Tecnológico de Aeronáutica, Brazil), P. Jordan (Institut Pprime)

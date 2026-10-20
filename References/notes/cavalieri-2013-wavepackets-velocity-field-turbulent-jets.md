@@ -1,3 +1,28 @@
+---
+key: "cavalieri-2013-wavepackets-velocity-field-turbulent-jets"
+title: "Wavepackets in the velocity field of turbulent jets"
+authors: ["Cavalieri, A. V. G.", "Rodríguez, D.", "Jordan, P.", "Colonius, T.", "Gervais, Y."]
+year: 2013
+type: "article"
+venue: "JFM 730, 559–592"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "730", "pages": "559--592"}
+doi: "10.1017/jfm.2013.346"
+arxiv: ""
+pdf: "Cavalieri-EtAl_2013_Wavepackets-In-The-Velocity-Field-Of-Turbulent-Jets.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "PPrime Bruit et Vent"
+data: ["PIV-TR", "PIV-stereo", "hot-wire", "mic-array", "microphones-far"]
+methods: ["PSE", "symmetry-decomposition", "SPOD", "coherence", "PSD"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["KH-wavepackets", "directivity", "mixing-noise"]
+params: {"M_j": "0.4–0.6", "Re": "4.2–5.7×10⁵", "D": "50 mm", "St": "0.1–0.9"}
+topics: ["linear-models", "jet-noise-mechanisms"]
+related: ["gudmundsson-2011-instability-wave-models-near-field-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "jordan-2018-jet-flap-interaction-tones", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "nogueira-2021-wavepacket-modulation-shock-containing-jets"]
+cites: ["gudmundsson-2011-instability-wave-models-near-field-jets", "tam-1995-supersonic-jet-noise"]
+summary: "M 0.4–0.6 jets, TR cross-plane PIV + mic ring: energy peaks at mδ₂/r≈0.7 but sound is mostly m=0; linear PSE on the mean flow match m=0,1 for St 0.3–0.9 to the end of the core"
+---
 # Wavepackets in the velocity field of turbulent jets
 
 - **Authors:** A. V. G. Cavalieri (Institut PPrime, Poitiers; ITA, São José dos Campos), D. Rodríguez (Caltech; Universidad Politécnica de Madrid), P. Jordan (Institut PPrime), T. Colonius (Caltech), Y. Gervais (Institut PPrime)

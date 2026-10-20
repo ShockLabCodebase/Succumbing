@@ -64,3 +64,41 @@ One line per paper: the parts each indexing agent flagged. Number = entry in dow
 - Mazharmanesh 2026: eq A1 rebuilt; Fig 16d wavenumbers read off; figure 13(d) vs 19(d); y/D vs D_e; peak positions §4 vs §5; tone St differs from 2025 note (0.269/0.273/0.314 vs 0.28/0.32); D_e 16 vs 15 mm nozzle; SPOD/BMD params unstated
 - Nogueira 2026: eqs 3.1-3.9 rebuilt (C sign, 1/r² in B, r_j, base-flow profiles); St definition render; Fig 3/20 eigenvalues read off; GJ c_ph sign; Fig 5 e/f wagging vs flapping assumed; LSA flapping vs LES wagging tension
 - Suzuki 2026: eq 5 axis convention vs symmetry defs; eq 15 normalisation; eq B1 rebuilt; figure readings; forcing/fringe/SPOD window unreported; preprint
+
+# Cross-note inconsistencies (found while building topic pages and data tables, Oct 2026)
+
+Each item names the notes that disagree. Check against the PDFs and fix the wrong note (then `library.py build`).
+
+## Screech and jets
+- E-M 2018 vs E-M 2020 (same Monash datasets): St 0.65/0.63 vs 0.67/0.65 at NPR 2.10/2.25 (2020 calls it a correction); upstream-wave peak at 5th vs 4th shock cell.
+- E-M 2020 shock wavenumber k_s D = 11 at NPR 2.10 (L_s/D ≈ 0.57) vs k_s1 D ≈ 12.8–13.7 in E-M 2022 and Nogueira 2021 closure at similar M_j. The E-M 2020 table was garbled in extraction; check p. 17.
+- Farghadan 2026 says the visible "first suboptimal" shock peak is really k_s3 (k_s2 hidden in the primary peak); E-M 2022 and Nogueira 2021 closure call the visible peak k_s2. Matters for `data/shock_cell_spacing.csv`.
+- Mazharmanesh 2025 vs 2026, AR 2 elliptical jet at NPR 3.6: St 0.28 (quasi-helical) / 0.32 (flapping) vs 0.269 / 0.314 (flapping) / 0.273 (quasi-helical). Also camera exposure 5.1 µs vs LED pulse 0.5 µs on the same rig.
+- Ivelja 2024 (St ≈ 0.38, figure-read) vs Mazharmanesh 2025 (0.42) for an AR 2 elliptical jet at NPR 2.6: same nozzle?
+- Stavropoulos 2023 quotes Mancinelli 2021's vortex-sheet phase as ¼; the Mancinelli 2021 note gives φ = −π/4 (vortex sheet) and 0 (finite thickness).
+- Nogueira 2021 absolute instability says Ponton 1992 found lip thickness changes amplitude but not frequency; the Ponton note shows small systematic wavelength and mode-range shifts. Raman 1998 summarises Ponton & Seiner as a C→D switch; the Ponton note regroups "D" as a re-emerging B mode.
+- Krothapalli 1986 finds the fundamental dominant at 90°; Tam 1995 and Raman 1998 put the harmonic lobe at 90° (physical disagreement; discussed on topics/screech.md).
+- Within-note: Knast 2018 Table 1 U_j 562/584 m/s look like typos for 462/484, and its St are 6–12 % above f D_j/U_j; Krothapalli 1986 AR 10 tone 10 000 Hz (Table 1) vs 10 795 Hz (p. 138); Jeun 2024 St 0.37 vs 0.373, 0.380 vs 0.383; Brès 2021 near-field main tone St 0.3 but far-field 0.6, unexplained; Tam 1995 eq. 12 at M_j 1.09 gives St ≈ 0.92 vs measured 0.67.
+- Pulsed-LED reference: E-M 2022 and Mazharmanesh 2025 cite "Willert et al. 2010"; other notes cite Willert, Mitchell & Soria 2012. Same paper?
+- Monash rig names vary: "LTRAC Gas Jet Facility" (E-M 2018, Weightman thesis), "LTRAC Supersonic Jet Facility" (E-M 2014, Wong 2021), "Supersonic(-)Gas-Jet Facility" (Mazharmanesh 2025/2026), "Gas-Jet Facility" (E-M 2025). Which are the same rig?
+- D = 15 mm Monash nozzle lip: 5 mm (0.33D) in E-M 2018 vs base nozzle 0.1D in the Weightman thesis (different variants?). The PyFR README's 16 mm nozzle has a 1 mm flat lip, while Mazharmanesh 2026 lists its 16 mm round nozzle with l/D_e = 0.31.
+- Tan 2015 is tagged `subsonic`, but the helium injector cases at NPR 2–4 should be choked/underexpanded; params mix two cases.
+
+## Rocket noise
+- RSRM exit diameter 3.88 m (Kenny 2009, James 2012, Haynes 2009) vs 3.87 m (Gee 2012) vs 3.80 m (Lubert 2022 App. B); U_e 2454 m/s (James, Haynes) vs ≈2500 m/s (Lubert).
+- RSRM nozzle-referenced peak angle 50° (Kenny), 56° (Gee 2012), 51° (James, DSM), 53° (Lubert); recentred 65° (James, Lubert). Reichman 2018 says "expected near 75°, citing James 2012", but the James note gives 65°.
+- Lubert 2022 source location: 17–22 D_e in the summary vs 17–20 D_e in Key findings.
+- Falcon 9 peak directivity 64° (Mathews 2021, Kellison 2026) vs 71° after the 3-D angle fix (Mathews 2025 predicting; thesis Ch. 5).
+- Merlin 1D: U_e 3092 m/s, M_e 3.53, M_j 3.38, T_j 1879 K (Mathews 2021, equilibrium) vs 2984 m/s, 3.71, 3.465, 1532 K (Kellison 2026, frozen); Ranow 2021 code uses M_e 3.54.
+- Falcon 9 peak Sr 0.019 on D_e,equiv 2.76 m (Mathews 2021) vs 0.010 on per-engine D_e (Kellison 2026), which Kellison compares with SATURN's 0.011 on D_eff: inconsistent basis.
+- Kellison 2026 Relevance attributes "SLS peak 66°, Sr 0.015, 139.6 dB" to Gee 2023; the Gee 2023 note reports none of these.
+- Mathews 2025 thesis Relevance calls James 2012 "vector-intensity source locations"; James used peak levels along 18 D_e (the intensity work is Gee 2016).
+- FSM: "Flight Support Motor" (Kenny 2009) vs "Flight Simulation Motor" (Haynes 2009).
+- Atlas V model inputs change between thesis Ch. 4 and Ch. 5 / Mathews 2025: η 0.25 % → 0.33 %, θ_max 65° → 71°, −6 dB ground correction → δ = 1.9.
+
+## Impinging jets and edge tones
+- Jordan 2018 says k_d⁻ loops "did not match the data" (p. 9) and needs φ = 0 or π by case; Stavropoulos 2026 closes tones with k_d⁻ (p = 4–9) and φ = 0 almost everywhere. Same facility and nozzle, overlapping at L/D 2, R/D 0.5 (scientific disagreement).
+- Peak tone levels ≈170 dB/St (Jordan 2018) vs ≈150 dB/St (Stavropoulos 2026, which divides by M_j⁴): check the scaling before comparing.
+- M_j at NPR 3.4: 1.42 (Weightman thesis) vs 1.45 (E-M 2020; isentropic 1.45). Nozzle contraction ratio 81 or 240 (thesis) vs ≈100 (E-M 2020).
+- Weightman thesis, within-note: cylinder-case U_j 460.8 m/s vs isentropic ≈420 m/s; difference tone St 0.140 (p. 33) vs 0.144 (p. 70); shocklet at y/D 1.43 vs "1.3D".
+- Ranow 2021 overprediction of Ares I: 7–10 dB (summary) vs 5–10 dB (body).

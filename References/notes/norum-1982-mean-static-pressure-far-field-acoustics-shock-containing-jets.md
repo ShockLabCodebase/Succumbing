@@ -1,3 +1,28 @@
+---
+key: "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets"
+title: "Measurements of mean static pressure and far-field acoustics of shock-containing supersonic jets"
+authors: ["Norum, Thomas D.", "Seiner, John M."]
+year: 1982
+type: "report"
+venue: "NASA TM-84521"
+bib: {"institution": "NASA Langley Research Center", "number": "TM-84521", "note": "NTRS 19820025274"}
+doi: ""
+arxiv: ""
+pdf: "Norum-Seiner_1982_Measurements-Of-Mean-Static-Pressure-And-Far-Field-Acoustics-Of-Shock-Containing.pdf"
+version: "report"
+unverified: []
+group: false
+facility: "NASA Langley Jet-Noise Laboratory and Anechoic Noise Facility"
+data: ["pressure-probe", "microphones-far"]
+methods: ["statistics", "PSD"]
+flow: ["round-jet", "supersonic", "underexpanded", "overexpanded", "ideally-expanded"]
+phenomena: ["screech", "BBSAN", "shock-cells", "directivity", "noise-control"]
+params: {"M_d": "1.0, 1.5, 2.0", "M_j": "1.0–2.37", "NPR": "1.89–14", "β": "0–2.15", "D": "≈4–5 cm", "TR": "1 (unheated)"}
+topics: ["jet-noise-mechanisms", "screech"]
+related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "raman-1998-supersonic-jet-screech-review", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance"]
+cites: []
+summary: "NASA Langley data: unheated M_d 1.0/1.5/2.0 conical and contoured nozzles, β 0–2.15, ± screech tab; shock-cell static-pressure surveys, OASPL directivity, 1/3-octave and 40 Hz spectra"
+---
 # Measurements of mean static pressure and far-field acoustics of shock-containing supersonic jets
 
 - **Authors:** Thomas D. Norum, John M. Seiner (NASA Langley Research Center, Hampton, Virginia)

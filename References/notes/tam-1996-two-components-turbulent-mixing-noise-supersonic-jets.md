@@ -1,3 +1,28 @@
+---
+key: "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets"
+title: "On the two components of turbulent mixing noise from supersonic jets"
+authors: ["Tam, Christopher K. W.", "Golebiowski, Michel", "Seiner, John M."]
+year: 1996
+type: "conference"
+venue: "AIAA 96-1716 (2nd AIAA/CEAS Aeroacoustics Conf.)"
+bib: {"booktitle": "2nd AIAA/CEAS Aeroacoustics Conference", "note": "AIAA Paper 96-1716, State College, PA, 6–8 May 1996"}
+doi: "10.2514/6.1996-1716"
+arxiv: ""
+pdf: "Tam-EtAl_1996_On-The-Two-Components-Of-Turbulent-Mixing-Noise-From-Supersonic-Jets.pdf"
+version: "conference"
+unverified: ["DOI not printed on the scan; inferred from the AIAA pattern, not checked"]
+group: false
+facility: "NASA Langley Jet Noise Laboratory"
+data: ["microphones-far"]
+methods: ["PSD", "empirical-model"]
+flow: ["round-jet", "rectangular-jet", "elliptical-jet", "supersonic", "subsonic", "heated", "underexpanded", "overexpanded", "ideally-expanded"]
+phenomena: ["mixing-noise", "Mach-wave-radiation", "directivity", "screech"]
+params: {"M_j": "0.98–2.24", "M_d": "1.0–2.0", "TR": "1.0–4.9", "AR": "3, 7.6"}
+topics: ["jet-noise-mechanisms", "rocket-noise-models"]
+related: ["tam-1995-supersonic-jet-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "papamoschou-1988-compressible-turbulent-shear-layer", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "wong-2021-wavepacket-modelling-bbsan"]
+cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "papamoschou-1988-compressible-turbulent-shear-layer", "tam-1995-supersonic-jet-noise"]
+summary: "Origin of the large-scale (F) and fine-scale (G) similarity spectra, from 1,900 NASA Langley spectra (M_j 1.37–2.24, T_r/T_∞ 1–4.9); levels scale with V_j/a_∞; strong screech adds ~3 dB"
+---
 # On the two components of turbulent mixing noise from supersonic jets
 
 - **Authors:** Christopher K. W. Tam, Michel Golebiowski (Florida State University, Tallahassee), John M. Seiner (NASA Langley Research Center)

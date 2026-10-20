@@ -1,3 +1,28 @@
+---
+key: "gee-2023-sls-artemis-i-far-field-noise"
+title: "Space Launch System acoustics: Far-field noise measurements of the Artemis-I launch"
+authors: ["Gee, K. L.", "Hart, G. W.", "Cunningham, C. F.", "Anderson, M. C.", "Bassett, M. S.", "Mathews, L. T.", "Durrant, J. T.", "Moats, L. T.", "Coyle, W. L.", "Kellison, M. S.", "Kuffskie, M. J."]
+year: 2023
+type: "article"
+venue: "JASA Express Lett. 3(2), 023601"
+bib: {"journal": "JASA Express Letters", "volume": "3", "number": "2", "pages": "023601"}
+doi: "10.1121/10.0016878"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Gee-EtAl_2023_Space-Launch-System-Acoustics-Far-Field-Noise-Measurements-Of-The-Artemis-I-Launch.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "KSC LC-39B (Artemis I launch)"
+data: ["full-scale", "microphones-far"]
+methods: ["PSD", "empirical-model"]
+flow: ["launch-vehicle", "rocket-plume", "heated"]
+phenomena: ["ignition-overpressure", "crackle", "nonlinear-propagation", "directivity", "installation-effects"]
+params: {"vehicle": "SLS Block 1 (Artemis I)", "thrust": "39.1 MN", "distance": "1.48–5.15 km"}
+topics: ["rocket-noise-measurements"]
+related: ["gee-2024-starship-super-heavy-far-field-noise", "kellison-2026-falcon-9-noise-two-campaigns", "mathews-2021-falcon-9-far-field-noise", "reichman-2018-qm2-srm-far-field-acoustics", "gee-2026-falcon-9-ascent-sonic-boom", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise"]
+summary: "First SLS far-field data (Artemis I, 1.5–5.2 km): ignition overpressure aimed at the trench exit; max OASPL 127–136 dB, ~20 dB above EA predictions; 20 Hz peak; crackle"
+---
 # Space Launch System acoustics: Far-field noise measurements of the Artemis-I launch
 
 - **Authors:** K. L. Gee, G. W. Hart, C. F. Cunningham, M. C. Anderson, M. S. Bassett, L. T. Mathews, J. T. Durrant, L. T. Moats (BYU Physics and Astronomy), W. L. Coyle, M. S. Kellison, M. J. Kuffskie (Rollins College Physics)

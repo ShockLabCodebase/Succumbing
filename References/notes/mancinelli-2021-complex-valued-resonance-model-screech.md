@@ -1,3 +1,28 @@
+---
+key: "mancinelli-2021-complex-valued-resonance-model-screech"
+title: "A complex-valued resonance model for axisymmetric screech tones in supersonic jets"
+authors: ["Mancinelli, M.", "Jaunet, V.", "Jordan, P.", "Towne, A."]
+year: 2021
+type: "article"
+venue: "JFM 928"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "928"}
+doi: ""
+arxiv: "2012.01342"
+pdf: "Mancinelli-EtAl_2021_A-Complex-Valued-Resonance-Model-For-Axisymmetric-Screech-Tones-In-Supersonic-Jets.pdf"
+version: "preprint"
+unverified: ["journal DOI, article number and pages not printed in this arXiv version"]
+group: false
+facility: "Pprime SUCRÉ"
+data: ["microphones-near", "mic-array", "PIV"]
+methods: ["PSD", "bispectrum", "symmetry-decomposition", "vortex-sheet", "LSA-local", "resonance-model", "shock-cell-model"]
+flow: ["round-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "staging", "guided-jet-mode", "triadic-interaction", "receptivity"]
+params: {"M_j": "1.0–1.8", "NPR": "1.89–5.75", "Re": "2.86×10⁵–7.9×10⁵", "D": "10 mm", "T_0": "295 K", "T_j/T∞": "0.61–0.83", "R/θ_R": "10"}
+topics: ["screech", "linear-models"]
+related: ["mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "jordan-2018-jet-flap-interaction-tones", "nogueira-2024-guided-jet-waves"]
+cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "jordan-2018-jet-flap-interaction-tones", "nogueira-2021-closure-mechanism-a1-a2-screech", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "wong-2021-wavepacket-modelling-bbsan"]
+summary: "Complex-ω guided-mode screech model, M_j 1–1.8: finite-thickness cold-jet Rayleigh needed; fitted R₁R₂(St, M_j) with ω_i ≥ 0 bounds A1/A2/TM and drops most spurious tones"
+---
 # A complex-valued resonance model for axisymmetric screech tones in supersonic jets
 
 - **Authors:** M. Mancinelli, V. Jaunet, P. Jordan (Institut Pprime, CNRS–Université de Poitiers–ENSMA), A. Towne (University of Michigan) (p. 1)

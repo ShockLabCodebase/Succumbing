@@ -1,3 +1,28 @@
+---
+key: "suzuki-2026-coherent-structures-axis-switching-elliptical-jets"
+title: "Coherent structures in axis-switching elliptical jets"
+authors: ["Suzuki, N.", "Cavalieri, A. V. G.", "Edgington-Mitchell, D. M.", "Nogueira, P. A. S."]
+year: 2026
+type: "preprint"
+venue: "arXiv:2604.17851"
+bib: {}
+doi: ""
+arxiv: "2604.17851"
+pdf: "Suzuki-EtAl_2026_Coherent-Structures-In-Axis-Switching-Elliptical-Jets.pdf"
+version: "preprint"
+unverified: []
+group: true
+facility: "Dedalus DNS"
+data: ["DNS"]
+methods: ["SPOD", "symmetry-decomposition", "statistics"]
+flow: ["elliptical-jet", "subsonic"]
+phenomena: ["axis-switching", "flapping", "KH-wavepackets", "coherent-structures"]
+params: {"AR": "2", "Re": "400"}
+topics: ["non-axisymmetric-and-twin-jets", "modal-decomposition"]
+related: ["mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "marshall-2024-prediction-streaks-rectangular-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "schmidt-2020-bispectral-mode-decomposition", "pickering-2020-lift-up-kh-orr-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "gudmundsson-2011-instability-wave-models-near-field-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-bispectral-mode-decomposition", "schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "DNS (Re_D 400) of forced AR 2 elliptical jets, D2-split SPOD: AS flapping dominates; a new SA flapping mode is born at the axis switch, apart from nozzle wagging; St ∝ 1/√x"
+---
 # Coherent structures in axis-switching elliptical jets
 
 - **Authors:** N. Suzuki, A. V. G. Cavalieri, D. M. Edgington-Mitchell, P. A. S. Nogueira (Monash University; Instituto Tecnológico de Aeronáutica, São José dos Campos)

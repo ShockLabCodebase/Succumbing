@@ -1,3 +1,28 @@
+---
+key: "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech"
+title: "Triadic interaction and mean-flow deformation in screeching jets"
+authors: ["Mazharmanesh, S.", "Nogueira, P. A. S.", "Weightman, J.", "Yeung, B.", "Schmidt, O. T.", "Edgington-Mitchell, D."]
+year: 2026
+type: "article"
+venue: "JFM 1039, A24"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "1039", "pages": "A24"}
+doi: "10.1017/jfm.2026.11796"
+arxiv: ""
+pdf: "Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab"
+data: ["schlieren-TR"]
+methods: ["SPOD", "BMD", "statistics", "wavenumber-filtering"]
+flow: ["round-jet", "elliptical-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "staging", "mode-switching", "intermittency", "triadic-interaction", "mean-flow-deformation", "shock-cells", "guided-jet-mode"]
+params: {"NPR": "2.19–2.25 (round), 2.3–4.9 (elliptical)", "AR": "2 (elliptical)", "D_e": "16 mm (round), 10 mm (elliptical)", "St_s": "0.27–0.69"}
+topics: ["screech", "time-frequency-methods", "modal-decomposition"]
+related: ["mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "mancinelli-2019-screech-prediction-upstream-modes", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "schmidt-2020-bispectral-mode-decomposition", "farghadan-2026-wave-interactions-screeching-jet", "nogueira-2021-closure-mechanism-a1-a2-screech", "ivelja-2024-modal-analysis-screeching-elliptical-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "gudmundsson-2011-instability-wave-models-near-field-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "nogueira-2024-guided-jet-waves", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-bispectral-mode-decomposition", "towne-2018-spod-relationship-dmd-resolvent", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
+summary: "150 kHz schlieren of A1/A2 staging (NPR 2.20) and an AR 2 elliptical jet (NPR 3.6): mutually exclusive tones each set their own short-time mean; BMD-derived k_S matches k_kh − k_GJM"
+---
 # Triadic interaction and mean-flow deformation in screeching jets
 
 - **Authors:** S. Mazharmanesh, P. A. S. Nogueira, J. Weightman, B. Yeung, O. T. Schmidt, D. Edgington-Mitchell (Mazharmanesh, Nogueira, Weightman, Edgington-Mitchell: Monash University; Yeung, Schmidt: UC San Diego; p. 1)

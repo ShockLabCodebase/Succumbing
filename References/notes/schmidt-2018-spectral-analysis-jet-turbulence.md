@@ -1,3 +1,28 @@
+---
+key: "schmidt-2018-spectral-analysis-jet-turbulence"
+title: "Spectral analysis of jet turbulence"
+authors: ["Schmidt, O. T.", "Towne, A.", "Rigas, G.", "Colonius, T.", "Brès, G. A."]
+year: 2018
+type: "article"
+venue: "JFM 855, 953–982"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "855", "pages": "953--982"}
+doi: "10.1017/jfm.2018.675"
+arxiv: "1711.06296"
+pdf: "Schmidt-EtAl_2018_Spectral-Analysis-Of-Jet-Turbulence.pdf"
+version: "preprint"
+unverified: ["journal volume, pages and DOI not printed in the held arXiv preprint"]
+group: false
+facility: "Charles LES (Cascade)"
+data: ["LES"]
+methods: ["SPOD", "resolvent", "PSD", "wavenumber-filtering"]
+flow: ["round-jet", "subsonic", "supersonic", "ideally-expanded"]
+phenomena: ["KH-wavepackets", "Orr", "guided-jet-mode", "Mach-wave-radiation"]
+params: {"M_j": "0.4, 0.9, 1.5", "Re": "0.45–1.76×10⁶ (LES); 3×10⁴ (resolvent)", "TR": "1.03–1.45 (isothermal jets)"}
+topics: ["modal-decomposition", "linear-models"]
+related: ["schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "towne-2018-spod-relationship-dmd-resolvent", "towne-2022-database-reduced-complexity-modeling", "schmidt-2020-guide-spod", "morra-2021-colour-of-forcing-resolvent-channel", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "garnaud-2013-preferred-mode-incompressible-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmid-2010-dynamic-mode-decomposition", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+summary: "SPOD of M_j 0.4/0.9/1.5 jet LES vs mean-flow resolvent (Re 3×10⁴): low-rank KH wavepackets for 0.2 ≲ St ≲ 2 (m 0, 1), Orr packets downstream; restricted SPOD; trapped and upstream waves"
+---
 # Spectral analysis of jet turbulence
 
 - **Authors:** O. T. Schmidt, A. Towne, G. Rigas, T. Colonius, G. A. Brès (Caltech; CTR Stanford; Cascade Technologies)

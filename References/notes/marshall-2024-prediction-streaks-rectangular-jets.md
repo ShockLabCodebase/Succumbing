@@ -1,3 +1,28 @@
+---
+key: "marshall-2024-prediction-streaks-rectangular-jets"
+title: "Prediction of streaks in rectangular jets"
+authors: ["Marshall, C.", "Edgington-Mitchell, D.", "Nogueira, P."]
+year: 2024
+type: "preprint"
+venue: "Research Square preprint"
+bib: {"publisher": "Research Square", "note": "Preprint, not peer-reviewed"}
+doi: "10.21203/rs.3.rs-4197686/v1"
+arxiv: ""
+pdf: "Marshall-EtAl_2024_Prediction-Of-Streaks-In-Rectangular-Jets.pdf"
+version: "preprint"
+unverified: []
+group: true
+facility: ""
+data: ["model-only"]
+methods: ["resolvent", "symmetry-decomposition"]
+flow: ["rectangular-jet"]
+phenomena: ["streaks"]
+params: {"AR": "1–5", "St": "0", "shear-thickness factor s": "1–10", "corner exponent χ": "2–32"}
+topics: ["linear-models", "non-axisymmetric-and-twin-jets"]
+related: ["nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "morra-2021-colour-of-forcing-resolvent-channel", "nogueira-2026-flapping-motion-screeching-round-jets"]
+cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Cross-plane incompressible resolvent (ω = 0, D2 split) on tanh rectangular jets: AS/SA dipole streaks lead; corner sharpness barely matters, so corner vortices are not linear streaks"
+---
 # Prediction of streaks in rectangular jets
 
 - **Authors:** C. Marshall, D. Edgington-Mitchell, P. Nogueira (Department of Mechanical and Aerospace Engineering, Monash University)

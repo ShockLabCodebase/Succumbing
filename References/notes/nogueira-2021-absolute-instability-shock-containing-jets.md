@@ -1,3 +1,28 @@
+---
+key: "nogueira-2021-absolute-instability-shock-containing-jets"
+title: "Absolute instability in shock-containing jets"
+authors: ["Nogueira, P. A. S.", "Jordan, P.", "Jaunet, V.", "Cavalieri, A. V. G.", "Towne, A.", "Edgington-Mitchell, D."]
+year: 2021
+type: "article"
+venue: "JFM (2021), arXiv version held"
+bib: {"journal": "Journal of Fluid Mechanics"}
+doi: "10.1017/jfm.2021.887"
+arxiv: "2106.12690"
+pdf: "Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf"
+version: "preprint"
+unverified: ["DOI from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 930, A10, 2022: unchecked)"]
+group: true
+facility: "Shock Lab group facility"
+data: ["PIV"]
+methods: ["LSA-Floquet", "LSA-local", "shock-cell-model", "wavenumber-filtering", "POD-pair"]
+flow: ["round-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "absolute-instability", "guided-jet-mode", "KH-wavepackets", "shock-cells", "triadic-interaction", "global-mode"]
+params: {"NPR": "2.1, 2.4", "M_j": "≈1.09, ≈1.19 (isentropic estimate)", "m": "0, 1"}
+topics: ["screech", "linear-models"]
+related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2022-unifying-theory-jet-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa"]
+cites: ["cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "garnaud-2013-preferred-mode-incompressible-jets", "jordan-2018-jet-flap-interaction-tones", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "pickering-2020-lift-up-kh-orr-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "raman-1998-supersonic-jet-screech-review", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Floquet LSA of a sinusoidal shock-cell jet: a KH–guided-mode saddle gives absolute instability; saddle St within 2–6% of screech (NPR 2.1 m = 0, 2.4 m = 1); nozzle sets amplitude only"
+---
 # Absolute instability in shock-containing jets
 
 - **Authors:** P. A. S. Nogueira, P. Jordan, V. Jaunet, A. V. G. Cavalieri, A. Towne, D. Edgington-Mitchell

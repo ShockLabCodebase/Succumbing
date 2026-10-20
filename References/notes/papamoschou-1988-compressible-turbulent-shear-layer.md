@@ -1,3 +1,28 @@
+---
+key: "papamoschou-1988-compressible-turbulent-shear-layer"
+title: "The compressible turbulent shear layer: an experimental study"
+authors: ["Papamoschou, D.", "Roshko, A."]
+year: 1988
+type: "article"
+venue: "JFM 197, 453–477"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "197", "pages": "453--477"}
+doi: "10.1017/S0022112088003325"
+arxiv: ""
+pdf: "Papamoschou-Roshko_1988_The-Compressible-Turbulent-Shear-Layer-An-Experimental-Study.pdf"
+version: "published"
+unverified: ["DOI from the standard citation, not printed on the scan"]
+group: false
+facility: "Caltech GALCIT two-stream supersonic shear-layer facility"
+data: ["schlieren", "pressure-probe"]
+methods: ["vortex-sheet", "statistics"]
+flow: ["shear-layer", "supersonic"]
+phenomena: ["coherent-structures", "compressibility-effects"]
+params: {"M_c1": "0.07–1.81", "M_1": "1.6–3.4", "ρ₂/ρ₁": "0.24–9.2", "U₂/U₁": "0.04–0.93", "gases": "He, N₂, Ar"}
+topics: ["jet-noise-mechanisms", "linear-models", "rocket-noise-models"]
+related: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise", "kellison-2026-falcon-9-noise-two-campaigns", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "tam-1995-supersonic-jet-noise", "mancinelli-2019-screech-prediction-upstream-modes"]
+cites: []
+summary: "Defines the convective Mach number M_c (U_c from an isentropic saddle-point model); He/N₂/Ar two-stream layers, M_c1 0.07–1.81: normalised growth falls to ≈0.2 by M_c ≈ 0.8"
+---
 # The compressible turbulent shear layer: an experimental study
 
 - **Authors:** D. Papamoschou, A. Roshko (Graduate Aeronautical Laboratories, California Institute of Technology)

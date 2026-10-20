@@ -1,3 +1,28 @@
+---
+key: "kenny-2009-space-shuttle-srm-plume-acoustics"
+title: "Measurement and Characterization of Space Shuttle Solid Rocket Motor Plume Acoustics"
+authors: ["Kenny, R. Jeremy", "Hobbs, Chris", "Plotkin, Ken", "Pilkey, Debbie"]
+year: 2009
+type: "conference"
+venue: "AIAA 2009-3161 (Aeroacoustics Conf.)"
+bib: {"booktitle": "15th AIAA/CEAS Aeroacoustics Conference", "publisher": "American Institute of Aeronautics and Astronautics", "note": "AIAA Paper 2009-3161"}
+doi: ""
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Kenny-EtAl_2009_Measurement-And-Characterization-Of-Space-Shuttle-Solid-Rocket-Motor-Plume-Acoustics.pdf"
+version: "conference"
+unverified: ["paper number and conference only on the slide footers; year inferred from PDF creation date and citations, not printed on the paper"]
+group: false
+facility: "ATK T-24 static-test stand, Promontory, Utah"
+data: ["full-scale", "microphones-near", "microphones-far"]
+methods: ["PSD", "statistics"]
+flow: ["rocket-plume", "supersonic", "heated"]
+phenomena: ["directivity", "source-location", "crackle", "ignition-overpressure", "installation-effects"]
+params: {"vehicle": "Space Shuttle RSRM", "D_e": "3.88 m", "thrust": "12.9 MN peak (sea level)", "tests": "TEM-13, FVM-2, FSM-15"}
+topics: ["rocket-noise-measurements"]
+related: ["haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "james-2012-directivity-curves-rocket-noise-model", "gee-2012-reusable-srm-noise-spectral-statistical", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2016-near-field-intensity-static-rocket-firings", "reichman-2018-qm2-srm-far-field-acoustics", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: []
+summary: "First full-scale RSRM static-firing acoustics (3 tests): positive skewness; OASPL tracks nozzle vectoring; near-field peak ≈23 D_n, far-field directivity peak ≈50°"
+---
 # Measurement and Characterization of Space Shuttle Solid Rocket Motor Plume Acoustics
 
 - **Authors:** R. Jeremy Kenny (NASA Marshall Space Flight Center), Chris Hobbs and Ken Plotkin (Wyle Laboratories), Debbie Pilkey (ATK Space Systems)

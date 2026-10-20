@@ -1,3 +1,28 @@
+---
+key: "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control"
+title: "Flow and noise control in high speed and high Reynolds number jets using plasma actuators"
+authors: ["Samimy, M.", "Kastner, J.", "Kim, J.-H.", "Utkin, Y.", "Adamovich, I.", "Brown, C. A."]
+year: 2006
+type: "report"
+venue: "NASA/TM-2006-214367 (AIAA 2006-2846)"
+bib: {"institution": "NASA Glenn Research Center", "number": "NASA/TM-2006-214367", "note": "Also AIAA Paper 2006-2846, 3rd AIAA Flow Control Conference, San Francisco, 2006"}
+doi: ""
+arxiv: ""
+pdf: "Samimy-EtAl_2006_Flow-And-Noise-Control-In-High-Speed-And-High-Reynolds-Number-Jets-Using-Plasma.pdf"
+version: "report"
+unverified: []
+group: false
+facility: "OSU GDTL; NASA Glenn NATR"
+data: ["PIV", "microphones-near", "microphones-far", "mic-array"]
+methods: ["PSD", "statistics"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["noise-control", "KH-wavepackets", "mixing-noise"]
+params: {"Ma": "0.5–0.9 (U_j/c_0)", "Re_D": "3.8×10⁵–6.4×10⁶", "D": "2.54 cm (GDTL); 19.05 cm (NATR)", "St_DF": "0.09–5"}
+topics: ["jet-noise-mechanisms"]
+related: ["esfahani-2021-control-twin-rectangular-jet-coupling", "esfahani-2021-coupling-modes-twin-rectangular-jets", "bres-2021-les-twin-rectangular-jets-plasma", "samimy-1998-rectangular-jet-trailing-edge-control", "kerechanin-2001-trailing-edge-rectangular-jet-acoustics", "pickering-2020-lift-up-kh-orr-jets"]
+cites: []
+summary: "LAFPA plasma forcing scaled from a 1 in. GDTL jet to a 7.5 in. NASA NATR jet, Ma 0.5–0.84: m = ±1 at St_DF ≈ 0.3 halves the core and adds 4–5 dB; high St_DF or m cuts ~1 dB"
+---
 # Flow and noise control in high speed and high Reynolds number jets using plasma actuators
 
 - **Authors:** M. Samimy, J. Kastner, J.-H. Kim, Y. Utkin, I. Adamovich (Gas Dynamics and Turbulence Laboratory (GDTL), The Ohio State University); C. A. Brown (NASA Glenn Research Center)

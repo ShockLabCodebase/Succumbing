@@ -1,3 +1,28 @@
+---
+key: "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off"
+title: "Modifications to the NASA SP-8072 Distributed Source Method II for Ares I Lift-off Environment Predictions"
+authors: ["Haynes, Jared M.", "Kenny, R. Jeremy"]
+year: 2009
+type: "conference"
+venue: "AIAA 2009-3160"
+bib: {"booktitle": "2009 AIAA Aeroacoustics Conference", "note": "AIAA paper 2009-3160; NTRS copy bundles extended abstract, paper and slides"}
+doi: "10.2514/6.2009-3160"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Haynes-Kenny_2009_Modifications-To-The-NASA-SP-8072-Distributed-Source-Method-II-For-Ares-I-Lift-Off.pdf"
+version: "conference"
+unverified: ["DOI not printed in the PDF; assumed AIAA form, not checked"]
+group: false
+facility: "NASA MSFC"
+data: ["full-scale", "microphones-far", "RANS"]
+methods: ["empirical-model"]
+flow: ["rocket-plume", "launch-vehicle", "impinging-jet", "supersonic", "underexpanded", "heated"]
+phenomena: ["source-location", "directivity", "installation-effects"]
+params: {"vehicle": "Ares I (RSRMV)", "D_e": "3.88 m", "U_e": "2454 m/s", "thrust": "14.7 MN"}
+topics: ["rocket-noise-models"]
+related: ["ranow-2021-acoustic-prediction-rocket-flame-deflector", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "kenny-2009-space-shuttle-srm-plume-acoustics", "james-2012-directivity-curves-rocket-noise-model", "casalino-2009-hybrid-empirical-caa-rocket-noise", "gee-2016-near-field-intensity-static-rocket-firings"]
+cites: []
+summary: "Ares I DSM-2 fixes: Varnier core (half Eldred's, backed by RSRM RANS), core ended at the deflector (Saturn V check), RSRM static-fire directivity; OASPL +5–7 dB, peak 2 bands up"
+---
 # Modifications to the NASA SP-8072 Distributed Source Method II for Ares I Lift-off Environment Predictions
 
 - **Authors:** Jared M. Haynes (Qualis Corp. / ESTS Group at NASA Marshall Space Flight Center; the slides say Jacobs ESTS Group), R. Jeremy Kenny (NASA MSFC, Acoustics and Stability Team, ER42) (p. 5, 17)

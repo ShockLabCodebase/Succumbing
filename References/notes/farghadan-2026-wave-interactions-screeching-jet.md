@@ -1,3 +1,28 @@
+---
+key: "farghadan-2026-wave-interactions-screeching-jet"
+title: "Wave interactions in a screeching jet"
+authors: ["Farghadan, A.", "Beekman, J.", "Nogueira, P.", "Edgington-Mitchell, D.", "Towne, A."]
+year: 2026
+type: "article"
+venue: "JFM 1040, A40"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "1040", "pages": "A40"}
+doi: "10.1017/jfm.2026.11818"
+arxiv: ""
+pdf: "Farghadan-EtAl_2026_Wave-Interactions-In-A-Screeching-Jet.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["PIV"]
+methods: ["LSA-global", "resolvent", "harmonic-resolvent", "POD", "POD-pair", "eddy-viscosity", "wavenumber-filtering"]
+flow: ["round-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "guided-jet-mode", "KH-wavepackets", "shock-cells", "triadic-interaction", "mean-flow-deformation", "global-mode"]
+params: {"M_j": "1.12", "St": "0.714", "m": "0", "Re": "3.41e5", "D": "10 mm", "TR": "1"}
+topics: ["screech", "linear-models"]
+related: ["edgington-mitchell-2022-unifying-theory-jet-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "edgington-mitchell-2020-waves-in-screeching-jets", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "nogueira-2024-guided-jet-waves", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Global, resolvent and bilinear harmonic-resolvent models on a PIV mean flow (M_j 1.12, m = 0): screech St 0.72 via k_kh − k_s2; self-interaction gives the harmonic sideline beams"
+---
 # Wave interactions in a screeching jet
 
 - **Authors:** A. Farghadan, J. Beekman, P. Nogueira, D. Edgington-Mitchell, A. Towne (Farghadan, Towne: University of Michigan; Beekman, Nogueira, Edgington-Mitchell: Monash University; p. 1)

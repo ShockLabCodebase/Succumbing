@@ -1,3 +1,28 @@
+---
+key: "towne-2022-database-reduced-complexity-modeling"
+title: "A Database for Reduced-Complexity Modeling of Fluid Flows"
+authors: ["Towne, A.", "Dawson, S. T. M.", "Brès, G. A.", "Lozano-Durán, A.", "Saxton-Fox, T.", "Parthasarathy, A.", "Jones, A. R.", "Biler, H.", "Yeh, C.-A.", "Patel, H. D.", "Taira, K."]
+year: 2022
+type: "preprint"
+venue: "arXiv:2206.11801"
+bib: {"note": "Data: Deep Blue Data, University of Michigan, http://deepblue.lib.umich.edu/data/collections/kk91fk98z"}
+doi: ""
+arxiv: "2206.11801"
+pdf: "Towne-EtAl_2022_A-Database-For-Reduced-Complexity-Modeling-Of-Fluid-Flows.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: "Charles LES (Cascade); UIUC boundary-layer tunnel; UMD towing tank"
+data: ["LES", "DNS", "PIV-TR"]
+methods: ["SPOD", "resolvent", "LSA-local", "LSA-global", "POD", "DMD", "conditional-sampling", "PSD"]
+flow: ["round-jet", "subsonic", "wall-bounded", "airfoil", "wake"]
+phenomena: ["KH-wavepackets", "guided-jet-mode", "coherent-structures"]
+params: {"M_j": "0.9 (jet)", "Re_τ": "292–2227 (boundary layers)", "Re": "100 (plate); 20,000 (gust); 23,000 (NACA 0012)"}
+topics: ["modal-decomposition"]
+related: ["towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "pickering-2020-lift-up-kh-orr-jets", "yeung-2024-adaptive-spod-broadband-tonal", "rolandi-2025-biglobal-resolvent-naca0012", "morra-2021-colour-of-forcing-resolvent-channel", "schmidt-2018-spectral-analysis-jet-turbulence", "raiola-2025-hilbert-pod"]
+cites: ["brunton-2020-machine-learning-fluid-mechanics", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Public ~8 TB database of 6 time-resolved sets (M_j 0.9 jet LES, TBL DNS and TR-PIV, pitching plate, gust encounter, NACA 0012 LES) with SPOD, resolvent, DMD, POD and stability demos"
+---
 # A Database for Reduced-Complexity Modeling of Fluid Flows
 
 - **Authors:** A. Towne, S. T. M. Dawson, G. A. Brès, A. Lozano-Durán, T. Saxton-Fox, A. Parthasarathy, A. R. Jones, H. Biler, C.-A. Yeh, H. D. Patel, K. Taira

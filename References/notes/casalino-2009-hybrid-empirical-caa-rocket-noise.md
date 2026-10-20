@@ -1,3 +1,28 @@
+---
+key: "casalino-2009-hybrid-empirical-caa-rocket-noise"
+title: "Hybrid Empirical/Computational Aeroacoustics Methodology for Rocket Noise Modeling"
+authors: ["Casalino, D.", "Barbarino, M.", "Genito, M.", "Ferrara, V."]
+year: 2009
+type: "article"
+venue: "AIAA J. 47(6), 1445–1460"
+bib: {"journal": "AIAA Journal", "volume": "47", "number": "6", "pages": "1445--1460"}
+doi: "10.2514/1.38634"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Casalino-EtAl_2009_Hybrid-Empirical-Computational-Aeroacoustics-Methodology-For-Rocket-Noise-Modeling.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Avio BEAT 1/20-scale Vega/ELA-1 mock-up; CIRA GFD CAA"
+data: ["subscale", "microphones-near", "CAA", "RANS"]
+methods: ["empirical-model", "propagation-model", "numerics", "PSD"]
+flow: ["rocket-plume", "launch-vehicle", "impinging-jet", "supersonic", "heated"]
+phenomena: ["source-location", "directivity", "acoustic-efficiency", "Mach-wave-radiation", "installation-effects"]
+params: {"vehicle": "Vega (P80 SRM), ELA-1 pad", "M_e": "≈3.5", "T_e": "≈1700 K", "Re_D": "≈7×10⁷", "scale": "1/20", "f": "25–1000 Hz (1/3-octave)", "altitude": "10 m"}
+topics: ["rocket-noise-models"]
+related: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "james-2012-directivity-curves-rocket-noise-model", "ranow-2021-acoustic-prediction-rocket-flame-deflector", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "tsutsumi-2015-epsilon-liftoff-acoustics", "weightman-2019-sound-production-impinging-supersonic-jets"]
+cites: []
+summary: "Vega lift-off: Eldred/Varnier empirical sources propagated by immersed-boundary GFD CAA Green's functions of the real pad; pad-cavity confinement sets the peak, still +2–3 dB"
+---
 # Hybrid Empirical/Computational Aeroacoustics Methodology for Rocket Noise Modeling
 
 - **Authors:** D. Casalino, M. Barbarino (CIRA, Italian Aerospace Research Center, Capua), M. Genito (European Launch Vehicle S.p.A., Colleferro), V. Ferrara (Avio S.p.A., Colleferro)

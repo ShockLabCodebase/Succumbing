@@ -1,3 +1,28 @@
+---
+key: "brunton-2020-machine-learning-fluid-mechanics"
+title: "Machine Learning for Fluid Mechanics"
+authors: ["Brunton, S. L.", "Noack, B. R.", "Koumoutsakos, P."]
+year: 2020
+type: "review"
+venue: "Annu. Rev. Fluid Mech. 52, 477–508"
+bib: {"journal": "Annual Review of Fluid Mechanics", "volume": "52", "pages": "477--508"}
+doi: "10.1146/annurev-fluid-010719-060214"
+arxiv: ""
+pdf: "Brunton-EtAl_2020_Machine-Learning-For-Fluid-Mechanics.pdf"
+version: "published"
+unverified: []
+group: false
+facility: ""
+data: ["none"]
+methods: ["ML", "POD", "DMD", "Koopman"]
+flow: ["generic"]
+phenomena: ["coherent-structures", "noise-control"]
+params: {}
+topics: ["simulation-methods"]
+related: ["taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "molnar-2023-physics-informed-bos-supersonic", "towne-2022-database-reduced-complexity-modeling", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview"]
+summary: "Review of ML in fluids: POD as linear autoencoder, cluster ROMs, DMD/Koopman, SINDy, PIV superresolution, closures, MLC/RL control; models interpolate, not extrapolate"
+---
 # Machine Learning for Fluid Mechanics
 
 - **Authors:** S. L. Brunton (U. Washington), B. R. Noack (LIMSI-CNRS / TU Berlin), P. Koumoutsakos (ETH Zurich)

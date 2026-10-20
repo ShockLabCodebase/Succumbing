@@ -1,3 +1,28 @@
+---
+key: "wong-2021-wavepacket-modelling-bbsan"
+title: "Wavepacket Modelling of Broadband Shock-Associated Noise in Supersonic Jets"
+authors: ["Wong, M. H.", "Jordan, P.", "Maia, I. A.", "Cavalieri, A. V. G.", "Kirby, R.", "Fava, T. C. L.", "Edgington-Mitchell, D."]
+year: 2021
+type: "article"
+venue: "JFM 918"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "918"}
+doi: "10.1017/jfm.2021.324"
+arxiv: "2012.04818"
+pdf: "Wong-EtAl_2021_Wavepacket-Modelling-Of-Broadband-Shock-Associated-Noise-In-Supersonic-Jets.pdf"
+version: "preprint"
+unverified: ["DOI from References/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "article number not known"]
+group: true
+facility: "Shock Lab group facility (LTRAC supersonic jet facility PIV; SJAF anechoic chamber); Charles LES (Cascade)"
+data: ["LES", "PIV", "microphones-far", "mic-array"]
+methods: ["PSE", "shock-cell-model", "coherence", "SPOD", "symmetry-decomposition", "PSD", "acoustic-analogy"]
+flow: ["round-jet", "supersonic", "underexpanded", "ideally-expanded"]
+phenomena: ["BBSAN", "KH-wavepackets", "shock-cells"]
+params: {"M_j": "1.45–1.5", "NPR": "3.40–3.67", "T_j/T_∞": "0.69–1.0", "m": "0–2"}
+topics: ["jet-noise-mechanisms", "linear-models"]
+related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2020-waves-in-screeching-jets", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "pickering-2020-lift-up-kh-orr-jets", "tan-2015-bos-density-axisymmetric-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "gudmundsson-2011-instability-wave-models-near-field-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "tan-2015-bos-density-axisymmetric-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Inside-out BBSAN model: PSE/LES wavepackets × PIV-corrected Pack–Prandtl shock cells in Lighthill's analogy; m = 0–2 peaks within ±2 dB/St; LES coherence decay (jitter) fills up to 15 dB/St"
+---
 # Wavepacket Modelling of Broadband Shock-Associated Noise in Supersonic Jets
 
 - **Authors:** M. H. Wong (Monash LTRAC), P. Jordan (Institut PPRIME, Poitiers), I. A. Maia (PPRIME), A. V. G. Cavalieri (ITA, São José dos Campos), R. Kirby (Monash), T. C. L. Fava (KTH), D. Edgington-Mitchell (Monash)

@@ -1,3 +1,28 @@
+---
+key: "tam-1982-shock-associated-noise-cd-nozzles"
+title: "Shock associated noise of supersonic jets from convergent-divergent nozzles"
+authors: ["Tam, C. K. W.", "Tanna, H. K."]
+year: 1982
+type: "article"
+venue: "J. Sound Vib. 81(3), 337–358"
+bib: {"journal": "Journal of Sound and Vibration", "volume": "81", "number": "3", "pages": "337--358"}
+doi: "10.1016/0022-460X(82)90244-9"
+arxiv: ""
+pdf: "Tam-Tanna_1982_Shock-Associated-Noise-Of-Supersonic-Jets-From-Convergent-Divergent-Nozzles.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Lockheed-Georgia anechoic jet facility"
+data: ["microphones-far"]
+methods: ["shock-cell-model", "PSD"]
+flow: ["round-jet", "supersonic", "overexpanded", "underexpanded", "ideally-expanded", "heated"]
+phenomena: ["BBSAN", "shock-cells", "Mach-wave-radiation", "directivity"]
+params: {"M_d": "1.672", "M_j": "1.10–1.96", "NPR": "2.4–7.8", "TR": "1–2", "D": "5.08 cm"}
+topics: ["jet-noise-mechanisms", "screech"]
+related: ["wong-2021-wavepacket-modelling-bbsan", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "nogueira-2021-wavepacket-modulation-shock-containing-jets"]
+cites: []
+summary: "Origin of the BBSAN mechanism: instability waves × Pack shock cells give a supersonic k − λ₁ wave radiating as Mach waves; f_p = u_c/[L_s(1 − M_c cos θ)], I ∝ (M_j² − M_d²)²; M_d 1.672 C-D jet"
+---
 # Shock associated noise of supersonic jets from convergent-divergent nozzles
 
 - **Authors:** C. K. W. Tam, H. K. Tanna (Lockheed-Georgia Company, Marietta, Georgia; Tam's permanent address is the Department of Mathematics, Florida State University) (p. 1)

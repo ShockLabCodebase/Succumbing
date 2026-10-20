@@ -1,3 +1,28 @@
+---
+key: "yeung-2024-adaptive-spod-broadband-tonal"
+title: "Adaptive spectral proper orthogonal decomposition of broadband-tonal flows"
+authors: ["Yeung, B. C. Y.", "Schmidt, O. T."]
+year: 2024
+type: "article"
+venue: "Theor. Comput. Fluid Dyn. 38, 355–374"
+bib: {"journal": "Theoretical and Computational Fluid Dynamics", "volume": "38", "pages": "355--374"}
+doi: "10.1007/s00162-024-00695-0"
+arxiv: ""
+pdf: "Yeung-Schmidt_2024_Adaptive-Spectral-Proper-Orthogonal-Decomposition-Of-Broadband-Tonal-Flows.pdf"
+version: "published"
+unverified: []
+group: false
+facility: ""
+data: ["PIV-TR", "LES"]
+methods: ["SPOD", "PSD"]
+flow: ["cavity", "round-jet", "subsonic"]
+phenomena: ["KH-wavepackets", "cavity-tones"]
+params: {"M": "0.6 (cavity)", "M_j": "0.9 (jet)"}
+topics: ["modal-decomposition"]
+related: ["von-saldern-2026-band-ensemble-spod", "schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2022-3d-spod-twin-rectangular-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2022-database-reduced-complexity-modeling", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "schmidt-2019-streaming-spod"]
+cites: ["schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2022-3d-spod-twin-rectangular-jet"]
+summary: "Multitaper (sine-taper) SPOD with adaptive bandwidth per frequency: sharp tones plus low-variance broadband; matches Welch with 75% less data; cavity TR-PIV, M 0.9 jet LES"
+---
 # Adaptive spectral proper orthogonal decomposition of broadband-tonal flows
 
 - **Authors:** B. C. Y. Yeung, O. T. Schmidt (UC San Diego)

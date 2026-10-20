@@ -1,3 +1,28 @@
+---
+key: "garnaud-2013-preferred-mode-incompressible-jets"
+title: "The preferred mode of incompressible jets: linear frequency response analysis"
+authors: ["Garnaud, X.", "Lesshafft, L.", "Schmid, P. J.", "Huerre, P."]
+year: 2013
+type: "article"
+venue: "JFM 716, 189–202"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "716", "pages": "189--202", "note": "Held PDF is the HAL author version hal-00756811"}
+doi: "10.1017/jfm.2012.540"
+arxiv: ""
+pdf: "Garnaud-EtAl_2013_The-Preferred-Mode-Of-Incompressible-Jets-Linear-Frequency-Response-Analysis.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: ""
+data: ["model-only"]
+methods: ["resolvent", "LSA-global", "LSA-local"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["KH-wavepackets", "Orr"]
+params: {"Re": "1000–5000 (radius-based)", "m": "0–2", "theta/R": "0.043"}
+topics: ["linear-models"]
+related: ["lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "nogueira-2021-absolute-instability-shock-containing-jets", "morra-2021-colour-of-forcing-resolvent-channel"]
+cites: ["gudmundsson-2011-instability-wave-models-near-field-jets"]
+summary: "Global resolvent of an incompressible model jet with nozzle pipe: no resonating global mode; the preferred mode is a pseudo-resonance, peak gain St ≈ 0.43–0.46, Orr forcing in the pipe BL"
+---
 # The preferred mode of incompressible jets: linear frequency response analysis
 
 - **Authors:** X. Garnaud, L. Lesshafft, P. J. Schmid, P. Huerre (LadHyX, École Polytechnique – CNRS, Palaiseau)

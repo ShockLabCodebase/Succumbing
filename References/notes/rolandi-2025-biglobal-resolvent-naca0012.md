@@ -1,3 +1,28 @@
+---
+key: "rolandi-2025-biglobal-resolvent-naca0012"
+title: "Biglobal resolvent analysis of separated flow over a NACA0012 airfoil"
+authors: ["Rolandi, L. V.", "Smith, L.", "Amitay, M.", "Theofilis, V.", "Taira, K."]
+year: 2025
+type: "preprint"
+venue: "arXiv:2501.04255"
+bib: {"note": "arXiv:2501.04255v1 [physics.flu-dyn]"}
+doi: "10.48550/arXiv.2501.04255"
+arxiv: "2501.04255"
+pdf: "Rolandi-EtAl_2025_Biglobal-Resolvent-Analysis-Of-Separated-Flow-Over-A-NACA0012-Airfoil.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: "CharLES DNS and wall-resolved LES"
+data: ["DNS", "LES"]
+methods: ["resolvent", "LSA-global", "PSD"]
+flow: ["airfoil", "wake", "shear-layer", "subsonic"]
+phenomena: ["KH-wavepackets", "coherent-structures"]
+params: {"Re": "1000–10000", "alpha": "9°, 14°", "M": "0.1"}
+topics: ["linear-models"]
+related: ["taira-2020-modal-analysis-applications-outlook", "edgington-mitchell-2020-waves-in-screeching-jets", "pickering-2020-lift-up-kh-orr-jets", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Discounted biglobal resolvent of NACA0012 DNS/LES mean flows, Re 1000–10000: short horizons pick the shear layer (St ≈ 0.027√Re), long ones the wake mode; resolvent wavemaker"
+---
 # Biglobal resolvent analysis of separated flow over a NACA0012 airfoil
 
 - **Authors:** L. V. Rolandi, L. Smith, M. Amitay, V. Theofilis, K. Taira (UCLA; Rensselaer Polytechnic Institute; Technion)

@@ -1,3 +1,28 @@
+---
+key: "panda-2013-noise-sources-rocket-test-firings-launch-phased-array"
+title: "Identification of noise sources during rocket engine test firings and a rocket launch using a microphone phased-array"
+authors: ["Panda, Jayanta", "Mosher, Robert N.", "Porter, Barry J."]
+year: 2013
+type: "report"
+venue: "NASA/TM-2013-216625"
+bib: {"institution": "NASA Ames Research Center", "number": "NASA/TM-2013-216625"}
+doi: ""
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Panda-EtAl_2013_Identification-Of-Noise-Sources-During-Rocket-Engine-Test-Firings-And-A-Rocket-Launch.pdf"
+version: "report"
+unverified: []
+group: false
+facility: "Wallops pad 0A (Antares); NASA Ames hybrid rocket test"
+data: ["mic-array", "full-scale", "infrared-imaging"]
+methods: ["beamforming", "coherence"]
+flow: ["rocket-plume", "launch-vehicle", "impinging-jet", "supersonic", "heated"]
+phenomena: ["source-location", "noise-control", "installation-effects"]
+params: {"vehicle": "Antares stage 1 (2 × AJ26), 25,000 lbf hybrid", "thrust": "3265 kN (Antares)", "array range": "400 ft"}
+topics: ["rocket-noise-measurements"]
+related: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "casalino-2009-hybrid-empirical-caa-rocket-noise", "ranow-2021-acoustic-prediction-rocket-flame-deflector", "gee-2016-near-field-intensity-static-rocket-firings", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "tsutsumi-2015-epsilon-liftoff-acoustics"]
+cites: []
+summary: "70-mic phased array at Wallops pad 0A: Antares static-fire noise comes from the water-quenched flame-duct exit, not the plume; at liftoff sources move mount → duct → deck → free plume"
+---
 # Identification of noise sources during rocket engine test firings and a rocket launch using a microphone phased-array
 
 - **Authors:** Jayanta Panda (NASA Ames Research Center), Robert N. Mosher (NASA Langley Research Center), Barry J. Porter (Aerospace Computing Inc.)

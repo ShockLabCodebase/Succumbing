@@ -1,3 +1,28 @@
+---
+key: "oberleithner-2011-swirling-jet-vortex-breakdown-stability"
+title: "Three-dimensional coherent structures in a swirling jet undergoing vortex breakdown: stability analysis and empirical mode construction"
+authors: ["Oberleithner, K.", "Sieber, M.", "Nayeri, C. N.", "Paschereit, C. O.", "Petz, C.", "Hege, H.-C.", "Noack, B. R.", "Wygnanski, I."]
+year: 2011
+type: "article"
+venue: "JFM 679, 383–414"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "679", "pages": "383--414"}
+doi: "10.1017/jfm.2011.141"
+arxiv: ""
+pdf: "Oberleithner-EtAl_2011_Three-Dimensional-Coherent-Structures-In-A-Swirling-Jet-Undergoing-Vortex-Breakdown.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "TU Berlin swirling-jet facility"
+data: ["PIV", "PIV-stereo", "hot-wire"]
+methods: ["POD", "POD-pair", "phase-averaging", "LSA-local", "PSD"]
+flow: ["swirling-jet", "subsonic"]
+phenomena: ["helical", "coherent-structures", "global-mode"]
+params: {"Re": "20 000", "S": "1.22", "St": "0.49", "m": "1", "D": "51 mm"}
+topics: ["modal-decomposition", "linear-models"]
+related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2021-twin-jet-coupling-spatial-lsa", "weightman-2019-sound-production-impinging-supersonic-jets", "sieber-2016-spectral-proper-orthogonal-decomposition", "davey-2025-hpod-sphere-wake", "raiola-2025-hilbert-pod", "nogueira-2021-absolute-instability-shock-containing-jets"]
+cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+summary: "Swirling jet (S 1.22) vortex breakdown: m = 1 global mode at St 0.49 (Hopf, lock-in); mean-flow spatial LSA matches POD-pair phase average of stereo PIV; 3D helix from 2D planes"
+---
 # Three-dimensional coherent structures in a swirling jet undergoing vortex breakdown: stability analysis and empirical mode construction
 
 - **Authors:** K. Oberleithner, M. Sieber, C. N. Nayeri, C. O. Paschereit (TU Berlin, Hermann-Föttinger-Institut), C. Petz, H.-C. Hege (Zuse-Institut Berlin), B. R. Noack (Institut Pprime, Poitiers), I. Wygnanski (University of Arizona)

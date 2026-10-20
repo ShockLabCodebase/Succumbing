@@ -1,3 +1,28 @@
+---
+key: "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets"
+title: "Methods for predicting overall sound power and maximum overall sound pressure levels from heated supersonic jets, including rockets"
+authors: ["Mathews, Logan T.", "Gee, Kent L."]
+year: 2025
+type: "article"
+venue: "JASA 158(1), 371–379"
+bib: {"journal": "The Journal of the Acoustical Society of America", "volume": "158", "number": "1", "pages": "371--379"}
+doi: "10.1121/10.0037192"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Mathews-Gee_2025_Methods-For-Predicting-Overall-Sound-Power-And-Maximum-Overall-Sound-Pressure-Levels.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "Full-scale field data (VSFB and CCSFS launches, T-7A F404 run-ups)"
+data: ["microphones-far", "full-scale"]
+methods: ["empirical-model", "propagation-model"]
+flow: ["rocket-plume", "launch-vehicle", "jet-aircraft", "supersonic", "heated"]
+phenomena: ["acoustic-efficiency", "directivity", "nonlinear-propagation"]
+params: {"vehicles": "Atlas V 401, Vulcan Centaur Cert-2", "engine": "F404 (T-7A), 38% to AB", "M_j (F404)": "0.94–1.46", "range": "0.3–20 km (launches), 19–229 m (F404)"}
+topics: ["rocket-noise-models", "rocket-noise-measurements"]
+related: ["mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "mathews-2021-falcon-9-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "kellison-2026-falcon-9-noise-two-campaigns", "gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "james-2012-directivity-curves-rocket-noise-model"]
+cites: ["gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise", "tam-1995-supersonic-jet-noise", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets"]
+summary: "Acoustic-efficiency model OAPWL = 115.9 + 10log(ηρU_e³D_e²) → OASPL_max with directivity and ground factor δ; Atlas V, Vulcan and F404 validation, RMSE < 2 dB"
+---
 # Methods for predicting overall sound power and maximum overall sound pressure levels from heated supersonic jets, including rockets
 
 - **Authors:** Logan T. Mathews, Kent L. Gee (Brigham Young University, Dept. of Physics and Astronomy)

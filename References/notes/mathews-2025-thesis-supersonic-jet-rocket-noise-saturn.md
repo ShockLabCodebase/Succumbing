@@ -1,3 +1,28 @@
+---
+key: "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn"
+title: "Acoustic Characterization and Modeling of Heated Supersonic Tactical Jet Aircraft and Launched Rockets"
+authors: ["Mathews, Logan Troy"]
+year: 2025
+type: "thesis-phd"
+venue: "PhD thesis, Brigham Young University"
+bib: {"school": "Brigham Young University", "note": "BYU ScholarsArchive ETD 11034, https://scholarsarchive.byu.edu/etd/11034"}
+doi: ""
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Mathews_2025_Acoustic-Characterization-And-Modeling-Of-Heated-Supersonic-Tactical-Jet.pdf"
+version: "thesis"
+unverified: []
+group: false
+facility: "Full-scale field data (T-7A F404 run-ups at Holloman AFB; Atlas V launch at Vandenberg SFB)"
+data: ["mic-array", "microphones-far", "full-scale"]
+methods: ["beamforming", "coherence", "PSD", "shock-cell-model", "empirical-model", "propagation-model", "acoustic-holography"]
+flow: ["jet-aircraft", "rocket-plume", "launch-vehicle", "supersonic", "heated", "overexpanded"]
+phenomena: ["BBSAN", "Mach-wave-radiation", "mixing-noise", "shock-cells", "source-location", "directivity", "acoustic-efficiency", "ignition-overpressure", "nonlinear-propagation"]
+params: {"M_j (F404 AB)": "1.46", "M_d (F404)": "1.55", "NPR (F404 AB)": "3.3", "TTR (F404 AB)": "7.0", "vehicles": "Atlas V 401, Firefly Alpha, Starship"}
+topics: ["rocket-noise-models", "jet-noise-mechanisms", "rocket-noise-measurements"]
+related: ["mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "mathews-2021-falcon-9-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "gee-2016-near-field-intensity-static-rocket-firings", "gee-2024-starship-super-heavy-far-field-noise", "kellison-2026-falcon-9-noise-two-campaigns", "tam-1982-shock-associated-noise-cd-nozzles", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets"]
+cites: ["gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "james-2012-directivity-curves-rocket-noise-model", "kandula-2008-near-field-acoustics-clustered-rocket-engines", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "tsutsumi-2015-epsilon-liftoff-acoustics", "wong-2021-wavepacket-modelling-bbsan"]
+summary: "Installed F404 at afterburner: holography + OLVR show quasi-independent lipline sources; BBSAN at shock cells II–VIII; Atlas V launch; SATURN SP-8072 update, ≈1 dB RMSE within 20 km"
+---
 # Acoustic Characterization and Modeling of Heated Supersonic Tactical Jet Aircraft and Launched Rockets
 
 - **Author:** Logan Troy Mathews. PhD, Department of Physics and Astronomy, Brigham Young University, 2025 (posted 2025-08-20; BYU ScholarsArchive ETD 11034, https://scholarsarchive.byu.edu/etd/11034). Chair: Kent L. Gee.

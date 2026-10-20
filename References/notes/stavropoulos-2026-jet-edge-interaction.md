@@ -1,3 +1,28 @@
+---
+key: "stavropoulos-2026-jet-edge-interaction"
+title: "Jet-edge interaction: linear and non-linear frequency-selection mechanisms"
+authors: ["Stavropoulos, M. N.", "Cavalieri, A. V. G.", "Lesshafft, L.", "Jordan, P."]
+year: 2026
+type: "preprint"
+venue: "arXiv:2603.24135"
+bib: {"note": "Under consideration for publication in J. Fluid Mech."}
+doi: ""
+arxiv: "2603.24135"
+pdf: "Stavropoulos-EtAl_2026_Jet-Edge-Interaction-Linear-And-Non-Linear-Frequency-Selection-Mechanisms.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: "Pprime Bruit & Vent"
+data: ["microphones-far"]
+methods: ["PSD", "bispectrum", "vortex-sheet", "resonance-model", "wavelets"]
+flow: ["jet-edge", "round-jet", "subsonic"]
+phenomena: ["edge-tones", "guided-jet-mode", "mode-switching", "triadic-interaction", "intermittency"]
+params: {"M_j": "0.40–1.00", "TR": "1", "L/D": "2", "R/D": "0.50–0.80", "D": "50 mm"}
+topics: ["impinging-jets-and-edge-tones"]
+related: ["jordan-2018-jet-flap-interaction-tones", "nogueira-2024-guided-jet-waves", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "mancinelli-2019-screech-prediction-upstream-modes", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "schmidt-2020-bispectral-mode-decomposition", "kim-1979-digital-bispectral-analysis-nonlinear-wave-interactions", "weightman-2019-sound-production-impinging-supersonic-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "jordan-2018-jet-flap-interaction-tones", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2024-guided-jet-waves", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
+summary: "Subsonic jet grazing a plate edge, M_j 0.4–1: PSD, bicoherence and guided-mode phase model split linear vs non-linear frequency selection; abrupt switch at M_j 0.87; k⁻_p vs k⁻_d loops"
+---
 # Jet-edge interaction: linear and non-linear frequency-selection mechanisms
 
 - **Authors:** M. N. Stavropoulos (Institut Pprime), A. V. G. Cavalieri (ITA, Brazil), L. Lesshafft (LadHyX, École Polytechnique), P. Jordan (Institut Pprime)

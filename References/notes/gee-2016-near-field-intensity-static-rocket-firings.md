@@ -1,3 +1,28 @@
+---
+key: "gee-2016-near-field-intensity-static-rocket-firings"
+title: "Development of a Near-field Intensity Measurement Capability for Static Rocket Firings"
+authors: ["Gee, K. L.", "Whiting, E. B.", "Neilsen, T. B.", "James, M. M.", "Salton, A. R."]
+year: 2016
+type: "article"
+venue: "Trans. JSASS Aerospace Tech. Japan 14(ists30), Po_2_9–Po_2_15"
+bib: {"journal": "Transactions of the Japan Society for Aeronautical and Space Sciences, Aerospace Technology Japan", "volume": "14", "number": "ists30", "pages": "Po_2_9--Po_2_15", "note": "ISTS 30 conference paper"}
+doi: ""
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Gee-EtAl_2016_Development-Of-A-Near-Field-Intensity-Measurement-Capability-For-Static-Rocket-Firings.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "ATK T-6 test area, Promontory, Utah (GEM-60 static firing)"
+data: ["full-scale", "intensity-probe", "microphones-near"]
+methods: ["vector-intensity", "PSD"]
+flow: ["rocket-plume", "heated"]
+phenomena: ["source-location", "directivity", "nonlinear-propagation"]
+params: {"motor": "GEM-60 SRM", "D_e": "1.09 m", "thrust": "879 kN mean", "burn": "≈91 s"}
+topics: ["rocket-noise-measurements"]
+related: ["gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2012-reusable-srm-noise-spectral-statistical", "james-2012-directivity-curves-rocket-noise-model", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: ["gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2012-reusable-srm-noise-spectral-statistical", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics"]
+summary: "GEM-60 SRM static firing, 12 PAGE intensity probes: ray-traced source 17–32D at 50 Hz moving to 10–20D above 600 Hz; radiation 65–70° → 80–85°, more sideline than models"
+---
 # Development of a Near-field Intensity Measurement Capability for Static Rocket Firings
 
 - **Authors:** K. L. Gee, E. B. Whiting, T. B. Neilsen (Brigham Young University); M. M. James, A. R. Salton (Blue Ridge Research and Consulting, BRRC)

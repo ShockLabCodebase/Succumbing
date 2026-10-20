@@ -1,3 +1,28 @@
+---
+key: "ivelja-2024-modal-analysis-screeching-elliptical-jets"
+title: "Modal analysis of screeching elliptical jets"
+authors: ["Ivelja, R.", "Edgington-Mitchell, D.", "Maigler, M.", "Nogueira, P. A. S."]
+year: 2024
+type: "article"
+venue: "JFM 1000, A68"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "1000", "pages": "A68"}
+doi: "10.1017/jfm.2024.1039"
+arxiv: ""
+pdf: "Ivelja-EtAl_2024_Modal-Analysis-Of-Screeching-Elliptical-Jets.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["PIV", "RANS"]
+methods: ["POD", "POD-pair", "wavenumber-filtering", "LSA-local", "LSA-Floquet"]
+flow: ["elliptical-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "flapping", "guided-jet-mode", "KH-wavepackets"]
+params: {"NPR": "2.6, 3.4", "M_j": "1.25, 1.45", "AR": "2"}
+topics: ["screech", "non-axisymmetric-and-twin-jets", "linear-models"]
+related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2024-guided-jet-waves", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets"]
+cites: ["cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2024-guided-jet-waves", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "tam-1982-shock-associated-noise-cd-nozzles"]
+summary: "AR 2 elliptical jet, NPR 2.6/3.4: PIV POD pair + k_x filter isolate se₁ flapping KH and GJM; Floquet LSA matches both; GJM neutral at screech St only in a short x band"
+---
 # Modal analysis of screeching elliptical jets
 
 - **Authors:** R. Ivelja, D. Edgington-Mitchell, M. Maigler, P.A.S. Nogueira (Monash LTRAC, Clayton; Universität der Bundeswehr München, Neubiberg)

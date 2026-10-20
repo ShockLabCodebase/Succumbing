@@ -1,3 +1,28 @@
+---
+key: "stavropoulos-2024-upstream-waves-merging-twin-jets"
+title: "On the behaviour of the upstream-travelling waves in merging twin-jet systems"
+authors: ["Stavropoulos, M. N.", "Martini, E.", "Edgington-Mitchell, D. M.", "Weightman, J.", "Jordan, P.", "Nogueira, P. A. S."]
+year: 2024
+type: "article"
+venue: "JFM 983, A17"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "983", "pages": "A17"}
+doi: "10.1017/jfm.2024.129"
+arxiv: ""
+pdf: "Stavropoulos-EtAl_2024_On-The-Behaviour-Of-The-Upstream-Travelling-Waves-In-Merging-Twin-Jet-Systems.pdf"
+version: "published"
+unverified: []
+group: true
+facility: ""
+data: ["model-only"]
+methods: ["LSA-local", "LSA-Floquet", "vortex-sheet"]
+flow: ["twin-jet", "round-jet", "elliptical-jet", "supersonic", "ideally-expanded", "planar-jet"]
+phenomena: ["guided-jet-mode", "coupling", "screech", "jet-merging"]
+params: {"M_j": "1.16", "s/D": "1–5"}
+topics: ["linear-models", "non-axisymmetric-and-twin-jets", "screech"]
+related: ["stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2020-waves-in-screeching-jets", "mancinelli-2019-screech-prediction-upstream-modes", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets", "rodriguez-2023-preferred-flapping-round-twin-jets"]
+cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "jordan-2018-jet-flap-interaction-tones", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "rodriguez-2023-preferred-flapping-round-twin-jets", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "tam-1982-shock-associated-noise-cd-nozzles", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
+summary: "Planar vortex-sheet and round Floquet LSA (M_j 1.16): merging twin jets turn k_p⁻ (0,2) into a higher-order mode of an equivalent jet (≈ AR 2 ellipse); SA band shifts with spacing, SS barely"
+---
 # On the behaviour of the upstream-travelling waves in merging twin-jet systems
 
 - **Authors:** M. N. Stavropoulos, E. Martini, D. M. Edgington-Mitchell, J. Weightman, P. Jordan, P. A. S. Nogueira (LTRAC, Monash; Institut Pprime, Poitiers)

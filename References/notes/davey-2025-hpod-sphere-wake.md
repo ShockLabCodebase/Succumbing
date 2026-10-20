@@ -1,3 +1,28 @@
+---
+key: "davey-2025-hpod-sphere-wake"
+title: "Studying propagating turbulent structures in the near wake of a sphere using Hilbert proper orthogonal decomposition"
+authors: ["Davey, S.", "Atkinson, C.", "Soria, J."]
+year: 2025
+type: "preprint"
+venue: "arXiv:2507.19167"
+bib: {}
+doi: ""
+arxiv: "2507.19167"
+pdf: "Davey-EtAl_2025_Studying-Propagating-Turbulent-Structures-In-The-Near-Wake-Of-A-Sphere-Using.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: "LTRAC water tunnel, Monash University"
+data: ["PIV"]
+methods: ["POD", "POD-pair", "HPOD", "Hilbert-transform", "phase-averaging"]
+flow: ["wake"]
+phenomena: ["coherent-structures", "flapping"]
+params: {"Re": "7780 (Re_D)", "D": "40 mm", "U∞": "200 mm/s"}
+topics: ["time-frequency-methods", "modal-decomposition"]
+related: ["raiola-2025-hilbert-pod", "horel-1984-complex-principal-component-analysis", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "weightman-2019-sound-production-impinging-supersonic-jets", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+cites: ["horel-1984-complex-principal-component-analysis", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+summary: "Streamwise (space-only) Hilbert POD of 1 Hz PIV of a sphere wake (Re_D 7780) identifies POD pairs; cheaper test: Hilbert-transform each POD mode, mutual ∓0.5π matches"
+---
 # Studying propagating turbulent structures in the near wake of a sphere using Hilbert proper orthogonal decomposition
 
 - **Authors:** S. Davey, C. Atkinson, J. Soria (Laboratory for Turbulence Research in Aerospace and Combustion (LTRAC), Monash University)

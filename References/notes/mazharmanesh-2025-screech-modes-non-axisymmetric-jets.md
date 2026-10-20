@@ -1,3 +1,28 @@
+---
+key: "mazharmanesh-2025-screech-modes-non-axisymmetric-jets"
+title: "Manifestation of screech modes in non-axisymmetric jets"
+authors: ["Mazharmanesh, S.", "Nogueira, P. A. S.", "Weightman, J.", "Edgington-Mitchell, D."]
+year: 2025
+type: "article"
+venue: "JFM 1004, A7"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "1004", "pages": "A7"}
+doi: "10.1017/jfm.2024.1166"
+arxiv: ""
+pdf: "Mazharmanesh-EtAl_2025_Manifestation-Of-Screech-Modes-In-Non-Axisymmetric-Jets.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["schlieren-TR"]
+methods: ["SPOD"]
+flow: ["rectangular-jet", "elliptical-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "staging", "flapping", "helical", "axis-switching", "multimodal"]
+params: {"NPR": "2.0–5.0", "AR": "2", "D_e": "13.6 mm (rectangular), 10 mm (elliptical)", "St_s": "0.23–1.03"}
+topics: ["non-axisymmetric-and-twin-jets", "screech", "diagnostics-and-facilities"]
+related: ["mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "edgington-mitchell-2022-unifying-theory-jet-screech", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "suzuki-2026-coherent-structures-axis-switching-elliptical-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "esfahani-2021-coupling-modes-twin-rectangular-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
+summary: "AR 2 rectangular and elliptical jets, NPR 2–5: 150 kHz schlieren from 19 rotated views; SPOD λ_s(θ) and sub-domain SPOD reveal bi-axial flapping (at the axis switch) and quasi-helical modes"
+---
 # Manifestation of screech modes in non-axisymmetric jets
 
 - **Authors:** S. Mazharmanesh, P. A. S. Nogueira, J. Weightman, D. Edgington-Mitchell (Monash University)

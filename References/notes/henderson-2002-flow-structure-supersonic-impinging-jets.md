@@ -1,3 +1,28 @@
+---
+key: "henderson-2002-flow-structure-supersonic-impinging-jets"
+title: "An experimental investigation of the flow structure of supersonic impinging jets"
+authors: ["Henderson, Brenda", "Bridges, James", "Wernet, Mark"]
+year: 2002
+type: "conference"
+venue: "AIAA conference preprint 2002 (NTRS 20020088423)"
+bib: {"note": "AIAA 2002 conference preprint, paper number not printed; NTRS 20020088423; precursor of JFM 542 (2005)"}
+doi: ""
+arxiv: ""
+pdf: "Henderson-EtAl_2002_An-Experimental-Investigation-Of-The-Flow-Structure-Of-Supersonic-Impinging-Jets.pdf"
+version: "conference"
+unverified: []
+group: false
+facility: "NASA Glenn SHJAR (AAPL)"
+data: ["PIV", "shadowgraph", "microphones-far"]
+methods: ["phase-averaging", "PSD", "resonance-model"]
+flow: ["round-jet", "impinging-jet", "supersonic", "underexpanded"]
+phenomena: ["impingement-tones", "Mach-disk"]
+params: {"NPR": "4.03", "h/D": "1–4 (detail at 2.02 and 3.00)", "D": "25.4 mm", "lip": "12.7 mm"}
+topics: ["impinging-jets-and-edge-tones"]
+related: ["weightman-2019-sound-production-impinging-supersonic-jets", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "jordan-2018-jet-flap-interaction-tones", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: []
+summary: "NPR 4.03 jet on a large plate (SHJAR): phase-averaged PIV and shadowgraph of L1 tones; oscillating Mach disk moves recirculation zones; wall-jet source at 2.6R; Powell N+p ≈ 4.4"
+---
 # An experimental investigation of the flow structure of supersonic impinging jets
 
 - **Authors:** Brenda Henderson (Kettering University, Mechanical Engineering), James Bridges and Mark Wernet. The title block lists only Kettering; the footnotes behind the asterisks are not in this copy. Bridges and Wernet were at NASA Glenn Research Center, where the work was done (p. 2, 6).

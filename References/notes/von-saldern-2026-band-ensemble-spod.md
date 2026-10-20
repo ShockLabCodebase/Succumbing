@@ -1,3 +1,28 @@
+---
+key: "von-saldern-2026-band-ensemble-spod"
+title: "Band-Ensemble Spectral Proper Orthogonal Decomposition with Frequency Attribution"
+authors: ["von Saldern, Jakob G. R.", "Schmidt, O. T.", "Godbersen, P.", "Reumschüssel, J. M.", "Colonius, T."]
+year: 2026
+type: "preprint"
+venue: "arXiv:2602.06588"
+bib: {"note": "arXiv:2602.06588v2; MATLAB code at https://github.com/jakobvonsaldern/bspod"}
+doi: ""
+arxiv: "2602.06588"
+pdf: "VonSaldern-EtAl_2026_Band-Ensemble-Spectral-Proper-Orthogonal-Decomposition-With-Frequency.pdf"
+version: "preprint"
+unverified: []
+group: false
+facility: ""
+data: ["PIV-TR", "model-only"]
+methods: ["SPOD", "PSD"]
+flow: ["cavity", "subsonic", "generic"]
+phenomena: ["cavity-tones"]
+params: {"M": "0.6 (cavity)"}
+topics: ["modal-decomposition"]
+related: ["yeung-2024-adaptive-spod-broadband-tonal", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2020-guide-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "schmidt-2019-streaming-spod", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "raiola-2025-hilbert-pod"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2020-guide-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2024-adaptive-spod-broadband-tonal"]
+summary: "bSPOD: SPOD over N_f neighbouring Fourier modes of one full-record DFT instead of Welch blocks; less leakage, frequency attribution keeps tones sharp; M 0.6 cavity TR-PIV; MATLAB code"
+---
 # Band-Ensemble Spectral Proper Orthogonal Decomposition with Frequency Attribution
 
 - **Authors:** J. G. R. von Saldern (Caltech; TU Berlin), O. T. Schmidt (UC San Diego), P. Godbersen (DLR Göttingen), J. M. Reumschüssel (Cambridge; TU Berlin), T. Colonius (Caltech)

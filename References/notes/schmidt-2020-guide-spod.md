@@ -1,3 +1,28 @@
+---
+key: "schmidt-2020-guide-spod"
+title: "Guide to spectral proper orthogonal decomposition"
+authors: ["Schmidt, O. T.", "Colonius, T."]
+year: 2020
+type: "article"
+venue: "AIAA J. 58(3), 1023–1033"
+bib: {"journal": "AIAA Journal", "volume": "58", "number": "3", "pages": "1023--1033"}
+doi: "10.2514/1.J058809"
+arxiv: ""
+pdf: "Schmidt-Colonius_2020_Guide-To-Spectral-Proper-Orthogonal-Decomposition.pdf"
+version: "published"
+unverified: ["volume/issue/pages from memory, not in this Article in Advance PDF"]
+group: false
+facility: ""
+data: ["LES", "PIV-TR"]
+methods: ["SPOD", "PSD"]
+flow: ["round-jet", "subsonic", "wake"]
+phenomena: ["KH-wavepackets"]
+params: {"M_j": "0.4", "Re": "4.5×10⁵ (jet), 0.8×10⁵ (VAWT)"}
+topics: ["modal-decomposition"]
+related: ["towne-2018-spod-relationship-dmd-resolvent", "schmidt-2019-streaming-spod", "schmidt-2018-spectral-analysis-jet-turbulence", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "yeung-2024-adaptive-spod-broadband-tonal", "von-saldern-2026-band-ensemble-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "towne-2022-database-reduced-complexity-modeling"]
+cites: ["schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "Practical SPOD–Welch guide: N_FFT bias vs variance, 50% overlap, Hamming + a_w, chi-squared CIs, norms, reading λ₁–λ₂ gaps; M 0.4 jet LES and VAWT PIV examples"
+---
 # Guide to spectral proper orthogonal decomposition
 
 - **Authors:** O. T. Schmidt (University of California San Diego), T. Colonius (California Institute of Technology)

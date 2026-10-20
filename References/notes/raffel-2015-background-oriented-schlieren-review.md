@@ -1,3 +1,28 @@
+---
+key: "raffel-2015-background-oriented-schlieren-review"
+title: "Background-oriented schlieren (BOS) techniques"
+authors: ["Raffel, M."]
+year: 2015
+type: "review"
+venue: "Exp. Fluids 56, 60"
+bib: {"journal": "Experiments in Fluids", "volume": "56", "pages": "60", "note": "Open access"}
+doi: "10.1007/s00348-015-1927-5"
+arxiv: ""
+pdf: "Raffel_2015_Background-Oriented-Schlieren-BOS-Techniques.pdf"
+version: "published"
+unverified: []
+group: false
+facility: ""
+data: ["none"]
+methods: ["Abel-inversion", "tomography"]
+flow: ["generic"]
+phenomena: []
+params: {}
+topics: ["diagnostics-and-facilities"]
+related: ["tan-2015-bos-density-axisymmetric-jets", "molnar-2023-physics-informed-bos-supersonic", "edgington-mitchell-2020-waves-in-screeching-jets"]
+cites: []
+summary: "BOS review: displacement/blur optics (f/11, 3–5 px dots), 2–3% full-scale error, 50:1 range; Abel, Poisson and tomographic density, stereo, RBOS, kHz–MHz BOS, velocimetry"
+---
 # Background-oriented schlieren (BOS) techniques
 
 - **Authors:** M. Raffel (Institute of Aerodynamics and Flow Technology, DLR Göttingen)

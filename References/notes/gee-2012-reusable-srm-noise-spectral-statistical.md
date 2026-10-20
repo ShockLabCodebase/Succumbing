@@ -1,3 +1,28 @@
+---
+key: "gee-2012-reusable-srm-noise-spectral-statistical"
+title: "Spectral and statistical analysis of noise from reusable solid rocket motors"
+authors: ["Gee, K. L.", "Kenny, R. J.", "Neilsen, T. B.", "Jerome, T. W.", "Hobbs, C. M.", "James, M. M."]
+year: 2012
+type: "conference"
+venue: "Proc. Mtgs. Acoust. 18, 040002"
+bib: {"booktitle": "Proceedings of Meetings on Acoustics (164th ASA Meeting, Kansas City)", "volume": "18", "pages": "040002", "publisher": "Acoustical Society of America"}
+doi: "10.1121/1.4789401"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Gee-EtAl_2012_Spectral-And-Statistical-Analysis-Of-Noise-From-Reusable-Solid-Rocket-Motors.pdf"
+version: "conference"
+unverified: []
+group: false
+facility: "ATK Space Systems, Promontory, Utah (RSRM static firings)"
+data: ["full-scale", "microphones-near", "microphones-far"]
+methods: ["statistics", "PSD"]
+flow: ["rocket-plume", "heated", "supersonic", "impinging-jet"]
+phenomena: ["crackle", "nonlinear-propagation", "directivity", "source-location", "installation-effects"]
+params: {"motor": "Shuttle RSRM (TEM-13, FVM-2, FSM-15)", "D_e": "3.87 m", "burn": "≈120 s", "arrays": "18D sideline line, 80D polar arc"}
+topics: ["rocket-noise-measurements"]
+related: ["kenny-2009-space-shuttle-srm-plume-acoustics", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2016-near-field-intensity-static-rocket-firings", "reichman-2018-qm2-srm-far-field-acoustics", "james-2012-directivity-curves-rocket-noise-model", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft"]
+cites: ["gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "kenny-2009-space-shuttle-srm-plume-acoustics"]
+summary: "Shuttle RSRM static firings: OASPL and skewness maps, peak ~56°, source 17–18D; Sk{∂p/∂t} >30 marks acoustic shocks; hillside impingement beyond 40D removes HF and skewness"
+---
 # Spectral and statistical analysis of noise from reusable solid rocket motors
 
 - **Authors:** K. L. Gee, R. J. Kenny, T. B. Neilsen, T. W. Jerome, C. M. Hobbs, M. M. James (BYU Physics & Astronomy; NASA MSFC; Wyle; Blue Ridge Research and Consulting). Corresponding author K. L. Gee, BYU (p. 1).
@@ -119,6 +144,6 @@ This project centres on resonance and feedback in supersonic jets studied with t
   - [kenny-2009-space-shuttle-srm-plume-acoustics.md](kenny-2009-space-shuttle-srm-plume-acoustics.md): same three firings; it reported peak far-field OASPL near 50° on the 304 m arc and positive skewness. This paper adds the spatial maps, derivative skewness and the impingement explanation.
   - [gee-2010-near-field-vector-intensity-solid-rocket-motor.md](gee-2010-near-field-vector-intensity-solid-rocket-motor.md) and [gee-2016-near-field-intensity-static-rocket-firings.md](gee-2016-near-field-intensity-static-rocket-firings.md): intensity-based source location on smaller motors at the same site.
   - [reichman-2018-qm2-srm-far-field-acoustics.md](reichman-2018-qm2-srm-far-field-acoustics.md): far-field Sk{∂p/∂t} of 20–30 from the five-segment SLS booster, which it says is similar to values measured near the rocket here.
-  - james-2012-directivity-curves-rocket-noise-model.md (planned): uses these RSRM data to revise SP-8072 directivity curves. The present paper warns that the 80D arc is likely not in the geometric far field at low frequency.
-  - [mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets.md](mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets.md) and lubert-2022-supersonic-jet-noise-launch-vehicles-review.md (planned) for the broader heated-jet context.
+  - [james-2012-directivity-curves-rocket-noise-model.md](james-2012-directivity-curves-rocket-noise-model.md): uses these RSRM data to revise SP-8072 directivity curves. The present paper warns that the 80D arc is likely not in the geometric far field at low frequency.
+  - [mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets.md](mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets.md) and [lubert-2022-supersonic-jet-noise-launch-vehicles-review.md](lubert-2022-supersonic-jet-noise-launch-vehicles-review.md) for the broader heated-jet context.
 - **Nonlinear propagation statistics:** the growth of Sk{∂p/∂t} with distance links to the full-scale launch notes ([gee-2023-sls-artemis-i-far-field-noise.md](gee-2023-sls-artemis-i-far-field-noise.md), [gee-2024-starship-super-heavy-far-field-noise.md](gee-2024-starship-super-heavy-far-field-noise.md)). Refs 14–17 (nonlinear sinusoid statistics, military jet shock formation, lab supersonic jet skewness, SRM nonlinear propagation prediction) are candidates for `/add-paper`.

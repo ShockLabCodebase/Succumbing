@@ -1,3 +1,28 @@
+---
+key: "nogueira-2021-twin-jet-coupling-spatial-lsa"
+title: "Investigation of supersonic twin-jet coupling using spatial linear stability analysis"
+authors: ["Nogueira, P. A. S.", "Edgington-Mitchell, D. M."]
+year: 2021
+type: "article"
+venue: "JFM 918, A38"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "918", "pages": "A38"}
+doi: "10.1017/jfm.2021.366"
+arxiv: ""
+pdf: "Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf"
+version: "accepted-manuscript"
+unverified: ["volume, article number and online date from the Cambridge Core listing, not printed in the PDF", "DOI from References/group_papers.md (ORCID/OpenAlex)"]
+group: true
+facility: "Shock Lab group facility"
+data: ["PIV", "microphones-far"]
+methods: ["POD", "POD-pair", "symmetry-decomposition", "wavenumber-filtering", "LSA-local", "LSA-Floquet", "PSD"]
+flow: ["twin-jet", "round-jet", "supersonic", "underexpanded"]
+phenomena: ["screech", "coupling", "guided-jet-mode", "KH-wavepackets", "flapping"]
+params: {"NPR": "5.0", "M_j": "≈1.71 (isentropic estimate)", "s/D": "3", "D": "10 mm", "St": "0.19"}
+topics: ["non-axisymmetric-and-twin-jets", "screech", "linear-models"]
+related: ["stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "stavropoulos-2024-upstream-waves-merging-twin-jets", "rodriguez-2023-preferred-flapping-round-twin-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "nogueira-2021-absolute-instability-shock-containing-jets"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "raman-1998-supersonic-jet-screech-review", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+summary: "Twin round jets, NPR 5, s/D 3: symmetry-imposed POD + k_x split give KH and k_kh − k_s upstream waves; azimuthal-Floquet LSA: guided-mode bands, not KH, select 1SS coupling"
+---
 # Investigation of supersonic twin-jet coupling using spatial linear stability analysis
 
 - **Authors:** P. A. S. Nogueira, D. M. Edgington-Mitchell (Monash, LTRAC)
@@ -167,7 +192,7 @@ This project analyses experimental resonance and feedback data (schlieren, acous
 - **Amplitude modulation without time resolution:** the a1–a2–a3 phase portrait and r12(a3) give an instantaneous screech amplitude per snapshot and show that it correlates with an STM/streak mode (p. 11–13). This is the PIV analogue of the Hilbert amplitude in the SPOD → reconstruction → HPOD pipeline.
   - With time-resolved schlieren, one could rebuild the screech band (and the low-frequency STM band) from SPOD and then run HPOD. That would test whether STM activity drives changes in screech amplitude over time.
   - It would also link to the "intermittent modal coupling" of Bell et al. (2020). This paper only notes that the NPR 5 tone is steady (p. 20–21).
-  - The STM interpretation comes from Weightman et al. (2018) (cited; not yet in the library).
+  - The STM interpretation comes from Weightman et al. (2018), reprinted in the [Weightman 2019 thesis](weightman-2019-sound-production-impinging-supersonic-jets.md).
 - **Modelling recipe (spatial LSA on PIV mean flow):**
   - Take a one-sided single-jet profile from PIV, rotate it on the assumption of axisymmetry, and place copies at each nozzle. Get ρ̄ and P from Crocco–Busemann/isentropic relations. Solve an inviscid, locally parallel pressure equation with a Floquet ansatz in a Fourier–Chebyshev discretisation (p. 4–6).
   - Limits: no mean-flow spreading, no radial mean velocity, no viscosity or eddy viscosity, valid only before the jets merge and away from the Mach disk. The KH shapes come out too narrow; the upstream-wave shapes come out nearly exact (p. 19–20).

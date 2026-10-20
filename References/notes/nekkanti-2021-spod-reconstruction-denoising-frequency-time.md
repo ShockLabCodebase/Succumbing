@@ -1,3 +1,28 @@
+---
+key: "nekkanti-2021-spod-reconstruction-denoising-frequency-time"
+title: "Frequency–time analysis, low-rank reconstruction and denoising of turbulent flows using SPOD"
+authors: ["Nekkanti, A.", "Schmidt, O. T."]
+year: 2021
+type: "article"
+venue: "JFM 926, A26"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "926", "pages": "A26"}
+doi: "10.1017/jfm.2021.681"
+arxiv: "2011.03644"
+pdf: "Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-Rank-Reconstruction-And-Denoising-Of-Turbulent-Flows.pdf"
+version: "preprint"
+unverified: ["JFM volume, article number and DOI from memory, not in this arXiv PDF"]
+group: false
+facility: "Charles LES (Brès & Lele 2019 database)"
+data: ["LES"]
+methods: ["SPOD", "PSD", "spectrogram"]
+flow: ["round-jet", "subsonic"]
+phenomena: ["KH-wavepackets", "intermittency"]
+params: {"M_j": "0.4", "Re": "0.45×10⁶", "T_j/T∞": "1", "m": "1"}
+topics: ["time-frequency-methods", "modal-decomposition"]
+related: ["raiola-2025-hilbert-pod", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2020-guide-spod", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech"]
+cites: ["gudmundsson-2011-instability-wave-models-near-field-jets", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "pickering-2020-lift-up-kh-orr-jets", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+summary: "SPOD-based reconstruction on M 0.4 jet LES: frequency-domain inversion (window-weighted stitching) vs time-domain oblique projection; eigenvalue-threshold denoising; convolution SPOD spectrograms"
+---
 # Frequency–time analysis, low-rank reconstruction and denoising of turbulent flows using SPOD
 
 - **Authors:** A. Nekkanti, O. T. Schmidt (Dept. of Mechanical and Aerospace Engineering, UC San Diego)

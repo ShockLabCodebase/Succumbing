@@ -1,3 +1,28 @@
+---
+key: "jeun-2024-screech-coupling-closure-rectangular-twin-jets"
+title: "A closure mechanism for screech coupling in rectangular twin jets"
+authors: ["Jeun, Jinah", "Wu, Gao Jun", "Lele, Sanjiva K."]
+year: 2024
+type: "article"
+venue: "JFM 987, A5"
+bib: {"journal": "Journal of Fluid Mechanics", "volume": "987", "pages": "A5"}
+doi: "10.1017/jfm.2024.376"
+arxiv: ""
+pdf: "Jeun-EtAl_2024_A-Closure-Mechanism-For-Screech-Coupling-In-Rectangular-Twin-Jets.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "charLES LES (Stanford CTR)"
+data: ["LES"]
+methods: ["SPOD", "Hilbert-transform", "symmetry-decomposition", "wavenumber-filtering", "coherence", "resonance-model"]
+flow: ["twin-jet", "rectangular-jet", "supersonic", "overexpanded"]
+phenomena: ["screech", "coupling", "intermittency", "guided-jet-mode", "flapping", "triadic-interaction"]
+params: {"NPR": "3", "M_d": "1.5", "AR": "2", "s/h": "3.5", "St": "0.373"}
+topics: ["non-axisymmetric-and-twin-jets", "screech"]
+related: ["yeung-2022-3d-spod-twin-rectangular-jet", "esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "bres-2021-les-twin-rectangular-jets-plasma", "nogueira-2021-twin-jet-coupling-spatial-lsa", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
+cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "esfahani-2021-control-twin-rectangular-jet-coupling", "esfahani-2021-coupling-modes-twin-rectangular-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "nogueira-2024-guided-jet-waves", "stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "wong-2023-steady-unsteady-coupling-twin-round-jets", "yeung-2022-3d-spod-twin-rectangular-jet"]
+summary: "charLES LES of AR-2 twin rectangular jets (NPR 3): intermittent out-of-phase coupling (Hilbert Δφ, D2 AA vs AS); phase-locked SPOD k_x split shows guided-jet-mode closure"
+---
 # A closure mechanism for screech coupling in rectangular twin jets
 
 - **Authors:** Jinah Jeun (Center for Turbulence Research, Stanford; correspondence address KTH), Gao Jun Wu, Sanjiva K. Lele (Stanford)
@@ -140,7 +165,7 @@ This project studies resonance and feedback in jets with experimental data (schl
 - **Intermittency and mode switching (for the SPOD → reconstruction → HPOD pipeline):**
   - The Hilbert phase difference between two near-lip signals, plus D2-decomposed instantaneous amplitudes of AA vs AS, is a simple way to label coupled vs switching periods (Figs. 6, 8). Note the Hilbert transform is applied to raw (apparently unfiltered) pressure; band-pass filtering around St_sc first, or SPOD-based reconstruction of the screech band, would make the phase cleaner.
   - The "segment by phase plateau, then ensemble-average SPOD modes" trick is a way to get clean phase-locked modes from intermittent data. Its cost is coarse frequency resolution (ΔSt = 0.007) and only 2–4 blocks per window. HPOD on SPOD-reconstructed data would track the AA/AS competition continuously rather than discarding the switching periods.
-  - It is a twin rectangular analogue of round-twin-jet intermittent coupling (Bell et al. 2021; Wong et al. 2023, which has Weightman as co-author), both cited but not in the library.
+  - It is a twin rectangular analogue of round-twin-jet intermittent coupling (Bell et al. 2021, cited but not in the library; [Wong et al. 2023](wong-2023-steady-unsteady-coupling-twin-round-jets.md), which has Weightman as co-author).
 - **Modelling side:** no LSA or resolvent analysis is run; the guided-mode identification rests on phase speed and wavenumber matching. Its guided-mode phase speed (−0.71U_j) is only checked against an AIAA LSA paper (Edgington-Mitchell & Nogueira 2023). The off-resonance modes fail guided-mode checks and the authors call for LSA (cf. the band-of-existence argument in [nogueira-2021-twin-jet-coupling-spatial-lsa.md](nogueira-2021-twin-jet-coupling-spatial-lsa.md) and the narrow-band existence in Towne et al. 2017). The "two isolated jets plus imposed phase" model contrasts with the coupled Floquet LSA there.
 - **Agreement with other notes:**
   - Guided-mode closure agrees with round-jet evidence ([edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md](edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md), [mancinelli-2019-screech-prediction-upstream-modes.md](mancinelli-2019-screech-prediction-upstream-modes.md)) and the absolute-instability view ([nogueira-2021-absolute-instability-shock-containing-jets.md](nogueira-2021-absolute-instability-shock-containing-jets.md)).

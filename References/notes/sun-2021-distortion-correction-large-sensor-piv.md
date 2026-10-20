@@ -1,3 +1,28 @@
+---
+key: "sun-2021-distortion-correction-large-sensor-piv"
+title: "Distortion correction of two-component two-dimensional PIV using a large imaging sensor with application to measurements of a turbulent boundary layer flow at Re_τ = 2386"
+authors: ["Sun, B.", "Shehzad, M.", "Jovic, D.", "Cuvier, C.", "Willert, C.", "Ostovan, Y.", "Foucaut, J.-M.", "Atkinson, C.", "Soria, J."]
+year: 2021
+type: "article"
+venue: "Exp. Fluids 62, 183"
+bib: {"journal": "Experiments in Fluids", "volume": "62", "pages": "183"}
+doi: "10.1007/s00348-021-03273-w"
+arxiv: ""
+pdf: "Sun-EtAl_2021_Distortion-Correction-Of-Two-Component-Two-Dimensional-PIV-Using-A-Large-Imaging.pdf"
+version: "published"
+unverified: []
+group: false
+facility: "LMFL High Reynolds Number Boundary Layer Wind Tunnel, Lille"
+data: ["PIV"]
+methods: ["calibration", "statistics"]
+flow: ["wall-bounded", "wind-tunnel"]
+phenomena: []
+params: {"Re_τ": "2386", "Re_θ": "8120", "U∞": "9.64 m/s"}
+topics: ["diagnostics-and-facilities"]
+related: ["shehzad-2021-laser-sheet-alignment-piv", "tan-2015-bos-density-axisymmetric-jets", "ragni-2011-particle-tracer-response-shocks-piv"]
+cites: []
+summary: "Lens-distortion mapping for a 47 MPx PIV sensor (bicubic P3 beats rational R2); PIV on raw images then remapping vector positions matches full dewarping; ZPG TBL at Re_τ 2386"
+---
 # Distortion correction of two-component two-dimensional PIV using a large imaging sensor with application to measurements of a turbulent boundary layer flow at Re_τ = 2386
 
 - **Authors:** B. Sun, M. Shehzad, D. Jovic, C. Cuvier, C. Willert, Y. Ostovan, J.-M. Foucaut, C. Atkinson, J. Soria

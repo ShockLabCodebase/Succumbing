@@ -1,3 +1,28 @@
+---
+key: "reichman-2018-qm2-srm-far-field-acoustics"
+title: "Acoustic measurements in the far field during QM-2 solid rocket motor static firing"
+authors: ["Reichman, B. O.", "Harker, B. M.", "Neilsen, T. B.", "Gee, K. L.", "Ohm, W.-S."]
+year: 2018
+type: "conference"
+venue: "Proc. Mtgs. Acoust. 29, 045008"
+bib: {"booktitle": "Proceedings of Meetings on Acoustics (172nd ASA Meeting, Honolulu, 2016)", "volume": "29", "pages": "045008", "publisher": "Acoustical Society of America", "note": "paper 2aPA10"}
+doi: "10.1121/2.0000727"
+arxiv: ""
+pdf: "Rocket_Noise_Papers/Reichman-EtAl_2018_Acoustic-Measurements-In-The-Far-Field-During-QM-2-Solid-Rocket-Motor-Static-Firing.pdf"
+version: "conference"
+unverified: []
+group: false
+facility: "Orbital ATK static-test site near Brigham City, Utah"
+data: ["full-scale", "microphones-far", "intensity-probe"]
+methods: ["PSD", "statistics", "vector-intensity"]
+flow: ["rocket-plume", "supersonic", "heated"]
+phenomena: ["nonlinear-propagation", "crackle", "directivity"]
+params: {"vehicle": "SLS five-segment booster QM-2", "angle": "80–120°", "r": "2.40–2.64 km"}
+topics: ["rocket-noise-measurements"]
+related: ["gee-2012-reusable-srm-noise-spectral-statistical", "kenny-2009-space-shuttle-srm-plume-acoustics", "james-2012-directivity-curves-rocket-noise-model", "gee-2016-near-field-intensity-static-rocket-firings", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "gee-2023-sls-artemis-i-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+cites: ["gee-2012-reusable-srm-noise-spectral-statistical", "gee-2016-near-field-intensity-static-rocket-firings", "james-2012-directivity-curves-rocket-noise-model", "kenny-2009-space-shuttle-srm-plume-acoustics"]
+summary: "SLS booster QM-2 static firing, 80–120° at ~2.5 km: OASPL 118→106 dB, 10–20 Hz peaks, derivative skewness >20 at 80–100° (crackle); PAGE intensity 5 Hz–5 kHz"
+---
 # Acoustic measurements in the far field during QM-2 solid rocket motor static firing
 
 - **Authors:** B. O. Reichman, B. M. Harker, T. B. Neilsen, K. L. Gee (Brigham Young University); W.-S. Ohm (Yonsei University)

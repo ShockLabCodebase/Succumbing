@@ -1,3 +1,28 @@
+---
+key: "torrence-1998-practical-guide-wavelet-analysis"
+title: "A Practical Guide to Wavelet Analysis"
+authors: ["Torrence, C.", "Compo, G. P."]
+year: 1998
+type: "article"
+venue: "Bull. Am. Meteorol. Soc. 79(1), 61–78"
+bib: {"journal": "Bulletin of the American Meteorological Society", "volume": "79", "number": "1", "pages": "61--78"}
+doi: "10.1175/1520-0477(1998)079<0061:APGTWA>2.0.CO;2"
+arxiv: ""
+pdf: "Torrence-Compo_1998_A-Practical-Guide-To-Wavelet-Analysis.pdf"
+version: "published"
+unverified: ["DOI not printed in the PDF; taken from the standard citation"]
+group: false
+facility: ""
+data: ["field-data"]
+methods: ["wavelets", "PSD", "coherence"]
+flow: ["generic"]
+phenomena: []
+params: {}
+topics: ["time-frequency-methods"]
+related: ["mancinelli-2019-screech-prediction-upstream-modes", "jordan-2018-jet-flap-interaction-tones", "stavropoulos-2026-jet-edge-interaction", "esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "raiola-2025-hilbert-pod", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "jeun-2024-screech-coupling-closure-rectangular-twin-jets"]
+cites: []
+summary: "Standard CWT how-to: Morlet/Paul/DOG via FFT, scale→period (Morlet λ≈1.03s), cone of influence, χ² significance vs AR(1) red noise, averaged-power DOF; unsmoothed coherence ≡1"
+---
 # A Practical Guide to Wavelet Analysis
 
 - **Authors:** C. Torrence, G. P. Compo (Program in Atmospheric and Oceanic Sciences, University of Colorado, Boulder)

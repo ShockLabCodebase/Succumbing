@@ -1,3 +1,28 @@
+---
+key: "rezay-haghdoost-2022-shock-dividers"
+title: "Numerical and experimental evaluation of shock dividers"
+authors: ["Rezay Haghdoost, M.", "Thethy, B. S.", "Nadolski, M.", "Seo, B.", "Paschereit, C. O.", "Klein, R.", "Edgington-Mitchell, D.", "Oberleithner, K."]
+year: 2022
+type: "article"
+venue: "Shock Waves 32, 195–211"
+bib: {"journal": "Shock Waves", "volume": "32", "pages": "195--211"}
+doi: "10.1007/s00193-021-01062-2"
+arxiv: ""
+pdf: "RezayHaghdoost-EtAl_2022_Numerical-And-Experimental-Evaluation-Of-Shock-Dividers.pdf"
+version: "published"
+unverified: []
+group: true
+facility: "Shock Lab group facility"
+data: ["schlieren-TR", "Euler", "pressure-probe"]
+methods: ["GSD"]
+flow: ["shock-tube"]
+phenomena: ["shock-diffraction"]
+params: {"M_s": "1.61", "D": "8.5 mm", "width ratio": "1, 2, 4"}
+topics: ["simulation-methods"]
+related: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "thethy-2022-shock-diffraction-non-quiescent-medium", "greenshields-2010-central-schemes-polyhedral-fv"]
+cites: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet"]
+summary: "M_s 1.61 shock split by a two-branch duct (width ratio 1/2/4): 2D cut-cell Euler and GSD vs 210 kHz schlieren; separation 0.53→1.37 D at a 5–20% total-pressure loss"
+---
 # Numerical and experimental evaluation of shock dividers
 
 - **Authors:** M. Rezay Haghdoost, B. S. Thethy, M. Nadolski, B. Seo, C. O. Paschereit, R. Klein, D. Edgington-Mitchell, K. Oberleithner (TU Berlin; LTRAC, Monash; FU Berlin)
