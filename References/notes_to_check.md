@@ -1,6 +1,6 @@
 # Notes to check against the PDFs (batch of 36, Oct 2026)
 
-One line per paper: the parts each indexing agent flagged. Number = entry in download_candidates.md.
+One line per paper: the parts each indexing agent flagged. Number = entry in the original 100-paper candidate list (now `Papers_to_get.md` for the papers still to get).
 
 - 09 Norum: max-OASPL table from figure labels; screech/BBSAN freqs from renders; own St estimate; Mach 1.5 survey index garbled; inferred Tt=293 K
 - 22 Wong: no DOI; eq 4.6 units; eq 4.21 coherence form; N_B 310 vs 309; figure readings

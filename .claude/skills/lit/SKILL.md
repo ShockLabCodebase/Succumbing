@@ -35,7 +35,7 @@ If no topic page fits, say so and fall back to `find` plus Grep over `References
 - Lead with the answer. Back each claim with a citation in the form [Author Year](References/notes/<key>.md), p. N.
 - Cover modelling and simulation as fully as experiment (CLAUDE.md "Modelling matters too"). Keep the two apart where they disagree, and say how well the models match the data.
 - State disagreements and open questions plainly, and say which view the stronger evidence supports.
-- Say what the library does **not** cover. You may add papers you know of from outside it, but label them "not in the library" and, if they look worth having, point to `References/download_candidates.md` or suggest adding them with `/add-paper`.
+- Say what the library does **not** cover. You may add papers you know of from outside it, but label them "not in the library" and, if they look worth having, add them to `References/Papers_to_get.md` or suggest adding them with `/add-paper`.
 - Never present your own background knowledge as coming from a note. Flag details the notes mark as unverified or figure-read.
 - For the user's own data or results, relate them to the published values (data tables, topic pages), and say what is new or at odds.
 

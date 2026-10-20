@@ -26,7 +26,7 @@ summary: "Ares I DSM-2 fixes: Varnier core (half Eldred's, backed by RSRM RANS),
 # Modifications to the NASA SP-8072 Distributed Source Method II for Ares I Lift-off Environment Predictions
 
 - **Authors:** Jared M. Haynes (Qualis Corp. / ESTS Group at NASA Marshall Space Flight Center; the slides say Jacobs ESTS Group), R. Jeremy Kenny (NASA MSFC, Acoustics and Stability Team, ER42) (p. 5, 17)
-- **Source:** AIAA paper 2009-3160, presented at the 2009 AIAA Aeroacoustics Conference (slides, p. 17). Found via NASA NTRS (download_candidates #94). No DOI is printed in the PDF; the usual AIAA form would be doi:10.2514/6.2009-3160 (not checked).
+- **Source:** AIAA paper 2009-3160, presented at the 2009 AIAA Aeroacoustics Conference (slides, p. 17). Found via NASA NTRS. No DOI is printed in the PDF; the usual AIAA form would be doi:10.2514/6.2009-3160 (not checked).
 - **PDF:** `Rocket_Noise_Papers/Haynes-Kenny_2009_Modifications-To-The-NASA-SP-8072-Distributed-Source-Method-II-For-Ares-I-Lift-Off.pdf` (35 pp.). The NTRS file bundles three parts: **pp. 1–4** a 4-page extended abstract; **pp. 5–16** the 12-page AIAA paper (printed page = PDF page − 4); **pp. 17–35** the 19 conference slides. Page refs below are PDF pages. The PDF claims to be password-protected to the Read tool; text came from `pdftotext`, and figures and equations were checked on rendered pages.
 - **Tags:** rocket noise, lift-off acoustics, Ares I, RSRM, RSRMV, NASA SP-8072, distributed source method (DSM-1, DSM-2), acoustic efficiency, sound power, potential core length, supersonic core, Eldred vs Varnier core length, core termination at deflector, flame deflector, directivity index, static firing, Saturn V lift-off data, RANS CFD, semi-empirical prediction
 

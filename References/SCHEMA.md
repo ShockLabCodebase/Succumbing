@@ -12,6 +12,7 @@ How the reference library is laid out, and the metadata every note carries. `Ref
 | `INDEX.md` | One line per paper, **generated** from frontmatter | `python References/tools/library.py build` only |
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |
 | `Paper_PDFs/` | The PDFs (local only, git-ignored) | user / `/add-paper` renames |
+| `Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
 | `notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
 | `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s References/tools`) | |
 
