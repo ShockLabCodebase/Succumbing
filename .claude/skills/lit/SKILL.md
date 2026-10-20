@@ -15,7 +15,7 @@ Run the tool with `"$USERPROFILE/anaconda3/python.exe" Library_of_Shock_Lab/tool
 | Question | Start here |
 | --- | --- |
 | A research thread ("what sets A1/A2 staging?", "is the guided jet mode needed for impingement tones?") | The topic page(s) in `Library_of_Shock_Lab/topics/`, then the notes they cite |
-| A filter ("TR schlieren of rectangular jets at NPR > 3", "papers using HPOD on PIV") | `library.py find`, e.g. `find --data schlieren-TR --flow rectangular-jet --param NPR --long`; `find --methods HPOD`; `find --topics screech --since 2020 --text staging` |
+| A filter ("TR schlieren of rectangular jets at NPR > 3", "papers using HPOD on PIV") | `library.py find`, e.g. `find --data schlieren-TR --flow rectangular-jet --param NPR --long`; `find --methods HPOD`; `find --topics screech-staging-and-mode-switching --since 2020` |
 | Numbers ("published A2 St at M_j 1.15", "η for Falcon 9") | `Library_of_Shock_Lab/data/*.csv` (columns in `data/README.md`), then the cited note and page |
 | One paper | Its note (find the key with `find --author` / `--text`) |
 | What cites what ("who built on Tam 1986?") | `grep -l '"tam-1986-bbsan-screech-relationship"' Library_of_Shock_Lab/notes/*.md` matches both `cites` and `related`; the note's own `cites` shows its in-library references. `cites` is matched automatically from reference lists, so treat it as a strong hint, not proof |

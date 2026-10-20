@@ -249,7 +249,8 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 
 ### `topics`
 Each value is a page in `topics/`.
-- `screech`: screech mechanism, closure, frequency prediction, staging, mode switching, amplitude
+- `screech`: screech mechanism, closure and shock leakage, frequency prediction, amplitude and receptivity, global modes, triads
+- `screech-staging-and-mode-switching`: A1/A2/B/C/D staging, k_s1/k_s2 loop assignment, mode switching, hysteresis, multimodal loops, staging-limit prediction
 - `non-axisymmetric-jets`: single rectangular and elliptical jets: flapping, wagging and helical modes, axis switching, single-jet models, nozzle-shape control
 - `twin-jet-coupling`: twin round and rectangular jets: coupling states (SS/SA/AS/AA), intermittency and switching between them, twin-jet models and LES
 - `impinging-jets-and-edge-tones`: impinging jets, jet–edge and jet–flap tones, other jet–surface feedback

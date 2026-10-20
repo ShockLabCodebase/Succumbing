@@ -8,7 +8,7 @@ venue: "JFM (2022), arXiv version held"
 bib: {"journal": "Journal of Fluid Mechanics"}
 doi: "10.1017/jfm.2022.58"
 arxiv: "2107.06429"
-pdf: "screech/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf"
+pdf: "screech-staging-and-mode-switching/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf"
 version: "preprint"
 unverified: ["DOI and year from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 936, A10: unchecked)"]
 group: true
@@ -18,7 +18,7 @@ methods: ["LSA-local", "LSA-Floquet", "PSD", "symmetry-decomposition", "resonanc
 flow: ["round-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "guided-jet-mode", "shock-cells", "absolute-instability", "KH-wavepackets", "triadic-interaction"]
 params: {"M_j": "1.0–1.3 (PIV 1.08–1.22)", "D": "10 mm", "m": "0"}
-topics: ["screech", "linear-models"]
+topics: ["screech-staging-and-mode-switching", "screech", "linear-models"]
 related: ["nogueira-2021-absolute-instability-shock-containing-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "farghadan-2026-wave-interactions-screeching-jet"]
 cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "nogueira-2021-absolute-instability-shock-containing-jets", "raman-1998-supersonic-jet-screech-review", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "A2 screech closes via a secondary shock wavenumber k_sh2 from downstream-shrinking shock spacing; local LSA (k_kh − k_sh) and Floquet saddles match Pprime A1/A2 tones within 10%"
@@ -27,7 +27,7 @@ summary: "A2 screech closes via a secondary shock wavenumber k_sh2 from downstre
 
 - **Authors:** P. A. S. Nogueira, V. Jaunet, M. Mancinelli, P. Jordan, D. Edgington-Mitchell (Nogueira and Edgington-Mitchell: LTRAC, Monash; Jaunet, Mancinelli and Jordan: Institut Pprime, Poitiers; p. 1)
 - **Source:** arXiv:2107.06429v1 [physics.flu-dyn] (preprint, 13 Jul 2021; JFM-style draft). The file is the 2021 arXiv v1.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf` (16 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech-staging-and-mode-switching/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf` (16 pp.)
 - **Tags:** screech, A1/A2 mode staging, axisymmetric (m = 0) screech, shock-cell wavenumber spectrum, shock-spacing variation, Kelvin-Helmholtz wavepacket, guided jet mode, Tam & Tanna interaction, locally parallel LSA, spatially periodic (Floquet) LSA, absolute instability, saddle point, PIV mean flow, microphone array
 
 ## Summary

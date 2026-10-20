@@ -18,7 +18,7 @@ methods: ["LSA-local", "LSA-global", "vortex-sheet", "ROM", "PSD"]
 flow: ["round-jet", "planar-jet", "wake", "shear-layer", "wall-bounded", "heated", "subsonic", "generic"]
 phenomena: ["absolute-instability", "global-mode", "receptivity", "KH-wavepackets", "vortex-shedding", "mixing-enhancement"]
 params: {"S_AI round jet (M = 0)": "0.72", "S_AI planar jet": "0.90", "Λ_AI tanh mixing layer": "≥ 1.315", "Λ_AI sech² wake": "≤ −0.904", "R_D cylinder (CI / AI / shedding)": "≈5 / ≈25 / 45–47", "St preferred mode": "0.25 (planar), 0.41 (round)"}
-topics: ["linear-models", "linear-operator-methods", "screech"]
+topics: ["linear-models", "linear-operator-methods", "screech", "screech-staging-and-mode-switching"]
 related: ["nogueira-2021-absolute-instability-shock-containing-jets", "garnaud-2013-preferred-mode-incompressible-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet", "towne-2018-spod-relationship-dmd-resolvent", "nogueira-2021-closure-mechanism-a1-a2-screech", "farghadan-2026-wave-interactions-screeching-jet", "gudmundsson-2011-instability-wave-models-near-field-jets", "mancinelli-2021-complex-valued-resonance-model-screech", "taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "rolandi-2025-biglobal-resolvent-naca0012", "raiola-2025-hilbert-pod"]
 cites: ["michalke-1984-survey-jet-instability-theory"]
 summary: "Review: absolute/convective vs local/global instability; Briggs pinch, WKB saddle X_s sets global frequency; hot jets (S<0.72), wakes as oscillators; Landau tests"

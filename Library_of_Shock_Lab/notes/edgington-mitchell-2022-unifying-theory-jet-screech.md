@@ -8,7 +8,7 @@ venue: "JFM 945, A8"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "945", "pages": "A8"}
 doi: "10.1017/jfm.2022.549"
 arxiv: ""
-pdf: "screech/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf"
+pdf: "screech-staging-and-mode-switching/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf"
 version: "published"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["SPOD", "DMD", "POD-pair", "wavenumber-filtering", "PSD"]
 flow: ["round-jet", "elliptical-jet", "rectangular-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "guided-jet-mode", "shock-cells", "triadic-interaction", "mode-switching", "shock-leakage", "multimodal", "standing-waves"]
 params: {"NPR": "2.1–4", "D": "10 mm", "AR": "1; 2 (elliptical, rectangular); 4 (rectangular)", "TR": "1 (unheated)"}
-topics: ["screech", "non-axisymmetric-jets"]
+topics: ["screech-staging-and-mode-switching", "screech", "non-axisymmetric-jets"]
 related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "tam-1982-shock-associated-noise-cd-nozzles", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech"]
 cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "nogueira-2021-absolute-instability-shock-containing-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-twin-jet-coupling-spatial-lsa", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "schmid-2010-dynamic-mode-decomposition", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Staging unified: guided jet mode closes at k_kh − k_s1 (A1, B) or suboptimal shock peaks k_s2/k_s3 (A2, C); Tsinghua DMD + Monash SPOD schlieren; explains multimodal tones"
@@ -27,7 +27,7 @@ summary: "Staging unified: guided jet mode closes at k_kh − k_s1 (A1, B) or su
 
 - **Authors:** D. Edgington-Mitchell, X. Li, N. Liu, F. He, T. Y. Wong, J. Mackenzie, P. Nogueira (Edgington-Mitchell, Wong, Mackenzie, Nogueira: Monash University; Li, Liu, He: Tsinghua University, Beijing; p. 1)
 - **Source:** J. Fluid Mech. 945, A8 (2022), doi:10.1017/jfm.2022.549. Open access (CC BY 4.0). Received 12 Nov 2021, accepted 3 Jun 2022.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf` (24 pp.). Page refs below are the journal pages A8-n, which equal the PDF page numbers.
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech-staging-and-mode-switching/EdgingtonMitchell-EtAl_2022_A-Unifying-Theory-Of-Jet-Screech.pdf` (24 pp.). Page refs below are the journal pages A8-n, which equal the PDF page numbers.
 - **Tags:** screech, mode staging (A1/A2/B/C), multimodal screech, guided jet mode (G-JM), triadic interaction, Tam & Tanna (1982), shock-cell wavenumber spectrum, suboptimal shock peaks, standing waves, duct-like mode, high-speed schlieren, SPOD, DMD, streamwise Fourier transform, sliding-window wavenumber transform, elliptical and rectangular jets, shock leakage, screech directivity
 
 ## Summary

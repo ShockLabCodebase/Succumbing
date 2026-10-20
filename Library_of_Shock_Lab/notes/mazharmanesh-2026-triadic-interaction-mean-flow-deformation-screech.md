@@ -8,7 +8,7 @@ venue: "JFM 1039, A24"
 bib: {"journal": "Journal of Fluid Mechanics", "volume": "1039", "pages": "A24"}
 doi: "10.1017/jfm.2026.11796"
 arxiv: ""
-pdf: "screech/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf"
+pdf: "screech-staging-and-mode-switching/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf"
 version: "published"
 unverified: []
 group: true
@@ -18,7 +18,7 @@ methods: ["SPOD", "BMD", "statistics", "wavenumber-filtering"]
 flow: ["round-jet", "elliptical-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "mode-switching", "intermittency", "triadic-interaction", "mean-flow-deformation", "shock-cells", "guided-jet-mode"]
 params: {"NPR": "2.19–2.25 (round), 2.3–4.9 (elliptical)", "AR": "2 (elliptical)", "D_e": "16 mm (round), 10 mm (elliptical)", "St_s": "0.27–0.69"}
-topics: ["screech", "time-frequency-methods", "modal-decomposition", "non-axisymmetric-jets"]
+topics: ["screech-staging-and-mode-switching", "screech", "time-frequency-methods", "modal-decomposition", "non-axisymmetric-jets"]
 related: ["mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "mancinelli-2019-screech-prediction-upstream-modes", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "schmidt-2020-bispectral-mode-decomposition", "farghadan-2026-wave-interactions-screeching-jet", "nogueira-2021-closure-mechanism-a1-a2-screech", "ivelja-2024-modal-analysis-screeching-elliptical-jets"]
 cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "gudmundsson-2011-instability-wave-models-near-field-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "nogueira-2024-guided-jet-waves", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-bispectral-mode-decomposition", "towne-2018-spod-relationship-dmd-resolvent", "wong-2023-steady-unsteady-coupling-twin-round-jets"]
 summary: "150 kHz schlieren of A1/A2 staging (NPR 2.20) and an AR 2 elliptical jet (NPR 3.6): mutually exclusive tones each set their own short-time mean; BMD-derived k_S matches k_kh − k_GJM"
@@ -27,7 +27,7 @@ summary: "150 kHz schlieren of A1/A2 staging (NPR 2.20) and an AR 2 elliptical j
 
 - **Authors:** S. Mazharmanesh, P. A. S. Nogueira, J. Weightman, B. Yeung, O. T. Schmidt, D. Edgington-Mitchell (Mazharmanesh, Nogueira, Weightman, Edgington-Mitchell: Monash University; Yeung, Schmidt: UC San Diego; p. 1)
 - **Source:** J. Fluid Mech. 1039, A24 (2026), doi:10.1017/jfm.2026.11796. Published open-access version (CC BY 4.0). Received 18 Dec 2025, revised 10 Jun 2026, accepted 11 Jun 2026 (p. 1). Funded by ARC DP220103873 and ONR N00014-23-1-2457 (p. 24).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf` (index key `screech/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf`, 29 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech-staging-and-mode-switching/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf` (index key `screech-staging-and-mode-switching/Mazharmanesh-EtAl_2026_Triadic-Interaction-And-Mean-Flow-Deformation-In-Screeching-Jets.pdf`, 29 pp.)
 - **Page refs:** PDF page n is printed page 1039 A24-n.
 - **Supplementary:** Jupyter notebook and video of the reconstructed short-time mean for Fig. 7 (JFM Notebooks; p. 12, 24).
 - **Tags:** screech, A1/A2 staging, multimodal screech, intermittency, mutual exclusivity, mean-flow distortion, short-time mean, difference self-interaction, triadic interaction, guided jet mode, shock-cell wavenumber, suboptimal shock peak, elliptical jet AR 2, flapping and quasi-helical modes, high-speed schlieren, SPOD, SPOD frequency–time analysis, JPDF of SPOD coefficients, bispectral mode decomposition (BMD), bicoherence BMD, interaction map, two-way coupling

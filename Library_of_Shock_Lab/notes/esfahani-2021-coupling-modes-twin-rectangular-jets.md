@@ -18,7 +18,7 @@ methods: ["PSD", "coherence", "wavelets", "statistics"]
 flow: ["twin-jet", "rectangular-jet", "supersonic", "overexpanded", "ideally-expanded", "underexpanded"]
 phenomena: ["screech", "coupling", "flapping", "intermittency", "directivity", "BBSAN", "standing-waves"]
 params: {"M_j": "1.20–1.85", "M_d": "1.5", "NPR": "2.97, 3.67, 5.0 (detailed cases)", "AR": "2", "s/D_e": "2.25", "TR": "1"}
-topics: ["twin-jet-coupling", "screech"]
+topics: ["twin-jet-coupling", "screech-staging-and-mode-switching"]
 related: ["esfahani-2021-control-twin-rectangular-jet-coupling", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "wong-2023-steady-unsteady-coupling-twin-round-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2020-waves-in-screeching-jets", "samimy-1998-rectangular-jet-trailing-edge-control"]
 cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control", "tam-1995-supersonic-jet-noise"]
 summary: "Baseline AR-2 twin rectangular jets, M_j 1.20–1.85: each jet flaps; out-of-phase coupling near design, in-phase underexpanded; apparent intermittency at M_j 1.35 is a 33 Hz beat"

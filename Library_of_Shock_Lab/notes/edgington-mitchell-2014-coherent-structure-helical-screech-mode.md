@@ -270,7 +270,7 @@ This is the first paper of the group's screech-PIV thread and the origin of the 
 - Doing this for converged A1 and A2 states would test the selection rule where the 2021 paper found it fails (A2). It would also test whether the dominant source cell shifts on staging; Mercier's fixed 4th-shock source is the alternative.
 - A C-mode run at NPR 3.4 would, in addition, resolve the m = 1 helicity question that planar PIV cannot.
 - The model inputs this paper offers are Suzuki & Lele's critical-angle and vorticity-rotation criteria (eqs. 5.1–5.3). They need the local Mach number and sound-speed ratio at the shear layer, which the LES supplies and PIV could not (the 2021 ray model had to assume constant c).
-- Nozzle differences: this nozzle is 15 mm with a 5 mm lip (t/D 0.33); the PyFR model has a 16 mm nozzle with a 1 mm lip (screech topic page).
+- Nozzle differences: this nozzle is 15 mm with a 5 mm lip (t/D 0.33); the PyFR model has a 16 mm nozzle with a 1 mm lip ([staging page](../topics/screech-staging-and-mode-switching.md)).
 
 **Rocket noise.** Screech itself is absent at full scale ([lubert-2022](lubert-2022-supersonic-jet-noise-launch-vehicles-review.md)). The shock–vortex interaction mechanism behind leakage is also behind BBSAN, which does matter for launch vehicles. Locating interaction sites from statistics or coherent vorticity is a lab-scale idea that would need time-resolved or simulated data to carry over.
 
