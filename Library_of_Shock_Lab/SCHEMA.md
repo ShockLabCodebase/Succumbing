@@ -254,7 +254,8 @@ Each value is a page in `topics/`.
 - `non-axisymmetric-jets`: single rectangular and elliptical jets: flapping, wagging and helical modes, axis switching, single-jet models, nozzle-shape control
 - `twin-jet-coupling`: twin round and rectangular jets: coupling states (SS/SA/AS/AA), intermittency and switching between them, twin-jet models and LES
 - `impinging-jets-and-edge-tones`: impinging jets, jet–edge and jet–flap tones, other jet–surface feedback
-- `linear-models`: mean-flow linear theory and wave models: local stability, vortex sheets, absolute instability, Floquet/shock-cell models, guided-jet-wave theory, wavepacket models
+- `linear-models`: mean-flow linear theory and wave models: local stability, vortex sheets, absolute instability, Floquet models, guided-jet-wave theory, wavepacket models
+- `shock-cell-models`: Prandtl–Pack, Tam and multiple-scales shock-cell models, shock spectrum, KH × shock product picture, Floquet in x, PFE, wavepacket BBSAN sources
 - `linear-operator-methods`: operator methods on the linearised equations: global stability, resolvent analysis (forcing, eddy viscosity), PSE/PFE/OWNS, harmonic resolvent
 - `jet-noise-mechanisms`: mixing noise, Mach wave radiation, BBSAN, crackle in jets
 - `modal-decomposition`: POD, SPOD and variants, DMD, BMD, Koopman: algorithms and practice

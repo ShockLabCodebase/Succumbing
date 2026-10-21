@@ -18,7 +18,7 @@ methods: ["LSA-local", "shock-cell-model", "resonance-model"]
 flow: ["round-jet", "supersonic", "underexpanded", "overexpanded", "heated"]
 phenomena: ["mixing-noise", "Mach-wave-radiation", "BBSAN", "screech", "shock-cells", "mode-switching", "directivity"]
 params: {}
-topics: ["jet-noise-mechanisms", "screech", "screech-staging-and-mode-switching"]
+topics: ["jet-noise-mechanisms", "screech", "shock-cell-models", "screech-staging-and-mode-switching"]
 related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "raman-1998-supersonic-jet-screech-review", "papamoschou-1988-compressible-turbulent-shear-layer", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
 cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets"]
 summary: "Review: mixing noise as Mach waves from instability waves (45–60°), BBSAN from instability wave × shock-cell modes, screech via external feedback and an St formula; amplitude unpredictable"

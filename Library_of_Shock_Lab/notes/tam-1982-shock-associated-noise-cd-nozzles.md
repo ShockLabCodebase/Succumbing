@@ -18,7 +18,7 @@ methods: ["shock-cell-model", "PSD"]
 flow: ["round-jet", "supersonic", "overexpanded", "underexpanded", "ideally-expanded", "heated"]
 phenomena: ["BBSAN", "shock-cells", "Mach-wave-radiation", "directivity"]
 params: {"M_d": "1.672", "M_j": "1.10–1.96", "NPR": "2.4–7.8", "TR": "1–2", "D": "5.08 cm"}
-topics: ["jet-noise-mechanisms", "screech"]
+topics: ["jet-noise-mechanisms", "shock-cell-models", "screech"]
 related: ["wong-2021-wavepacket-modelling-bbsan", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "nogueira-2021-wavepacket-modulation-shock-containing-jets"]
 cites: []
 summary: "Origin of the BBSAN mechanism: instability waves × Pack shock cells give a supersonic k − λ₁ wave radiating as Mach waves; f_p = u_c/[L_s(1 − M_c cos θ)], I ∝ (M_j² − M_d²)²; M_d 1.672 C-D jet"

@@ -31,7 +31,7 @@ Screech (and other jet-resonance) tone frequencies.
 | `D_mm` | Nozzle exit diameter or height used in St, mm |
 
 ## `shock_cell_spacing.csv`
-Shock-cell spacing measurements and models.
+Shock-cell spacing measurements and models. The models and their trends are reviewed on [shock-cell-models](../topics/shock-cell-models.md).
 
 | Column | Meaning |
 | --- | --- |

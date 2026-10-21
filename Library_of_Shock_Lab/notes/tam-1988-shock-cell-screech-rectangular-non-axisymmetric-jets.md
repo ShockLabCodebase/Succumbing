@@ -8,7 +8,7 @@ venue: "J. Sound Vib. 121(1), 135–147"
 bib: {"journal": "Journal of Sound and Vibration", "volume": "121", "number": "1", "pages": "135--147"}
 doi: "10.1016/S0022-460X(88)80066-X"
 arxiv: ""
-pdf: "screech/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf"
+pdf: "shock-cell-models/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["shock-cell-model", "vortex-sheet", "resonance-model"]
 flow: ["rectangular-jet", "elliptical-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "shock-cells"]
 params: {"M_j": "1.1–1.8", "M_d": "1", "AR": "5.83, 12.75 (comparison data)"}
-topics: ["screech", "non-axisymmetric-jets"]
+topics: ["shock-cell-models", "screech", "non-axisymmetric-jets"]
 related: ["tam-1986-bbsan-screech-relationship", "tam-1982-shock-associated-noise-cd-nozzles", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "mancinelli-2019-screech-prediction-upstream-modes", "esfahani-2021-coupling-modes-twin-rectangular-jets", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets"]
 cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship"]
 summary: "Vortex-sheet (Prandtl–Pack) shock-cell model for any cross-section: rectangular sine and elliptic Mathieu modes; spacing set by the minor dimension; weakest-link screech St matches rectangular jets"
@@ -27,7 +27,7 @@ summary: "Vortex-sheet (Prandtl–Pack) shock-cell model for any cross-section: 
 
 - **Authors:** C. K. W. Tam (Department of Mathematics, Florida State University)
 - **Source:** J. Sound Vib. 121(1), 135–147 (1988), doi:10.1016/S0022-460X(88)80066-X. First presented as AIAA Paper 86-1866 (10th Aeroacoustics Conference, Seattle, July 1986) (p. 1). Received 7 Oct 1986, revised 22 Apr 1987.
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf` (13 pp.). Scanned publisher copy; the text layer is OCR and garbles the equations, so all equations below were read from page renders.
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/shock-cell-models/Tam_1988_The-Shock-Cell-Structures-And-Screech-Tone-Frequencies-Of-Rectangular-And.pdf` (13 pp.). Scanned publisher copy; the text layer is OCR and garbles the equations, so all equations below were read from page renders.
 - **Page refs:** PDF page numbers. PDF p. n is printed journal page 134 + n (PDF p. 1 = p. 135).
 - **Tags:** screech, shock-cell spacing, rectangular jet, elliptic jet, non-axisymmetric jet, aspect ratio, vortex-sheet model, Prandtl–Pack, eigenfunction expansion, Mathieu functions, fully expanded jet size, weakest-link theory, screech frequency prediction, convergent-divergent nozzle, choked (convergent) nozzle, theory only (no new experiments)
 

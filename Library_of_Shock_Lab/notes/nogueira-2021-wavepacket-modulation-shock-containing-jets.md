@@ -8,7 +8,7 @@ venue: "Phys. Rev. Fluids 7, 074608"
 bib: {"journal": "Physical Review Fluids", "volume": "7", "pages": "074608"}
 doi: "10.1103/PhysRevFluids.7.074608"
 arxiv: "2110.04914"
-pdf: "linear-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf"
+pdf: "shock-cell-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf"
 version: "preprint"
 unverified: ["DOI and year from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF; volume and article number read from the DOI"]
 group: true
@@ -18,7 +18,7 @@ methods: ["PSE", "LSA-Floquet", "shock-cell-model", "SPOD", "wavenumber-filterin
 flow: ["round-jet", "supersonic", "underexpanded", "overexpanded", "heated"]
 phenomena: ["KH-wavepackets", "shock-cells", "BBSAN"]
 params: {"M_j": "1.086 (model), 1.35 (LES)", "M_d": "1.5 (LES)", "TR": "2.53 (LES NTR)", "Re": "7.6×10⁵ (LES)", "m": "0, 1"}
-topics: ["linear-models", "linear-operator-methods", "screech"]
+topics: ["shock-cell-models", "linear-models", "linear-operator-methods", "screech"]
 related: ["nogueira-2021-absolute-instability-shock-containing-jets", "edgington-mitchell-2020-waves-in-screeching-jets", "nogueira-2021-closure-mechanism-a1-a2-screech", "zhu-2021-recursive-one-way-navier-stokes", "wong-2021-wavepacket-modelling-bbsan", "tam-1982-shock-associated-noise-cd-nozzles", "nogueira-2026-flapping-motion-screeching-round-jets"]
 cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "morra-2021-colour-of-forcing-resolvent-channel", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "raman-1998-supersonic-jet-screech-review", "schmidt-2018-spectral-analysis-jet-turbulence", "tam-1982-shock-associated-noise-cd-nozzles", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent", "wong-2021-wavepacket-modelling-bbsan"]
 summary: "Parabolised Floquet equations on a zero-frequency-PSE shock-cell base flow model shock modulation of KH wavepackets (α ± jα_s); vs M_j 1.35 LES SPOD; no upstream waves"
@@ -27,7 +27,7 @@ summary: "Parabolised Floquet equations on a zero-frequency-PSE shock-cell base 
 
 - **Authors:** P. A. S. Nogueira, H. W. A. Self, A. Towne, D. Edgington-Mitchell (Monash LTRAC; Towne at University of Michigan)
 - **Source:** arXiv:2110.04914v1 (preprint, 10 Oct 2021; JFM style). Funded by ARC DP190102220 (p. 24).
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/linear-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf` (30 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/shock-cell-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf` (30 pp.)
 - **Tags:** shock-containing jet, wavepacket modulation, Kelvin-Helmholtz wavepacket, parabolised Floquet equations (PFE), PSE, zero-frequency PSE shock cells, spatially periodic LSA, Floquet ansatz, SPOD, LES, broadband shock-associated noise (BBSAN), overexpanded jet, underexpanded jet
 
 ## Summary

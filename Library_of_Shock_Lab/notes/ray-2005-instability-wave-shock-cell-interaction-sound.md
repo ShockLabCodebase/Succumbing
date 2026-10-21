@@ -18,7 +18,7 @@ methods: ["PSE", "shock-cell-model", "LSA-local", "acoustic-analogy", "FW-H"]
 flow: ["round-jet", "supersonic", "overexpanded", "heated"]
 phenomena: ["BBSAN", "shock-cells", "KH-wavepackets", "Mach-wave-radiation", "directivity", "triadic-interaction"]
 params: {"M_j": "1.28", "M_d": "1.5", "NPR": "≈2.70 (derived from M_j)", "T_j/T_∞": "1.0, 2.0", "St": "0.6, 0.9 (T_j/T_∞ = 1); 0.42, 0.64 (T_j/T_∞ = 2)", "ωD/a_∞": "4.83, 7.24", "m": "0"}
-topics: ["jet-noise-mechanisms", "linear-models"]
+topics: ["jet-noise-mechanisms", "shock-cell-models", "linear-models"]
 related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "wong-2021-wavepacket-modelling-bbsan", "nogueira-2021-wavepacket-modulation-shock-containing-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "gudmundsson-2011-instability-wave-models-near-field-jets", "mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "edgington-mitchell-2020-waves-in-screeching-jets", "mercier-2017-screech-feedback-loop-underexpanded-round-jets"]
 cites: []
 summary: "Linearised Euler with PSE-wave × shock-mode sources, M_j 1.28: St 0.6 BBSAN lobe at local k_t − k_s Mach angle; at St 0.9 ring sources make interference lobes"
