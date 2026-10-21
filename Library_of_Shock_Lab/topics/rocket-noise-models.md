@@ -157,6 +157,7 @@ No model uses modal decomposition or anything time-resolved beyond slow-time lev
 
 ## Papers
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): origin of the convective Mach number; its M_c is the "supersonic" family closest to the Falcon 9 peak angle.
+- [Tam & Hu 1989](../notes/tam-1989-three-families-instability-waves-high-speed-jets.md): Vortex-sheet + finite-thickness LSA: KH, supersonic (u_j>a_j+a_o, c=u_j/(1+a_j/a_o)) and subsonic families; neutral upstream (0,m) waves are the guided jet mode (synthesis pending).
 - [Tam 1996](../notes/tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md): lab large- and fine-scale similarity spectra; found unsuitable for rockets, but a modified form is used for ground factors.
 - [Kandula 2005](../notes/kandula-2005-near-field-acoustics-clustered-rocket-engines.md): two-zone clustered-nozzle model on SP-8072 with ground reflection; RAPT tool.
 - [McInerny & Ölçmen 2005](../notes/mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation.md): Titan IV and Scout launch waveforms obey the weak-shock rise-rate law out to 15 km; propagation must carry shocks (synthesis pending).

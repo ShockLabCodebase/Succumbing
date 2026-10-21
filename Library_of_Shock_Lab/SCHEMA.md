@@ -127,6 +127,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `PIV-TR`: time-resolved PIV
 - `PIV-stereo`: stereoscopic PIV (add `PIV` or `PIV-TR` too)
 - `hot-wire`
+- `laser-scattering`: line-of-sight laser light scattering by density fluctuations or shocks, collected on a photodetector
 - `pressure-probe`: static or total pressure surveys in the flow
 - `microphones-near`: near-field microphones / pressure sensors
 - `microphones-far`: far-field microphones

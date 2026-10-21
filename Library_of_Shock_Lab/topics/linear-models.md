@@ -104,7 +104,10 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 
 - [Michalke 1984](../notes/michalke-1984-survey-jet-instability-theory.md): spatial LSA review of round jets; divergence caps the gain; nozzle feedback.
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): convective Mach number; vortex-sheet vs finite-thickness stabilisation.
+- [Tam & Hu 1989](../notes/tam-1989-three-families-instability-waves-high-speed-jets.md): Vortex-sheet + finite-thickness LSA: KH, supersonic (u_j>a_j+a_o, c=u_j/(1+a_j/a_o)) and subsonic families; neutral upstream (0,m) waves are the guided jet mode (synthesis pending).
 - [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): absolute/convective instability; pinch criterion; frequency selection.
+- [Tam & Ahuja 1990](../notes/tam-1990-theoretical-model-discrete-tone-impinging-jets.md): Upstream neutral vortex-sheet jet modes close impinging-tone loops; least-dispersive (0,1) wave (d²ω/dk²=0) gives mean St(M_j), axisymmetry, low-M cut-off (synthesis pending).
+- [Suzuki & Lele 2003](../notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): 2-D DNS + eikonal, M 1.2 mixing layer: weak shocks leak at inter-vortex saddles where the vorticity barrier is weak; heating eases leakage, tilts it downstream (synthesis pending).
 - [Ray 2005](../notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): PSE wavepacket as BBSAN source (on shock-cell models).
 - [McKeon & Sharma 2010](../notes/mckeon-2010-critical-layer-framework-turbulent-pipe-flow.md): nonlinearity as forcing of the mean-flow operator.
 - [Gudmundsson & Colonius 2011](../notes/gudmundsson-2011-instability-wave-models-near-field-jets.md): PSE matches near-field pressure; fails below St 0.2.

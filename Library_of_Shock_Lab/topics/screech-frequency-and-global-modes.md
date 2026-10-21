@@ -76,10 +76,12 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely ([Edgin
 ## Papers
 
 - [Tam 1986](../notes/tam-1986-bbsan-screech-relationship.md): weakest-link frequency formula from BBSAN.
+- [Tam & Hu 1989](../notes/tam-1989-three-families-instability-waves-high-speed-jets.md): Vortex-sheet + finite-thickness LSA: KH, supersonic (u_j>a_j+a_o, c=u_j/(1+a_j/a_o)) and subsonic families; neutral upstream (0,m) waves are the guided jet mode (synthesis pending).
 - [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): local pocket necessary, not sufficient; ranked self-excitation tests; box resonance.
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): small lip-induced frequency shifts.
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): amplitude unpredictable; closed-form formula.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): frequency predictable, amplitude not; early Euler simulation.
+- [Panda 1999](../notes/panda-1999-experimental-investigation-screech-noise-generation.md): Phase-averaged near-field mics + phase-locked spark schlieren, M_j 1.19/1.42: KH–sound standing wave L_sw ≈ 0.8L; sound born at 3rd–4th shock; L_sw screech formula (synthesis pending).
 - [Alkislar 2003](../notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet; near-constant U_c (synthesis pending).
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): Mach-disk validation target; PIV smearing at shocks.
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): convected-wave check; Powell 20 % high in an ellipse.

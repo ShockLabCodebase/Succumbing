@@ -128,9 +128,11 @@ Ray-traced near-pad arrays, plus wavenumber-filtered SPOD of heated-jet LES to s
 - [Michalke 1984](../notes/michalke-1984-survey-jet-instability-theory.md): spatial LSA review of round jets: Michalke profiles, R/θ, Mach number, heating, flight, divergence, nozzle feedback (synthesis pending).
 - [Tam et al. 1986](../notes/tam-1986-bbsan-screech-relationship.md): multiple BBSAN peaks from shock Fourier modes; screech as the BBSAN upstream limit.
 - [Papamoschou & Roshko 1988](../notes/papamoschou-1988-compressible-turbulent-shear-layer.md): defines the convective Mach number behind Mach-wave directivity.
+- [Tam & Hu 1989](../notes/tam-1989-three-families-instability-waves-high-speed-jets.md): Vortex-sheet + finite-thickness LSA: KH, supersonic (u_j>a_j+a_o, c=u_j/(1+a_j/a_o)) and subsonic families; neutral upstream (0,m) waves are the guided jet mode (synthesis pending).
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): pre-wavepacket synthesis of mixing noise, BBSAN and screech.
 - [Tam et al. 1996](../notes/tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md): large- and fine-scale similarity spectra and amplitude scalings.
 - [Kerechanin et al. 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts change mixing noise, BBSAN and screech of an AR 3 jet.
+- [Suzuki & Lele 2003](../notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): 2-D DNS + eikonal, M 1.2 mixing layer: weak shocks leak at inter-vortex saddles where the vorticity barrier is weak; heating eases leakage, tilts it downstream (synthesis pending).
 - [Ray 2005](../notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): LEE with PSE-wave × shock-mode sources; BBSAN lobe at the local Mach angle of k_t − k_s; ring-source lobes at high St (synthesis pending).
 - [Samimy et al. 2006](../notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
 - [Cavalieri et al. 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): low-energy m = 0/1 linear wavepackets carry the low-angle sound.

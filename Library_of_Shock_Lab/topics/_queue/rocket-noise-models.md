@@ -15,3 +15,14 @@ Caveats for anyone reusing the equations (my checks):
 The Titan IV and Scout L_eq values fall about 24–25 dB per decade (≈ r⁻¹·²; my arithmetic). That is steeper than the r⁻¹ to r⁻¹·¹ of mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets, but these stations saw different emission times at ground level.
 
 This complements the topic page's remark that the McInerny OASPL_max formula has no absorption (kellison-2026-falcon-9-noise-two-campaigns). Here the same first author argues that absorption at the shock fronts controls the high-frequency levels, while OASPL is set by the sub-100 Hz peak and barely affected (p. 588).
+
+## tam-1989-three-families-instability-waves-high-speed-jets (queued 2026-10-21)
+
+- **"Supersonic" M_c.** The page cites kellison-2026's preference for the "supersonic" Tam & Hu M_c (66° against a measured 64°). That M_c is eq. 5.1 of this paper (p. 472), and its radiation angle cos⁻¹[(a_j + a_o)/u_j] follows from eq. 3.6 (note's derivation).
+- **Attribution correction.** Tam & Hu derive only that one speed. The KH and "subsonic" speeds used by kellison-2026 (M_c′, M_c″) are Oertel's empirical W′/W″ formulas, not results of this paper.
+  - Within Tam & Hu the subsonic waves have |c| < a_o and no near field (p. 456, 465), so they cannot radiate Mach waves. Kellison's M_c″ = 1.75 (55°) is not a Tam & Hu wave (note's reading).
+  - Oertel's W′ speed is 9% above the computed and measured KH speed at cold M_j 2.1 (0.85 against 0.78–0.79; Fig. 18, note's calculation).
+- **Rocket plumes are past KH merging.** Fig. 9's critical M_j falls to ≈ 2 for T_j/T_∞ ≳ 3 (p. 459). Rocket plumes are hotter and faster than this, so by this vortex-sheet result the KH wave is no longer distinct and the supersonic family dominates (p. 480–481).
+  - That gives a physical reason to prefer the eq. 5.1 speed over the Oertel mean M_O for rockets. It bears on the "which convective Mach number" disagreement now on jet-noise-mechanisms.
+  - Caveats: vortex sheet only, γ_j = γ_o, and Fig. 9 stops at T_j/T_∞ = 3.
+- **Link to SP-8072-type models.** This is a caveat for models built on a single KH-like wavepacket (lubert-2022), but the paper says nothing about rocket conditions, so the link is an inference.
