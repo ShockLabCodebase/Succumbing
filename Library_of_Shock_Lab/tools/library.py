@@ -5,7 +5,8 @@
   build              regenerate Library_of_Shock_Lab/INDEX.md and Library_of_Shock_Lab/references.bib
   check              check frontmatter, vocabulary, PDFs, links, topic pages, CSVs, duplicates
   unindexed [DIR]    list PDFs (default Library_of_Shock_Lab/Paper_PDFs, recursive) with no note,
-                     one "<index key><TAB><path>" per line
+                     one "<index key><TAB><path>" per line; Paper_PDFs/_Off_Topic is skipped
+                     unless DIR is (inside) it
   file [--dry]       move each indexed PDF into Paper_PDFs/<primary topic>/ and update its note
   find [filters]     list notes matching every filter, e.g.
                        find --methods SPOD --data schlieren-TR --flow rectangular-jet
@@ -37,6 +38,7 @@ NOTES = REF / "notes"
 TOPICS = REF / "topics"
 DATA = REF / "data"
 PDFS = REF / "Paper_PDFs"
+OFF_TOPIC = "_Off_Topic"   # PDFs the user set aside; indexed only when named directly
 INDEX = REF / "INDEX.md"
 BIB = REF / "references.bib"
 SCHEMA = REF / "SCHEMA.md"
@@ -426,7 +428,10 @@ def list_unindexed(folder, notes=None):
     notes = notes if notes is not None else load_notes()
     known = {n.pdf for n in notes if n.meta}
     out = []
-    for root, _, files in os.walk(folder):
+    skip_off_topic = OFF_TOPIC not in Path(folder).resolve().parts
+    for root, dirs, files in os.walk(folder):
+        if skip_off_topic:
+            dirs[:] = [d for d in dirs if d != OFF_TOPIC]
         for name in sorted(files):
             if name.lower().endswith(".pdf"):
                 p = os.path.join(root, name)

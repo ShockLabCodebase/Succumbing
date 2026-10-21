@@ -26,10 +26,12 @@ Before anything else, look in `Library_of_Shock_Lab/notes/_incoming/`:
 - PDFs anywhere else: the absolute Windows path with forward slashes, e.g. `D:/Papers/Screech/Tam 1986.pdf`.
 
 **What to process**, depending on `$ARGUMENTS`:
-- **Empty or a folder:** run `library.py unindexed ["<folder>"]` (default `Library_of_Shock_Lab/Paper_PDFs`, searched recursively; new papers normally sit in `Library_of_Shock_Lab/Paper_PDFs/_Unprocessed/`). Each output line is `<index key><TAB><path to read>`. If the folder is outside the working directory and access is refused, ask the user to grant access to it (the app will prompt) rather than copying files.
+- **Empty or a folder:** run `library.py unindexed ["<folder>"]` (default `Library_of_Shock_Lab/Paper_PDFs`, searched recursively; new papers normally sit in `Library_of_Shock_Lab/Paper_PDFs/_Unprocessed/`). Each output line is `<index key><TAB><path to read>`. `Library_of_Shock_Lab/Paper_PDFs/_Off_Topic/` is skipped: it holds papers the user set aside, and is indexed only when the user names that folder or a file in it directly. If the folder is outside the working directory and access is refused, ask the user to grant access to it (the app will prompt) rather than copying files.
 - **Specific PDF file(s):** process those even if already indexed, replacing their note. Work out each key using the rule above.
 
 If nothing is printed, say every paper in that folder is already indexed and stop. Otherwise, list the files you are about to process. Many files will have publisher names (`016105_1_online.pdf`, `annurev-fluid-…pdf`); read the first page to identify them.
+
+**Off-topic papers:** if a paper seems outside the library's scope (CLAUDE.md "My Research Area" and "Domain"), don't index it without asking. List the likely off-topic files and ask the user (AskUserQuestion), with an option to move them to `Library_of_Shock_Lab/Paper_PDFs/_Off_Topic/` (`mv -n`) and not process them.
 
 **Duplicates:** the same paper can sit in two folders, or twice under different names, or as both a preprint and the journal version. Before writing a note, check for one already in the library: `library.py find --author <surname> --since <year-1> --until <year+1>`, and grep `Library_of_Shock_Lab/notes/` for the DOI. If one exists, don't write a second note: report it to the user and ask whether to keep the existing key, switch the note's `pdf` to the new file, or delete the redundant copy (deleting is the user's call).
 
