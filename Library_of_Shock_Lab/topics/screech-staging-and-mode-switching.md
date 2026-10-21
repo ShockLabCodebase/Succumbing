@@ -91,6 +91,8 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 
 - [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): supercritical Hopf only; competing global modes; the transient test.
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): lip thickness moves mode ranges and the B → C switch.
+- [Powell et al. 1992](../notes/powell-1992-oscillation-modes-choked-circular-jets.md): D = 10 mm thick-lip jet, NPR 2–5.84: A1/A2 varicose, B/D one sinuous family, C helical; secondary tones 25 dB down; C–D hysteresis; D's plane rotates at 13–90 Hz (synthesis pending).
+- [Henderson & Powell 1993](../notes/henderson-1993-tones-choked-jet-impinging-flat-plates.md): Choked jet on 0.5–38d plates, NPR 2–4.75: large-plate L1 (toroidal), L2/L3 (helical) lines, small-plate S4/S5 tones; reflectors show both loops close at the nozzle (synthesis pending).
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): toroidal-to-helical switch by instability growth.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): Merle's stages, jumps unexplained; switching and coexisting tones.
 - [Panda 1999](../notes/panda-1999-experimental-investigation-screech-noise-generation.md): Phase-averaged near-field mics + phase-locked spark schlieren, M_j 1.19/1.42: KH–sound standing wave L_sw ≈ 0.8L; sound born at 3rd–4th shock; L_sw screech formula (synthesis pending).
@@ -98,6 +100,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): A1 → A2 as m = 4 → 5 at a fixed source; k_s2 signature.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): A1 and A2 close on the same G-JM.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): twin-jet staging; constant U_c; phase jumps without tone jumps.
+- [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): Vortex-sheet guided-mode bands: A1/A2/u near the (0,2) lower limit, C on (1,1), B/D outside; M_j 1.56 LES f–k spectra show in-jet upstream waves at −a₀ at the tones (synthesis pending).
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): mutually exclusive A1/A2 switching, 1–4 s dwell times.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES: diagonal to minor-axis flapping with TR.
 - [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): coexisting, uncorrelated twin-jet tones; rig-dependent staging.

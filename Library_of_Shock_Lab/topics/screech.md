@@ -81,6 +81,7 @@ Staging-specific methods (shock-spectrum peaks, switch tracking, loop counts) ar
 - [Tam 1986](../notes/tam-1986-bbsan-screech-relationship.md): screech as the upstream limit of BBSAN; weakest link.
 - [Tam 1988](../notes/tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets.md): shock spacing and screech formula for non-round jets.
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): lip thickness changes mode ranges and amplitudes.
+- [Powell et al. 1992](../notes/powell-1992-oscillation-modes-choked-circular-jets.md): D = 10 mm thick-lip jet, NPR 2–5.84: A1/A2 varicose, B/D one sinuous family, C helical; secondary tones 25 dB down; C–D hysteresis; D's plane rotates at 13–90 Hz (synthesis pending).
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): free-stream-closure review; amplitude unpredictable.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): pre-2000 review; frequency predictable, amplitude and staging not.
 - [Samimy 1998](../notes/samimy-1998-rectangular-jet-trailing-edge-control.md): V-notch removes, thick lip revives AR 3 screech.
@@ -94,6 +95,7 @@ Staging-specific methods (shock-spectrum peaks, switch tracking, loop counts) ar
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): trapped and guided waves in saddle-bounded bands.
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): 4th-shock source; integer-period loop; U_c rises along the jet.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): first evidence that the G-JM closes A1 and A2.
+- [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): Vortex-sheet guided-mode bands: A1/A2/u near the (0,2) lower limit, C on (1,1), B/D outside; M_j 1.56 LES f–k spectra show in-jet upstream waves at −a₀ at the tones (synthesis pending).
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES: St right, heating trend wrong; planar band test.
 - [Edgington-Mitchell 2021, shock leakage](../notes/edgington-mitchell-2021-generation-screech-tones-shock-leakage.md): leakage seen at inter-vortex saddles, 3rd–5th cell.

@@ -79,6 +79,7 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely ([Edgin
 - [Tam & Hu 1989](../notes/tam-1989-three-families-instability-waves-high-speed-jets.md): Vortex-sheet + finite-thickness LSA: KH, supersonic (u_j>a_j+a_o, c=u_j/(1+a_j/a_o)) and subsonic families; neutral upstream (0,m) waves are the guided jet mode (synthesis pending).
 - [Huerre & Monkewitz 1990](../notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): local pocket necessary, not sufficient; ranked self-excitation tests; box resonance.
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): small lip-induced frequency shifts.
+- [Powell et al. 1992](../notes/powell-1992-oscillation-modes-choked-circular-jets.md): D = 10 mm thick-lip jet, NPR 2–5.84: A1/A2 varicose, B/D one sinuous family, C helical; secondary tones 25 dB down; C–D hysteresis; D's plane rotates at 13–90 Hz (synthesis pending).
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): amplitude unpredictable; closed-form formula.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): frequency predictable, amplitude not; early Euler simulation.
 - [Panda 1999](../notes/panda-1999-experimental-investigation-screech-noise-generation.md): Phase-averaged near-field mics + phase-locked spark schlieren, M_j 1.19/1.42: KH–sound standing wave L_sw ≈ 0.8L; sound born at 3rd–4th shock; L_sw screech formula (synthesis pending).
@@ -88,6 +89,7 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely ([Edgin
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): duct resonance type found in the screech operator.
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): integer-loop criterion; U_c rises along the jet.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): G-JM shapes match the model.
+- [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): Vortex-sheet guided-mode bands: A1/A2/u near the (0,2) lower limit, C on (1,1), B/D outside; M_j 1.56 LES f–k spectra show in-jet upstream waves at −a₀ at the tones (synthesis pending).
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated LES: St right, heating trend wrong; u_c falls with heating.
 - [Edgington-Mitchell 2021, waves](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): global mode on a PIV mean within 1 %.

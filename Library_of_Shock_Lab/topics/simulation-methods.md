@@ -89,6 +89,8 @@ All simulation output here is time-resolved, so it suits SPOD, BMD, k–ω maps 
 ## Papers
 - [Greenshields et al. 2010](../notes/greenshields-2010-central-schemes-polyhedral-fv.md): `rhoCentralFoam` numerics; KNP + van Leer; Ladenburg Mach disc within 3%.
 - [Witherden et al. 2014](../notes/witherden-2014-pyfr-flux-reconstruction-framework.md): PyFR v0.1.0; FR on GPUs; solver reference for the staging LES.
+- [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): LES, ideally expanded M_j 1.5 jet on a plate (L/r0 6–12): tones fit Powell N; vortex-sheet guided-mode bands order axisym/helical tones; k–ω shows in-jet upstream waves (synthesis pending).
+- [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): Vortex-sheet guided-mode bands: A1/A2/u near the (0,2) lower limit, C on (1,1), B/D outside; M_j 1.56 LES f–k spectra show in-jet upstream waves at −a₀ at the tones (synthesis pending).
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): implicit LES of AR 2 rectangular jets with the nozzle; compared with Cincinnati PIV and far-field data (synthesis pending).
 - [Brunton et al. 2020](../notes/brunton-2020-machine-learning-fluid-mechanics.md): review of ML in fluid mechanics; cautions on extrapolation.
 - [Rezay Haghdoost et al. 2020](../notes/rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet.md): 3D cut-cell Euler of a starting jet; TOS model; constant-inflow control run.

@@ -115,8 +115,10 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Cavalieri 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): PSE vs TR-PIV wavepackets; β metric.
 - [Schmidt 2017](../notes/schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet.md): trapped acoustic modes; near-nozzle tones; Re dependence.
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): duct-like and guided waves; S1/S2 saddles.
+- [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): LES, ideally expanded M_j 1.5 jet on a plate (L/r0 6–12): tones fit Powell N; vortex-sheet guided-mode bands order axisym/helical tones; k–ω shows in-jet upstream waves (synthesis pending).
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): PIV upstream wave is the (0, 2) guided mode; tones in its band.
 - [Jordan 2018](../notes/jordan-2018-jet-flap-interaction-tones.md): vortex-sheet phase model for jet–edge tones.
+- [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): Vortex-sheet guided-mode bands: A1/A2/u near the (0,2) lower limit, C on (1,1), B/D outside; M_j 1.56 LES f–k spectra show in-jet upstream waves at −a₀ at the tones (synthesis pending).
 - [Cavalieri 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; coherent Mach-wave radiation.
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): vortex-sheet KH–guided-mode screech model.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): planar vortex-sheet bands for rectangular screech.

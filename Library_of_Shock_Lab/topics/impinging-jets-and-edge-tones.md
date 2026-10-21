@@ -96,6 +96,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Ho 1981](../notes/ho-1981-dynamics-impinging-jet-feedback-phenomenon.md): M ≤ 0.9 jet on a plate; 0.62U structures and sonic upstream waves phase-lock at the lip; integer-N stages and stage switching (synthesis pending).
 - [Tam & Ahuja 1990](../notes/tam-1990-theoretical-model-discrete-tone-impinging-jets.md): Upstream neutral vortex-sheet jet modes close impinging-tone loops; least-dispersive (0,1) wave (d²ω/dk²=0) gives mean St(M_j), axisymmetry, low-M cut-off (synthesis pending).
 - [Ponton 1992](../notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md) (not tagged): lip thickness changes screech staging; reflection off the exit face.
+- [Henderson & Powell 1993](../notes/henderson-1993-tones-choked-jet-impinging-flat-plates.md): Choked jet on 0.5–38d plates, NPR 2–4.75: large-plate L1 (toroidal), L2/L3 (helical) lines, small-plate S4/S5 tones; reflectors show both loops close at the nozzle (synthesis pending).
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md) (not tagged): lip-thickness and reflector effects on screech.
 - [Henderson 2002](../notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): cycle of an NPR 4.03 large-plate tone; wall-jet source at 2.6R; Powell N + p ≈ 4.4; zone of silence.
 - [Casalino 2009](../notes/casalino-2009-hybrid-empirical-caa-rocket-noise.md) (not tagged): pad CAA shows reflected waves reaching the lip; feedback untested.
@@ -104,6 +105,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Panda 2013](../notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md) (not tagged): full-scale pad source maps; duct exit dominates; no tones.
 - [Tsutsumi 2015](../notes/tsutsumi-2015-epsilon-liftoff-acoustics.md): subscale rocket on a deflector; reflected Mach waves dominate; no tones.
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md) (not tagged): trapped and guided core waves; the 0.82 < M < 1 window behind jet–edge models.
+- [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): LES, ideally expanded M_j 1.5 jet on a plate (L/r0 6–12): tones fit Powell N; vortex-sheet guided-mode bands order axisym/helical tones; k–ω shows in-jet upstream waves (synthesis pending).
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md) (not tagged): POD-pair k_x split that detects the guided mode.
 - [Jordan 2018](../notes/jordan-2018-jet-flap-interaction-tones.md): jet–edge tones closed by guided modes; phase criterion; trapping and saddle cut-offs.
 - [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md): the user's thesis; lip-driven mode selection, external closure, stand-off-shock leakage, the shocklet, a fully measured Powell equation.

@@ -226,7 +226,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 ### `phenomena`
 - `screech`, `staging` (A1/A2/B/C mode jumps), `mode-switching`, `intermittency`
 - `multimodal`: several resonance loops or tones active at once (not switching)
-- `standing-waves`: acoustic standing waves outside jets
+- `standing-waves`: standing waves, acoustic or hydrodynamic–acoustic (e.g. KH–upstream-wave interference in screeching or impinging jets)
 - `receptivity`: nozzle-lip or forcing receptivity
 - `global-mode`: self-excited global oscillation, Hopf bifurcation, lock-in
 - `hysteresis`: bistability and hysteresis between resonance states
