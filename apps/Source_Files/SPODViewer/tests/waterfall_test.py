@@ -104,8 +104,44 @@ def main(out, paths):
     for i in range(win.scale_combo.count()):
         win.scale_combo.setCurrentIndex(i)
         app.processEvents()
-        print(f"scale {win.scale_combo.currentData():4s} range [{np.nanmin(win.Z):.3g}, {np.nanmax(win.Z):.3g}]")
+        key = win.scale_combo.currentData()
+        assert win.chk_logc.isChecked() == (key != "frac"), key     # default log for λ, linear for share
+        print(f"scale {key:4s} range [{np.nanmin(win.Z):.3g}, {np.nanmax(win.Z):.3g}]  "
+              f"{win._zlabel!r}")
     win.scale_combo.setCurrentIndex(0)
+    app.processEvents()
+
+    # log/linear colour: linear λ is 10^(log λ)
+    Z_log = win.Z.copy()
+    win.chk_logc.setChecked(False)
+    app.processEvents()
+    assert np.allclose(win.Z, 10.0 ** Z_log, rtol=1e-6, equal_nan=True)
+    lo, hi = win.cbar.levels()
+    assert lo == 0 and abs(hi - np.nanmax(win.Z[win.St <= win.st_max.value()])) < 1e-9 * hi
+    print(f"linear colour: levels [{lo:.3g}, {hi:.3g}], label {win._zlabel!r}")
+    win.grab().save(os.path.join(out, "waterfall_linear.png"))
+    win.chk_logc.setChecked(True)
+
+    # log frequency axis: rows, click snapping and marker in log10 coordinates
+    win.chk_logy.setChecked(True)
+    app.processEvents()
+    assert win.plot.getAxis("left").logMode and (win.St > 0).all()
+    sel = win.St <= win.st_max.value()
+    z = np.where(sel[:, None], win.Z, -np.inf)
+    row, col = np.unravel_index(np.argmax(z), z.shape)
+    pos = vb.mapViewToScene(QtCore.QPointF(win._xpos[col], np.log10(win.St[row])))
+    win._clicked(FakeClick(pos))
+    pump(app, lambda: viewer.spod is not None and not viewer._waiting)
+    assert abs(viewer.spod.St[viewer.idx] - win.St[row]) < 4 * (win.St[1] - win.St[0])
+    assert abs(win.marker.data["y"][0] - np.log10(viewer.spod.St[viewer.idx])) < 1e-9
+    yr = vb.viewRange()[1]
+    assert abs(yr[1] - np.log10(min(win.st_max.value(), win.St[-1]))) < 1e-6, yr
+    print(f"log y: St {win.St[0]:.4f}..{win.St[-1]:.4f}, view {yr[0]:.3f}..{yr[1]:.3f}, "
+          f"clicked St={win.St[row]:.4f} -> {viewer.spod.St[viewer.idx]:.4f}")
+    win.grab().save(os.path.join(out, "waterfall_logy.png"))
+    win.chk_logy.setChecked(False)
+    app.processEvents()
+    assert not win.plot.getAxis("left").logMode
     pump(app, timeout=1) if False else [app.processEvents() for _ in range(20)]
     win.grab().save(os.path.join(out, "waterfall.png"))
     viewer.show()

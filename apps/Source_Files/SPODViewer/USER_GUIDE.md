@@ -57,8 +57,10 @@ The image can play Re(P·e^{iθ}), with θ running over one period, which shows 
 
 The **k-spectrum…** button (also View → Wavenumber spectrum, or K) opens a window showing the wavenumber content along x of the mode on screen. It follows the main window as you change frequency or mode.
 
-- **Top**: a map of log |P̂(y, k)|², the Fourier transform along x of each row of the mode.
+- **Top**: a map of |P̂(y, k)|², the Fourier transform along x of each row of the mode.
 - **Bottom**: the same summed over y, against k.
+- **Scales**: *Log colour (map)* and *Log y-axis (line)* switch the map's colours and the line's y-axis between log and linear, each on its own. Log (the default) shows five decades below the peak; linear runs from 0 to the peak and makes the strongest features stand out.
+- **Line sums over y**: by default the line adds up every row of the map. To sum only part of the jet (for example one shear layer), drag the blue band on the map, or type the limits in the *to* boxes. Rows left out are greyed on the map, the line's title shows the range, and the line is rescaled to its own peak. *Full y* goes back to all rows. The share kept, **Zoom to energy** and **Add** then use only the rows in the band. The band affects only this window, not the main image (the wave-direction split always applies at every y), and it goes back to all rows when you open another file.
 - **k axis**: in units of 1/D (*kD*), or rad/px when the file has no grid. **k > 0 is a wave travelling downstream** (+x), k < 0 upstream. The dashed line marks k = 0. Hovering shows k, the wavelength 2π/k and the level.
 - **Grey** covers the wavenumbers that are being zeroed for the current choice: the k < 0 half for *Downstream*, the k > 0 half for *Upstream*, and everything outside your ranges for *Custom k ranges*. The panel shows the share of Σ|P̂|² that is kept.
 - The radio buttons in the window are the same setting as in the main window; changing either changes both.
@@ -84,14 +86,16 @@ Choose *Custom k ranges* to keep only selected bands of wavenumber and zero ever
 
 ## Comparing cases: the waterfall
 
-File → Open waterfall (Ctrl+Shift+O), then select several SPOD files, for example an NPR sweep. A new window shows a contour of log λ against St (y) and the case parameter (x). It reads only the spectra, so it is quick even for large files.
+File → Open waterfall (Ctrl+Shift+O), then select several SPOD files, for example an NPR sweep. A new window shows a contour of λ (log by default) against St (y) and the case parameter (x). It reads only the spectra, so it is quick even for large files.
 
 - **x-axis**: chosen from the filename tokens that differ between the files (`NPR`, `Mj`, `M`, `Ma`, `hD`, `zD`, `sD`, …; `_NPR_29_` means 2.9). Change it in the *x-axis* list, or order the cases by file or by name.
 - **y-axis**: St by default. The list also offers any other frequency vector saved in every one of the files, such as `f` (shown in kHz) or `St_SRP`. Only vectors with exactly one value per frequency of the spectrum, increasing, are offered, so each eigenvalue is plotted at its own frequency. The *max* box follows the chosen axis. Clicking the waterfall and `[` / `]` work the same with any y-axis.
-- **Colour**: log λ, log λ normalised per case (by its maximum or by its integral over St), or the mode's share of the energy at each St. You can also pick the mode, the colour map and the y-axis maximum.
+- **Log y-axis**: shows the frequency axis on a log scale (the zero-frequency row is left out). Clicking and the *max* box work the same.
+- **Colour**: λ, λ normalised per case (by its maximum or by its integral over St), or the mode's share of the energy at each St. You can also pick the mode, the colour map and the y-axis maximum.
+- **Log colour**: colours by log₁₀ of the chosen quantity, or linearly when off. It starts on for the λ options and off for the share; your choice is kept while you switch between the λ options. *Auto contrast* uses the 5th percentile to the maximum in log, and 0 to the maximum in linear.
 - Files with different frequency grids (e.g. different Nfft) are interpolated onto the finest one.
 - **Open a case**: click the waterfall to open that case in the main window at that St. The click snaps to the strongest bin within ±3 bins; hold Shift to use the exact bin. Double-clicking a case in the list opens it at the last chosen St. In the main window, `[` and `]` step to the previous and next case at the same St.
-- **Export**: *Save figure…* saves a PNG; *Export CSV…* saves λ by y-axis value and case.
+- **Export**: *Save figure…* saves a PNG; *Export CSV…* saves the plotted values (log or linear, as shown; a `# values:` line says which) by y-axis value and case.
 
 ## Large files and the mode cache
 

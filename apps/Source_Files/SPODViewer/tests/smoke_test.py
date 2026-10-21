@@ -85,6 +85,31 @@ def main(path, out):
           f"{kw.kept_label.text()}")
     kw.split.grab().save(os.path.join(out, "kspectrum.png"))
     w._render(1200).save(os.path.join(out, "snapshot_kranges.png"))
+
+    # log/linear scales and the y band the line sums over
+    kw.chk_map_log.setChecked(False)
+    assert tuple(kw.img.levels) == (0, 1) and kw.img.image.min() >= 0
+    kw.chk_line_log.setChecked(False)
+    assert not kw.line.getPlotItem().ctrl.logYCheck.isChecked()
+    kept_full, E_full = kw.kept_label.text(), kw.E.copy()
+    r = w._rect
+    lo, hi = r.top() + 0.6 * r.height(), r.bottom()
+    kw.set_y_range(lo, hi)
+    app.processEvents()
+    assert kw._limited and abs(kw.y_lo.value() - lo) < 1e-3, (kw.y_lo.value(), lo)
+    rows = kw._yc >= lo
+    E_band = kw._P2[rows].sum(axis=0)[kw._order]
+    assert 0 < rows.sum() < rows.size and np.allclose(kw.E, E_band / E_band.max(), rtol=1e-5)
+    print(f"y band {lo:.3g}..{hi:.3g}: {kw.kept_label.text()}")
+    kw.split.grab().save(os.path.join(out, "kspectrum_yband_linear.png"))
+    kw.y_lo.setValue(r.top() - 10)                  # typed past the frame: clipped
+    assert abs(kw.yband.getRegion()[0] - r.top()) < 1e-3 and not kw._limited   # boxes round to 3 dp
+    kw.set_y_range(lo, hi)
+    kw.full_y()
+    assert not kw._limited and np.allclose(kw.E, E_full) and kw.kept_label.text() == kept_full
+    kw.chk_map_log.setChecked(True)
+    kw.chk_line_log.setChecked(True)
+    assert tuple(kw.img.levels) == (-5, 0)
     kw._remove_selected()
     assert len(w.k_ranges) == 1
     w.set_direction("all")

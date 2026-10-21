@@ -1,13 +1,15 @@
 """Waterfall of SPOD spectra across a set of cases (NPR, height, ...).
 
-Each case contributes one column: log10 of the chosen mode's eigenvalue against St
-(or another frequency axis saved in the files, such as f or St_SRP).
-Clicking a point opens that case at that frequency in the main viewer.
+Each case contributes one column: the chosen mode's eigenvalue (log10 or linear
+colour) against St (or another frequency axis saved in the files, such as f or
+St_SRP), on a linear or log y-axis. Clicking a point opens that case at that
+frequency in the main viewer.
 """
 
 from __future__ import annotations
 
 import os
+import re
 import threading
 
 import numpy as np
@@ -19,10 +21,10 @@ from PySide6.QtCore import Qt
 from . import colormaps
 from .data import SWEEP_PRIORITY, read_spectrum, sweep_tokens
 
-SCALINGS = [
-    ("log₁₀ λ", "abs"),
-    ("log₁₀ (λ / max λ per case)", "max"),
-    ("log₁₀ (λ / Σ λ over St, per case)", "sum"),
+SCALINGS = [          # each shown as log10 or linear ("Log colour")
+    ("λ", "abs"),
+    ("λ / max λ per case", "max"),
+    ("λ / Σ λ over St, per case", "sum"),
     ("λₙ / Σ modes (fraction at each St)", "frac"),
 ]
 
@@ -68,6 +70,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.xvals = np.array([])
         self.St = np.array([])     # y-axis values of the rows of Z (St unless changed)
         self.Z = None
+        self._zlabel = ""          # what Z holds, plain text (for the CSV)
         self._sel = None           # (column, frequency index in that case) last opened
         self._yscale = 1.0
         self._y_top = 1.0          # largest y value over the cases, for keeping "max" in proportion
@@ -106,6 +109,11 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.cmap_combo.setCurrentText("CMRmap")
         self.st_max = QtWidgets.QDoubleSpinBox(decimals=2, minimum=0.01, maximum=100, singleStep=0.1,
                                                value=1.5, keyboardTracking=False)
+        self.chk_logc = QtWidgets.QCheckBox("Log colour")
+        self.chk_logc.setChecked(True)
+        self.chk_logc.setToolTip("log₁₀ of the colour quantity (on by default for λ, off for the share)")
+        self.chk_logy = QtWidgets.QCheckBox("Log y-axis")
+        self.chk_logy.setToolTip("Log frequency axis (the zero-frequency row is left out)")
         self.chk_lines = QtWidgets.QCheckBox("Case lines")
         self.chk_lines.setChecked(True)
         self.btn_auto = QtWidgets.QPushButton("Auto contrast")
@@ -120,6 +128,8 @@ class WaterfallWindow(QtWidgets.QMainWindow):
             row.addWidget(lab if isinstance(lab, QtWidgets.QLabel) else QtWidgets.QLabel(lab))
             row.addWidget(w)
             row.addSpacing(6)
+        row.addWidget(self.chk_logc)
+        row.addWidget(self.chk_logy)
         row.addWidget(self.chk_lines)
         row.addStretch(1)
         row.addWidget(self.btn_auto)
@@ -150,7 +160,10 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.param_combo.currentIndexChanged.connect(lambda _: self._arrange())
         self.y_combo.currentIndexChanged.connect(lambda _: self._y_changed())
         self.mode_spin.valueChanged.connect(lambda _: self._compute())
-        self.scale_combo.currentIndexChanged.connect(lambda _: self._compute())
+        self._scale_key = self.scale_combo.currentData()
+        self.scale_combo.currentIndexChanged.connect(lambda _: self._scale_changed())
+        self.chk_logc.toggled.connect(lambda _: self._compute())
+        self.chk_logy.toggled.connect(lambda _: self._compute())
         self.cmap_combo.currentTextChanged.connect(lambda n: self.cbar.setColorMap(colormaps.get(n)))
         self.st_max.valueChanged.connect(lambda _: self._set_ranges())
         self.chk_lines.toggled.connect(lambda _: self._draw_case_lines())
@@ -235,6 +248,10 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         """The chosen frequency axis of a case, in display units."""
         return c["axes"].get(self._y_key(), c["St"]) * self._yscale
 
+    def _fy(self, v):
+        """Frequency values to plot coordinates (log10 with "Log y-axis")."""
+        return np.log10(v) if self.chk_logy.isChecked() else v
+
     def _y_label(self, html=True) -> str:
         key = self._y_key()
         if key.lower().startswith("f"):
@@ -265,6 +282,16 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         self.st_max.setValue(min(top, max(frac * top, 10.0 ** -decimals)))
         self.st_max.blockSignals(False)
         self.st_max_label.setText(f"{self._y_label(html=False).split(' (')[0]} max")
+        self._compute()
+
+    def _scale_changed(self):
+        """Log colour starts on for the λ options and off for the share; kept between λ options."""
+        key = self.scale_combo.currentData()
+        if (key == "frac") != (self._scale_key == "frac"):
+            self.chk_logc.blockSignals(True)
+            self.chk_logc.setChecked(key != "frac")
+            self.chk_logc.blockSignals(False)
+        self._scale_key = key
         self._compute()
 
     def _arrange(self):
@@ -317,6 +344,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
             return
         m = self.mode_spin.value() - 1
         how = self.scale_combo.currentData()
+        log = self.chk_logc.isChecked()
         St, same = self._common_St()
         cols = []
         for j in self.order:
@@ -330,6 +358,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
                     v = v / v[1:].max()
                 elif how == "sum":
                     v = v / np.trapezoid(v, self._y(c))
+            if log:
                 v = np.log10(np.clip(v, 1e-300, None))
             if not same:
                 v = np.interp(St, self._y(c), v, left=np.nan, right=np.nan)
@@ -337,12 +366,19 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         Z = np.column_stack(cols)          # [St, case]
         if St.size and St[0] == 0:
             Z, St = Z[1:], St[1:]           # DC dominates log plots
+        if self.chk_logy.isChecked():
+            keep = St > 0
+            Z, St = Z[keep], St[keep]
         self.St, self.Z = St, Z
         self.plot.setLabel("left", self._y_label())
+        self.plot.getAxis("left").setLogMode(self.chk_logy.isChecked())
         label = self.scale_combo.currentText()
         if how != "frac":
             label = label.replace("λ", f"λ<sub>{m + 1}</sub>", 1)
+        if log:
+            label = f"log₁₀ {label}" if how == "abs" else f"log₁₀ ({label})"
         self.cbar.axis.setLabel(label)
+        self._zlabel = re.sub(r"<sub>(.*?)</sub>", r"_\1", label)
         self._draw()
 
     # ------------------------------------------------------------------ drawing
@@ -355,7 +391,7 @@ class WaterfallWindow(QtWidgets.QMainWindow):
 
     def _draw(self):
         xe = self._edges(self._xpos)
-        ye = self._edges(self.St)
+        ye = self._edges(self._fy(self.St))
         X, Y = np.meshgrid(xe, ye)
         Z = np.nan_to_num(self.Z, nan=np.nanmin(self.Z))
         self.mesh.setData(X, Y, Z)
@@ -372,10 +408,12 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         z = z[np.isfinite(z)]
         if not z.size:
             return
-        if self.scale_combo.currentData() == "frac":
+        if self.chk_logc.isChecked():
+            lo, hi = float(np.percentile(z, 5)), float(np.max(z))
+        elif self.scale_combo.currentData() == "frac":
             lo, hi = 0.0, float(np.percentile(z, 99.8))
         else:
-            lo, hi = float(np.percentile(z, 5)), float(np.max(z))
+            lo, hi = 0.0, float(np.max(z))
         self.cbar.setLevels((lo, hi))
 
     def _draw_case_lines(self):
@@ -394,7 +432,8 @@ class WaterfallWindow(QtWidgets.QMainWindow):
             return
         xe = self._edges(self._xpos)
         self.plot.setXRange(xe[0], xe[-1], padding=0)
-        self.plot.setYRange(self.St[0], min(self.st_max.value(), self.St[-1]), padding=0)
+        self.plot.setYRange(self._fy(self.St[0]), self._fy(min(self.st_max.value(), self.St[-1])),
+                            padding=0)
         self._auto_levels()
 
     # ------------------------------------------------------------------ picking
@@ -405,9 +444,9 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         p = vb.mapSceneToView(scene_pos)
         xe = self._edges(self._xpos)
         col = int(np.searchsorted(xe, p.x()) - 1)
-        if not 0 <= col < len(self._xpos) or p.y() < 0:
+        if not 0 <= col < len(self._xpos) or (p.y() < 0 and not self.chk_logy.isChecked()):
             return None
-        row = int(np.argmin(np.abs(self.St - p.y())))
+        row = int(np.argmin(np.abs(self._fy(self.St) - p.y())))
         return col, row, p
 
     def _moved(self, pos):
@@ -459,7 +498,11 @@ class WaterfallWindow(QtWidgets.QMainWindow):
             self.marker.setData([], [])
             return
         col, i = self._sel
-        self.marker.setData([self._xpos[col]], [self._y(self.cases[self.order[col]])[i]])
+        y = self._y(self.cases[self.order[col]])[i]
+        if self.chk_logy.isChecked() and y <= 0:
+            self.marker.setData([], [])
+            return
+        self.marker.setData([self._xpos[col]], [self._fy(y)])
 
     def step_case(self, d):
         """Open the neighbouring case at the same frequency (called from the viewer)."""
@@ -489,5 +532,6 @@ class WaterfallWindow(QtWidgets.QMainWindow):
         np.savetxt(path, np.column_stack([self.St, self.Z]), delimiter=",", header=head,
                    comments="", fmt="%.6g")
         with open(path, "a", encoding="utf-8") as fh:
+            fh.write(f"# values: {self._zlabel}\n")
             fh.write("# columns: " + "; ".join(os.path.basename(self.cases[j]["path"]) for j in self.order) + "\n")
         self.info.setText(f"Saved {path}")
