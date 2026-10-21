@@ -122,6 +122,8 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Cavalieri 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; coherent Mach-wave radiation.
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): vortex-sheet KH–guided-mode screech model.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): planar vortex-sheet bands for rectangular screech.
+- [Jaunet et al. 2019](../notes/jaunet-2019-dynamics-round-jet-impingement.md): Pprime mic maps, M_j 0.7–1.5, H/D 2–8: impinging tones die at the (0,1) guided-mode limit S(0,1); KH + guided-mode vortex-sheet phase model beats Powell's (synthesis pending).
+- [Karami et al. 2020](../notes/karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets.md): LES of NPR 3.4 infinite-lip jet on a plate (h 2d, 5d): KH at 0.77a₀, wall-region sound at a₀, St_j 0.39 at 5d; local LSA: most unstable St falls 4→0.5 within 1d (synthesis pending).
 - [Edgington-Mitchell 2021](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): k_kh ± k_s waves confirm the product picture.
 - [Mancinelli 2021](../notes/mancinelli-2021-complex-valued-resonance-model-screech.md): finite-thickness complex-ω resonance model.
 - [Morra 2021](../notes/morra-2021-colour-of-forcing-resolvent-channel.md): why an eddy viscosity helps.

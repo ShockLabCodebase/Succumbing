@@ -103,6 +103,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): Vortex-sheet guided-mode bands: A1/A2/u near the (0,2) lower limit, C on (1,1), B/D outside; M_j 1.56 LES f–k spectra show in-jet upstream waves at −a₀ at the tones (synthesis pending).
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): mutually exclusive A1/A2 switching, 1–4 s dwell times.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES: diagonal to minor-axis flapping with TR.
+- [Weightman et al. 2019](../notes/weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet.md): NPR 3.4, z/D 5 impinging jet: thin lip helical (St 0.255), thick lip toroidal (0.385) + helical; foam shows thin-lip loop closes only via outer nozzle base (synthesis pending).
 - [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): coexisting, uncorrelated twin-jet tones; rig-dependent staging.
 - [Edgington-Mitchell 2021, shock leakage](../notes/edgington-mitchell-2021-generation-screech-tones-shock-leakage.md): first leak at the 3rd cell for A1, 4th for A2.
 - [Edgington-Mitchell 2021, waves](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): A2 matched with the leading k_s, against k_s2 labelling.

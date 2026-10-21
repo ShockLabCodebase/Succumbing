@@ -94,6 +94,7 @@ All simulation output here is time-resolved, so it suits SPOD, BMD, k–ω maps 
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): implicit LES of AR 2 rectangular jets with the nozzle; compared with Cincinnati PIV and far-field data (synthesis pending).
 - [Brunton et al. 2020](../notes/brunton-2020-machine-learning-fluid-mechanics.md): review of ML in fluid mechanics; cautions on extrapolation.
 - [Rezay Haghdoost et al. 2020](../notes/rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet.md): 3D cut-cell Euler of a starting jet; TOS model; constant-inflow control run.
+- [Karami et al. 2020](../notes/karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets.md): LES of NPR 3.4 infinite-lip jet on a plate (h 2d, 5d): KH at 0.77a₀, wall-region sound at a₀, St_j 0.39 at 5d; local LSA: most unstable St falls 4→0.5 within 1d (synthesis pending).
 - [Brès et al. 2021](../notes/bres-2021-les-twin-rectangular-jets-plasma.md): blind wall-modelled Charles LES of screeching twin rectangular jets; the reference LES recipe.
 - [Rezay Haghdoost et al. 2022](../notes/rezay-haghdoost-2022-shock-dividers.md): 2D cut-cell Euler and GSD vs schlieren; grid study.
 - [Thethy et al. 2022](../notes/thethy-2022-shock-diffraction-non-quiescent-medium.md): Euler isolates the cause of shock distortion; background-flow GSD and closed-form angles.
