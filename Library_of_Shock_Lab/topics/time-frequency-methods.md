@@ -184,10 +184,16 @@ Time-resolved schlieren, microphones and LES support every row. Non-time-resolve
 **Rocket noise:** the Torrence note suggests scale-averaged wavelet power with significance levels to track band levels through a nonstationary launch. No rocket-noise paper in the library does this yet.
 
 ## Papers
+- [Bedrosian 1963](../notes/bedrosian-1963-product-theorem-hilbert-transforms.md): product theorem; the analytic signal of r(t)cos ω₀t is exact when the envelope spectrum lies below ω₀ (synthesis pending).
+- [Nuttall & Bedrosian 1966](../notes/nuttall-1966-quadrature-approximation-hilbert-transform-modulated-signals.md): exact error of the quadrature approximation; one-sided complex modulation, not narrow band, is necessary and sufficient (synthesis pending).
+- [Rife & Boorstyn 1974](../notes/rife-1974-single-tone-parameter-estimation-discrete-time.md): Cramér–Rao bounds and ML estimation of one tone; frequency precision far finer than 1/T above an SNR threshold (synthesis pending).
 - [Horel 1984](../notes/horel-1984-complex-principal-component-analysis.md): origin of complex (Hilbert) PCA, i.e. HPOD_t. Band-pass and taper first; separates travelling from standing waves; weak for isolated pulses.
+- [Cohen 1989](../notes/cohen-1989-time-frequency-distributions-review.md): Cohen-class TFD review; IF as conditional mean frequency; uncertainty principle concerns marginals and windows (synthesis pending).
+- [Boashash 1992](../notes/boashash-1992-instantaneous-frequency-fundamentals.md): IF tutorial; definitions, Bedrosian/Nuttall conditions, IF as TFD first moment, BT > 10 for meaning, mono- vs multicomponent (synthesis pending).
 - [Huang 1998](../notes/huang-1998-empirical-mode-decomposition-hilbert-spectrum.md): EMD and the Hilbert spectrum. Sets the conditions for meaningful instantaneous frequency; intrawave modulation versus harmonics.
 - [Torrence 1998](../notes/torrence-1998-practical-guide-wavelet-analysis.md): wavelet practice. Cone of influence, χ² significance, band-averaged power, cross-wavelet phase.
 - [Rilling 2008](../notes/rilling-2008-one-or-two-frequencies-emd-two-tones.md): EMD resolution of two tones; constant-Q cutoff f_c(n) ≈ 0.66 at 10 siftings, independent of record length; explains Huang's close-tone failure (synthesis pending).
+- [Huang et al. 2009](../notes/huang-2009-on-instantaneous-frequency.md): the case that IF escapes the uncertainty principle; normalised HT, direct quadrature, TEO and zero-crossing compared (synthesis pending).
 - [Daubechies 2011](../notes/daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md): synchrosqueezed CWT; proof that IF of well-separated slowly modulated components is recoverable; separation set by wavelet bandwidth (synthesis pending).
 - [Sieber 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-filtered SPOD. Analytic coefficient pairs that keep intermittency within one pair.
 - [Kriegseis 2021](../notes/kriegseis-2021-hilbert-transform-revisited-hpod.md): first HPOD paper in fluids (ISPIV abstract). Time-direction HPOD as an automatic POD-pair finder; adds no information; shuffled snapshots give POD (synthesis pending).

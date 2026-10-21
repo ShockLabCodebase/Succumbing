@@ -168,6 +168,8 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `wavelets`
 - `EMD`: empirical mode decomposition, Hilbert–Huang
 - `synchrosqueezing`: synchrosqueezed and reassigned time–frequency transforms (SST, reassignment method)
+- `TFD`: Wigner–Ville, Cohen-class and other quadratic (bilinear) time–frequency distributions
+- `estimation-theory`: Cramér–Rao bounds and maximum-likelihood estimation of signal parameters (tone frequency, phase, amplitude)
 - `wavenumber-filtering`: streamwise Fourier / k_x decomposition of modes
 - `symmetry-decomposition`: D2 / SS–SA–AS–AA or azimuthal Fourier splits
 - `beamforming`: phased-array source localisation
