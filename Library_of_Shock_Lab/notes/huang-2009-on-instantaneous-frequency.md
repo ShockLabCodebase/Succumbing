@@ -10,7 +10,7 @@ doi: "10.1142/S1793536909000096"
 arxiv: ""
 pdf: "time-frequency-methods/Huang-EtAl_2009_On-Instantaneous-Frequency.pdf"
 version: "published"
-unverified: ["DOI not printed in the PDF; taken from the indexing request (DOI checked on Crossref per Research_Questions/hpod-instantaneous-frequency-uncertainty.md)"]
+unverified: ["DOI not printed in the PDF; taken from the indexing request (DOI checked on Crossref per Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty.md)"]
 group: false
 facility: ""
 data: ["synthetic", "field-data"]
@@ -255,7 +255,7 @@ No numerical tables in the paper. Values worth reusing:
 - Intrawave modulation: frequency variation within one cycle (the nonlinear-distortion signature). Interwave: from cycle to cycle.
 
 ## Relevance to this project
-This is the Hilbert–Huang side's main statement on what IF is and whether it is limited by the uncertainty principle. It is the primary source for H1 in [Research_Questions/hpod-instantaneous-frequency-uncertainty.md](../../Research_Questions/hpod-instantaneous-frequency-uncertainty.md). It follows on from [Huang 1998](huang-1998-empirical-mode-decomposition-hilbert-spectrum.md) and pairs with the signal-processing view of [Boashash 1992](boashash-1992-instantaneous-frequency-fundamentals.md), the resolution analysis of [Rilling 2008](rilling-2008-one-or-two-frequencies-emd-two-tones.md) (which it discusses, p. 220) and the proofs of [Daubechies 2011](daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md).
+This is the Hilbert–Huang side's main statement on what IF is and whether it is limited by the uncertainty principle. It is the primary source for H1 in [Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty.md](../Research_Questions/hpod-instantaneous-frequency-uncertainty.md). It follows on from [Huang 1998](huang-1998-empirical-mode-decomposition-hilbert-spectrum.md) and pairs with the signal-processing view of [Boashash 1992](boashash-1992-instantaneous-frequency-fundamentals.md), the resolution analysis of [Rilling 2008](rilling-2008-one-or-two-frequencies-emd-two-tones.md) (which it discusses, p. 220) and the proofs of [Daubechies 2011](daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md).
 
 - **What it means for HPOD instantaneous frequency** (step 3 of the SPOD → reconstruction → Hilbert POD pipeline in CLAUDE.md):
   - HPOD's IF, (1/2π) d arg ψ_j/dt ([Raiola 2025](raiola-2025-hilbert-pod.md), eq. 2.20–2.21), is the **analytic-signal IF** (HT in time). It is not DQ. The paper's strongest locality claims ("no integral interval", p. 196) apply to DQ, TEO and GZC, not to the HT, whose locality it leaves unquantified (p. 224). So the H1 argument does not transfer directly to HPOD. *(My inference.)*

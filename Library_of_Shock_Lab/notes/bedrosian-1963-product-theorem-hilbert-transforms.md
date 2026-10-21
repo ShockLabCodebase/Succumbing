@@ -92,7 +92,7 @@ None; a theory letter.
 - Analytic function: a complex function whose real and imaginary parts are a Hilbert pair, i.e. whose spectrum vanishes for negative arguments (Titchmarsh, ref. [4]).
 
 ## Relevance to this project
-This is the exact condition behind the informal rule that a Hilbert envelope and phase are meaningful only if "the amplitude varies slowly compared with the phase" ([Huang 1998](huang-1998-empirical-mode-decomposition-hilbert-spectrum.md), p. 15). It is the Bedrosian half of the "Bedrosian/Nuttall conditions" invoked in the research question [hpod-instantaneous-frequency-uncertainty](../../Research_Questions/hpod-instantaneous-frequency-uncertainty.md).
+This is the exact condition behind the informal rule that a Hilbert envelope and phase are meaningful only if "the amplitude varies slowly compared with the phase" ([Huang 1998](huang-1998-empirical-mode-decomposition-hilbert-spectrum.md), p. 15). It is the Bedrosian half of the "Bedrosian/Nuttall conditions" invoked in the research question [hpod-instantaneous-frequency-uncertainty](../Research_Questions/hpod-instantaneous-frequency-uncertainty.md).
 
 - **For the SPOD → reconstruction → HPOD pipeline:**
   - HPOD_t temporal modes are analytic by construction ([Raiola 2025](raiola-2025-hilbert-pod.md), p. 10–11), so |ψ_j| and arg ψ_j are always *some* envelope and phase: the canonical pair. Bedrosian says when that pair is a physical amplitude times a carrier: when the amplitude's spectrum lies entirely below the carrier frequency. *(My inference.)*

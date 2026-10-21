@@ -118,4 +118,4 @@ None of this changes the page's consensus. It supplies the primary citations for
 - **Hypothesis (own reasoning, labelled):** for advecting waves the field-of-view length substitutes for record length (≈ L/c), via Raiola's reduction (p. 11–13); consistent with Sieber's N_f ≈ one transit (p. 17), Horel p. 1668–1670, and the array form of the Cramér–Rao bound (Rife p. 592).
 - **Sharpen "How fast a switch can be resolved?"** into the benchmark: two advecting wavepackets 10% and 0.5% apart, SPOD → band-B → HPOD_t vs STFT, CWT, synchrosqueezing; known r, φ give Nuttall's exact Hilbert floor; Boashash's stepped sweeps (Fig. 7, p. 528) as template.
 
-Full argument: [hpod-instantaneous-frequency-uncertainty](../../../Research_Questions/hpod-instantaneous-frequency-uncertainty.md).
+Full argument: [hpod-instantaneous-frequency-uncertainty](../../Research_Questions/hpod-instantaneous-frequency-uncertainty.md).

@@ -10,7 +10,7 @@ doi: "10.1109/5.30749"
 arxiv: ""
 pdf: "time-frequency-methods/Cohen_1989_Time-Frequency-Distributions-A-Review.pdf"
 version: "published"
-unverified: ["DOI not printed in this scanned PDF; taken from the indexing request (Crossref-checked in Research_Questions/hpod-instantaneous-frequency-uncertainty.md)"]
+unverified: ["DOI not printed in this scanned PDF; taken from the indexing request (Crossref-checked in Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty.md)"]
 group: false
 facility: ""
 data: ["synthetic"]
@@ -257,7 +257,7 @@ Transcribed from page images; see the checks below. Angular frequency, ∫|s|²d
 - 𝒯 = j d/dω, 𝒲 = −j d/dt: time and frequency operators.
 
 ## Relevance to this project
-This is the source of the definitions the library uses for the instantaneous-frequency step of the CLAUDE.md pipeline (SPOD → reconstruction → Hilbert POD), and the main reference behind [Research_Questions/hpod-instantaneous-frequency-uncertainty](../../Research_Questions/hpod-instantaneous-frequency-uncertainty.md). It pairs with [Boashash 1992](boashash-1992-instantaneous-frequency-fundamentals.md), which restates the same conditional-moment results in Hz and adds the conditions on the analytic signal.
+This is the source of the definitions the library uses for the instantaneous-frequency step of the CLAUDE.md pipeline (SPOD → reconstruction → Hilbert POD), and the main reference behind [Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty](../Research_Questions/hpod-instantaneous-frequency-uncertainty.md). It pairs with [Boashash 1992](boashash-1992-instantaneous-frequency-fundamentals.md), which restates the same conditional-moment results in Hz and adds the conditions on the analytic signal.
 
 - **What HPOD's instantaneous frequency is, in Cohen's terms.**
   - [Raiola 2025](raiola-2025-hilbert-pod.md) defines f = (1/2π) d arg ψ_j/dt for HPOD temporal modes (eq. 2.20–2.21 there). By eq. 4.30 this is the conditional mean frequency of ψ_j(t) in every distribution with φ(θ, 0) = 1 and ∂φ/∂τ|₀ = 0, the Wigner and Choi–Williams included, and it is the IF in Cohen's sense only because ψ_j is analytic (Raiola proves HPOD_t modes have only positive frequencies). *(My synthesis of the two papers.)*

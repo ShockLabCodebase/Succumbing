@@ -10,7 +10,7 @@ doi: "10.1109/5.135376"
 arxiv: ""
 pdf: "time-frequency-methods/Boashash_1992_Estimating-And-Interpreting-The-Instantaneous-Frequency-Of-A-Signal-Part-1.pdf"
 version: "published"
-unverified: ["DOI not printed in the PDF; taken from the indexing request (DOI checked on Crossref per Research_Questions/hpod-instantaneous-frequency-uncertainty.md)"]
+unverified: ["DOI not printed in the PDF; taken from the indexing request (DOI checked on Crossref per Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty.md)"]
 group: false
 facility: ""
 data: ["synthetic"]
@@ -207,7 +207,7 @@ Read from page renders of every page; the OCR layer garbles equations. Notation 
 - Π_T(t): unit box of width T.
 
 ## Relevance to this project
-This is the formal reference behind the instantaneous-frequency step of the CLAUDE.md pipeline (SPOD → reconstruction → Hilbert POD). It supplies the definitions and validity conditions that the library previously took from [Huang 1998](huang-1998-empirical-mode-decomposition-hilbert-spectrum.md), and is the main source for the research question [hpod-instantaneous-frequency-uncertainty](../../Research_Questions/hpod-instantaneous-frequency-uncertainty.md).
+This is the formal reference behind the instantaneous-frequency step of the CLAUDE.md pipeline (SPOD → reconstruction → Hilbert POD). It supplies the definitions and validity conditions that the library previously took from [Huang 1998](huang-1998-empirical-mode-decomposition-hilbert-spectrum.md), and is the main source for the research question [hpod-instantaneous-frequency-uncertainty](../Research_Questions/hpod-instantaneous-frequency-uncertainty.md).
 
 - **Reading IF from HPOD modes:**
   - [Raiola 2025](raiola-2025-hilbert-pod.md) defines the HPOD IF as (1/2π) d arg ψ_j/dt (eq. 2.20–2.21), which is Ville's IF (eq. 18 here) applied to a temporal mode. Raiola proves that HPOD_t temporal modes contain only positive frequencies (p. 10–11), so they are analytic by construction and the leakage problem of Theorems 1–2 does not arise for the mode itself. What remains is the monocomponent condition: one ridge per instant, an amplitude whose spectrum sits below the carrier's (Bedrosian, p. 525), and a large BT over the time scale being interpreted (p. 526–528). *(My synthesis.)*
