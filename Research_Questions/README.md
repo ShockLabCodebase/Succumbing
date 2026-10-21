@@ -12,3 +12,4 @@ In-depth answers to research questions, written by the `/research-question` skil
 
 | Question | Status | Updated |
 | --- | --- | --- |
+| [How does HPOD's instantaneous frequency appear to beat the time–frequency trade-off?](hpod-instantaneous-frequency-uncertainty.md) | answered (3 open-access + 6 paywalled papers requested) | 2026-10-21 |

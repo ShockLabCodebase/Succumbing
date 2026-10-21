@@ -18,9 +18,24 @@ Library layout, frontmatter and tag vocabulary: `Library_of_Shock_Lab/SCHEMA.md`
 From `$ARGUMENTS`:
 - **`list`**: print the table in `Research_Questions/README.md` and stop.
 - **`continue <slug> [notes]`** (or the user asks to continue a saved question): read `Research_Questions/<slug>.md`, go to section 5.
-- **Anything else** is a new question. Check the README table for an existing question that covers it; if there is one, say so and ask whether to continue it or start a new one. Otherwise pick a short kebab-case slug, and go to section 1.
+- **Anything else** is a new question. Check the README table for an existing question that covers it; if there is one, say so and ask whether to continue it or start a new one. Otherwise pick a short kebab-case slug, and go to section 0a.
 
-If the question is ambiguous in a way that changes the answer (which flow, which mode, which regime), ask one short clarifying question before reading. Otherwise state your reading of the question and get going.
+## 0a. Clarifying questions
+
+An in-depth answer to the wrong question wastes the whole run, so settle what is being asked before any deep reading. A quick skim of the relevant topic page's scope and open questions is fine first, if it helps you ask sharper questions.
+
+1. State your reading of the question in one or two sentences: what you think is being asked, and what a good answer would deliver.
+2. Look for anything that would change the answer or where the effort goes, for example:
+   - **scope and regime:** which flow, geometry, mode, NPR / M_j range, data type (TR schlieren, PIV, acoustics, LES);
+   - **terms:** a word that could mean two things (e.g. "staging", "coupling", "resolution", "HPOD" in time or in space);
+   - **the kind of answer wanted:** the underlying physics or theory, a practical recommendation for the lab's data or pipeline, a comparison with the user's own results, or material for a paper or proposal;
+   - **the premise:** if the question assumes something the library disputes, say so and ask whether to answer the question as asked or the corrected one;
+   - **depth and breadth:** whether to stay with the library or go out for new papers, and any papers or data the user already has in mind.
+3. Ask the questions that matter (usually 1–4) with AskUserQuestion, each with concrete options and your recommended reading first, then wait for the answers. Don't ask about things you can settle yourself from the library or sensible defaults.
+4. If nothing is genuinely unclear, say so, give your reading, and carry on without waiting.
+5. Record the agreed reading and the answers in the question file under "The question, framed".
+
+Skip this section on `continue`, unless the user's notes change the scope.
 
 ## 1. Frame the question
 
