@@ -184,6 +184,7 @@ Time-resolved schlieren, microphones and LES support every row. Non-time-resolve
 **Rocket noise:** the Torrence note suggests scale-averaged wavelet power with significance levels to track band levels through a nonstationary launch. No rocket-noise paper in the library does this yet.
 
 ## Papers
+- [Gabor 1946](../notes/gabor-1946-theory-of-communication.md): analytic signal and the uncertainty relation Δt·Δf ≥ ½ on rms spreads; logons and the information diagram; IF useful only for slowly varying frequency (synthesis pending).
 - [Bedrosian 1963](../notes/bedrosian-1963-product-theorem-hilbert-transforms.md): product theorem; the analytic signal of r(t)cos ω₀t is exact when the envelope spectrum lies below ω₀ (synthesis pending).
 - [Nuttall & Bedrosian 1966](../notes/nuttall-1966-quadrature-approximation-hilbert-transform-modulated-signals.md): exact error of the quadrature approximation; one-sided complex modulation, not narrow band, is necessary and sufficient (synthesis pending).
 - [Rife & Boorstyn 1974](../notes/rife-1974-single-tone-parameter-estimation-discrete-time.md): Cramér–Rao bounds and ML estimation of one tone; frequency precision far finer than 1/T above an SNR threshold (synthesis pending).

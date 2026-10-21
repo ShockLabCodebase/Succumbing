@@ -9,7 +9,7 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 - [PDF] (rq hpod-instantaneous-frequency-uncertainty, 2026-10-21) If the published PDF is obtained, check whether the eq. 2.14/2.19/2.26 sign and typo issues flagged in the note were corrected.
 
 ## huang-1998-empirical-mode-decomposition-hilbert-spectrum
-- (rq hpod-instantaneous-frequency-uncertainty, 2026-10-21) Add to the two-tone limitation (Key findings, p. 45–47): Δf = 1/30 − 1/34 ≈ 0.0039 Hz gives a beat period of about 255 s, so the 512 s record holds only two beats and Δf ≈ 2/T, right at the Fourier resolution limit. The Hilbert route does not escape it. Link to `Research_Questions/hpod-instantaneous-frequency-uncertainty.md`.
+- (rq hpod-instantaneous-frequency-uncertainty, 2026-10-21) Two-tone limitation (Key findings, p. 45–47): add that [Rilling & Flandrin 2008](rilling-2008-one-or-two-frequencies-emd-two-tones.md) explain it: EMD is a filter with relative cutoff f_c(n) ≈ [1 + (ln 2/n)^{1/4}]⁻¹, and the pair's frequency ratio 0.88 needs ≈ 2200 siftings for half separation, independent of record length. The Δf·T ≈ 2 point (two beats in 512 s) explains only the Fourier and wavelet marginal spectra failing. Add `rilling-2008-…`, `huang-2009-on-instantaneous-frequency` and `boashash-1992-instantaneous-frequency-fundamentals` to `related`.
 
 ## sieber-2016-spectral-proper-orthogonal-decomposition
 - (rq hpod-instantaneous-frequency-uncertainty, 2026-10-21) Relevance section: state that N_f is the bandwidth that caps the instantaneous frequency's rate of change (p. 8–9), the same role as the reconstruction band before HPOD, and add `raiola-2025-hilbert-pod` to `related` if absent.

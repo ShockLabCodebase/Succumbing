@@ -36,16 +36,6 @@ DOIs were checked against Crossref. Where Crossref returned only an earlier conf
 | --- | --- | --- |
 | Sirovich 1987, *Turbulence and the dynamics of coherent structures*, Parts II and III, Q. Appl. Math. 45 | 10.1090/qam/910463, 10.1090/qam/910464 | Free on the AMS site; Part I is indexed |
 
-## Time–frequency methods
-
-| Paper | DOI | Note |
-| --- | --- | --- |
-| Boashash 1992, *Estimating and interpreting the instantaneous frequency of a signal. Part 1: Fundamentals*, Proc. IEEE 80, 520–538 | 10.1109/5.135376 | For research question `hpod-instantaneous-frequency-uncertainty`. Part 2 (Algorithms, 10.1109/5.135378) is useful but optional |
-| Cohen 1989, *Time-frequency distributions – a review*, Proc. IEEE 77, 941–981 | 10.1109/5.30749 | For research question `hpod-instantaneous-frequency-uncertainty` |
-| Huang, Wu, Long, Shen, Qu, Gloersen & Fan 2009, *On instantaneous frequency*, Adv. Adapt. Data Anal. 1, 177–229 | 10.1142/S1793536909000096 | For research question `hpod-instantaneous-frequency-uncertainty` |
-| Bedrosian 1963, *A product theorem for Hilbert transforms*, Proc. IEEE 51, 868–869; and Nuttall & Bedrosian 1966, *On the quadrature approximation to the Hilbert transform of modulated signals*, Proc. IEEE 54, 1458–1459 | 10.1109/PROC.1963.2308; 10.1109/PROC.1966.5138 | Two 2-page letters; index together. For research question `hpod-instantaneous-frequency-uncertainty` |
-| Rife & Boorstyn 1974, *Single tone parameter estimation from discrete-time observations*, IEEE Trans. Inf. Theory 20, 591–598 | 10.1109/TIT.1974.1055282 | For research question `hpod-instantaneous-frequency-uncertainty` |
-| Gabor 1946, *Theory of communication. Part 1: The analysis of information*, J. IEE 93, 429–441 | 10.1049/ji-3-2.1946.0074 | Optional (historical). For research question `hpod-instantaneous-frequency-uncertainty` |
 
 ## Supersonic and heated jet noise
 
