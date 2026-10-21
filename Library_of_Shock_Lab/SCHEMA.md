@@ -8,7 +8,7 @@ How the reference library is laid out, and the metadata every note carries. `Lib
 | --- | --- | --- |
 | `notes/<slug>.md` | One note per paper: YAML frontmatter + structured body | `/add-paper` |
 | `topics/<topic>.md` | Living review of one research thread across papers (consensus, disagreements, open questions) | `/add-paper` revises it in batches; `/lit` may extend it |
-| `topics/_queue/<topic>.md` | Topic contributions from newly indexed papers, waiting for the next batch revision of that page | `/add-paper` |
+| `topics/_queue/<topic>.md` | Topic contributions from newly indexed papers (`## <note key>`) and from research questions (`## research-question: <slug>`), waiting for the next batch revision of that page | `/add-paper`, `/research-question` |
 | `data/*.csv` | Numbers collected across papers (screech tones, shock spacing, rocket-noise parameters), each row citing note + page | `/add-paper` appends; see `data/README.md` |
 | `INDEX.md` | One line per paper, **generated** from frontmatter | `python Library_of_Shock_Lab/tools/library.py build` only |
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |
@@ -16,6 +16,7 @@ How the reference library is laid out, and the metadata every note carries. `Lib
 | `Paper_PDFs/_Unprocessed/` | New PDFs waiting for `/add-paper`, under any name | user |
 | `Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
 | `notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
+| `notes_to_update.md` | Queued changes to existing notes (cross-links, contradictions, corrections), applied in batches by `/add-paper` | `/research-question` |
 | `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s Library_of_Shock_Lab/tools`) | |
 
 Never hand-edit `INDEX.md` or `references.bib`; edit the note's frontmatter and rebuild.

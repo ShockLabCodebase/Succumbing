@@ -412,6 +412,11 @@ def cmd_check(args):
         due = [t for t, k in queue.items() if k >= 5]
         print("Topic contributions queued: " + ", ".join(f"{t} {k}" for t, k in queue.items())
               + (f". Due for revision (5+): {', '.join(due)}." if due else "."))
+    note_updates = REF / "notes_to_update.md"
+    n_upd = len(re.findall(r"^## ", note_updates.read_text(encoding="utf-8"), re.M)) if note_updates.exists() else 0
+    if n_upd:
+        print(f"Note updates queued: {n_upd} notes in notes_to_update.md"
+              + (" (due: 10+)." if n_upd >= 10 else "."))
     return 1 if errors else 0
 
 
