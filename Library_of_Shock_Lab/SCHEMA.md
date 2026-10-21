@@ -249,7 +249,8 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 
 ### `topics`
 Each value is a page in `topics/`.
-- `screech`: screech mechanism, closure and shock leakage, frequency prediction, amplitude and receptivity, global modes, triads
+- `screech`: screech mechanism, closure, shock leakage and source location, amplitude and receptivity, triads
+- `screech-frequency-and-global-modes`: screech frequency prediction models, convection speed, absolute instability and global modes, self-excitation, model and LES validation against experiment
 - `screech-staging-and-mode-switching`: A1/A2/B/C/D staging, k_s1/k_s2 loop assignment, mode switching, hysteresis, multimodal loops, staging-limit prediction
 - `non-axisymmetric-jets`: single rectangular and elliptical jets: flapping, wagging and helical modes, single-jet models, nozzle-shape control
 - `axis-switching-and-mean-flow`: axis switching and mean-flow evolution of non-round jets; streamwise and corner vortices; modes across the switch (bi-axial, new flapping, quasi-helical); tone-dependent mean flows

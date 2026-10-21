@@ -8,7 +8,7 @@ venue: "Exp. Fluids 60, 22"
 bib: {"journal": "Experiments in Fluids", "volume": "60", "pages": "22"}
 doi: "10.1007/s00348-018-2673-2"
 arxiv: ""
-pdf: "screech/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf"
+pdf: "screech-frequency-and-global-modes/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf"
 version: "published"
 unverified: []
 group: false
@@ -18,7 +18,7 @@ methods: ["PSD", "wavelets", "symmetry-decomposition", "vortex-sheet", "resonanc
 flow: ["round-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "mode-switching", "intermittency", "guided-jet-mode", "triadic-interaction"]
 params: {"M_j": "1.0–1.3", "NPR": "1.89–2.77", "Re": "2.86×10⁵–4.3×10⁵", "D": "10 mm", "T_0": "295 K"}
-topics: ["screech", "screech-staging-and-mode-switching", "linear-models"]
+topics: ["screech-frequency-and-global-modes", "screech", "screech-staging-and-mode-switching", "linear-models"]
 related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "jordan-2018-jet-flap-interaction-tones", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "nogueira-2024-guided-jet-waves"]
 cites: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "jordan-2018-jet-flap-interaction-tones", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "michalke-1984-survey-jet-instability-theory", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "KH + guided-jet-mode vortex-sheet resonance model predicts A1/A2 screech St vs M_j inside the B–S band; wavelets show mutually exclusive A1/A2 switching near M_j 1.12"
@@ -28,7 +28,7 @@ summary: "KH + guided-jet-mode vortex-sheet resonance model predicts A1/A2 scree
 - **Authors:** M. Mancinelli, V. Jaunet, P. Jordan, A. Towne
 - **Source:** Experiments in Fluids 60:22 (2019); received 18 Oct 2018, published online 3 Jan 2019
 - **DOI:** 10.1007/s00348-018-2673-2
-- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf` (9 pp.)
+- **PDF:** `Library_of_Shock_Lab/Paper_PDFs/screech-frequency-and-global-modes/Mancinelli-EtAl_2019_Screech-Tone-Prediction-Using-Upstream-Travelling-Jet-Modes.pdf` (9 pp.)
 - **Tags:** screech, A1/A2 staging, underexpanded round jet, guided jet mode, cylindrical vortex-sheet model, resonance model, Kelvin-Helmholtz wavepacket, branch/saddle points, near-field microphone array, azimuthal decomposition, wavelet transform, mode switching, intermittency, quadratic nonlinear interaction
 
 ## Summary

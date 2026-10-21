@@ -18,7 +18,7 @@ methods: ["PSD", "FW-H", "numerics"]
 flow: ["twin-jet", "rectangular-jet", "supersonic", "ideally-expanded", "wall-bounded"]
 phenomena: ["screech", "directivity", "shock-cells", "noise-control"]
 params: {"M_d": "1.5", "M_j": "1.5", "NPR": "3.671", "TR": "1", "AR": "2", "s/D": "2.25 (centre-to-centre, D_e)", "D_e": "19.25 mm", "Re": "≈10⁶"}
-topics: ["twin-jet-coupling", "simulation-methods", "screech"]
+topics: ["twin-jet-coupling", "simulation-methods", "screech-frequency-and-global-modes"]
 related: ["esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "yeung-2022-3d-spod-twin-rectangular-jet", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control", "yeung-2024-adaptive-spod-broadband-tonal", "nogueira-2021-twin-jet-coupling-spatial-lsa"]
 cites: []
 summary: "Blind wall-modelled LES (Charles, 65M cells) of OSU AR-2 twin jets, M_d 1.5: mic spectra match to St≈1 incl. screech, OASPL ~1 dB; LAFPA heat-source model grid study"

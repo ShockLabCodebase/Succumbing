@@ -18,7 +18,7 @@ methods: ["POD", "POD-pair", "statistics"]
 flow: ["round-jet", "supersonic", "underexpanded"]
 phenomena: ["Mach-disk", "shock-cells", "screech", "helical"]
 params: {"NPR": "4.2", "M_j": "1.59", "Re": "8.3×10⁵"}
-topics: ["screech", "diagnostics-and-facilities"]
+topics: ["screech", "diagnostics-and-facilities", "screech-frequency-and-global-modes"]
 related: ["edgington-mitchell-2023-screeching-jet-seen-from-all-sides", "henderson-2002-flow-structure-supersonic-impinging-jets", "weightman-2019-sound-production-impinging-supersonic-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "ragni-2011-particle-tracer-response-shocks-piv", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "papamoschou-1988-compressible-turbulent-shear-layer", "rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet"]
 cites: ["edgington-mitchell-2014-coherent-structure-helical-screech-mode", "oberleithner-2011-swirling-jet-vortex-breakdown-stability"]
 summary: "NPR 4.2 screeching underexpanded jet, PIV + schlieren: slip line grows into an inner shear layer lasting 4–5 cells; helical POD pair reaches it; no recirculation behind the Mach disk"

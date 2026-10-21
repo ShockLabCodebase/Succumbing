@@ -18,7 +18,7 @@ methods: ["statistics", "PSD", "coherence", "phase-averaging", "wavenumber-filte
 flow: ["round-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "source-location", "shock-cells", "KH-wavepackets", "standing-waves", "receptivity", "triadic-interaction", "flapping"]
 params: {"M_j": "1.07–1.50", "NPR": "2.06–3.67", "D": "38 mm", "t/D": "0.013 (0.5 mm lip)", "contraction": "4.4:1", "Re": "1.16–2.02×10⁶", "St": "0.24–0.74 (f_s D/U_j)", "TR": "≈1 (T₀ = 30 ± 2 °C)"}
-topics: ["screech", "screech-staging-and-mode-switching", "schlieren-and-density-imaging", "diagnostics-and-facilities"]
+topics: ["screech", "screech-staging-and-mode-switching", "schlieren-and-density-imaging", "diagnostics-and-facilities", "screech-frequency-and-global-modes"]
 related: ["mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "edgington-mitchell-2022-unifying-theory-jet-screech", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "raman-1998-supersonic-jet-screech-review", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "nogueira-2024-guided-jet-waves", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech"]
 cites: ["edgington-mitchell-2014-coherent-structure-helical-screech-mode", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise"]
 summary: "TR schlieren + near-field mic phase, 10 round jets M_j 1.07–1.50: source at 4th shock (A1, A2) or 3rd/4th (B); loop = 4 (A1), 5 (A2), 3–4 (B) periods; U_c rises with x"
@@ -274,7 +274,7 @@ This is the standard experimental source for "screech radiates from one shock an
   - The sequence N = 3, 4, 4, 3, 3, 3 is not monotonic. It uses a different microphone line for the higher M_j, and the authors themselves note that Powell's b coexists with other modes, which is not the case here (p. 224).
   - Treat b as tentative. If real, a source jump without a tone jump would be a kind of staging invisible in spectra. This is worth checking with modern data.
 - **Convective velocity.** U_c rising from about 0.55 to 0.7U_j along the jet agrees with Gojon et al. (2015) and Veltin & McLaughlin (2008) (p. 203–204, 214). It agrees with [Knast 2018](knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md) (p. 10–11), where U_c/U_j = 0.57–0.60 across twin-jet modes, so U_c does not explain staging. [Ivelja 2024](ivelja-2024-modal-analysis-screeching-elliptical-jets.md) (p. 19–20) cites it as consistent with LSA phase speeds in an elliptical jet.
-  - It undercuts Gao & Li's constant U_c/U_j per mode, and Powell/Tam formulae with a fixed 0.6–0.7U_j ([tam-1995](tam-1995-supersonic-jet-noise.md) p. 37; the screech page's frequency table).
+  - It undercuts Gao & Li's constant U_c/U_j per mode, and Powell/Tam formulae with a fixed 0.6–0.7U_j ([tam-1995](tam-1995-supersonic-jet-noise.md) p. 37; the frequency table on [screech frequency and global modes](../topics/screech-frequency-and-global-modes.md)).
 - **Nozzle differences.** This nozzle has a thin lip (t/D 0.013) and a low contraction ratio (4.4:1). The Monash leakage/PIV nozzle has t/D 0.33 and more than 100:1, and the PyFR model a 1 mm lip on 16 mm ([staging page](../topics/screech-staging-and-mode-switching.md)). The A1 → A2 jump here falls between M_j 1.13 and 1.15 (NPR 2.22–2.27). That matches the Monash/Tsinghua range (NPR 2.17–2.25) more closely than Pprime (M_j ≈ 1.12).
 
 **Methods and data for the lab workflow (CLAUDE.md)**
@@ -296,7 +296,7 @@ This is the standard experimental source for "screech radiates from one shock an
 - The LES also has what the experiment lacked:
   - the core field, to test whether the upstream wave at about −ω_s/c₀ is the G-JM or free-stream sound;
   - U_c(z) without schlieren integration effects;
-  - the receptivity region (negative phase slope to z/D ≈ 0.5–2 here), to compare with the guided-mode/KH projection near the lip suggested on the screech page.
+  - the receptivity region (negative phase slope to z/D ≈ 0.5–2 here), to compare with the guided-mode/KH projection near the lip suggested on the [staging page](../topics/screech-staging-and-mode-switching.md) (PyFR item 5).
 - (k_h + k_up)/k̄_sc = m/N is a cheap check on the LES mean shock spacing against the loop count. Comparing it with long-field k_s1/k_s2 spectra would test whether A2's extra period corresponds to k_s2.
 
 **Rocket noise.** Screech itself is absent at full scale ([lubert-2022](lubert-2022-supersonic-jet-noise-launch-vehicles-review.md)). The single-monopole, two-microphone phase localisation is a near-field analogue of apparent-source-location ideas in SP-8072-type models. It would not transfer to the distributed sources of rocket plumes without beamforming or holography.
