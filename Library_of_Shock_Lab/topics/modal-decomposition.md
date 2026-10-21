@@ -186,6 +186,7 @@ The algorithm is: subtract the mean, impose symmetries, split into blocks, windo
 - [Schmidt 2020](../notes/schmidt-2020-bispectral-mode-decomposition.md): BMD.
 - [Schmidt & Colonius 2020](../notes/schmidt-2020-guide-spod.md): Welch SPOD guide.
 - [Taira et al. 2020](../notes/taira-2020-modal-analysis-applications-outlook.md): interpreting outputs; POD pair = DMD on limit cycles.
+- [Kriegseis et al. 2021](../notes/kriegseis-2021-hilbert-transform-revisited-hpod.md): time-direction HPOD merges POD pairs automatically; needs ordered snapshots (synthesis pending).
 - [Nekkanti & Schmidt 2021](../notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md): SPOD denoising; reconstruction (time-frequency page).
 - [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): non-TR PIV POD conditioned on the Hilbert phase of microphones separates coupling states (synthesis pending).
 - [Towne et al. 2022](../notes/towne-2022-database-reduced-complexity-modeling.md): benchmark database with SPOD/DMD/resolvent demos.

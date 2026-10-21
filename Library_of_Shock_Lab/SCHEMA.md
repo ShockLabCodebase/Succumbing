@@ -145,7 +145,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `CAA`: computational aeroacoustics propagation
 - `model-only`: data produced only by the paper's own reduced model (no experiment or high-fidelity simulation)
 - `synthetic`: synthetic test signals or surrogate data used to demonstrate a method
-- `field-data`: non-flow time series used as examples (climate, ocean, seismic, plasma records)
+- `field-data`: non-flow time series used as examples (climate, ocean, seismic, plasma, physiological records)
 - `none`: theory, review or method with no new data
 
 ### `methods`
@@ -167,6 +167,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `Hilbert-transform`: instantaneous phase/amplitude/frequency from the analytic signal
 - `wavelets`
 - `EMD`: empirical mode decomposition, Hilbert–Huang
+- `synchrosqueezing`: synchrosqueezed and reassigned time–frequency transforms (SST, reassignment method)
 - `wavenumber-filtering`: streamwise Fourier / k_x decomposition of modes
 - `symmetry-decomposition`: D2 / SS–SA–AS–AA or azimuthal Fourier splits
 - `beamforming`: phased-array source localisation

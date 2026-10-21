@@ -187,7 +187,10 @@ Time-resolved schlieren, microphones and LES support every row. Non-time-resolve
 - [Horel 1984](../notes/horel-1984-complex-principal-component-analysis.md): origin of complex (Hilbert) PCA, i.e. HPOD_t. Band-pass and taper first; separates travelling from standing waves; weak for isolated pulses.
 - [Huang 1998](../notes/huang-1998-empirical-mode-decomposition-hilbert-spectrum.md): EMD and the Hilbert spectrum. Sets the conditions for meaningful instantaneous frequency; intrawave modulation versus harmonics.
 - [Torrence 1998](../notes/torrence-1998-practical-guide-wavelet-analysis.md): wavelet practice. Cone of influence, χ² significance, band-averaged power, cross-wavelet phase.
+- [Rilling 2008](../notes/rilling-2008-one-or-two-frequencies-emd-two-tones.md): EMD resolution of two tones; constant-Q cutoff f_c(n) ≈ 0.66 at 10 siftings, independent of record length; explains Huang's close-tone failure (synthesis pending).
+- [Daubechies 2011](../notes/daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md): synchrosqueezed CWT; proof that IF of well-separated slowly modulated components is recoverable; separation set by wavelet bandwidth (synthesis pending).
 - [Sieber 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-filtered SPOD. Analytic coefficient pairs that keep intermittency within one pair.
+- [Kriegseis 2021](../notes/kriegseis-2021-hilbert-transform-revisited-hpod.md): first HPOD paper in fluids (ISPIV abstract). Time-direction HPOD as an automatic POD-pair finder; adds no information; shuffled snapshots give POD (synthesis pending).
 - [Nekkanti 2021](../notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md): SPOD reconstruction, denoising and convolution spectrograms. Step 2 of the pipeline.
 - [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): band-pass Hilbert envelope and phase of microphone signals track intermittent twin-jet coupling; interruption statistics (synthesis pending).
 - [Wong 2023](../notes/wong-2023-steady-unsteady-coupling-twin-round-jets.md): POD → CWT, conditional POD and the beat test, applied to twin-jet coupling.
