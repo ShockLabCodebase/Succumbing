@@ -18,7 +18,9 @@ run_switch_benchmark                  % full sweep (see Runtime)
 run("tests/test_benchmark_components.m")
 ```
 
-Or from a shell: `matlab -batch "quick = true; run_switch_benchmark"`. All parameters are in `Functions/bench_default_params.m`. Override them after the `p = bench_default_params(quick);` line in the script.
+Or from a shell: `matlab -batch "quick = true; run_switch_benchmark"`. All parameters are in `Functions/bench_default_params.m`. Override them after the `p = bench_default_params(quick);` line in the script, or set a struct `overrides` before running it (see `run_recon_sweeps.m`). On Windows the MATLAB launcher strips inner double quotes from `-batch` commands, so put string overrides in a driver script.
+
+Quick runs write to `Results/`. `run_recon_sweeps.m` writes full sweeps to `Results_invspod/` and `Results_conv/`, so a quick check cannot overwrite them. `compare_runs.m` compares any two result folders.
 
 ## The synthetic flow
 
@@ -118,6 +120,27 @@ This compares four band reconstructions before HPOD_sep, using the same fields a
 - **The convolution route's remaining noise-free error** probably comes from its nfft-long kernel reaching into neighbouring switches.
 
 Switch resolution is the same for both Hamming routes (all switches at 1.5 T_b, a quarter at 0.75 T_b).
+
+### Full sweep, `invspod` against `conv` (2026-10-22)
+
+`run_recon_sweeps.m` runs the full sweep once per reconstruction, writing to `Results_invspod/` and `Results_conv/`. `compare_runs.m` joins the two, writes `Results_conv/compare_invspod_vs_conv_*.csv/.png` and prints the table. As a check, the probe methods (unaffected by the change) are identical in both runs.
+
+**IF spread of the field methods, convolution as a fraction of invspod** (L = 8λ):
+
+| | B ≤ 2Δf, SNR 20–10 dB | B ≤ 2Δf, SNR 0 dB | B = 4–8Δf |
+|---|---|---|---|
+| HPOD_sep, δ = 0.005 | 0.11–0.16 | 0.19–0.29 | 0.36–0.85 |
+| HPOD_comb, δ = 0.005 | 0.20–0.37 | 0.27–0.48 | 0.39–0.88 |
+| HPOD_sep, δ = 0.10 | 0.16–0.33 | 0.28–0.71 | 0.71–0.93 |
+| HPOD_comb, δ = 0.10 | 0.36–0.87 | 0.71–0.96 | 0.81–0.92 |
+
+- **IF spread.** The gain is largest where the block floor dominated: narrow bands, high SNR and the 0.5% spacing, where the spread falls by up to 9×. In wide bands and at low SNR, noise inside the band dominates and both routes come close together, approaching the field Cramér–Rao reference (within about 1.3–3× at 0 dB, B = 8Δf).
+  - At high SNR the convolution route still sits 5–15× above that reference. Its remaining floor probably comes from the nfft-long kernel reaching across switches, and it is lowest for HPOD_sep at narrow B (for example 7.6×10⁻⁷ f0 at δ = 0.005, B = Δf/2, 20 dB).
+- **Switch resolution** changes in 38 of 675 entries at δ = 0.005 and 15 of 675 at δ = 0.10, all in HPOD_sep and HPOD_comb.
+  - The convolution route removes an invspod failure in HPOD_sep at B = 2Δf, δ = 0.005, where 6 T_b dwells were missed (0 → 1) and 3 T_b dwells partly missed (0.75 → 1). It also improves HPOD_sep at B = Δf/2 and 1.5 T_b (0.25 → 0.75).
+  - It does slightly worse on the shortest dwells it could resolve: 0.75 T_b at B = 2Δf (1 → 0.5), and HPOD_comb at 0.75 T_b, δ = 0.10 (0.25 → 0). It responds over one nfft, while block inversion can follow changes within a block.
+  - With only 2–4 switches per dwell, single-entry changes of 0.25 are within the noise of the count.
+- **At B = Δf the resolved fractions are identical** for both routes, at every SNR (figure panels).
 
 **For the lab pipeline:** reconstruct the band for HPOD by convolution with the SPOD modes, which is what `tcoeffs.m` computes (Nekkanti & Schmidt 2021, eq. 3.4), rather than by `invspod`, whenever IF precision matters. Set `p.recon = "conv"` to use it in the benchmark. The default stays `"invspod"` to match the group's current pipeline.
 

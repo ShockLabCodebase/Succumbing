@@ -19,15 +19,22 @@
 %%%
 %%% Set quick = true for a fast check of the whole chain (seconds); the full
 %%% sweep takes longer (see README). quick can also be set before running,
-%%% e.g. matlab -batch "quick = true; run_switch_benchmark".
+%%% e.g. matlab -batch "quick = true; run_switch_benchmark". A struct
+%%% "overrides" set before running replaces fields of p, e.g.
+%%% overrides.recon = "conv"; overrides.save_folder = "Results_conv";
 
-clearvars -except quick; close all
+clearvars -except quick overrides; close all
 addpath(genpath("Functions"));
 
 if ~exist("quick", "var")
     quick = false;
 end
 p = bench_default_params(quick);
+if exist("overrides", "var")
+    for f = fieldnames(overrides)'
+        p.(f{1}) = overrides.(f{1});
+    end
+end
 % Overrides go here, e.g. p.deltas = 0.10; p.snr_dB = [20 0];
 
 if ~exist(p.save_folder, "dir")
