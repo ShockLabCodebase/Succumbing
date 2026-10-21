@@ -5,7 +5,9 @@ function q = invspod_band(S, f_band, n_modes)
 %%% f_band(2), rebuilds each block's Fourier data, conjugate-fills the
 %%% negative frequencies, inverse-FFTs, divides by the window, and stitches
 %%% overlapping blocks with a running Hann-weighted average, as the group's
-%%% modified invspod.m does. Samples covered by no block are 0.
+%%% modified invspod.m does. Without overlap (step >= nfft) the blocks are
+%%% simply concatenated (Hann weights would zero each block's first sample).
+%%% Samples covered by no block are 0.
 %%%
 %%% Output q [nx, nt] (single, real, zero mean).
 
@@ -14,7 +16,11 @@ nx = size(S.P, 1);
 n_m = min(n_modes, size(S.P, 2));
 num = zeros(nx, S.nt);
 den = zeros(1, S.nt);
-wg = hann(S.nfft, 'periodic')';
+if S.step >= S.nfft
+    wg = ones(1, S.nfft);
+else
+    wg = hann(S.nfft, 'periodic')';
+end
 if isempty(in_band)
     q = zeros(nx, S.nt, 'single');
     return

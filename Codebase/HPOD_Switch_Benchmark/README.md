@@ -93,10 +93,33 @@ Each dwell has only 2–4 switches, so the resolved fractions are coarse.
 4. **IF precision is below the bin width, and near the probe Cramér–Rao reference for the point methods.**
    - Gauss, Bump and FSST track the reference and scale with SNR. At δ = 0.005, 10 dB and B = Δf, the IF standard deviation is about 5×10⁻⁶ f0, a hundredth of Δf.
    - **The HPOD routes sit on a floor that does not change with SNR:** about 1.4×10⁻⁵ f0 (HPOD_sep) and 5×10⁻⁵ f0 (HPOD_comb) at δ = 0.005, and 3–9×10⁻⁴ f0 at δ = 0.10. That is well above the spatially averaged bound.
-   - Because it is SNR-independent, the floor comes from the block-wise inverse SPOD (Hamming division plus Hann-weighted stitching), not from noise. It is consistent with the window leakage reported by Nekkanti & Schmidt (2021, p. 13–14, 27).
-   - **Open item:** check it with a rectangular window and no overlap, or with the convolution (tcoeffs) route.
+   - The floor is a block-stitching artefact of the inverse SPOD, not noise. The convolution route removes it (see "IF floor diagnosis" below).
 5. **HPOD of the raw field never separates the tones**, at any field of view up to 16λ. The packets' Gaussian envelope (σ = 4λ) limits the effective spatial aperture to about 9λ, whatever L is, so the wavenumber resolution of about 11% does not reach the 10% spacing. Its weaker mode is noise-dominated (IF spread around 0.1 f0 at δ = 0.005). This field of view does not support the space-for-time hypothesis. A wider envelope, or `env_shift_lambda` ≠ 0, would test it properly.
 6. **The Hilbert step's own floor is negligible:** at most 2×10⁻⁴ f0 at δ = 0.10, B = 8Δf, and below 10⁻⁷ f0 at δ = 0.005. The modulation's energy below −f_k is under 2×10⁻⁷. So for these 2-period ramps, all the errors above come from narrow-banding, the inverse SPOD and noise, not from the analytic signal (Nuttall & Bedrosian 1966).
+
+## IF floor diagnosis (`diagnose_hpod_floor.m`, 2026-10-22)
+
+This compares four band reconstructions before HPOD_sep, using the same fields at SNR = ∞, 20, 10 and 0 dB, with B = Δf and L = 8λ. The script writes `Results/hpod_floor_diagnosis.csv` and `.png`. IF spread is std(IF error)/f0 over the long exclusive segments:
+
+| Reconstruction | δ = 0.10, no noise | δ = 0.10, 0 dB | δ = 0.005, no noise | δ = 0.005, 0 dB | Dominant error frequency |
+|---|---|---|---|---|---|
+| `invspod`, Hamming, 87.5% overlap (group default) | 3.4×10⁻⁴ | 4.9×10⁻⁴ | 1.4×10⁻⁵ | 1.4×10⁻⁵ | 1/nfft (the block length) |
+| rectangular window, no overlap | 2.0×10⁻³ | 1.8×10⁻³ | 1.9×10⁻⁴ | 1.9×10⁻⁴ | about 2/nfft (block edges) |
+| `invspod`, Hamming, 4× longer nfft | 7.8×10⁻⁴ | 8.2×10⁻⁴ | 4.5×10⁻⁵ | 4.4×10⁻⁵ | the block step |
+| **convolution (tcoeffs-style)**, Hamming modes | **1.0×10⁻⁴** | 3.2×10⁻⁴ | **1.8×10⁻⁶** | 3.3×10⁻⁶ | — |
+| field Cramér–Rao reference | 0 | 1.4×10⁻⁴ | 0 | 1.6×10⁻⁶ | |
+
+**What the table shows:**
+- **The convolution route removes the floor.** Noise-free, its spread is 3–8× lower than block-wise inversion. With noise it grows as the SNR falls, reaching about 2× the field Cramér–Rao reference at 0 dB.
+- **Block-wise inversion has a deterministic floor tied to the blocks.** It is the same with and without noise, and its error repeats at the block length or block step.
+- **A rectangular window with no overlap makes it worse, by 3–14×.** Concatenated blocks leave phase discontinuities at every block edge. Removing the window leakage between modes (Nekkanti & Schmidt 2021, p. 27) does not help here.
+- **It is not leakage being cut off at the band edges.** Moving tone A onto a bin centre leaves the floor unchanged (2.1×10⁻⁴ and 9.8×10⁻⁶ against 2.7×10⁻⁴ and 9.0×10⁻⁶ for tone A's segments). A 4× longer nfft puts more bins inside B but makes the floor worse.
+- **Most likely cause:** each block's single-band reconstruction is divided by the Hamming window and the blocks are cross-faded. The block-to-block phase mismatch then shows up as a periodic IF error.
+- **The convolution route's remaining noise-free error** probably comes from its nfft-long kernel reaching into neighbouring switches.
+
+Switch resolution is the same for both Hamming routes (all switches at 1.5 T_b, a quarter at 0.75 T_b).
+
+**For the lab pipeline:** reconstruct the band for HPOD by convolution with the SPOD modes, which is what `tcoeffs.m` computes (Nekkanti & Schmidt 2021, eq. 3.4), rather than by `invspod`, whenever IF precision matters. Set `p.recon = "conv"` to use it in the benchmark. The default stays `"invspod"` to match the group's current pipeline.
 
 ## Limits
 

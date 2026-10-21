@@ -48,6 +48,14 @@ e = norm(double(q(:, mid) - u(:, mid)), 'fro')/norm(double(u(:, mid)), 'fro');
 ok = e < 0.02; n_fail = n_fail + ~ok;
 check(ok, sprintf("SPOD band reconstruction error %.4f", e));
 
+%% 5b. Convolution (tcoeffs-style) reconstruction matches up to a constant gain
+qc = double(convspod_band(S, u, [0.05 0.15], 8));
+um = double(u(:, mid)); qm = qc(:, mid);
+g = (qm(:)'*um(:))/(qm(:)'*qm(:));
+e = norm(g*qm - um, 'fro')/norm(um, 'fro');
+ok = e < 0.02; n_fail = n_fail + ~ok;
+check(ok, sprintf("convolution reconstruction error %.4f (gain %.3f)", e, g));
+
 %% 6. HPOD of a travelling wave: one mode, IF = f
 H = hpod_time(u(:, :) - single(0.5*cos(2*pi*0.12*(tt - xx'/c))), 2, 0.05);
 fi = phase_slope_if(H.a(1,:), 41);

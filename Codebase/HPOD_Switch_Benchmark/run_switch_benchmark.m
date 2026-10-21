@@ -80,7 +80,7 @@ for id = 1:numel(p.deltas)
             H_raw = hpod_time(fld.u, 2, p.hpod_trim_frac);
             M_eff = fld.M_eff;
             for iB = 1:numel(p.B_over_df)
-                outs = run_field_methods(p, sc, S, H_raw, p.B_over_df(iB)*df);
+                outs = run_field_methods(p, sc, S, H_raw, p.B_over_df(iB)*df, fld.u);
                 [R, rho] = add_rows(R, outs, sc, p, snr, trim, delta, L, p.B_over_df(iB), M_eff);
                 if make_ex && iB == iB_ex
                     ex.field = outs; ex.rho_field = rho;

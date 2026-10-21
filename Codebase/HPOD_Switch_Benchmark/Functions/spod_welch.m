@@ -1,4 +1,4 @@
-function S = spod_welch(u, nfft, overlap_pct, f_range, n_modes_keep)
+function S = spod_welch(u, nfft, overlap_pct, f_range, n_modes_keep, win)
 %%% Minimal Welch SPOD of a field u [nx, nt], keeping only frequency bins in
 %%% f_range = [f_lo f_hi] (cycles/sample) to save memory.
 %%%
@@ -8,15 +8,24 @@ function S = spod_welch(u, nfft, overlap_pct, f_range, n_modes_keep)
 %%% can rebuild the data. Absolute scaling is arbitrary; only relative
 %%% amplitudes matter here.
 %%%
+%%% win (optional): 'hamming' (default) or 'rect'.
+%%%
 %%% Output S: f (kept bins), bins (FFT indices), P [nx, n_modes, n_f] modes,
 %%% L [n_modes, n_f] energies, A [n_modes, n_blk, n_f] coefficients, w
 %%% (window), nfft, step, n_blk, nt.
 
+if nargin < 6 || isempty(win)
+    win = 'hamming';
+end
 [nx, nt] = size(u);
 u = u - mean(u, 2);
 step = round(nfft*(1 - overlap_pct/100));
 n_blk = floor((nt - nfft)/step) + 1;
-w = hamming(nfft, 'periodic')';
+switch win
+    case 'hamming', w = hamming(nfft, 'periodic')';
+    case 'rect',    w = ones(1, nfft);
+    otherwise,      error("Unknown window %s", win);
+end
 
 f_all = (0:nfft-1)/nfft;
 bins = find(f_all >= f_range(1) & f_all <= f_range(2));

@@ -41,6 +41,9 @@ p.nfft_factor = 4;              % nfft = 2^nextpow2(nfft_factor/(delta*f0))
 p.overlap = 87.5;               % SPOD block overlap (%), as recommended for the pipeline
 p.n_modes_keep = 8;             % SPOD modes stored per frequency
 p.n_modes_recon = 2;            % SPOD modes used in the reconstruction (group default)
+p.recon = "invspod";            % band reconstruction: "invspod" (block-wise, as the group's
+                                % invspod.m) or "conv" (tcoeffs-style convolution; removes the
+                                % block-stitching IF floor, see diagnose_hpod_floor.m)
 p.n_hpod_modes = 4;             % HPOD modes kept
 p.hpod_trim_frac = 0.05;        % record fraction excluded at each end when building HPOD modes
 
