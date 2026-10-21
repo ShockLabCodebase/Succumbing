@@ -18,7 +18,7 @@ methods: ["statistics", "PSD"]
 flow: ["rectangular-jet", "supersonic", "underexpanded", "overexpanded", "ideally-expanded"]
 phenomena: ["noise-control", "screech", "axis-switching", "BBSAN", "mixing-enhancement"]
 params: {"M_d": "2", "M_j": "1.5–2.5", "AR": "3", "TR": "1 (cold)"}
-topics: ["non-axisymmetric-jets", "screech"]
+topics: ["non-axisymmetric-jets", "screech", "axis-switching-and-mean-flow"]
 related: ["kerechanin-2001-trailing-edge-rectangular-jet-acoustics", "raman-1998-supersonic-jet-screech-review", "krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "esfahani-2021-coupling-modes-twin-rectangular-jets"]
 cites: []
 summary: "AR 3 Mach 2 half-nozzle with one-sided trailing-edge cutouts: off-design streamwise vortices raise mixing up to ~50%; V-notch removes M_j 1.75 screech; condensation imaging, mics"
