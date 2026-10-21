@@ -89,6 +89,7 @@ Staging-specific methods (shock-spectrum peaks, switch tracking, loop counts) ar
 - [Kerechanin 2001](../notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts amplify or suppress rectangular-jet screech.
 - [Alkislar 2003](../notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet, phase-locked stereo PIV of flapping-vortex circulation (synthesis pending).
 - [Suzuki & Lele 2003](../notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): 2-D DNS + eikonal, M 1.2 mixing layer: weak shocks leak at inter-vortex saddles where the vorticity barrier is weak; heating eases leakage, tilts it downstream (synthesis pending).
+- [André et al. 2013](../notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): Notched lip kills screech, keeps shock spacing: shock train lasts longer, BBSAN ≤ 4 dB louder and higher; U_c/U_j fixed at 0.65; screeching peak tracks 2St_s (synthesis pending).
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): helical mode reaches the Mach-disk shear layer; no recirculation; PIV smearing at shocks.
 - [Edgington-Mitchell 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): C-mode PIV at NPR 3.4; coherent vorticity at cells 2–4 as source marker (synthesis pending).
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse: flapping vorticity peaks before the 3rd shock.

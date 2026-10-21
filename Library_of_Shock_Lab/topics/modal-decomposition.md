@@ -179,6 +179,7 @@ The algorithm is: subtract the mean, impose symmetries, split into blocks, windo
 - [Sieber et al. 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-domain SPOD.
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): POD of time-resolved schlieren; aliasing, drift.
 - [Taira et al. 2017](../notes/taira-2017-modal-analysis-fluid-flows-overview.md): tutorial overview of all methods.
+- [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): POD triple decomposition of 8500 PIV snapshots strips screech: 2 modes (C) vs 18 (B); broadband L/δθ ≈ 2.1, 1.0, 1.0 match non-screeching jets; ≥3000 samples suffice (synthesis pending).
 - [Schmidt et al. 2018](../notes/schmidt-2018-spectral-analysis-jet-turbulence.md): low-rank diagnostic; restricted SPOD; SPOD vs resolvent.
 - [Towne et al. 2018](../notes/towne-2018-spod-relationship-dmd-resolvent.md): SPOD theory; links to POD, DMD, resolvent.
 - [Schmidt & Towne 2019](../notes/schmidt-2019-streaming-spod.md): streaming SPOD.

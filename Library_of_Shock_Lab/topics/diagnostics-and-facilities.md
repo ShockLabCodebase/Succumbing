@@ -160,10 +160,13 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Edgington-Mitchell 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): C-mode PIV at NPR 3.4: POD triple decomposition; coherent vorticity at cells 2–4 proposed to pick sources (synthesis pending).
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): Syracuse Skytop anechoic chamber (not tagged).
 - [Mercier et al. 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): near-field two-microphone phase averaging; repeatability; LMFA anechoic jet (synthesis pending).
+- [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): POD triple decomposition of 8500 PIV snapshots strips screech: 2 modes (C) vs 18 (B); broadband L/δθ ≈ 2.1, 1.0, 1.0 match non-screeching jets; ≥3000 samples suffice (synthesis pending).
 - [Edgington-Mitchell et al. 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): standard group PIV settings for screech (not tagged).
 - [Knast et al. 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): tone frequency and phase, not amplitude, in a non-anechoic rig (not tagged).
 - [Mayer et al. 2019](../notes/mayer-2019-bristol-aeroacoustic-wind-tunnel.md): anechoic open-jet facility design and acoustic data-quality checks.
 - [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md): PIV settings, POD convergence, two-facility practice; ray tracing through PIV fields.
+- [Tan et al. 2019](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV of C-mode jets (M_j 1.45, 1.59): POD-filtered lip-line integral scales give Mach-independent c_L for k^{3/2}/ε and k^{1/2}D_j/V₁ BBSAN and mixing-noise source models (synthesis pending).
+- [Tan et al. 2019](../notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): Morris–Miller BBSAN analogy from POD-filtered PIV and k–ω SST RANS, M_j 1.45/1.59: Sr 1 sources on sonic line just upstream of shock reflections; D_j/v̄₁ scale best (synthesis pending).
 - [Edgington-Mitchell et al. 2021](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): PIV-derived density checked with tomographic BOS (not tagged).
 - [Esfahani et al. 2021b](../notes/esfahani-2021-coupling-modes-twin-rectangular-jets.md): OSU GDTL anechoic chamber (not tagged).
 - [Shehzad et al. 2021](../notes/shehzad-2021-laser-sheet-alignment-piv.md): laser sheet aligned to the target before calibration; applies to planar PIV.

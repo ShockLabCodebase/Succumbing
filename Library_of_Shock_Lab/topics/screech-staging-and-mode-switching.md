@@ -96,6 +96,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Tam 1995](../notes/tam-1995-supersonic-jet-noise.md): toroidal-to-helical switch by instability growth.
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): Merle's stages, jumps unexplained; switching and coexisting tones.
 - [Panda 1999](../notes/panda-1999-experimental-investigation-screech-noise-generation.md): Phase-averaged near-field mics + phase-locked spark schlieren, M_j 1.19/1.42: KH–sound standing wave L_sw ≈ 0.8L; sound born at 3rd–4th shock; L_sw screech formula (synthesis pending).
+- [André et al. 2013](../notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): Notched lip kills screech, keeps shock spacing: shock train lasts longer, BBSAN ≤ 4 dB louder and higher; U_c/U_j fixed at 0.65; screeching peak tracks 2St_s (synthesis pending).
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse flaps at NPR 2.2; a second, silent instability.
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): A1 → A2 as m = 4 → 5 at a fixed source; k_s2 signature.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): A1 and A2 close on the same G-JM.

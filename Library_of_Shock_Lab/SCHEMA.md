@@ -205,6 +205,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `calibration`: optical alignment, distortion correction, tracer response
 - `optical-modelling`: synthetic schlieren / BOS images, light-ray tracing, numerical schlieren from CFD
 - `vortex-identification`: vortex detection and tracking (swirling strength λ_ci, Q, Γ criteria)
+- `pressure-from-PIV`: pressure or density reconstructed from PIV velocity (isentropic relations, momentum integration)
 
 ### `flow`
 - `round-jet`, `rectangular-jet`, `elliptical-jet`, `planar-jet` (2D / planar models), `twin-jet`, `multi-stream-jet` (coaxial or multi-stream nozzles), `swirling-jet`

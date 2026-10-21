@@ -136,8 +136,12 @@ Ray-traced near-pad arrays, plus wavenumber-filtered SPOD of heated-jet LES to s
 - [Ray 2005](../notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): LEE with PSE-wave × shock-mode sources; BBSAN lobe at the local Mach angle of k_t − k_s; ring-source lobes at high St (synthesis pending).
 - [Samimy et al. 2006](../notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
 - [Cavalieri et al. 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): low-energy m = 0/1 linear wavepackets carry the low-angle sound.
+- [André et al. 2013](../notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): Notched lip kills screech, keeps shock spacing: shock train lasts longer, BBSAN ≤ 4 dB louder and higher; U_c/U_j fixed at 0.65; screeching peak tracks 2St_s (synthesis pending).
+- [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): POD triple decomposition of 8500 PIV snapshots strips screech: 2 modes (C) vs 18 (B); broadband L/δθ ≈ 2.1, 1.0, 1.0 match non-screeching jets; ≥3000 samples suffice (synthesis pending).
 - [Cavalieri et al. 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; Mach waves, superdirectivity, jitter.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES far field of heated rectangular jets; BBSAN and Mach-wave angles against semi-empirical formulas (synthesis pending).
+- [Tan et al. 2019](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV of C-mode jets (M_j 1.45, 1.59): POD-filtered lip-line integral scales give Mach-independent c_L for k^{3/2}/ε and k^{1/2}D_j/V₁ BBSAN and mixing-noise source models (synthesis pending).
+- [Tan et al. 2019](../notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): Morris–Miller BBSAN analogy from POD-filtered PIV and k–ω SST RANS, M_j 1.45/1.59: Sr 1 sources on sonic line just upstream of shock reflections; D_j/v̄₁ scale best (synthesis pending).
 - [Wong et al. 2021](../notes/wong-2021-wavepacket-modelling-bbsan.md): group's inside-out wavepacket × shock-cell BBSAN model; jitter fills the dips.
 - [Mathews 2025](../notes/mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md): full-scale BSN sources at shock cells, failed spacing formulas, rocket Mach waves and nonlinear losses.
 
