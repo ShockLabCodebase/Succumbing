@@ -174,6 +174,7 @@ Which imaging suits which analysis, following the CLAUDE.md workflow:
 - [Krothapalli et al. 1986](../notes/krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet.md): microphone-triggered phase-locked schlieren (not tagged).
 - [Samimy et al. 1998](../notes/samimy-1998-rectangular-jet-trailing-edge-control.md): condensation imaging, per-nozzle normalisation (not tagged).
 - [Henderson et al. 2002](../notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): phase-locked spark shadowgraph (not tagged).
+- [Mitchell et al. 2012](../notes/mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md): the group's first ultra-high-speed (Shimadzu HPV-1) schlieren; line-profile normalisation resolves λ ≈ 0.05d lip disturbances (synthesis pending).
 - [Raffel 2015](../notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../notes/tan-2015-bos-density-axisymmetric-jets.md): group BOS → Abel → mean density recipe with synthetic error map.
 - [Powis et al. 2016](../notes/powis-2016-impingement-tones-shock-instabilities-plug-nozzle.md): early Shimadzu HPV-1 use; first edge-detection shock tracking from time-resolved schlieren (synthesis pending)

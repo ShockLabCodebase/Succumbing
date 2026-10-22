@@ -24,3 +24,19 @@ Bell 2018 documents planar PIV of twin Mach-disk jets in the group's PIV enclosu
 - **Table 1 is internally inconsistent.** 12 px is 0.024D, not 0.032D, and 1092 × 726 vectors implies about 6 px spacing, not 8 px. Quote the resolution as about 0.012–0.016D vector spacing until checked.
 - **Enclosure.** 60 × 60 × 200 D with untreated walls and a single microphone at 23D; not anechoic (p. 2–3). Bell 2021 later blamed these walls and the flush plenum face for the different state NPRs.
 - **Fit with the page.** This agrees with current-understanding item 1 (group PIV is not time-resolved; Δt 0.48–1 µs; 8000–10000 snapshots) and item 4 (rigs are not anechoic). It adds the Mach-disk sheet diffraction as a twin-jet-specific caveat: light the jet of interest first, or check symmetry before using both jets.
+
+## mitchell-2013-near-field-structure-underexpanded-elliptic-jets (queued 2026-10-23)
+
+This is the "Mitchell et al. 2013, not in the library" source in the page's "group's smoke matches Ragni's DEHS" paragraph. Melling's relation gives 0.48 µs for the nominal 300 nm (Kn_d ≈ 0.4, eq. 1). Measured across the Mach disc of a strongly underexpanded **round** jet, **τ_p = 2.0 µs (≈ 600 nm)**, twice the nominal size, attributed to injecting the smoke into a mixing chamber (p. 4). The Stokes number is τ_p/τ_f ≈ 0.07 with τ_f ≈ 29 µs (smallest shock spacing over U_e, eq. 2), and SR ≈ 0.4 (eq. 3, p. 4–5).
+
+**Table 2 (p. 5) is the full version** of the row the helical-mode paper adapts. The predicted artificial fluctuation behind the first shock is 1/2/4/5 % (monodisperse) or 1/3/7/8 % (log-normal) at NPR 2.2/2.6/3.4/4.2, against 2/2.5/7/10 % measured, so the NPR 4.2 measurement exceeds both predictions. The authors note the model is a lower bound (noiseless correlation, no peak broadening). Low SR gives one broad PDF peak across a shock rather than peak splitting (Fig. 4). The artefact behind a round-jet NPR 4.2 normal shock is +0.093U_e over ≈ 0.2d (Mitchell 2013 thesis, p. 6), the "≈ 0.2D" the page already quotes.
+
+The note's tone-scale Stokes numbers for this elliptic database are 2πfτ_p ≈ 0.16, 0.13 and 0.10 at NPR 2.2, 2.6 and 3.4 (St 0.52, 0.38, 0.27). That puts them at or above the 0.1 guideline, alongside the page's 0.1 (C mode) and 0.2 (A modes) for round jets.
+
+Two printing issues should be noted on the page:
+- Eq. 3 is printed as ξ/IW, but Ragni's WS/ξ and the paper's own value fit IW/ξ.
+- Fig. 3's time axis (0–0.5 µs, with the curve crossing a 0.63 line near 0.06 µs) does not display the stated 2.0 µs.
+
+The value has been reused unchanged by every later group PIV paper, and the page's suggested oblique-shock test of the smoke would settle it.
+
+Practice details: two PCO 4000 cameras stitched with an adaptive Gaussian window and 7.5 % overlap; 23 µm px⁻¹; 1.2 px particle images with little peak locking; MCCDPIV, 64 → 16 px windows, 50 % overlap; 1.5 mm sheet; 1,100 samples (p. 3, 5).

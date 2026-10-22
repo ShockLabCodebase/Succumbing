@@ -199,6 +199,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Alkislar et al. 2003](../notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): microphone-triggered stereo PIV with half-cycle mirroring and about 35 pairs per phase; fine jet seeding checked against probes.
 - [Oberleithner et al. 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): 3D helix from 800 non-TR stereo-PIV snapshots via a POD pair (not tagged).
 - [Ragni et al. 2011](../notes/ragni-2011-particle-tracer-response-shocks-piv.md): oblique-shock tracer-response test; τ_p of common seeders; SR, TR ≤ 1 criteria.
+- [Mitchell et al. 2013](../notes/mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md): group smoke τ_p = 2.0 µs measured across a Mach disc; full Table 2 of predicted vs measured shock-induced artefact (synthesis pending).
 - [Edgington-Mitchell et al. 2014, Mach disk](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): smoke τ_p ≈ 2 µs and at least 8% predicted artificial fluctuation across a Mach disk.
 - [Edgington-Mitchell et al. 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): the group's NPR 3.4 PIV settings; measured smoke τ_p; 3% artificial fluctuation without a normal shock; POD phase preferred to triggering.
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): Syracuse Skytop anechoic chamber (not tagged).

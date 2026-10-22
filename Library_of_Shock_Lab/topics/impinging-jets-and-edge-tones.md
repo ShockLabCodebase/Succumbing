@@ -124,6 +124,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Casalino 2009](../notes/casalino-2009-hybrid-empirical-caa-rocket-noise.md) (not tagged): pad CAA shows reflected waves reaching the lip; feedback untested.
 - [Haynes 2009](../notes/haynes-2009-sp-8072-dsm-ii-ares-i-lift-off.md) (not tagged): potential core ended at the deflector in SP-8072.
 - [Gee 2012](../notes/gee-2012-reusable-srm-noise-spectral-statistical.md) (not tagged): terrain impingement removes high frequencies and skewness.
+- [Mitchell et al. 2012](../notes/mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md): first TR schlieren (250–500 kfps) of the impinging loop; λ ≈ 0.05d lip bands from the arriving wave, ring at x/d ≈ 0.25, no collective interaction (synthesis pending).
 - [Panda 2013](../notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md) (not tagged): full-scale pad source maps; duct exit dominates; no tones.
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md) (not tagged): free jet at NPR 3.4 with a t/D 0.33 lip screeches in helical C (St 0.30).
 - [Tsutsumi 2015](../notes/tsutsumi-2015-epsilon-liftoff-acoustics.md): subscale rocket on a deflector; reflected Mach waves dominate; no tones.
