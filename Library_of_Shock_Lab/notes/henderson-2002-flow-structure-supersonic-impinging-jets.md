@@ -163,6 +163,6 @@ Impinging supersonic jets are one of the lab's core resonance problems (CLAUDE.m
 - **Other edge/plate feedback notes:** [jordan-2018](jordan-2018-jet-flap-interaction-tones.md) and [stavropoulos-2026](stavropoulos-2026-jet-edge-interaction.md) (subsonic jets grazing an edge).
 - **Facility:** NASA Glenn SHJAR/AAPL; not Shock Lab group work.
 - **Follow-up candidates for `/add-paper`:**
-  - Henderson, Bridges & Wernet 2005, JFM 542 (listed in `Library_of_Shock_Lab/Papers_to_get.md`), the full version.
+  - Henderson, Bridges & Wernet 2005, JFM 542 (listed in `Library_of_Shock_Lab/Misc/Papers_to_get.md`), the full version.
   - Henderson & Powell 1993, JSV 168 (#37) and Krothapalli et al. 1999, JFM 392 (#38).
   - Powell 1988, JASA 83; Kuo & Dowling 1996, JFM 315; Henderson 2001, AIAA 2001-2145.

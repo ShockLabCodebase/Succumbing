@@ -70,13 +70,13 @@ Decide whether the library answers the question well enough. If a sub-question h
 - Start from the reference lists and "related work" of the closest notes, papers you know of, and WebSearch (Crossref, arXiv, NTRS, Google Scholar results). Check every candidate exists and get its DOI before listing it; never list a paper you haven't confirmed.
 - For each, say which sub-question it would settle and why, and rank by how much it would change the answer. Keep the list short and targeted (usually 2–8), not a reading list.
 - **Open access** (arXiv, NTRS, author pages, open-access journals): list the candidates with file source and size, and ask the user once, for the whole list, whether to download them. On a yes, save each into `Library_of_Shock_Lab/Paper_PDFs/_Unprocessed/` and process them now with the `/add-paper` procedure (`.claude/skills/add-paper/SKILL.md`, all of it, including the fold-in and commit), then return to section 2 with the new notes. Downloads are only from the publisher, arXiv, NTRS or a similar known source; never a shadow library.
-- **Paywalled or not found**: add each to `Library_of_Shock_Lab/Papers_to_get.md` under its subject heading, with DOI and a note "for research question `<slug>`", and list them in the question file under "Papers requested". The user fetches them (e.g. through the Monash library) into `Paper_PDFs/_Unprocessed/` and runs `/research-question continue <slug>`.
+- **Paywalled or not found**: add each to `Library_of_Shock_Lab/Misc/Papers_to_get.md` under its subject heading, with DOI and a note "for research question `<slug>`", and list them in the question file under "Papers requested". The user fetches them (e.g. through the Monash library) into `Paper_PDFs/_Unprocessed/` and runs `/research-question continue <slug>`.
 - If the papers would only refine an answer that already stands, still list them, but write the answer now rather than waiting.
 
 ## 5. Continue a saved question
 
 - Read the question file in full, including the previous answer and its "Papers requested" list.
-- Run `library.py unindexed` and process any new PDFs in `Paper_PDFs/_Unprocessed/` with the `/add-paper` procedure. Match them to the requested papers; say which requested ones are still missing (and keep them in `Papers_to_get.md`). Remove processed ones from `Papers_to_get.md`.
+- Run `library.py unindexed` and process any new PDFs in `Paper_PDFs/_Unprocessed/` with the `/add-paper` procedure. Match them to the requested papers; say which requested ones are still missing (and keep them in `Library_of_Shock_Lab/Misc/Papers_to_get.md`). Remove processed ones from `Papers_to_get.md`.
 - Also check for library notes added since the file's `updated` date that bear on the question (`library.py find --since`, Grep).
 - Take any notes the user gave with the command into account (new data, a narrower scope, a pointer to a paper).
 - Redo sections 2–4 as far as the new material needs, and rewrite the answer. Say explicitly what the new papers changed: which points moved between established / contested / unknown, and whether the overall view changed.
@@ -131,14 +131,14 @@ Citation form in the body: [Author Year](../notes/<key>.md), p. N (the `../` is 
 Then:
 1. Add or update the question's row in the table in `Library_of_Shock_Lab/Research_Questions/README.md` (slug link, question, status, updated date).
 2. **Queue what the library should learn** (section 6a). Don't edit topic pages or notes yourself.
-3. Commit the question file, the README, the queue files and `Papers_to_get.md` (whichever changed), staged by name: `Research question: <slug>` (or `Research question: <slug> (continued)`).
+3. Commit the question file, the README, the queue files and `Misc/Papers_to_get.md` (whichever changed), staged by name: `Research question: <slug>` (or `Research question: <slug> (continued)`).
 
 ## 6a. Queue updates to topic pages and notes
 
 The answer usually produces knowledge the library lacks. Queue it, so `/add-paper` works it in during its next batch revision; this skill never revises topic pages or notes itself. Queue only what is new and backed by the notes, not a restatement of what the page already says, and nothing that rests only on your own reasoning unless it is labelled as such (e.g. a proposed explanation for a conflict). On `continue`, replace the question's earlier queue entries if they are still in the queue files, rather than adding a second set.
 
 - **Topic pages:** for each topic page the answer adds to, append to `Library_of_Shock_Lab/topics/_queue/<topic>.md` (create it if missing) a section headed `## research-question: <slug> (queued YYYY-MM-DD)`, holding 3–8 sentences: what to add or change (a cross-paper comparison, an explanation of a conflict, a sharper or new open question, a point that should move between consensus and dispute, an error on the page), which section of the page it belongs in, and the supporting notes with page refs (links relative to the queue file: `../../notes/<key>.md`). End with a link to the question file: `../Research_Questions/<slug>.md`. These count toward the page's revision threshold like paper contributions.
-- **Notes:** for each note that should change, add bullets under `## <note key>` in `Library_of_Shock_Lab/notes_to_update.md` (create the section if missing), in the format that file describes: `- (rq <slug>, YYYY-MM-DD) <change>`. Typical changes: a `related` link or cross-reference to a note it agrees or conflicts with, a number that is inconsistent with another note, a missing caveat on the conditions a finding holds under. Prefix with `[PDF]` anything that needs the PDF to confirm.
+- **Notes:** for each note that should change, add bullets under `## <note key>` in `Library_of_Shock_Lab/Misc/notes_to_update.md` (create the section if missing), in the format that file describes: `- (rq <slug>, YYYY-MM-DD) <change>`. Typical changes: a `related` link or cross-reference to a note it agrees or conflicts with, a number that is inconsistent with another note, a missing caveat on the conditions a finding holds under. Prefix with `[PDF]` anything that needs the PDF to confirm.
 - List what was queued (topic pages and notes) under "## Log" in the question file, and in the reply.
 
 ## 7. Reply

@@ -10,7 +10,7 @@ doi: "10.1017/jfm.2020.1175"
 arxiv: "2008.09756"
 pdf: "screech/EdgingtonMitchell-EtAl_2020_Waves-In-Screeching-Jets.pdf"
 version: "preprint"
-unverified: ["DOI from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number from other notes (E-M 2022/2023), not the PDF"]
+unverified: ["DOI from Library_of_Shock_Lab/Misc/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number from other notes (E-M 2022/2023), not the PDF"]
 group: true
 facility: "Shock Lab group facility"
 data: ["PIV"]

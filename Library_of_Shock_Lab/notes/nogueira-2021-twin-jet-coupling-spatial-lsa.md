@@ -10,7 +10,7 @@ doi: "10.1017/jfm.2021.366"
 arxiv: ""
 pdf: "twin-jet-coupling/Nogueira-EdgingtonMitchell_2021_Investigation-Of-Supersonic-Twin-Jet-Coupling-Using-Spatial-Linear-Stability.pdf"
 version: "accepted-manuscript"
-unverified: ["volume, article number and online date from the Cambridge Core listing, not printed in the PDF", "DOI from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex)"]
+unverified: ["volume, article number and online date from the Cambridge Core listing, not printed in the PDF", "DOI from Library_of_Shock_Lab/Misc/group_papers.md (ORCID/OpenAlex)"]
 group: true
 facility: "Shock Lab group facility"
 data: ["PIV", "microphones-far"]

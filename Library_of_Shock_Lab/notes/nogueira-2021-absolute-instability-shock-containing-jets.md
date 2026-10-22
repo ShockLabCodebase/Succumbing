@@ -10,7 +10,7 @@ doi: "10.1017/jfm.2021.887"
 arxiv: "2106.12690"
 pdf: "screech-frequency-and-global-modes/Nogueira-EtAl_2021_Absolute-Instability-In-Shock-Containing-Jets.pdf"
 version: "preprint"
-unverified: ["DOI from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 930, A10, 2022: unchecked)"]
+unverified: ["DOI from Library_of_Shock_Lab/Misc/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 930, A10, 2022: unchecked)"]
 group: true
 facility: "Shock Lab group facility"
 data: ["PIV"]

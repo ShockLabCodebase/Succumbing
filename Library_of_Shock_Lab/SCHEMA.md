@@ -14,9 +14,10 @@ How the reference library is laid out, and the metadata every note carries. `Lib
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |
 | `Paper_PDFs/<topic>/` | Indexed PDFs, one copy each, filed by the note's first (most significant) topic (local only, git-ignored) | `library.py file` |
 | `Paper_PDFs/_Unprocessed/` | New PDFs waiting for `/add-paper`, under any name | user |
-| `Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
-| `notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
-| `notes_to_update.md` | Queued changes to existing notes (cross-links, contradictions, corrections), applied in batches by `/add-paper` | `/research-question` |
+| `Misc/Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
+| `Misc/notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
+| `Misc/notes_to_update.md` | Queued changes to existing notes (cross-links, contradictions, corrections), applied in batches by `/add-paper` | `/research-question` |
+| `Misc/group_papers.md` | The group's journal papers (ORCID/OpenAlex) and where each one is held | user / `/add-paper` |
 | `Codebase_Notes/<repo>.md` | Summaries of the group's analysis-code repos (one per repo, with the commit read); not papers, so `library.py` ignores them | code-review work |
 | `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s Library_of_Shock_Lab/tools`) | |
 

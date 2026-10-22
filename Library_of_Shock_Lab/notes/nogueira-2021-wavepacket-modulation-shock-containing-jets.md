@@ -10,7 +10,7 @@ doi: "10.1103/PhysRevFluids.7.074608"
 arxiv: "2110.04914"
 pdf: "shock-cell-models/Nogueira-EtAl_2021_Wavepacket-Modulation-In-Shock-Containing-Jets.pdf"
 version: "preprint"
-unverified: ["DOI and year from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF; volume and article number read from the DOI"]
+unverified: ["DOI and year from Library_of_Shock_Lab/Misc/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF; volume and article number read from the DOI"]
 group: true
 facility: "Charles LES (Cascade)"
 data: ["LES"]

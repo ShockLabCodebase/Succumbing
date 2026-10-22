@@ -10,7 +10,7 @@ doi: "10.1017/jfm.2022.58"
 arxiv: "2107.06429"
 pdf: "screech-staging-and-mode-switching/Nogueira-EtAl_2021_Closure-Mechanism-Of-The-A1-And-A2-Modes-In-Jet-Screech.pdf"
 version: "preprint"
-unverified: ["DOI and year from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 936, A10: unchecked)"]
+unverified: ["DOI and year from Library_of_Shock_Lab/Misc/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "volume and article number not known (possibly JFM 936, A10: unchecked)"]
 group: true
 facility: "Pprime SUCRÉ jet-noise facility"
 data: ["PIV", "mic-array"]

@@ -10,7 +10,7 @@ doi: "10.1017/jfm.2021.324"
 arxiv: "2012.04818"
 pdf: "jet-noise-mechanisms/Wong-EtAl_2021_Wavepacket-Modelling-Of-Broadband-Shock-Associated-Noise-In-Supersonic-Jets.pdf"
 version: "preprint"
-unverified: ["DOI from Library_of_Shock_Lab/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "article number not known"]
+unverified: ["DOI from Library_of_Shock_Lab/Misc/group_papers.md (ORCID/OpenAlex/Crossref), not printed in the held arXiv PDF", "article number not known"]
 group: true
 facility: "Shock Lab group facility (LTRAC supersonic jet facility PIV; SJAF anechoic chamber); Charles LES (Cascade)"
 data: ["LES", "PIV", "microphones-far", "mic-array"]
