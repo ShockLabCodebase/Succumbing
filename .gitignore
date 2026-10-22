@@ -27,13 +27,13 @@
 # Storage scan listings (large, list everyone's files)
 Misc/*.csv
 
-# Built apps (PyInstaller output; source for SPODViewer is in apps/Source_Files/SPODViewer),
+# Built apps (PyInstaller output; source for SPODViewer is in Apps/Source_Files/SPODViewer),
 # including versioned builds and their release zips
-apps/FieldsPlayer/
-apps/SPODViewer/
-apps/FieldsPlayer_*/
-apps/SPODViewer_*/
-apps/*.zip
+Apps/FieldsPlayer/
+Apps/SPODViewer/
+Apps/FieldsPlayer_*/
+Apps/SPODViewer_*/
+Apps/*.zip
 
 # Another group member's PyFR setup, shared for reference (118 MB, not ours to publish)
 Simulations/Possible_Reference_Setup/

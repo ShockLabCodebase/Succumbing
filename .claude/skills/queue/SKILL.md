@@ -1,18 +1,18 @@
 ---
 name: queue
-description: Add a feature request or bug fix for one of the user's apps (SPODViewer, FieldsPlayer or any later app in apps/Source_Files/) to that app's FEATURE_QUEUE.md, without implementing or building it. Use when the user runs /queue, or says "queue this", "add to the queue", "for the next build", "not now, but later the viewer should…". Also use /queue with no request to list what is queued.
+description: Add a feature request or bug fix for one of the user's apps (SPODViewer, FieldsPlayer or any later app in Apps/Source_Files/) to that app's FEATURE_QUEUE.md, without implementing or building it. Use when the user runs /queue, or says "queue this", "add to the queue", "for the next build", "not now, but later the viewer should…". Also use /queue with no request to list what is queued.
 argument-hint: "[app] <request>"
 ---
 
 # Queue a request for the next build
 
-Each app keeps its queue next to its source: `apps/Source_Files/<App>/FEATURE_QUEUE.md`. Queued items are built together later by `/enact-queue`, so one version bump and one build cover them all. **Do not change the app's code here, and do not build.**
+Each app keeps its queue next to its source: `Apps/Source_Files/<App>/FEATURE_QUEUE.md`. Queued items are built together later by `/enact-queue`, so one version bump and one build cover them all. **Do not change the app's code here, and do not build.**
 
 ## 1. Pick the app
 
 - If the request names an app, use it. If it doesn't and only one app has a `FEATURE_QUEUE.md`, or the request is clearly about one app (e.g. waterfall, mode cache, SPOD modes → SPODViewer), use that one.
 - Otherwise ask which app.
-- If the app has no `FEATURE_QUEUE.md` yet, create one by copying the header and empty sections of `apps/Source_Files/SPODViewer/FEATURE_QUEUE.md`, with the app's name in the title.
+- If the app has no `FEATURE_QUEUE.md` yet, create one by copying the header and empty sections of `Apps/Source_Files/SPODViewer/FEATURE_QUEUE.md`, with the app's name in the title.
 
 ## 2. With no request: list the queue
 

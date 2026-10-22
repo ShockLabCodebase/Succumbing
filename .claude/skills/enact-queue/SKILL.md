@@ -1,12 +1,12 @@
 ---
 name: enact-queue
-description: Implement every queued request in an app's FEATURE_QUEUE.md (apps/Source_Files/<App>/), then bump the version, build and verify once for the whole batch. Use when the user runs /enact-queue, or says "do the queued changes", "build the queue", "time for a new SPODViewer build".
+description: Implement every queued request in an app's FEATURE_QUEUE.md (Apps/Source_Files/<App>/), then bump the version, build and verify once for the whole batch. Use when the user runs /enact-queue, or says "do the queued changes", "build the queue", "time for a new SPODViewer build".
 argument-hint: "[app] [Q-ids to include, default all]"
 ---
 
 # Build the queued requests
 
-The queue is `apps/Source_Files/<App>/FEATURE_QUEUE.md` (written by `/queue`). The point is one version bump, one build and one verification for the whole batch, so implement and test everything from source first and build only at the end.
+The queue is `Apps/Source_Files/<App>/FEATURE_QUEUE.md` (written by `/queue`). The point is one version bump, one build and one verification for the whole batch, so implement and test everything from source first and build only at the end.
 
 ## 1. Read the queue and settle questions up front
 
@@ -41,5 +41,5 @@ Run the built exe's self-test (`dist\SPODViewer_<version>\SPODViewer.exe --selft
 ## 5. Close out
 
 - Move each built item from `## Queued` to `## Done` as `- Q-004 · Short title → 0.5 (2026-10-21)`, with a line on anything built differently from the request or dropped. Items not built stay under Queued.
-- Commit source, docs, tests and the queue file together, directly to main (`SPODViewer 0.5: Q-004, Q-005, Q-007`, with a one-line summary per item in the body), and push. The build folder in `apps/` is not in Git.
+- Commit source, docs, tests and the queue file together, directly to main (`SPODViewer 0.5: Q-004, Q-005, Q-007`, with a one-line summary per item in the body), and push. The build folders in `Apps/` are not in Git.
 - Report per item: what changed, how it was tested, and anything left over; give the path of the new build folder.

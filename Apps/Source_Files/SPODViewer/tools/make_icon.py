@@ -1,7 +1,7 @@
 """Draw the SPODViewer icon: a screech-like spectrum over "ShockLab" written in spectral bars.
 
 Writes spodviewer/assets/spodviewer.png (256 px) and spodviewer.ico (16-256 px).
-Run from apps/SPODViewer with the spodviewer env:  python tools/make_icon.py
+Run from Apps/Source_Files/SPODViewer with the spodviewer env:  python tools/make_icon.py
 """
 
 import os
