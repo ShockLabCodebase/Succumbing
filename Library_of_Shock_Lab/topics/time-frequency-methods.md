@@ -311,6 +311,7 @@ Time-resolved schlieren, microphones and LES support every row. Non-time-resolve
 - [Rilling 2008](../notes/rilling-2008-one-or-two-frequencies-emd-two-tones.md): EMD's two-tone limit, a relative cutoff set by the number of siftings; explains Huang 1998's close-tone failure.
 - [Huang 2009](../notes/huang-2009-on-instantaneous-frequency.md): the case that IF escapes the uncertainty principle; NHT and direct-quadrature IF; beats as one AM–FM component.
 - [Daubechies 2011](../notes/daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md): synchrosqueezed CWT with a proof of IF recovery; filter bandwidth must be below the relative gap.
+- [Jordan & Colonius 2013](../notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
 - [Sieber 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-filtered SPOD. Analytic coefficient pairs that keep intermittency within one pair.
 - [Kriegseis 2021](../notes/kriegseis-2021-hilbert-transform-revisited-hpod.md): first HPOD paper in fluids. HPOD_t as an automatic POD-pair finder that adds no information; shuffled snapshots give POD.
 - [Nekkanti 2021](../notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md): SPOD reconstruction, denoising and convolution spectrograms. Step 2 of the pipeline.

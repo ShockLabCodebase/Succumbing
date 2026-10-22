@@ -136,6 +136,7 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Gudmundsson & Colonius 2011](../notes/gudmundsson-2011-instability-wave-models-near-field-jets.md): PSE matches near-field pressure; fails below St 0.2.
 - [Oberleithner 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): mean-flow LSA reproduces a self-excited global mode.
 - [Cavalieri 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): PSE vs TR-PIV wavepackets; β metric.
+- [Jordan & Colonius 2013](../notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
 - [Schmidt 2017](../notes/schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet.md): trapped acoustic modes; near-nozzle tones; Re dependence.
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): duct-like and guided waves; S1/S2 saddles.
 - [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): impinging LES; vortex-sheet bands order tones; in-core k–ω bands.
@@ -146,6 +147,7 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): vortex-sheet KH–guided-mode screech model.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): planar vortex-sheet bands for rectangular screech.
 - [Jaunet 2019](../notes/jaunet-2019-dynamics-round-jet-impingement.md): impinging tones die at S(0, 1); phase-only vortex-sheet model.
+- [Wong et al. 2019](../notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Line-source wavepacket × Pack shock-cell BBSAN model: coherence decay lowers the peak 2–5 dB, broadens directivity, and lets n ≥ 2 modes fill high-St upstream sound (synthesis pending).
 - [Karami 2020](../notes/karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets.md): local LSA of a shock-containing near-nozzle layer; loop, not growth, sets the tone.
 - [Edgington-Mitchell 2021](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): k_kh ± k_s waves confirm the product picture.
 - [Mancinelli 2021](../notes/mancinelli-2021-complex-valued-resonance-model-screech.md): finite-thickness complex-ω resonance model.

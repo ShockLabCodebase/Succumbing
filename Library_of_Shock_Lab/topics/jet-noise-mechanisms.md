@@ -185,11 +185,13 @@ One rig with a notched screech-free twin, a β and TTR sweep, mean PIV and a nea
 - [Samimy et al. 2006](../notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
 - [Cavalieri et al. 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): low-energy m = 0/1 linear wavepackets carry the low-angle sound.
 - [André et al. 2013](../notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): screech-free notched twin; screech damps the shock train and lowers BBSAN.
+- [Jordan & Colonius 2013](../notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
 - [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): POD removal of screech from snapshot PIV; screech-free length scales.
 - [Cavalieri et al. 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; Mach waves, superdirectivity, jitter.
 - [Gojon et al. 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES; four noise components, Mach-wave threshold and asymmetry.
 - [Tan et al. 2019a](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV calibration of statistical BBSAN and mixing-noise source scales.
 - [Tan et al. 2019b](../notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): Morris–Miller BBSAN source maps from PIV and RANS, on the sonic line.
+- [Wong et al. 2019](../notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Line-source wavepacket × Pack shock-cell BBSAN model: coherence decay lowers the peak 2–5 dB, broadens directivity, and lets n ≥ 2 modes fill high-St upstream sound (synthesis pending).
 - [Wong et al. 2021](../notes/wong-2021-wavepacket-modelling-bbsan.md): group's inside-out wavepacket × shock-cell BBSAN model; jitter fills the dips.
 - [Mathews 2025](../notes/mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md): full-scale BSN sources at shock cells, failed spacing formulas, rocket Mach waves and nonlinear losses.
 

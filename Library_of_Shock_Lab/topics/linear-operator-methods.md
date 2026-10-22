@@ -87,6 +87,7 @@ The standard resolvent lumps all triadic interactions into one forcing term ([Ca
 - [McKeon & Sharma 2010](../notes/mckeon-2010-critical-layer-framework-turbulent-pipe-flow.md): origin of mean-flow resolvent (nonlinearity as forcing; critical layer).
 - [Oberleithner 2011](../notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): oscillator tests and Landau fits on a self-excited jet.
 - [Garnaud 2013](../notes/garnaud-2013-preferred-mode-incompressible-jets.md): global resolvent; preferred mode is a pseudo-resonance.
+- [Jordan & Colonius 2013](../notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
 - [Schmidt 2017](../notes/schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet.md): trapped waves as lightly damped global modes; Re convergence.
 - [Taira 2017](../notes/taira-2017-modal-analysis-fluid-flows-overview.md): tutorial on global stability, resolvent and non-normality.
 - [Schmidt 2018](../notes/schmidt-2018-spectral-analysis-jet-turbulence.md): SPOD vs resolvent across M_j 0.4–1.5; KH vs Orr; low-rank band.
