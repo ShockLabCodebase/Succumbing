@@ -17,6 +17,7 @@ How the reference library is laid out, and the metadata every note carries. `Lib
 | `Papers_to_get.md` | Papers still to obtain; remove each one once indexed | user / `/add-paper` |
 | `notes_to_check.md` | Parts of notes to verify against the PDFs, and inconsistencies between notes | `/add-paper`, topic-page work |
 | `notes_to_update.md` | Queued changes to existing notes (cross-links, contradictions, corrections), applied in batches by `/add-paper` | `/research-question` |
+| `Codebase_Notes/<repo>.md` | Summaries of the group's analysis-code repos (one per repo, with the commit read); not papers, so `library.py` ignores them | code-review work |
 | `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s Library_of_Shock_Lab/tools`) | |
 
 Never hand-edit `INDEX.md` or `references.bib`; edit the note's frontmatter and rebuild.

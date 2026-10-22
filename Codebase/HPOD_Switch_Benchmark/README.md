@@ -49,7 +49,7 @@ Every method returns the same tracks: an amplitude and IF for a band of width B 
 
 The probe methods are written as one-sided FFT band-passes because an STFT or CWT coefficient at one frequency or scale *is* the analytic signal of a band-passed signal (Daubechies et al. 2011, eq. 2.11–2.14). This also keeps 2×10⁵-sample records cheap, and avoids needing the Wavelet Toolbox.
 
-SPOD, inverse SPOD and HPOD are minimal re-implementations that follow the group's `spod.m`, `invspod.m` and `hilbert_POD_func.m` as described in [Codebase_Notes](../Codebase_Notes/schlieren-processing-scripts.md). Two differences:
+SPOD, inverse SPOD and HPOD are minimal re-implementations that follow the group's `spod.m`, `invspod.m` and `hilbert_POD_func.m` as described in [Codebase_Notes](../../Library_of_Shock_Lab/Codebase_Notes/schlieren-processing-scripts.md). Two differences:
 - SPOD keeps only the frequency bins needed, to save memory.
 - The HPOD temporal coefficients are a = Uᴴz, so the IF is positive for positive frequencies. The group's snapshot and svds branches return conjugated coefficients (see the Codebase notes).
 
