@@ -353,6 +353,6 @@ This is the user's own first-author JFM paper, and the published source for the 
 - Kuo & Dowling 1996.
 - Barone & Lele 2005 (receptivity).
 - Stegeman et al. 2016.
-- Tan et al. 2017 (AIAA J. 55).
-- Weightman et al. 2017 JFM 815 (phase lag; already in `Paper_PDFs/_Unprocessed/`).
+- Tan et al. 2017 (AIAA J. 55; now [indexed](tan-2017-broadband-velocity-fluctuations-screeching-jets.md)).
+- Weightman et al. 2017 JFM 815 (phase lag; now indexed: [weightman-2017-phase-lag-supersonic-jet-impingement](weightman-2017-phase-lag-supersonic-jet-impingement.md)).
 - Weightman et al. AIAA 2017-3031 (in the thesis, App. D).

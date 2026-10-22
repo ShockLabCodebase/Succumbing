@@ -316,8 +316,8 @@ This is the standard experimental source for "screech radiates from one shock an
 12. Fig. 1 screech level and St are read from the figure.
 
 **Candidates for `/add-paper`:**
-- Panda 1999 (JFM 378, standing wave and source between the 3rd and 4th tips). `Paper_PDFs/_Unprocessed/an_experimental_investigation_of_screech_noise_generation.pdf` may be this paper or its AIAA 96-1718 precursor.
-- André, Castelain & Bailly 2011a (Phys. Fluids 23, flight effects) and 2011b (AIAA J. 49, shock tracking). `andre_aiaaj13.pdf` in `_Unprocessed/` may be a related André paper.
+- Panda 1999 (JFM 378, standing wave and source between the 3rd and 4th tips), now indexed: [panda-1999-experimental-investigation-screech-noise-generation](panda-1999-experimental-investigation-screech-noise-generation.md).
+- André, Castelain & Bailly 2011a (Phys. Fluids 23, flight effects) and 2011b (AIAA J. 49, shock tracking). The related André, Castelain & Bailly 2013 (AIAA J. 51, BBSAN in screeching and non-screeching jets) is indexed: [andre-2013-bbsan-screeching-non-screeching-underexpanded-jets](andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md).
 - Gao & Li 2010 (JASA 127, multi-mode formula), Powell, Umeda & Ishii 1992 (JASA 92), Umeda & Ishii 2001 (JASA 110).
 - Clem, Zaman & Fagan 2016 (shock spacing during stage jumps), Gojon, Bogey & Marsden 2015, Veltin & McLaughlin 2008, Shen & Tam 2002, Berland, Bogey & Bailly 2007.
-- Suzuki & Lele 2003 (in `_Unprocessed/`), Westley & Woolley 1969, Mitchell, Honnery & Soria 2012 (J. Vis. 15), Edgington-Mitchell, Honnery & Soria 2015 (elliptical staging).
+- Suzuki & Lele 2003 (now [indexed](suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md)), Westley & Woolley 1969, Mitchell, Honnery & Soria 2012 (J. Vis. 15, now [indexed](mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md)), Edgington-Mitchell, Honnery & Soria 2015 (elliptical staging, in `Papers_to_get.md`).

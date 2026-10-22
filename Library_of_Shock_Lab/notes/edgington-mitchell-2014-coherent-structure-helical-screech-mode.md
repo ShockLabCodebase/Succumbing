@@ -289,7 +289,7 @@ This is the first paper of the group's screech-PIV thread and the origin of the 
 12. All values in the reflection-point and profile tables, the Fig. 4 levels and the 2.4D wavelength are read from raster figures.
 
 **Candidates for `/add-paper`:**
-- Suzuki & Lele 2003 (JFM 490), already in `Paper_PDFs/_Unprocessed/` as `div-class-title-shock-leakage-through-an-unsteady-vortex-laden-mixing-layer-application-to-jet-screech-div.pdf`.
-- Alkislar, Krothapalli & Lourenco 2003 (JFM 489), already in `_Unprocessed/`.
-- Mitchell, Honnery & Soria 2011 (Exp. Fluids 51, particle relaxation); `Particle_relaxation_and_its_influence_on.pdf` in `_Unprocessed/` is probably it.
-- Umeda & Ishii 2001, 2002a, 2002b; Manning & Lele 2000; Berland, Bogey & Bailly 2007; Panda 1998; Raman & Rice 1994; Raman 1997; Gao & Li 2010; Imamoglu et al. 2007; Davies & Oldfield 1962; Hussain & Reynolds 1970; Mitchell, Honnery & Soria 2012 (J. Vis.) and 2013 (Exp. Fluids, elliptic jets); Mitchell 2013 (PhD thesis, Monash); Léon et al. 2022 (TDHI proof of the helical C mode).
+- Suzuki & Lele 2003 (JFM 490), now indexed: [suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech](suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md).
+- Alkislar, Krothapalli & Lourenco 2003 (JFM 489), now indexed: [alkislar-2003-screeching-rectangular-jet-stereo-piv](alkislar-2003-screeching-rectangular-jet-stereo-piv.md).
+- Mitchell, Honnery & Soria 2011 (Exp. Fluids 51, particle relaxation); the PDF is held as `Mitchell-EtAl_2011_Particle-Relaxation-And-Its-Influence-On-The-Particle-Image-Velocimetry-Cross.pdf` but not yet indexed.
+- Umeda & Ishii 2001, 2002a, 2002b; Manning & Lele 2000; Berland, Bogey & Bailly 2007; Panda 1998; Raman & Rice 1994; Raman 1997; Gao & Li 2010; Imamoglu et al. 2007; Davies & Oldfield 1962; Hussain & Reynolds 1970; Mitchell, Honnery & Soria 2012 (J. Vis.; now [indexed](mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md)) and 2013 (Exp. Fluids, elliptic jets; now [indexed](mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md)); Mitchell 2013 (PhD thesis, Monash); Léon et al. 2022 (TDHI proof of the helical C mode).

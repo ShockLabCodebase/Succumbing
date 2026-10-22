@@ -14,9 +14,6 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 ## sieber-2016-spectral-proper-orthogonal-decomposition
 - (rq hpod-instantaneous-frequency-uncertainty, 2026-10-21) Relevance section: state that N_f is the bandwidth that caps the instantaneous frequency's rate of change (p. 8–9), the same role as the reconstruction band before HPOD, and add `raiola-2025-hilbert-pod` to `related` if absent.
 
-## mercier-2017-screech-feedback-loop-underexpanded-round-jets
-- (add-paper panda-1999-experimental-investigation-screech-noise-generation, 2026-10-21) `mercier-2017-screech-feedback-loop-underexpanded-round-jets` (line 319) says the `_Unprocessed` file "may be this paper or its AIAA 96-1718 precursor". It is the JFM 378 paper, now indexed as `panda-1999-experimental-investigation-screech-noise-generation`, and the line can link to it.
-
 ## esfahani-2021-coupling-modes-twin-rectangular-jets
 - (add-paper panda-1999-experimental-investigation-screech-noise-generation, 2026-10-21) `esfahani-2021-coupling-modes-twin-rectangular-jets` (line 99) says crest spacing grows with shock-cell length "unlike Panda's (1999) single converging round jet". In Panda's Table 1, L_p grows from 0.67D to 1.02D as L grows from 0.77D to 1.28D. Check what Esfahani meant (perhaps L_sw ≠ L) and reword.
 
