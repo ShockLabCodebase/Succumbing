@@ -93,3 +93,4 @@ A second jet breaks axisymmetry as an elliptical nozzle does, and adds coupling.
 - [Mazharmanesh 2026](../notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md): mutually exclusive flapping tones in an AR 2 ellipse.
 - [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md): streaks fix and rotate the flapping axis of round jets.
 - [Suzuki 2026](../notes/suzuki-2026-coherent-structures-axis-switching-elliptical-jets.md): forced DNS; D2 labels, AS flapping dominates (preprint).
+- [Lu 2026](../notes/lu-2026-rectangular-jet-screech-dimensional-reduction.md): 2D cross-plane vs planar vs axisymmetric LSA for AR 1–8; planar fine for KH, not for GJM bands (synthesis pending)

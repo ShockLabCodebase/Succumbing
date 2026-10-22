@@ -20,7 +20,7 @@ phenomena: ["shock-diffraction"]
 params: {"M_0": "2.41–2.62 (exp.); 1.001–5 (GSD)", "M_b": "0.14–0.38 (exp.); 0–3 (GSD)", "D": "30 mm"}
 topics: ["simulation-methods"]
 related: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "rezay-haghdoost-2022-shock-dividers", "edgington-mitchell-2022-unifying-theory-jet-screech", "weightman-2019-sound-production-impinging-supersonic-jets", "ragni-2011-particle-tracer-response-shocks-piv", "greenshields-2010-central-schemes-polyhedral-fv"]
-cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "rezay-haghdoost-2022-shock-dividers"]
+cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "rezay-haghdoost-2022-shock-dividers", "tam-1989-three-families-instability-waves-high-speed-jets"]
 summary: "PDC shock diffracting into a moving jet: schlieren, PIV, Euler and modified GSD show background flow (not nozzle focusing) distorts the front; Skews m₀ generalised for M_b"
 ---
 # Diffraction of shock waves through a non-quiescent medium

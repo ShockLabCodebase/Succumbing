@@ -127,6 +127,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): A1 and A2 close on the same G-JM.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): twin-jet staging; constant U_c; phase jumps without tone jumps.
 - [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): guided-mode bands give stage shapes, not the A1/A2 jump; two C tones in one LES.
+- [Bell 2018](../notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): PIV-enclosure staging map; λ_sw/L_s ≈ 1.0; a missing standing wave read as switching (synthesis pending)
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): mutually exclusive A1/A2 switching, 1–4 s dwell times.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES: diagonal to minor-axis flapping with TR.
 - [Weightman et al. 2019](../notes/weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet.md): nozzle exterior selects the impinging loop at fixed frequencies.
@@ -146,4 +147,5 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Nogueira 2025](../notes/nogueira-2025-screech-military-style-rectangular-nozzles.md): AR 2 rectangular jet: k_sh1 and k_sh2 flapping loops coexist.
 - [Farghadan 2026](../notes/farghadan-2026-wave-interactions-screeching-jet.md): global modes on several shock wavenumbers; tone on a buried k_s2.
 - [Mazharmanesh 2026](../notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md): exclusive A1/A2, each on its own short-time mean; BMD k_S.
+- [Lu 2026](../notes/lu-2026-rectangular-jet-screech-dimensional-reduction.md): reduced models cannot give stage cut-on/cut-off; k_s2 band from NPR ≈ 3.5 in AR 2 (synthesis pending)
 - Not tagged: [Ho 1981](../notes/ho-1981-dynamics-impinging-jet-feedback-phenomenon.md) (impinging-jet stage switching); [Stavropoulos 2026](../notes/stavropoulos-2026-jet-edge-interaction.md) (hysteresis-free jet–edge loop switch); [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md) (streaks set and rotate the flapping axis).

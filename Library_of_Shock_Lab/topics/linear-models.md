@@ -166,4 +166,5 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Nogueira 2025](../notes/nogueira-2025-screech-military-style-rectangular-nozzles.md): rectangular Floquet LSA; weakest link predicts flapping.
 - [Farghadan 2026](../notes/farghadan-2026-wave-interactions-screeching-jet.md): global screech mode within 1%; Re = 10³ surrogate.
 - [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md): streak-induced flapping/wagging split.
+- [Lu 2026](../notes/lu-2026-rectangular-jet-screech-dimensional-reduction.md): Cartesian 2D cross-plane LSA with D2 symmetry; GJM saddle robust to reduction, branch point not (synthesis pending)
 - Not tagged: [Tam & Tanna 1982](../notes/tam-1982-shock-associated-noise-cd-nozzles.md) (KH × shock product waves), [Tam 1986](../notes/tam-1986-bbsan-screech-relationship.md) (weakest link), [Stavropoulos 2026](../notes/stavropoulos-2026-jet-edge-interaction.md) (guided-wave loops at edges).

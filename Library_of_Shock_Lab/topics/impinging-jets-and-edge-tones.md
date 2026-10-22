@@ -127,6 +127,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Panda 2013](../notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md) (not tagged): full-scale pad source maps; duct exit dominates; no tones.
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md) (not tagged): free jet at NPR 3.4 with a t/D 0.33 lip screeches in helical C (St 0.30).
 - [Tsutsumi 2015](../notes/tsutsumi-2015-epsilon-liftoff-acoustics.md): subscale rocket on a deflector; reflected Mach waves dominate; no tones.
+- [Powis et al. 2016](../notes/powis-2016-impingement-tones-shock-instabilities-plug-nozzle.md): plug nozzle on a plate: staged tones, none for z/D < 3.2; standoff shock oscillates and splits at the tone (synthesis pending)
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): trapped and guided core waves; the 0.82 < M < 1 window behind jet–edge models.
 - [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): LES of an ideally expanded M_j 1.5 plate jet; standing-wave cells = N; guided-mode bands order axisymmetric and helical tones; upstream waves inside the supersonic core.
 - [Weightman et al. 2017](../notes/weightman-2017-phase-lag-supersonic-jet-impingement.md): the wall-jet shocklet and its 29–40 µs life as Powell's phase lag; measured loop gives 8230 vs 8300 Hz.

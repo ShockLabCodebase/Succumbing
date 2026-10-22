@@ -204,6 +204,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `facility-design`
 - `calibration`: optical alignment, distortion correction, tracer response
 - `optical-modelling`: synthetic schlieren / BOS images, light-ray tracing, numerical schlieren from CFD
+- `feature-tracking`: edge detection or fitting of shocks, fronts or interfaces in images, giving position time series
 - `vortex-identification`: vortex detection and tracking (swirling strength λ_ci, Q, Γ criteria)
 - `pressure-from-PIV`: pressure or density reconstructed from PIV velocity (isentropic relations, momentum integration)
 
@@ -235,6 +236,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `precession`: rotation or wander of a flapping or helical axis
 - `coupling`: twin-jet or multi-jet coupling
 - `flapping`, `helical`, `axis-switching`
+- `toroidal`: axisymmetric (m = 0, varicose) oscillation mode of a round or annular jet
 - `guided-jet-mode`: upstream guided/neutral acoustic waves, trapped duct modes
 - `KH-wavepackets`, `streaks`, `Orr`
 - `absolute-instability`

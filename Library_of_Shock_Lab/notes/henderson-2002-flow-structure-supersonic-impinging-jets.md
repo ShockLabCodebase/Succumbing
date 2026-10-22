@@ -20,7 +20,7 @@ phenomena: ["impingement-tones", "Mach-disk"]
 params: {"NPR": "4.03", "h/D": "1–4 (detail at 2.02 and 3.00)", "D": "25.4 mm", "lip": "12.7 mm"}
 topics: ["impinging-jets-and-edge-tones"]
 related: ["weightman-2019-sound-production-impinging-supersonic-jets", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "jordan-2018-jet-flap-interaction-tones", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
-cites: []
+cites: ["henderson-1993-tones-choked-jet-impinging-flat-plates"]
 summary: "NPR 4.03 jet on a large plate (SHJAR): phase-averaged PIV and shadowgraph of L1 tones; oscillating Mach disk moves recirculation zones; wall-jet source at 2.6R; Powell N+p ≈ 4.4"
 ---
 # An experimental investigation of the flow structure of supersonic impinging jets

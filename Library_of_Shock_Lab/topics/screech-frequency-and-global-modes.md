@@ -105,6 +105,7 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely (Edging
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): integer-loop criterion; U_c rises along the jet.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): G-JM shapes match the model; A1/A2 near the cut-on.
 - [Gojon et al. 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): band-membership test across stages; low-Re round-jet LES.
+- [Bell 2018](../notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): Panda's standing-wave relation on a twin jet with λ_sw and λ_h measured independently; consistent within ±17 % (synthesis pending)
 - [Mancinelli 2019](../notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model.
 - [Gojon 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated LES: St right, heating trend wrong; u_c falls with heating.
 - [Edgington-Mitchell 2021, waves](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): global mode on a PIV mean within 1 %.
@@ -124,3 +125,4 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely (Edging
 - [Farghadan 2026](../notes/farghadan-2026-wave-interactions-screeching-jet.md): global mode slightly stable; resolvent–POD match; duct resonance.
 - [Mazharmanesh 2026](../notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md): short-time means as base flows for global stability.
 - [Nogueira 2026](../notes/nogueira-2026-flapping-motion-screeching-round-jets.md): LES of flapping-axis precession.
+- [Lu 2026](../notes/lu-2026-rectangular-jet-screech-dimensional-reduction.md): planar and 2D-PIV weakest-link tone predictions for AR 2; planar gives spurious tones (synthesis pending)

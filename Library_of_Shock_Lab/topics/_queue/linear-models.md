@@ -9,3 +9,15 @@ The review gives the cleanest statement of the mean-flow hypothesis the page ope
 - The conclusion (p. 988) is a stated requirement for dynamic linear models of BBSAN. They must be forced stochastically to produce jittering solutions with coherence decay, and must carry several shock-cell modes.
 - [wong-2021](../notes/wong-2021-wavepacket-modelling-bbsan.md) met the second requirement and imposed LES coherence on PSE. A stochastically forced resolvent or Floquet operator for BBSAN is still untested, which could be added to the page's open questions.
 - The paper also cites Sasaki et al. (2017a) to argue that linear theory holds to St = 4, so the high-frequency deficit is not a linear-theory failure (p. 980).
+
+## lu-2026-rectangular-jet-screech-dimensional-reduction (queued 2026-10-22)
+
+- **Where it goes.** The paper belongs in "Floquet in azimuth / rectangular jets" (or a new "dimensional reduction" bullet) and in "Guided-jet waves… rectangular-jet screech".
+- **Method.** It is an inviscid, Cartesian 2D cross-plane LSA: Chebyshev with mapping, quarter domain with symmetry BCs, `eigs`, α² terms dropped to keep L q̂ = αF q̂ (p. 4, 21–22). It is a counterpart to the cylindrical Floquet-in-azimuth model of [Nogueira 2025](../notes/nogueira-2025-screech-military-style-rectangular-nozzles.md).
+- **KH results.** The KH most-amplified St_h is independent of AR (≈ 0.41 at NPR 2.1 → 0.31 at NPR 5.0, p. 8), consistent with Morris & Bhat. Doubling δ halves the unstable bandwidth (p. 13).
+- **Competing KH branch.** At AR 4–6 a second flapping KH branch with three spanwise pressure nodes runs within 0.03 % in α_r and about 1–2 % in α_i of the leading one (αD = 14.7446 − 2.9202i vs 14.7419 − 2.9583i at AR 6, NPR 4.5, St_h 0.45; p. 11). A planar model cannot separate them.
+- **GJM band edges.** The saddle (GJM–duct merger) is robust to the reduction, the branch point (sonic-line detachment) is not (p. 16–17). This links to the page's branch-point/saddle labels and to [Nogueira 2024](../notes/nogueira-2024-guided-jet-waves.md), whose oblique waves are the paper's higher-order GJMs (p. 16–17).
+- **Shear-layer thickness.** Appendix C finds 2D band edges nearly insensitive to δ/h 0.1–0.2 within the tanh family (p. 25), yet strongly changed by the PIV profile (p. 19). This nuances the page's claim that shear-layer thickness controls the bands ([Mancinelli 2021](../notes/mancinelli-2021-complex-valued-resonance-model-screech.md)): for a rectangular jet the cross-sectional shape (relaxed AR) may matter as much as thickness.
+- **Open question on thick layers and heating.** This adds that the rectangular branch point depends on dimensional modelling. The tanh model also cannot reach realistic thicknesses without a subsonic centreline (p. 5, 18).
+- **Methods and data.** Add that a planar model is adequate for KH-only uses for AR ≥ 2–4, but not for GJM bands.
+- **Verification point.** The GJM convergence test varied resolution but not the 40D domain (p. 24), although the branch-point mode reaches the far field (p. 17). Note it as a numerical question.

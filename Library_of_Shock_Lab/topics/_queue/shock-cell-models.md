@@ -29,3 +29,12 @@ The paper adds the statistical (RANS/PIV) counterpart to the wavepacket × shock
   - short L or L_c destroys the peak-frequency directivity (Fig. 9, p. 990).
 - With [nogueira-2021-wavepacket-modulation-shock-containing-jets](../notes/nogueira-2021-wavepacket-modulation-shock-containing-jets.md) (shocks lengthen the envelope), this suggests the need for jitter grows in real shock-containing jets. That is our inference.
 - It adds an earlier, model-only data point to the open question "Jitter or shock unsteadiness between the BBSAN peaks?". In the model, coherence decay alone smooths the gaps; shocks are steady.
+
+## wong-2020-azimuthal-decomposition-radiated-noise-shock-containing-jets (queued 2026-10-22)
+
+This paper's contribution to the shock side of BBSAN is small.
+- **What eq. 1 fits.** With the Pack–Prandtl vortex-sheet L₁ and u_c = 0.7u_j, eq. 1 fits the n = 1 and n = 2 lobes at NPR 3.10 and 3.67 in every azimuthal mode. At NPR 2.25 (M_j 1.14, β 0.55) it under-predicts the peak frequency, which the authors attribute to the Pack spacing (p. 2019–2020). In a screeching jet the real train is probably shorter and shrinking (andre-2013-bbsan-screeching-non-screeching-underexpanded-jets; mancinelli-2019-screech-prediction-upstream-modes), which would raise the peak, as observed.
+- **The higher-order curves are harmonics.** The note's pixel check of Fig. 3 shows them at 2.0× and 2.9× the n = 1 St at θ = 90°, i.e. L_n = L₁/n. Pack's Bessel-zero modes would give 2.30× and 3.60×. The "favourable" agreement of the secondary lobes (p. 2020) therefore supports a harmonic-like second wavenumber more than Pack's k_s2. That is consistent with the page's claim 3 that secondary shock peaks are not Pack's higher modes (nogueira-2021-closure-mechanism-a1-a2-screech, p. 7–8), but the paper does not test it.
+- **Convection speed across modes.** Using one u_c for all m implies that the wavepackets of all azimuthal orders convect alike (p. 2020).
+- **Where the azimuthal content comes from.** In the authors' model picture the shocks are axisymmetric and stationary, so all azimuthal content of BBSAN comes from the wavepacket (p. 2022). That fits the page's KH × shock product picture. It also means wavepacket models need m up to about 4 at St ≳ 0.7 (p. 2023), while shock-cell models need only m = 0.
+- **No measured spacing.** The paper gives no measured shock spacing. Mean schlieren of the 8 mm SJAF nozzle would settle the NPR 2.25 mismatch.

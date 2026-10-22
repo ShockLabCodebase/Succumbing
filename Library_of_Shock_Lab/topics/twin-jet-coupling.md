@@ -86,6 +86,7 @@ Plasma forcing at the screech frequency moves the coupling ([Esfahani 2021, cont
 ## Papers
 - [Raman 1998](../notes/raman-1998-supersonic-jet-screech-review.md): review; early twin rectangular coupling, out of phase then in phase, 15 dB apart midway (single-jet material on [non-axisymmetric-jets](non-axisymmetric-jets.md)).
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): four coupling modes of round twins; phase jumps without frequency jumps.
+- [Bell 2018](../notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): first PIV-enclosure twin-jet study at s/D 3; steady symmetric coupling at NPR 5.0, faint at 4.6; switching proposed (synthesis pending)
 - [Brès 2021](../notes/bres-2021-les-twin-rectangular-jets-plasma.md): blind LES of OSU AR 2 twins; acoustic validation.
 - [Esfahani 2021, coupling modes](../notes/esfahani-2021-coupling-modes-twin-rectangular-jets.md): AR 2 twin coupling map against M_j; beating at frequency mismatch.
 - [Esfahani 2021, control](../notes/esfahani-2021-control-twin-rectangular-jet-coupling.md): plasma forcing sets or breaks coupling.

@@ -20,7 +20,7 @@ phenomena: ["intermittency"]
 params: {}
 topics: ["time-frequency-methods"]
 related: ["horel-1984-complex-principal-component-analysis", "raiola-2025-hilbert-pod", "davey-2025-hpod-sphere-wake", "torrence-1998-practical-guide-wavelet-analysis", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "stavropoulos-2026-jet-edge-interaction"]
-cites: []
+cites: ["bedrosian-1963-product-theorem-hilbert-transforms", "boashash-1992-instantaneous-frequency-fundamentals"]
 summary: "Origin of EMD/Hilbert–Huang: sifting into IMFs so ω = dθ/dt is meaningful; Hilbert and marginal spectra, degree of stationarity; intrawave FM not harmonics; fails for close tones"
 ---
 # The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-stationary time series analysis

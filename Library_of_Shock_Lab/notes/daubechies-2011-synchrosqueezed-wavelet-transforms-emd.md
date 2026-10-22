@@ -20,7 +20,7 @@ phenomena: []
 params: {}
 topics: ["time-frequency-methods"]
 related: ["huang-1998-empirical-mode-decomposition-hilbert-spectrum", "torrence-1998-practical-guide-wavelet-analysis", "raiola-2025-hilbert-pod", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "sieber-2016-spectral-proper-orthogonal-decomposition", "horel-1984-complex-principal-component-analysis", "wong-2023-steady-unsteady-coupling-twin-round-jets", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "bell-2021-intermittent-modal-coupling-screeching-twin-jets", "mancinelli-2019-screech-prediction-upstream-modes", "jordan-2018-jet-flap-interaction-tones"]
-cites: ["huang-1998-empirical-mode-decomposition-hilbert-spectrum", "rilling-2008-one-or-two-frequencies-emd-two-tones"]
+cites: ["huang-1998-empirical-mode-decomposition-hilbert-spectrum", "huang-2009-on-instantaneous-frequency", "rilling-2008-one-or-two-frequencies-emd-two-tones"]
 summary: "Synchrosqueezed CWT with a proof: AM–FM modes with relative IF gap ≥ d and slow modulation ε get IF to ε^(1/3) and are rebuilt; wavelet band must be < d/(1+d)"
 ---
 # Synchrosqueezed Wavelet Transforms: a Tool for Empirical Mode Decomposition

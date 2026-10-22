@@ -176,6 +176,7 @@ Which imaging suits which analysis, following the CLAUDE.md workflow:
 - [Henderson et al. 2002](../notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): phase-locked spark shadowgraph (not tagged).
 - [Raffel 2015](../notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../notes/tan-2015-bos-density-axisymmetric-jets.md): group BOS → Abel → mean density recipe with synthetic error map.
+- [Powis et al. 2016](../notes/powis-2016-impingement-tones-shock-instabilities-plug-nozzle.md): early Shimadzu HPV-1 use; first edge-detection shock tracking from time-resolved schlieren (synthesis pending)
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): 50–100 kHz schlieren POD; aliasing; drift removal.
 - [Mercier et al. 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): 220–430 kfps thin-strip schlieren (synthesis pending).
 - [Knast et al. 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): HPV-1 bursts, x–t convection speeds, two views (not tagged).

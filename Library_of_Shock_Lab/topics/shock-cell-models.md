@@ -104,6 +104,7 @@ The parabolised Floquet equations (PFE) of [Nogueira 2022, PFE](../notes/nogueir
 - [Tan et al. 2019](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV of C-mode jets (M_j 1.45, 1.59): POD-filtered lip-line integral scales give Mach-independent c_L for k^{3/2}/ε and k^{1/2}D_j/V₁ BBSAN and mixing-noise source models (synthesis pending).
 - [Tan et al. 2019](../notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): Morris–Miller BBSAN analogy from POD-filtered PIV and k–ω SST RANS, M_j 1.45/1.59: Sr 1 sources on sonic line just upstream of shock reflections; D_j/v̄₁ scale best (synthesis pending).
 - [Wong et al. 2019](../notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Line-source wavepacket × Pack shock-cell BBSAN model: coherence decay lowers the peak 2–5 dB, broadens directivity, and lets n ≥ 2 modes fill high-St upstream sound (synthesis pending).
+- [Wong et al. 2020](../notes/wong-2020-azimuthal-decomposition-radiated-noise-shock-containing-jets.md): eq. 1 with Pack spacing fits BBSAN lobes in every azimuthal mode except at NPR 2.25; higher curves are harmonics (synthesis pending)
 - [Edgington-Mitchell 2021](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): k_kh ± k_s waves in PIV confirm the product picture.
 - [Nogueira 2021](../notes/nogueira-2021-absolute-instability-shock-containing-jets.md): Floquet LSA; periodic shocks create absolute instability.
 - [Wong 2021](../notes/wong-2021-wavepacket-modelling-bbsan.md): PIV-corrected Pack shocks × wavepackets for BBSAN.

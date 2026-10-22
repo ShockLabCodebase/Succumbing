@@ -206,10 +206,12 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): snapshot, SNR and resolution budgets for residual statistics after POD-mode removal; core masking leaves the modes unchanged.
 - [Edgington-Mitchell et al. 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): standard group PIV settings for screech (not tagged).
 - [Knast et al. 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): tone frequency and phase, not amplitude, in a non-anechoic rig (not tagged).
+- [Bell et al. 2018](../notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): planar PIV of twin Mach-disk jets; light sheet diffracted by the first jet's Mach disk (synthesis pending)
 - [Mayer et al. 2019](../notes/mayer-2019-bristol-aeroacoustic-wind-tunnel.md): anechoic open-jet facility design and acoustic data-quality checks.
 - [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md): PIV settings, POD convergence, two-facility practice; ray tracing through PIV fields.
 - [Tan et al. 2019a](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): k, ε and length scales from planar PIV under an axisymmetric closure; no time scales.
 - [Tan et al. 2019b](../notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): mean pressure from PIV velocity; PIV statistics checked against k–ω SST RANS.
+- [Wong et al. 2020](../notes/wong-2020-azimuthal-decomposition-radiated-noise-shock-containing-jets.md): primary description and ISO 3745 qualification of the SJAF anechoic chamber; two-microphone azimuthal method (synthesis pending)
 - [Edgington-Mitchell et al. 2021](../notes/edgington-mitchell-2020-waves-in-screeching-jets.md): PIV-derived density checked with tomographic BOS (not tagged).
 - [Esfahani et al. 2021b](../notes/esfahani-2021-coupling-modes-twin-rectangular-jets.md): OSU GDTL anechoic chamber (not tagged).
 - [Shehzad et al. 2021](../notes/shehzad-2021-laser-sheet-alignment-piv.md): laser sheet aligned to the target before calibration; applies to planar PIV.

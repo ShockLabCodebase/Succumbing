@@ -192,6 +192,7 @@ One rig with a notched screech-free twin, a β and TTR sweep, mean PIV and a nea
 - [Tan et al. 2019a](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV calibration of statistical BBSAN and mixing-noise source scales.
 - [Tan et al. 2019b](../notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): Morris–Miller BBSAN source maps from PIV and RANS, on the sonic line.
 - [Wong et al. 2019](../notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Line-source wavepacket × Pack shock-cell BBSAN model: coherence decay lowers the peak 2–5 dB, broadens directivity, and lets n ≥ 2 modes fill high-St upstream sound (synthesis pending).
+- [Wong et al. 2020](../notes/wong-2020-azimuthal-decomposition-radiated-noise-shock-containing-jets.md): two-microphone azimuthal decomposition of BBSAN from screeching SJAF jets; ±1 pair leads, 2–5 modes needed (synthesis pending)
 - [Wong et al. 2021](../notes/wong-2021-wavepacket-modelling-bbsan.md): group's inside-out wavepacket × shock-cell BBSAN model; jitter fills the dips.
 - [Mathews 2025](../notes/mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md): full-scale BSN sources at shock cells, failed spacing formulas, rocket Mach waves and nonlinear losses.
 
