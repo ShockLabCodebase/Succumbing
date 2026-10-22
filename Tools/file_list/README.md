@@ -23,10 +23,12 @@ Finds data parked on shared storage (M3 scratch, RDS Market) so its owners can b
 
 ## Weekly usage per folder
 
-`weekly_scan.ps1` tracks how much each top-level folder of Market and M3 qk75 scratch holds over time. Each run adds a column (the scan date, sizes in GB) to `Misc/Market_folder_sizes.csv` and `Misc/M3_qk75_folder_sizes.csv`, with one row per folder plus `(loose files)`, `TOTAL` and, for M3, `drive used`/`drive size` from `df`. A run is logged to `Misc/storage_scan.log`. Market is sized with a robocopy list-only dry run over the UNC path. M3 is sized with `du` over SSH (`ssh m3`, key in the Windows ssh-agent), at low priority on the login node, and nothing is written there.
+`weekly_scan.ps1` tracks how much each top-level folder of Market and M3 qk75 scratch holds over time. Each run adds a column (the scan date, sizes in GB) to `Misc/Market_folder_sizes.csv` and `Misc/M3_qk75_folder_sizes.csv`, with one row per folder plus `(loose files)`, `TOTAL` and, for M3, `drive used`/`drive size` from `df`. A run is logged to `Misc/storage_scan.log`. Market is sized with a robocopy list-only dry run over the UNC path, `-MarketJobs` (default 8) top-level folders at once. M3 is sized with `du` over SSH (`ssh m3`, key in the Windows ssh-agent), at low priority on the login node, and nothing is written there. Lustre answers one file at a time, so the top-level folders are sized `-M3Jobs` (default 12) at once; one `du` over all of qk75 took 5.5 h. Raising the priority would not help, because the time goes on waiting for Lustre, not on CPU. The Market and M3 scans run at the same time, so a run takes about as long as the slower of the two.
+
+The script keeps the PC from sleeping while it runs, because a sleep drops the SSH connection. Start long runs from the scheduled task (`Start-ScheduledTask 'Weekly storage scan'`), not from a terminal or a Claude session, so that closing that window doesn't kill the scan.
 
 ```
-powershell -ExecutionPolicy Bypass -File weekly_scan.ps1 [-Only Market|M3] [-OutDir DIR]
+powershell -ExecutionPolicy Bypass -File weekly_scan.ps1 [-Only Market|M3] [-OutDir DIR] [-M3Jobs N] [-MarketJobs N]
 ```
 
 To run it every Sunday at 02:00, run this once in PowerShell. The task runs only while you are logged on, because it needs your network login for Market and your ssh-agent for M3. If the PC was off at 02:00, it starts at the next chance.

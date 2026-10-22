@@ -11,10 +11,13 @@
 # Running twice on the same day replaces that day's column.
 #
 # Market is sized with robocopy /L (a list-only dry run, much faster over SMB
-# than Get-ChildItem). M3 is sized with du over SSH, at low priority on the
-# login node; nothing is written on M3.
+# than Get-ChildItem), with -MarketJobs top-level folders sized at once. M3 is
+# sized with du over SSH, at low priority on the login node, with -M3Jobs
+# top-level folders sized at once (Lustre answers one file at a time, so
+# parallel du is much faster); nothing is written on M3. The two scans run at
+# the same time. The PC is kept from going to sleep while the script runs.
 #
-# Usage: powershell -ExecutionPolicy Bypass -File weekly_scan.ps1 [-OutDir DIR] [-Only Market|M3|Both]
+# Usage: powershell -ExecutionPolicy Bypass -File weekly_scan.ps1 [-OutDir DIR] [-Only Market|M3|Both] [-M3Jobs N] [-MarketJobs N]
 
 param(
     [string]$OutDir = (Join-Path $PSScriptRoot '..\..\Misc'),
@@ -22,7 +25,9 @@ param(
     # The UNC path, not Z:, because scheduled tasks don't see mapped drives.
     [string]$MarketPath = '\\storage.erc.monash.edu\shares\r-eng-mae-ltrac-jet-noise',
     [string]$M3Host = 'm3',
-    [string]$M3Path = '/fs04/scratch2/qk75'
+    [string]$M3Path = '/fs04/scratch2/qk75',
+    [ValidateRange(1, 32)][int]$M3Jobs = 12,
+    [ValidateRange(1, 32)][int]$MarketJobs = 8
 )
 
 $ErrorActionPreference = 'Stop'
@@ -32,6 +37,11 @@ $OutDir = [IO.Path]::GetFullPath($OutDir)
 New-Item -ItemType Directory -Force $OutDir | Out-Null
 $log = Join-Path $OutDir 'storage_scan.log'
 $failed = $false
+
+# Keep the PC awake until this process exits (Windows clears the request then).
+Add-Type -Namespace Win32 -Name Power -MemberDefinition `
+    '[DllImport("kernel32.dll")] public static extern uint SetThreadExecutionState(uint esFlags);'
+[void][Win32.Power]::SetThreadExecutionState([uint32]2147483649)   # ES_CONTINUOUS | ES_SYSTEM_REQUIRED
 
 function Log($msg) {
     $line = '{0}  {1}' -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $msg
@@ -69,24 +79,74 @@ function Update-Table($csv, $sizes, $extra) {
     Log ('{0} updated: {1} folders, TOTAL {2} GB' -f (Split-Path $csv -Leaf), @($folders).Count, $values['TOTAL'])
 }
 
-# Bytes under a folder, from robocopy's list-only summary (exit codes >= 8 are errors).
-function Get-RobocopyBytes($dir) {
+# Run a script block in another runspace (a thread of this process), in $pool
+# if given. Windows PowerShell 5.1 has no ForEach-Object -Parallel.
+function Start-Background($script, $argList, $pool) {
+    $ps = [powershell]::Create()
+    if ($pool) { $ps.RunspacePool = $pool }
+    [void]$ps.AddScript($script)
+    foreach ($a in $argList) { [void]$ps.AddArgument($a) }
+    [pscustomobject]@{ PS = $ps; Handle = $ps.BeginInvoke() }
+}
+
+# Wait for a Start-Background job and return its output.
+function Receive-Background($job) {
+    try { $job.PS.EndInvoke($job.Handle) } finally { $job.PS.Dispose() }
+}
+
+# Bytes under a folder, from robocopy's list-only summary (exit codes >= 8 are
+# errors). Runs in the background, so it returns the exit code and the summary
+# line for the caller to check and log.
+$robocopyBytes = {
+    param($dir)
     $dst = Join-Path $env:TEMP 'robocopy_list_only_target'   # never created with /L
     $out = & robocopy.exe $dir $dst /L /E /XJ /BYTES /NFL /NDL /NJH /NP /R:0 /W:0 /MT:16
     $code = $LASTEXITCODE
     $line = $out | Where-Object { $_ -match '^\s*Bytes\s*:' } | Select-Object -First 1
-    if ($code -ge 8 -or -not $line) { Log "Market: robocopy exit $code for $dir"; $script:failed = $true }
-    if ($line) { [int64](($line -split ':', 2)[1].Trim() -split '\s+')[0] } else { [int64]0 }
+    [pscustomobject]@{ Code = $code; Line = $line }
+}
+
+# M3 is sized on its login node and Market from this PC, so they run at the
+# same time: M3's ssh is started in the background before the Market scan.
+$m3 = $null
+if ($Only -in 'M3', 'Both') {
+    Log "M3: ${M3Host}:$M3Path"
+    # df gives the file system's view; find sums the files sitting in the
+    # root; du -sb sizes each top-level folder, $M3Jobs at a time. Unreadable
+    # folders make du exit 1, but it still prints what it could size.
+    # (No double quotes: Windows PowerShell 5.1 mangles them in native arguments.)
+    $remote = "cd '$M3Path' || exit 1; " +
+              "df -PB1 . | awk 'NR==2 {print `$2, `$3}' | sed 's/^/DF /'; " +
+              "find . -mindepth 1 -maxdepth 1 ! -type d -printf '%s\n' 2>/dev/null | awk '{s += `$1} END {print s + 0}' | sed 's/^/LOOSE /'; " +
+              "find . -mindepth 1 -maxdepth 1 -type d -print0 | nice -n 19 ionice -c3 xargs -0 -n 1 -P $M3Jobs du -sb 2>/dev/null; true"
+    $m3 = Start-Background {
+        param($ssh, $hostName, $remote)
+        $t = Get-Date
+        $out = & $ssh -o BatchMode=yes -o ConnectTimeout=30 -o ServerAliveInterval=60 $hostName $remote
+        [pscustomobject]@{ Out = $out; Code = $LASTEXITCODE; Minutes = ((Get-Date) - $t).TotalMinutes }
+    } @($ssh, $M3Host, $remote)
 }
 
 if ($Only -in 'Market', 'Both') {
+    $pool = $null
     try {
         Log "Market: $MarketPath"
         if (-not (Test-Path -LiteralPath $MarketPath)) { throw "cannot reach $MarketPath" }
         $t = Get-Date
-        $sizes = [ordered]@{}
+        # One robocopy per top-level folder, $MarketJobs at a time.
+        $pool = [runspacefactory]::CreateRunspacePool(1, $MarketJobs)
+        $pool.Open()
+        $jobs = [ordered]@{}
         foreach ($d in Get-ChildItem -LiteralPath $MarketPath -Directory -Force) {
-            $sizes[$d.Name] = Get-RobocopyBytes $d.FullName
+            $jobs[$d.Name] = Start-Background $robocopyBytes @($d.FullName) $pool
+        }
+        $sizes = [ordered]@{}
+        foreach ($name in $jobs.Keys) {
+            $r = (Receive-Background $jobs[$name])[0]
+            if ($r.Code -ge 8 -or -not $r.Line) {
+                Log "Market: robocopy exit $($r.Code) for $(Join-Path $MarketPath $name)"; $failed = $true
+            }
+            $sizes[$name] = if ($r.Line) { [int64](($r.Line -split ':', 2)[1].Trim() -split '\s+')[0] } else { [int64]0 }
         }
         $sizes['(loose files)'] = [int64](Get-ChildItem -LiteralPath $MarketPath -File -Force |
                 Measure-Object Length -Sum).Sum
@@ -94,31 +154,24 @@ if ($Only -in 'Market', 'Both') {
         # No drive rows: the share reports the whole storage backend (petabytes), not its quota.
         Update-Table (Join-Path $OutDir 'Market_folder_sizes.csv') $sizes ([ordered]@{})
     } catch { $failed = $true; Log "Market FAILED: $_" }
+    finally { if ($pool) { $pool.Dispose() } }
 }
 
-if ($Only -in 'M3', 'Both') {
+if ($m3) {
     try {
-        Log "M3: ${M3Host}:$M3Path"
-        $t = Get-Date
-        # du -d1 gives each top-level folder and the root total (root's own files
-        # = total minus the folders); df gives the file system's view. Unreadable
-        # folders make du exit 1, but it still prints what it could size.
-        # (No double quotes: Windows PowerShell 5.1 mangles them in native arguments.)
-        $remote = "df -PB1 '$M3Path' | awk 'NR==2 {print `$2, `$3}' | sed 's/^/DF /'; " +
-                  "nice -n 19 ionice -c3 du -b -d1 '$M3Path' 2>/dev/null; true"
-        $out = & $ssh -o BatchMode=yes -o ConnectTimeout=30 -o ServerAliveInterval=60 $M3Host $remote
-        if ($LASTEXITCODE -ne 0 -or -not $out) { throw "ssh $M3Host failed (exit $LASTEXITCODE); is the key loaded in ssh-agent?" }
-        $root = $M3Path.TrimEnd('/')
-        $sizes = [ordered]@{}; $rootTotal = $null; $df = $null
+        $r = (Receive-Background $m3)[0]
+        $out = $r.Out
+        if ($r.Code -ne 0 -or -not $out) { throw "ssh $M3Host failed (exit $($r.Code)); is the key loaded in ssh-agent?" }
+        $sizes = [ordered]@{}; $loose = $null; $df = $null
         foreach ($line in $out) {
             if ($line -like 'DF *') { $df = $line.Substring(3) -split ' '; continue }
+            if ($line -like 'LOOSE *') { $loose = [int64]$line.Substring(6); continue }
             $bytes, $path = $line -split "`t", 2
-            if ($path -eq $root) { $rootTotal = [int64]$bytes }
-            else { $sizes[$path.Substring($root.Length + 1)] = [int64]$bytes }
+            $sizes[$path -replace '^\./', ''] = [int64]$bytes
         }
-        if ($null -eq $rootTotal -or -not $df) { throw "unexpected output from M3: $($out -join ' | ')" }
-        $sizes['(loose files)'] = $rootTotal - (($sizes.Values | Measure-Object -Sum).Sum)
-        Log ('M3: scanned in {0:N0} min' -f ((Get-Date) - $t).TotalMinutes)
+        if ($null -eq $loose -or -not $df -or -not $sizes.Count) { throw "unexpected output from M3: $($out -join ' | ')" }
+        $sizes['(loose files)'] = $loose
+        Log ('M3: scanned in {0:N0} min' -f $r.Minutes)
         Update-Table (Join-Path $OutDir 'M3_qk75_folder_sizes.csv') $sizes `
             ([ordered]@{ 'drive used' = [int64]$df[1]; 'drive size' = [int64]$df[0] })
     } catch { $failed = $true; Log "M3 FAILED: $_" }
