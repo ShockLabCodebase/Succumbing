@@ -4,6 +4,7 @@ Reference notes so the repo doesn't need re-reading. **Read-only repo: never mod
 
 - **Path:** `\\ad.monash.edu\home\User088\joellukw\Documents\Monash_Research_Fellow\Experiments\Shocklab_Codebases\Schlieren_Processing_Scripts`
 - **Snapshot:** branch `main` @ `848091de` (read 2026-10-15; `align_fields` re-read in detail 2026-10-16 at the same commit). If HEAD has moved, re-check the files you rely on before trusting line numbers.
+- **Update 2026-10-22 (@ `024a470`, local copy `Codebase/Codebase_Pre_AI/Schlieren_Processing_Scripts`):** since 848091de, `align_fields` is the patched version from `Codebase_Patches` (without the `align_info` output), the symmetry scripts compute `y_zero/y_size/y_odd` from the snapped axis row, and SPOD saves use `-nocompression`. Most scripts were then run on `Test_Data/Schlieren` (10k-frame cases); results, verified bugs and patches are in `Codebase/Codebase_Patches/Schlieren_Processing_Scripts/REVIEW_2026-10-22.md`. §9 below is updated with what was verified.
 - **Coverage:** all top-level scripts plus the `Functions/` helpers they call, read in full. `Functions/Misc/` only listed (names at the end). `Functions/Wavelet_POD/` and `export_fig/` not read.
 - The repo's own `README.md` is out of date: it uses old script names (`SPOD_for_mat_files.m`, `Schlieren_POD.m`, `BMD_for_mat_files.m`, `Schlieren_Hilbert_POD_Plots.m`, ...). Use these notes for current names.
 - Line numbers (`file:L`) are from the snapshot above.
@@ -31,7 +32,7 @@ Reference notes so the repo doesn't need re-reading. **Read-only repo: never mod
 
 **Strouhal number.** `get_ideal_jet_velocity_diameter.m`: cold jet (T0 = 293 K, γ = 1.4, R = 287), isentropic M_j from NPR (or given M), u_j = M_j·a_j, and for M_j > 1 **D_j = fully-expanded diameter for a sonic (M_d = 1) convergent nozzle** (L21–22) — not valid for C-D nozzles with M_d > 1. St = f·D_j·1e-3/u_j (D in mm). Exceptions: `Empirical_Dispersion` uses St = f·D/(M_j·c∞), c∞ = 340 m/s.
 
-**Toolboxes used:** Signal Processing (`findpeaks`, `hamming`, `hann`, `hilbert`), Curve Fitting (`smooth`), Parallel (`parfor`, `parpool('threads')`, `spmd`), Image Processing (`corr2`, `imrotate`-style ops in `align_fields`). Helpers: `export_fig`, `savgol_diff`, `histweighted`, `CMRmap`, `pogmap`, `magma`.
+**Toolboxes used:** Mapping (`extractfield`, in nearly every script), Signal Processing (`findpeaks`, `hamming`, `hann`, `hilbert`), Curve Fitting (`smooth`), Parallel (`parfor`, `parpool('threads')`, `spmd`), Image Processing (`corr2`, `imrotate`-style ops in `align_fields`). Helpers: `export_fig`, `savgol_diff`, `histweighted`, `CMRmap`, `pogmap`, `magma`.
 
 ## 2. Pipeline overview
 
@@ -154,6 +155,33 @@ Schlieren_Sample_Videos: quick preview mp4s.
 
 Fix in a copy here, never in the repo; tell the user so they can fix upstream.
 
+**Verified on Test_Data, 2026-10-22 (@ 024a470)**
+
+Full report: `Codebase_Patches/Schlieren_Processing_Scripts/REVIEW_2026-10-22.md`. Patched copies of the files are next to it. Test: `tests/test_spod_hpod_scaling.m`.
+
+- `spod.m` is correct: Parseval is exact.
+- The "unverified" amplitude mismatch below is **confirmed**. `invspod` output is too small by sqrt(dt)·Σw/‖w‖ (×1/14 at nfft 1024, 150 kHz). The patch adds an optional `dt` argument.
+- `tcoeffs`:
+  - |a| is correct, but the phase is conjugated;
+  - the original runs out of memory on ~94k px × 10k frames locally;
+  - the patch uses a sliding-DFT convolution and no parallel pool, and matches conj(original) to 2e-7.
+- `hilbert_POD_func`: `hilbert(X')'` conjugates the analytic signal. The direct branch gives f_inst < 0; the snapshot branch (real data) gives conjugated modes, which look upstream-travelling when animated. Patched.
+- POD/HPOD `Energy` is ×1.51 too high on the twin case (normalised by the retained eigenvalues). The patch uses `eValue/trace(R)`.
+- `Empirical_Dispersion` runs on plain `*Fields.mat` files if the suffix is changed (patched as `case_suffix`). Its St = f·D/(M_j·340) put the tones at 0.83× (NPR 2.9) and 0.94× (Mj 0.8) the SPOD St. Patched to f·D_j/u_j; the sonic lines were already right.
+- Acoustic line k_aD = 2πM_jSt is wrong. It should be 2πSt(u_j/c∞)(D/D_j): 20% too far out at NPR 2.9.
+- `SPOD_Mode_Frequency_Reconstruction`, new findings:
+  - the `bandwidth_ind` find is missing `abs` (errors when the nearest bin is below bw/2);
+  - Mach branches save into `<main>/Data`.
+- Silent no-ops:
+  - `POD_Plots` is hard-wired to `POD_Results/CCA/Data`, `ROI = true`;
+  - `Hilbert_POD_Plots` with `ROI = true`.
+- `bmd_modified` stores `Q_hat` over all nDFT frequencies as complex double (~28 GB here).
+- `BMD_Plots` crashes with fewer than 10 triads.
+- BMD absolute `MinPeakProminence 1e6` gives 0 peaks on the twin case.
+- `get_symmetry` returns double. The symmetric SPOD's second pass runs out of memory.
+- Wildcards: folder strings need `*`. An exact name makes `dir` list the folder's contents.
+- `extractfield` needs the Mapping Toolbox.
+
 **Will error as written**
 - `SPOD_Analysis_Symmetry_Enforced` L85: `nfft` uses `n_snapshots` before defined.
 - `SPOD_Mode_Frequency_Reconstruction` L222–225: calls `get_ideal_jet_velocity_diameter(..., D)` before D is loaded; `n_modes_set=0` breaks `n_modes_recon(2)`; bandpass branch uses undefined `bandwidth_range` and default `bandwidth_range_values` has one element; Mach branches broken (no mkdir, commented-out `save_file`, `_Mj_` vs `_M_`).
@@ -189,7 +217,7 @@ Fix in a copy here, never in the repo; tell the user so they can fix upstream.
 - `align_fields`: `imrotate(...,'crop')` zero corners (up to ~35 px tall at 4° on a 1024 px frame) are never cropped; any non-zero angle, even 0.004°, re-interpolates every frame (slight high-k smoothing, int16 rounding); `do_rotation = false` runs 63 identical 0° passes; `rotation_angle` not saved.
 
 **Unverified / disputed**
-- Possible amplitude-scaling mismatch: `spod.m` now uses a unit-power window × sqrt(dt), while `invspod`/`tcoeffs` use the old Hamming `1/mean(w)` normalisation → reconstructed amplitudes may be off by a constant (~sqrt(dt)·sum(w)/‖w‖). One reader thought amplitude was consistent. Check numerically (reconstruct vs original at a tone) before trusting absolute amplitudes; relative/shape results unaffected.
+- (Resolved 2026-10-22: confirmed, see above.) Possible amplitude-scaling mismatch: `spod.m` now uses a unit-power window × sqrt(dt), while `invspod`/`tcoeffs` use the old Hamming `1/mean(w)` normalisation → reconstructed amplitudes may be off by a constant (~sqrt(dt)·sum(w)/‖w‖). One reader thought amplitude was consistent. Check numerically (reconstruct vs original at a tone) before trusting absolute amplitudes; relative/shape results unaffected.
 - `spod_adapt` divides modes by an extra sqrt(nSamples) (modes not unit-norm); `spod.m` classical branch A scaling differs from snapshot branch.
 - `.slow` cases with NPR token last in the filename may fail to parse.
 
