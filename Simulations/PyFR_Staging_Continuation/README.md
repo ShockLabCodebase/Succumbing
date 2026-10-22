@@ -74,7 +74,7 @@ pyfr import jet.msh jet.pyfrm
 
 The PyFR venv already has numpy and h5py, and PyFR needs Python ≥ 3.11, which provides `tomllib`. So the driver needs nothing extra.
 
-**Environment** (set up in October 2026, in `/fs04/scratch2/qk75/JWeightman/PyFR_Staging`; `source env.sh` there):
+**Environment** (set up in October 2026, in `/fs04/scratch2/ty79/JWeightman/PyFR_Staging`, moved from qk75 on 21 Oct 2026; `source env.sh` there):
 - Python 3.12 from the `miniforge3` module, holding PyFR 3.1, gmsh and mpi4py. mpi4py is built from source against HPC-X's MPI: `MPICC=$(which mpicc) pip install --no-binary mpi4py mpi4py`.
 - Modules: `module purge`, then `module load hpcx/2.50-redhat9-cuda12 cuda/12.8`. Without the purge, the HPC-X module doesn't put `mpicc` on the path.
 - PyFR initialises MPI with `MPI_THREAD_MULTIPLE`. The default UCX in HPC-X refuses that, and Open MPI then falls back to a slower transport ("PML UCX could not be selected"). Putting HPC-X's multithreaded UCX (`ucx/mt/lib`) first on `LD_LIBRARY_PATH` fixes it.
@@ -90,7 +90,7 @@ The PyFR venv already has numpy and h5py, and PyFR needs Python ≥ 3.11, which 
    **What each segment writes**, all in its folder `runs/<branch>/<segment>/`:
    - one solution at the end;
    - every probe set (`samples.h5`, the lip ring the driver analyses, plus `samples_shear.h5`, `samples_farfield.h5`, `samples_nozzle.h5` and `samples_axis.h5` in `base.example.ini`). The driver rewrites each plugin's `file` into the segment folder, so the sets need distinct file names;
-   - one time average (`tavg-<t>.pyfrs`): the mean flow and second moments from the end of the transient (or the start of an extension) to the end of the segment. On the production mesh it is about 8 GB;
+   - one time average (`tavg-<t>.pyfrs`): the mean flow and second moments from the end of the transient (or the start of an extension) to the end of the segment. It covers the five planes in `base.example.ini`: xy at z = 0, and yz at x = 0, 1, 2.5 and 5. The 13 fields are ρ, u, v, w, p, T and the second moments. PyFR stores whole elements, so the region is a thin slab round each plane, sized for the production mesh by `tools/measure_planes.py`. On the production mesh it is about 670 MB (the full near field would be 8 GB);
    - `residual.csv`.
 
    Set `case.sample_dt` in the settings to have the driver set every sampler's and the time average's `nsteps` to `sample_dt/dt`; it must be a whole number of steps.
