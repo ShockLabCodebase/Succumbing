@@ -1,16 +1,16 @@
 # Reference library schema
 
-How the reference library is laid out, and the metadata every note carries. `Library_of_Shock_Lab/tools/library.py` reads this metadata to build the index and the BibTeX file and to check the library. This file lists the allowed tag values, which keeps searches reliable.
+How the reference library is laid out, and the metadata every note carries. `Library_of_Shock_Lab/Tools/library.py` reads this metadata to build the index and the BibTeX file and to check the library. This file lists the allowed tag values, which keeps searches reliable.
 
 ## Layout
 
 | Path | What it is | Who writes it |
 | --- | --- | --- |
-| `notes/<slug>.md` | One note per paper: YAML frontmatter + structured body | `/add-paper` |
-| `topics/<topic>.md` | Living review of one research thread across papers (consensus, disagreements, open questions) | `/add-paper` revises it in batches; `/lit` may extend it |
-| `topics/_queue/<topic>.md` | Topic contributions from newly indexed papers (`## <note key>`) and from research questions (`## research-question: <slug>`), waiting for the next batch revision of that page | `/add-paper`, `/research-question` |
-| `data/*.csv` | Numbers collected across papers (screech tones, shock spacing, rocket-noise parameters), each row citing note + page | `/add-paper` appends; see `data/README.md` |
-| `INDEX.md` | One line per paper, **generated** from frontmatter | `python Library_of_Shock_Lab/tools/library.py build` only |
+| `Notes/<slug>.md` | One note per paper: YAML frontmatter + structured body | `/add-paper` |
+| `Topics/<topic>.md` | Living review of one research thread across papers (consensus, disagreements, open questions) | `/add-paper` revises it in batches; `/lit` may extend it |
+| `Topics/_queue/<topic>.md` | Topic contributions from newly indexed papers (`## <note key>`) and from research questions (`## research-question: <slug>`), waiting for the next batch revision of that page | `/add-paper`, `/research-question` |
+| `Data/*.csv` | Numbers collected across papers (screech tones, shock spacing, rocket-noise parameters), each row citing note + page | `/add-paper` appends; see `Data/README.md` |
+| `INDEX.md` | One line per paper, **generated** from frontmatter | `python Library_of_Shock_Lab/Tools/library.py build` only |
 | `references.bib` | BibTeX for every note, **generated**; key = note slug | `library.py build` only |
 | `Paper_PDFs/<topic>/` | Indexed PDFs, one copy each, filed by the note's first (most significant) topic (local only, git-ignored) | `library.py file` |
 | `Paper_PDFs/_Unprocessed/` | New PDFs waiting for `/add-paper`, under any name | user |
@@ -19,7 +19,7 @@ How the reference library is laid out, and the metadata every note carries. `Lib
 | `Misc/notes_to_update.md` | Queued changes to existing notes (cross-links, contradictions, corrections), applied in batches by `/add-paper` | `/research-question` |
 | `Misc/group_papers.md` | The group's journal papers (ORCID/OpenAlex) and where each one is held | user / `/add-paper` |
 | `Codebase_Notes/<repo>.md` | Summaries of the group's analysis-code repos (one per repo, with the commit read); not papers, so `library.py` ignores them | code-review work |
-| `tools/library.py`, `tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s Library_of_Shock_Lab/tools`) | |
+| `Tools/library.py`, `Tools/test_library.py` | The library tool and its tests (`python -m unittest discover -s Library_of_Shock_Lab/Tools`) | |
 
 Never hand-edit `INDEX.md` or `references.bib`; edit the note's frontmatter and rebuild.
 
@@ -75,7 +75,7 @@ summary: "Practical SPOD–Welch guide: N_FFT bias vs variance, 50% overlap, Ham
 | `flow` | Flow configuration and regime (vocabulary below). |
 | `phenomena` | Physics studied (vocabulary below). |
 | `params` | Key conditions as strings: `M_j`, `M_d`, `NPR`, `TR` (stagnation/ambient temperature ratio), `T_j/T_∞` (static jet/ambient temperature ratio), `AR`, `s/D` (twin spacing), `z/D` or `h/D` (impingement distance), `Re`, `St`, `D_e`, vehicle names, etc. Ranges as `"2.1–3.4"`. |
-| `topics` | Topic pages (`topics/<name>.md`) this paper belongs in (vocabulary below), **most significant first**: the first topic decides the folder the PDF is filed in. Every paper with a topic must be discussed on that page. |
+| `topics` | Topic pages (`Topics/<name>.md`) this paper belongs in (vocabulary below), **most significant first**: the first topic decides the folder the PDF is filed in. Every paper with a topic must be discussed on that page. |
 | `related` | Other notes in this library the paper is closely tied to (builds on, contradicts, same data, same group thread). Judgement, from the note's content. |
 | `cites` | Notes in this library that the paper's reference list cites. **Filled by** `library.py cites`; do not edit by hand. |
 | `summary` | One line, at most about 160 characters: the takeaway, in the style of the old index rows. Goes into `INDEX.md`. |
@@ -84,7 +84,7 @@ The note body keeps its existing structure (header bullets, Summary, Key finding
 
 ## Topic pages
 
-A topic page is a short living review of one research thread, written for the user and for later sessions. It is the entry point for a question on that thread. Every claim cites a note, `[Author Year](../notes/<key>.md)`, with a page (`p. N`) where the claim is specific. Structure:
+A topic page is a short living review of one research thread, written for the user and for later sessions. It is the entry point for a question on that thread. Every claim cites a note, `[Author Year](../Notes/<key>.md)`, with a page (`p. N`) where the claim is specific. Structure:
 
 ```markdown
 # <Topic title>
@@ -259,7 +259,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `coherent-structures`: general eduction of coherent structures
 
 ### `topics`
-Each value is a page in `topics/`.
+Each value is a page in `Topics/`.
 - `screech`: screech mechanism, closure, shock leakage and source location, amplitude and receptivity, triads
 - `screech-frequency-and-global-modes`: screech frequency prediction models, convection speed, absolute instability and global modes, self-excitation, model and LES validation against experiment
 - `screech-staging-and-mode-switching`: A1/A2/B/C/D staging, k_s1/k_s2 loop assignment, mode switching, hysteresis, multimodal loops, staging-limit prediction
@@ -281,5 +281,5 @@ Each value is a page in `topics/`.
 
 ## Retired topic names
 
-Never use these, and never recreate their pages. A note (for example a draft in `notes/_incoming/`) that still carries one gets the replacement instead:
+Never use these, and never recreate their pages. A note (for example a draft in `Notes/_incoming/`) that still carries one gets the replacement instead:
 - `non-axisymmetric-and-twin-jets` (split 2026-10-21): `non-axisymmetric-jets` for single rectangular or elliptical jets, `twin-jet-coupling` for twin jets, or both.

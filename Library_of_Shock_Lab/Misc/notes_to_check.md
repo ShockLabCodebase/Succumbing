@@ -72,12 +72,12 @@ Each item names the notes that disagree. Check against the PDFs and fix the wron
 ## Screech and jets
 - E-M 2018 vs E-M 2020 (same Monash datasets): St 0.65/0.63 vs 0.67/0.65 at NPR 2.10/2.25 (2020 calls it a correction); upstream-wave peak at 5th vs 4th shock cell.
 - E-M 2020 shock wavenumber k_s D = 11 at NPR 2.10 (L_s/D ≈ 0.57) vs k_s1 D ≈ 12.8–13.7 in E-M 2022 and Nogueira 2021 closure at similar M_j. The E-M 2020 table was garbled in extraction; check p. 17.
-- Farghadan 2026 says the visible "first suboptimal" shock peak is really k_s3 (k_s2 hidden in the primary peak); E-M 2022 and Nogueira 2021 closure call the visible peak k_s2. Matters for `data/shock_cell_spacing.csv`.
+- Farghadan 2026 says the visible "first suboptimal" shock peak is really k_s3 (k_s2 hidden in the primary peak); E-M 2022 and Nogueira 2021 closure call the visible peak k_s2. Matters for `Data/shock_cell_spacing.csv`.
 - Mazharmanesh 2025 vs 2026, AR 2 elliptical jet at NPR 3.6: St 0.28 (quasi-helical) / 0.32 (flapping) vs 0.269 / 0.314 (flapping) / 0.273 (quasi-helical). Also camera exposure 5.1 µs vs LED pulse 0.5 µs on the same rig.
 - Ivelja 2024 (St ≈ 0.38, figure-read) vs Mazharmanesh 2025 (0.42) for an AR 2 elliptical jet at NPR 2.6: same nozzle?
 - Stavropoulos 2023 quotes Mancinelli 2021's vortex-sheet phase as ¼; the Mancinelli 2021 note gives φ = −π/4 (vortex sheet) and 0 (finite thickness).
 - Nogueira 2021 absolute instability says Ponton 1992 found lip thickness changes amplitude but not frequency; the Ponton note shows small systematic wavelength and mode-range shifts. Raman 1998 summarises Ponton & Seiner as a C→D switch; the Ponton note regroups "D" as a re-emerging B mode.
-- Krothapalli 1986 finds the fundamental dominant at 90°; Tam 1995 and Raman 1998 put the harmonic lobe at 90° (physical disagreement; discussed on topics/screech.md).
+- Krothapalli 1986 finds the fundamental dominant at 90°; Tam 1995 and Raman 1998 put the harmonic lobe at 90° (physical disagreement; discussed on Topics/screech.md).
 - Within-note: Knast 2018 Table 1 U_j 562/584 m/s look like typos for 462/484, and its St are 6–12 % above f D_j/U_j; Krothapalli 1986 AR 10 tone 10 000 Hz (Table 1) vs 10 795 Hz (p. 138); Jeun 2024 St 0.37 vs 0.373, 0.380 vs 0.383; Brès 2021 near-field main tone St 0.3 but far-field 0.6, unexplained; Tam 1995 eq. 12 at M_j 1.09 gives St ≈ 0.92 vs measured 0.67.
 - Pulsed-LED reference: E-M 2022 and Mazharmanesh 2025 cite "Willert et al. 2010"; other notes cite Willert, Mitchell & Soria 2012. Same paper?
 - Monash rig names vary: "LTRAC Gas Jet Facility" (E-M 2018, Weightman thesis), "LTRAC Supersonic Jet Facility" (E-M 2014, Wong 2021), "Supersonic(-)Gas-Jet Facility" (Mazharmanesh 2025/2026), "Gas-Jet Facility" (E-M 2025). Which are the same rig?

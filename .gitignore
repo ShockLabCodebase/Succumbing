@@ -39,5 +39,5 @@ Apps/*.zip
 Simulations/Possible_Reference_Setup/
 
 # /add-paper work in progress (notes awaiting fold-in) and the overnight run's lock, log and skip list
-**/notes/_incoming/
+**/Notes/_incoming/
 .claude/overnight/

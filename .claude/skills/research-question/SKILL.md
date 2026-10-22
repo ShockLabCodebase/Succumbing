@@ -11,7 +11,7 @@ The user wants **thought**, not a summary: an argument built from the evidence, 
 
 Answers are saved in `Library_of_Shock_Lab/Research_Questions/` (layout in `Library_of_Shock_Lab/Research_Questions/README.md`), so the user and later sessions can pick them up again.
 
-Library layout, frontmatter and tag vocabulary: `Library_of_Shock_Lab/SCHEMA.md`. Search tool: `"$USERPROFILE/anaconda3/python.exe" Library_of_Shock_Lab/tools/library.py …` from the repo root (Git Bash), called `library.py` below. The `/lit` skill (`.claude/skills/lit/SKILL.md`) has the lookup recipes (find by tag, data tables, who-cites-what); use them here, but go much deeper than `/lit` does.
+Library layout, frontmatter and tag vocabulary: `Library_of_Shock_Lab/SCHEMA.md`. Search tool: `"$USERPROFILE/anaconda3/python.exe" Library_of_Shock_Lab/Tools/library.py …` from the repo root (Git Bash), called `library.py` below. The `/lit` skill (`.claude/skills/lit/SKILL.md`) has the lookup recipes (find by tag, data tables, who-cites-what); use them here, but go much deeper than `/lit` does.
 
 ## 0. Which mode
 
@@ -48,9 +48,9 @@ This framing steers the reading, so you look for evidence that could tell the hy
 
 ## 2. Read deeply
 
-- **Topic pages first.** Read every relevant page in `Library_of_Shock_Lab/topics/` in full, including "Disagreements and open questions" and any queued contributions in `topics/_queue/<topic>.md`. Note the papers each page leans on for the claims that matter.
-- **Then the notes, in depth.** Use `library.py find` (by methods, data, flow, phenomena, parameters, topic, text) and Grep over `Library_of_Shock_Lab/notes/` to find every paper bearing on each sub-question, including ones the topic pages don't cite. Follow `cites` / `related` both ways. Read the notes' Key findings, Setup / method and Key equations sections, not only the Summary: conditions, assumptions and numbers decide whether two papers really disagree.
-- **Numbers:** pull comparable values from `Library_of_Shock_Lab/data/*.csv` and line them up across papers. A small table often shows a trend or conflict the prose hides.
+- **Topic pages first.** Read every relevant page in `Library_of_Shock_Lab/Topics/` in full, including "Disagreements and open questions" and any queued contributions in `Topics/_queue/<topic>.md`. Note the papers each page leans on for the claims that matter.
+- **Then the notes, in depth.** Use `library.py find` (by methods, data, flow, phenomena, parameters, topic, text) and Grep over `Library_of_Shock_Lab/Notes/` to find every paper bearing on each sub-question, including ones the topic pages don't cite. Follow `cites` / `related` both ways. Read the notes' Key findings, Setup / method and Key equations sections, not only the Summary: conditions, assumptions and numbers decide whether two papers really disagree.
+- **Numbers:** pull comparable values from `Library_of_Shock_Lab/Data/*.csv` and line them up across papers. A small table often shows a trend or conflict the prose hides.
 - **Delegate to keep the context clear.** When more than about six notes need reading in depth, split the sub-questions among `general-purpose` subagents (effort `xhigh`), in parallel in one message, each given its sub-question, the hypotheses, and the note paths. Ask each for claims with note key + page, the conditions each claim holds under, agreements, contradictions, and gaps. The main session does the synthesis and the judging.
 - Open a PDF only for exact wording, a figure, or a derivation that decides a point, using the note's page numbers.
 - Cover modelling and simulation as fully as experiment (CLAUDE.md "Modelling matters too"): what each model assumes, and how well it matches which data.
@@ -120,13 +120,13 @@ papers_requested: [<DOI or short ref of papers asked for and not yet indexed>]
 (Paper | DOI | why it matters | status: requested / processed on YYYY-MM-DD.)
 
 ## Sources
-(Every topic page and note cited, as links: [Author Year](../Library_of_Shock_Lab/notes/<key>.md). Papers cited from outside the library are listed separately, labelled "not in the library".)
+(Every topic page and note cited, as links: [Author Year](../Library_of_Shock_Lab/Notes/<key>.md). Papers cited from outside the library are listed separately, labelled "not in the library".)
 
 ## Log
 - YYYY-MM-DD: created / continued (what was added or changed).
 ```
 
-Citation form in the body: [Author Year](../notes/<key>.md), p. N (the `../` is because the file sits in `Library_of_Shock_Lab/Research_Questions/`). Never present background knowledge as coming from a note; flag anything a note marks as unverified or figure-read.
+Citation form in the body: [Author Year](../Notes/<key>.md), p. N (the `../` is because the file sits in `Library_of_Shock_Lab/Research_Questions/`). Never present background knowledge as coming from a note; flag anything a note marks as unverified or figure-read.
 
 Then:
 1. Add or update the question's row in the table in `Library_of_Shock_Lab/Research_Questions/README.md` (slug link, question, status, updated date).
@@ -137,7 +137,7 @@ Then:
 
 The answer usually produces knowledge the library lacks. Queue it, so `/add-paper` works it in during its next batch revision; this skill never revises topic pages or notes itself. Queue only what is new and backed by the notes, not a restatement of what the page already says, and nothing that rests only on your own reasoning unless it is labelled as such (e.g. a proposed explanation for a conflict). On `continue`, replace the question's earlier queue entries if they are still in the queue files, rather than adding a second set.
 
-- **Topic pages:** for each topic page the answer adds to, append to `Library_of_Shock_Lab/topics/_queue/<topic>.md` (create it if missing) a section headed `## research-question: <slug> (queued YYYY-MM-DD)`, holding 3–8 sentences: what to add or change (a cross-paper comparison, an explanation of a conflict, a sharper or new open question, a point that should move between consensus and dispute, an error on the page), which section of the page it belongs in, and the supporting notes with page refs (links relative to the queue file: `../../notes/<key>.md`). End with a link to the question file: `../Research_Questions/<slug>.md`. These count toward the page's revision threshold like paper contributions.
+- **Topic pages:** for each topic page the answer adds to, append to `Library_of_Shock_Lab/Topics/_queue/<topic>.md` (create it if missing) a section headed `## research-question: <slug> (queued YYYY-MM-DD)`, holding 3–8 sentences: what to add or change (a cross-paper comparison, an explanation of a conflict, a sharper or new open question, a point that should move between consensus and dispute, an error on the page), which section of the page it belongs in, and the supporting notes with page refs (links relative to the queue file: `../../Notes/<key>.md`). End with a link to the question file: `../Research_Questions/<slug>.md`. These count toward the page's revision threshold like paper contributions.
 - **Notes:** for each note that should change, add bullets under `## <note key>` in `Library_of_Shock_Lab/Misc/notes_to_update.md` (create the section if missing), in the format that file describes: `- (rq <slug>, YYYY-MM-DD) <change>`. Typical changes: a `related` link or cross-reference to a note it agrees or conflicts with, a number that is inconsistent with another note, a missing caveat on the conditions a finding holds under. Prefix with `[PDF]` anything that needs the PDF to confirm.
 - List what was queued (topic pages and notes) under "## Log" in the question file, and in the reply.
 
