@@ -128,12 +128,14 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Panda 2013](../notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md) (not tagged): full-scale pad source maps; duct exit dominates; no tones.
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md) (not tagged): free jet at NPR 3.4 with a t/D 0.33 lip screeches in helical C (St 0.30).
 - [Tsutsumi 2015](../notes/tsutsumi-2015-epsilon-liftoff-acoustics.md): subscale rocket on a deflector; reflected Mach waves dominate; no tones.
+- [Mason-Smith et al. 2015](../notes/mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections.md): jet on flat, convex and concave half-cylinders (h/d 3.5); convex fixes the flapping plane, concave silences NPR 2.9–3.9 (synthesis pending).
 - [Powis et al. 2016](../notes/powis-2016-impingement-tones-shock-instabilities-plug-nozzle.md): plug nozzle on a plate: staged tones, none for z/D < 3.2; standoff shock oscillates and splits at the tone (synthesis pending)
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): trapped and guided core waves; the 0.82 < M < 1 window behind jet–edge models.
 - [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): LES of an ideally expanded M_j 1.5 plate jet; standing-wave cells = N; guided-mode bands order axisymmetric and helical tones; upstream waves inside the supersonic core.
 - [Weightman et al. 2017](../notes/weightman-2017-phase-lag-supersonic-jet-impingement.md): the wall-jet shocklet and its 29–40 µs life as Powell's phase lag; measured loop gives 8230 vs 8300 Hz.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md) (not tagged): POD-pair k_x split that detects the guided mode.
 - [Jordan 2018](../notes/jordan-2018-jet-flap-interaction-tones.md): jet–edge tones closed by guided modes; phase criterion; trapping and saddle cut-offs.
+- [Weightman et al. 2018](../notes/weightman-2018-signatures-shear-layer-unsteadiness-pod.md): NPR 3.4, z/D 5 impinging jet PIV; shear-layer thickness modulates with helical-mode amplitude (synthesis pending).
 - [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md): the user's thesis; stand-off-shock leakage and ray tracing, the lip and shocklet work later published as Weightman et al. 2017 and 2019, other conditions (App. A).
 - [Weightman et al. 2019](../notes/weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet.md): JFM version of thesis Ch. 4; lip selects toroidal or helical tones; foam shows the thin-lip loop needs the outer base.
 - [Jaunet et al. 2019](../notes/jaunet-2019-dynamics-round-jet-impingement.md): impinging tones over M_j 0.7–1.5, H/D 2–8 die at the (0, 1) guided-mode limit; dispersive phase model beats Powell's.

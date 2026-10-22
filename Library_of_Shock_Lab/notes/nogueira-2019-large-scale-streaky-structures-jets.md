@@ -20,7 +20,7 @@ phenomena: ["streaks"]
 params: {"M_j": "0.4", "Re": "4.6×10⁵", "D": "50 mm"}
 topics: ["linear-operator-methods"]
 related: ["pickering-2020-lift-up-kh-orr-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "morra-2021-colour-of-forcing-resolvent-channel", "marshall-2024-prediction-streaks-rectangular-jets", "nogueira-2026-flapping-motion-screeching-round-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "jordan-2013-wave-packets-turbulent-jet-noise", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "jaunet-2017-two-point-coherence-wave-packets-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "First evidence of lift-up streaks in an M 0.4 jet: dual-plane TR stereo PIV, SPOD (St→0, m≥3), matched by local resolvent and transient growth (rolls → streaks)"
 ---
 # Large-scale streaky structures in turbulent jets

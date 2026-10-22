@@ -49,7 +49,7 @@ Impinging-jet and jet–edge tones.
 | --- | --- |
 | `note`, `page`, `how`, `comment` | As above |
 | `nozzle`, `M_d`, `NPR`, `M_j`, `TR` | As above |
-| `surface` | `flat-plate`, `cylinder`, `hemisphere`, `inclined-plate`, `edge`, … |
+| `surface` | `flat-plate`, `cylinder` (convex), `cylinder-concave`, `hemisphere`, `inclined-plate`, `edge`, … |
 | `h_D` | Stand-off (or edge) distance over D |
 | `mode` | Mode label (helical, toroidal, flapping, N, …) |
 | `St`, `St_def`, `f_Hz`, `D_mm` | As in `screech_tones.csv` |

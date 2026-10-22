@@ -123,6 +123,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Panda 1999](../notes/panda-1999-experimental-investigation-screech-noise-generation.md): standing wavelength shorter than shock spacing in A2 and C jets, a k_s2 signature.
 - [André et al. 2013](../notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): BBSAN peak locked to 2St_s through every stage jump.
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse flaps at NPR 2.2; a second, silent instability.
+- [Johnston & Edgington-Mitchell 2016](../notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md): one radial tab (2% blockage) shifts every stage to higher St; at NPR 2.6 B flapping becomes an A-like 'punctuated toroid' (synthesis pending).
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): A1 → A2 as m = 4 → 5 at a fixed source; k_s2 signature.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): A1 and A2 close on the same G-JM.
 - [Knast 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): twin-jet staging; constant U_c; phase jumps without tone jumps.

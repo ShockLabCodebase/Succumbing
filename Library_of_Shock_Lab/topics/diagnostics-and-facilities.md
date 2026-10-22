@@ -208,6 +208,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Edgington-Mitchell et al. 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): standard group PIV settings for screech (not tagged).
 - [Knast et al. 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): tone frequency and phase, not amplitude, in a non-anechoic rig (not tagged).
 - [Bell et al. 2018](../notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): planar PIV of twin Mach-disk jets; light sheet diffracted by the first jet's Mach disk (synthesis pending)
+- [Weightman et al. 2018](../notes/weightman-2018-signatures-shear-layer-unsteadiness-pod.md): POD convergence by resampling; Stuart-vortex synthetic test of POD signatures of shear-layer unsteadiness (synthesis pending).
 - [Mayer et al. 2019](../notes/mayer-2019-bristol-aeroacoustic-wind-tunnel.md): anechoic open-jet facility design and acoustic data-quality checks.
 - [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md): PIV settings, POD convergence, two-facility practice; ray tracing through PIV fields.
 - [Tan et al. 2019a](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): k, ε and length scales from planar PIV under an axisymmetric closure; no time scales.

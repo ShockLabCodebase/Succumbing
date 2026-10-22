@@ -177,7 +177,9 @@ Which imaging suits which analysis, following the CLAUDE.md workflow:
 - [Mitchell et al. 2012](../notes/mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md): the group's first ultra-high-speed (Shimadzu HPV-1) schlieren; line-profile normalisation resolves λ ≈ 0.05d lip disturbances (synthesis pending).
 - [Raffel 2015](../notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../notes/tan-2015-bos-density-axisymmetric-jets.md): group BOS → Abel → mean density recipe with synthetic error map.
+- [Mason-Smith et al. 2015](../notes/mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections.md): high-speed schlieren of impingement on curved surfaces; views along and across the cylinder axis (synthesis pending).
 - [Powis et al. 2016](../notes/powis-2016-impingement-tones-shock-instabilities-plug-nozzle.md): early Shimadzu HPV-1 use; first edge-detection shock tracking from time-resolved schlieren (synthesis pending)
+- [Johnston & Edgington-Mitchell 2016](../notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md): TR schlieren two-point intensity correlation classifies mode symmetry; brightest-pixel tracking of the tab's streamwise vortex pair (synthesis pending).
 - [Berry et al. 2017](../notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): 50–100 kHz schlieren POD; aliasing; drift removal.
 - [Mercier et al. 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): 220–430 kfps thin-strip schlieren (synthesis pending).
 - [Knast et al. 2018](../notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): HPV-1 bursts, x–t convection speeds, two views (not tagged).

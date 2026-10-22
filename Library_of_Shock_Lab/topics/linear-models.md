@@ -140,6 +140,7 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Schmidt 2017](../notes/schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet.md): trapped acoustic modes; near-nozzle tones; Re dependence.
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): duct-like and guided waves; S1/S2 saddles.
 - [Bogey & Gojon 2017](../notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): impinging LES; vortex-sheet bands order tones; in-core k–ω bands.
+- [Jaunet et al. 2017](../notes/jaunet-2017-two-point-coherence-wave-packets-turbulent-jets.md): dual-plane TR stereo PIV of an M 0.4 jet; m = 0 wavepacket coherence length ≤ 1.9D, where linear wavepacket models hold; coherence decay past the core (synthesis pending).
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): PIV upstream wave is the (0, 2) guided mode; tones in its band.
 - [Jordan 2018](../notes/jordan-2018-jet-flap-interaction-tones.md): vortex-sheet phase model for jet–edge tones.
 - [Gojon 2018](../notes/gojon-2018-oscillation-modes-screeching-jets.md): guided-mode band map of screech stages; helical tones below the thin-sheet band.

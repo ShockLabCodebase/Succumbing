@@ -313,6 +313,7 @@ Time-resolved schlieren, microphones and LES support every row. Non-time-resolve
 - [Daubechies 2011](../notes/daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md): synchrosqueezed CWT with a proof of IF recovery; filter bandwidth must be below the relative gap.
 - [Jordan & Colonius 2013](../notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
 - [Sieber 2016](../notes/sieber-2016-spectral-proper-orthogonal-decomposition.md): time-filtered SPOD. Analytic coefficient pairs that keep intermittency within one pair.
+- [Weightman et al. 2018](../notes/weightman-2018-signatures-shear-layer-unsteadiness-pod.md): snapshot-wise POD coefficients reveal cycle-to-cycle amplitude modulation of one resonance mode without TR data (synthesis pending).
 - [Kriegseis 2021](../notes/kriegseis-2021-hilbert-transform-revisited-hpod.md): first HPOD paper in fluids. HPOD_t as an automatic POD-pair finder that adds no information; shuffled snapshots give POD.
 - [Nekkanti 2021](../notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md): SPOD reconstruction, denoising and convolution spectrograms. Step 2 of the pipeline.
 - [Bell 2021](../notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md): band-pass Hilbert envelopes and conditional POD track intermittent twin-jet coupling; coexisting, uncorrelated processes.

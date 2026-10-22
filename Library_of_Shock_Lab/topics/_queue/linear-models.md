@@ -21,3 +21,16 @@ The review gives the cleanest statement of the mean-flow hypothesis the page ope
 - **Open question on thick layers and heating.** This adds that the rectangular branch point depends on dimensional modelling. The tanh model also cannot reach realistic thicknesses without a subsonic centreline (p. 5, 18).
 - **Methods and data.** Add that a planar model is adequate for KH-only uses for AR ≥ 2–4, but not for GJM bands.
 - **Verification point.** The GJM convergence test varied resolution but not the 40D domain (p. 24), although the branch-point mode reaches the far field (p. 17). Note it as a numerical question.
+
+## jaunet-2017-two-point-coherence-wave-packets-turbulent-jets (queued 2026-10-23)
+
+This is the two-point companion to [Cavalieri 2013](../notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md) on the same M 0.4 Pprime jet. It measures what linear models assume away: by construction a linear mode has unit coherence (p. 1, 17).
+- **Linear region = long coherence.** Inside the (x, St) region where PSE matched PIV (a polygon from (x/D, St) ≈ (1.2–2, 0.3–0.7) to (4.5–7, 0.3–0.7), read from Fig. 16), the m = 0 wavepacket's exponential coherence length is far longer than that of the turbulence: up to ≈ 1.9D, or ≈ 12δω, against ≈ 3δω for the eddies. The peak ΔL ≈ 1.5D is near x/D ≈ 2, St ≈ 0.4–0.45 (p. 14–17).
+- **Beyond the core.** Past x/D ≈ 5, where linear theory fails, the m = 0 coherence length collapses on the same δω scaling as the energetic eddies (L/δω ≈ 3–3.7). The authors read this as nonlinear wavepacket–turbulence interaction (p. 17).
+- **What this settles.** This answers the open choice in Cavalieri 2013 (p. 580–581, 587 there) in favour of loss of coherence downstream, rather than a coherent packet hidden by a low energy share.
+- **Link to operator results (my inference; neither paper makes it).**
+  - The ΔL peak at St ≈ 0.4–0.45 coincides with the resolvent gain-separation and preferred-mode peak ([Garnaud 2013](../notes/garnaud-2013-preferred-mode-incompressible-jets.md), St ≈ 0.43–0.46; [Cavalieri 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md), p. 22).
+  - The polygon's lower edge, St ≈ 0.3, coincides with the m = 0 low-rank cut-off and KH → Orr transition of [Schmidt 2018](../notes/schmidt-2018-spectral-analysis-jet-turbulence.md) and [Pickering 2020](../notes/pickering-2020-lift-up-kh-orr-jets.md).
+  - So long coherence, success of linear models and large gain separation mark the same region. That strengthens claim 1 on the page ("works, but only statistically") and gives it a quantitative edge.
+- **Asymmetry and phase speed.** The wavepacket coherence is asymmetric, 1.5–2.2 times shorter downstream at x/D = 4, St 0.4–0.6 (p. 18). At low St near the nozzle its phase speed reaches 0.8 to just over 1.0U_j, as linear theory predicts (p. 20–21). Both are statistics a stochastic-forcing operator model, P_qq = RP_ffR^H, should reproduce. No paper in the library has tested this.
+- **Suggestion for the page:** a short "two-point statistics" paragraph under "Why mean-flow models work at all" or "Wavepacket models", and a line in Papers.

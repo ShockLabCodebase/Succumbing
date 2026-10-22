@@ -182,6 +182,7 @@ The algorithm is: subtract the mean, impose symmetries, split into blocks, windo
 - [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): POD triple decomposition of 8500 PIV snapshots strips screech: 2 modes (C) vs 18 (B); broadband L/δθ ≈ 2.1, 1.0, 1.0 match non-screeching jets; ≥3000 samples suffice (synthesis pending).
 - [Schmidt et al. 2018](../notes/schmidt-2018-spectral-analysis-jet-turbulence.md): low-rank diagnostic; restricted SPOD; SPOD vs resolvent.
 - [Towne et al. 2018](../notes/towne-2018-spod-relationship-dmd-resolvent.md): SPOD theory; links to POD, DMD, resolvent.
+- [Weightman et al. 2018](../notes/weightman-2018-signatures-shear-layer-unsteadiness-pod.md): unpaired 'shear-thickness' POD mode in non-TR impinging-jet PIV tracks helical-pair amplitude (ρ 0.74); v-only POD hides it (synthesis pending).
 - [Schmidt & Towne 2019](../notes/schmidt-2019-streaming-spod.md): streaming SPOD.
 - [Weightman 2019](../notes/weightman-2019-sound-production-impinging-supersonic-jets.md): POD-pair practice; snapshot budget; shear thickness mode.
 - [Schmidt 2020](../notes/schmidt-2020-bispectral-mode-decomposition.md): BMD.

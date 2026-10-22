@@ -187,6 +187,7 @@ One rig with a notched screech-free twin, a β and TTR sweep, mean PIV and a nea
 - [André et al. 2013](../notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): screech-free notched twin; screech damps the shock train and lowers BBSAN.
 - [Jordan & Colonius 2013](../notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
 - [Tan et al. 2017](../notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): POD removal of screech from snapshot PIV; screech-free length scales.
+- [Jaunet et al. 2017](../notes/jaunet-2017-two-point-coherence-wave-packets-turbulent-jets.md): two-point coherence of wavepackets; |m| ≤ 2 carry < 10% of bulk coherence; finite coherence (jitter) matters for radiation (synthesis pending).
 - [Cavalieri et al. 2019](../notes/cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation.md): wavepacket review; Mach waves, superdirectivity, jitter.
 - [Gojon et al. 2019](../notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES; four noise components, Mach-wave threshold and asymmetry.
 - [Tan et al. 2019a](../notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV calibration of statistical BBSAN and mixing-noise source scales.

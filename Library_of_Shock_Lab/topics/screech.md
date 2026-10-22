@@ -106,6 +106,7 @@ Staging-specific methods (shock-spectrum peaks, switch tracking, loop counts) ar
 - [Edgington-Mitchell 2014](../notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): helical mode reaches the Mach-disk shear layer; no recirculation; PIV smearing at shocks.
 - [Edgington-Mitchell 2014, helical mode](../notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md): NPR 3.4 C-mode PIV; kurtosis and coherent vorticity put sources at cells 2–4.
 - [Edgington-Mitchell 2015](../notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse: flapping vorticity peaks before the 3rd shock.
+- [Johnston & Edgington-Mitchell 2016](../notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md): intrusive tab raises screech St at all NPR 2.1–4.5 and changes mode selection without silencing the tone (synthesis pending).
 - [Towne 2017](../notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): trapped and guided waves in saddle-bounded bands.
 - [Mercier 2017](../notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): 4th-shock source; integer-period loop; U_c rises along the jet.
 - [Edgington-Mitchell 2018](../notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): first evidence that the G-JM closes A1 and A2.
