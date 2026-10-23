@@ -28,3 +28,6 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## weightman-2019-sound-production-impinging-supersonic-jets
 - (add-paper tam-1990-theoretical-model-discrete-tone-impinging-jets, 2026-10-21) `weightman-2019-sound-production-impinging-supersonic-jets`: add a line that its NPR 3.4 helical and toroidal tones lie outside the cold vortex-sheet guided-mode bands at M_j 1.42 (this note, Relevance), which supports the thesis's external-closure conclusion.
+
+## nekkanti-2021-spod-reconstruction-denoising-frequency-time
+- (rq hpod-instantaneous-frequency-uncertainty, 2026-10-23) Relevance section: add a caveat for the SPOD → reconstruction → HPOD pipeline. The lab's synthetic benchmark (`Codebase/HPOD_Switch_Benchmark/`, not this paper) found that block-wise frequency-domain inversion with Hamming windows and window-weighted stitching (p. 26–27) leaves an SNR-independent IF floor at the block length. Convolving the data with the modes (eq. 3.4, the spectrogram route, p. 18–19) cut the IF spread by up to 9×. This backs the paper's own recommendation (p. 26) of convolution for time-continuous coefficients, and says why it matters for instantaneous frequency: phase continuity across blocks. Cross-link [raiola-2025-hilbert-pod](raiola-2025-hilbert-pod.md) in that sentence.

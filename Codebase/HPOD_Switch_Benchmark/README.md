@@ -85,7 +85,7 @@ The quick mode takes a few seconds. The full sweep (2 spacings × 3 SNRs × 3 fi
 Each dwell has only 2–4 switches, so the resolved fractions are coarse.
 
 1. **The narrow-banding bandwidth sets which switches separate bands can follow, close to the 1/B rule.**
-   - With B ≤ 2Δf, the methods that track each tone in its own band (HPOD_sep, Gauss, Bump, FSST) resolve every switch with dwell ≥ 1.5 T_b, about half of those at 0.75 T_b, and none at 0.375 T_b. This holds at both spacings and at all SNRs from 0 to 20 dB.
+   - With Δf ≤ B ≤ 2Δf, the methods that track each tone in its own band (HPOD_sep, Gauss, Bump, FSST) resolve every switch with dwell ≥ 1.5 T_b, some at 0.75 T_b, and none at 0.375 T_b. At B = Δf/2 they need about 3 T_b. The 10–90% switch width is mostly (0.4–1)/B. This holds at both spacings and at all SNRs from 0 to 20 dB. Since the tones separate only for B ≲ 2Δf, this route cannot resolve switches much faster than T_b.
    - At B ≥ 4Δf each band contains the other tone, so the separate-band methods fail at every dwell, while FSST still resolves switches (see 3).
    - The default Morlet (17% bandwidth) merges the tones at both spacings: ρ sits near 0.5 and every exclusive segment reads as coexistence.
 2. **A single IF trace of one band holding both tones detects *exclusive* switching faster than 1/Δf, but only when T_b spans many carrier periods.**
@@ -93,7 +93,7 @@ Each dwell has only 2–4 switches, so the resolved fractions are coarse.
    - In coexistence intervals the IF ripples at Δf as predicted. The ripple index is 30–120 times higher in coexistence than in exclusive segments, so the plateau-versus-ripple test works. The IF never reports the weaker tone.
 3. **Synchrosqueezing with a wide window behaves the same way.** At B = 8Δf, FSST resolves 0.375–0.75 T_b switches. Reassignment puts a lone tone's energy at its true frequency, whatever the window width. But coexistence is detected only 44–54% of the time at B = 8Δf (72–85% at 4Δf), against 100% at B ≤ 2Δf. That partial detection likely comes from the ripple in the reassigned frequency (Daubechies et al.'s separation condition fails here), not from genuine resolution.
 4. **IF precision is below the bin width, and near the probe Cramér–Rao reference for the point methods.**
-   - Gauss, Bump and FSST track the reference and scale with SNR. At δ = 0.005, 10 dB and B = Δf, the IF standard deviation is about 5×10⁻⁶ f0, a hundredth of Δf.
+   - Gauss, Bump and FSST track the reference and scale with SNR. At δ = 0.005, 10 dB and B = Δf, the IF standard deviation is about 5×10⁻⁶ f0, a thousandth of Δf.
    - **The HPOD routes sit on a floor that does not change with SNR:** about 1.4×10⁻⁵ f0 (HPOD_sep) and 5×10⁻⁵ f0 (HPOD_comb) at δ = 0.005, and 3–9×10⁻⁴ f0 at δ = 0.10. That is well above the spatially averaged bound.
    - The floor is a block-stitching artefact of the inverse SPOD, not noise. The convolution route removes it (see "IF floor diagnosis" below).
 5. **HPOD of the raw field never separates the tones**, at any field of view up to 16λ. The packets' Gaussian envelope (σ = 4λ) limits the effective spatial aperture to about 9λ, whatever L is, so the wavenumber resolution of about 11% does not reach the 10% spacing. Its weaker mode is noise-dominated (IF spread around 0.1 f0 at δ = 0.005). This field of view does not support the space-for-time hypothesis. A wider envelope, or `env_shift_lambda` ≠ 0, would test it properly.
