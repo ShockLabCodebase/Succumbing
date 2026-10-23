@@ -4,7 +4,7 @@ Journal articles plus two preprints, 2010–2026, built on 2026-10-19 from Danie
 
 Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. Papers still to get are listed (with the rest of the library's wish list) in [Papers_to_get.md](Papers_to_get.md), the single list of missing papers; remove a paper there once it is obtained.
 
-## Indexed (have a note) (50)
+## Indexed (have a note) (52)
 
 | # | Paper | DOI | Where |
 |---|---|---|---|
@@ -13,6 +13,7 @@ Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. P
 | 8 | Edgington-Mitchell et al. 2014, *Coherent structure and sound production in the helical mode of a screeching axisymmetric jet*, Journal of Fluid Mechanics | 10.1017/jfm.2014.173 | [edgington-mitchell-2014-coherent-structure-helical-screech-mode](../Notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md) |
 | 9 | Edgington-Mitchell et al. 2014, *The underexpanded jet Mach disk and its associated shear layer*, Physics of Fluids | 10.1063/1.4894741 | [edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer](../Notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md) |
 | 11 | Edgington-Mitchell et al. 2015, *Multimodal Instability in the Weakly Underexpanded Elliptic Jet*, AIAA Journal | 10.2514/1.j053738 | [edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet](../Notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md) |
+| 12 | Edgington-Mitchell et al. 2015, *Staging Behaviour in Screeching Elliptical Jets*, International Journal of Aeroacoustics | 10.1260/1475-472x.14.7.1005 | [edgington-mitchell-2015-staging-screeching-elliptical-jets](../Notes/edgington-mitchell-2015-staging-screeching-elliptical-jets.md) |
 | 13 | Johnston & Edgington-Mitchell 2015, *Visualisation of underexpanded jet flowfields in the presence of an intrusive tab*, Journal of Visualization | 10.1007/s12650-015-0298-6 | [johnston-2016-underexpanded-jet-intrusive-tab-visualisation](../Notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md) |
 | 14 | Mason-Smith et al. 2015, *Shock structures and instabilities formed in an underexpanded jet impinging on to cylindrical sections*, Shock Waves | 10.1007/s00193-015-0561-8 | [mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections](../Notes/mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections.md) |
 | 15 | Tan et al. 2015, *Measurement of density in axisymmetric jets using a novel background-oriented schlieren (BOS) technique*, Experiments in Fluids | 10.1007/s00348-015-2076-6 | [tan-2015-bos-density-axisymmetric-jets](../Notes/tan-2015-bos-density-axisymmetric-jets.md) |
@@ -25,6 +26,7 @@ Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. P
 | 26 | Tan et al. 2018, *Equivalent Shock-Associated Noise Source Reconstruction of Screeching Underexpanded Unheated Round Jets*, AIAA Journal | 10.2514/1.j057400 | [tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets](../Notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md) |
 | 27 | Tan et al. 2018, *Correlation Analysis of High-Resolution Particle Image Velocimetry Data of Screeching Jets*, AIAA Journal | 10.2514/1.j057041 | [tan-2019-correlation-analysis-piv-screeching-jets](../Notes/tan-2019-correlation-analysis-piv-screeching-jets.md) |
 | 28 | Weightman et al. 2018, *Signatures of shear-layer unsteadiness in proper orthogonal decomposition*, Experiments in Fluids | 10.1007/s00348-018-2639-4 | [weightman-2018-signatures-shear-layer-unsteadiness-pod](../Notes/weightman-2018-signatures-shear-layer-unsteadiness-pod.md) |
+| 30 | Edgington-Mitchell 2019, *Aeroacoustic resonance and self-excitation in screeching and impinging supersonic jets – A review*, International Journal of Aeroacoustics | 10.1177/1475472x19834521 | [edgington-mitchell-2019-aeroacoustic-resonance-review](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md) |
 | 32 | Weightman et al. 2019, *Nozzle external geometry as a boundary condition for the azimuthal mode selection in an impinging underexpanded jet*, Journal of Fluid Mechanics | 10.1017/jfm.2018.957 | [weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet](../Notes/weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet.md) |
 | 33 | Wong et al. 2019, *Impact of coherence decay on wavepacket models for broadband shock-associated noise in supersonic jets*, Journal of Fluid Mechanics | 10.1017/jfm.2018.984 | [wong-2019-coherence-decay-wavepacket-bbsan](../Notes/wong-2019-coherence-decay-wavepacket-bbsan.md) |
 | 35 | Edgington-Mitchell et al. 2020, *The generation of screech tones by shock leakage*, Journal of Fluid Mechanics | 10.1017/jfm.2020.945 | [edgington-mitchell-2021-generation-screech-tones-shock-leakage](../Notes/edgington-mitchell-2021-generation-screech-tones-shock-leakage.md) |
@@ -85,13 +87,11 @@ Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. P
 | 55 | Zhao et al. 2022, *The largest diameter of falling drop in the up-gas flow*, International Journal of Multiphase Flow | 10.1016/j.ijmultiphaseflow.2022.104345 | `_Off_Topic/` |
 | 63 | Pryor et al. 2024, *Shock Propagation Through a Square Injector: Investigation into Rotating-Detonation Engine Injector Dynamics*, AIAA Journal | 10.2514/1.j064217 | `_Off_Topic/` |
 
-## Missing (listed in Papers_to_get.md) (6)
+## Missing (listed in Papers_to_get.md) (4)
 
 | #   | Paper                                                                                                                                                                | DOI                         | Where                                |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------ |
 | 1   | Yoo et al. 2010, *Planar laser-induced fluorescence imaging in shock tube flows*, Experiments in Fluids                                                              | 10.1007/s00348-010-0876-2   | [Papers_to_get.md](Papers_to_get.md) |
 | 3   | Yoo et al. 2011, *Near-wall imaging using toluene-based planar laser-induced fluorescence in shock tube flow*, Shock Waves                                           | 10.1007/s00193-011-0338-7   | [Papers_to_get.md](Papers_to_get.md) |
-| 12  | Edgington-Mitchell et al. 2015, *Staging Behaviour in Screeching Elliptical Jets*, International Journal of Aeroacoustics                                            | 10.1260/1475-472x.14.7.1005 | [Papers_to_get.md](Papers_to_get.md) |
 | 17  | Humphrey & Edgington-Mitchell 2016, *The effect of low lobe count chevron nozzles on supersonic jet screech*, International Journal of Aeroacoustics                 | 10.1177/1475472x16630872    | [Papers_to_get.md](Papers_to_get.md) |
-| 30  | Edgington-Mitchell 2019, *Aeroacoustic resonance and self-excitation in screeching and impinging supersonic jets – A review*, International Journal of Aeroacoustics | 10.1177/1475472x19834521    | [Papers_to_get.md](Papers_to_get.md) |
 | 31  | Thethy et al. 2019, *Mechanics of the influx phase in the jet regurgitant mode of a powered resonance tube*, International Journal of Aeroacoustics                  | 10.1177/1475472x19840001    | [Papers_to_get.md](Papers_to_get.md) |

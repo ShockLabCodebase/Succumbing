@@ -178,6 +178,7 @@ Which imaging suits which analysis, following the CLAUDE.md workflow:
 - [Raffel 2015](../Notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../Notes/tan-2015-bos-density-axisymmetric-jets.md): group BOS → Abel → mean density recipe with synthetic error map.
 - [Mason-Smith et al. 2015](../Notes/mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections.md): high-speed schlieren of impingement on curved surfaces; views along and across the cylinder axis (synthesis pending).
+- [Edgington-Mitchell et al. 2015](../Notes/edgington-mitchell-2015-staging-screeching-elliptical-jets.md): AR 2 elliptic jet, NPR 1.95–4.3: five screech stages (varicose, 3 flapping, helical); mode III jump tied to shock spacing ≠ standing-wave spacing (k_s2 in hindsight) (synthesis pending).
 - [Powis et al. 2016](../Notes/powis-2016-impingement-tones-shock-instabilities-plug-nozzle.md): early Shimadzu HPV-1 use; first edge-detection shock tracking from time-resolved schlieren (synthesis pending)
 - [Johnston & Edgington-Mitchell 2016](../Notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md): TR schlieren two-point intensity correlation classifies mode symmetry; brightest-pixel tracking of the tab's streamwise vortex pair (synthesis pending).
 - [Berry et al. 2017](../Notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): 50–100 kHz schlieren POD; aliasing; drift removal.

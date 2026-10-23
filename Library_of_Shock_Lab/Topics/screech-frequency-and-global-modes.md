@@ -98,9 +98,12 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely (Edging
 - [Tam 1995](../Notes/tam-1995-supersonic-jet-noise.md): amplitude unpredictable; closed-form formula.
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md): frequency predictable, amplitude not; early Euler simulation.
 - [Panda 1999](../Notes/panda-1999-experimental-investigation-screech-noise-generation.md): L_sw ≈ 0.8L behind Tam's 0.8 factor; formula an identity; modulated phase speeds.
+- [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
+- [Shen & Tam 2002](../Notes/shen-2002-three-dimensional-numerical-simulation-jet-screech.md): URANS k–ε DRP simulation, M_j 1.1–1.5: A1, A2, B, C tones and levels; claims two tones coexist, not switch; free-sound closure for A1/B, guided jet mode for A2/C (synthesis pending).
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): constant U_c ≈ 0.5U_j in an AR 4 rectangular jet.
 - [Edgington-Mitchell 2014](../Notes/edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer.md): Mach-disk validation target; PIV smearing at shocks.
 - [Edgington-Mitchell 2015](../Notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): convected-wave check; Powell 20 % high in an ellipse.
+- [Edgington-Mitchell et al. 2015](../Notes/edgington-mitchell-2015-staging-screeching-elliptical-jets.md): AR 2 elliptic jet, NPR 1.95–4.3: five screech stages (varicose, 3 flapping, helical); mode III jump tied to shock spacing ≠ standing-wave spacing (k_s2 in hindsight) (synthesis pending).
 - [Towne 2017](../Notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md): duct resonance type found in the screech operator.
 - [Mercier 2017](../Notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): integer-loop criterion; U_c rises along the jet.
 - [Edgington-Mitchell 2018](../Notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): G-JM shapes match the model; A1/A2 near the cut-on.
@@ -108,6 +111,7 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely (Edging
 - [Bell 2018](../Notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): Panda's standing-wave relation on a twin jet with λ_sw and λ_h measured independently; consistent within ±17 % (synthesis pending)
 - [Mancinelli 2019](../Notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model.
 - [Gojon 2019](../Notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated LES: St right, heating trend wrong; u_c falls with heating.
+- [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): Screech and impinging-tone review via four loop processes: KH growth, shock–vortex sound, free-stream vs guided return, lip receptivity; staging still open (2019) (synthesis pending).
 - [Edgington-Mitchell 2021, waves](../Notes/edgington-mitchell-2020-waves-in-screeching-jets.md): global mode on a PIV mean within 1 %.
 - [Mancinelli 2021](../Notes/mancinelli-2021-complex-valued-resonance-model-screech.md): finite-thickness complex resonance model; fitted reflections.
 - [Nogueira 2021, absolute instability](../Notes/nogueira-2021-absolute-instability-shock-containing-jets.md): Floquet KH–G-JM saddle; nozzle sets amplitude only.

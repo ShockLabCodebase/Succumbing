@@ -149,6 +149,7 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Gojon 2019](../Notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): planar vortex-sheet bands for rectangular screech.
 - [Jaunet 2019](../Notes/jaunet-2019-dynamics-round-jet-impingement.md): impinging tones die at S(0, 1); phase-only vortex-sheet model.
 - [Wong et al. 2019](../Notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Line-source wavepacket × Pack shock-cell BBSAN model: coherence decay lowers the peak 2–5 dB, broadens directivity, and lets n ≥ 2 modes fill high-St upstream sound (synthesis pending).
+- [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): Screech and impinging-tone review via four loop processes: KH growth, shock–vortex sound, free-stream vs guided return, lip receptivity; staging still open (2019) (synthesis pending).
 - [Karami 2020](../Notes/karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets.md): local LSA of a shock-containing near-nozzle layer; loop, not growth, sets the tone.
 - [Edgington-Mitchell 2021](../Notes/edgington-mitchell-2020-waves-in-screeching-jets.md): k_kh ± k_s waves confirm the product picture.
 - [Mancinelli 2021](../Notes/mancinelli-2021-complex-valued-resonance-model-screech.md): finite-thickness complex-ω resonance model.

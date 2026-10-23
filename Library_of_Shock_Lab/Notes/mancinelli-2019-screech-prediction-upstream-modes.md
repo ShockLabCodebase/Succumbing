@@ -19,8 +19,8 @@ flow: ["round-jet", "supersonic", "underexpanded"]
 phenomena: ["screech", "staging", "mode-switching", "intermittency", "guided-jet-mode", "triadic-interaction"]
 params: {"M_j": "1.0–1.3", "NPR": "1.89–2.77", "Re": "2.86×10⁵–4.3×10⁵", "D": "10 mm", "T_0": "295 K"}
 topics: ["screech-frequency-and-global-modes", "screech", "screech-staging-and-mode-switching", "linear-models"]
-related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "jordan-2018-jet-flap-interaction-tones", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "nogueira-2024-guided-jet-waves"]
-cites: ["bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "gojon-2018-oscillation-modes-screeching-jets", "jordan-2018-jet-flap-interaction-tones", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "michalke-1984-survey-jet-instability-theory", "panda-1999-experimental-investigation-screech-noise-generation", "powell-1992-oscillation-modes-choked-circular-jets", "tam-1986-bbsan-screech-relationship", "tam-1989-three-families-instability-waves-high-speed-jets", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+related: ["edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2020-waves-in-screeching-jets", "mancinelli-2021-complex-valued-resonance-model-screech", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2021-absolute-instability-shock-containing-jets", "jordan-2018-jet-flap-interaction-tones", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "nogueira-2024-guided-jet-waves", "shen-2002-three-dimensional-numerical-simulation-jet-screech"]
+cites: ["bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "gojon-2018-oscillation-modes-screeching-jets", "jordan-2018-jet-flap-interaction-tones", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "michalke-1984-survey-jet-instability-theory", "panda-1999-experimental-investigation-screech-noise-generation", "powell-1992-oscillation-modes-choked-circular-jets", "raman-1999-supersonic-jet-screech-half-century-powell-present", "shen-2002-three-dimensional-numerical-simulation-jet-screech", "tam-1986-bbsan-screech-relationship", "tam-1989-three-families-instability-waves-high-speed-jets", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "KH + guided-jet-mode vortex-sheet resonance model predicts A1/A2 screech St vs M_j inside the B–S band; wavelets show mutually exclusive A1/A2 switching near M_j 1.12"
 ---
 # Screech-tone prediction using upstream-travelling jet modes
@@ -47,7 +47,7 @@ The paper models the axisymmetric A1 and A2 screech modes of an underexpanded je
 - **Cut-on and cut-off explained** (p. 6, Fig. 5):
   - Both A1 and A2 tones lie inside the St–M_j region bounded by the B(0,2) and S(0,2) tracks, where k⁻_p (j = 2) is propagative. Outside this region the guided mode is evanescent.
   - The free-stream-acoustic closure (k⁻_a) predicts tones in regions where none are observed (p. 6).
-- **Shen & Tam (2002) is not supported:** they proposed that A1 is closed by free-stream sound and A2 by a guided mode. Their prediction agrees poorly with the data (p. 2, 6, Fig. 5).
+- **[Shen & Tam (2002)](shen-2002-three-dimensional-numerical-simulation-jet-screech.md) is not supported:** they proposed that A1 is closed by free-stream sound and A2 by a guided mode. Their prediction agrees poorly with the data (p. 2, 6, Fig. 5).
 - **Properties of the vortex-sheet waves** (p. 3–4, Fig. 1, M_j = 1.1):
   - k⁻_p modes are dispersive and propagative only in a narrow band between B(m,j) and S(m,j).
   - Their phase speed is subsonic but close to c∞, almost equal to sound near the low-frequency end of the band.
@@ -56,7 +56,7 @@ The paper models the axisymmetric A1 and A2 screech modes of an underexpanded je
 - **Staging is mutually exclusive switching** (p. 6–7, Fig. 6):
   - The A1→A2 switch occurs near M_j ≈ 1.12 (p. 6).
   - M_j ≤ 1.115: only A1. M_j = 1.12: jumps between A1 and A2. M_j = 1.125: longer dwell times in A2. M_j ≥ 1.13: only A2.
-  - No coexistence was seen. This contrasts with Shen & Tam (2002) and with Walker et al. (1997) for a rectangular jet (p. 7).
+  - No coexistence was seen. This contrasts with [Shen & Tam (2002)](shen-2002-three-dimensional-numerical-simulation-jet-screech.md) and with Walker et al. (1997) for a rectangular jet (p. 7).
   - From Fig. 6c (my reading), dwell times are of order 1–4 s, i.e. about 10⁴–10⁵ D/U_j.
 - **Nonlinear signature** (p. 7, Figs. 7–8):
   - At M_j = 1.125 the wavelet amplitude |w(St₁, t)| at the A1 frequency (St₁ = 0.63) is modulated at St_d ≈ 0.069. This is close to St₂ − St₁ = 0.70 − 0.63.
@@ -243,5 +243,5 @@ This project centres on resonance and feedback in jets, using acoustics, schlier
   - Gojon et al. 2018 (oscillation modes in screeching jets).
   - Mercier et al. 2017 (screech loop characterisation).
   - Tam & Hu 1989 (three families of instability waves).
-  - Shen & Tam 2002.
+  - Shen & Tam 2002 (now [indexed](shen-2002-three-dimensional-numerical-simulation-jet-screech.md)).
   - Walker & Thomas 1997 and Walker et al. 1997 (nonlinear staging; wavelets).

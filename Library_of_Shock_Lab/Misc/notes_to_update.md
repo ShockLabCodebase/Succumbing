@@ -31,3 +31,18 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## nekkanti-2021-spod-reconstruction-denoising-frequency-time
 - (rq hpod-instantaneous-frequency-uncertainty, 2026-10-23) Relevance section: add a caveat for the SPOD → reconstruction → HPOD pipeline. The lab's synthetic benchmark (`Codebase/HPOD_Switch_Benchmark/`, not this paper) found that block-wise frequency-domain inversion with Hamming windows and window-weighted stitching (p. 26–27) leaves an SNR-independent IF floor at the block length. Convolving the data with the modes (eq. 3.4, the spectrogram route, p. 18–19) cut the IF spread by up to 9×. This backs the paper's own recommendation (p. 26) of convolution for time-continuous coefficients, and says why it matters for instantaneous frequency: phase continuity across blocks. Cross-link [raiola-2025-hilbert-pod](raiola-2025-hilbert-pod.md) in that sentence.
+
+## edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet
+- (add-paper edgington-mitchell-2015-staging-screeching-elliptical-jets, 2026-10-23) Relevance section (line 181): "This jet is already on the flapping side at NPR 2.2 and shows no varicose tone" is true at NPR 2.2 only. The same nozzle has a varicose mode I (St 1.03–0.88) up to NPR 2.05 and switches to flapping between NPR 2.05 and 2.10 ([Edgington-Mitchell et al. 2015, staging](edgington-mitchell-2015-staging-screeching-elliptical-jets.md), Fig. 2, p. 1009). So against Mazharmanesh's ellipse the difference is a switch about 0.1 NPR earlier, not a missing varicose stage. Reword, and add the staging note to `related`.
+
+## edgington-mitchell-2022-unifying-theory-jet-screech
+- (add-paper edgington-mitchell-2015-staging-screeching-elliptical-jets, 2026-10-23) Setup, elliptical jet (line 86): "Five stages in 2 ≤ NPR ≤ 5 (p. 18)" is this paper's description. The source study's measured range is NPR 1.95–4.3 (five modes: I varicose to 2.05, II–IV flapping, V helical from 3.95; [Edgington-Mitchell et al. 2015, staging](edgington-mitchell-2015-staging-screeching-elliptical-jets.md), Fig. 2). Add the actual range after the p. 18 statement.
+
+## edgington-mitchell-2019-aeroacoustic-resonance-review
+- (add-paper edgington-mitchell-2015-staging-screeching-elliptical-jets, 2026-10-23) "Parts to check" item 7 (line 401) is resolved: the staging paper has three authors (Edgington-Mitchell, Honnery & Soria), as the review's Ref. 5 says; the "Oberleithner" in the old `Papers_to_get.md` row was wrong (the row has been removed). Delete item 7.
+
+## raman-1998-supersonic-jet-screech-review
+- (add-paper raman-1999-supersonic-jet-screech-half-century-powell-present, 2026-10-23) Relevance section (line 233): "The review does not give the Raman & Taghavi nozzle aspect ratio, so check the original…" can now cite the JSV companion: its Fig. 8 sketch gives the twin-nozzle exit as 34.5 × 6.9 mm, AR 5.0 ([Raman 1999](raman-1999-supersonic-jet-screech-half-century-powell-present.md), p. 560). Replace the "check the original" remark with that, and add `raman-1999-supersonic-jet-screech-half-century-powell-present` to `related`.
+
+## suzuki-2026-coherent-structures-axis-switching-elliptical-jets
+- (add-paper edgington-mitchell-2015-staging-screeching-elliptical-jets, 2026-10-23) Line 213: "Edgington-Mitchell et al. (2015) speculated about a helical-like mode … (cited here as [17]; not yet indexed)". The PDF's ref. [17] is the AIAA J. multimodal paper, which is indexed: link [Edgington-Mitchell 2015, multimodal](edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md) and drop "not yet indexed". (The staging paper is ref. [54], cited with [17] and [34] for the dominance of flapping; already linked on line 67.)

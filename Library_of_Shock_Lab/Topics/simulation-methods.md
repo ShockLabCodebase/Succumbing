@@ -87,6 +87,7 @@ All simulation output here is time-resolved, so it suits SPOD, BMD, k–ω maps 
 **Elsewhere:** cut-cell Euler + GSD is the group's toolkit for transient shock flows. The background-flow GSD may bear on ignition overpressure leaving into moving gas (an inference in the [Thethy et al. 2022](../Notes/thethy-2022-shock-diffraction-non-quiescent-medium.md) note). For rocket noise, LES + FW-H and RANS-based CAA both still over-predict by 2–4 dB; see [rocket-noise-models](rocket-noise-models.md).
 
 ## Papers
+- [Shen & Tam 2002](../Notes/shen-2002-three-dimensional-numerical-simulation-jet-screech.md): URANS k–ε DRP simulation, M_j 1.1–1.5: A1, A2, B, C tones and levels; claims two tones coexist, not switch; free-sound closure for A1/B, guided jet mode for A2/C (synthesis pending).
 - [Greenshields et al. 2010](../Notes/greenshields-2010-central-schemes-polyhedral-fv.md): `rhoCentralFoam` numerics; KNP + van Leer; Ladenburg Mach disc within 3%.
 - [Witherden et al. 2014](../Notes/witherden-2014-pyfr-flux-reconstruction-framework.md): PyFR v0.1.0; FR on GPUs; solver reference for the staging LES.
 - [Bogey & Gojon 2017](../Notes/bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets.md): LES, ideally expanded M_j 1.5 jet on a plate (L/r0 6–12): tones fit Powell N; vortex-sheet guided-mode bands order axisym/helical tones; k–ω shows in-jet upstream waves (synthesis pending).

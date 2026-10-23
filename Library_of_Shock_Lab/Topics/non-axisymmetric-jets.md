@@ -80,12 +80,15 @@ A second jet breaks axisymmetry as an elliptical nozzle does, and adds coupling.
 - [Tam 1988](../Notes/tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets.md): vortex-sheet shock spacing and screech frequency for any cross-section.
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md): review; antisymmetric rectangular modes, bevelled nozzles, thick lips.
 - [Samimy 1998](../Notes/samimy-1998-rectangular-jet-trailing-edge-control.md): AR 3 trailing-edge cutouts; streamwise vortices, mixing, axis switching.
+- [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
 - [Kerechanin 2001](../Notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): acoustics of the same cutouts; nozzle symmetry decides whether screech is suppressed or amplified.
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet, phase-locked stereo PIV; flapping over the whole sweep, U_c ≈ 0.5 U_j, a St jump without a mode change.
 - [Mitchell et al. 2013](../Notes/mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md): AR 2 ellipse PIV; minor-axis flapping from bimodal centreline v PDFs (NPR 2.2–3.4), Mach-stem streak from NPR 2.6 (synthesis pending).
 - [Edgington-Mitchell 2015](../Notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 elliptic jet at NPR 2.2; flapping gives the tone; origin of the quasi-helical thread.
+- [Edgington-Mitchell et al. 2015](../Notes/edgington-mitchell-2015-staging-screeching-elliptical-jets.md): AR 2 elliptic jet, NPR 1.95–4.3: five screech stages (varicose, 3 flapping, helical); mode III jump tied to shock spacing ≠ standing-wave spacing (k_s2 in hindsight) (synthesis pending).
 - [Berry 2017](../Notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): POD of TR schlieren of a multi-stream rectangular jet; flapping without screech, aliasing.
 - [Gojon 2019](../Notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES of AR 2 C-D jets, TR 1–3; diagonal flapping turns minor-axis with heating; planar guided-mode bands; amplitude trend wrong.
+- [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): Screech and impinging-tone review via four loop processes: KH growth, shock–vortex sound, free-stream vs guided return, lip receptivity; staging still open (2019) (synthesis pending).
 - [Edgington-Mitchell 2022](../Notes/edgington-mitchell-2022-unifying-theory-jet-screech.md): staging in AR 2 elliptical jets; none at AR 4.
 - [Rodríguez 2023](../Notes/rodriguez-2023-preferred-flapping-round-twin-jets.md): why a second jet turns helices into flapping.
 - [Ivelja 2024](../Notes/ivelja-2024-modal-analysis-screeching-elliptical-jets.md): se₁ KH and guided mode in an elliptical jet; guided-mode existence varies along x.

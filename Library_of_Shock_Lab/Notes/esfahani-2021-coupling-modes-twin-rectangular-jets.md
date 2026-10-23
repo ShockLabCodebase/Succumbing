@@ -19,8 +19,8 @@ flow: ["twin-jet", "rectangular-jet", "supersonic", "overexpanded", "ideally-exp
 phenomena: ["screech", "coupling", "flapping", "intermittency", "directivity", "BBSAN", "standing-waves"]
 params: {"M_j": "1.20–1.85", "M_d": "1.5", "NPR": "2.97, 3.67, 5.0 (detailed cases)", "AR": "2", "s/D_e": "2.25", "TR": "1"}
 topics: ["twin-jet-coupling", "screech-staging-and-mode-switching"]
-related: ["esfahani-2021-control-twin-rectangular-jet-coupling", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "wong-2023-steady-unsteady-coupling-twin-round-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2020-waves-in-screeching-jets", "samimy-1998-rectangular-jet-trailing-edge-control"]
-cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "bell-2018-coupled-underexpanded-supersonic-twin-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "panda-1999-experimental-investigation-screech-noise-generation", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control", "tam-1995-supersonic-jet-noise"]
+related: ["esfahani-2021-control-twin-rectangular-jet-coupling", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "wong-2023-steady-unsteady-coupling-twin-round-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2020-waves-in-screeching-jets", "samimy-1998-rectangular-jet-trailing-edge-control", "edgington-mitchell-2015-staging-screeching-elliptical-jets"]
+cites: ["alkislar-2003-screeching-rectangular-jet-stereo-piv", "bell-2018-coupled-underexpanded-supersonic-twin-jets", "edgington-mitchell-2015-staging-screeching-elliptical-jets", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "panda-1999-experimental-investigation-screech-noise-generation", "samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control", "tam-1995-supersonic-jet-noise"]
 summary: "Baseline AR-2 twin rectangular jets, M_j 1.20–1.85: each jet flaps; out-of-phase coupling near design, in-phase underexpanded; apparent intermittency at M_j 1.35 is a 33 Hz beat"
 ---
 # Coupling Modes in Supersonic Twin Rectangular Jets
@@ -153,7 +153,7 @@ This paper gives the baseline (unforced) characterisation of a new OSU facility:
   - 5.5 MP LaVision Imager sCMOS camera: 300 images of 2500 × 2150 px at 50 fps, so **not time-resolved**.
   - Light source: HPLS-36 pulsed LED with a 500 ns pulse, short enough to freeze the highest screech frequency.
   - DaVis 8.2 computes the mean and the standard deviation σ of intensity; MATLAB then plots log₁₀σ to show standing waves.
-  - This is the method of Edgington-Mitchell et al. (2015) for schlieren and Bell et al. (2018) for PIV (p. 16).
+  - This is the method of [Edgington-Mitchell et al. (2015)](edgington-mitchell-2015-staging-screeching-elliptical-jets.md) for schlieren and Bell et al. (2018) for PIV (p. 16).
 - **High-speed schlieren** (p. 6):
   - Phantom v1210 at 60,000 fps: 1000 frames of 512 × 340 px per case, cropped to the shock system with a Nikon zoom lens.
   - It is used only qualitatively here, to rule out lateral flapping (p. 9, 16). No modal analysis is done.
@@ -269,7 +269,7 @@ This project studies resonance and feedback in non-axisymmetric and supersonic j
   - Both are useful when choosing scalings and conditions for non-axisymmetric nozzles in the lab.
 - **Facility:** OSU GDTL. This is not Shock Lab group work.
 - **Shock Lab group works cited, candidates for `/add-paper`:**
-  - Edgington-Mitchell, Honnery & Soria 2015, staging in screeching elliptical jets (σ of schlieren for standing waves).
+  - Edgington-Mitchell, Honnery & Soria 2015, staging in screeching elliptical jets (σ of schlieren for standing waves; now [indexed](edgington-mitchell-2015-staging-screeching-elliptical-jets.md)).
   - Bell et al. 2018, coupled underexpanded twin jets (PIV, log₁₀σ).
   - Knast et al. 2018, coupling modes of underexpanded twin axisymmetric jets (SW wavelength follows shock spacing).
 - **Other cited works worth indexing:** Raman & Taghavi 1998 (JFM, twin rectangular coupling), Panda 1999 (JFM, standing waves) and Jeun, Wu & Lele 2020 (LES of twin rectangular jets).

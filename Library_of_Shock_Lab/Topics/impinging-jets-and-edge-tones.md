@@ -120,6 +120,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Ponton 1992](../Notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md) (not tagged): lip thickness changes screech staging; reflection off the exit face.
 - [Henderson & Powell 1993](../Notes/henderson-1993-tones-choked-jet-impinging-flat-plates.md): classical supersonic tone map (L1 symmetrical, L2/L3 helical, small-plate S4/S5); reflectors show both classes close at the nozzle; random L1/L2 switching.
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md) (not tagged): lip-thickness and reflector effects on screech.
+- [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
 - [Henderson 2002](../Notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): cycle of an NPR 4.03 large-plate tone; wall-jet source at 2.6R; Powell N + p ≈ 4.4; zone of silence.
 - [Casalino 2009](../Notes/casalino-2009-hybrid-empirical-caa-rocket-noise.md) (not tagged): pad CAA shows reflected waves reaching the lip; feedback untested.
 - [Haynes 2009](../Notes/haynes-2009-sp-8072-dsm-ii-ares-i-lift-off.md) (not tagged): potential core ended at the deflector in SP-8072.
@@ -139,6 +140,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Weightman 2019](../Notes/weightman-2019-sound-production-impinging-supersonic-jets.md): the user's thesis; stand-off-shock leakage and ray tracing, the lip and shocklet work later published as Weightman et al. 2017 and 2019, other conditions (App. A).
 - [Weightman et al. 2019](../Notes/weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet.md): JFM version of thesis Ch. 4; lip selects toroidal or helical tones; foam shows the thin-lip loop needs the outer base.
 - [Jaunet et al. 2019](../Notes/jaunet-2019-dynamics-round-jet-impingement.md): impinging tones over M_j 0.7–1.5, H/D 2–8 die at the (0, 1) guided-mode limit; dispersive phase model beats Powell's.
+- [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): Screech and impinging-tone review via four loop processes: KH growth, shock–vortex sound, free-stream vs guided return, lip receptivity; staging still open (2019) (synthesis pending).
 - [Edgington-Mitchell 2020](../Notes/edgington-mitchell-2020-waves-in-screeching-jets.md) (not tagged): free-jet C-mode screech at St 0.26, NPR 3.40.
 - [Karami et al. 2020](../Notes/karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets.md): LES of the thesis infinite-lip case; tone within 1%; wall-impact source 0.8–1.1d off axis; no collective interaction; near-lip stability analysis.
 - [Edgington-Mitchell 2021](../Notes/edgington-mitchell-2021-generation-screech-tones-shock-leakage.md): free-jet leakage in k < 0 schlieren; published ray tracing on measured fields; saddle-point leakage, first cell set by vortex strength.

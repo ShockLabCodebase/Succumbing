@@ -20,7 +20,7 @@ phenomena: ["screech", "helical", "intermittency"]
 params: {}
 topics: ["screech", "schlieren-and-density-imaging", "screech-frequency-and-global-modes"]
 related: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "tan-2015-bos-density-axisymmetric-jets", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "jeun-2024-screech-coupling-closure-rectangular-twin-jets"]
-cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2020-waves-in-screeching-jets", "gojon-2018-oscillation-modes-screeching-jets", "gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "jordan-2018-jet-flap-interaction-tones", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2019-aeroacoustic-resonance-review", "edgington-mitchell-2020-waves-in-screeching-jets", "gojon-2018-oscillation-modes-screeching-jets", "gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "jordan-2018-jet-flap-interaction-tones", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "Commentary on Léon et al. 2022: six-view holographic interferometry gives the 3D density of a C-mode jet; m = ±1 proves the helix, POD shows frequent helicity reversals"
 ---
 # The screeching jet, seen from all sides
@@ -121,7 +121,7 @@ This project analyses resonance and feedback in Shock Lab group experiments with
 - **Limits for this project:** TDHI depends on azimuthal symmetry, so it doesn't carry over easily to the non-axisymmetric nozzles the group studies (p. 5).
 - **Related works cited, candidates for `/add-paper`:**
   - Léon et al. 2022 (the paper under review; the source for all numbers).
-  - Edgington-Mitchell 2019 (review of resonance in screeching and impinging jets, Int. J. Aeroacoust.).
+  - Edgington-Mitchell 2019 (review of resonance in screeching and impinging jets, Int. J. Aeroacoust., now [indexed](edgington-mitchell-2019-aeroacoustic-resonance-review.md)).
   - Edgington-Mitchell, Honnery & Soria 2014 (Mach disk and its shear layer, Phys. Fluids; it is also the C-mode PIV study the text cites on p. 3).
   - Nicolas et al. 2017 (tomographic BOS) and Amjad et al. 2020 (tomographic BOS assessment).
   - Panda & Seasholtz 1999 (Rayleigh scattering).

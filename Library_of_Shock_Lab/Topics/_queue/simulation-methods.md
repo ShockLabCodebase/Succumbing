@@ -28,3 +28,19 @@ The LES (from Gojon & Bogey 2017, IJA) uses Bogey's in-house OpenMP solver in cy
   - Validation: only the h = 5d tone, St_j 0.39 vs 0.385 measured (p. 18).
 - It breaks the page's claim that "the nozzle is always meshed and its exit boundary layer is deliberately set turbulent": this is a reduced-Re, laminar-inflow LES without a nozzle that still reproduces a measured impinging tone frequency to ≈ 1%. That is indirect support for the PyFR plan (Re_D ≈ 10⁵, laminar exit layer) in the open question "Is ILES at reduced Re enough for staging?", although for an impinging loop rather than free-jet A1/A2 staging, and with an SGS model.
 - It is a third "high order away from shocks, local capturing at shocks" scheme alongside PyFR's entropy filter and the JAXA compact/SLAU solver. The library still compares none of them on one jet.
+
+## shen-2002-three-dimensional-numerical-simulation-jet-screech (queued 2026-10-23)
+
+- **A pre-LES approach for the "How the jet LES in the library were set up" table** (p. 33–35, 39–40). Unsteady RANS with an axisymmetric k–ε (Thies & Tam constants) and azimuthal Fourier expansion. Only five modes are kept, which turns the 3-D problem into coupled x–r problems. The scheme is Tam & Kurbatskii's multiple-size-mesh multiple-time-step DRP (7-point stencils).
+  - Possible table row: round convergent nozzle, M_j 1.1–1.5; domain 35D × 17D with D/64 → D/8 in four subdomains; axisymmetric inflow per Ref. 1; time step and lip not stated; spectra at 134 Hz bandwidth (≈ 100 D/a∞ blocks, inferred); validated against Ponton & Seiner wavelengths and levels.
+- **Numerics.**
+  - Selective artificial damping per mode, with variable damping for shock capturing (inverse stencil Reynolds number 0.35).
+  - Tam's radiation condition with entrainment flow (n = 0 only) and a nonlinearised outflow condition.
+  - A high-order analytic-continuation axis condition (parity rules plus symmetric interpolation), replacing the O(Δr) azimuthal-average treatment of Shih et al. and Morris et al.
+- **Run procedure.** Every run is self-excited from zero initial conditions and run "until a periodic state", one cold start per M_j.
+- **Lessons for the PyFR staging LES** (note's analysis):
+  - Cold starts at ΔM_j 0.1 cannot test hysteresis.
+  - A deterministic URANS cannot show noise-driven switching, so switching seen in ILES but absent here would be informative.
+  - The driver's r(t) = ln(A_in/A_out) classifier should allow a "coexisting" outcome: a dominant tone with a steady partner 9–13 dB down, with the A2 − A1 band phase-locked to a₁a₂*.
+  - The probe radius 0.642D matches Ponton & Seiner's lip-face transducers.
+- **Short records.** This adds to the "Records are short" paragraph: the analysis block is about one real switch long.

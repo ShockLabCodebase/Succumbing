@@ -20,7 +20,7 @@ phenomena: ["axis-switching", "flapping", "KH-wavepackets", "coherent-structures
 params: {"AR": "2", "Re": "400"}
 topics: ["axis-switching-and-mean-flow", "non-axisymmetric-jets", "modal-decomposition"]
 related: ["mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "yeung-2022-3d-spod-twin-rectangular-jet", "marshall-2024-prediction-streaks-rectangular-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "schmidt-2020-bispectral-mode-decomposition", "pickering-2020-lift-up-kh-orr-jets"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet", "gudmundsson-2011-instability-wave-models-near-field-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "michalke-1984-survey-jet-instability-theory", "mitchell-2013-near-field-structure-underexpanded-elliptic-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-bispectral-mode-decomposition", "schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet", "edgington-mitchell-2015-staging-screeching-elliptical-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "mazharmanesh-2025-screech-modes-non-axisymmetric-jets", "michalke-1984-survey-jet-instability-theory", "mitchell-2013-near-field-structure-underexpanded-elliptic-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-bispectral-mode-decomposition", "schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "DNS (Re_D 400) of forced AR 2 elliptical jets, D2-split SPOD: AS flapping dominates; a new SA flapping mode is born at the axis switch, apart from nozzle wagging; St ∝ 1/√x"
 ---
 # Coherent structures in axis-switching elliptical jets
@@ -64,7 +64,7 @@ The paper asks how axis switching in an elliptical jet changes its coherent stru
   - Normalised by its value at x/D_eq = 0.5, growth is the same exponential for all cases for x/D_eq < 4. After that, high forcing quickly stops growing and decays. Low and medium keep similar growth rates across the domain.
   - Higher frequencies are affected less because their wavepackets are shorter.
 - **Ranking of symmetries** (p. 10; Fig. 9–10):
-  - AS dominates in all cases, consistent with LSA (Morris 1988; Morris & Bhat 1995; Suzuki et al. 2023) and with experiments (Edgington-Mitchell et al. 2015a,b; Mazharmanesh et al. 2025).
+  - AS dominates in all cases, consistent with LSA (Morris 1988; Morris & Bhat 1995; Suzuki et al. 2023) and with experiments (Edgington-Mitchell et al. 2015, [multimodal](edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md) and [staging](edgington-mitchell-2015-staging-screeching-elliptical-jets.md); Mazharmanesh et al. 2025).
   - In the medium and high cases SS overtakes AS at the lowest frequencies (Fig. 9, roughly St ≲ 0.05–0.1 read from the figure).
   - The spread between families shrinks as forcing rises.
   - At St = 0.2 every wavepacket peaks further upstream with more forcing. AS and SS are cut short and lose energy. SA and AA gain energy because more of their wavepacket now fits inside the domain (Fig. 10).
@@ -232,6 +232,6 @@ This is a Shock Lab group paper (Monash authors with ITA), but it is purely nume
   - Nogueira, Weightman & Edgington-Mitchell 2023 (3-D OWNS of elliptical jets).
   - Suzuki, Nogueira & Edgington-Mitchell 2023 (vortex-sheet wavepacket model of elliptical-jet directivity, AIAA J).
   - Morris & Bhat 1995 (spatial stability of compressible elliptic jets).
-  - Edgington-Mitchell, Honnery & Soria 2015 (multimodal instability and staging in elliptic jets).
+  - Edgington-Mitchell, Honnery & Soria 2015 (multimodal instability and staging in elliptic jets; both now indexed: [multimodal](edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md), [staging](edgington-mitchell-2015-staging-screeching-elliptical-jets.md)).
   - Zaman 1996 (axis switching and coherent structures); Hussain & Husain 1989 (elliptic jets).
   - Yeung & Schmidt 2025 (twin-rectangular jet spectral dynamics).

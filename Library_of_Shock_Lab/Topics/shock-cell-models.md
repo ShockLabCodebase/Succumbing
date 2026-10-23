@@ -111,11 +111,13 @@ The statistical route of [Tan 2019b](../Notes/tan-2019-equivalent-bbsan-source-r
 - [Tam 1986](../Notes/tam-1986-bbsan-screech-relationship.md): BBSAN peaks at shock Fourier wavenumbers; 0.8 spacing factor.
 - [Tam 1988](../Notes/tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets.md): vortex-sheet shock cells for any cross-section.
 - [Tam 1995](../Notes/tam-1995-supersonic-jet-noise.md): waveguide-mode shock cells; multiple scales; one BBSAN peak per mode.
+- [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
 - [Ray 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): multiple-scales shock modes × PSE wave in linearised Euler.
 - [André 2013](../Notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): screech-free notched twin; screech damps the mean train; BBSAN peak follows the stage.
 - [Tan 2019a](../Notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV reflection points and shrinkage; shock-modulated length scales; shock time scale inactive.
 - [Tan 2019b](../Notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): shock pressure from mean PIV and RANS; statistical BBSAN sources upstream of reflections.
 - [Wong 2019](../Notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Pack modes × jittering wavepacket; ten shock modes; coherence decay lowers the peak.
+- [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): Screech and impinging-tone review via four loop processes: KH growth, shock–vortex sound, free-stream vs guided return, lip receptivity; staging still open (2019) (synthesis pending).
 - [Wong 2020](../Notes/wong-2020-azimuthal-decomposition-radiated-noise-shock-containing-jets.md): Pack spacing tested through BBSAN lobes; harmonic higher-order curves; axisymmetric shocks.
 - [Edgington-Mitchell 2021](../Notes/edgington-mitchell-2020-waves-in-screeching-jets.md): k_kh ± k_s waves in PIV confirm the product picture.
 - [Nogueira 2021](../Notes/nogueira-2021-absolute-instability-shock-containing-jets.md): Floquet LSA; periodic shocks create absolute instability.

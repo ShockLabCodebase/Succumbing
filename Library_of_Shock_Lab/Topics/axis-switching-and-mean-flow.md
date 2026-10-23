@@ -61,6 +61,7 @@ The evolving mean flow also limits the linear models. In the elliptical jet the 
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 jet, stereo PIV; screech-driven spreading, streamwise vortex pairs proposed as the cause of switching.
 - [Mitchell et al. 2013](../Notes/mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md): original two-plane PIV of the AR 2 ellipse, NPR 2.2–4.2; shear-layer pinch at x/d 3.5–4 at low NPR, proposed vortex bifurcation at 4.2 (synthesis pending).
 - [Edgington-Mitchell 2015](../Notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse; switch at x/D ≈ 4.3; helical-like pair tied to the switch.
+- [Edgington-Mitchell et al. 2015](../Notes/edgington-mitchell-2015-staging-screeching-elliptical-jets.md): AR 2 elliptic jet, NPR 1.95–4.3: five screech stages (varicose, 3 flapping, helical); mode III jump tied to shock spacing ≠ standing-wave spacing (k_s2 in hindsight) (synthesis pending).
 - [Gojon 2019](../Notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): LES; heating moves the switch downstream while the simulated tone grows.
 - [Ivelja 2024](../Notes/ivelja-2024-modal-analysis-screeching-elliptical-jets.md): fitted flow aspect ratio along x; guided mode neutral only over a short stretch.
 - [Marshall 2024](../Notes/marshall-2024-prediction-streaks-rectangular-jets.md): cross-plane resolvent streaks; corner vortices probably not linear (preprint).

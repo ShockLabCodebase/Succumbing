@@ -34,3 +34,13 @@ This is the two-point companion to [Cavalieri 2013](../Notes/cavalieri-2013-wave
   - So long coherence, success of linear models and large gain separation mark the same region. That strengthens claim 1 on the page ("works, but only statistically") and gives it a quantitative edge.
 - **Asymmetry and phase speed.** The wavepacket coherence is asymmetric, 1.5–2.2 times shorter downstream at x/D = 4, St 0.4–0.6 (p. 18). At low St near the nozzle its phase speed reaches 0.8 to just over 1.0U_j, as linear theory predicts (p. 20–21). Both are statistics a stochastic-forcing operator model, P_qq = RP_ffR^H, should reproduce. No paper in the library has tested this.
 - **Suggestion for the page:** a short "two-point statistics" paragraph under "Why mean-flow models work at all" or "Wavepacket models", and a line in Papers.
+
+## edgington-mitchell-2019-aeroacoustic-resonance-review (queued 2026-10-23)
+
+Section 5.1 covers the linear-model background (p. 152–157, 168–174):
+- Tam & Hu's three families captured by the vortex sheet: m = 0 KH eigenfunction at M 1.6 (Fig. 22); (0,1), (0,3), (1,1), (1,3) upstream acoustic-mode eigenfunctions at M 1.5 (Fig. 35).
+- The k_KH⁺, k_TH⁻, k_p⁻, k_d⁻, k_T⁺ wave schematic after [Jordan 2018](../Notes/jordan-2018-jet-flap-interaction-tones.md) (Fig. 36).
+- Morris 2010's local trends (p. 154): growth and the most unstable frequency fall with M; m = 0 leads at low supersonic M and m = ±1 at higher M; heating and thicker layers reduce growth. Reading Figs 23–24, m = ±1 overtakes m = 0 between M_j 1.0 and 1.5 (peak −k_iR_j ≈ 0.65/0.62 at M_j 1.0 and 0.38/0.45 at 1.5).
+- Locally parallel analysis cannot include shocks; global or weakly non-parallel analysis can include them but not their nonlinearity (p. 156–157). In 2019 "no such theoretical model exists" for shock modulation of wavepackets (p. 177), a gap since filled by the Floquet, PFE and global work on the page.
+- Receptivity theory: Tam 1986's frequency and phase-velocity matching, Tam 1978's narrow beams at 50–80° from upstream, and Barone & Lele 2005's adjoint, in which splitter-plate thickness strongly affects receptivity (p. 173–174). The page's receptivity coverage is thin, so this is a useful addition.
+- Agrees with items 3 and 4.

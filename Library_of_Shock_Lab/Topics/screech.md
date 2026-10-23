@@ -99,7 +99,9 @@ Staging-specific methods (shock-spectrum peaks, switch tracking, loop counts) ar
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md): pre-2000 review; frequency predictable, amplitude and staging not.
 - [Samimy 1998](../Notes/samimy-1998-rectangular-jet-trailing-edge-control.md): V-notch removes, thick lip revives AR 3 screech.
 - [Panda 1999](../Notes/panda-1999-experimental-investigation-screech-noise-generation.md): near-field standing wave at L_sw; sound born between the 3rd and 4th shocks.
+- [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
 - [Kerechanin 2001](../Notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts amplify or suppress rectangular-jet screech.
+- [Shen & Tam 2002](../Notes/shen-2002-three-dimensional-numerical-simulation-jet-screech.md): URANS k–ε DRP simulation, M_j 1.1–1.5: A1, A2, B, C tones and levels; claims two tones coexist, not switch; free-sound closure for A1/B, guided jet mode for A2/C (synthesis pending).
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 stereo PIV; 3rd-cell circulation peak tied to amplitude.
 - [Suzuki & Lele 2003](../Notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): eikonal + 2-D DNS; weak shocks leak at inter-vortex saddles.
 - [André et al. 2013](../Notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): notched lip removes screech; screech damps the mean shock train.
@@ -113,6 +115,7 @@ Staging-specific methods (shock-spectrum peaks, switch tracking, loop counts) ar
 - [Gojon et al. 2018](../Notes/gojon-2018-oscillation-modes-screeching-jets.md): vortex-sheet band map of all stages; LES finds in-jet guided modes at the tones.
 - [Mancinelli 2019](../Notes/mancinelli-2019-screech-prediction-upstream-modes.md): first G-JM resonance model.
 - [Gojon 2019](../Notes/gojon-2019-antisymmetric-oscillation-modes-rectangular-screeching-jets.md): heated rectangular LES: St right, heating trend wrong; planar band test.
+- [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): Screech and impinging-tone review via four loop processes: KH growth, shock–vortex sound, free-stream vs guided return, lip receptivity; staging still open (2019) (synthesis pending).
 - [Edgington-Mitchell 2021, shock leakage](../Notes/edgington-mitchell-2021-generation-screech-tones-shock-leakage.md): leakage seen at inter-vortex saddles, 3rd–5th cell.
 - [Edgington-Mitchell 2021, waves](../Notes/edgington-mitchell-2020-waves-in-screeching-jets.md): waves at k_kh, k_kh ± k_s; global mode within 1 %.
 - [Esfahani 2021, control](../Notes/esfahani-2021-control-twin-rectangular-jet-coupling.md): plasma forcing sets twin-rectangular screech and coupling loops.
