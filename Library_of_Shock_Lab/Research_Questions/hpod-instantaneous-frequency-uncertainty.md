@@ -3,9 +3,9 @@ question: "How does the instantaneous frequency measurement output from Hilbert 
 slug: hpod-instantaneous-frequency-uncertainty
 status: answered
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-10-23
 topics: ["time-frequency-methods", "modal-decomposition"]
-notes: ["gabor-1946-theory-of-communication", "raiola-2025-hilbert-pod", "kriegseis-2021-hilbert-transform-revisited-hpod", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "huang-2009-on-instantaneous-frequency", "boashash-1992-instantaneous-frequency-fundamentals", "cohen-1989-time-frequency-distributions-review", "bedrosian-1963-product-theorem-hilbert-transforms", "nuttall-1966-quadrature-approximation-hilbert-transform-modulated-signals", "rife-1974-single-tone-parameter-estimation-discrete-time", "daubechies-2011-synchrosqueezed-wavelet-transforms-emd", "rilling-2008-one-or-two-frequencies-emd-two-tones", "horel-1984-complex-principal-component-analysis", "sieber-2016-spectral-proper-orthogonal-decomposition", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "torrence-1998-practical-guide-wavelet-analysis", "bell-2021-intermittent-modal-coupling-screeching-twin-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "davey-2025-hpod-sphere-wake", "oberleithner-2011-swirling-jet-vortex-breakdown-stability"]
+notes: ["gabor-1946-theory-of-communication", "raiola-2025-hilbert-pod", "kriegseis-2021-hilbert-transform-revisited-hpod", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "huang-2009-on-instantaneous-frequency", "boashash-1992-instantaneous-frequency-fundamentals", "cohen-1989-time-frequency-distributions-review", "bedrosian-1963-product-theorem-hilbert-transforms", "nuttall-1966-quadrature-approximation-hilbert-transform-modulated-signals", "rife-1974-single-tone-parameter-estimation-discrete-time", "daubechies-2011-synchrosqueezed-wavelet-transforms-emd", "rilling-2008-one-or-two-frequencies-emd-two-tones", "horel-1984-complex-principal-component-analysis", "sieber-2016-spectral-proper-orthogonal-decomposition", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "torrence-1998-practical-guide-wavelet-analysis", "bell-2021-intermittent-modal-coupling-screeching-twin-jets", "wong-2023-steady-unsteady-coupling-twin-round-jets", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "davey-2025-hpod-sphere-wake", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2022-database-reduced-complexity-modeling"]
 papers_requested: []
 ---
 # How does HPOD's instantaneous frequency appear to beat the time–frequency trade-off?
@@ -194,26 +194,104 @@ Rife & Boorstyn note that their bound is Brennan's phased-array angle bound (p. 
 | IF is the conditional mean frequency (a centroid) and does not violate the uncertainty principle, which bounds marginals and windows | established | Cohen 1989 p. 954, 963, 970–971; Boashash 1992 p. 522, 533 | — |
 | IF is exact iff the complex modulation is one-sided (Nuttall); it is meaningful only for one component | established | Bedrosian 1963; Nuttall & Bedrosian 1966; Boashash p. 527; Huang 2009 p. 185, 224; Huang 1998 p. 12–15 | — |
 | Two tones in one band: IF = stronger tone + ripple at Δf (formula) | established | Boashash eq. 30, p. 523; Cohen eq. 5.23, 4.24 | — |
-| Unweighted mean IF = stronger tone; negative only if r·ω_weak > ω_strong | supported (derivation, checked twice) | this file; Boashash and Rilling notes | synthetic test |
+| Unweighted mean IF = stronger tone; negative only if r·ω_weak > ω_strong | supported (derivation, checked twice; in T1 the IF never reported the weaker tone at r = 0.6) | this file; Boashash and Rilling notes; T1 | T7 |
 | The narrow-banding bandwidth sets separation (relative gap > relative bandwidth) | established (sufficient condition) | Daubechies 2011 Theorem 3.3, Lemma 3.6 | — |
 | RMS cap: σ_IF² + ⟨(A′/A)²⟩ ≤ (B/2)² | established | Cohen eq. 8.9; Boashash eq. 82–83 | — |
-| Rate cap: Δf_dev + f_m ≲ B/2 (Carson) | supported (rule of thumb) | Carson's rule; Daubechies Estimates 3.5–3.7 (in kind); Nuttall gives the f₀ analogue exactly | synthetic benchmark |
-| The Hilbert step's own floor is about one carrier period | established | Nuttall & Bedrosian 1966 p. 1459, with the note's numerical checks; Huang 2009 Fig. 17 | — |
-| IF precision ≪ 1/T for one component (SNR-limited above a threshold) | established (stationary tone) | Rife & Boorstyn eq. 17, 60; Fig. 3–4 | tracking a moving IF: Boashash 1992 Part 2 |
-| HPOD can detect exclusive switching faster than 1/Δf but not coexistence | supported | Rife note worked example; two-tone formula | test on A1/A2 schlieren |
-| Direct quadrature recovers sub-period FM of an accepted IMF (strongest H1) | supported (noise-free) | Huang 2009 p. 205–210 | test with noise |
-| POD adds separation via space and precision via SNR | supported | Horel; Wong; Kriegseis; Oberleithner | HPOD vs point Hilbert on one record |
-| Field of view substitutes for record length (≈ L/c) | speculative (precision analogy supported) | Raiola p. 11–13; Sieber p. 17; Horel p. 1668–1670; Rife p. 592 | crop study on the Towne LES |
-| HPOD_t of broadband turbulence gives monocomponent modes | doubtful | Raiola p. 19–21; Kriegseis p. 1–2 | apply Boashash's IF/group-delay test to HPOD modes |
-| Time resolution of HPOD IF for a real switch | unknown | no benchmark | synthetic benchmark |
+| Rate cap: Δf_dev + f_m ≲ B/2 (Carson) | supported (rule of thumb) | Carson's rule; Daubechies Estimates 3.5–3.7 (in kind); Nuttall gives the f₀ analogue exactly | T5 |
+| The Hilbert step's own floor is about one carrier period | established (T1: negligible for 2-period ramps) | Nuttall & Bedrosian 1966 p. 1459, with the note's numerical checks; Huang 2009 Fig. 17; T1 | — |
+| IF precision ≪ 1/T for one component (SNR-limited above a threshold) | established (stationary tone; T1's probe methods follow the reference) | Rife & Boorstyn eq. 17, 60; Fig. 3–4; T1 | moving IF: T5; Boashash 1992 Part 2 |
+| HPOD can detect exclusive switching faster than 1/Δf but not coexistence | supported (theory, and synthetic in T1) | Rife note worked example; two-tone formula; T1 | T3 |
+| Direct quadrature recovers sub-period FM of an accepted IMF (strongest H1) | supported (noise-free) | Huang 2009 p. 205–210 | T5 |
+| POD adds separation via space and precision via SNR | supported for precision (T1, convolution route at low SNR); separation via space not shown | Horel; Wong; Kriegseis; Oberleithner; T1 | T2, T6 |
+| Field of view substitutes for record length (≈ L/c) | speculative (precision analogy supported; T1 inconclusive, aperture ≈ 9λ against about 10λ needed) | Raiola p. 11–13; Sieber p. 17; Horel p. 1668–1670; Rife p. 592; T1 | T2, then T6 |
+| HPOD_t of broadband turbulence gives monocomponent modes | doubtful | Raiola p. 19–21; Kriegseis p. 1–2 | T4 |
+| Time resolution of HPOD IF for a real switch | supported (synthetic): about 1/B; with B ≤ 2Δf, dwells ≥ 1.5 T_b resolved, about half at 0.75 T_b | T1 | T3 |
+| Block-wise inverse SPOD puts an SNR-independent floor on HPOD IF; convolution reconstruction removes it | supported (synthetic) | T1 floor diagnosis | T3 (real data) |
 
-## What would settle it
+## Proposed tests
 
-1. **Synthetic switch benchmark.** Two advecting wavepackets 10% and 0.5% apart, with prescribed switches, coexistence intervals and noise. Pass them through SPOD → a band-B reconstruction → HPOD_t, and alongside it STFT, CWT (Morlet and bump) and synchrosqueezing. Measure switch-detection delay, IF bias and IF variance against B, SNR and field-of-view length. Since the true r and φ are known, Nuttall's error gives the Hilbert step's exact floor, so the narrow-banding and noise contributions can be separated (Nuttall note). Boashash's stepped sweeps (Fig. 7, p. 528, 530) and Rihaczek cells (p. 533–534) are ready-made templates. This also answers the topic page's open question "how fast can a switch be resolved?".
-2. **Two-tone IF exclusivity test on A1/A2 schlieren:** plateaus against ripple, compared with Mazharmanesh's JPDF test.
-3. **Monocomponent check on HPOD modes:** compare f_i(t) with the inverse group delay τ_g⁻¹(f) for HPOD modes of the Towne M 0.9 LES, with and without narrow-banding (Boashash Properties 2–3).
-4. **Space for time:** crop the LES domain to different L and track the IF bandwidth of the leading HPOD mode.
-5. **PyFR staging LES:** records are short, so separate components spatially (azimuthal and streamwise wavenumber) before the Hilbert step, and fit the phase over windows that clear the Rife threshold.
+Ranked by how much each would change the answer for its cost. T1 has been run. Its results are recorded here and in the uncertainties table, but not yet worked into the evidence sections above (a `continue` would do that).
+
+| ID | Tests (against) | Test | Type | Cost | Status |
+|---|---|---|---|---|---|
+| T1 | switch time resolution ≈ 1/B (H2); exclusive switching visible faster than 1/Δf, coexistence not (H3); precision against Cramér–Rao; the Hilbert step's floor | synthetic switch benchmark: SPOD → band reconstruction → HPOD_t against STFT, CWT and FSST at a probe | synthetic | done | done 2026-10-22: 1/B rule held; one band holding both tones resolved exclusive switches down to 0.375 T_b when T_b spans many carrier periods; coexistence showed only as ripple; inverse-SPOD block floor found; Hilbert floor negligible; space for time inconclusive |
+| T2 | space for time (L_eff/c stands in for record length) vs POD adding only SNR | T1 benchmark with effective aperture 5–40λ, two spacings, and a counter-propagating wave | synthetic | hours | proposed |
+| T3 | T1's conclusions hold on real schlieren vs fail with real noise and modes; by-product: A1/A2 exclusive vs short coexistence | HPOD on Mazharmanesh's NPR 2.20 record, with negative and spliced positive controls from NPR 2.19 and 2.25 | re-analysis | 1–3 days | proposed |
+| T4 | raw HPOD_t modes of broadband turbulence are monocomponent vs carry the IF of band-limited noise | IF statistics of HPOD_t modes against the Gaussian-noise IF law, with and without narrow-banding | re-analysis (public LES) | download + 2–3 days | proposed |
+| T5 | Carson rate cap vs RMS cap only; strongest H1 (direct quadrature) vs H3 under noise | sinusoidal-FM sweeps through band B, Hilbert vs direct quadrature, SNR 0–40 dB | synthetic | about a day | proposed |
+| T6 | A1/A2 separable by streamwise wavenumber in short LES records vs too short an aperture | wavenumber-filtered HPOD on the PyFR shear-layer probes | LES | low, once output exists | proposed (waits on LES runs) |
+| T7 | two-tone derivation: unweighted mean IF = stronger tone; negative-IF threshold | sweep of r and which tone is weaker | synthetic | minutes | proposed |
+
+### T1. Synthetic switch benchmark (done 2026-10-22)
+
+Code, design and full results: [HPOD_Switch_Benchmark](../../Codebase/HPOD_Switch_Benchmark/README.md). A 1D field of two advecting Gaussian wavepackets, δ = 0.10 and 0.005 apart, with exclusive switches at dwells from 6 down to 0.375 T_b (T_b = 1/Δf), a coexistence interval (weaker tone at r = 0.6) and an 'off' interval. SNR 0–20 dB, field of view up to 16λ, B from Δf/2 to 8Δf. HPOD_t of separate bands, of one band holding both tones, and of the raw field, against Gaussian, bump, Morlet and FSST probes. IF from a least-squares fit to the unwrapped phase over max(1/B, 2 periods).
+
+Results against the predictions:
+- **Time resolution ≈ 1/B (H2): held.** With B ≤ 2Δf, the separate-band methods resolved every switch with dwell ≥ 1.5 T_b, about half at 0.75 T_b and none at 0.375 T_b, at both spacings and every SNR. At B ≥ 4Δf each band holds both tones and they fail at every dwell. The default Morlet (17% bandwidth) merged the tones at both spacings.
+- **Exclusive switching vs coexistence (H3): held.** One band holding both tones resolved exclusive switches down to 0.375 T_b at δ = 0.005 (B = 8Δf), faster than 1/Δf. At δ = 0.10 it stopped at about 1.5 T_b, because T_b is only 10 carrier periods and the ramp and fit window fill much of each dwell. In coexistence the IF rippled at Δf, with a ripple index 30–120 times the exclusive baseline, and never reported the weaker tone. Wide-window FSST behaved alike, detecting coexistence only 44–54% of the time at B = 8Δf.
+- **Precision: held for the probe methods; the lab pipeline had an artefact.** Gauss, bump and FSST followed the Cramér–Rao reference and scaled with SNR (σ_IF ≈ 5×10⁻⁶ f₀ = Δf/100 at δ = 0.005, 10 dB, B = Δf). The HPOD routes sat on an SNR-independent floor, traced to block stitching in the inverse SPOD. Reconstruction by convolution with the SPOD modes (as `tcoeffs.m` does; Nekkanti 2021 eq. 3.4) cut the spread by up to 9× and came within 1.3–3× of the field reference at 0 dB.
+- **Hilbert step's floor: negligible, as predicted** (≤ 2×10⁻⁴ f₀; the modulation's energy below −f_k < 2×10⁻⁷; Nuttall).
+- **Space for time: inconclusive.** HPOD of the raw field never separated the tones, but the packet envelope limited the effective aperture to about 9λ, short of the roughly 10λ needed at δ = 0.10. Hence T2.
+
+For the lab pipeline: reconstruct the band by convolution, not `invspod`, whenever IF precision matters. Limits: 1D, one phase speed, white noise, 2–4 switches per dwell.
+
+### T2. Space for time on the benchmark
+
+- **Hypotheses.** H_space (my hypothesis, section 4): a field of effective length L_eff resolves Δf ≈ c/L_eff, so POD separates two tones without narrow-banding once L_eff ≳ c/Δf = λ/δ, and a snapshot then holds about L_eff/c of history. H_SNR: on raw data POD adds precision through SNR but no frequency separation.
+- **Predictions.** At δ = 0.10 the threshold is about 10λ; at δ = 0.05, about 20λ. H_space: HPOD of the raw field locks its two leading modes onto the two tones (ρ bimodal, switches resolved) once L_eff passes the threshold, and the 10–90% width of a resolved switch grows as about L_eff/c, since the trade-off has moved into space. H_SNR: no separation at any L_eff; only the IF spread falls, as 1/√M_eff. With a second wave at c < 0, H_space predicts that separation degrades or ghosts appear (more than one phase speed; Raiola p. 13).
+- **Varied:** L_eff = 5, 10, 20 and 40λ, via a wider Gaussian or flat-top envelope; δ = 0.10 and 0.05; a counter-propagating wave at 0.3 of the amplitude, as a separate arm. **Fixed:** SNR 10 dB, other T1 defaults. A further arm with `env_shift_lambda` ≠ 0 tests separation by spatial support rather than by wavenumber.
+- **Controls.** δ = 0.005 needs about 200λ, so it should fail at every L_eff tried (negative control). The probe methods should not change.
+- **Feasibility.** 8 points per wavelength gives 320 points at 40λ: trivial.
+- **Analysis.** `run_switch_benchmark` with overrides; the flat-top envelope and the second wave are small code changes. Report POD mode mixing explicitly: near-equal amplitudes make the eigenvalues near-degenerate (Horel).
+- **Decision rule.** H_space is supported if separation appears within a factor of 1.5 of λ/δ at both spacings and the switch width scales with L_eff/c. H_SNR is supported if nothing separates up to 4× the predicted threshold. Separation that does not scale with 1/δ is inconclusive (an envelope-shape effect).
+- **Cost and risk.** Hours. Risk: the 1D, non-dispersive model flatters H_space; a pass here is necessary, not sufficient (T6 is the real-flow test).
+
+### T3. T1's conclusions on real A1/A2 schlieren, with controls
+
+- **Hypotheses.** Method: the 1/B time resolution and the plateau-vs-ripple test survive real schlieren, with turbulence-coloured noise, spatially structured modes and drifting amplitudes, vs they fail there. Physics by-product: Mazharmanesh's exclusivity, with the JPDF ridge put down to windows spanning switches (p. 11), vs short coexistence intervals hidden by the 78-cycle window.
+- **Data (an assumption to confirm with the user):** the [Mazharmanesh 2026](../Notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md) round-jet schlieren, D = 16 mm, 150 kHz: NPR 2.20 (two tones switching; 400,000 frames), NPR 2.19 (A1 only) and NPR 2.25 (A2 only) (p. 8–11).
+- **Feasibility (my arithmetic, cold jet, T₀ ≈ 293 K).** At NPR 2.20, M_j ≈ 1.12 and U_j ≈ 345 m/s, so A1 (St 0.606) is at about 13.1 kHz and A2 (St 0.694) at about 15.0 kHz: Δf ≈ 1.9 kHz, T_b ≈ 0.53 ms ≈ 7 A1 periods ≈ 79 frames. 10–11.5 frames per period, above Huang's 5. Relative gap d ≈ 0.068, so a band half-width under about 6% of the frequency keeps one tone per band (Daubechies). With nfft = 1024 the SPOD bin is 146 Hz, so B = Δf to 2Δf spans 13–26 bins. T1 then predicts that separate bands resolve dwells ≥ 1.5 T_b ≈ 0.8 ms, about 8× finer than the published 6.8 ms window. T_b is shorter in carrier periods than T1's δ = 0.10 case, so the single-band route should do worse, resolving only dwells of about 1.5–3 T_b.
+- **Analysis.** SPOD (nfft 1024, as the paper) → convolution reconstruction (T1) of bands B = Δf and 2Δf around each tone, and one band Δf + B holding both → HPOD_t → ρ(t), the combined-band IF, the ripple index and a dwell-time histogram. Compare with the paper's sliding-SPOD amplitudes and JPDF. Both tones are axisymmetric, so symmetry cannot separate them; their streamwise wavenumbers differ (KH × k_s1 vs KH × k_s2, p. 9–10), which the POD step may exploit.
+- **Controls.**
+  - Negative: NPR 2.19 and 2.25 through the same pipeline. ρ should stay at 0 or 1 and the ripple index at its exclusive baseline. This gives the false-alarm rate on real noise.
+  - Positive, switching: splice alternating segments of the 2.19 and 2.25 records, with 2-period Hann cross-fades, at prescribed dwells from 6 to 0.375 T_b. Real noise, known switch times.
+  - Positive, coexistence: sum the two records with the weaker scaled to r = 0.6.
+  - The control pair's tones are closer (St 0.607 and 0.665, Δf ≈ 1.25 kHz), so set the bands and T_b from their own tones.
+- **Decision rule.** The method claim stands if the spliced control reproduces T1's resolved fractions within the count noise and the summed control raises the ripple index ≥ 10× above the negative-control baseline. Then, for NPR 2.20: intervals ≥ 1.5 T_b long with the ripple index above the threshold calibrated on the summed control support coexistence; none above the negative controls' false-alarm rate supports exclusivity, at about 0.8 ms resolution. If most dwells are shorter than 1.5 T_b, the result is inconclusive at this resolution.
+- **Cost and risk.** 1–3 days of re-analysis. Risks: the amplitude normalisation assumes each tone is on for at least 5% of the record (a T1 limit); schlieren noise can be spatially coherent (vibration, flicker), unlike T1's white noise.
+
+### T4. Are raw HPOD_t modes of broadband turbulence monocomponent?
+
+- **Hypotheses.** H_mono: raw HPOD_t modes, as used without narrow-banding by [Kriegseis 2021](../Notes/kriegseis-2021-hilbert-transform-revisited-hpod.md) and [Raiola 2025](../Notes/raiola-2025-hilbert-pod.md), are close enough to one component for their IF to mean something. H_multi: they are multicomponent, so their IF is that of band-limited noise and says no more than the band's centroid.
+- **Predictions.** Background, not in the library (Rice's result for Gaussian noise): the IF of a narrow-band Gaussian process has a heavy-tailed PDF, falling as |f − f̄|⁻³ (a Student t with two degrees of freedom), with a width set by the RMS bandwidth, and negative-IF spikes at envelope minima. H_multi: a mode's IF PDF matches that law fitted to its coefficient's RMS bandwidth, and the negative-IF fraction is finite. H_mono: the IF PDF is much narrower than the law, its tails are light, negative IF is rare, and BT > 10 (Boashash). Boashash's IF/group-delay check (Properties 2–3) assumes an invertible IF law, which a stationary broadband record lacks, so use it only on segments with a clear chirp (my reasoning).
+- **Data.** The public M_j 0.9 jet LES of [Towne 2022](../Notes/towne-2022-database-reduced-complexity-modeling.md); download a subset (one plane, or the m = 0 component), checking its size first. Lab TR schlieren of a subsonic jet would do instead, if the user has it.
+- **Varied:** narrow-banding (none; relative bandwidth 50%, 20%, 5%) around the SPOD peak and around a trapped-wave tone ([Towne 2017](../Notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md)); HPOD modes 1–4.
+- **Feasibility.** At least 5 samples per period at the highest St analysed, and enough record for a converged SPOD of the subset; check both before analysing.
+- **Decision rule.** H_mono for a mode if its IF interquartile range is under 0.3 of the noise law's and its negative-IF fraction under 1%. H_multi if within a factor of 1.5 of the law. Report the narrow-banding at which modes cross from one to the other.
+- **Cost and risk.** Download plus 2–3 days. Risk: a subset may be too short to converge the SPOD.
+
+### T5. FM rate cap and direct quadrature under noise
+
+- **Hypotheses.** (a) The Carson rule Δf_dev + f_m ≲ B/2 (my rule of thumb) is the binding cap, vs only the rigorous RMS cap σ_IF² + ⟨(A′/A)²⟩ ≤ (B/2)² (Cohen eq. 8.9). (b) Strongest H1: direct quadrature recovers intrawave FM at rates up to 2f_c ([Huang 2009](../Notes/huang-2009-on-instantaneous-frequency.md), p. 205–210) under realistic noise, vs H3: following FM at rate f_m allows smoothing over at most about 1/(2f_m), so the error follows the Cramér–Rao bound for that short window and the advantage vanishes below some SNR.
+- **Predictions.** (a) Carson: tracking fails (captured swing < 0.9) along a line of slope −1 in the (f_m, Δf_dev) plane, so a small swing at f_m ≈ B/2 already fails. RMS cap only: the failure boundary depends on the swing, not on the rate. (b) H1: direct quadrature captures ≥ 0.9 of the swing at SNR ≥ 10 dB. H3: the captured swing collapses at the SNR where the Rife bound for a window of 1/(2f_m) reaches the swing, and direct quadrature and normalised Hilbert converge.
+- **Design.** Probe signals with sinusoidal FM on a grid of Δf_dev and f_m; Gaussian band-pass of width B; Hilbert IF and direct quadrature (Huang 2009's normalisation); SNR 0–40 dB. It fits in `HPOD_Switch_Benchmark/Functions/`.
+- **Decision rule.** (a) The slope of the failure boundary: −1 supports Carson, near-vertical (swing only) the RMS cap. (b) Whether the collapse SNR matches the Rife prediction within a factor of 2.
+- **Cost and risk.** About a day. Risk: the direct-quadrature normalisation iterates and can fail at low SNR on its own account; report its failures separately.
+
+### T6. Spatial separation in the PyFR staging LES
+
+- **Hypotheses.** Space for time (T2) in the real flow: A1 and A2 can be separated in the LES's short records by streamwise wavenumber, and so timed faster than separation by frequency allows. Against: the shear-layer probe line is too short to resolve the wavenumber gap, or the waves' dispersion and the upstream guided-jet waves spoil the separation.
+- **Predictions.** For the KH wavepackets the gap is Δk ≈ 2πΔf/U_c. With ΔSt ≈ 0.088 (Mazharmanesh's NPR 2.20 tones) and U_c ≈ 0.6–0.7 U_j, Δk·D ≈ 0.8–0.9, so the line must span about 2π/Δk ≈ 7D (my arithmetic; use the LES's own tones and convection speed). Mazharmanesh separated A1 from A2 by their interaction wavenumbers, KH × k_s1 against KH × k_s2 (p. 9–10), which is a second route if the line is too short for the KH gap. If the hypothesis holds, the wavenumber-filtered ρ(t) is bimodal and its switch times agree with the driver's lip-ring t_switch, with sharper transitions.
+- **Data.** `samples_shear.h5` from `Simulations/PyFR_Staging_Continuation/`; check the line's length against 2π/Δk first.
+- **Decision rule.** Switch times within T_b of the driver's, with a 10–90% width under the frequency-band route's 1.5 T_b, support the hypothesis. No bimodality with an adequate line rejects it.
+- **Cost and risk.** Low once output exists; waits on the LES runs. A sharper t_switch would also tighten the continuation driver's saddle-node fit.
+
+### T7. Two-tone IF formula checks
+
+- **Hypothesis.** My derivation (section 2): the unweighted mean IF equals the stronger tone, and IF goes negative only if r·ω_weak > ω_strong.
+- **Predictions.** Sweeping r from 0.1 to 0.99 at δ = 0.10 and 0.005: the mean IF matches the stronger tone to numerical precision. With the weaker tone higher, negative IF starts at r = ω_strong/ω_weak (≈ 0.909 at δ = 0.10); with it lower, never.
+- **Decision rule.** Any departure beyond numerical error refutes the derivation.
+- **Cost.** Minutes; low value, since two independent derivations already agree.
 
 ## Papers requested
 
@@ -237,6 +315,7 @@ Topic pages: [time-frequency-methods](../Topics/time-frequency-methods.md) and i
 Notes:
 - Signal theory: [Bedrosian 1963](../Notes/bedrosian-1963-product-theorem-hilbert-transforms.md), [Nuttall & Bedrosian 1966](../Notes/nuttall-1966-quadrature-approximation-hilbert-transform-modulated-signals.md), [Rife & Boorstyn 1974](../Notes/rife-1974-single-tone-parameter-estimation-discrete-time.md), [Cohen 1989](../Notes/cohen-1989-time-frequency-distributions-review.md), [Boashash 1992](../Notes/boashash-1992-instantaneous-frequency-fundamentals.md), [Huang et al. 1998](../Notes/huang-1998-empirical-mode-decomposition-hilbert-spectrum.md), [Rilling & Flandrin 2008](../Notes/rilling-2008-one-or-two-frequencies-emd-two-tones.md), [Huang et al. 2009](../Notes/huang-2009-on-instantaneous-frequency.md), [Daubechies, Lu & Wu 2011](../Notes/daubechies-2011-synchrosqueezed-wavelet-transforms-emd.md), [Torrence & Compo 1998](../Notes/torrence-1998-practical-guide-wavelet-analysis.md)
 - HPOD and modal methods: [Horel 1984](../Notes/horel-1984-complex-principal-component-analysis.md), [Sieber et al. 2016](../Notes/sieber-2016-spectral-proper-orthogonal-decomposition.md), [Kriegseis et al. 2021](../Notes/kriegseis-2021-hilbert-transform-revisited-hpod.md), [Nekkanti & Schmidt 2021](../Notes/nekkanti-2021-spod-reconstruction-denoising-frequency-time.md), [Raiola & Kriegseis 2025](../Notes/raiola-2025-hilbert-pod.md) (published in Phys. Rev. Fluids 2026, doi 10.1103/bhlm-qwfh; the note describes the preprint), [Davey et al. 2025](../Notes/davey-2025-hpod-sphere-wake.md), [Oberleithner et al. 2011](../Notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md)
+- Data for the proposed tests: [Towne et al. 2017](../Notes/towne-2017-acoustic-resonance-potential-core-subsonic-jets.md), [Towne et al. 2022](../Notes/towne-2022-database-reduced-complexity-modeling.md); the [HPOD switch benchmark](../../Codebase/HPOD_Switch_Benchmark/README.md) (T1)
 - Applications: [Bell et al. 2021](../Notes/bell-2021-intermittent-modal-coupling-screeching-twin-jets.md), [Wong et al. 2023](../Notes/wong-2023-steady-unsteady-coupling-twin-round-jets.md), [Jeun et al. 2024](../Notes/jeun-2024-screech-coupling-closure-rectangular-twin-jets.md), [Mazharmanesh et al. 2026](../Notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md)
 
 Not in the library (DOIs checked on Crossref 2026-10-21): Mandel 1974 (10.1119/1.1987876); Auger & Flandrin 1995, reassignment (10.1109/78.382394); Loughlin & Tacer 1996 (10.1121/1.416061); Picinbono 1997 (10.1109/78.558469). Carson's rule is standard communications theory.
@@ -260,3 +339,4 @@ Not in the library (DOIs checked on Crossref 2026-10-21): Mandel 1974 (10.1119/1
     - Boashash's BT > 10 and IF/group-delay test.
   - The overall view (H2 + H3) is unchanged and now firmer.
   - Queued for topic pages: `time-frequency-methods` (this question's entry, replaced). Queued for notes: see `notes_to_update.md` (huang-1998 entry corrected; raiola-2025, sieber-2016 kept).
+- 2026-10-23: "What would settle it" rewritten as "Proposed tests" in the skill's new format. T1 (the synthetic switch benchmark, `Codebase/HPOD_Switch_Benchmark/`, run 2026-10-22) is recorded as done with its results. T2–T7 are proposed, with predictions and decision rules. The uncertainties table now points to test IDs, and T1 moved "time resolution of HPOD IF for a real switch" from unknown to supported (synthetic). A new row records the inverse-SPOD block floor. T1's results are not yet worked into the short answer or evidence sections, and nothing was queued for topic pages or notes.

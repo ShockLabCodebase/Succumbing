@@ -2,7 +2,7 @@
 
 A synthetic test of how well instantaneous-frequency (IF) methods track switching between two tones. It compares the lab pipeline (SPOD → band reconstruction → Hilbert POD in time) with single-probe time–frequency methods.
 
-It implements item 1 of "What would settle it" in [hpod-instantaneous-frequency-uncertainty](../../Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty.md). The quantities it measures are the ones that answer argues about:
+It implements test T1 of "Proposed tests" in [hpod-instantaneous-frequency-uncertainty](../../Library_of_Shock_Lab/Research_Questions/hpod-instantaneous-frequency-uncertainty.md). The quantities it measures are the ones that answer argues about:
 - how fast a switch can be resolved, as a function of the narrow-banding bandwidth B, the SNR and the field of view;
 - whether a single IF trace can tell switching from coexistence;
 - how IF precision compares with the Cramér–Rao bound;
