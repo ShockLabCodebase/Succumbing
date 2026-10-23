@@ -151,13 +151,19 @@ Switch resolution is the same for both Hamming routes (all switches at 1.5 T_b, 
 
 The question: once `tcoeffs` gives a time-continuous coefficient for every bin and mode, what does HPOD of a band reconstruction add? The T8 methods (table above; switched on by `p.coef_methods`) answer it. `run_t8_coef_compare.m` runs the sweep with `p.recon = "conv"` for every field method and writes to `Results_T8/`, or to `Results_T8_quick/` with `quick = true`. With the convolution route, `HPOD_*` and `POD1s_*` work on the same reconstruction (its real part and the analytic field), so that pair isolates the Hilbert step. The prediction and decision rule are in the research question.
 
-**Quick run (2026-10-23; δ = 0.10, SNR 10 dB, L = 8λ, B = Δf and 4Δf, one schedule; preliminary):**
-- `POD1s_*` matched `HPOD_*` to about 10⁻⁶ in every metric. On a one-sided reconstruction the Hilbert step changes nothing.
-- `Fixed_sep` matched `HPOD_sep` at B = Δf. At B = 4Δf its IF spread was 2.3× larger.
-- `Fixed_comb` projects onto tone A's mode, so it weakens tone B. The coexistence ripple was 0.18–0.22 against 0.44–0.56 for `HPOD_comb`, and the ratio to the exclusive baseline 9–24 against 64–118. Switch resolution was similar.
-- `Coef_pk` resolved only dwells ≥ 3 T_b (10–90% width 1.3–1.5 T_b; window nfft = 5 T_b). Its IF spread was close to `HPOD_sep`'s at B = Δf (1.1 against 1.3×10⁻⁴ f₀), but its bias was 5×10⁻⁴ f₀, about ten times HPOD's, not yet explained.
-
-The full sweep (both spacings) has not been run.
+**Full sweep (2026-10-23, default parameters, 412 s on the lab PC; `Results_T8/`):**
+- **The Hilbert step changes nothing on a one-sided reconstruction.** `POD1s_*` and `HPOD_*` gave identical switch results in all 450 entries per pair. IF spread and ripple agreed within 3×10⁻⁴ relative, and IF bias within 2×10⁻⁴ of the IF spread.
+- **A fixed mode loses the weaker tone when shapes differ.** `Fixed_comb` projects onto tone A's mode.
+  - At δ = 0.10 its coexistence ripple was 0.14–0.23 against 0.31–0.53 for `HPOD_comb`, and its ratio to the exclusive baseline 2.8–6.3× lower (L = 8λ, every SNR and B).
+  - The ripple fell from 0.35 to 0.17 to 0.09 at L = 4, 8 and 16λ, while HPOD's stayed at 0.36–0.44. The two tones' shapes drift apart by about 2πδ·L_eff/λ.
+  - Its IF spread was 1.4–1.9× HPOD's.
+  - At δ = 0.005 (drift ≈ 0.3 rad) the two agreed in every metric.
+  - Exclusive-switch resolution was about the same for both.
+- **`Fixed_sep` equals `HPOD_sep`** at δ = 0.005, or at B ≤ Δf. At δ = 0.10 and B = 8Δf its IF spread was 1.4–1.6× larger.
+- **`Coef_pk` is limited by its window.**
+  - It resolved switches only at dwells ≥ 3 T_b (width 1.1–1.55 T_b), against n_fft ≈ 5.1 T_b (δ = 0.10) and 4.1 T_b (δ = 0.005). It detected coexistence fully, with 0.4–4% false alarms.
+  - Its IF spread (2.4×10⁻⁴ and 5.4×10⁻⁶ f₀) and bias (about −4.5×10⁻⁴ and −6.5×10⁻⁶ f₀) did not change with SNR. Its kernel plus fit window, 9 T_b and 7 T_b, is longer than the longest scored segment (6 T_b), so every scored sample includes a neighbouring segment. That is the likely cause, not tested separately.
+- **Still open:** the scenario has no frequency drift, so continuity across bins is tested only through the two-tone band. An FM field scenario would test it directly.
 
 ## Limits
 
