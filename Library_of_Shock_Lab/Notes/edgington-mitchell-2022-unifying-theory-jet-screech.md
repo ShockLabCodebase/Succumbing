@@ -83,7 +83,7 @@ The paper proposes one mechanism for every screech stage. The streamwise Fourier
 - **Facilities:**
   - **Tsinghua data** (Li et al. 2021): converging nozzle, D = 10 mm, contraction from 25 to 10 mm, lip thickness 0.5D (p. 6).
   - **Monash data** (previously unpublished): Shock Lab group facility (the paper names Monash University but not the lab space). Converging nozzle, D = 10 mm; a single-jet version of the Bell et al. (2018) twin-jet geometry. Lip thickness 0.15D, short, smaller contraction. A large solid plate sits about 2D upstream of the exit, which changes entrainment and strongly reflects upstream acoustic waves (p. 6). This plate is blamed for the many extra peaks and the complex behaviour for NPR ≥ 2.9 (p. 6–7, 14–16).
-  - **Elliptical jet:** AR = 2, from [Edgington-Mitchell, Honnery & Soria (2015)](edgington-mitchell-2015-staging-screeching-elliptical-jets.md); the analysis uses the complex POD mode pair (Fig. 14, p. 19). Five stages in 2 ≤ NPR ≤ 5 (p. 18).
+  - **Elliptical jet:** AR = 2, from [Edgington-Mitchell, Honnery & Soria (2015)](edgington-mitchell-2015-staging-screeching-elliptical-jets.md); the analysis uses the complex POD mode pair (Fig. 14, p. 19). Five stages in 2 ≤ NPR ≤ 5 (p. 18). The source study's measured range is NPR 1.95–4.3: five modes, I varicose up to NPR 2.05, II–IV flapping, V helical from NPR 3.95 ([Edgington-Mitchell et al. 2015, staging](edgington-mitchell-2015-staging-screeching-elliptical-jets.md), Fig. 2).
   - **Rectangular jets:** AR = 2 and 4, mean and instantaneous colour schlieren (Fig. 15). The source of these data is not stated.
 - **Conditions:** unheated jets, NPR = p₀/p∞ = 2.1–4 (p. 6); the Monash sweep plots start near 2.0 (Fig. 1, 4, 8).
 

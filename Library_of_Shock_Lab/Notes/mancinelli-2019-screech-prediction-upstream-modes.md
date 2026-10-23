@@ -219,7 +219,7 @@ This project centres on resonance and feedback in jets, using acoustics, schlier
     - The model is isothermal (T = 1) with no shear-layer thickness and no shocks in the base flow.
     - s, φ, j and p are chosen by best fit (Table 1).
     - The gain criterion is dropped, so it says nothing about amplitude or about which stage wins where predictions overlap.
-  - For impinging jets, the same machinery applies with the plate as the downstream end condition (Tam & Ahuja 1990 is cited for impinging resonance, p. 2).
+  - For impinging jets, the same machinery applies with the plate as the downstream end condition ([Tam & Ahuja 1990](tam-1990-theoretical-model-discrete-tone-impinging-jets.md) is cited for impinging resonance, p. 2).
 - **How it fits with the other screech notes:**
   - [edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md](edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md) gives the experimental evidence for guided-mode closure (same co-authors Jaunet, Jordan and Towne). This paper turns it into a prediction (p. 1–2).
   - [edgington-mitchell-2020-waves-in-screeching-jets.md](edgington-mitchell-2020-waves-in-screeching-jets.md) shows the upstream guided mode arises as the difference wavenumber k_kh − k_s of the KH–shock interaction. It reproduces f_s to about 1% with a global analysis that **includes** the shocks. That is a more physical treatment of the downstream end condition than the fixed-phase reflection at s = 4 used here.

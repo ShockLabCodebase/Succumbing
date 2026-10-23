@@ -96,7 +96,7 @@ This paper gives the baseline (unforced) characterisation of a new OSU facility:
   - **Mj = 1.70** (p. 16–17; Fig. 14c):
     - SWs are well defined, and the furthest fluctuation maximum is at x/De = 8.2.
     - The crest (x/De = 3.4) and trough (x/De = 4.7) differ by 9.7%.
-    - Crest spacing is about 2De, against about 1De at Mj = 1.35. It grows with shock-cell length, as Knast et al. (2018) found for twin round jets, but unlike Panda's (1999) single converging round jet (p. 17).
+    - Crest spacing is about 2De, against about 1De at Mj = 1.35. The authors say the growth is comparable to the growth in shock-cell length, in line with Knast et al. (2018) for twin round jets, and that Panda's (1999) single converging round jet was "not similar" (p. 17). That contrast holds only in the sense that Panda's crest spacing equals the standing wavelength L_sw, not the shock spacing L: his crest spacing also grows with L, from 0.67D to 1.02D as L grows from 0.77D to 1.28D ([panda-1999](panda-1999-experimental-investigation-screech-noise-generation.md), Table 1, p. 81). The paper does not say which it meant.
 - **Spreading and coupling claim** (p. 1, 16–17): the abstract states that vertical-plane spreading is higher when the jets are coupled out of phase, citing Shih et al. (1992) and Alkislar et al. (2003). The supporting comparison is Mj = 1.35 against Mj = 1.50 (see the flags under Figures).
 
 ## Setup / method

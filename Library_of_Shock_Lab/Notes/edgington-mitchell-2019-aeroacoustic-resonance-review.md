@@ -398,11 +398,10 @@ Kuo & Dowling's entropy-wave loop (p. 143) may matter more in hot, combusting pl
 4. Page 172 cites "Henderson [154]" for the 1.3D source, but ref. 154 is Henderson et al. 2005 on fluidic chevrons. Ref. 99 (Henderson, Bridges & Wernet 2005) is evidently meant.
 5. The Fig. 32 caption cites ref. 228 (Berland et al. 2007, planar LES). The figure is the group's PIV-based ray tracing, so ref. 229 (Edgington-Mitchell et al. 2018 AIAA) is likely meant.
 6. Refs. 179 ("Jet–flap interaction tones") and 235 ("Jet-edge interaction tones") are the same JFM 853, 333–358 paper.
-7. Ref. 5 lists Edgington-Mitchell, Honnery & Soria for the 2015 IJA staging paper; the library's `Papers_to_get.md` adds Oberleithner. That paper is now [indexed](edgington-mitchell-2015-staging-screeching-elliptical-jets.md).
-8. The Fig. 4 staging points (M_j 1.06, 1.4, 1.45) come from the text (p. 122). The map seems to show more tone lines than three jumps imply.
-9. Figs 23–24 growth-rate readings (±0.03), and the unstated Mach number of Fig. 24.
-10. Fig. 14 is NPR 3 (not 3.6) and Fig. 4 is AR 2 (not 2.5): the text layer runs reference superscripts into the numbers.
-11. Ref. 221 (Inoue & Hattori 1999) is garbled in print ("Sound generation by shock.org/10.2514/3.12926"); its title should read "Sound generation by shock–vortex interactions" (my recollection, unverified).
+7. The Fig. 4 staging points (M_j 1.06, 1.4, 1.45) come from the text (p. 122). The map seems to show more tone lines than three jumps imply.
+8. Figs 23–24 growth-rate readings (±0.03), and the unstated Mach number of Fig. 24.
+9. Fig. 14 is NPR 3 (not 3.6) and Fig. 4 is AR 2 (not 2.5): the text layer runs reference superscripts into the numbers.
+10. Ref. 221 (Inoue & Hattori 1999) is garbled in print ("Sound generation by shock.org/10.2514/3.12926"); its title should read "Sound generation by shock–vortex interactions" (my recollection, unverified).
 
 **Candidates for `/add-paper`** (cited, not in the library).
 - *Now indexed:* Edgington-Mitchell, Honnery & Soria 2015 (Int. J. Aeroacoust. 14, elliptical staging, now [indexed](edgington-mitchell-2015-staging-screeching-elliptical-jets.md)); Raman 1999 (JSV 225, half-century review, now [indexed](raman-1999-supersonic-jet-screech-half-century-powell-present.md)); Shen & Tam 2002 (AIAA J. 40, now [indexed](shen-2002-three-dimensional-numerical-simulation-jet-screech.md)).
