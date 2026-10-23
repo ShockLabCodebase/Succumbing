@@ -20,7 +20,7 @@ phenomena: ["mixing-noise", "Mach-wave-radiation", "BBSAN", "screech", "shock-ce
 params: {}
 topics: ["jet-noise-mechanisms", "screech", "shock-cell-models", "screech-staging-and-mode-switching", "screech-frequency-and-global-modes"]
 related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "raman-1998-supersonic-jet-screech-review", "papamoschou-1988-compressible-turbulent-shear-layer", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
-cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets"]
+cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "norum-1983-screech-suppression-supersonic-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets"]
 summary: "Review: mixing noise as Mach waves from instability waves (45–60°), BBSAN from instability wave × shock-cell modes, screech via external feedback and an St formula; amplitude unpredictable"
 ---
 # Supersonic jet noise
@@ -46,10 +46,10 @@ A review of the three components of noise from imperfectly expanded supersonic j
   - Peak frequency rises with inlet angle χ; spectra have secondary and tertiary peaks (visible at χ = 90°); half-width grows with χ.
   - At fixed M_j the peak level is independent of jet temperature, but the peak frequency rises with temperature.
 - **Screech characteristics** (p. 21–23, 36; Fig. 4):
-  - The fundamental radiates mainly upstream; the first harmonic peaks at 90° to the jet (Norum 1983).
+  - The fundamental radiates mainly upstream; the first harmonic peaks at 90° to the jet ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md)).
   - Jet motion is toroidal or helical/flapping (flapping = equal left and right helical modes); the flapping plane can precess slowly.
   - Seiner et al. (1987), Mach 1.41 C-D nozzle: four modes (two toroidal, two helical/flapping); more than one non-harmonic tone at some M_j; toroidal at low M_j switching to flapping/helical as M_j rises.
-  - Intensity falls with jet temperature, especially below M_j ≈ 1.5 (Massey et al. 1994). A thick lip raised screech by 10 dB without changing directivity (Norum 1983).
+  - Intensity falls with jet temperature, especially below M_j ≈ 1.5 (Massey et al. 1994). A thick lip raised screech by 10 dB without changing directivity ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md)).
   - Screech is very sensitive to surroundings: a flapping plane rotated almost 90° between nominally identical tests a month apart (Seiner et al. 1986; p. 36).
 - **Mixing-noise theory vs data** (p. 29–30, Fig. 6):
   - Tam & Chen (1993) directivities at fixed St agree with Seiner et al. (1992) Mach 2, T_r = 1114 K data generally within 2.5 dB, with one adjustable constant. The 500 K case is equally good except at very low St.
@@ -174,4 +174,4 @@ This is the standard reference for the "pre-guided-mode" picture of supersonic j
   - Tam & Tanna 1982 (BBSAN peak-frequency relation); Tam, Seiner & Yu 1986 (BBSAN–screech link, eq. 12); Tam 1987 (BBSAN stochastic theory); Tam 1988 (rectangular-jet shock cells and screech).
   - Tam & Burton 1984 (instability-wave sound radiation by matched asymptotics); Tam & Chen 1979, 1993; Tam, Chen & Seiner 1992.
   - Tam, Jackson & Seiner 1985 (multiple-scales shock cells); Tam, Ahuja & Jones 1994 (screech from free and ducted jets).
-  - Powell 1953a,b; Harper-Bourne & Fisher 1974; Seiner et al. 1992 (temperature effect); Rosfjord & Toms 1975; Massey et al. 1994 (heated screech); Norum 1983 (screech suppression).
+  - Powell 1953a,b; Harper-Bourne & Fisher 1974; Seiner et al. 1992 (temperature effect); Rosfjord & Toms 1975; Massey et al. 1994 (heated screech); Norum 1983 (screech suppression, now [indexed](norum-1983-screech-suppression-supersonic-jets.md)).

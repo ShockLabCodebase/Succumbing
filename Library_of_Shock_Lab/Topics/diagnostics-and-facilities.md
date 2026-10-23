@@ -195,6 +195,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - **Rocket noise.** Mayer-style coherence and N(f) checks suit model-scale tests. The PIV-calibrated source coefficients are for cold jets only (Tan et al. 2019a, p. 12).
 
 ## Papers
+- [Krothapalli et al. 1999](../Notes/krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md): M 1.5 C-D jet (NPR 3.7) on a ground plane under a lift plate: PIV u_c 0.52–0.56 rises with h/d; staged tones fit Powell's loop only with p = −0.4; OASPL +8 dB (synthesis pending).
 - [Henderson et al. 2002](../Notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): PIV binned by microphone phase; olive-oil and smoke seeding; NASA Glenn dome (not tagged).
 - [Alkislar et al. 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): microphone-triggered stereo PIV with half-cycle mirroring and about 35 pairs per phase; fine jet seeding checked against probes.
 - [Oberleithner et al. 2011](../Notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): 3D helix from 800 non-TR stereo-PIV snapshots via a POD pair (not tagged).

@@ -20,7 +20,7 @@ phenomena: ["screech", "staging", "mode-switching", "helical", "BBSAN", "recepti
 params: {"M_j": "1.0–2.0", "D": "25.4 mm", "t/D": "0.015–0.625", "TR": "1 (unheated)"}
 topics: ["screech", "screech-staging-and-mode-switching", "screech-frequency-and-global-modes"]
 related: ["raman-1998-supersonic-jet-screech-review", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "nogueira-2021-absolute-instability-shock-containing-jets", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2022-unifying-theory-jet-screech", "weightman-2019-sound-production-impinging-supersonic-jets", "samimy-1998-rectangular-jet-trailing-edge-control"]
-cites: ["tam-1986-bbsan-screech-relationship"]
+cites: ["norum-1983-screech-suppression-supersonic-jets", "tam-1986-bbsan-screech-relationship"]
 summary: "Lip thickness t/D 0.015–0.625 on an underexpanded sonic jet: thick lips widen the helical C range, revive the B mode above M_j 1.7 and blur the B→C switch; lip-face tones up to 154 dB"
 ---
 # The effects of nozzle exit lip thickness on plume resonance

@@ -20,7 +20,7 @@ phenomena: ["impingement-tones", "Mach-disk"]
 params: {"NPR": "4.03", "h/D": "1–4 (detail at 2.02 and 3.00)", "D": "25.4 mm", "lip": "12.7 mm"}
 topics: ["impinging-jets-and-edge-tones"]
 related: ["weightman-2019-sound-production-impinging-supersonic-jets", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "jordan-2018-jet-flap-interaction-tones", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
-cites: ["henderson-1993-tones-choked-jet-impinging-flat-plates"]
+cites: ["henderson-1993-tones-choked-jet-impinging-flat-plates", "krothapalli-1999-flow-field-noise-supersonic-impinging-jet"]
 summary: "NPR 4.03 jet on a large plate (SHJAR): phase-averaged PIV and shadowgraph of L1 tones; oscillating Mach disk moves recirculation zones; wall-jet source at 2.6R; Powell N+p ≈ 4.4"
 ---
 # An experimental investigation of the flow structure of supersonic impinging jets
@@ -60,7 +60,7 @@ The paper looks for the flow mechanism behind the large-plate tones of a moderat
   - At 2.6R the unsteady wall-jet velocity points outward for t/T < 0.502 and inward after, which is the oscillation seen in Fig. 8.
   - Henderson's earlier unsteady plate-pressure data show a secondary pressure maximum near 1.6R at h/d = 1.74, which the authors tie to this collapse (p. 5).
 - **Feedback loop as proposed** (p. 4–5): small Mach-disk oscillations send pressure waves (likely the acoustic and entropy waves of Kuo & Dowling 1996) through the region between the standoff shock and the plate. These move the recirculation zones; the moving zones and the distorted sonic line drive a wave in the outer supersonic flow that moves, then collapses, the annular shock. The wall jet oscillates near 2.6R and radiates; the sound travels upstream to the nozzle, and the disturbances it seeds there convect down and oscillate the Mach disk.
-- **Powell criterion** (p. 5–6): with measured inputs at h/d = 2.02, N = 4 and p ≈ 0.4 (N + p ≈ 4.4). Krothapalli et al. (1999) found p = −0.4 for an ideally expanded impinging jet, but without a standoff shock that loop is presumably different (p. 6).
+- **Powell criterion** (p. 5–6): with measured inputs at h/d = 2.02, N = 4 and p ≈ 0.4 (N + p ≈ 4.4). [Krothapalli et al. (1999)](krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md) found p = −0.4 for an ideally expanded impinging jet, but without a standoff shock that loop is presumably different (p. 6).
 - **Limits stated by the authors:** particle lag will bias velocities behind the shocks, but should not hide the main features (p. 4). Jet disturbances upstream of the Mach disk could not be tracked at this small spacing, so the first leg uses a convection Mach number of 0.7–0.75 taken from Powell (1988) and Henderson & Powell (1993) (p. 5).
 
 ## Setup / method
@@ -164,5 +164,5 @@ Impinging supersonic jets are one of the lab's core resonance problems (CLAUDE.m
 - **Facility:** NASA Glenn SHJAR/AAPL; not Shock Lab group work.
 - **Follow-up candidates for `/add-paper`:**
   - Henderson, Bridges & Wernet 2005, JFM 542 (listed in `Library_of_Shock_Lab/Misc/Papers_to_get.md`), the full version.
-  - Henderson & Powell 1993, JSV 168 (#37) and Krothapalli et al. 1999, JFM 392 (#38).
+  - Henderson & Powell 1993, JSV 168 (#37) and Krothapalli et al. 1999, JFM 392 (#38; now [indexed](krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md)).
   - Powell 1988, JASA 83; Kuo & Dowling 1996, JFM 315; Henderson 2001, AIAA 2001-2145.

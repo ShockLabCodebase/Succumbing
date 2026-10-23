@@ -110,6 +110,7 @@ The statistical route of [Tan 2019b](../Notes/tan-2019-equivalent-bbsan-source-r
 - [Norum & Seiner 1982](../Notes/norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets.md): benchmark static-pressure surveys of shock trains.
 - [Tam 1986](../Notes/tam-1986-bbsan-screech-relationship.md): BBSAN peaks at shock Fourier wavenumbers; 0.8 spacing factor.
 - [Tam 1988](../Notes/tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets.md): vortex-sheet shock cells for any cross-section.
+- [Seiner et al. 1988](../Notes/seiner-1988-dynamic-pressure-loads-twin-supersonic-plume-resonance.md): 1/40-scale F-15 twin choked jets, s/D 1.9: mirror-coupled B-mode flapping gives 162 dB between the nozzles, 2–4× a single jet; a tab on one nozzle decouples the pair (synthesis pending).
 - [Tam 1995](../Notes/tam-1995-supersonic-jet-noise.md): waveguide-mode shock cells; multiple scales; one BBSAN peak per mode.
 - [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
 - [Ray 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): multiple-scales shock modes × PSE wave in linearised Euler.

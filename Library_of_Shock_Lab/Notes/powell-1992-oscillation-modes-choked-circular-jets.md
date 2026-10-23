@@ -93,7 +93,7 @@ The paper revisits Powell's 1953 survey of screech from a convergent round nozzl
   - Read from Fig. 21: A1 ≈ 32° and 47°, A2 ≈ 32°.
   - s is taken from the second cell, because the source region is too disturbed to measure (Umeda et al. 1987b). β ignores the helical nature of C (p. 2834–2835).
 - **Lip thickness and initial conditions** (p. 2835):
-  - The larger the lip, the greater the loop "gain" and the more vigorous the oscillations (Powell 1953d; Norum 1983).
+  - The larger the lip, the greater the loop "gain" and the more vigorous the oscillations (Powell 1953d; [Norum 1983](norum-1983-screech-suppression-supersonic-jets.md)).
   - Merle's 2.5D lip gave extensive secondary oscillations that were not found here.
   - Boundary-layer state, exit velocity profile, swirl, turbulence level, upstream acoustic waves and the acoustic environment, including reflections, are all candidate influences. So "different experimental setups will display different detailed behavior".
 
@@ -242,4 +242,4 @@ This is the primary source for the round-jet staging map that every later stagin
 7. Spectral parameters (sampling, block length, averages, frequency resolution) are not stated; neither is the averaging window of Fig. 16.
 8. The hole-tone geometry is printed as "nozzle diameter/hole diameter 2.20" (Fig. 8 caption).
 
-**Candidates for `/add-paper`:** Merle 1956 (C. R. Acad. Sci. 243, staging discovery); Davies & Oldfield 1962 (Acustica 12, A/B/C identification by Lissajous figures); Powell 1953a, b, c, d (rectangular screech, edge tones, choked-jet mechanism, noise reduction); Powell, Umeda & Ishii 1990 (AIAA 90-3980); Westley & Woolley 1975 (spinning mode near field); Gutmark, Schadow & Bicker 1989 (Phys. Fluids A 1, mode switching); Umeda, Maeda & Ishii 1987, 1988 (cylinder impingement tones; hole tone); Yu & Seiner 1983; Norum 1983 (screech suppression); Umeda & Ishii 2001 (JASA 110, source location).
+**Candidates for `/add-paper`:** Merle 1956 (C. R. Acad. Sci. 243, staging discovery); Davies & Oldfield 1962 (Acustica 12, A/B/C identification by Lissajous figures); Powell 1953a, b, c, d (rectangular screech, edge tones, choked-jet mechanism, noise reduction); Powell, Umeda & Ishii 1990 (AIAA 90-3980); Westley & Woolley 1975 (spinning mode near field); Gutmark, Schadow & Bicker 1989 (Phys. Fluids A 1, mode switching); Umeda, Maeda & Ishii 1987, 1988 (cylinder impingement tones; hole tone); Yu & Seiner 1983; Norum 1983 (screech suppression, now [indexed](norum-1983-screech-suppression-supersonic-jets.md)); Umeda & Ishii 2001 (JASA 110, source location).

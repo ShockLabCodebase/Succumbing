@@ -20,7 +20,7 @@ phenomena: ["impingement-tones", "helical", "mode-switching", "multimodal", "rec
 params: {"NPR": "3.4", "M_j": "1.42 (isentropic 1.45)", "z/D": "5.0", "t/D": "0.1, 0.33, 7.0 (15D cap), plus five foam covers", "D": "15 mm (D_j 16 mm)", "U_j": "413 m/s", "U_E": "310 m/s", "Re": "8.5×10⁵", "St": "≈0.25 helical, ≈0.39 toroidal (f D_j/U_j)", "TR": "1 (T₀ 287 K)"}
 topics: ["impinging-jets-and-edge-tones", "screech-staging-and-mode-switching"]
 related: ["weightman-2019-sound-production-impinging-supersonic-jets", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "henderson-1993-tones-choked-jet-impinging-flat-plates", "bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "edgington-mitchell-2014-coherent-structure-helical-screech-mode", "henderson-2002-flow-structure-supersonic-impinging-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "raman-1998-supersonic-jet-screech-review", "powell-1992-oscillation-modes-choked-circular-jets", "jordan-2018-jet-flap-interaction-tones", "edgington-mitchell-2022-unifying-theory-jet-screech", "oberleithner-2011-swirling-jet-vortex-breakdown-stability"]
-cites: ["bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets", "edgington-mitchell-2014-coherent-structure-helical-screech-mode", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "henderson-1993-tones-choked-jet-impinging-flat-plates", "henderson-2002-flow-structure-supersonic-impinging-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections", "mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "mitchell-2013-near-field-structure-underexpanded-elliptic-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "powell-1992-oscillation-modes-choked-circular-jets", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "tan-2017-broadband-velocity-fluctuations-screeching-jets", "weightman-2017-phase-lag-supersonic-jet-impingement"]
+cites: ["bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets", "edgington-mitchell-2014-coherent-structure-helical-screech-mode", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "henderson-1993-tones-choked-jet-impinging-flat-plates", "henderson-2002-flow-structure-supersonic-impinging-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "krothapalli-1999-flow-field-noise-supersonic-impinging-jet", "mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections", "mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "mitchell-2013-near-field-structure-underexpanded-elliptic-jets", "norum-1983-screech-suppression-supersonic-jets", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "ponton-1992-nozzle-exit-lip-thickness-plume-resonance", "powell-1992-oscillation-modes-choked-circular-jets", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "tam-1992-impingement-tones-large-aspect-ratio-rectangular-jets", "tan-2017-broadband-velocity-fluctuations-screeching-jets", "weightman-2017-phase-lag-supersonic-jet-impingement"]
 summary: "NPR 3.4, z/D 5 impinging jet: thin lip helical (St 0.255), thick lip toroidal (0.385) + helical; foam shows thin-lip loop closes only via outer nozzle base"
 ---
 # Nozzle external geometry as a boundary condition for the azimuthal mode selection in an impinging underexpanded jet
@@ -42,7 +42,7 @@ An NPR 3.4 jet from a 15 mm converging nozzle impinges on a flat plate 5D away. 
   - Thin lip: spots of high **transverse** variance where the shocks cross the centreline. This transverse shock oscillation is what a helical or flapping mode would cause (p. 429).
 - **Tones** (Fig. 5, p. 430; St = f D_j/U_j, D_j = 0.016 m, U_j = 413 m/s):
   - Thin lip: one tone at St 0.255 with harmonics.
-  - Infinite lip: several strong tones. The highest is 0.385; 0.241 is taken as the second true impingement tone because it lies near the thin-lip tone. The others, including 0.144, are linear combinations of the two, which the authors link to nonlinear interaction of two instabilities (Tam & Norum 1992; Henderson & Powell 1993; Thurow et al. 2002) (p. 430, 433).
+  - Infinite lip: several strong tones. The highest is 0.385; 0.241 is taken as the second true impingement tone because it lies near the thin-lip tone. The others, including 0.144, are linear combinations of the two, which the authors link to nonlinear interaction of two instabilities ([Tam & Norum 1992](tam-1992-impingement-tones-large-aspect-ratio-rectangular-jets.md); Henderson & Powell 1993; Thurow et al. 2002) (p. 430, 433).
   - Two inharmonic tones suggest two separate feedback loops in one flow (p. 430).
 - **POD** (over 10,000 snapshots per case, u′ and v′ stacked; Figs 6–7, p. 430–433):
   - *Thin lip:* modes 1–2 hold 17.7% and 16.1%. Mode 3 holds 3.9% and the rest under 2% each. Their phase portrait is an annulus, so they are a pair. Modes 3–4 give a cardioid, so they are not a pair (p. 430–431).
@@ -51,7 +51,7 @@ An NPR 3.4 jet from a 15 mm converging nozzle impinges on a flat plate 5D away. 
   - The authors relate this m = 0 plus helical superposition to the LES of an underexpanded impinging jet by Gojon & Bogey (2017) (p. 432).
 - **Convective velocity from POD wavelength** (p. 432–433):
   - Measured as the peak-to-peak spacing of the transverse POD component along the axis: λ = 2.0D (thin lip) and 1.94D (infinite-lip helical).
-  - With the tones 0.255 and 0.241 this gives U_c = 0.48 U_j and 0.44 U_j, as in Krothapalli et al. (1999) and Gojon et al. (2016).
+  - With the tones 0.255 and 0.241 this gives U_c = 0.48 U_j and 0.44 U_j, as in [Krothapalli et al. (1999)](krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md) and Gojon et al. (2016).
   - No structure in the data matches St 0.144, which supports 0.241 as the real helical tone (p. 432–433).
   - Check (mine): U_c/U_j = St λ/D_j. 0.255 × 2.0 × 15/16 = 0.478, and 0.241 × 1.94 × 15/16 = 0.438.
 - **Contrast with free jets** (p. 433): in Ponton & Seiner (1992) a thicker lip moved a free jet from B (flapping) to C (helical), which differs from this toroidal switch. Vinoth et al. (2011) did see toroidal and helical modes together in a screeching jet with upstream reflectors.
@@ -63,7 +63,7 @@ An NPR 3.4 jet from a 15 mm converging nozzle impinges on a flat plate 5D away. 
   - POD: an m = 0 pair (14.9%, 13.5%) and a weak helical pair (3.3%, 2.8%). The authors suggest the helical pair's lower energy may go with its weaker tone.
   - Its variance looks like the infinite lip's, at lower levels. Its entrainment streamlines look like the thin lip's (Fig. 15).
   - **So entrainment angle has "no measureable effect"** on which mode grows (p. 438). The caveat is that the relevant entrainment may lie closer to the exit than the PIV resolves (p. 439).
-- **Infinite foam over the thin lip** (p. 434–439): this cover mimics the infinite lip's entrainment without its reflecting surface, and leaves the top of the lip uncovered (unlike Norum's 1983 screech suppression).
+- **Infinite foam over the thin lip** (p. 434–439): this cover mimics the infinite lip's entrainment without its reflecting surface, and leaves the top of the lip uncovered (unlike [Norum's 1983](norum-1983-screech-suppression-supersonic-jets.md) screech suppression).
   - The St 0.255 tone almost disappears, and overall SPL falls by about 3–7 dB.
   - Broadband-to-peak falls from 25 to 4 dB, "more than an order of magnitude" in pressure fluctuation.
   - POD shows no dominant modes (4.4, 3.8, 2.8, 2.5%) and no clear pairs. Shear-layer growth and fluctuations are lower than in every other case. The authors conclude the feedback is "significantly weakened".
@@ -344,10 +344,10 @@ This is the user's own first-author JFM paper, and the published source for the 
 - Beneddine, Mettot & Sipp 2015 (global stability, lip effect).
 - Raman 1997 (JFM 336, lip thickness and cessation of screech).
 - Vinoth, Throvagunta & Rathakrishnan 2011 (upstream reflector, simultaneous modes).
-- Norum 1983 (screech suppression).
+- Norum 1983 (screech suppression, now [indexed](norum-1983-screech-suppression-supersonic-jets.md)).
 - Nagel, Denham & Papathanasiou 1983 and Raman, Panda & Zaman 1997 (reflector cancellation).
 - Kweon et al. 2006 (exit reflector).
-- Krothapalli et al. 1999 (JFM 392).
+- Krothapalli et al. 1999 (JFM 392, now [indexed](krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md)).
 - Henderson, Bridges & Wernet 2005 (JFM 542).
 - Mitchell, Honnery & Soria 2012 (J. Vis.).
 - Kuo & Dowling 1996.

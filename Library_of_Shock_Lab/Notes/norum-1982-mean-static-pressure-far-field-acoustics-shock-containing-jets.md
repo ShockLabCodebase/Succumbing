@@ -177,7 +177,7 @@ This project covers resonance and feedback in Shock Lab group experiments, plus 
   - The axial p/p_a profiles give shock-cell spacing and decay for models of the shock-cell wavenumber k_s. This is the quantity behind the KH–shock interaction in [Nogueira et al. 2021 (absolute instability)](nogueira-2021-absolute-instability-shock-containing-jets.md) and [wavepacket modulation](nogueira-2021-wavepacket-modulation-shock-containing-jets.md).
   - They can also be compared with Abel-inverted BOS or schlieren density from Shock Lab group rigs, e.g. [Tan et al. 2015](tan-2015-bos-density-axisymmetric-jets.md).
   - The surveys are digitisable only from the plots; no tabulated data are given.
-- **Tabs as a control tool:** the 0.125d × 0.063d tab removes tones without much change to the maximum OASPL. This is the baseline for tab and trailing-edge screech control, cf. [Samimy et al. 1998](samimy-1998-rectangular-jet-trailing-edge-control.md) and Norum (1983, AIAA J, not yet indexed).
+- **Tabs as a control tool:** the 0.125d × 0.063d tab removes tones without much change to the maximum OASPL. This is the baseline for tab and trailing-edge screech control, cf. [Samimy et al. 1998](samimy-1998-rectangular-jet-trailing-edge-control.md) and [Norum (1983, AIAA J)](norum-1983-screech-suppression-supersonic-jets.md).
 - **Data dependence of the methods:**
   - Everything here is time-averaged statistics: mean pressure, OASPL, 1/3-octave and 40 Hz PSDs. These are step 1 of the CLAUDE.md workflow.
   - The microphone signals were time-resolved (FM tape, flat to above 80 kHz), but only spectra are reported. There is nothing on intermittency, mode switching or phase.

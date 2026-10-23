@@ -90,7 +90,9 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely (Edging
 
 ## Papers
 
+- [Norum 1983](../Notes/norum-1983-screech-suppression-supersonic-jets.md): Tube jets, β 0–1.25: A1/A2/B/C stages swap with reflector position; Powell monopole array gives harmonic lobes; thin lip and slots cut screech by up to ~29 dB, by mode (synthesis pending).
 - [Tam 1986](../Notes/tam-1986-bbsan-screech-relationship.md): weakest-link frequency formula from BBSAN.
+- [Seiner et al. 1988](../Notes/seiner-1988-dynamic-pressure-loads-twin-supersonic-plume-resonance.md): 1/40-scale F-15 twin choked jets, s/D 1.9: mirror-coupled B-mode flapping gives 162 dB between the nozzles, 2–4× a single jet; a tab on one nozzle decouples the pair (synthesis pending).
 - [Tam & Hu 1989](../Notes/tam-1989-three-families-instability-waves-high-speed-jets.md): origin of the G-JM; closed-form band edges; upstream waves neutral with thickness.
 - [Huerre & Monkewitz 1990](../Notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): local pocket necessary, not sufficient; ranked self-excitation tests; box resonance.
 - [Ponton 1992](../Notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): small lip-induced frequency shifts.

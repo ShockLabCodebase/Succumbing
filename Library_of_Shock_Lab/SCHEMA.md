@@ -131,6 +131,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `hot-wire`
 - `laser-scattering`: line-of-sight laser light scattering by density fluctuations or shocks, collected on a photodetector
 - `pressure-probe`: static or total pressure surveys in the flow
+- `surface-pressure`: static pressure taps or unsteady transducers on a surface (impingement plates, lift plates, deflectors, airframe panels)
 - `microphones-near`: near-field microphones / pressure sensors
 - `microphones-far`: far-field microphones
 - `mic-array`: phased array or azimuthal ring
@@ -239,6 +240,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `coupling`: twin-jet or multi-jet coupling
 - `flapping`, `helical`, `axis-switching`
 - `toroidal`: axisymmetric (m = 0, varicose) oscillation mode of a round or annular jet
+- `varicose`: symmetric oscillation of a planar, rectangular or elliptical jet (the non-round counterpart of `toroidal`)
 - `guided-jet-mode`: upstream guided/neutral acoustic waves, trapped duct modes
 - `KH-wavepackets`, `streaks`, `Orr`
 - `absolute-instability`

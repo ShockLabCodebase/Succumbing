@@ -20,7 +20,7 @@ phenomena: ["impingement-tones", "staging", "multimodal", "shock-cells", "cohere
 params: {"NPR": "3.4", "M_d": "1.94 (area ratio 1.60, design NPR 7.07)", "M_j": "≈1.45 (isentropic, my calculation; not stated)", "z/D": "1.0–8.0 in 0.1 steps (acoustics, schlieren survey); 3.2–5.0 (shock tracking)", "D": "15.8 mm (equivalent throat diameter of the annular throat)", "D_j": "16.88 mm", "U_j": "492.3 m/s as printed (= M_j a_0; isentropic ≈ 413 m/s, my check)", "TR": "≈1 (plenum ≈ 288 K)", "lip": "1 mm (≈0.06D)", "plate": "100 × 115 mm (≈6.3D × 7.3D)", "plug": "truncated conical, 15° half-angle, 40% truncation", "frame rate": "250 and 500 kfps (Shimadzu HPV-1, 102 frames per burst)"}
 topics: ["impinging-jets-and-edge-tones", "schlieren-and-density-imaging"]
 related: ["mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "henderson-1993-tones-choked-jet-impinging-flat-plates", "henderson-2002-flow-structure-supersonic-impinging-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "weightman-2017-phase-lag-supersonic-jet-impingement", "weightman-2019-sound-production-impinging-supersonic-jets", "weightman-2019-nozzle-external-geometry-azimuthal-mode-impinging-jet", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "edgington-mitchell-2014-coherent-structure-helical-screech-mode", "bogey-2017-feedback-loop-upwind-waves-ideally-expanded-impinging-jets", "tam-1995-supersonic-jet-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
-cites: ["edgington-mitchell-2014-coherent-structure-helical-screech-mode", "henderson-1993-tones-choked-jet-impinging-flat-plates", "henderson-2002-flow-structure-supersonic-impinging-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections", "mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "mitchell-2013-near-field-structure-underexpanded-elliptic-jets", "tam-1995-supersonic-jet-noise"]
+cites: ["edgington-mitchell-2014-coherent-structure-helical-screech-mode", "henderson-1993-tones-choked-jet-impinging-flat-plates", "henderson-2002-flow-structure-supersonic-impinging-jets", "ho-1981-dynamics-impinging-jet-feedback-phenomenon", "krothapalli-1999-flow-field-noise-supersonic-impinging-jet", "mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections", "mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "mitchell-2013-near-field-structure-underexpanded-elliptic-jets", "norum-1983-screech-suppression-supersonic-jets", "tam-1995-supersonic-jet-noise"]
 summary: "Overexpanded truncated-plug jet (NPR 3.4) on a plate: no tones below z/D 3.2; standoff shock tracked at 500 kfps oscillates at the tone, s/D follows free-jet cells"
 ---
 # Impingement Tones and Associated Shock Instabilities in Supersonic Plug Nozzle Flows
@@ -43,7 +43,7 @@ The paper studies a cold jet from a truncated conical plug nozzle (annular throa
 - **Tones and staging** (p. 4–5, Figs 7–8):
   - At most four distinct tones at any z/D. Harmonics are marked separately by the peak detector (Fig. 7). z/D 5.2 is multimodal (tones at Sr ≈ 0.25 and 0.32 with harmonics); z/D 5.3 has a single tone at Sr ≈ 0.25 with harmonics at 0.50 and 0.75 (read from Fig. 7; peak levels ≈ 124 and 129 dB, but the room is not anechoic).
   - Powell's criterion with θ = 2, 3, 4, 5, 6 and p = 0.85 follows the stages (Fig. 8). Staging is explained, as for round jets, by a new wave entering the loop to bring the frequency back to where q_h is largest (p. 5).
-  - **No tones for z/D < 3.2** (Fig. 8), whereas round convergent nozzles give tones at z/D ≤ 1.7 (NPR 3.38, Powell 1988) and C-D nozzles at z/D ≤ 2.0 (NPR 3.7, Krothapalli et al. 1999). The authors propose that the annular flow and concentric shear layers near the nozzle inhibit the loop; beyond that, the jet behaves like a round jet (p. 5). This is a proposal; no measurement isolates the cause.
+  - **No tones for z/D < 3.2** (Fig. 8), whereas round convergent nozzles give tones at z/D ≤ 1.7 (NPR 3.38, Powell 1988) and C-D nozzles at z/D ≤ 2.0 (NPR 3.7, [Krothapalli et al. 1999](krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md)). The authors propose that the annular flow and concentric shear layers near the nozzle inhibit the loop; beyond that, the jet behaves like a round jet (p. 5). This is a proposal; no measurement isolates the cause.
   - Free-jet screech tones were removed by hand from Fig. 8, so the plug jet does screech at NPR 3.4, but no screech frequency is given (p. 4).
   - The facility was shut down for every change of z to avoid hysteresis (p. 4), so the map cannot show any.
 - **Stage map read from Fig. 8** (p. 5; my reading, ±0.01 in Sr):
@@ -132,7 +132,7 @@ Data dependence (my comments): the method needs time-resolved images, but each b
   - Back-calculation (mine), taking h = z and c = 340 m/s and using the Fig. 8 points: u_c ≈ 270–306 m/s, i.e. 0.55–0.62 of the paper's U_j, or 0.65–0.74 of the isentropic U_j. The paper does not state its u_c, so treat this as indicative.
 - **Gain criterion** (eq. 2, p. 1):
   $$q_h\,\eta_s\,\eta_t\,\eta_d \ge 1$$
-  q_h: amplification of lip disturbances along the shear layer; η_s: efficiency of sound production at the plate; η_t: transmission efficiency back to the nozzle; η_d: efficiency of creating a flow disturbance at the lip. Both eqs must hold for a tone (Powell 1953). Not evaluated here. When several frequencies satisfy eq. 2 the jet can be multimodal (Henderson & Powell 1993); a thinner lip lowers η_d and screech intensity (Norum 1983) (p. 2).
+  q_h: amplification of lip disturbances along the shear layer; η_s: efficiency of sound production at the plate; η_t: transmission efficiency back to the nozzle; η_d: efficiency of creating a flow disturbance at the lip. Both eqs must hold for a tone (Powell 1953). Not evaluated here. When several frequencies satisfy eq. 2 the jet can be multimodal (Henderson & Powell 1993); a thinner lip lowers η_d and screech intensity ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md)) (p. 2).
 - **Strouhal number** (p. 3): Sr = f D_j/U_j with D_j = 16.88 mm, U_j = 492.3 m/s.
 
 ## Data tables
@@ -219,7 +219,7 @@ The lab's core problem is resonance in supersonic impinging jets, studied with t
   - Henderson 2002 (JASA 111, shock disappearance), a different paper from the AIAA preprint held as `henderson-2002-flow-structure-supersonic-impinging-jets`.
   - Panda 1998 (JFM 363, shock oscillation in screeching jets).
   - Powell 1988 (JASA 83).
-  - Krothapalli et al. 1999 (JFM 392).
+  - Krothapalli et al. 1999 (JFM 392, now [indexed](krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md)).
   - Risborg & Soria 2009 (inclined plate).
   - Karthikeyan et al. 2013 (AIAA J. 51, aerospike truncation acoustics).
   - André, Castelain & Bailly 2011 (AIAA J. 49, shock tracking).

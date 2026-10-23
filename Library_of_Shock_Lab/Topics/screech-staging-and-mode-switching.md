@@ -114,6 +114,8 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 
 ## Papers
 
+- [Norum 1983](../Notes/norum-1983-screech-suppression-supersonic-jets.md): Tube jets, β 0–1.25: A1/A2/B/C stages swap with reflector position; Powell monopole array gives harmonic lobes; thin lip and slots cut screech by up to ~29 dB, by mode (synthesis pending).
+- [Seiner et al. 1988](../Notes/seiner-1988-dynamic-pressure-loads-twin-supersonic-plume-resonance.md): 1/40-scale F-15 twin choked jets, s/D 1.9: mirror-coupled B-mode flapping gives 162 dB between the nozzles, 2–4× a single jet; a tab on one nozzle decouples the pair (synthesis pending).
 - [Huerre & Monkewitz 1990](../Notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): supercritical Hopf only; competing global modes; the transient test.
 - [Ponton 1992](../Notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): lip thickness moves mode ranges and the B → C switch.
 - [Powell et al. 1992](../Notes/powell-1992-oscillation-modes-choked-circular-jets.md): the round-jet staging map; C ↔ D the only hysteresis; A2/B rapid switching; secondary tones.
