@@ -1,6 +1,6 @@
 ---
 name: research-question
-description: Give an in-depth, reasoned answer to a research question (not a literature summary), working deeply through the library's topic pages and notes, finding and fetching papers that would close gaps, and saving the answer with its sources in Library_of_Shock_Lab/Research_Questions/ for later reference. Uncertainties, unknowns and conflicts in the literature are stated explicitly. Use only when the user runs /research-question, or asks to continue or revisit a saved research question.
+description: Give an in-depth, reasoned answer to a research question (not a literature summary), working deeply through the library's topic pages and notes, finding and fetching papers that would close gaps, proposing tests that would prove or disprove the hypotheses, and saving the answer with its sources in Library_of_Shock_Lab/Research_Questions/ for later reference. Uncertainties, unknowns and conflicts in the literature are stated explicitly. Use only when the user runs /research-question, or asks to continue or revisit a saved research question.
 argument-hint: "<question>  |  continue <slug> [notes]  |  list"
 effort: xhigh
 ---
@@ -73,13 +73,38 @@ Decide whether the library answers the question well enough. If a sub-question h
 - **Paywalled or not found**: add each to `Library_of_Shock_Lab/Misc/Papers_to_get.md` under its subject heading, with DOI and a note "for research question `<slug>`", and list them in the question file under "Papers requested". The user fetches them (e.g. through the Monash library) into `Paper_PDFs/_Unprocessed/` and runs `/research-question continue <slug>`.
 - If the papers would only refine an answer that already stands, still list them, but write the answer now rather than waiting.
 
+## 4a. Propose tests
+
+Papers close gaps only where someone has already done the work. For the rest, design the tests that would prove (or try to prove) the hypotheses from sections 1 and 3, including your own labelled ones. The aim is a test whose result **tells the hypotheses apart**, not one that just "looks at" the phenomenon.
+
+1. **Pick the targets.** Take every point classed contested, speculative or unknown, and any supported point that rests on one study or a narrow range of conditions. Restate each one as a falsifiable hypothesis (H1, H2, …), with its competitors next to it.
+2. **Derive what each hypothesis predicts.** For each target, find an observable where the competing hypotheses predict *different* outcomes: a frequency or its scaling with M_j, a mode shape or azimuthal order, a phase relation or convective velocity, a hysteresis loop, a switch rate or dwell-time distribution, a growth rate. Write the prediction under each hypothesis, quantitative where the notes, data tables or a scaling estimate allow (label your own estimates). If every hypothesis predicts the same thing, that test can't settle the point; look for another one.
+3. **Check it hasn't been done.** Search the library (`library.py find`, Grep) for a paper that already ran the test. If one did, it is evidence for section 3, not a proposal; if it was run under other conditions, say what the new test adds.
+4. **Design the cheapest decisive test**, in roughly this order of cost:
+   - **re-analysis** of data the lab already has (SPOD, BMD, POD pairs, HPOD, the hybrid SPOD → reconstruction → HPOD pipeline), or of published numbers in `Data/*.csv`;
+   - **synthetic benchmark** with a known ground truth (like `Codebase/HPOD_Switch_Benchmark/`), when the question is whether a method can see the effect at all;
+   - **model calculation**: vortex-sheet or other linear stability, resolvent, shock-cell or feedback models, run at the conditions in question;
+   - **simulation**: the PyFR staging LES (`Simulations/PyFR_Staging_Continuation/`), or a request for LES data from another group;
+   - **new experiment** in a Shock Lab group facility (TR schlieren, acoustics, PIV, with the flows the lab runs).
+5. **Specify each test** well enough that the user could plan it:
+   - hypothesis tested and the competitor it rules out;
+   - what is varied and what is held fixed (NPR / M_j range and step, geometry, lip thickness, temperature, reflector), and the controls that remove the obvious confounds (facility acoustics, hysteresis from the direction of the NPR sweep, convergence);
+   - what is measured and how (diagnostic, sampling rate, record length, field of view, resolution), with a feasibility check: Nyquist and frequency resolution against the expected tones, enough blocks for converged SPOD / BMD, enough snapshots for POD, enough switch events for statistics. Take the lab's capabilities from the notes, `Topics/diagnostics-and-facilities.md` and `Library_of_Shock_Lab/Codebase_Notes/`; where they don't say, state the assumption rather than inventing a capability;
+   - the analysis, naming the group's existing scripts where they fit;
+   - the **decision rule**: which result supports which hypothesis, what result would be inconclusive, and the threshold (e.g. "a frequency jump larger than the SPOD bin width at the same NPR on up and down sweeps supports H2");
+   - cost (re-analysis / days of compute / a test campaign) and the main risk to the test.
+6. **Rank** the tests by how much they would change the answer per unit of cost; usually 2–6. A cheap test that splits two live hypotheses beats an expensive one that refines a supported point.
+
+Propose only; don't run or build the tests here. The user may take one up as a follow-up (wrap_up can offer the top one).
+
 ## 5. Continue a saved question
 
 - Read the question file in full, including the previous answer and its "Papers requested" list.
 - Run `library.py unindexed` and process any new PDFs in `Paper_PDFs/_Unprocessed/` with the `/add-paper` procedure. Match them to the requested papers; say which requested ones are still missing (and keep them in `Library_of_Shock_Lab/Misc/Papers_to_get.md`). Remove processed ones from `Papers_to_get.md`.
 - Also check for library notes added since the file's `updated` date that bear on the question (`library.py find --since`, Grep).
 - Take any notes the user gave with the command into account (new data, a narrower scope, a pointer to a paper).
-- Redo sections 2–4 as far as the new material needs, and rewrite the answer. Say explicitly what the new papers changed: which points moved between established / contested / unknown, and whether the overall view changed.
+- Redo sections 2–4a as far as the new material needs, and rewrite the answer. Say explicitly what the new papers changed: which points moved between established / contested / unknown, whether the overall view changed, and which proposed tests are now answered by the literature, need redesigning, or are new. If the user reports a test's result, treat it as evidence in section 3 and mark the test done.
+- An older file with a "What would settle it" section: rewrite it as "Proposed tests" in the new form.
 
 ## 6. Write and save
 
@@ -111,10 +136,11 @@ papers_requested: [<DOI or short ref of papers asked for and not yet indexed>]
 (Each disagreement: who says what, under which conditions, the likely explanation, which side the stronger evidence supports.)
 
 ## Uncertainties and unknowns
-(A table: point | status (established / supported / contested / speculative / unknown) | basis | what would resolve it.)
+(A table: point | status (established / supported / contested / speculative / unknown) | basis | what would resolve it (a test ID from "Proposed tests", or a requested paper).)
 
-## What would settle it
-(Experiments, analyses or simulations that would answer the open points, especially ones the Shock Lab could do with its diagnostics and the SPOD / BMD / POD / HPOD workflow, or the PyFR staging LES.)
+## Proposed tests
+(From section 4a. First a ranked summary table: ID (T1, T2, …) | hypothesis tested (vs which) | test | type (re-analysis / synthetic / model / LES / experiment) | cost | status (proposed / running / done YYYY-MM-DD: result).
+Then one subsection per test: hypotheses and their predictions, what is varied and held fixed, controls, measurement and feasibility check, analysis, decision rule, cost and risks.)
 
 ## Papers requested
 (Paper | DOI | why it matters | status: requested / processed on YYYY-MM-DD.)
@@ -143,4 +169,4 @@ The answer usually produces knowledge the library lacks. Queue it, so `/add-pape
 
 ## 7. Reply
 
-In chat, give the short answer, the main uncertainties and conflicts (briefly), the papers requested and what the user needs to do to get them, the topic pages and notes with queued updates, and a link to the saved file. The file holds the full argument; don't paste it all into chat.
+In chat, give the short answer, the main uncertainties and conflicts (briefly), the top proposed tests (one line each: what it would decide and its cost), the papers requested and what the user needs to do to get them, the topic pages and notes with queued updates, and a link to the saved file. The file holds the full argument; don't paste it all into chat.
