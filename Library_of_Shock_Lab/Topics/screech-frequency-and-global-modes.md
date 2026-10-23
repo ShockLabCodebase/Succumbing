@@ -93,6 +93,7 @@ Linear models match frequencies to 1–10 % and G-JM shapes very closely (Edging
 
 ## Papers
 
+- [Rockwell & Naudascher 1979](../Notes/rockwell-1979-self-sustained-oscillations-impinging-shear-layers.md): Classic review of impinging shear-layer feedback (edge, hole, cavity, jet–plate tones): 4-step loop, stage jumps, hysteresis, 2π(n+¼) vs (n+½) phase, onset, models (synthesis pending).
 - [Norum 1983](../Notes/norum-1983-screech-suppression-supersonic-jets.md): quantitative test of Powell's formula and phased array: tracks C, misses A1, A2 and B; lobe angles right, off-lobe levels 10 dB off.
 - [Tam 1986](../Notes/tam-1986-bbsan-screech-relationship.md): weakest-link frequency formula from BBSAN.
 - [Seiner 1988](../Notes/seiner-1988-dynamic-pressure-loads-twin-supersonic-plume-resonance.md): Powell's formula on twin jets gives one curve, 7–27 % above twin B; amplitude not yet predictable.

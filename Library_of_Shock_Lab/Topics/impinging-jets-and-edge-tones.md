@@ -115,6 +115,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - **Rocket noise:** impinging-jet waves are shocks at birth, linking to crackle; the open question is why the loop does not survive in hot, overexpanded plumes on inclined deflectors, for which the guided-mode bands can now be computed with the Tam 1990 machinery.
 
 ## Papers
+- [Rockwell & Naudascher 1979](../Notes/rockwell-1979-self-sustained-oscillations-impinging-shear-layers.md): Classic review of impinging shear-layer feedback (edge, hole, cavity, jet–plate tones): 4-step loop, stage jumps, hysteresis, 2π(n+¼) vs (n+½) phase, onset, models (synthesis pending).
 - [Ho 1981](../Notes/ho-1981-dynamics-impinging-jet-feedback-phenomenon.md): subsonic plate loop measured leg by leg (0.62U down, a∞ up, 5 × 2π at the lip); integer-N stages; first switching evidence; collective interaction.
 - [Tam & Ahuja 1990](../Notes/tam-1990-theoretical-model-discrete-tone-impinging-jets.md): founding guided-mode theory; KH-band selection makes subsonic tones axisymmetric; least-dispersive (0, 1) wave gives mean St(M_j) and the low-Mach cut-off.
 - [Ponton 1992](../Notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md) (not tagged): lip thickness changes screech staging; reflection off the exit face.

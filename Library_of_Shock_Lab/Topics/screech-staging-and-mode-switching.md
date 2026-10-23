@@ -133,6 +133,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 
 ## Papers
 
+- [Rockwell & Naudascher 1979](../Notes/rockwell-1979-self-sustained-oscillations-impinging-shear-layers.md): Classic review of impinging shear-layer feedback (edge, hole, cavity, jet–plate tones): 4-step loop, stage jumps, hysteresis, 2π(n+¼) vs (n+½) phase, onset, models (synthesis pending).
 - [Norum 1983](../Notes/norum-1983-screech-suppression-supersonic-jets.md): tube-jet stages; a baffle hops stages by loop phase and moves the B/C limit by ΔNPR ≈ 0.4; earliest seconds-scale B/C alternation.
 - [Seiner et al. 1988](../Notes/seiner-1988-dynamic-pressure-loads-twin-supersonic-plume-resonance.md): single-tube map with one dominant mode per M_j and an "E" branch; close twin coupling moves A → B earlier.
 - [Huerre & Monkewitz 1990](../Notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): supercritical Hopf only; competing global modes; the transient test.
