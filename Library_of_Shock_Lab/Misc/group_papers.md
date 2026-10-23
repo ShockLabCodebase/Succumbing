@@ -87,11 +87,11 @@ Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. P
 
 ## Missing (listed in Papers_to_get.md) (6)
 
-| # | Paper | DOI | Where |
-|---|---|---|---|
-| 1 | Yoo et al. 2010, *Planar laser-induced fluorescence imaging in shock tube flows*, Experiments in Fluids | 10.1007/s00348-010-0876-2 | [Papers_to_get.md](Papers_to_get.md) |
-| 3 | Yoo et al. 2011, *Near-wall imaging using toluene-based planar laser-induced fluorescence in shock tube flow*, Shock Waves | 10.1007/s00193-011-0338-7 | [Papers_to_get.md](Papers_to_get.md) |
-| 12 | Edgington-Mitchell et al. 2015, *Staging Behaviour in Screeching Elliptical Jets*, International Journal of Aeroacoustics | 10.1260/1475-472x.14.7.1005 | [Papers_to_get.md](Papers_to_get.md) |
-| 17 | Humphrey & Edgington-Mitchell 2016, *The effect of low lobe count chevron nozzles on supersonic jet screech*, International Journal of Aeroacoustics | 10.1177/1475472x16630872 | [Papers_to_get.md](Papers_to_get.md) |
-| 30 | Edgington-Mitchell 2019, *Aeroacoustic resonance and self-excitation in screeching and impinging supersonic jets – A review*, International Journal of Aeroacoustics | 10.1177/1475472x19834521 | [Papers_to_get.md](Papers_to_get.md) |
-| 31 | Thethy et al. 2019, *Mechanics of the influx phase in the jet regurgitant mode of a powered resonance tube*, International Journal of Aeroacoustics | 10.1177/1475472x19840001 | [Papers_to_get.md](Papers_to_get.md) |
+| #   | Paper                                                                                                                                                                | DOI                         | Where                                |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------------------------------ |
+| 1   | Yoo et al. 2010, *Planar laser-induced fluorescence imaging in shock tube flows*, Experiments in Fluids                                                              | 10.1007/s00348-010-0876-2   | [Papers_to_get.md](Papers_to_get.md) |
+| 3   | Yoo et al. 2011, *Near-wall imaging using toluene-based planar laser-induced fluorescence in shock tube flow*, Shock Waves                                           | 10.1007/s00193-011-0338-7   | [Papers_to_get.md](Papers_to_get.md) |
+| 12  | Edgington-Mitchell et al. 2015, *Staging Behaviour in Screeching Elliptical Jets*, International Journal of Aeroacoustics                                            | 10.1260/1475-472x.14.7.1005 | [Papers_to_get.md](Papers_to_get.md) |
+| 17  | Humphrey & Edgington-Mitchell 2016, *The effect of low lobe count chevron nozzles on supersonic jet screech*, International Journal of Aeroacoustics                 | 10.1177/1475472x16630872    | [Papers_to_get.md](Papers_to_get.md) |
+| 30  | Edgington-Mitchell 2019, *Aeroacoustic resonance and self-excitation in screeching and impinging supersonic jets – A review*, International Journal of Aeroacoustics | 10.1177/1475472x19834521    | [Papers_to_get.md](Papers_to_get.md) |
+| 31  | Thethy et al. 2019, *Mechanics of the influx phase in the jet regurgitant mode of a powered resonance tube*, International Journal of Aeroacoustics                  | 10.1177/1475472x19840001    | [Papers_to_get.md](Papers_to_get.md) |

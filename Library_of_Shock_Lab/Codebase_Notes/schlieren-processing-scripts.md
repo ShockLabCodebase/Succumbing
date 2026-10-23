@@ -155,6 +155,20 @@ Schlieren_Sample_Videos: quick preview mp4s.
 
 Fix in a copy here, never in the repo; tell the user so they can fix upstream.
 
+**Second round, 2026-10-23: everything below is fixed in `Codebase/Codebase_Patches/Schlieren_Processing_Scripts`.** That folder is now a complete standalone copy of the toolbox (README there; tests in `tests/`). Details are in [REVIEW_2026-10-22.md](REVIEW_2026-10-22.md) §7. Points to know when reading the *repo* code:
+- **`Read_slow`** reads every frame 810 bytes late on the 2026 test file (`textscan` leaves the file position mid-header): rows shift and wrap 170 px.
+- **`tcoeffs`** references the coefficient phase to the window start, so multi-bin sums cancel. The patch references it to the window centre and removes the conjugation.
+- **`correct_phase_between_halves`** uses +θ, which is right only with the old conjugated HPOD modes.
+- **`align_fields` "none"** discards `y_0`. The patch keeps it.
+- **`opts.savefft` / `restrict_memory`** writes about 2× the data to disk plus one file per frequency (never deleted) and re-reads every block file per frequency (100× slower on a small test).
+  - The patch adds frequency batches (`max_memory_GB`) and int16 loading instead. The 400k-frame SPOD on M3 peaked at 501 GB; it is expected to need about 175 GB with 4 batches.
+- **New in the patched copy:**
+  - `find_nozzle_exit` (x = 0 without a background; `axial_method = "lip"`);
+  - `hpod_from_spod_tcoeffs` (`data_source = "spod_tcoeffs"` in Hilbert_POD_Analysis);
+  - `match_folders` (folder wildcards);
+  - `load_fields_time_major` (stored-class, time-first loading).
+- **CCA** is computed in the POD subspace, so there are no n_pix² matrices.
+
 **Verified on Test_Data, 2026-10-22 (@ 024a470)**
 
 Full report: `Codebase_Patches/Schlieren_Processing_Scripts/REVIEW_2026-10-22.md`. Patched copies of the files are next to it. Test: `tests/test_spod_hpod_scaling.m`.
