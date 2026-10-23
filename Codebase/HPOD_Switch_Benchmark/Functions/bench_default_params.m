@@ -44,6 +44,9 @@ p.n_modes_recon = 2;            % SPOD modes used in the reconstruction (group d
 p.recon = "invspod";            % band reconstruction: "invspod" (block-wise, as the group's
                                 % invspod.m) or "conv" (tcoeffs-style convolution; removes the
                                 % block-stitching IF floor, see diagnose_hpod_floor.m)
+p.coef_methods = false;         % also score the direct convolution coefficients, a fixed-mode
+                                % projection and POD without the Hilbert step (test T8;
+                                % run_t8_coef_compare.m)
 p.n_hpod_modes = 4;             % HPOD modes kept
 p.hpod_trim_frac = 0.05;        % record fraction excluded at each end when building HPOD modes
 

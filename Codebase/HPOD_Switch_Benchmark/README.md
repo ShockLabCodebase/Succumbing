@@ -20,7 +20,7 @@ run("tests/test_benchmark_components.m")
 
 Or from a shell: `matlab -batch "quick = true; run_switch_benchmark"`. All parameters are in `Functions/bench_default_params.m`. Override them after the `p = bench_default_params(quick);` line in the script, or set a struct `overrides` before running it (see `run_recon_sweeps.m`). On Windows the MATLAB launcher strips inner double quotes from `-batch` commands, so put string overrides in a driver script.
 
-Quick runs write to `Results/`. `run_recon_sweeps.m` writes full sweeps to `Results_invspod/` and `Results_conv/`, so a quick check cannot overwrite them. `compare_runs.m` compares any two result folders.
+For test T8 (HPOD against the direct `tcoeffs` coefficients), run `run_t8_coef_compare` (or `quick = true; run_t8_coef_compare`); see below. Quick runs write to `Results/`. `run_recon_sweeps.m` writes full sweeps to `Results_invspod/` and `Results_conv/`, so a quick check cannot overwrite them. `compare_runs.m` compares any two result folders.
 
 ## The synthetic flow
 
@@ -41,6 +41,9 @@ Every method returns the same tracks: an amplitude and IF for a band of width B 
 |---|---|---|
 | `HPOD_sep` | field | Welch SPOD (nfft = 2^nextpow2(4/Δf), 87.5% overlap) → frequency-domain inverse SPOD of a band B around each tone (modes 1–2, Hann-weighted block stitching) → HPOD_t → mode-1 amplitude and IF of each band |
 | `HPOD_comb` | field | the same, with one band of width Δf + B holding both tones → mode-1 IF: the single-trace case |
+| `Coef_pk` (T8) | field | no reconstruction: the mode-1 convolution coefficient (`conv_coeffs`, as `tcoeffs.m`) at the bin nearest each tone. Its band is the SPOD window's (1.36 bins), whatever B is, and so is its IF fit window |
+| `Fixed_sep`, `Fixed_comb` (T8) | field | the one-sided convolution reconstruction of each band (or of the combined band) projected onto one fixed mode: the leading SPOD mode at the band's most energetic bin |
+| `POD1s_sep`, `POD1s_comb` (T8) | field | POD of the one-sided (analytic) convolution reconstruction: HPOD_t without the Hilbert step |
 | `HPOD_raw` | field | HPOD_t of the raw noisy field, with no narrow-banding. Modes 1–2 are assigned to the tones by median IF. Any separation can only come from space (wavenumber resolution ≈ c/L). |
 | `Gauss_pt` | probe | Gaussian band-pass with the same RMS width as a rectangular band B. This equals a Gaussian-window STFT, or a Morlet CWT, at one frequency. |
 | `Bump_pt` | probe | compactly supported bump band-pass (a bump CWT at one scale), scaled to the same RMS width |
@@ -143,6 +146,18 @@ Switch resolution is the same for both Hamming routes (all switches at 1.5 T_b, 
 - **At B = Δf the resolved fractions are identical** for both routes, at every SNR (figure panels).
 
 **For the lab pipeline:** reconstruct the band for HPOD by convolution with the SPOD modes, which is what `tcoeffs.m` computes (Nekkanti & Schmidt 2021, eq. 3.4), rather than by `invspod`, whenever IF precision matters. Set `p.recon = "conv"` to use it in the benchmark. The default stays `"invspod"` to match the group's current pipeline.
+
+## HPOD against direct coefficients (`run_t8_coef_compare.m`, test T8)
+
+The question: once `tcoeffs` gives a time-continuous coefficient for every bin and mode, what does HPOD of a band reconstruction add? The T8 methods (table above; switched on by `p.coef_methods`) answer it. `run_t8_coef_compare.m` runs the sweep with `p.recon = "conv"` for every field method and writes to `Results_T8/`, or to `Results_T8_quick/` with `quick = true`. With the convolution route, `HPOD_*` and `POD1s_*` work on the same reconstruction (its real part and the analytic field), so that pair isolates the Hilbert step. The prediction and decision rule are in the research question.
+
+**Quick run (2026-10-23; δ = 0.10, SNR 10 dB, L = 8λ, B = Δf and 4Δf, one schedule; preliminary):**
+- `POD1s_*` matched `HPOD_*` to about 10⁻⁶ in every metric. On a one-sided reconstruction the Hilbert step changes nothing.
+- `Fixed_sep` matched `HPOD_sep` at B = Δf. At B = 4Δf its IF spread was 2.3× larger.
+- `Fixed_comb` projects onto tone A's mode, so it weakens tone B. The coexistence ripple was 0.18–0.22 against 0.44–0.56 for `HPOD_comb`, and the ratio to the exclusive baseline 9–24 against 64–118. Switch resolution was similar.
+- `Coef_pk` resolved only dwells ≥ 3 T_b (10–90% width 1.3–1.5 T_b; window nfft = 5 T_b). Its IF spread was close to `HPOD_sep`'s at B = Δf (1.1 against 1.3×10⁻⁴ f₀), but its bias was 5×10⁻⁴ f₀, about ten times HPOD's, not yet explained.
+
+The full sweep (both spacings) has not been run.
 
 ## Limits
 

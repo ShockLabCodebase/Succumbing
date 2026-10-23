@@ -13,9 +13,11 @@
 %%% Methods: SPOD -> band-B reconstruction -> HPOD_t (separate bands and one
 %%% combined band), HPOD_t of the raw field, and single-probe Gaussian
 %%% (STFT / Morlet-at-one-scale), bump, default Morlet and synchrosqueezing.
+%%% With p.coef_methods, also the direct convolution coefficients, a fixed-
+%%% mode projection and POD without the Hilbert step (run_t8_coef_compare.m).
 %%%
 %%% Background: Library_of_Shock_Lab/Research_Questions/
-%%% hpod-instantaneous-frequency-uncertainty.md ("What would settle it", 1).
+%%% hpod-instantaneous-frequency-uncertainty.md ("Proposed tests", T1 and T8).
 %%%
 %%% Set quick = true for a fast check of the whole chain (seconds); the full
 %%% sweep takes longer (see README). quick can also be set before running,

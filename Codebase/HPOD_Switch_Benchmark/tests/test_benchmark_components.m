@@ -56,12 +56,35 @@ e = norm(g*qm - um, 'fro')/norm(um, 'fro');
 ok = e < 0.02; n_fail = n_fail + ~ok;
 check(ok, sprintf("convolution reconstruction error %.4f (gain %.3f)", e, g));
 
+%% 5c. Direct convolution coefficient at the bin nearest a tone: IF = tone
+%%     frequency (the phase is kept, not demodulated), steady amplitude
+ud = double(u - mean(u, 2));
+[~, jf] = min(abs(S.f - 0.1));
+a = conv_coeffs(S, ud, jf, 1);
+fi = phase_slope_if(a, 513);
+e = median(abs(fi(mid) - 0.1)); ra = std(abs(a(mid)))/mean(abs(a(mid)));
+ok = e < 1e-4 && ra < 0.01; n_fail = n_fail + ~ok;
+check(ok, sprintf("convolution coefficient IF error %.1e, amplitude ripple %.1e", e, ra));
+
 %% 6. HPOD of a travelling wave: one mode, IF = f
-H = hpod_time(u(:, :) - single(0.5*cos(2*pi*0.12*(tt - xx'/c))), 2, 0.05);
+u1 = u(:, :) - single(0.5*cos(2*pi*0.12*(tt - xx'/c)));
+H = hpod_time(u1, 2, 0.05);
 fi = phase_slope_if(H.a(1,:), 41);
 e = median(abs(fi(mid) - 0.1));
 ok = H.energy(1) > 0.99 && e < 1e-6; n_fail = n_fail + ~ok;
 check(ok, sprintf("HPOD mode-1 energy %.4f, IF error %.1e", H.energy(1), e));
+
+%% 6b. One-sided convolution reconstruction is analytic: its real part matches
+%%     the default output, and POD of it (no Hilbert step) gives IF = f
+S1 = spod_welch(u1, 512, 87.5, [0.05 0.15], 8);
+z = convspod_band(S1, u1, [0.09 0.11], 2, true);
+qr = convspod_band(S1, u1, [0.09 0.11], 2);
+e1 = max(abs(double(2*real(z(:))) - double(qr(:))))/max(abs(double(qr(:))));
+G = hpod_time(z, 1, 0.05, true);
+fi = phase_slope_if(G.a(1,:), 41);
+e2 = median(abs(fi(mid) - 0.1));
+ok = e1 < 1e-5 && e2 < 1e-6; n_fail = n_fail + ~ok;
+check(ok, sprintf("one-sided reconstruction: real-part mismatch %.1e, POD IF error %.1e", e1, e2));
 
 %% 7. Hilbert floor is ~0 for slow amplitude modulation, and grows when
 %%    the modulation approaches the carrier (Nuttall & Bedrosian 1966)

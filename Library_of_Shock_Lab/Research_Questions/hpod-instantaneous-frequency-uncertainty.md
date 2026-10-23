@@ -24,6 +24,13 @@ The strongest case for "it really beats it" is Huang et al. 2009. Direct quadrat
 
 One gain is genuine and specific to HPOD. The POD step uses space as a second axis for separating components, and averaging over the field raises the signal-to-noise ratio, and with it precision; the benchmark now shows the precision gain directly. For advecting waves, the field-of-view length may stand in for record length; this is my hypothesis, and the benchmark could not test it (the packets' envelope limited the aperture). That moves the trade-off into space–time without abolishing it.
 
+**What HPOD adds when the band comes from `tcoeffs`** (section 4; my reasoning, with a first check in T8):
+- **One bin, one mode: nothing.** The convolution coefficient a_l(f, t) already gives instantaneous amplitude |a| and IF = f_bin + (1/2π)·d(arg a)/dt, with the spatial SNR gain of the projection. HPOD hands back the same mode and coefficient.
+- **A band of several bins or modes: one coherent trace per structure.** Each bin's SPOD mode has an arbitrary phase and a shape that changes with frequency, so coefficients can't simply be summed across bins. HPOD finds the spatial projection that holds the most energy in the band. That gives one amplitude and IF trace that stays continuous as the frequency moves between bins, which is what tracking drift, FM or a switch inside one band needs. It can also split structures of different shape within the band.
+- **The Hilbert step itself adds nothing.** A reconstruction from the positive-frequency coefficients is already analytic, so plain POD of it equals HPOD_t (T8 quick check: identical to about 10⁻⁶).
+- **Resolution and precision are not HPOD's.** Resolution is set by B and n_fft; most of the precision gain comes from the spatial projection, which `tcoeffs` already does.
+- **In practice:** for a steady single tone, read `a_1(f_peak, t)` directly (with the phase-sign fix to the group's `tcoeffs`). Use HPOD, or POD of the one-sided reconstruction, when the frequency crosses bins or a band holds two tones or several important modes.
+
 **Confidence:**
 - **High** for the principle. It is now backed by primary sources: Gabor (whose bound is on spreads by construction, and who treated centroids as "not data", p. 434), Cohen, Boashash, Bedrosian, Nuttall, Rife & Boorstyn and Daubechies et al.
 - **Moderate to high** for the time resolution of about 1/B, the switching-versus-coexistence distinction and the precision gain. The benchmark confirms them, but on synthetic, non-dispersive waves in white noise, not yet on flow data (T3).
@@ -205,6 +212,28 @@ The benchmark did not settle it (T1). HPOD of the raw field never separated the 
 
 **HPOD on raw broadband data.** Kriegseis et al. applied the Hilbert transform to raw data, but all their test flows were dominated by one periodic process, and they never computed an IF (p. 1–2). Raiola applied HPOD_t to an unfiltered LES and read the modulation with STFTs (p. 19–21). Nothing in the library shows that d arg ψ_j/dt of a broadband turbulent HPOD mode is monocomponent. Explicit narrow-banding first remains the safer route. The benchmark points the same way even for two clean tones: without narrow-banding, the raw-field modes did not separate them.
 
+**What HPOD adds after `tcoeffs`** (my reasoning; T8 checks it). The convolution coefficient a_l(f, t) is a sliding, Hamming-windowed DFT of length n_fft projected onto SPOD mode φ_l(f). Nekkanti & Schmidt show it is practically the same as the exact sliding-window SPOD coefficient (App. C, p. 19, 30–31). So for each bin and mode it already carries:
+- the instantaneous amplitude |a|;
+- the phase, which advances at the tone's frequency, so IF = f_bin + (1/2π)·d(arg a)/dt;
+- the spatial SNR gain of projecting onto a mode.
+
+The group's `tcoeffs` returns conjugated phase, so the IF sign must be fixed first; the version in `Codebase_Patches` does this ([Codebase note](../Codebase_Notes/schlieren-processing-scripts.md)).
+
+Against that baseline:
+- **One bin, one mode: HPOD adds nothing.** It returns that SPOD mode and coefficient. Horel: complex PCA is frequency-domain PCA averaged over frequency, identical for one dominant frequency (p. 1661). Raiola: HPOD reduces to SPOD for stationary advecting waves (p. 11–13). The coefficient's time resolution is the n_fft window.
+- **Several bins or modes: HPOD makes one coherent structure.**
+  - SPOD modes at neighbouring bins have arbitrary relative phase, and their shape changes with frequency (for an advecting wave, k = 2πf/c). So the bins' coefficients can't be added directly; they need a common spatial projection.
+  - HPOD picks the projection that captures the most energy in the band. That gives one amplitude and IF trace per structure, continuous across bins, with time resolution about 1/B instead of n_fft.
+  - It also ranks structures of different shape inside the band (mode 1 vs 2), unless their energies are close (Horel).
+  - A cheaper middle route is to project the band onto one fixed mode, such as the peak bin's SPOD mode. HPOD is the energy-optimal version of that choice.
+- **The Hilbert step adds nothing on a one-sided reconstruction.** Rebuilt from positive-frequency coefficients only, the band field is already analytic. Taking its real part and Hilbert-transforming it just recovers it, plus end effects. Kriegseis says the analytic signal "adds no information" (p. 1). The group's pipeline takes the long way: `invspod` fills in the negative frequencies, then `hilbert` follows.
+
+**First check (T8 quick run, 2026-10-23; tones 10% apart, 10 dB, one schedule, so preliminary):**
+- POD of the one-sided reconstruction matched HPOD to about 10⁻⁶ in every metric.
+- *Separate bands:* the fixed-mode projection matched HPOD at B = Δf, but had 2.3× the IF spread at B = 4Δf.
+- *One band holding both tones:* the fixed projection (onto tone A's mode) weakened tone B. The coexistence ripple fell to 0.18 against HPOD's 0.44–0.56, as the shape mismatch predicts.
+- *Direct coefficient:* its IF spread was close to HPOD's (1.1 against 1.3×10⁻⁴ f₀ at B = Δf). But it resolved only dwells of 3 T_b or more (width about 1.3–1.5 T_b), as its n_fft = 5 T_b window predicts. It also showed an IF bias of 5×10⁻⁴ f₀ (0.5% of Δf), ten times HPOD's, not yet explained.
+
 ### 5. Consequences for the lab's problems
 
 - **A1/A2 staging (tones about 10% apart).** Daubechies' condition gives d ≈ 0.048, so the filter half-width must be under 0.045. That filter lasts about 11–22 periods (the Daubechies note's arithmetic), which agrees with the earlier estimate of 10–20 screech cycles. It is much finer than the roughly 78-cycle window of [Mazharmanesh 2026](../Notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md) (p. 11). **Exclusivity test:** reconstruct a band holding *both* tones. If the IF jumps between two plateaus while the amplitude stays up, the tones are switching. If the IF stays at the stronger tone with a ripple at Δf, they coexist. The ripple is the Cohen cross term (section 2). EMD will always merge A1 and A2 (frequency ratio about 0.91; Rilling note), so use SPOD reconstruction, by convolution rather than block-wise `invspod` (T1).
@@ -251,6 +280,8 @@ The benchmark did not settle it (T1). HPOD of the raw field never separated the 
 | HPOD_t of broadband turbulence gives monocomponent modes | doubtful | Raiola p. 19–21; Kriegseis p. 1–2 | T4 |
 | Time resolution of HPOD IF for a switch: switch width (0.4–1)/B; ≳ 1/Δf whenever the tones must be separated (B ≲ 2Δf); faster only for exclusive states in one band | supported (synthetic, non-dispersive, white noise) | T1 | T3 |
 | Block-wise inverse SPOD puts an SNR-independent floor on HPOD IF; convolution reconstruction removes most of it | supported (synthetic) | T1 floor diagnosis; Nekkanti 2021 eq. 3.4 | T3 (real data) |
+| After `tcoeffs`, HPOD adds nothing for one bin and one mode; its gain is a coherent, energy-optimal trace across several bins or modes | supported (reasoning; T8 quick run consistent) | Horel p. 1661; Raiola p. 11–13; Nekkanti p. 19, 30–31; T8 quick | T8 full sweep, plus an FM scenario |
+| The Hilbert step is redundant on a one-sided reconstruction | supported (algebra; T8 quick: identical to about 10⁻⁶) | Kriegseis p. 1; T8 quick | — |
 
 ## Proposed tests
 
@@ -260,6 +291,7 @@ Ranked by how much each would change the answer for its cost. T1 has been run, a
 |---|---|---|---|---|---|
 | T1 | switch time resolution ≈ 1/B (H2); exclusive switching visible faster than 1/Δf, coexistence not (H3); precision against Cramér–Rao; the Hilbert step's floor | synthetic switch benchmark: SPOD → band reconstruction → HPOD_t against STFT, CWT and FSST at a probe | synthetic | done | done 2026-10-22: switch width (0.4–1)/B, but ≳ 1/Δf whenever the tones must be separated; one band holding both tones resolved exclusive switches down to 0.375 T_b when T_b spans many carrier periods; coexistence showed only as ripple; inverse-SPOD block floor found; Hilbert floor negligible; space for time inconclusive |
 | T2 | space for time (L_eff/c stands in for record length) vs POD adding only SNR | T1 benchmark with effective aperture 5–40λ, two spacings, and a counter-propagating wave | synthetic | hours | proposed |
+| T8 | HPOD of a band reconstruction adds a coherent cross-bin trace vs reading `tcoeffs` coefficients directly, or projecting onto one fixed mode, does as well; Hilbert step redundant | T1 benchmark with direct coefficients, a fixed-mode projection and POD without the Hilbert step | synthetic | tens of minutes of compute (code done) | quick check run 2026-10-23 (consistent; preliminary); full sweep not run |
 | T3 | T1's conclusions hold on real schlieren vs fail with real noise and modes; by-product: A1/A2 exclusive vs short coexistence | HPOD on Mazharmanesh's NPR 2.20 record, with negative and spliced positive controls from NPR 2.19 and 2.25 | re-analysis | 1–3 days | proposed |
 | T4 | raw HPOD_t modes of broadband turbulence are monocomponent vs carry the IF of band-limited noise | IF statistics of HPOD_t modes against the Gaussian-noise IF law, with and without narrow-banding | re-analysis (public LES) | download + 2–3 days | proposed |
 | T5 | Carson rate cap vs RMS cap only; strongest H1 (direct quadrature) vs H3 under noise | sinusoidal-FM sweeps through band B, Hilbert vs direct quadrature, SNR 0–40 dB | synthetic | about a day | proposed |
@@ -337,6 +369,35 @@ For the lab pipeline: reconstruct the band by convolution, not `invspod`, whenev
 - **Decision rule.** Any departure beyond numerical error refutes the derivation.
 - **Cost.** Minutes; low value, since two independent derivations already agree. The mean was checked numerically at r = 0.6 in the 2026-10-23 continuation, and the series argument in section 2 now proves it for all r < 1. What remains is the negative-IF threshold and the r sweep.
 
+### T8. HPOD against direct `tcoeffs` coefficients and a fixed-mode projection
+
+- **Hypotheses.**
+  - H_coh (section 4): after `tcoeffs`, HPOD's only gain is a coherent, energy-optimal trace across the bins and modes of a band. Against it, H_direct: reading the convolution coefficients directly, or projecting the band onto one fixed mode, does as well.
+  - H_Hilb: on a one-sided (analytic) reconstruction the Hilbert step changes nothing.
+- **Methods compared** (all from the convolution route, `p.recon = "conv"`):
+  - `Coef_pk`: the mode-1 convolution coefficient at the bin nearest each tone, with no reconstruction; this is what `tcoeffs.m` gives. Its band is the SPOD window's (1.36 bins), whatever B is.
+  - `Fixed_sep` / `Fixed_comb`: the one-sided band reconstruction projected onto the leading SPOD mode at the band's most energetic bin.
+  - `POD1s_sep` / `POD1s_comb`: POD of the one-sided reconstruction, i.e. HPOD_t without the Hilbert step.
+  - `HPOD_sep` / `HPOD_comb`, on the real part of the same reconstruction.
+- **Predictions.**
+  - *Steady tone in its own band:* all agree in IF bias and spread, since a single-tone band holds one coherent structure. `Coef_pk` resolves switches only down to about its window, n_fft ≈ 4–8 T_b, whatever B is.
+  - *One band holding both tones:* the fixed mode fits only the stronger tone's shape. With k = 2πf/c, the two shapes drift apart by about 2πδ·L_eff/λ radians, roughly 5.7 rad at δ = 0.10 and 0.3 rad at δ = 0.005 for a 9λ aperture (my arithmetic). So H_coh predicts that `Fixed_comb` weakens the weaker tone and the coexistence ripple at δ = 0.10, but not at δ = 0.005. H_direct predicts no difference.
+  - *Hilbert step:* H_Hilb predicts `POD1s` = `HPOD` to numerical precision.
+- **Varied:** as the T1 sweep (δ, SNR, L, B). **Fixed:** everything else.
+- **Missing case.** The scenario has no frequency modulation, so "frequency moving across bins" is tested only through the two-tone band. A field version of T5's FM sweeps would test it directly; not yet built.
+- **Analysis:** `run_t8_coef_compare.m` (full sweep to `Results_T8/`; `quick = true` for `Results_T8_quick/`). The component tests check the coefficient's IF and the one-sided reconstruction.
+- **Decision rule.**
+  - H_coh is supported if `Fixed_comb`'s ripple ratio falls below `HPOD_comb`'s by more than 2× at δ = 0.10 but not at δ = 0.005, and `Coef_pk`'s shortest resolved dwell stays near its window at every B.
+  - H_direct is supported if `Fixed` and `Coef_pk` match HPOD within the count noise everywhere.
+  - H_Hilb is supported if `POD1s` and `HPOD` agree to better than 10⁻³ relative in every metric.
+- **Quick run (2026-10-23; δ = 0.10, 10 dB, L = 8λ, B = Δf and 4Δf, one schedule).**
+  - `POD1s` matched `HPOD` to about 10⁻⁶.
+  - `Fixed_sep` matched `HPOD_sep` at B = Δf, with 2.3× the IF spread at 4Δf.
+  - `Fixed_comb`'s ripple was 0.18–0.22, against 0.44–0.56 for `HPOD_comb` (ratio to the exclusive baseline: 9 and 24, against 64 and 118).
+  - `Coef_pk` resolved only dwells of 3 T_b or more (window 5 T_b), with IF spread close to `HPOD_sep`'s and an unexplained bias of 0.5% of Δf.
+  - All consistent with H_coh and H_Hilb; the full sweep, including δ = 0.005, is not run yet.
+- **Cost and risk.** Tens of minutes of compute. Risk: with near-equal tone energies the HPOD modes mix (Horel), which would penalise HPOD_comb rather than the fixed projection.
+
 ## Papers requested
 
 | Paper | DOI / source | Why it matters | Status |
@@ -394,3 +455,4 @@ Not in the library (DOIs checked on Crossref 2026-10-21): Mandel 1974 (10.1119/1
   - **Overall view (H2 + H3) unchanged and firmer;** confidence in the practical rules raised to moderate–high, except the Carson cap and space for time.
   - Corrected two points in the benchmark README: "a hundredth of Δf" is a thousandth, and the separate-band summary now notes that B = Δf/2 needs about 3 T_b.
   - Queued for topic pages: `time-frequency-methods` (T1 answers its "How fast can a switch be resolved?" open question; checklist step 2; inverse-SPOD pitfall). Queued for notes: `nekkanti-2021-spod-reconstruction-denoising-frequency-time` (IF floor of block-wise inversion).
+- 2026-10-23: added what HPOD adds when the band comes from `tcoeffs`, to the short answer and to section 4. In short: nothing for one bin and one mode; a coherent, energy-optimal cross-bin trace otherwise; and the Hilbert step is redundant on a one-sided reconstruction. Added test T8, with the methods built into the benchmark (`Coef_pk`, `Fixed_sep/comb`, `POD1s_sep/comb`; `run_t8_coef_compare.m`) and a quick run whose results agree with the reasoning. Two uncertainty rows added. The full T8 sweep has not been run. Nothing new queued for topic pages or notes until the full sweep is in.
