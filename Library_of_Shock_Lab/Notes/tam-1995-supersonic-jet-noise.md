@@ -19,7 +19,7 @@ flow: ["round-jet", "supersonic", "underexpanded", "overexpanded", "heated"]
 phenomena: ["mixing-noise", "Mach-wave-radiation", "BBSAN", "screech", "shock-cells", "mode-switching", "directivity"]
 params: {}
 topics: ["jet-noise-mechanisms", "screech", "shock-cell-models", "screech-staging-and-mode-switching", "screech-frequency-and-global-modes"]
-related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "raman-1998-supersonic-jet-screech-review", "papamoschou-1988-compressible-turbulent-shear-layer", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
+related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "raman-1998-supersonic-jet-screech-review", "papamoschou-1988-compressible-turbulent-shear-layer", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "tam-1984-sound-instability-waves-supersonic-axisymmetric-jets", "tam-1994-turbulent-mixing-noise-supersonic-jets"]
 cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "norum-1983-screech-suppression-supersonic-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets"]
 summary: "Review: mixing noise as Mach waves from instability waves (45–60°), BBSAN from instability wave × shock-cell modes, screech via external feedback and an St formula; amplitude unpredictable"
 ---
@@ -52,7 +52,7 @@ A review of the three components of noise from imperfectly expanded supersonic j
   - Intensity falls with jet temperature, especially below M_j ≈ 1.5 (Massey et al. 1994). A thick lip raised screech by 10 dB without changing directivity ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md)).
   - Screech is very sensitive to surroundings: a flapping plane rotated almost 90° between nominally identical tests a month apart (Seiner et al. 1986; p. 36).
 - **Mixing-noise theory vs data** (p. 29–30, Fig. 6):
-  - Tam & Chen (1993) directivities at fixed St agree with Seiner et al. (1992) Mach 2, T_r = 1114 K data generally within 2.5 dB, with one adjustable constant. The 500 K case is equally good except at very low St.
+  - Tam & Chen (1993; AIAA 93-4408, the conference version of [Tam & Chen 1994](tam-1994-turbulent-mixing-noise-supersonic-jets.md)) directivities at fixed St agree with Seiner et al. (1992) Mach 2, T_r = 1114 K data generally within 2.5 dB, with one adjustable constant. The 500 K case is equally good except at very low St.
   - The fitted constant implies large-structure u_rms at the nozzle exit of 1.5% (500 K) and 1.2% (1114 K) of U_j, which Tam judges plausible.
 - **Mach wave picture** (p. 27–28):
   - The peak-noise direction follows the Mach angle of the most amplified instability wave, and the spectral peak St equals that wave's St (Tam et al. 1992; McLaughlin et al. 1992 helium/air jets agree).
@@ -88,10 +88,10 @@ A review, so no new experiments. The data shown come from other groups:
 | 7 | Norum & Seiner 1982a vs Tam et al. 1985 | M_j 1.82, M_d 2.0, r/D 0.38 |
 | 10 | Rosfjord & Toms 1975 | convergent nozzle, NPR ≈ 2–7, T_r 18/323/529 °C |
 
-- **Stochastic instability-wave model of large structures** (p. 24–27; Tam & Chen 1979, 1993):
+- **Stochastic instability-wave model of large structures** (p. 24–27; Tam & Chen 1979, 1993, journal version [Tam & Chen 1994](tam-1994-turbulent-mixing-noise-supersonic-jets.md)):
   - Assumption: the jet spreads slowly, so turbulence is in quasi-equilibrium and large-scale fluctuations can be written as a superposition of normal modes, i.e. instability waves, Fourier-decomposed in azimuth (eq. 1).
   - Random amplitudes a_n(ω) are fixed by self-similarity: the near-lip mixing layer has no intrinsic length or time scale (spectra collapse on fU_j/x), so the lip excitation must be delta-correlated in azimuth and time (eq. 3), giving eq. 4. The correlation area D̃ is the only unknown.
-  - Instability-wave solution: classical parallel theory and multiple-scales expansions (Saric & Nayfeh 1975, Crighton & Gaster 1976) are not uniformly valid outside the jet, so cannot give radiation (Tam & Morris 1980). Tam & Burton (1984) match an inner multiple-scales solution to an outer Fourier-transform solution by intermediate matching, giving one uniformly valid solution into the far field.
+  - Instability-wave solution: classical parallel theory and multiple-scales expansions (Saric & Nayfeh 1975, Crighton & Gaster 1976) are not uniformly valid outside the jet, so cannot give radiation (Tam & Morris 1980). Tam & Burton (1984; Part 2, axisymmetric jets, is [indexed](tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md)) match an inner multiple-scales solution to an outer Fourier-transform solution by intermediate matching, giving one uniformly valid solution into the far field.
   - Data dependence: none; it is a model needing the mean flow, a stability solver and one noise-calibrated constant.
 - **Shock-cell model** (p. 30–32): linear vortex sheet (Prandtl 1904, Pack 1950), eqs. 5–6. Extended to finite-thickness mean flow by multiple scales (Tam et al. 1985). Valid strictly only near the exit, where the mixing layer is thin.
 - **BBSAN 1D model** (p. 32–34): plane-wave instability wave × cosine shock cell; the full 3D theory is Tam (1987).
@@ -172,6 +172,6 @@ This is the standard reference for the "pre-guided-mode" picture of supersonic j
 - **Non-circular jets:** listed as a key open problem (p. 40); Tam (1988) gives a rectangular-jet screech formula. Relevant background for the twin-rectangular work in [jeun-2024](jeun-2024-screech-coupling-closure-rectangular-twin-jets.md).
 - **Related works cited, candidates for `/add-paper`:**
   - Tam & Tanna 1982 (BBSAN peak-frequency relation); Tam, Seiner & Yu 1986 (BBSAN–screech link, eq. 12); Tam 1987 (BBSAN stochastic theory); Tam 1988 (rectangular-jet shock cells and screech).
-  - Tam & Burton 1984 (instability-wave sound radiation by matched asymptotics); Tam & Chen 1979, 1993; Tam, Chen & Seiner 1992.
+  - Tam & Burton 1984 (instability-wave sound radiation by matched asymptotics; Parts 1 and 2 in one reference, Part 2 now [indexed](tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md)); Tam & Chen 1979, 1993 (the 1993 AIAA paper is the conference version of [Tam & Chen 1994](tam-1994-turbulent-mixing-noise-supersonic-jets.md), now indexed); Tam, Chen & Seiner 1992.
   - Tam, Jackson & Seiner 1985 (multiple-scales shock cells); Tam, Ahuja & Jones 1994 (screech from free and ducted jets).
   - Powell 1953a,b; Harper-Bourne & Fisher 1974; Seiner et al. 1992 (temperature effect); Rosfjord & Toms 1975; Massey et al. 1994 (heated screech); Norum 1983 (screech suppression, now [indexed](norum-1983-screech-suppression-supersonic-jets.md)).

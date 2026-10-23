@@ -22,3 +22,9 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech
 - (add-paper norum-1983-screech-suppression-supersonic-jets, 2026-10-24) Line 74 groups Norum 1983 with devices whose streamwise vortices should cut shock noise. Norum attributes the large cuts from long slots and the bevel to breaking the axisymmetric shock train, not to streamwise vortices, and a thin lip leaves the first cells unchanged ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md), p. 239). Reword the attribution; it is Suzuki & Lele's reading, not Norum's.
+
+## gee-2010-near-field-vector-intensity-solid-rocket-motor
+- (add-paper tam-2008-sources-of-jet-noise-experimental-evidence, 2026-10-24) Line 46 cites [Tam et al. 2008](tam-2008-sources-of-jet-noise-experimental-evidence.md) for reading the sideline- and upstream-pointing intensity vectors *near the nozzle* as fine-scale turbulence noise. Tam et al.'s fine-scale source maps peak at or beyond the end of the potential core (x/D ≈ 6–17, Figs 32–35, p. 286–289), not near the nozzle. Add that caveat; the attribution supports the two-source split, not the source location.
+
+## tam-1996-two-components-turbulent-mixing-noise-supersonic-jets
+- [PDF] (add-paper tam-1984-sound-instability-waves-supersonic-axisymmetric-jets, 2026-10-24) Line 78, "the wavy-wall analogy of Tam & Burton (1984)": Tam 1996's ref. 4 covers both parts of Tam & Burton, and the indexed note is Part 2 (axisymmetric jets), which does not use a wavy-wall analogy. The analogy is probably Part 1 (two-dimensional mixing layers, JFM 138, 249–271). Check the citation in the PDF (p. 8–9) and say which part; link [Part 2](tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md) only if it is meant. Left unlinked.

@@ -1,6 +1,6 @@
 # Papers to get
 
-The one list of papers still to obtain (11 papers, checked 2026-10-24). It merges the rest of the original 100-paper candidate list with the group papers from `group_papers.md` that the library doesn't hold. A paper counts as held if it has a note or its PDF is anywhere in `Paper_PDFs/` (including `_Unprocessed/` and `_Off_Topic/`). Save new PDFs into `Paper_PDFs/_Unprocessed/` under any name, run `/add-paper` (which files each indexed PDF under its primary topic), then remove the paper from this list.
+The one list of papers still to obtain (10 papers, checked 2026-10-24). It merges the rest of the original 100-paper candidate list with the group papers from `group_papers.md` that the library doesn't hold. A paper counts as held if it has a note or its PDF is anywhere in `Paper_PDFs/` (including `_Unprocessed/` and `_Off_Topic/`). Save new PDFs into `Paper_PDFs/_Unprocessed/` under any name, run `/add-paper` (which files each indexed PDF under its primary topic), then remove the paper from this list.
 
 DOIs were checked against Crossref. Where Crossref returned only an earlier conference version, the DOI column says so and gives that version's DOI, which may help you find the journal paper. All of these are probably paywalled (fetch through Monash library) unless the note says otherwise. "Group paper" means a Shock Lab group author, who may be able to send a copy.
 
@@ -35,7 +35,6 @@ DOIs were checked against Crossref. Where Crossref returned only an earlier conf
 | Paper                                                                                                                   | DOI                                                                             | Note                |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------- |
 | Seiner, Ponton, Jansen & Lagen 1992, *The effects of temperature on supersonic jet noise emission*, DGLR/AIAA 92-02-046 | no DOI found                                                                    | NTRS copy may exist |
-| Tam & Chen 1994, *Turbulent mixing noise from supersonic jets*, AIAA J 32                                               | journal DOI not confirmed; conference version AIAA 93-4408: 10.2514/6.1993-4408 |                     |
 
 ## Experimental methods
 

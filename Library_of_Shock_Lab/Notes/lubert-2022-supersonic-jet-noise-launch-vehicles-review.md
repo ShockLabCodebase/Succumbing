@@ -96,7 +96,7 @@ A narrative review; no new experiments. The map below lists sections, page range
 | I. Intro, SP-8072 history | 2–5 | Eldred 1971 (SP-8072); McInerny 1990, 1992b; Lubert 2018 review; Himelblau 2001 |
 | II. Supersonic jets vs rockets | 5–7 | Tam 2009; Viswanathan 2002, 2009; Oertel 1982; Table I from McInerny 1992b, 2010 |
 | III A. Sound power, OASPL_max | 7–9 | Chobotov & Powell 1957; Guest 1964; Sutherland 1993; McInerny 1996a; Greska 2008; Mathews 2021 |
-| III B. Spectra, nonlinearity, scaling, clusters | 9–12 | Tam 1996, 2008 similarity spectra; McInerny 1996b; Gee 2013a; Muhlestein 2012; Potter & Crocker 1966; Tedrick 1964; Kandula 2008a; Pineau & Bogey 2021b |
+| III B. Spectra, nonlinearity, scaling, clusters | 9–12 | Tam 1996, [2008](tam-2008-sources-of-jet-noise-experimental-evidence.md) similarity spectra; McInerny 1996b; Gee 2013a; Muhlestein 2012; Potter & Crocker 1966; Tedrick 1964; Kandula 2008a; Pineau & Bogey 2021b |
 | III C. Source location | 12–14 | Potter 1968; Gee 2021 (plotting error); Gee 2013b, 2016b; James 2014b; Varnier 2001 |
 | III D. Directivity | 13–16 | Greska 2005 (M_CO); James 2014b; Bassett 2021; Mathews 2021; Haynes & Kenny 2009; Leete 2021 (lobes) |
 | IV. Impinging plumes | 16–20 | Nonomura & Fujii 2010; Tsutsumi 2014; Akamine 2015, 2018, 2021; Brehm 2016; Kurokawa 2020; Jiang 2019 review |

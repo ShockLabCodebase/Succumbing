@@ -19,7 +19,7 @@ flow: ["round-jet", "supersonic", "underexpanded", "heated"]
 phenomena: ["screech", "BBSAN", "shock-cells", "directivity", "helical"]
 params: {"M_j": "1.0–2.4", "M_d": "1.0, 1.5, 2.0"}
 topics: ["screech", "jet-noise-mechanisms", "shock-cell-models", "screech-frequency-and-global-modes"]
-related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "raman-1998-supersonic-jet-screech-review"]
+related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "raman-1998-supersonic-jet-screech-review", "tam-1984-sound-instability-waves-supersonic-axisymmetric-jets"]
 cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles"]
 summary: "Screech as the θ → 180° limit of BBSAN: BBSAN peaks at shock Fourier k_n, a_∞/f_pD linear in cos θ ends on the tone; weakest-link theory; semi-empirical St formula for hot jets"
 ---
@@ -61,7 +61,7 @@ The paper argues that screech is a limiting case of broadband shock-associated n
 - **Angle convention:** θ is measured from the downstream jet axis, so θ = 180° is the nozzle inlet direction (p. 4). Norum & Seiner's ψ is measured from the inlet axis, so θ = 180° − ψ.
 - **Model ingredients** (p. 4–5, 12):
   - Mean flow: uniform core of radius h plus half-Gaussian mixing layer of half-width b (eq. 2.4); density from Crocco's relation. h and b are tied by momentum-flux conservation, leaving b as the single free parameter (p. 5).
-  - Instability wave: locally parallel, inviscid compressible stability on this profile, following Tam & Burton (1984), giving complex K(f, b). The **helical** mode is used throughout, as the preferred mode for M_j > 1.3 (p. 5).
+  - Instability wave: locally parallel, inviscid compressible stability on this profile, following [Tam & Burton (1984)](tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md), giving complex K(f, b). The **helical** mode is used throughout, as the preferred mode for M_j > 1.3 (p. 5).
   - Shock cells: k_n from the multiple-scales shock-cell model of Tam, Jackson & Seiner (1985) on the same b (p. 5).
   - Solution: iterate, using Im(K) = 0 to find b, then eq. 2.2 to find f_n (p. 5). The effective jet diameter in both models is D_j (p. 11).
   - Resolution, solver details and tabulated U_c, b or k_n values are not given.
@@ -140,6 +140,6 @@ This project studies resonance and feedback in Shock Lab group jet experiments, 
   - Eq. 2.2 is the BBSAN peak-frequency relation used in later models; [wong-2021](wong-2021-wavepacket-modelling-bbsan.md) revisits BBSAN with wavepacket models, and [tam-1996](tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md) provides the mixing-noise spectra that BBSAN sits on.
   - [lubert-2022](lubert-2022-supersonic-jet-noise-launch-vehicles-review.md) reports that screech and BBSAN are generally not seen at full rocket scale, so this paper bears on lab-scale and heated-jet tests rather than on launch-vehicle predictions directly.
 - **Data source:** all Figs. 1–5 data are from [norum-1982](norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets.md). That note's narrowband observations (BBSAN peak rising from ~5 kHz upstream to 10–15 kHz sideline; tab removing tones) are consistent with Fig. 4 here once angles are converted (θ = 180° − ψ).
-- **Candidates for `/add-paper`:** Tam & Tanna 1982 (BBSAN model); Tam, Jackson & Seiner 1985 (multiple-scales shock cells); Tam & Burton 1984; Yu & Seiner 1983; Seiner & Yu 1984; Harper-Bourne & Fisher 1973; Powell 1953; Rosfjord & Toms 1975. The Tam 1995 review (*Supersonic jet noise*, already in `Paper_PDFs/`) summarises this work.
+- **Candidates for `/add-paper`:** Tam & Tanna 1982 (BBSAN model); Tam, Jackson & Seiner 1985 (multiple-scales shock cells); Tam & Burton 1984 (Part 2 now [indexed](tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md)); Yu & Seiner 1983; Seiner & Yu 1984; Harper-Bourne & Fisher 1973; Powell 1953; Rosfjord & Toms 1975. The Tam 1995 review (*Supersonic jet noise*, already in `Paper_PDFs/`) summarises this work.
 
 - **See also:** [tam-1995](tam-1995-supersonic-jet-noise.md), Tam's later review that summarises this BBSAN–screech link.

@@ -126,11 +126,13 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 ## Papers
 
 - [Michalke 1984](../Notes/michalke-1984-survey-jet-instability-theory.md): spatial LSA review of round jets; divergence caps the gain; nozzle feedback.
+- [Tam & Burton 1984](../Notes/tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md): Round-jet matched asymptotics: non-parallel instability wave (ε ln ε gauges) + Fourier–Hankel outer field; fits M 2.1 forced-jet hot-wire and near-field contours (synthesis pending).
 - [Papamoschou & Roshko 1988](../Notes/papamoschou-1988-compressible-turbulent-shear-layer.md): convective Mach number; vortex-sheet vs finite-thickness stabilisation.
 - [Tam & Hu 1989](../Notes/tam-1989-three-families-instability-waves-high-speed-jets.md): three wave families; founds the guided jet mode; closed-form branch points.
 - [Huerre & Monkewitz 1990](../Notes/huerre-1990-local-global-instabilities-spatially-developing-flows.md): absolute/convective instability; pinch criterion; frequency selection.
 - [Tam & Ahuja 1990](../Notes/tam-1990-theoretical-model-discrete-tone-impinging-jets.md): guided modes close impinging loops; duct-type cut-offs; least-dispersive St.
 - [Tam & Norum 1992](../Notes/tam-1992-impingement-tones-large-aspect-ratio-rectangular-jets.md): Impinging AR 4.24 rectangular jets: 20+ tones are combinations of a varicose and a higher flapping tone; planar vortex-sheet upstream-mode bands bound both (synthesis pending).
+- [Tam & Chen 1994](../Notes/tam-1994-turbulent-mixing-noise-supersonic-jets.md): Stochastic instability-wave model of Mach-wave mixing noise: white-noise lip forcing, one fitted constant; Mach 2 directivities at T_0 500/1114 K within ~2.5 dB (synthesis pending).
 - [Suzuki & Lele 2003](../Notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): weak shocks as rays; total reflection as Snell's law; leakage on unsteady fields.
 - [Ray 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): PSE wavepacket as BBSAN source (on shock-cell models).
 - [McKeon & Sharma 2010](../Notes/mckeon-2010-critical-layer-framework-turbulent-pipe-flow.md): nonlinearity as forcing of the mean-flow operator.

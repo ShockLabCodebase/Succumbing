@@ -130,6 +130,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `PIV-stereo`: stereoscopic PIV (add `PIV` or `PIV-TR` too)
 - `hot-wire`
 - `laser-scattering`: line-of-sight laser light scattering by density fluctuations or shocks, collected on a photodetector
+- `Rayleigh-scattering`: unseeded molecular Rayleigh scattering from a probe volume, for point density (and velocity) fluctuations
 - `pressure-probe`: static or total pressure surveys in the flow
 - `surface-pressure`: static pressure taps or unsteady transducers on a surface (impingement plates, lift plates, deflectors, airframe panels)
 - `microphones-near`: near-field microphones / pressure sensors
@@ -182,6 +183,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `Abel-inversion`
 - `tomography`
 - `LSA-local`: local (parallel) spatial/temporal linear stability
+- `multiple-scales`: weakly non-parallel (slowly varying, WKB / multiple-scales) linear stability with amplitude equations, often matched asymptotically to the acoustic far field
 - `LSA-Floquet`: Floquet / periodic-base-flow stability
 - `LSA-global`: global or biglobal stability
 - `vortex-sheet`: vortex-sheet dispersion models

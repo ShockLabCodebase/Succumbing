@@ -174,15 +174,18 @@ One rig with a notched screech-free twin, a β and TTR sweep, mean PIV and a nea
 - [Norum & Seiner 1982](../Notes/norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets.md): Langley benchmark data (shock-cell pressure, OASPL, narrowband spectra, tab on/off) behind BBSAN and screech models.
 - [Tam & Tanna 1982](../Notes/tam-1982-shock-associated-noise-cd-nozzles.md): origin of the BBSAN mechanism, peak-frequency formula and β⁴ law.
 - [Michalke 1984](../Notes/michalke-1984-survey-jet-instability-theory.md): spatial LSA review; near-field fronts of growing waves are not sound; flight stretching; heating destabilises.
+- [Tam & Burton 1984](../Notes/tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md): Round-jet matched asymptotics: non-parallel instability wave (ε ln ε gauges) + Fourier–Hankel outer field; fits M 2.1 forced-jet hot-wire and near-field contours (synthesis pending).
 - [Tam et al. 1986](../Notes/tam-1986-bbsan-screech-relationship.md): multiple BBSAN peaks from shock Fourier modes; screech as the BBSAN upstream limit.
 - [Papamoschou & Roshko 1988](../Notes/papamoschou-1988-compressible-turbulent-shear-layer.md): defines the convective Mach number behind Mach-wave directivity.
 - [Tam & Hu 1989](../Notes/tam-1989-three-families-instability-waves-high-speed-jets.md): three instability families; the supersonic-wave speed is the theory behind M_c; KH merges into it at high M_j.
+- [Tam & Chen 1994](../Notes/tam-1994-turbulent-mixing-noise-supersonic-jets.md): Stochastic instability-wave model of Mach-wave mixing noise: white-noise lip forcing, one fitted constant; Mach 2 directivities at T_0 500/1114 K within ~2.5 dB (synthesis pending).
 - [Tam 1995](../Notes/tam-1995-supersonic-jet-noise.md): pre-wavepacket synthesis of mixing noise, BBSAN and screech.
 - [Tam et al. 1996](../Notes/tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md): large- and fine-scale similarity spectra and amplitude scalings.
 - [Kerechanin et al. 2001](../Notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts change mixing noise, BBSAN and screech of an AR 3 jet.
 - [Suzuki & Lele 2003](../Notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): shock leakage at vortex saddles, a local view of shock noise.
 - [Ray et al. 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): first-principles linearised-Euler BBSAN; local Mach angles, ring sources, entropy source.
 - [Samimy et al. 2006](../Notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
+- [Tam et al. 2008](../Notes/tam-2008-sources-of-jet-noise-experimental-evidence.md): Spectra, power laws, 2-mic and Rayleigh flow–sound correlations, mirror maps: coherent aft large-structure noise vs incoherent sideline fine-scale noise (synthesis pending).
 - [Cavalieri et al. 2013](../Notes/cavalieri-2013-wavepackets-velocity-field-turbulent-jets.md): low-energy m = 0/1 linear wavepackets carry the low-angle sound.
 - [André et al. 2013](../Notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): screech-free notched twin; screech damps the shock train and lowers BBSAN.
 - [Jordan & Colonius 2013](../Notes/jordan-2013-wave-packets-turbulent-jet-noise.md): Review: jet mixing noise from low-m, intermittent wavepackets; linear PSE/LSA on the turbulent mean matches them to the core end; open: scale separation, intermittency (synthesis pending).
