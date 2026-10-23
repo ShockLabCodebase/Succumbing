@@ -20,7 +20,7 @@ phenomena: ["Mach-wave-radiation", "directivity", "noise-control", "installation
 params: {"vehicle": "Epsilon", "scale": "1/42", "M_e": "3.7", "M_j": "3.3", "NPR": "89.1", "TR": "12.0", "Re": "2.2×10⁵", "H/D_e": "9, 14, 22"}
 topics: ["rocket-noise-models", "impinging-jets-and-edge-tones", "rocket-noise-measurements"]
 related: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "casalino-2009-hybrid-empirical-caa-rocket-noise", "ranow-2021-acoustic-prediction-rocket-flame-deflector", "weightman-2019-sound-production-impinging-supersonic-jets", "henderson-2002-flow-structure-supersonic-impinging-jets", "james-2012-directivity-curves-rocket-noise-model", "gee-2023-sls-artemis-i-far-field-noise", "reichman-2018-qm2-srm-far-field-acoustics"]
-cites: ["casalino-2009-hybrid-empirical-caa-rocket-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "krothapalli-1999-flow-field-noise-supersonic-impinging-jet", "panda-2013-noise-sources-rocket-test-firings-launch-phased-array"]
+cites: ["casalino-2009-hybrid-empirical-caa-rocket-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "krothapalli-1999-flow-field-noise-supersonic-impinging-jet", "nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves", "panda-2013-noise-sources-rocket-test-firings-launch-phased-array"]
 summary: "1/42 SRM subscale tests (same U_e, Re > 10⁵ ⇒ same SPL) plus RANS/LES + FW-H (≤4 dB high): Epsilon fairing level worst at H/D_e 14 from ground-reflected Mach waves; front cover −3 dB"
 ---
 # Study on acoustic prediction and reduction of Epsilon launch vehicle at lift-off

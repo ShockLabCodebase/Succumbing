@@ -20,7 +20,7 @@ phenomena: ["guided-jet-mode", "KH-wavepackets"]
 params: {"M_j": "0.9", "Re": "≈10⁶ (LES); 10⁵ (stability)", "T_j/T∞": "1", "m": "0–4"}
 topics: ["linear-models", "linear-operator-methods"]
 related: ["towne-2017-acoustic-resonance-potential-core-subsonic-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2022-database-reduced-complexity-modeling", "jordan-2018-jet-flap-interaction-tones", "pickering-2020-lift-up-kh-orr-jets", "nogueira-2024-guided-jet-waves", "edgington-mitchell-2020-waves-in-screeching-jets", "towne-2018-spod-relationship-dmd-resolvent"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "jordan-2013-wave-packets-turbulent-jet-noise", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "michalke-1984-survey-jet-instability-theory", "tam-1989-three-families-instability-waves-high-speed-jets", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
+cites: ["bres-2017-unstructured-les-supersonic-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "huerre-1990-local-global-instabilities-spatially-developing-flows", "jordan-2013-wave-packets-turbulent-jet-noise", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "michalke-1984-survey-jet-instability-theory", "tam-1989-three-families-instability-waves-high-speed-jets", "tam-1990-theoretical-model-discrete-tone-impinging-jets", "towne-2017-acoustic-resonance-potential-core-subsonic-jets"]
 summary: "M_j 0.9 jet LES vs mean-flow global stability: SPOD gives the KH wavepacket, near-nozzle CSD gives trapped acoustic duct modes (m, n_r, n_x) from k⁺/k⁻ beating; explains near-nozzle tones"
 ---
 # Wavepackets and trapped acoustic modes in a turbulent jet: coherent structure eduction and global stability
@@ -209,4 +209,4 @@ The paper is a reference case for resonance in subsonic jets. It is also an earl
   - [Towne et al. 2017](towne-2017-acoustic-resonance-potential-core-subsonic-jets.md), *Acoustic resonance in the potential core of subsonic jets* (JFM 825, 1113–1152), the companion local/weakly non-parallel theory paper (now in the library).
   - Tam & Hu 1989 (three families of waves); Suzuki & Colonius 2006 (near-field array tones).
   - Nichols & Lele 2011 (global modes of a supersonic jet); Garnaud et al. 2013a,b.
-  - Brès et al. 2017/2018 (the LES); Schmidt et al. 2018 (*Spectral analysis of jet turbulence*); Towne, Schmidt & Colonius 2018 (SPOD).
+  - Brès et al. 2017/2018 (the LES; 2017 now [indexed](bres-2017-unstructured-les-supersonic-jets.md)); Schmidt et al. 2018 (*Spectral analysis of jet turbulence*); Towne, Schmidt & Colonius 2018 (SPOD).

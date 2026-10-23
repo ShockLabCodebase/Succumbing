@@ -20,7 +20,7 @@ phenomena: ["source-location", "noise-control", "installation-effects"]
 params: {"vehicle": "Antares stage 1 (2 × AJ26), 25,000 lbf hybrid", "thrust": "3265 kN (Antares)", "array range": "400 ft"}
 topics: ["rocket-noise-measurements"]
 related: ["lubert-2022-supersonic-jet-noise-launch-vehicles-review", "casalino-2009-hybrid-empirical-caa-rocket-noise", "ranow-2021-acoustic-prediction-rocket-flame-deflector", "gee-2016-near-field-intensity-static-rocket-firings", "gee-2010-near-field-vector-intensity-solid-rocket-motor", "tsutsumi-2015-epsilon-liftoff-acoustics"]
-cites: []
+cites: ["tam-2008-sources-of-jet-noise-experimental-evidence"]
 summary: "70-mic phased array at Wallops pad 0A: Antares static-fire noise comes from the water-quenched flame-duct exit, not the plume; at liftoff sources move mount → duct → deck → free plume"
 ---
 # Identification of noise sources during rocket engine test firings and a rocket launch using a microphone phased-array

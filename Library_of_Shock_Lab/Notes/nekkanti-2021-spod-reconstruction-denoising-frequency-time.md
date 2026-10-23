@@ -73,7 +73,7 @@ The paper turns SPOD from a purely analytic tool into a basis for rebuilding dat
 | Item | Value | Page |
 |---|---|---|
 | Flow | isothermal subsonic round jet, M_j = 0.4, Re = ρ_jU_jD/μ_j = 0.45 × 10⁶, T_j/T∞ = 1 | 8 |
-| Source | LES of Brès & Lele (2019), compressible unstructured finite-volume solver "Charles" (Brès et al. 2017) | 8 |
+| Source | LES of Brès & Lele (2019), compressible unstructured finite-volume solver "Charles" ([Brès et al. 2017](bres-2017-unstructured-les-supersonic-jets.md)) | 8 |
 | Snapshots | n_t = 10,000 at Δt c∞/D = 0.2 | 8 |
 | Domain | interpolated to cylindrical grid, x ∈ [0, 30], r ∈ [0, 6] (D units) | 8 |
 | Variable | pressure only, azimuthal Fourier component m = 1 (complex data) | 8 |
@@ -82,7 +82,7 @@ The paper turns SPOD from a purely analytic tool into a basis for rebuilding dat
 
 Check: (10,000 − 128)/128 = 77.1 → 77 blocks; 77 × 129 = 9933 modes, as quoted on p. 15.
 
-- **Simulation side:** the LES is used as-is; the paper gives only the solver and refers to Brès et al. (2017, 2018, 2019) for numerics (p. 8). There is no stability, resolvent or reduced-order modelling. The same M 0.4 jet database underlies [towne-2018](towne-2018-spod-relationship-dmd-resolvent.md), [schmidt-2018](schmidt-2018-spectral-analysis-jet-turbulence.md) and [schmidt-2017](schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet.md).
+- **Simulation side:** the LES is used as-is; the paper gives only the solver and refers to Brès et al. ([2017](bres-2017-unstructured-les-supersonic-jets.md), 2018, 2019) for numerics (p. 8). There is no stability, resolvent or reduced-order modelling. The same M 0.4 jet database underlies [towne-2018](towne-2018-spod-relationship-dmd-resolvent.md), [schmidt-2018](schmidt-2018-spectral-analysis-jet-turbulence.md) and [schmidt-2017](schmidt-2017-wavepackets-trapped-acoustic-modes-turbulent-jet.md).
 - **Denoising test data:** surrogate data, LES pressure plus additive Gaussian white noise, mimicking heavily contaminated PIV whose noise variance equals the signal variance (p. 15–16).
 
 ### SPOD (Welch) as used here (§2.1, p. 4–5)

@@ -127,6 +127,7 @@ An Epsilon boom microphone with the nozzle 8.7 D_e above the pad shows no tone, 
 - [Henderson 2002](../Notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): cycle of an NPR 4.03 large-plate tone; wall-jet source at 2.6R; Powell N + p ≈ 4.4; zone of silence.
 - [Casalino 2009](../Notes/casalino-2009-hybrid-empirical-caa-rocket-noise.md) (not tagged): pad CAA shows reflected waves reaching the lip; feedback untested.
 - [Haynes 2009](../Notes/haynes-2009-sp-8072-dsm-ii-ares-i-lift-off.md) (not tagged): potential core ended at the deflector in SP-8072.
+- [Nonomura et al. 2011](../Notes/nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves.md): WCNS implicit LES, M_j 2 jet on a 45° plate (L/D 5, 10; TR 1, 5.4): free-jet and wall-jet Mach waves plus broadband impingement waves SP-8072 omits; no tones (synthesis pending).
 - [Gee 2012](../Notes/gee-2012-reusable-srm-noise-spectral-statistical.md) (not tagged): terrain impingement removes high frequencies and skewness.
 - [Mitchell et al. 2012](../Notes/mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md): first TR schlieren (250–500 kfps) of the impinging loop; λ ≈ 0.05d lip bands from the arriving wave, ring at x/d ≈ 0.25, no collective interaction (synthesis pending).
 - [Panda 2013](../Notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md) (not tagged): full-scale pad source maps; duct exit dominates; no tones.

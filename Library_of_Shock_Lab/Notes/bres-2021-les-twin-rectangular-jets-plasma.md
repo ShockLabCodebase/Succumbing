@@ -111,7 +111,7 @@ The paper reports a first "blind" LES (run without seeing the data) of the Ohio 
 ### LES numerics (p. 7, 9)
 | Item | Value / choice |
 |---|---|
-| Solver | Charles (Cascade Technologies), unstructured compressible finite volume; details in refs. 18–21 (Brès et al. 2017, 2018, 2019) |
+| Solver | Charles (Cascade Technologies), unstructured compressible finite volume; details in refs. 18–21 (Brès et al. [2017](bres-2017-unstructured-les-supersonic-jets.md), 2018, 2019) |
 | Non-dimensionalization | h and c∞; p = ρT/γ, γ = 1.4 |
 | NPR = P_t/P∞ | 3.671 (ideally expanded for M = 1.5) |
 | NTR = T_t/T∞ | 1 (cold; T_j/T∞ = 0.69) |

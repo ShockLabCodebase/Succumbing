@@ -28,3 +28,9 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## tam-1996-two-components-turbulent-mixing-noise-supersonic-jets
 - [PDF] (add-paper tam-1984-sound-instability-waves-supersonic-axisymmetric-jets, 2026-10-24) Line 78, "the wavy-wall analogy of Tam & Burton (1984)": Tam 1996's ref. 4 covers both parts of Tam & Burton, and the indexed note is Part 2 (axisymmetric jets), which does not use a wavy-wall analogy. The analogy is probably Part 1 (two-dimensional mixing layers, JFM 138, 249–271). Check the citation in the PDF (p. 8–9) and say which part; link [Part 2](tam-1984-sound-instability-waves-supersonic-axisymmetric-jets.md) only if it is meant. Left unlinked.
+
+## ranow-2021-acoustic-prediction-rocket-flame-deflector
+- (add-paper nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves, 2026-10-24) Line 41: the separation shock is "stronger at steeper plate angles per Nonomura et al. 2011, 2016". [Nonomura et al. 2011](nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves.md) uses only a 45° plate and varies the nozzle–plate distance, not the angle, so the plate-angle trend can only come from the 2016 paper. Attribute it to 2016 and link 2011 for the small-distance separation only. Left unlinked.
+
+## nekkanti-2021-spod-reconstruction-denoising-frequency-time
+- (add-paper bres-2019-modelling-jet-noise-les-perspective, 2026-10-24) `facility` field (line 15) and source table (line 76) call the LES the "Brès & Lele (2019) database". [Brès & Lele 2019](bres-2019-modelling-jet-noise-les-perspective.md) is a review that documents no database of its own; the M 0.9 Charles LES comes from Brès et al. 2018 (JFM 851) and Schmidt et al. 2018. Say that the paper cites Brès & Lele 2019 for the LES, and name the actual source; then link the review. Left unlinked.

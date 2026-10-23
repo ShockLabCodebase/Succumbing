@@ -20,7 +20,7 @@ phenomena: ["KH-wavepackets", "cavity-tones"]
 params: {"M": "0.6 (cavity)", "M_j": "0.9 (jet)"}
 topics: ["modal-decomposition"]
 related: ["von-saldern-2026-band-ensemble-spod", "schmidt-2020-guide-spod", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2022-3d-spod-twin-rectangular-jet", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2022-database-reduced-complexity-modeling", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "schmidt-2019-streaming-spod"]
-cites: ["schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2022-3d-spod-twin-rectangular-jet"]
+cites: ["bres-2017-unstructured-les-supersonic-jets", "schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2022-3d-spod-twin-rectangular-jet"]
 summary: "Multitaper (sine-taper) SPOD with adaptive bandwidth per frequency: sharp tones plus low-variance broadband; matches Welch with 75% less data; cavity TR-PIV, M 0.9 jet LES"
 ---
 # Adaptive spectral proper orthogonal decomposition of broadband-tonal flows
@@ -79,7 +79,7 @@ The paper replaces Welch block-averaging in SPOD with multitaper estimation usin
   - Cavity: velocities scaled by u∞ and lengths by cavity depth D_c; frequencies in Hz to match Zhang et al. (p. 8). Facility details are not given in this paper (see Zhang et al. 2020, Exp. Fluids 61:226).
   - Derived (not stated): f_s = 16 kHz, so Nyquist is 8 kHz (matches the plotted range), the record is 1 s, and the bin width is 1 Hz with N_fft = N_t. For the jet, the record is 1800 D_j/u_j, bin width ΔSt ≈ 5.6×10⁻⁴, and Nyquist St ≈ 2.8.
 - **Simulation side (jet LES):**
-  - Unstructured LES with the solver "Charles" (Brès et al. 2017), from Brès et al. (2018), the nozzle boundary-layer study.
+  - Unstructured LES with the solver "Charles" ([Brès et al. 2017](bres-2017-unstructured-les-supersonic-jets.md)), from Brès et al. (2018), the nozzle boundary-layer study.
   - Variables are scaled by nozzle-exit centreline values (ρ_j, u_j, T_j), lengths by D_j and time by D_j/u_j (p. 14).
   - Data are interpolated to a non-uniform cylindrical grid of 656×138×128. Only the azimuthal Fourier component m = 0 is used, relying on rotational symmetry (p. 14).
   - The LES numerics, SGS model and resolution are *not* described here. Defer to Brès et al. (2017, 2018).

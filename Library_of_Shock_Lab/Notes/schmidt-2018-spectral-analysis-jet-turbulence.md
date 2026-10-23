@@ -78,7 +78,7 @@ The paper applies SPOD to three LES databases of isothermal round jets (M_j = 0.
 ## Setup / method
 
 ### LES databases (p. 2–3; Tables 1–2, p. 3, 5)
-- Solver: unstructured compressible LES code **Charles** (Brès et al. 2017b, AIAA J 55). Nozzle included; synthetic turbulence plus a wall model inside the nozzle give a turbulent exit boundary layer. Validation of the M 0.9 jet is in Brès et al. (2017a). A small coflow is present (Fig. 2 caption). Isothermal jets; M 1.5 is ideally expanded with a weak residual shock pattern for x ≲ 10 (p. 3).
+- Solver: unstructured compressible LES code **Charles** ([Brès et al. 2017b](bres-2017-unstructured-les-supersonic-jets.md), AIAA J 55). Nozzle included; synthetic turbulence plus a wall model inside the nozzle give a turbulent exit boundary layer. Validation of the M 0.9 jet is in Brès et al. (2017a). A small coflow is present (Fig. 2 caption). Isothermal jets; M 1.5 is ideally expanded with a weak residual shock pattern for x ≲ 10 (p. 3).
 - Non-dimensionalisation: nozzle-exit values; pressure by ρ_j U_j², lengths by D, time by D/U_j. St = ω/(2πM_j) (p. 3).
 - Re ≈ laboratory values of unnamed "companion experiments" (p. 3). (The PPRIME, Poitiers jet experiments per the [towne-2022](towne-2022-database-reduced-complexity-modeling.md) and [pickering-2020](pickering-2020-lift-up-kh-orr-jets.md) notes.)
 - Data interpolated to a structured cylindrical grid over x, r, θ ∈ [0, 30] × [0, 6] × [0, 2π]; Reynolds decomposition q = q̄ + q′ (eq. 2.1).
@@ -213,5 +213,5 @@ This is a core reference for the SPOD step of the CLAUDE.md workflow and for int
   - Schmidt et al. (2017), wavepackets and trapped acoustic modes (JFM 825); its PDF is already in `Paper_PDFs/` (`Schmidt-EtAl_2017_Wavepackets-And-Trapped-Acoustic-Modes-...`), so link its note once it exists.
   - Towne et al. (2017b), acoustic resonance in the potential core of subsonic jets (JFM 825).
   - Tissot et al. (2017), critical layer and Orr mechanism in jets.
-  - Brès et al. (2017b), unstructured LES of supersonic jets (AIAA J 55).
+  - Brès et al. (2017b), unstructured LES of supersonic jets (AIAA J 55; now [indexed](bres-2017-unstructured-les-supersonic-jets.md)).
   - Tam & Hu (1989), three families of instability waves.

@@ -20,7 +20,7 @@ phenomena: ["KH-wavepackets"]
 params: {"M_a": "0.5, 0.9", "T_j/T_inf": "0.85–1.76", "Re": "2e5–1.6e6", "m": "0–2", "St": "0.2–0.65 (agreement)"}
 topics: ["linear-models"]
 related: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent", "pickering-2020-lift-up-kh-orr-jets", "zhu-2021-recursive-one-way-navier-stokes", "nogueira-2021-wavepacket-modulation-shock-containing-jets"]
-cites: []
+cites: ["tam-1984-sound-instability-waves-supersonic-axisymmetric-jets"]
 summary: "Linear PSE on Gaussian-fitted PIV mean flows (M 0.5/0.9, cold/hot) matches POD-filtered near-field array pressure for 0.2 < St < 0.65, m 0–2: wavepackets are linear on the mean flow"
 ---
 # Instability wave models for the near-field fluctuations of turbulent jets

@@ -108,6 +108,7 @@ No paper uses SPOD, wavelets or Hilbert envelopes, so intermittent features (cra
 - [Tsutsumi 2015](../Notes/tsutsumi-2015-epsilon-liftoff-acoustics.md) (not tagged): Epsilon 1/42 subscale campaign; reflected Mach waves; no BBSAN.
 - [Gee 2016](../Notes/gee-2016-near-field-intensity-static-rocket-firings.md): GEM-60 PAGE intensity; 17–32D at 50 Hz; sideline radiation at high frequency.
 - [Reichman 2018](../Notes/reichman-2018-qm2-srm-far-field-acoustics.md): SLS QM-2 far field; Sk{∂p/∂t} 21–32 at 2.5 km; PAGE.
+- [Langenais et al. 2019](../Notes/langenais-2019-hot-supersonic-jet-noise-simulation-nonlinear-propagation.md): Hot M 3.1 overexpanded jet: tripped FV LES two-way coupled to nonlinear DG Euler CAA; OASPL ~1 dB; BBSAN upstream (m = 1); S(ṗ), WSF need the Euler solver (synthesis pending).
 - [Mathews 2021](../Notes/mathews-2021-falcon-9-far-field-noise.md): Falcon 9 at 7–14 km; 64° via M_co − M_v, η 0.34%, Sr 0.019.
 - [Lubert 2022](../Notes/lubert-2022-supersonic-jet-noise-launch-vehicles-review.md): review; η, 17–22 D_e source, Oertel directivity, no tones at full scale.
 - [Gee 2023](../Notes/gee-2023-sls-artemis-i-far-field-noise.md): SLS Artemis I; trench-directed ignition overpressure; ~20 dB above the assessment.

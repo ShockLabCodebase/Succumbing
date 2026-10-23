@@ -115,6 +115,7 @@ The statistical route of [Tan 2019b](../Notes/tan-2019-equivalent-bbsan-source-r
 - [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Brief JSV companion to Raman 1998: Powell's two criteria, Tam frequency formula, source at 3rd–4th shock, lip and reflector effects; amplitude still unpredictable (synthesis pending).
 - [Ray 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): multiple-scales shock modes × PSE wave in linearised Euler.
 - [André 2013](../Notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): screech-free notched twin; screech damps the mean train; BBSAN peak follows the stage.
+- [Brès et al. 2017](../Notes/bres-2017-unstructured-les-supersonic-jets.md): Charles LES of an M_d 1.5 C-D round jet (cold, hot, hot overexpanded): laminar exit BL at reduced Re, isotropic mesh, FW-H with end-caps; blind OASPL within 1.5–2.5 dB (synthesis pending).
 - [Tan 2019a](../Notes/tan-2019-correlation-analysis-piv-screeching-jets.md): PIV reflection points and shrinkage; shock-modulated length scales; shock time scale inactive.
 - [Tan 2019b](../Notes/tan-2019-equivalent-bbsan-source-reconstruction-screeching-jets.md): shock pressure from mean PIV and RANS; statistical BBSAN sources upstream of reflections.
 - [Wong 2019](../Notes/wong-2019-coherence-decay-wavepacket-bbsan.md): Pack modes × jittering wavepacket; ten shock modes; coherence decay lowers the peak.

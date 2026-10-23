@@ -20,7 +20,7 @@ phenomena: ["screech", "standing-waves", "source-location", "KH-wavepackets", "s
 params: {"NPR": "2.4, 3.3", "M_j": "1.19, 1.42", "f_s": "8400 Hz, 5400 Hz", "St": "≈ 0.60, 0.33 (f D/U_j; derived here assuming T₀ = T_a, not stated)", "Re": "0.93×10⁶, 1.26×10⁶ (U_j, D)", "D": "25.4 mm", "M_c": "0.70, 0.68 (u_c/c_∞)", "mode": "axisymmetric (A2 per Mercier 2017), helical"}
 topics: ["screech", "screech-frequency-and-global-modes", "screech-staging-and-mode-switching"]
 related: ["mercier-2017-screech-feedback-loop-underexpanded-round-jets", "edgington-mitchell-2022-unifying-theory-jet-screech", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2021-generation-screech-tones-shock-leakage", "raman-1998-supersonic-jet-screech-review", "tam-1986-bbsan-screech-relationship", "mancinelli-2019-screech-prediction-upstream-modes", "nogueira-2021-closure-mechanism-a1-a2-screech", "nogueira-2024-guided-jet-waves", "farghadan-2026-wave-interactions-screeching-jet", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "esfahani-2021-coupling-modes-twin-rectangular-jets", "ivelja-2024-modal-analysis-screeching-elliptical-jets"]
-cites: ["tam-1986-bbsan-screech-relationship", "tam-1995-supersonic-jet-noise"]
+cites: ["tam-1986-bbsan-screech-relationship", "tam-1994-turbulent-mixing-noise-supersonic-jets", "tam-1995-supersonic-jet-noise"]
 summary: "Phase-averaged near-field mics + phase-locked spark schlieren, M_j 1.19/1.42: KH–sound standing wave L_sw ≈ 0.8L; sound born at 3rd–4th shock; L_sw screech formula"
 ---
 # An experimental investigation of screech noise generation

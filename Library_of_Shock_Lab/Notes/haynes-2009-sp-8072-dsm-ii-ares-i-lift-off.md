@@ -20,7 +20,7 @@ phenomena: ["source-location", "directivity", "installation-effects"]
 params: {"vehicle": "Ares I (RSRMV)", "D_e": "3.88 m", "U_e": "2454 m/s", "thrust": "14.7 MN"}
 topics: ["rocket-noise-models"]
 related: ["ranow-2021-acoustic-prediction-rocket-flame-deflector", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "kenny-2009-space-shuttle-srm-plume-acoustics", "james-2012-directivity-curves-rocket-noise-model", "casalino-2009-hybrid-empirical-caa-rocket-noise", "gee-2016-near-field-intensity-static-rocket-firings"]
-cites: []
+cites: ["tam-2008-sources-of-jet-noise-experimental-evidence"]
 summary: "Ares I DSM-2 fixes: Varnier core (half Eldred's, backed by RSRM RANS), core ended at the deflector (Saturn V check), RSRM static-fire directivity; OASPL +5–7 dB, peak 2 bands up"
 ---
 # Modifications to the NASA SP-8072 Distributed Source Method II for Ares I Lift-off Environment Predictions

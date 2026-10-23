@@ -44,3 +44,48 @@ The LES (from Gojon & Bogey 2017, IJA) uses Bogey's in-house OpenMP solver in cy
   - The driver's r(t) = ln(A_in/A_out) classifier should allow a "coexisting" outcome: a dominant tone with a steady partner 9–13 dB down, with the A2 − A1 band phase-locked to a₁a₂*.
   - The probe radius 0.642D matches Ponton & Seiner's lip-face transducers.
 - **Short records.** This adds to the "Records are short" paragraph: the analysis block is about one real switch long.
+
+## bres-2017-unstructured-les-supersonic-jets (queued 2026-10-24)
+
+This is the Charles solver's reference paper, which most of the library's LES databases defer to for numerics. Flux: a central/HLLC blend with a per-face α = c‖D + Dᵀ‖ (c = 2) fixed by the mesh's lack of skew-symmetry. Shock capturing: a Hill–Pullin hybrid switch with second-order ENO. SGS: Vreman (c = 0.07). Time: TVD-RK3 (p. 1165–1166). It documents the 2017 baseline, which qualifies Current understanding claim 1 ("every jet LES in the library" has a turbulent exit layer). The nozzle is meshed, but the exit layer is laminar at Re_j 1.3–3 × 10⁵, about 5.5× below the experiment, with δ_θ/D 0.0017–0.003 matched to a RANS estimate. Other settings: co-flow M 0.1, 42M (axisymmetric) or 55M (adapted, isotropic) cells, Δt c∞/D 1–4 × 10⁻⁴, records 112–280 c∞/D (Tables 1, 3, p. 1167–1169). Blind against UTRC: potential core within 5 %, OASPL typically within 1.5–2.5 dB, but a tilted directivity with mid-St over-prediction and under-predicted peaks, the same symptoms that later disappeared for the M 0.9 jet with wall modelling (p. 1173, 1176). This is the same strategy the PyFR staging run has adopted (Re_D 10⁵, laminar exit layer), so it bears on the open question "Is ILES at reduced Re enough for staging?": the broadband biases are documented, but nothing is said about tones. On "Does shock-capturing dissipation bias resonance?", it is the nearest evidence in the library. In the overexpanded case the near-field St ≲ 0.4 levels are 5–6 dB low, which the authors attribute to the dissipative shock flux damping wavepackets near the nozzle (p. 1175). A compression-only (Ducros/Bhagatwala–Lele) sensor removed the deficit in later work, and the wall-modelled re-run of the same A3 condition screeches at St 0.265 ([Nogueira et al. 2026](../Notes/nogueira-2026-flapping-motion-screeching-round-jets.md), p. 16). This is broadband evidence, not a tone test. The FW-H and mesh practices are worth a short section or table row:
+- isotropic cells, with St_lim = D/(8 Δl M_a) ≈ 2–3 (p. 1168);
+- 16 end-caps, since open or single-cap disks add up to 10 dB of spurious low-St noise upstream (p. 1179);
+- a pressure-based surface, and insensitivity to the surface position S0–S2 (p. 1177–1178);
+- an open surface continued through the sponge, which matches the end-caps (p. 1179);
+- at least 10 periods of the lowest frequency, a Hanning window, and sampling at least twice the grid cut-off (p. 1170, 1179).
+Suggested new table row: "Round M_d 1.5 C-D, M_j 1.5 cold/hot and 1.35 hot overexpanded (UTRC B118/B122/B122 OD) | Charles, Vreman, Hill–Pullin + ENO shock capture | Nozzle in domain; laminar exit BL at Re_j 1.3–3 × 10⁵; co-flow M 0.1 | 42M/55M cells; Δt c∞/D 1–4 × 10⁻⁴; 112–280 c∞/D; FW-H every 0.02 | Blind UTRC: OASPL 1.5–2.5 dB, tilted directivity".
+
+## bres-2019-modelling-jet-noise-les-perspective (queued 2026-10-24)
+
+Brès & Lele 2019 is the review behind the "reference LES recipe" that claim 1 of the page attributes to Brès et al. 2021. It explains why the nozzle must be in the domain at realistic Re: pre-2008 RANS-emulated inflows needed arbitrary axial shifts and showed quasi-laminar artefacts (p. 2). It also sets out the Charles combination of synthetic turbulence, near-wall refinement and a wall-stress model, which gives sub-dB spectra to St ≈ 2 on 16M cells for the Pprime M 0.4–0.9 jets (p. 5, Fig. 3). It quantifies the grid check that the page calls "coarse": doubling the plume resolution raised the St limit from 2 to 4 at 69M against 16M cells, with Δt halved and 10× the CPU (p. 15). Two points bear directly on the open question "Is ILES at reduced Re enough for staging?":
+- An initially laminar exit layer radiates 3–4 dB more at high frequency, with different near-nozzle KH growth (p. 5–6). Above Re ≈ 10⁵, Re acts mainly through the exit layer, and it also changes intermittency and high-order statistics (p. 2–3).
+- Minimum-dissipation schemes need an SGS model, while schemes with built-in dissipation (upwind fluxes, filtering) tend to over-dissipate when one is added (p. 15). PyFR's Rusanov-flux FR belongs to the second class, which supports ILES in principle (my inference; no FR evidence in the paper).
+
+The review also names end-cap FW-H (Shur et al. 2005) and the Ikeda et al. 2017 single-cap correction (p. 7–8), lists the main solvers (NTS, JENRE, LAVA, LBM, AVBP, Charles with Voronoi meshing, CABARET on GPUs; p. 3–4, 16), and states the main remaining problems: SGS–numerics interplay, bandwidth, heated multi-species gas and installation (p. 14–16). In 2019 no LES study reproduced screech intensity variation, staging or twin-jet coupling (p. 11). Brès 2021 and Jeun 2024 have since covered twin coupling; staging remains open, which is the PyFR project's niche. This confirms the page's current understanding and changes nothing in it. It adds the cost–bandwidth numbers and the SGS caution to the ILES open question.
+
+## langenais-2019-hot-supersonic-jet-noise-simulation-nonlinear-propagation (queued 2026-10-24)
+
+Add a row to "How the jet LES in the library were set up":
+
+| Case | Solver, models | Nozzle and wall | Size, Δt, record | Validation | Notes |
+|---|---|---|---|---|---|
+| Hot round M_e 3.1 C-D, overexpanded | ONERA CEDRE FV LES (MUSCL + HLLC, implicit RK2 + GMRES, Smagorinsky C_s 0.1, van Driest, no wall model), two-way coupled every step via CWIPI to SPACE nodal-DG full Euler (order 2 → 4 by p-adaptation, PPW 5) | Nozzle meshed; axisymmetric step trip h = 0.01D in the convergent | 235M FV + 55M DG cells; Δt not stated; 650 D/u_j usable (11 Welch blocks); 4.5 × 10⁶ CPU-h | MARTEL LDV and far-field mics; OASPL within ~1 dB for St ≤ 0.22 | [Langenais 2019](../Notes/langenais-2019-hot-supersonic-jet-noise-simulation-nonlinear-propagation.md), p. 3–6, 16 |
+
+- **Lessons** (p. 4–9, 25–27):
+  - Trip turbulence relaminarises through the throat, and only about 2% survives to the exit.
+  - Wall refinement produced a lip separation that the Morrisette–Goldberg criterion forbids, so the paper rescales on D_j = 0.97D.
+  - The cut-off rule St_c = c_∞D_j/(PPW·K·Δ·u_j) with K = 1.2 sizes the mesh.
+  - Nonlinear DG Euler and linear FW-H give the same OASPL but different S(ṗ) and WSF.
+- **Agreement with the page.** The paper supports claim 2: nozzle-exit state is physics. The earlier run with an untripped, coarser lip was 4–6 dB high. It offers a geometric-trip alternative to the Charles synthetic-turbulence and wall-model recipe.
+- **DG relevance.** It is the library's only DG acoustic-propagation solver. Nodal DG is the same family as PyFR's FR, so it is indirect evidence that fourth-order DG at 5 PPW propagates cleanly. It is not PyFR validation, so claim 5 stands.
+- **Records.** The short record (≈43 periods at St 0.066) fits the "records are short" caution.
+
+## nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves (queued 2026-10-24)
+
+This is a second JAXA/ISAS LES for the "How the jet LES in the library were set up" table. The scheme is a seventh-order WCNS (WENO-like node-to-midpoint interpolation, AUSM-type flux, eighth-order midpoint-to-node difference), sixth-order viscous terms, and GCL-preserving metrics. It is MILES with no SGS model, with second-order backward implicit time stepping and three ADI-SGS sub-iterations at CFL up to 10, below 1 at shocks and shear layers (p. 406–408).
+
+Like the Tsutsumi 2015 compact/SLAU LES and PyFR's entropy filter, it switches to nonlinear shock-capturing weights only where a density smoothness sensor fires (eq. 7: max/min IS > 5 and max IS > 10⁻⁶). This cuts a roughly tenfold WCNS cost penalty (p. 406–407), so the page's "high order away from shocks" paragraph gains a third instance.
+
+Set-up: 11 overlapping structured zones with a square core grid at the axis; 28 M (L/D = 5) and 55 M (L/D = 10) points; spacing 0.006–0.06D, 6 × 10⁻⁴ D at the wall; buffers of 450–600D. The record is 400D/a_∞ in all cases (80,000 × 0.005 and 200,000 × 0.002). The far field uses a frequency-domain Kirchhoff integral on the slab top (Pan, Uzun & Lyrintzis 2004) (p. 407–409). The resolved band, St ≈ 0.02–1.7 (cold), is stated from grid and record length, but there is no grid-convergence test, no inflow-disturbance specification and no comparison with experiment.
+
+It reinforces two items on the page: records are short (single FFT, 5-point smoothing, no Welch averaging), and the propagation step is linear and free-space (here a Kirchhoff surface that ignores plate reflection outside the slab). It does not change the current understanding.

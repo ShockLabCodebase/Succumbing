@@ -167,11 +167,13 @@ No model uses modal decomposition or anything time-resolved beyond slow-time lev
 - [Casalino 2009](../Notes/casalino-2009-hybrid-empirical-caa-rocket-noise.md): Eldred and Varnier sources with CAA Green's functions of the Vega pad; captures pad confinement, still 2–3 dB high.
 - [Haynes & Kenny 2009](../Notes/haynes-2009-sp-8072-dsm-ii-ares-i-lift-off.md): DSM-2 with halved core, core terminated at the deflector and RSRM directivity; checked against Saturn V.
 - [Kenny 2009](../Notes/kenny-2009-space-shuttle-srm-plume-acoustics.md) (not tagged): RSRM static-firing data behind the Haynes–Kenny directivity indices.
+- [Nonomura et al. 2011](../Notes/nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves.md): WCNS implicit LES, M_j 2 jet on a 45° plate (L/D 5, 10; TR 1, 5.4): free-jet and wall-jet Mach waves plus broadband impingement waves SP-8072 omits; no tones (synthesis pending).
 - [Gee 2012](../Notes/gee-2012-reusable-srm-noise-spectral-statistical.md) (not tagged): RSRM source at 17–18D; hillside impingement that later disqualified the RSRM curve.
 - [James 2012](../Notes/james-2012-directivity-curves-rocket-noise-model.md): 80 D_e arcs are not far field; recentring moves the SP-8072 OASPL peak from 51° to 65°.
 - [Panda 2013](../Notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md) (not tagged): phased array shows flame-duct and deck sources that SP-8072 omits.
 - [Tsutsumi 2015](../Notes/tsutsumi-2015-epsilon-liftoff-acoustics.md): subscale similarity rules, 1/42 tests and RANS/LES + FW-H; ground-reflected Mach waves; LES up to 4 dB high.
 - [Gee 2016](../Notes/gee-2016-near-field-intensity-static-rocket-firings.md) (not tagged): GEM-60 near-field intensity source locations, the basis of SATURN's source law; radiation more sideline than all model directivity indices.
+- [Langenais et al. 2019](../Notes/langenais-2019-hot-supersonic-jet-noise-simulation-nonlinear-propagation.md): Hot M 3.1 overexpanded jet: tripped FV LES two-way coupled to nonlinear DG Euler CAA; OASPL ~1 dB; BBSAN upstream (m = 1); S(ṗ), WSF need the Euler solver (synthesis pending).
 - [Mathews 2021](../Notes/mathews-2021-falcon-9-far-field-noise.md): Falcon 9 test of the directivity, η, OASPL_max and Strouhal models; flight-reduced Oertel M_c.
 - [Ranow 2021](../Notes/ranow-2021-acoustic-prediction-rocket-flame-deflector.md): modular SP-8072 with efficiency, core, directivity, diffraction and duct-reflection changes; 7–10 dB high against Ares I.
 - [Lubert 2022](../Notes/lubert-2022-supersonic-jet-noise-launch-vehicles-review.md): review and entry point; Potter plotting error, η, source location, M_CO directivity, pad mitigation, LES and ROM outlook.

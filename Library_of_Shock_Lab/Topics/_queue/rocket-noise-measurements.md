@@ -13,3 +13,12 @@ How this fits the other notes:
 - Table III's five- to ninefold fall in δ from 30% to 70% RH at 21 °C supports the humidity explanation that mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets gives for the foggy Atlas V launch's weak-shock decay. This link is my reading.
 
 On the open question "shocks radiated or formed?", the paper does not decide: the nearest site is about 1 km away, and the sites see different emission times. It does name the deciding measurement: near-source shock thickness with bandwidth "well in excess of 20 kHz" and reflection-free mounting (p. 589–590). For the Methods section: microphones standing on the ground at 37 cm gave 1.5 ms reflections, with interference at 100–600 Hz, that double-count shocks and corrupt mid-frequency Q/S (p. 581, 588).
+
+## langenais-2019-hot-supersonic-jet-noise-simulation-nonlinear-propagation (queued 2026-10-24)
+
+For "Nonlinear propagation and crackle":
+- **Subscale waveform data.** The MARTEL test (≈1/40 H₂–air motor, 41.6D = 2.5 m arc, 50 kHz mics) gives S(ṗ) = 1.79, K(ṗ) = 9.79 and WSF = 0.68 at 40°, and 0.45/3.64/0.89 at 90° (Table III, p. 27). The derivative metrics peak near θ′ ≈ 48° (Fig. 29).
+- **Simulation.** Nonlinear Euler propagation in the LES follows the trends (S(ṗ) 1.21, WSF 0.73 at 40°). Linear FW-H from 11.2D gives Gaussian waveforms (S(ṗ) ≈ 0, WSF 1.00) at the same OASPL. This is the [Gee 2008](../Notes/gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft.md) "OASPL barely affected, waveforms and spectra changed" result, reproduced by simulation.
+- **Shocks in the test.** The measured S(ṗ) > 1.5 indicates shocked waveforms (Reichman et al. 2016 criterion), which the LES cannot resolve at St_c = 0.22. The Goldberg number exceeds 100 in the peak lobes at 40D (Fig. 27).
+- **Scale.** The subscale values are far below the full-scale Sk{∂p/∂t} > 30 ([Gee 2012](../Notes/gee-2012-reusable-srm-noise-spectral-statistical.md), p. 7–8). They are not directly comparable without matching range in shock-formation distances and sampling bandwidth.
+- It supports claim 6 without changing it. It is the only paired measurement and simulation of these metrics in the library.

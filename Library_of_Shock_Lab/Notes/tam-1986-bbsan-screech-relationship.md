@@ -20,7 +20,7 @@ phenomena: ["screech", "BBSAN", "shock-cells", "directivity", "helical"]
 params: {"M_j": "1.0–2.4", "M_d": "1.0, 1.5, 2.0"}
 topics: ["screech", "jet-noise-mechanisms", "shock-cell-models", "screech-frequency-and-global-modes"]
 related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1995-supersonic-jet-noise", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "mancinelli-2019-screech-prediction-upstream-modes", "mancinelli-2021-complex-valued-resonance-model-screech", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2022-unifying-theory-jet-screech", "raman-1998-supersonic-jet-screech-review", "tam-1984-sound-instability-waves-supersonic-axisymmetric-jets"]
-cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles"]
+cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1984-sound-instability-waves-supersonic-axisymmetric-jets"]
 summary: "Screech as the θ → 180° limit of BBSAN: BBSAN peaks at shock Fourier k_n, a_∞/f_pD linear in cos θ ends on the tone; weakest-link theory; semi-empirical St formula for hot jets"
 ---
 # Proposed relationship between broadband shock associated noise and screech tones

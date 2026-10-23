@@ -129,6 +129,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `PIV-TR`: time-resolved PIV
 - `PIV-stereo`: stereoscopic PIV (add `PIV` or `PIV-TR` too)
 - `hot-wire`
+- `LDV`: laser Doppler velocimetry (seeded point velocity statistics)
 - `laser-scattering`: line-of-sight laser light scattering by density fluctuations or shocks, collected on a photodetector
 - `Rayleigh-scattering`: unseeded molecular Rayleigh scattering from a probe volume, for point density (and velocity) fluctuations
 - `pressure-probe`: static or total pressure surveys in the flow
@@ -246,7 +247,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `guided-jet-mode`: upstream guided/neutral acoustic waves, trapped duct modes
 - `KH-wavepackets`, `streaks`, `Orr`
 - `absolute-instability`
-- `shock-cells`, `Mach-disk`, `shock-leakage`, `shocklet` (wall-jet or transient shocklets)
+- `shock-cells`, `Mach-disk`, `shock-leakage`, `shocklet` (wall-jet, transient or crackle shocklets)
 - `shock-waves`: oblique or conical shocks and expansion fans outside jet shock-cell trains
 - `compressibility-effects`: compressible shear-layer growth, convective Mach number
 - `mixing-enhancement`: jet spreading and mixing changes, streamwise vortices

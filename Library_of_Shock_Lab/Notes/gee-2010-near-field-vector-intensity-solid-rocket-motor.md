@@ -20,7 +20,7 @@ phenomena: ["source-location", "directivity"]
 params: {"D_e": "12.7 cm", "motor": "solid, RSRM propellant", "burn": "≈2.5 s"}
 topics: ["rocket-noise-measurements"]
 related: ["gee-2016-near-field-intensity-static-rocket-firings", "gee-2012-reusable-srm-noise-spectral-statistical", "kenny-2009-space-shuttle-srm-plume-acoustics", "james-2012-directivity-curves-rocket-noise-model", "lubert-2022-supersonic-jet-noise-launch-vehicles-review"]
-cites: []
+cites: ["tam-2008-sources-of-jet-noise-experimental-evidence"]
 summary: "Tetrahedral intensity probes within ~6D of a 12.7 cm solid rocket motor plume: source region shrinks and moves upstream with frequency; radiation ≈44–51°; refraction near the plume"
 ---
 # Near-field vector intensity measurements of a small solid rocket motor

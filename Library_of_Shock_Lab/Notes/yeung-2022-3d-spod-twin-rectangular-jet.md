@@ -20,7 +20,7 @@ phenomena: ["screech", "flapping", "coupling", "KH-wavepackets"]
 params: {"M_j": "1.5", "NPR": "3.671", "AR": "2", "TR": "1", "Re": "1.07×10⁶"}
 topics: ["modal-decomposition", "twin-jet-coupling"]
 related: ["bres-2021-les-twin-rectangular-jets-plasma", "esfahani-2021-coupling-modes-twin-rectangular-jets", "esfahani-2021-control-twin-rectangular-jet-coupling", "jeun-2024-screech-coupling-closure-rectangular-twin-jets", "nogueira-2021-twin-jet-coupling-spatial-lsa", "yeung-2024-adaptive-spod-broadband-tonal", "schmidt-2020-guide-spod", "suzuki-2026-coherent-structures-axis-switching-elliptical-jets"]
-cites: ["bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2019-aeroacoustic-resonance-review", "esfahani-2021-control-twin-rectangular-jet-coupling", "esfahani-2021-coupling-modes-twin-rectangular-jets", "gojon-2018-oscillation-modes-screeching-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["bres-2017-unstructured-les-supersonic-jets", "bres-2021-les-twin-rectangular-jets-plasma", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "edgington-mitchell-2019-aeroacoustic-resonance-review", "esfahani-2021-control-twin-rectangular-jet-coupling", "esfahani-2021-coupling-modes-twin-rectangular-jets", "gojon-2018-oscillation-modes-screeching-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2020-guide-spod", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "towne-2017-acoustic-resonance-potential-core-subsonic-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "D2 symmetry split (SS/SA/AS/AA) before 3D SPOD of AR-2 twin-jet LES (M_j 1.5): exact, 4× less memory; St 0.3 screech only in AA/AS (minor-axis flapping)"
 ---
 # Three-Dimensional Spectral POD of Supersonic Twin-Rectangular Jet Flow
@@ -66,7 +66,7 @@ Non-axisymmetric jets cannot be Fourier-decomposed in azimuth, so SPOD of their 
 
   | Quantity | Value |
   |---|---|
-  | Solver | Charles (Cascade), unstructured compressible LES (Brès et al. 2017) |
+  | Solver | Charles (Cascade), unstructured compressible LES ([Brès et al. 2017](bres-2017-unstructured-les-supersonic-jets.md)) |
   | M_j = U_j/c_j | 1.5 (nominally ideally expanded) |
   | M_a = U_j/c∞ | 1.25 |
   | Re_j = ρ_j U_j D_e/μ_j | 1.07 × 10⁶ (about matches OSU) |

@@ -20,7 +20,7 @@ phenomena: ["mixing-noise", "Mach-wave-radiation", "BBSAN", "screech", "shock-ce
 params: {}
 topics: ["jet-noise-mechanisms", "screech", "shock-cell-models", "screech-staging-and-mode-switching", "screech-frequency-and-global-modes"]
 related: ["tam-1982-shock-associated-noise-cd-nozzles", "tam-1986-bbsan-screech-relationship", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "raman-1998-supersonic-jet-screech-review", "papamoschou-1988-compressible-turbulent-shear-layer", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "tam-1984-sound-instability-waves-supersonic-axisymmetric-jets", "tam-1994-turbulent-mixing-noise-supersonic-jets"]
-cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "norum-1983-screech-suppression-supersonic-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets"]
+cites: ["norum-1982-mean-static-pressure-far-field-acoustics-shock-containing-jets", "norum-1983-screech-suppression-supersonic-jets", "tam-1982-shock-associated-noise-cd-nozzles", "tam-1984-sound-instability-waves-supersonic-axisymmetric-jets", "tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets", "tam-1994-turbulent-mixing-noise-supersonic-jets"]
 summary: "Review: mixing noise as Mach waves from instability waves (45–60°), BBSAN from instability wave × shock-cell modes, screech via external feedback and an St formula; amplitude unpredictable"
 ---
 # Supersonic jet noise

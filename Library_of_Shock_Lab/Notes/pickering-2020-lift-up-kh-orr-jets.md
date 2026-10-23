@@ -20,7 +20,7 @@ phenomena: ["streaks", "KH-wavepackets", "Orr"]
 params: {"M_j": "0.4, 0.9, 1.5", "Re": "4.5×10⁵–1.76×10⁶"}
 topics: ["linear-operator-methods"]
 related: ["nogueira-2019-large-scale-streaky-structures-jets", "pickering-2021-optimal-eddy-viscosity-resolvent-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "morra-2021-colour-of-forcing-resolvent-channel", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "garnaud-2013-preferred-mode-incompressible-jets", "towne-2018-spod-relationship-dmd-resolvent", "nogueira-2026-flapping-motion-screeching-round-jets"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "jaunet-2017-two-point-coherence-wave-packets-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "michalke-1984-survey-jet-instability-theory", "nogueira-2019-large-scale-streaky-structures-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "tam-1989-three-families-instability-waves-high-speed-jets", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["bres-2017-unstructured-les-supersonic-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "gudmundsson-2011-instability-wave-models-near-field-jets", "jaunet-2017-two-point-coherence-wave-packets-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "michalke-1984-survey-jet-instability-theory", "nogueira-2019-large-scale-streaky-structures-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "tam-1989-three-families-instability-waves-high-speed-jets", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "SPOD of M_j 0.4/0.9/1.5 jet LES + global resolvent with TKE eddy viscosity map lift-up (St/m ≲ 0.1), KH and Orr regimes; dominant streak m falls roughly as 1/x"
 ---
 # Lift-up, Kelvin–Helmholtz and Orr mechanisms in turbulent jets
@@ -77,7 +77,7 @@ The paper uses SPOD of three LES databases (M_j = 0.4, 0.9 and 1.5) and global r
 
 ## Setup / method
 No experiments are run in this paper. All data come from LES, and the modelling is global resolvent analysis on the LES mean flow.
-- **LES database** (Table 1, p. 6; Brès et al. 2017, 2018):
+- **LES database** (Table 1, p. 6; [Brès et al. 2017](bres-2017-unstructured-les-supersonic-jets.md), 2018):
   - Run with the unstructured compressible solver *Charles* (Cascade Technologies). Numerics, meshing and subgrid model are in Brès et al. (2017), not this paper.
   - The M_j = 0.4 and 0.9 jets were validated against experiments at PPRIME, Poitiers (Brès et al. 2018).
   - The M_j = 0.4 jet matches the nozzle geometry and exit boundary layer of the Cavalieri et al. (2013), Jaunet et al. (2017) and Nogueira et al. (2019) experiments (p. 6). The nozzle-exit boundary layer is fully turbulent (p. 5).

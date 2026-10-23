@@ -20,7 +20,7 @@ phenomena: ["KH-wavepackets", "Orr", "streaks"]
 params: {"M_j": "0.4, 0.9, 1.5", "Re": "4.5×10⁵–1.76×10⁶", "St": "0.05–1", "m": "0–5"}
 topics: ["linear-operator-methods", "linear-models"]
 related: ["pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "morra-2021-colour-of-forcing-resolvent-channel", "towne-2018-spod-relationship-dmd-resolvent", "towne-2022-database-reduced-complexity-modeling", "rolandi-2025-biglobal-resolvent-naca0012", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "garnaud-2013-preferred-mode-incompressible-jets", "jaunet-2017-two-point-coherence-wave-packets-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["bres-2017-unstructured-les-supersonic-jets", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation", "garnaud-2013-preferred-mode-incompressible-jets", "jaunet-2017-two-point-coherence-wave-packets-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "lesshafft-2019-resolvent-modelling-wavepackets-turbulent-jet", "mckeon-2010-critical-layer-framework-turbulent-pipe-flow", "nogueira-2019-large-scale-streaky-structures-jets", "pickering-2020-lift-up-kh-orr-jets", "schmidt-2018-spectral-analysis-jet-turbulence", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Adjoint-optimal eddy-viscosity field aligns resolvent and SPOD modes of M_j 0.4–1.5 jet LES (Orr ~10%→80%, KH 96%); RANS k–ε μ_T × 0.2 is near-optimal; forcing still not white"
 ---
 # Optimal eddy viscosity for resolvent-based models of coherent structures in turbulent jets
@@ -77,7 +77,7 @@ Resolvent modes of a turbulent mean flow only match the coherent structures seen
 No experiments are run. The data are the same three LES databases as [pickering-2020-lift-up-kh-orr-jets.md](pickering-2020-lift-up-kh-orr-jets.md) and Schmidt et al. (2018); the modelling is global resolvent analysis on their mean flows, plus RANS.
 
 - **LES database** (Table 1, p. 4; §2.1):
-  - Unstructured compressible solver *Charles* (Cascade Technologies); numerics, meshing and subgrid model in Brès et al. (2017). The M_j = 0.4 and 0.9 jets were validated against PPRIME (Poitiers) experiments (Brès et al. 2018); the M_j = 0.4 jet matches the nozzle and exit boundary layer of Cavalieri et al. (2013), Jaunet et al. (2017) and Nogueira et al. (2019) (p. 4).
+  - Unstructured compressible solver *Charles* (Cascade Technologies); numerics, meshing and subgrid model in [Brès et al. (2017)](bres-2017-unstructured-les-supersonic-jets.md). The M_j = 0.4 and 0.9 jets were validated against PPRIME (Poitiers) experiments (Brès et al. 2018); the M_j = 0.4 jet matches the nozzle and exit boundary layer of Cavalieri et al. (2013), Jaunet et al. (2017) and Nogueira et al. (2019) (p. 4).
   - Isothermal round jets (abstract). 10,000 snapshots each, interpolated onto a cylindrical grid x × r × θ ∈ [0, 30] × [0, 6] × [0, 2π]; state q = [ρ, u_x, u_r, u_θ, T] (p. 4).
   - Non-dimensionalised by U_j, D and ρ_j U_j²; St = fD/U_j (p. 4).
 
