@@ -17,6 +17,8 @@ module load matlab/r2024b
 export TMPDIR=$ROOT/tmp
 mkdir -p "$TMPDIR" "$ROOT/Logs"
 STAGES=${STAGES:-1 2 3 4 5}
-/usr/bin/time -v matlab -batch "try, run_stage([$STAGES]); catch e, disp(getReport(e,'extended')); exit(1); end"
+# Storage rules: check ty79 first and every 60 s; stop at 95% (exit 75)
+GUARD=/fs04/scratch2/ty79/JWeightman/PyFR_Staging/bin/quota_guard.sh
+$GUARD /usr/bin/time -v matlab -batch "try, run_stage([$STAGES]); catch e, disp(getReport(e,'extended')); exit(1); end"
 echo "exit $? at $(date)"
 du -sh "$ROOT"
