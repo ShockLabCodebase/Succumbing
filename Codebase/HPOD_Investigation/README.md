@@ -313,7 +313,12 @@ Every peak is within 0.4 rad/D of the prediction; the window's resolution is abo
 
 **Refined reading.** The A2 − A1 component is the A1/A2 beat interacting with the shock cells. It is dominated by the upstream-phase component at k₂ − k₁ − k_s. It is not the cells themselves breathing or shifting at the beat frequency. One open question is which product generates it: one tone's Kelvin–Helmholtz wave with the other tone's shock-scattered component, or the beat scattering off the cells directly. The axial wavenumbers are identical for both, so these data cannot tell them apart. The PyFR staging LES could, using a linearised (resolvent) forcing analysis or by switching off one tone.
 
-**Exact versus fast maps.** These numbers come from the fast-map run (job 61394945). It maps the bispectrum with Watson's iteration (5 starts), then recomputes the interaction modes at the peaks exactly with Mengi–Overton. The mode tests therefore depend only on the peak triad. The exact-map run is job 61390555.
+**Exact versus fast maps.** The exact-map run (Mengi–Overton everywhere; job 61390555, 3.9 h) and the fast-map run (Watson's iteration with 5 starts; job 61394945, 18 min) agree completely:
+- the same peak triads;
+- the same test scores;
+- all 49 cells of both maps equal to within 0.01% of the peak.
+
+Fig. 10 is from the exact run. For future runs the fast maps are enough.
 
 ## 7. Recommendations for the pipeline
 
