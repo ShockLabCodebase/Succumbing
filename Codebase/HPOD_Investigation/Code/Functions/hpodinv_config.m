@@ -49,4 +49,7 @@ cfg.ctrl_pool_rho = 0.1;       % pool segments: rho below this (A1) or above 1 -
 cfg.BD_rel = [0.25 0.5];       % difference-band widths (fraction of df)
 cfg.n_surrogates = 200;
 cfg.seed = 1;
+
+%% Targeted BMD (stage 7)
+cfg.bmd_fast_maps = strcmp(getenv('BMD_FAST'), '1');   % maps by Watson's iteration (about 15x faster)
 end

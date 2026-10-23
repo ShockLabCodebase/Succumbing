@@ -4,7 +4,7 @@
 
 **SPOD:** the existing `Large_Test/SPOD_Results` file (n_fft 4096, 50% overlap, 4 modes, patched `spod.m`). The testing fork confirmed it is final.
 
-**Where things are:** code and results in `/fs04/scratch2/ty79/JWeightman/Schlieren/HPOD_Investigation` (`Code/`, `Data/`, `Figures/`, `Logs/`); a copy of the code and this write-up in the repository at `Codebase/HPOD_Investigation/`. All numbers are from run 2026-10-23 (jobs 61385838, 61386484, 61387366).
+**Where things are:** code and results in `/fs04/scratch2/ty79/JWeightman/Schlieren/HPOD_Investigation` (`Code/`, `Data/`, `Figures/`, `Logs/`); a copy of the code and this write-up in the repository at `Codebase/HPOD_Investigation/`. All numbers are from run 2026-10-23 (jobs 61385838, 61386484, 61387366; BMD jobs 61394945 and 61390555).
 
 ## Summary
 
@@ -39,7 +39,11 @@
 **The A2 − A1 difference interaction** (1868 Hz, St 0.087)
 - **It is a genuine quadratic interaction between A1 and A2.** Its band is phase-locked to a₁a₂\* (triad coherence 0.88, against a 95% surrogate level of 0.065). Bands at 0.75 and 1.25 × (A2 − A1) show almost no locking (0.07 and 0.01).
 - **Its amplitude follows the product of the two tones, not either tone alone.** Correlation is 0.77 with n₁n₂, 0.79 with min(n₁, n₂) and 0.75 with ρ(1 − ρ), against 0.29 and −0.09 with n₁ and n₂. It peaks in mixed states (0.77, against 0.34–0.44).
-- **Its spatial mode is not the pointwise product of the A1 and A2 modes** (similarity 0.13, against 0.84–0.88 for the sum and the harmonics). It sits along the axis in the shock-cell region (x/D ≈ 1–6). So it is unlikely to be an optical or camera intermodulation product. My hypothesis is that it is the shock-cell system responding at the beat frequency.
+- **Its spatial mode is not the pointwise product of the A1 and A2 modes** (similarity 0.13, against 0.84–0.88 for the sum and the harmonics). It sits along the axis in the shock-cell region (x/D ≈ 1–6). So it is unlikely to be an optical or camera intermodulation product.
+- **BMD shows it is the beat scattered by the shock cells, not the cells oscillating at the beat** (Section 6). It is not standing (index 0.18), and it does not resemble a shift or breathing of the cells (similarity ≤ 0.20).
+  - Its axial wavenumber spectrum is a comb at (k₂ − k₁) + n·k_s, dominated by the upstream-phase n = −1 term, k₂ − k₁ − k_s.
+  - The BMD mode matches the HPOD mode (0.98).
+  - The sum A1 + A2, by contrast, is a plain downstream product wave (similarity 0.88 to the product).
 - **For the difference band, correlate with n₁n₂ (not with n₁ or n₂ separately), check phase coupling, and keep the band narrow (≤ 0.25Δf)** so that the control bands don't overlap it.
 
 ## 1. The tones and the approach
@@ -227,7 +231,7 @@ The weaker tone is about five times the noise level. It holds its frequency far 
 - **The sum and the harmonics do match their products** (similarity 0.84–0.88). For them, flow and optical nonlinearity cannot be told apart this way.
 - **The A2 − A1 mode does not** (0.13). It is a short-wavelength structure along the axis through the shock cells (x/D ≈ 1–6). The product is a long-wavelength blob over x/D ≈ 1–3.
 
-So the difference component is not a local intermodulation product. My reading is that it is the shock-cell structure responding to the A1/A2 beat: a cross-difference counterpart of the difference self-interaction (St_s − St_s = 0) that sets each tone's short-time mean in Mazharmanesh et al. (2026). This is a hypothesis. BMD of the same record, or the PyFR staging LES, could test it.
+So the difference component is not a local intermodulation product. The working hypothesis was that it is the shock-cell structure responding to the A1/A2 beat: a cross-difference counterpart of the difference self-interaction (St_s − St_s = 0) that sets each tone's short-time mean in Mazharmanesh et al. (2026). Section 6 tests this with BMD and refines it: the shock cells shape the component, but it is not a standing response of the cells.
 
 The baseline with the product shifted 0.5D downstream is not a useful null for the short-wavelength sum and harmonic products (0.70–0.76), because a 0.5D shift is close to a whole number of their wavelengths.
 
@@ -235,7 +239,83 @@ The baseline with the product shifted 0.5D downstream is not a useful null for t
 
 **Fig. 7.** HPOD mode 1 of the A1 and A2 bands, and mode 2 of the single band holding both tones. The two tones have different streamwise wavelengths, and mode 2 (13% of that band's energy) carries the second structure.
 
-## 6. Recommendations for the pipeline
+## 6. BMD test: is A2 − A1 the shock cells responding at the beat frequency?
+
+**Hypothesis (from Section 5).** The A2 − A1 component is the shock-cell structure oscillating at the beat frequency. Bispectral mode decomposition (BMD; Schmidt 2020) tests this directly. Its interaction mode at the (A2, −A1) → A2 − A1 triad is the part of the 1868 Hz field that is phase-locked to the A2·A1\* product, so its shape can be compared with the competing explanations.
+
+**Method (`stage7_bmd.m`).**
+- **Data pass:** one pass over all 400k frames, computing block FFTs at the 40 bins needed (n_fft 1024, so df = 146 Hz; 780 blocks, 50% overlap, `bmd_modified` conventions; about 6 min).
+- **Maps:** the local mode bispectrum is mapped over A1 and A2 ± 3 bins, for the difference and for the sum A1 + A2.
+- **Interaction modes:** at each map's peak, the interaction mode Ψ₃ and the cross-frequency field Ψ₁∘Ψ₂ (the local product of the two tone fields).
+- **Tests on each field,** in the jet core and shear layers (|y| ≤ 0.6D, 0.3 ≤ x/D ≤ 7):
+  - *standing index* |Σφ²|/Σ|φ|²: 1 for a standing pattern, near 0 for a travelling wave;
+  - *directionality* of the axial wavenumber spectrum on the axis, from +1 (all downstream) to −1 (all upstream);
+  - *peak wavenumber*;
+  - *similarity* to the shock-cell references: ∂M/∂x (a rigid streamwise shift of the cells), the mean field's shock-cell pattern M_sc (the mean minus its 1D running mean; a breathing of the cells), SPOD mode 1 at St = 0, and the cross field.
+- **Decision rule:**
+
+  | Explanation | Signature |
+  |---|---|
+  | Shock cells responding at the beat | standing (> 0.7), \|directionality\| < 0.3, k ≈ k_s, high similarity to ∂M/∂x, M_sc or St0 |
+  | A wave convected at the beat | directionality ≈ +1, k ≈ k₂ − k₁ (0.66 rad/D) or the A1-speed value k₁Δf/f₁ (0.78) |
+  | Local product, flow or optical | high similarity to the cross field |
+
+- **Checked on synthetic records** (`tests/test_bmd_stage.m`): a standing shock-cell beat scores standing 1.00, directionality 0.00, k = k_s and similarity 1.00 to M_sc; a convected beat scores standing 0.19 and directionality +0.95 at k ≈ k_c.
+
+![BMD](Figures/F10_bmd.png)
+
+**Fig. 10.** Targeted BMD.
+- **Top left:** bicoherence maps of the difference and sum triads.
+- **Top right:** the A2 − A1 interaction mode and its cross field.
+- **Middle:** the references ∂M/∂x and St0 mode 1; the A1 + A2 interaction mode; the A1 field.
+- **Bottom left:** axial wavenumber spectra on the axis (k > 0 travels downstream).
+- **Bottom right:** the test scores.
+
+**Bicoherence.**
+- **The difference is weakly but clearly coupled:** peak 0.14 against a map median of 0.03, and against a 95% null level of about 0.06–0.09 for 390–780 independent blocks.
+- **The sum is strongly coupled:** 0.63 (median 0.19).
+- **Both peaks lie along ridges of constant output frequency.** As the tones wander in frequency, the coupling follows their difference and sum, not fixed bins.
+- **The peak triads** are A2 bin 101 (14.80 kHz) with A1 bin 89 (13.04 kHz), and the same pair for the sum.
+
+**Test scores.** k_s = 10.9 rad/D (shock spacing 0.58D); k₁ = 5.42, k₂ = 6.08 rad/D.
+
+| Field | standing | directionality | k_peak (rad/D) | sim ∂M/∂x | sim M_sc | sim St0 | sim own cross field |
+|---|---|---|---|---|---|---|---|
+| **BMD A2 − A1** | 0.18 | **−0.57** | **10.04 (upstream)** | 0.07 | 0.20 | 0.06 | **0.27** |
+| HPOD A2 − A1 (Section 5) | 0.13 | −0.65 | 10.16 (upstream) | 0.08 | 0.18 | 0.12 | 0.23 |
+| BMD A1 + A2 | 0.03 | +0.99 | 11.22 | 0.13 | 0.19 | 0.25 | **0.88** |
+| A1 / A2 fields | 0.21 / 0.10 | +0.98 / +0.98 | 5.42 / 6.08 | ≤ 0.02 | ≤ 0.04 | ≤ 0.01 | — |
+| M_sc, ∂M/∂x, St0 (references) | 1.00 | 0.00 | 10.9–11.6 | — | — | — | — |
+
+**The axis wavenumber spectrum of the A2 − A1 mode is a comb spaced by k_s.** Its peaks sit at Δk + n·k_s, with Δk = k₂ − k₁ = 0.66 rad/D:
+
+| n | predicted k (rad/D) | measured peak (relative power) |
+|---|---|---|
+| −2 | −21.14 | −20.78 (0.18) |
+| **−1** | **−10.24** | **−10.04 (1.00)** |
+| 0 | +0.66 | +1.06 (0.06) |
+| +1 | +11.56 | +11.88 (0.14) |
+| +2 | +22.46 | +22.52 (0.10) |
+
+Every peak is within 0.4 rad/D of the prediction; the window's resolution is about 0.9 rad/D (2π/6.7D). 79% of the power travels upstream.
+
+**What this shows:**
+- **The hypothesis in its simple form is rejected.** The A2 − A1 component is not a standing oscillation of the shock cells:
+  - standing index 0.18 (a standing response scores > 0.7);
+  - similarity 0.07 to a rigid shift (∂M/∂x), 0.20 to a breathing of the cells (M_sc), and 0.06 to the St0 mode.
+- **It is not a simple convected beat either.** The convected-beat peak (n = 0, k ≈ 1 rad/D, phase speed about 0.5u_j) holds only 6% of the peak power.
+- **It is not the local product of the tone fields** (similarity 0.27). The sum A1 + A2 is, at 0.88. It is a single downstream wave at k ≈ k₁ + k₂ (11.22 against 11.50). This is the same contrast as Section 5's HPOD comparison (0.13 against 0.84–0.88), so it does not depend on the decomposition.
+- **The shock cells do set its structure.** The A2 − A1 field is the beat scattered by the periodic shock-cell pattern, including its second harmonic.
+  - **Dominant component:** the n = −1 sideband, k_D = k₂ − k₁ − k_s. This is the same wavenumber-difference rule (k_h − k_s) that produces the upstream-travelling, standing-wave part of each screech tone (the "weakest link" of the feedback loop).
+  - **Phase speed:** that sideband's phase creeps upstream at about 0.05u_j, roughly one shock spacing per beat period (0.54 ms).
+  - **Asymmetry:** a cell pattern simply modulated at the beat would put equal power in the n = ±1 sidebands. Here n = −1 is about seven times n = +1. The local cross field also carries both sidebands, but weakly (0.13–0.14 of its n = 0 peak). So the shock-scattered part is created in the flow, not by multiplying the tone fields at each point.
+- **BMD confirms the HPOD result.** The BMD interaction mode and the HPOD mode of the A2 − A1 band from Section 5 have similarity 0.98.
+
+**Refined reading.** The A2 − A1 component is the A1/A2 beat interacting with the shock cells. It is dominated by the upstream-phase component at k₂ − k₁ − k_s. It is not the cells themselves breathing or shifting at the beat frequency. One open question is which product generates it: one tone's Kelvin–Helmholtz wave with the other tone's shock-scattered component, or the beat scattering off the cells directly. The axial wavenumbers are identical for both, so these data cannot tell them apart. The PyFR staging LES could, using a linearised (resolvent) forcing analysis or by switching off one tone.
+
+**Exact versus fast maps.** These numbers come from the fast-map run (job 61394945). It maps the bispectrum with Watson's iteration (5 starts), then recomputes the interaction modes at the peaks exactly with Mengi–Overton. The mode tests therefore depend only on the peak triad. The exact-map run is job 61390555.
+
+## 7. Recommendations for the pipeline
 
 1. **Isolate each tone** with the tcoeffs band field → POD (`hpod_from_spod_tcoeffs`), 1–2 modes per bin, B = 0.5Δf. Use B = Δf to time switches shorter than about 3 T_b (1.6 ms). invspod → Hilbert → HPOD gives the same answer here, so earlier results stand.
 2. **Add one band holding both tones** (width Δf + 0.5Δf). Its single IF trace shows coexistence as a ripple at Δf and times switches faster. Check its mode 2.
@@ -244,7 +324,8 @@ The baseline with the product shifted 0.5D downstream is not a useful null for t
    - use B_D ≤ 0.25Δf, with control bands at 0.75 and 1.25 × (A2 − A1);
    - correlate with n₁n₂ or min(n₁, n₂), not n₁ or n₂;
    - test phase coupling (triad coherence with surrogates);
-   - compare its mode with φ₁φ₂\* to rule out optical intermodulation.
+   - compare its mode with φ₁φ₂\* to rule out optical intermodulation;
+   - check its axial wavenumber spectrum for sidebands at ±k_s (Section 6), which mark scattering by the shock cells.
 5. **Report switching with a stated state indicator, thresholds and band width.** Real switches here take about 5 ms, longer than any method's resolution at B ≥ 0.5Δf, but the "mixed" fraction (0.30–0.34) depends on the thresholds.
 
 ## Limitations
@@ -257,6 +338,10 @@ The baseline with the product shifted 0.5D downstream is not a useful null for t
   - Controls test the methods' resolution, not the physics.
 - **A selective test for flow vs optics.** Similarity to the product shape rules optical intermodulation in only where the shapes match, so it cannot rule it out for the sum and harmonics.
 - **Probe coverage.** PROBE used the best of 14 lipline pixels, not a full search.
+- **BMD resolution.**
+  - *Frequency:* n_fft 1024 (146 Hz bins) is coarse next to the tones' 30–80 Hz wander, so the bicoherence is spread along ridges.
+  - *Wavenumber:* the 6.7D window resolves about 0.9 rad/D, so k₂ − k₁ (0.66) and the A1-speed convected beat (0.78) cannot be told apart.
+  - *Mechanism:* the axial wavenumbers alone cannot say which product generates the shock-scattered component.
 
 ## Code (`Code/`)
 
@@ -268,7 +353,8 @@ The baseline with the product shifted 0.5D downstream is not a useful null for t
 | 4 | `stage4_interactions.m` | difference, sum, harmonics, St ≈ 0 | 2 min |
 | 5 | `stage5_figures.m` | Figs 1–7 | 20 s |
 | 6 | `stage6_checks.m` | weak-tone coherence, interaction mode shapes, Figs 8–9 | 1.5 min |
+| 7 | `stage7_bmd.m` | targeted BMD of the difference and sum triads, shock-cell tests, Fig. 10 (reads the raw data and stage 6's output) | 18 min with `bmd_fast_maps`; about 4 h with exact maps |
 
-- **Running it:** `sbatch --export=ALL,STAGES="2 3 4 5 6" hpodinv.slurm` (comp partition). Parameters are in `Functions/hpodinv_config.m`.
+- **Running it:** `sbatch --export=ALL,STAGES="2 3 4 5 6" hpodinv.slurm` (comp partition). Parameters are in `Functions/hpodinv_config.m`. Run stage 7 on its own: `sbatch --export=ALL,STAGES=7,BMD_FAST=1 hpodinv.slurm`. `BMD_FAST=1` gives the fast maps; leave it out for exact maps.
 - **Core functions:** `tc_coeffs`, `blk_coeffs`, `inv_components`, `analytic_rows`, `gram_pod` and `iso_route`. They reimplement tcoeffs, spod's A and invspod + Hilbert in projection space.
-- **Tests:** `tests/test_projection_routes.m` checks them against `Codebase/Codebase_Patches` (as of 23 Oct, 14:02). `tests/test_pipeline_smoke.m` runs stages 2–5 on synthetic data.
+- **Tests:** `tests/test_projection_routes.m` checks them against `Codebase/Codebase_Patches` (as of 23 Oct, 14:02). `tests/test_pipeline_smoke.m` runs stages 2–5 on synthetic data. `tests/test_bmd_stage.m` checks that stage 7 tells a standing shock-cell beat from a convected one.

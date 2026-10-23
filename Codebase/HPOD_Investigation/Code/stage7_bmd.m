@@ -183,7 +183,7 @@ for fn = ["BMD_D" "BMD_S" "A1" "A2" "Msc"]
     Fk = double(T.(fn).Fk); plot(kgrid, Fk/max(Fk), 'DisplayName', strrep(fn, '_', ' '));
 end
 for kk = [kref.k_s, kref.k21, kref.kc_beat]
-    xline(-kk, ':'); xline(kk, ':');
+    xline(-kk, ':', 'HandleVisibility', 'off'); xline(kk, ':', 'HandleVisibility', 'off');
 end
 xlim([-30 30]); xlabel('axial wavenumber k (rad/D); k > 0 = travelling downstream'); ylabel('normalised |FT|^2 on the axis');
 legend('Location', 'northeast'); title(sprintf('dotted: \\pm k_s %.1f, \\pm(k_2 - k_1) %.1f, \\pm k_{beat,conv} %.1f', kref.k_s, kref.k21, kref.kc_beat));
