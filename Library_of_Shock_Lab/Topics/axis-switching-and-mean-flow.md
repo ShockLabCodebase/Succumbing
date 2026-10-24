@@ -57,7 +57,9 @@ The evolving mean flow also limits the linear models. In the elliptical jet the 
 
 ## Papers
 - [Krothapalli 1986](../Notes/krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet.md): AR 16.7 jet; peak screech widens minor-axis spreading and moves the axis crossover upstream.
+- [Gutmark et al. 1995](../Notes/gutmark-1995-mixing-enhancement-supersonic-free-shear-flows.md): Review: compressible shear-layer growth falls to ~20% by M_c 0.8; screech, cavity and collar forcing, noncircular nozzles, tabs, lobes, shocks compared vs M_c (synthesis pending)
 - [Samimy 1998](../Notes/samimy-1998-rectangular-jet-trailing-edge-control.md): trailing-edge cutouts; streamwise vortices and axis switching only off-design.
+- [Zaman 1999](../Notes/zaman-1999-spreading-compressible-jets-nozzle-geometries.md): Pitot mass flux, M_j 0.3–2: AR 3 and lobed nozzles barely beat round; flapping-stage screech and tab vortices drive spreading; non-screeching lobed jet spreads least (synthesis pending)
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 jet, stereo PIV; screech-driven spreading, streamwise vortex pairs proposed as the cause of switching.
 - [Mitchell et al. 2013](../Notes/mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md): original two-plane PIV of the AR 2 ellipse, NPR 2.2–4.2; shear-layer pinch at x/d 3.5–4 at low NPR, proposed vortex bifurcation at 4.2 (synthesis pending).
 - [Edgington-Mitchell 2015](../Notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse; switch at x/D ≈ 4.3; helical-like pair tied to the switch.

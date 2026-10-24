@@ -133,6 +133,7 @@ Even linear theory disputes where in an absolute pocket the frequency is set: at
 - [Tam & Ahuja 1990](../Notes/tam-1990-theoretical-model-discrete-tone-impinging-jets.md): guided modes close impinging loops; duct-type cut-offs; least-dispersive St.
 - [Tam & Norum 1992](../Notes/tam-1992-impingement-tones-large-aspect-ratio-rectangular-jets.md): Impinging AR 4.24 rectangular jets: 20+ tones are combinations of a varicose and a higher flapping tone; planar vortex-sheet upstream-mode bands bound both (synthesis pending).
 - [Tam & Chen 1994](../Notes/tam-1994-turbulent-mixing-noise-supersonic-jets.md): Stochastic instability-wave model of Mach-wave mixing noise: white-noise lip forcing, one fitted constant; Mach 2 directivities at T_0 500/1114 K within ~2.5 dB (synthesis pending).
+- [Gutmark et al. 1995](../Notes/gutmark-1995-mixing-enhancement-supersonic-free-shear-flows.md): Review: compressible shear-layer growth falls to ~20% by M_c 0.8; screech, cavity and collar forcing, noncircular nozzles, tabs, lobes, shocks compared vs M_c (synthesis pending)
 - [Suzuki & Lele 2003](../Notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): weak shocks as rays; total reflection as Snell's law; leakage on unsteady fields.
 - [Ray 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): PSE wavepacket as BBSAN source (on shock-cell models).
 - [McKeon & Sharma 2010](../Notes/mckeon-2010-critical-layer-framework-turbulent-pipe-flow.md): nonlinearity as forcing of the mean-flow operator.

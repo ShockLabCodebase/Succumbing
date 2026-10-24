@@ -99,11 +99,13 @@ Staging-specific methods are on [screech-staging-and-mode-switching](screech-sta
 - [Ponton 1992](../Notes/ponton-1992-nozzle-exit-lip-thickness-plume-resonance.md): lip thickness changes mode ranges and amplitudes.
 - [Powell et al. 1992](../Notes/powell-1992-oscillation-modes-choked-circular-jets.md): round-jet stage map by azimuthal phase; B/D sinuous with wandering planes, C helical; OASPL limit cycle.
 - [Tam 1995](../Notes/tam-1995-supersonic-jet-noise.md): free-stream-closure review; amplitude unpredictable.
+- [Gutmark et al. 1995](../Notes/gutmark-1995-mixing-enhancement-supersonic-free-shear-flows.md): Review: compressible shear-layer growth falls to ~20% by M_c 0.8; screech, cavity and collar forcing, noncircular nozzles, tabs, lobes, shocks compared vs M_c (synthesis pending)
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md): pre-2000 review; frequency predictable, amplitude and staging not.
 - [Samimy 1998](../Notes/samimy-1998-rectangular-jet-trailing-edge-control.md): V-notch removes, thick lip revives AR 3 screech.
 - [Panda 1999](../Notes/panda-1999-experimental-investigation-screech-noise-generation.md): near-field standing wave at L_sw; sound born between the 3rd and 4th shocks.
 - [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Powell's two criteria; single equivalent source moving from the 3rd to the 4th shock; +23 dB from a lip thickener.
 - [Krothapalli et al. 1999](../Notes/krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md): a lift plate flush with the exit turns BBSAN into screech without shifting St.
+- [Zaman 1999](../Notes/zaman-1999-spreading-compressible-jets-nozzle-geometries.md): Pitot mass flux, M_j 0.3–2: AR 3 and lobed nozzles barely beat round; flapping-stage screech and tab vortices drive spreading; non-screeching lobed jet spreads least (synthesis pending)
 - [Kerechanin 2001](../Notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts amplify or suppress rectangular-jet screech.
 - [Shen & Tam 2002](../Notes/shen-2002-three-dimensional-numerical-simulation-jet-screech.md): URANS gives A1–C and their levels; first guided-mode closure, for A2 and C only.
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 stereo PIV; 3rd-cell circulation peak tied to amplitude.

@@ -20,7 +20,7 @@ phenomena: ["acoustic-efficiency", "directivity", "nonlinear-propagation"]
 params: {"vehicles": "Atlas V 401, Vulcan Centaur Cert-2", "engine": "F404 (T-7A), 38% to AB", "M_j (F404)": "0.94–1.46", "range": "0.3–20 km (launches), 19–229 m (F404)"}
 topics: ["rocket-noise-models", "rocket-noise-measurements"]
 related: ["mathews-2025-thesis-supersonic-jet-rocket-noise-saturn", "mathews-2021-falcon-9-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "kellison-2026-falcon-9-noise-two-campaigns", "gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "james-2012-directivity-curves-rocket-noise-model"]
-cites: ["gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise", "tam-1995-supersonic-jet-noise", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets"]
+cites: ["gee-2023-sls-artemis-i-far-field-noise", "gee-2024-starship-super-heavy-far-field-noise", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "mathews-2021-falcon-9-far-field-noise", "tam-1995-supersonic-jet-noise", "tam-1996-two-components-turbulent-mixing-noise-supersonic-jets", "varnier-2001-rocket-engine-freejet-noise-model"]
 summary: "Acoustic-efficiency model OAPWL = 115.9 + 10log(ηρU_e³D_e²) → OASPL_max with directivity and ground factor δ; Atlas V, Vulcan and F404 validation, RMSE < 2 dB"
 ---
 # Methods for predicting overall sound power and maximum overall sound pressure levels from heated supersonic jets, including rockets

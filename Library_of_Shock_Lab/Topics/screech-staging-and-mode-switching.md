@@ -144,6 +144,7 @@ The limits and switch times must not depend on domain length, sponge or outflow 
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md): Merle's stages, jumps unexplained; switching and coexisting tones.
 - [Panda 1999](../Notes/panda-1999-experimental-investigation-screech-noise-generation.md): standing wavelength shorter than shock spacing in A2 and C jets, a k_s2 signature.
 - [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): Merle's grading of stage steadiness; jumps still unexplained; Powell's N + p cannot time a jump.
+- [Zaman 1999](../Notes/zaman-1999-spreading-compressible-jets-nozzle-geometries.md): Pitot mass flux, M_j 0.3–2: AR 3 and lobed nozzles barely beat round; flapping-stage screech and tab vortices drive spreading; non-screeching lobed jet spreads least (synthesis pending)
 - [Shen & Tam 2002](../Notes/shen-2002-three-dimensional-numerical-simulation-jet-screech.md): URANS two-tone states and the origin of the coexistence claim; its residuals point to k_s2 for A2 and C.
 - [André et al. 2013](../Notes/andre-2013-bbsan-screeching-non-screeching-underexpanded-jets.md): BBSAN peak locked to 2St_s through every stage jump.
 - [Edgington-Mitchell 2015, multimodal](../Notes/edgington-mitchell-2015-multimodal-instability-weakly-underexpanded-elliptic-jet.md): AR 2 ellipse flaps at NPR 2.2; a second, silent instability.

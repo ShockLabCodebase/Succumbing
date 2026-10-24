@@ -97,6 +97,7 @@ No paper uses SPOD, wavelets or Hilbert envelopes, so intermittent features (cra
 
 ## Papers
 
+- [Varnier 2001](../Notes/varnier-2001-rocket-engine-freejet-noise-model.md): SP-8072 near-field fix from ONERA static rockets: core constant 3.45→1.75 with D_j, M_j; peak source ≈11D not 26D; η 0.6–0.7% size-independent; L_P tied to L_S (synthesis pending)
 - [McInerny & Ölçmen 2005](../Notes/mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation.md): Titan IV and Scout launch waveforms obey the weak-shock rise-rate law out to 15 km; propagation must carry shocks (synthesis pending).
 - [Gee 2008](../Notes/gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft.md): F-22A run-ups; first full-scale demonstration of nonlinear propagation (Burgers vs linear model).
 - [Kenny 2009](../Notes/kenny-2009-space-shuttle-srm-plume-acoustics.md): first RSRM static-firing database; skewness, vectoring, 23 D_n near-field peak, ~50° directivity.

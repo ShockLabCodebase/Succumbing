@@ -92,9 +92,11 @@ A second jet breaks axisymmetry as an ellipse does and adds coupling: steady sym
 - [Krothapalli 1986](../Notes/krothapalli-1986-screech-tones-mixing-underexpanded-rectangular-jet.md): AR 16.7 jet; screech-driven flapping, St scaling on the small dimension.
 - [Tam 1988](../Notes/tam-1988-shock-cell-screech-rectangular-non-axisymmetric-jets.md): vortex-sheet shock spacing and screech frequency for any cross-section.
 - [Tam & Norum 1992](../Notes/tam-1992-impingement-tones-large-aspect-ratio-rectangular-jets.md): impinging AR 4.24 jets; varicose and flapping loops at once; origin of the planar upstream-mode bands.
+- [Gutmark et al. 1995](../Notes/gutmark-1995-mixing-enhancement-supersonic-free-shear-flows.md): Review: compressible shear-layer growth falls to ~20% by M_c 0.8; screech, cavity and collar forcing, noncircular nozzles, tabs, lobes, shocks compared vs M_c (synthesis pending)
 - [Raman 1998](../Notes/raman-1998-supersonic-jet-screech-review.md): review; antisymmetric rectangular modes, bevelled nozzles, thick lips.
 - [Samimy 1998](../Notes/samimy-1998-rectangular-jet-trailing-edge-control.md): AR 3 trailing-edge cutouts; streamwise vortices, mixing, axis switching.
 - [Raman 1999](../Notes/raman-1999-supersonic-jet-screech-half-century-powell-present.md): companion review; thick lip +23 dB, third-cell feedback shocks in 2-D jets, U_c ≈ 0.55 U_j.
+- [Zaman 1999](../Notes/zaman-1999-spreading-compressible-jets-nozzle-geometries.md): Pitot mass flux, M_j 0.3–2: AR 3 and lobed nozzles barely beat round; flapping-stage screech and tab vortices drive spreading; non-screeching lobed jet spreads least (synthesis pending)
 - [Kerechanin 2001](../Notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): acoustics of the same cutouts; nozzle symmetry decides whether screech is suppressed or amplified.
 - [Alkislar 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): AR 4 C-D jet, phase-locked stereo PIV; flapping over the whole sweep, U_c ≈ 0.5 U_j, a St jump without a mode change.
 - [Mitchell 2013](../Notes/mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md): two-plane PIV of the thick-lipped AR 2 ellipse; first evidence of minor-axis flapping, none at NPR 4.2.

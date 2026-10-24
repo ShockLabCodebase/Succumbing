@@ -20,7 +20,7 @@ phenomena: ["directivity", "source-location", "acoustic-efficiency", "mixing-noi
 params: {"vehicle": "Ares I (validation); Merlin 1D example", "M_e": "3.54 (Merlin 1D)", "deflector": "30°"}
 topics: ["rocket-noise-models"]
 related: ["haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "casalino-2009-hybrid-empirical-caa-rocket-noise", "james-2012-directivity-curves-rocket-noise-model", "kenny-2009-space-shuttle-srm-plume-acoustics", "mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets", "lubert-2022-supersonic-jet-noise-launch-vehicles-review", "nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves"]
-cites: ["casalino-2009-hybrid-empirical-caa-rocket-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves", "raman-1999-supersonic-jet-screech-half-century-powell-present", "tam-1982-shock-associated-noise-cd-nozzles", "tsutsumi-2015-epsilon-liftoff-acoustics"]
+cites: ["casalino-2009-hybrid-empirical-caa-rocket-noise", "haynes-2009-sp-8072-dsm-ii-ares-i-lift-off", "nonomura-2011-supersonic-jet-impinging-inclined-plate-acoustic-waves", "raman-1999-supersonic-jet-screech-half-century-powell-present", "tam-1982-shock-associated-noise-cd-nozzles", "tsutsumi-2015-epsilon-liftoff-acoustics", "varnier-2001-rocket-engine-freejet-noise-model"]
 summary: "SP-8072 DSM plus Sutherland efficiency, Varnier core cut at impingement, Plotkin–Sutherland directivity, diffraction, duct ray tracing; 7–10 dB high vs Ares I; MATLAB code"
 ---
 # Acoustic Prediction Methods for Rocket Flame Deflector Design

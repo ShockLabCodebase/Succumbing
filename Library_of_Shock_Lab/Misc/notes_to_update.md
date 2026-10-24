@@ -34,3 +34,6 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## nekkanti-2021-spod-reconstruction-denoising-frequency-time
 - (add-paper bres-2019-modelling-jet-noise-les-perspective, 2026-10-24) `facility` field (line 15) and source table (line 76) call the LES the "Brès & Lele (2019) database". [Brès & Lele 2019](bres-2019-modelling-jet-noise-les-perspective.md) is a review that documents no database of its own; the M 0.9 Charles LES comes from Brès et al. 2018 (JFM 851) and Schmidt et al. 2018. Say that the paper cites Brès & Lele 2019 for the LES, and name the actual source; then link the review. Left unlinked.
+
+## raman-1998-supersonic-jet-screech-review
+- (add-paper zaman-1999-spreading-compressible-jets-nozzle-geometries, 2026-10-24) The p. 94, 97 bullets on Zaman's mass-flux result ("B about +60 %, other stages not significant") can now link [Zaman 1999](zaman-1999-spreading-compressible-jets-nozzle-geometries.md). The primary source says D is also "relatively high" (p. 214–215), and only the axisymmetric A stages show no gain; the size of the gain depends on the baseline (measured subsonic level or a no-screech RANS). Add that nuance.

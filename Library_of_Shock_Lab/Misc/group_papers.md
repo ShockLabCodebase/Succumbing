@@ -4,10 +4,11 @@ Journal articles plus two preprints, 2010–2026, built on 2026-10-19 from Danie
 
 Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. Papers still to get are listed (with the rest of the library's wish list) in [Papers_to_get.md](Papers_to_get.md), the single list of missing papers; remove a paper there once it is obtained.
 
-## Indexed (have a note) (52)
+## Indexed (have a note) (53)
 
 | # | Paper | DOI | Where |
 |---|---|---|---|
+| 2 | Edgington-Mitchell et al. 2011, *Particle relaxation and its influence on the particle image velocimetry cross-correlation function*, Experiments in Fluids | 10.1007/s00348-011-1116-0 | [mitchell-2011-particle-relaxation-piv-cross-correlation](../Notes/mitchell-2011-particle-relaxation-piv-cross-correlation.md) |
 | 4 | Edgington-Mitchell et al. 2012, *The visualization of the acoustic feedback loop in impinging underexpanded supersonic jet flows using ultra-high frame rate schlieren*, Journal of Visualization | 10.1007/s12650-012-0139-9 | [mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren](../Notes/mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md) |
 | 6 | Edgington-Mitchell et al. 2013, *Near-field structure of underexpanded elliptic jets*, Experiments in Fluids | 10.1007/s00348-013-1578-3 | [mitchell-2013-near-field-structure-underexpanded-elliptic-jets](../Notes/mitchell-2013-near-field-structure-underexpanded-elliptic-jets.md) |
 | 8 | Edgington-Mitchell et al. 2014, *Coherent structure and sound production in the helical mode of a screeching axisymmetric jet*, Journal of Fluid Mechanics | 10.1017/jfm.2014.173 | [edgington-mitchell-2014-coherent-structure-helical-screech-mode](../Notes/edgington-mitchell-2014-coherent-structure-helical-screech-mode.md) |
@@ -61,11 +62,10 @@ Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. P
 | 71 | Nogueira et al. 2026, *Flapping motion in screeching round jets*, Journal of Fluid Mechanics | 10.1017/jfm.2026.12061 | [nogueira-2026-flapping-motion-screeching-round-jets](../Notes/nogueira-2026-flapping-motion-screeching-round-jets.md) |
 | 72 | Suzuki et al. 2026, *Coherent structures in axis-switching elliptical jets*, arXiv (Cornell University) | 10.48550/arxiv.2604.17851 | [suzuki-2026-coherent-structures-axis-switching-elliptical-jets](../Notes/suzuki-2026-coherent-structures-axis-switching-elliptical-jets.md) |
 
-## PDF held, waiting for `/add-paper` (in `Paper_PDFs/_Unprocessed/`) (3)
+## PDF held, waiting for `/add-paper` (in `Paper_PDFs/_Unprocessed/`) (2)
 
 | # | Paper | DOI | Where |
 |---|---|---|---|
-| 2 | Edgington-Mitchell et al. 2011, *Particle relaxation and its influence on the particle image velocimetry cross-correlation function*, Experiments in Fluids | 10.1007/s00348-011-1116-0 | `_Unprocessed/` |
 | 5 | Willert et al. 2012, *An assessment of high-power light-emitting diodes for high frame rate schlieren imaging*, Experiments in Fluids | 10.1007/s00348-012-1297-1 | `_Unprocessed/` |
 | 58 | Suzuki et al. 2023, *Analysis of Elliptical-Jet Acoustic Directivity and Efficiency Using a Vortex-Sheet-Based Wave-Packet Model*, AIAA Journal | 10.2514/1.j062541 | `_Unprocessed/` |
 
