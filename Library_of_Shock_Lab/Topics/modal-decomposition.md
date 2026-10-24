@@ -172,6 +172,7 @@ The algorithm is: subtract the mean, impose symmetries, split into blocks, windo
 - [Kim & Powers 1979](../Notes/kim-1979-digital-bispectral-analysis-nonlinear-wave-interactions.md): bicoherence; ancestor of BMD.
 - [Horel 1984](../Notes/horel-1984-complex-principal-component-analysis.md): complex PCA; frequency-domain PCA as proto-SPOD; degeneracy.
 - [Sirovich 1987](../Notes/sirovich-1987-turbulence-dynamics-coherent-structures-part-i.md): method of snapshots.
+- [Berkooz et al. 1993](../Notes/berkooz-1993-proper-orthogonal-decomposition-turbulent-flows.md): Classic POD review: optimality, span, homogeneity gives Fourier modes, symmetry test of ergodicity, thin attractors; POD–Galerkin wall-layer bursts; LSE = POD (synthesis pending)
 - [Rowley et al. 2009](../Notes/rowley-2009-spectral-analysis-nonlinear-flows-koopman.md): Koopman basis of DMD.
 - [Schmid 2010](../Notes/schmid-2010-dynamic-mode-decomposition.md): founding DMD; subdomain and spatial DMD.
 - [Oberleithner et al. 2011](../Notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): POD-pair phase averaging of PIV.

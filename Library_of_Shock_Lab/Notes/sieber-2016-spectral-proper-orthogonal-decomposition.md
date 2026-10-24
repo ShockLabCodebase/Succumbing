@@ -20,7 +20,7 @@ phenomena: ["coherent-structures", "intermittency"]
 params: {"Re": "58,000 (swirl combustor), 180,000 (Gurney flap), 37,000 (fluidic oscillator)"}
 topics: ["modal-decomposition", "time-frequency-methods"]
 related: ["oberleithner-2011-swirling-jet-vortex-breakdown-stability", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2020-guide-spod", "von-saldern-2026-band-ensemble-spod", "raiola-2025-hilbert-pod", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "schmid-2010-dynamic-mode-decomposition"]
-cites: ["huang-1998-empirical-mode-decomposition-hilbert-spectrum", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+cites: ["berkooz-1993-proper-orthogonal-decomposition-turbulent-flows", "huang-1998-empirical-mode-decomposition-hilbert-spectrum", "oberleithner-2011-swirling-jet-vortex-breakdown-stability", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
 summary: "Time-domain SPOD (not Towne/Schmidt): diagonal filter N_f on the snapshot correlation matrix spans POD to DFT; smooth mode pairs keep jitter and intermittency; DMD pairing"
 ---
 # Spectral proper orthogonal decomposition

@@ -20,7 +20,7 @@ phenomena: ["cavity-tones"]
 params: {"M": "0.6 (cavity)"}
 topics: ["modal-decomposition"]
 related: ["yeung-2024-adaptive-spod-broadband-tonal", "towne-2018-spod-relationship-dmd-resolvent", "schmidt-2020-guide-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "schmidt-2019-streaming-spod", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "raiola-2025-hilbert-pod"]
-cites: ["cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2020-guide-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2024-adaptive-spod-broadband-tonal"]
+cites: ["berkooz-1993-proper-orthogonal-decomposition-turbulent-flows", "cavalieri-2013-wavepackets-velocity-field-turbulent-jets", "jordan-2013-wave-packets-turbulent-jet-noise", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "schmidt-2020-guide-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent", "yeung-2024-adaptive-spod-broadband-tonal"]
 summary: "bSPOD: SPOD over N_f neighbouring Fourier modes of one full-record DFT instead of Welch blocks; less leakage, frequency attribution keeps tones sharp; M 0.6 cavity TR-PIV; MATLAB code"
 ---
 # Band-Ensemble Spectral Proper Orthogonal Decomposition with Frequency Attribution

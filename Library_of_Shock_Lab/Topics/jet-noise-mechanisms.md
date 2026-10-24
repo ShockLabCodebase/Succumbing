@@ -181,6 +181,7 @@ One rig with a notched screech-free twin, a β and TTR sweep, mean PIV and a nea
 - [Tam et al. 1996](../Notes/tam-1996-two-components-turbulent-mixing-noise-supersonic-jets.md): large- and fine-scale similarity spectra and amplitude scalings.
 - [Kerechanin et al. 2001](../Notes/kerechanin-2001-trailing-edge-rectangular-jet-acoustics.md): trailing-edge cutouts change mixing noise, BBSAN and screech of an AR 3 jet.
 - [Suzuki & Lele 2003](../Notes/suzuki-2003-shock-leakage-vortex-laden-mixing-layer-screech.md): shock leakage at vortex saddles, a local view of shock noise.
+- [Viswanathan 2004](../Notes/viswanathan-2004-aeroacoustics-hot-jets.md): Hot subsonic jets, 3 nozzle sizes: the 'dipole' hump is a low-Re effect (Re_crit ≈ 4×10⁵); no V⁶; OAPWL exponent 8.74→7.98 with TR; rig noise faked old trends (synthesis pending)
 - [Ray et al. 2005](../Notes/ray-2005-instability-wave-shock-cell-interaction-sound.md): first-principles linearised-Euler BBSAN; local Mach angles, ring sources, entropy source.
 - [Samimy et al. 2006](../Notes/samimy-2006-plasma-actuators-high-speed-jet-flow-noise-control.md): forcing shows low-m structures at St ≈ 0.3 amplify noise and high-m forcing reduces it.
 - [Tam et al. 2008](../Notes/tam-2008-sources-of-jet-noise-experimental-evidence.md): four experimental tests of the two-source model; aft field coherent, sideline incoherent.
@@ -206,6 +207,7 @@ Discussed but not tagged with this topic:
 - [Gee et al. 2008](../Notes/gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft.md) (not tagged): full-scale nonlinear steepening of jet noise.
 - [Gee et al. 2010](../Notes/gee-2010-near-field-vector-intensity-solid-rocket-motor.md) (not tagged): near-field intensity hint of two sources in a rocket plume.
 - [Gee et al. 2012](../Notes/gee-2012-reusable-srm-noise-spectral-statistical.md) (not tagged): skewness and derivative-skewness maps of rocket noise.
+- [Baars et al. 2014](../Notes/baars-2014-cumulative-nonlinear-waveform-distortions-high-speed-jets.md): Cold M 3 jet to 145D: effective Gol'dberg Λ ≈ 0.15, r̄ ≈ 18 m, so no cumulative steepening in a lab chamber; Λ scaling to full scale; single-point Q/S misleads (synthesis pending)
 - [Tsutsumi et al. 2015](../Notes/tsutsumi-2015-epsilon-liftoff-acoustics.md) (not tagged): reflected free-jet Mach waves set fairing levels.
 - [Reichman et al. 2018](../Notes/reichman-2018-qm2-srm-far-field-acoustics.md) (not tagged): crackle-level derivative skewness at 2.5 km.
 - [Schmidt et al. 2018](../Notes/schmidt-2018-spectral-analysis-jet-turbulence.md) (not tagged): SPOD and resolvent both show Mach waves at M_j 1.5.

@@ -40,7 +40,6 @@ DOIs were checked against Crossref. Where Crossref returned only an earlier conf
 
 | Paper                                                                                                                       | DOI                      | Note |
 | --------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---- |
-| Settles & Hargather 2017, *A review of recent developments in schlieren and shadowgraph techniques*, Meas. Sci. Technol. 28 | 10.1088/1361-6501/aa5748 |      |
 
 ## Rocket noise
 

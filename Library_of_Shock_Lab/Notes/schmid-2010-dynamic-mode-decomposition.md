@@ -20,7 +20,7 @@ phenomena: ["coherent-structures"]
 params: {"Re": "10,000 (Poiseuille); 4500 (cavity); 3000 (cylinder jet)"}
 topics: ["modal-decomposition"]
 related: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "towne-2018-spod-relationship-dmd-resolvent", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2022-database-reduced-complexity-modeling", "brunton-2020-machine-learning-fluid-mechanics"]
-cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
+cites: ["berkooz-1993-proper-orthogonal-decomposition-turbulent-flows", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
 summary: "Founding DMD paper: SVD-projected companion-matrix fit of one linear map between equispaced snapshots; matches global modes on linearised Poiseuille and cavity; spatial DMD; TR-PIV vs POD"
 ---
 # Dynamic mode decomposition of numerical and experimental data

@@ -69,3 +69,31 @@ What it adds:
 **Reconciling with Ragni.** The paper's prescription (SR ≫ 10, with the shock on a window edge) appears opposite to Ragni's no-bias criterion (window ≤ ξ_p, i.e. SR ≤ 1, p. 56). The two address different errors: Ragni the measured relaxation profile, Mitchell the spurious fluctuation, which is small at SR ≤ 1. The group's working SR ≈ 0.4–0.75 sits in the low-artefact corner, which is why the later measured artefacts are only 3–10%. This should be stated on the page, since it currently cites only Ragni's criterion.
 
 **Open questions it bears on.** It strengthens the page's open question on shock-associated random stress (Tan 2019a anti-phase coherent/random k at reflections). The artefact is random per shot but could be phase-modulated if the shocks move with the tone. It also suggests a practical tool: the mean correlation-coefficient map locates normal and oblique shocks (Fig. 16, p. 945–946) and could generate shock masks automatically. The paper concludes that turbulence statistics in shock-containing windows are "essentially impossible" by PIV (p. 946), a stronger statement than the page's current wording ("shocks still add artificial fluctuation").
+
+## settles-2017-recent-developments-schlieren-shadowgraph (queued 2026-10-24)
+
+- **Hardware for the summary paragraph.** The review documents the hardware behind the page's "Schlieren and density imaging (summary)".
+  - Cameras: CMOS high-speed cameras give megapixel frames at up to 20 kfps and segmented frames at 1 Mfps or more. Shimadzu/Kirana cameras reach 5–10 Mfps but only for 100 to a few hundred frames (p. 3), the trade the group made in moving from 102-frame HPV-1 bursts to SA-Z long records.
+  - Pulsed LEDs: they reach about 100 ns. The Luminus CBT-120 suits schlieren but is too large an emitter for shadowgraphy (p. 5). Double-pulsed LEDs can stand in for lasers in PIV and schlieren velocimetry (p. 6). Xenon sources' long pulse tail corrupts PIV (p. 5).
+  - The review cites the group's Willert, Mitchell & Soria 2012 LED assessment (Exp. Fluids 53, 413–421; PDF held, not yet indexed) as its ref. 18.
+- **Schlieren velocimetry is not a PIV replacement** (p. 12–14). It is path-integrated (about 46% of U_CL in the propane-jet example, p. 13), a single Δt cannot cover a 2–3 decade velocity range (p. 13), it fails where turbulence is intermittent (y/δ > 0.6 in a boundary layer, p. 14), and it tracks fine-scale substructure (p. 14).
+- **The particle-lag open question.** The page treats TR-schlieren SPOD wavenumbers as the lag-free reference. This review shows that reference has its own line-of-sight bias, so a mismatch between PIV and schlieren phase speeds need not be all particle lag. The bias is probably smaller for coherent tone-locked wavepackets than for broadband eddy correlation (note's inference; the paper does not test this).
+- **Facilities.** BOS and retroreflective shadowgraph reach large slotted transonic test sections up to 5 m across through small ports (p. 6–7, 18). Vibration between tare and flow images is the main BOS risk in supersonic tunnels (p. 8).
+- Overall it confirms rather than changes the page's current understanding.
+
+## viswanathan-2004-aeroacoustics-hot-jets (queued 2026-10-24)
+
+- **Data-quality rules from a heated-jet rig** (Boeing LSAF; p. 41–47, 66–71, conclusion 1 p. 77):
+  - Rig (internal) noise adds up to 5 dB or more at high frequency and low velocity in classic NGTE and Tanna data, while their OASPL differs by only 1.7 dB. So OASPL and OAPWL must never be used to validate data (p. 68–70).
+  - Plot spectra against raw frequency, since rig noise sits at fixed Hz (p. 70).
+  - Collapse nozzle sizes with 80 log(V_j/a) + 10 log A (Figs. 6–7: within 1 dB to St 4; within 0.5 dB in OAPWL).
+  - Compare shapes with F/G.
+- **Contraction ratio is no guarantee of a quiet rig.** NGTE used 250 and 100 against 28 and 10.7 here, yet was noisier (p. 46–47). Fittings, gaps, steps and screw heads matter.
+  - At fixed V_j a larger nozzle has a higher internal velocity, so more rig noise (p. 45–46).
+- **Instrumentation** (p. 41, 49): B&K 4939 microphones at normal incidence without grid, on a 15 ft sideline; 23.4 Hz narrowband synthesised into 1/3-octave bands to 80 kHz; standard-day and lossless corrections via Shields & Bass 1977. Thrust and discharge coefficient were measured simultaneously; thrust depends on NPR only (Figs. 1–2, p. 42–43).
+- **Relation to other notes.** Complements mayer-2019-bristol-aeroacoustic-wind-tunnel (coherence and N(f) > 7 checks). Hot jets genuinely reach exponents of 5.5 at 90°, so N(f) > 7 is a cold-jet criterion (my inference).
+  - The group's rigs (contraction ratios 81 to above 100, not anechoic) fall under the open question "How much does the rig shape the resonance?". This paper says a high contraction ratio alone does not settle it.
+- **Changes the topic page: yes.**
+  - Add a short "rig-noise checks" item (raw-frequency plots, nozzle-size scaling, similarity-shape comparison, overall levels hide contamination, contraction ratio not sufficient).
+  - Add the hot-jet caveat to the N(f) > 7 check.
+- **Not tagged, suggested for simulation-methods.** The Re ≥ 4 × 10⁵ threshold (stagnation-ν definition) puts the PyFR staging run (Re_D = 10⁵) four or more times below. The effect is on broadband shape near the peak, not tone frequency, and may be an exit-layer effect.

@@ -20,7 +20,7 @@ phenomena: ["KH-wavepackets"]
 params: {"M_j": "0.4", "Re": "4.5×10⁵ (jet), 0.8×10⁵ (VAWT)"}
 topics: ["modal-decomposition"]
 related: ["towne-2018-spod-relationship-dmd-resolvent", "schmidt-2019-streaming-spod", "schmidt-2018-spectral-analysis-jet-turbulence", "nekkanti-2021-spod-reconstruction-denoising-frequency-time", "yeung-2024-adaptive-spod-broadband-tonal", "von-saldern-2026-band-ensemble-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "towne-2022-database-reduced-complexity-modeling"]
-cites: ["schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent"]
+cites: ["berkooz-1993-proper-orthogonal-decomposition-turbulent-flows", "schmid-2010-dynamic-mode-decomposition", "schmidt-2018-spectral-analysis-jet-turbulence", "schmidt-2019-streaming-spod", "sieber-2016-spectral-proper-orthogonal-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "towne-2018-spod-relationship-dmd-resolvent"]
 summary: "Practical SPOD–Welch guide: N_FFT bias vs variance, 50% overlap, Hamming + a_w, chi-squared CIs, norms, reading λ₁–λ₂ gaps; M 0.4 jet LES and VAWT PIV examples"
 ---
 # Guide to spectral proper orthogonal decomposition

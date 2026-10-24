@@ -198,6 +198,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Krothapalli et al. 1999](../Notes/krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md): M 1.5 C-D jet (NPR 3.7) on a ground plane under a lift plate: PIV u_c 0.52–0.56 rises with h/d; staged tones fit Powell's loop only with p = −0.4; OASPL +8 dB (synthesis pending).
 - [Henderson et al. 2002](../Notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): PIV binned by microphone phase; olive-oil and smoke seeding; NASA Glenn dome (not tagged).
 - [Alkislar et al. 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): microphone-triggered stereo PIV with half-cycle mirroring and about 35 pairs per phase; fine jet seeding checked against probes.
+- [Viswanathan 2004](../Notes/viswanathan-2004-aeroacoustics-hot-jets.md): Hot subsonic jets, 3 nozzle sizes: the 'dipole' hump is a low-Re effect (Re_crit ≈ 4×10⁵); no V⁶; OAPWL exponent 8.74→7.98 with TR; rig noise faked old trends (synthesis pending)
 - [Oberleithner et al. 2011](../Notes/oberleithner-2011-swirling-jet-vortex-breakdown-stability.md): 3D helix from 800 non-TR stereo-PIV snapshots via a POD pair (not tagged).
 - [Ragni et al. 2011](../Notes/ragni-2011-particle-tracer-response-shocks-piv.md): oblique-shock tracer-response test; τ_p of common seeders; SR, TR ≤ 1 criteria.
 - [Mitchell et al. 2011](../Notes/mitchell-2011-particle-relaxation-piv-cross-correlation.md): Noiseless-correlation model of PIV across a normal shock: polydisperse seed lags more; in-window shock adds artificial u_rms up to 0.3U; 35% behind a jet Mach disc (synthesis pending)
@@ -207,6 +208,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Berry et al. 2017](../Notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): Syracuse Skytop anechoic chamber (not tagged).
 - [Mercier et al. 2017](../Notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): near-field two-microphone phase averaging and its reflection limit; repeatability across campaigns; LMFA anechoic jet.
 - [Tan et al. 2017](../Notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md): snapshot, SNR and resolution budgets for residual statistics after POD-mode removal; core masking leaves the modes unchanged.
+- [Settles & Hargather 2017](../Notes/settles-2017-recent-developments-schlieren-shadowgraph.md): Schlieren/shadowgraph since 2001: CMOS cameras, ≤100 ns LEDs, BOS practice, digital x–t streaks, path-biased schlieren velocimetry, calibrated and CFD schlieren (synthesis pending)
 - [Edgington-Mitchell et al. 2018](../Notes/edgington-mitchell-2018-upstream-acoustic-modes-screech-closure.md): standard group PIV settings for screech (not tagged).
 - [Knast et al. 2018](../Notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): tone frequency and phase, not amplitude, in a non-anechoic rig (not tagged).
 - [Bell et al. 2018](../Notes/bell-2018-coupled-underexpanded-supersonic-twin-jets.md): planar PIV of twin Mach-disk jets; light sheet diffracted by the first jet's Mach disk (synthesis pending)

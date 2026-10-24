@@ -106,6 +106,7 @@ No paper uses SPOD, wavelets or Hilbert envelopes, so intermittent features (cra
 - [Gee 2012](../Notes/gee-2012-reusable-srm-noise-spectral-statistical.md): RSRM maps of OASPL, Sk{p} and Sk{∂p/∂t}; 17–18D source; hillside impingement.
 - [James 2012](../Notes/james-2012-directivity-curves-rocket-noise-model.md) (not tagged): recentred RSRM directivity, 51° → 65°; far field only beyond 200–300 D_e.
 - [Panda 2013](../Notes/panda-2013-noise-sources-rocket-test-firings-launch-phased-array.md): Antares phased array; flame-duct exit and deck sources.
+- [Baars et al. 2014](../Notes/baars-2014-cumulative-nonlinear-waveform-distortions-high-speed-jets.md): Cold M 3 jet to 145D: effective Gol'dberg Λ ≈ 0.15, r̄ ≈ 18 m, so no cumulative steepening in a lab chamber; Λ scaling to full scale; single-point Q/S misleads (synthesis pending)
 - [Tsutsumi 2015](../Notes/tsutsumi-2015-epsilon-liftoff-acoustics.md) (not tagged): Epsilon 1/42 subscale campaign; reflected Mach waves; no BBSAN.
 - [Gee 2016](../Notes/gee-2016-near-field-intensity-static-rocket-firings.md): GEM-60 PAGE intensity; 17–32D at 50 Hz; sideline radiation at high frequency.
 - [Reichman 2018](../Notes/reichman-2018-qm2-srm-far-field-acoustics.md): SLS QM-2 far field; Sk{∂p/∂t} 21–32 at 2.5 km; PAGE.

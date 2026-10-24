@@ -41,3 +41,29 @@ This paper is an early, fully documented example of the group's non-time-resolve
 ## edgington-mitchell-2015-staging-screeching-elliptical-jets (queued 2026-10-23)
 
 A methods contribution from non-time-resolved high-resolution schlieren (PCO DiMax, 1.6 µs LED, 1000–2000 independent images per view; p. 1009, 1010, 1014): (i) mode classification by zero-lag two-point correlation in two orthogonal, separately acquired views, symmetric in both = varicose, antisymmetric in the minor-axis view only = flapping, weak antisymmetric in both = "helical" (eqs. 4–5, Figs 6–10, p. 1012–1017); (ii) vortex spacing from correlation-peak spacing (Table 1, p. 1018); (iii) near-field standing-wave spacing from lobes of intensity standard deviation outside the shear layer, validated against Panda's relation within 2–3 % (Table 2, p. 1018–1019); (iv) reference-point sensitivity: X on a standing-wave lobe gives strong far-reaching correlation, X between lobes almost none, but the derived spacing is unchanged (Fig. 11, p. 1019–1020). ∂ρ/∂y is used instead of ∂ρ/∂r because it does not change sign at the centreline (p. 1009). It is the same toolkit as [Knast 2018](../Notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md) and [Johnston 2016](../Notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md), and the std-lobe method is the precursor of Esfahani 2021b's log-std standing-wave maps. Limits: hand-picked X, non-simultaneous views (no helix test), shock-spacing method unstated, and frequency only from the microphone.
+
+## settles-2017-recent-developments-schlieren-shadowgraph (queued 2026-10-24)
+
+- **What it is.** This is the library's first general review of schlieren and shadowgraph practice, and the companion to Raffel 2015 (`raffel-2015-background-oriented-schlieren-review`), which covers only BOS. Add it to Scope/Papers as the instrument reference.
+- **Item 3 (intensity is a path-integrated, knife-edge-dependent proxy).**
+  - It backs this item with theory: ε_y = (1/n)∫∂n/∂y dz (eq. 2, p. 6); schlieren shows the gradient normal to the knife edge and shadowgraph the Laplacian (p. 3).
+  - A shadowgram needs the knife edge removed *and* the camera defocused (p. 3), as `edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance` did (p. 7). The shadowgram resolves vortex cores and shocks better than any schlieren view (Fig. 11, p. 17; p. 19).
+- **Open question "Can schlieren amplitudes be compared across cases?"**
+  - It offers a cheaper candidate than TR BOS: a weak calibration lens (10 m focal length in Fig. 9) in the field of view maps intensity to refraction angle (p. 14–15). Its focal length must exceed that of the schlieren optics.
+  - SPOD eigenvalues and HPOD amplitudes would then be in physical units of path-integrated ∂n/∂x.
+  - Caveats: the calibration holds only inside the cut-off's linear range, which shocks over-range (p. 13, 17), and it does not remove path or view dependence. This is a new route on the page, not yet tested by the group.
+- **Measuring range (sub-point under "Knife edge").**
+  - Dauptain et al. 2010's impinging-jet LES rendered at |∇ρ| ranges of 1000, 100 and 10 kg m⁻⁴ shows shocks, then shear layers and wall jet, then only the impingement acoustics (Fig. 12, p. 17). Shock cells and acoustic waves therefore need sensitivities one to two decades apart.
+  - A graded filter in place of the knife edge extends the range (p. 13). This makes concrete the sensitivity–range trade noted by `johnston-2016-underexpanded-jet-intrusive-tab-visualisation` (p. 52).
+  - Note-side inference for BMD users: clipped pixels make the intensity nonlinear and can add spurious harmonics or triads, so they should be masked.
+- **"Matching images to simulations."**
+  - CFD's |∇ρ| "bright-field" rendering is seldom used experimentally (p. 17). LES should be rendered as ∫∂ρ/∂x dz and ∫∇²ρ dz, at the experiment's range.
+  - Zemax ray tracing of a z-type system (geometrical optics, no diffraction; p. 15–16) is a third forward-model example, after `molnar-2023-physics-informed-bos-supersonic` and `tan-2015-bos-density-axisymmetric-jets`. This strengthens current-understanding item 6 without changing it.
+- **BOS practice.**
+  - It agrees with Raffel 2015 on 2–5 px random dots, blur kept below the window, and optical flow as an accuracy gain (p. 8–10).
+  - It adds that vibration between tare and run is inherent to supersonic tunnels (Elsinga et al., p. 8), relevant to the TR-BOS open question, and that temporal (frame-to-frame) BOS is qualitative only (p. 8).
+  - **Possible tension:** Vinnichenko et al. found wavelet-noise backgrounds respond poorly to flow-induced blur (p. 9). That is the background `tan-2015-bos-density-axisymmetric-jets` used (Tan p. 6–7), validated only in helium jets without shocks. It is worth a caveat in "The group's Abel recipe".
+- **Space–time methods.**
+  - Digital streak schlieren (one pixel row per frame stacked into an x–t diagram; p. 11) is the general form of the x–t/Hough practice of `knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet` (p. 10) and `karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets`. Automatic shock tracking (p. 11) matches `powis-2016-impingement-tones-shock-instabilities-plug-nozzle`.
+  - Schlieren velocimetry measures about 46% of the centreline speed in a round jet because of path averaging (p. 13), and follows fine-scale substructure rather than large structures (Thurow et al. 2008, p. 14). Schlieren-derived U_c is therefore line-of-sight weighted.
+- **Practice for the Relevance checklist:** always record a no-flow tare and uncompressed raw/TIFF images (p. 20–21).

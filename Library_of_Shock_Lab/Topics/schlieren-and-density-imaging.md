@@ -183,6 +183,7 @@ Which imaging suits which analysis, following the CLAUDE.md workflow:
 - [Johnston & Edgington-Mitchell 2016](../Notes/johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md): TR schlieren two-point intensity correlation classifies mode symmetry; brightest-pixel tracking of the tab's streamwise vortex pair (synthesis pending).
 - [Berry et al. 2017](../Notes/berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md): 50–100 kHz schlieren POD; aliasing; drift removal.
 - [Mercier et al. 2017](../Notes/mercier-2017-screech-feedback-loop-underexpanded-round-jets.md): 220–430 kfps thin-strip schlieren (synthesis pending).
+- [Settles & Hargather 2017](../Notes/settles-2017-recent-developments-schlieren-shadowgraph.md): Schlieren/shadowgraph since 2001: CMOS cameras, ≤100 ns LEDs, BOS practice, digital x–t streaks, path-biased schlieren velocimetry, calibrated and CFD schlieren (synthesis pending)
 - [Knast et al. 2018](../Notes/knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet.md): HPV-1 bursts, x–t convection speeds, two views (not tagged).
 - [Weightman 2019](../Notes/weightman-2019-sound-production-impinging-supersonic-jets.md): 500 kfps burst schlieren; (x, t) Fourier split.
 - [Rezay Haghdoost et al. 2020](../Notes/rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet.md): single-event TR schlieren against numerical schlieren (not tagged).
