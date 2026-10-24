@@ -1,6 +1,17 @@
 function [k1,k2,k3,k_x,k_spectrum_complex] = get_wavenumber(x,y,y_D,y_width,data,using_spod)
     %k1,k2,k3 = k_kh,k_up_1,k_up_2 for using_spod = true
     %k1,k2,k3 = k_s1,k_s2,0 for using_spod = false
+    %
+    % y_width: rows either side of the extraction row(s) that are averaged
+    % (|k spectrum| for using_spod, the mean profile otherwise); 0 = one row.
+    %
+    % PATCH 2026-10-22: idx_x0:end (was idx_x0:nx) and dx = span/(nx-1).
+    % PATCH 2026-10-23: y_width is used (it was ignored); ties in the row
+    % search take the first row.
+    if isempty(y_width)
+        y_width = 0;
+    end
+    y_width = max(0, round(y_width));
     
     if using_spod
         fft_factor = 4;
@@ -28,25 +39,27 @@ function [k1,k2,k3,k_x,k_spectrum_complex] = get_wavenumber(x,y,y_D,y_width,data
         k_spectrum_complex = fft(conj(data(:,idx_x0:end)),Nfft_x,2);
         k_spectrum_complex = fftshift(k_spectrum_complex,2);
         
+        rows1 = max(1,idx_y1-y_width):min(ny,idx_y1+y_width);
+        rows2 = max(1,idx_y2-y_width):min(ny,idx_y2+y_width);
         if true  %%% Alternative methods for finding k_kh, k_up. Not sure which is best.
-            KH_k_spectrum_complex = k_spectrum_complex(idx_y1,:);
+            KH_k_spectrum_complex = mean(abs(k_spectrum_complex(rows1,:)),1);
             
             p_KH = max(abs(KH_k_spectrum_complex(1,Nfft_x/2+1:end)),[],2);
-            idx_KH = find(abs(KH_k_spectrum_complex(1,:)) == p_KH);
+            idx_KH = Nfft_x/2 + find(abs(KH_k_spectrum_complex(1,Nfft_x/2+1:end)) == p_KH,1);
             k_KH = k_x(1,idx_KH); % wavenumber of KH wave
             
             p_UP = max(abs(KH_k_spectrum_complex(1,1:Nfft_x/2)),[],2);
-            idx_UP = find(abs(KH_k_spectrum_complex(1,:)) == p_UP);
+            idx_UP = find(abs(KH_k_spectrum_complex(1,1:Nfft_x/2)) == p_UP,1);
             k_UP = k_x(1,idx_UP); % wavenumber of upstream wave
             
-            KH_k_spectrum_complex_n = k_spectrum_complex(idx_y2,:);
+            KH_k_spectrum_complex_n = mean(abs(k_spectrum_complex(rows2,:)),1);
             
             p_KH_n = max(abs(KH_k_spectrum_complex_n(1,Nfft_x/2+1:end)),[],2);
-            idx_KH_n = find(abs(KH_k_spectrum_complex_n(1,:)) == p_KH_n);
+            idx_KH_n = Nfft_x/2 + find(abs(KH_k_spectrum_complex_n(1,Nfft_x/2+1:end)) == p_KH_n,1);
             k_KH_n = k_x(1,idx_KH_n); % wavenumber of KH wave
             
             p_UP_n = max(abs(KH_k_spectrum_complex_n(1,1:Nfft_x/2)),[],2);
-            idx_UP_n = find(abs(KH_k_spectrum_complex_n(1,:)) == p_UP_n);
+            idx_UP_n = find(abs(KH_k_spectrum_complex_n(1,1:Nfft_x/2)) == p_UP_n,1);
             k_UP_n = k_x(1,idx_UP_n); % wavenumber of upstream wave
             
             k1 = (k_KH_n+k_KH)*0.5;
@@ -77,7 +90,8 @@ function [k1,k2,k3,k_x,k_spectrum_complex] = get_wavenumber(x,y,y_D,y_width,data
         ny = size(y_fft,1);
         nx = size(x_fft,2);
 
-        mean_snapshots_axial = squeeze(data(idx_y, idx_x0:end));  % was idx_x0:nx, which dropped the last idx_x0-1 columns
+        rows = max(1,idx_y-y_width):min(ny,idx_y+y_width);
+        mean_snapshots_axial = mean(double(data(rows, idx_x0:end)),1);  % was data(idx_y, idx_x0:nx), which dropped the last idx_x0-1 columns
         
         wx = max(x_fft(1,:))-min(x_fft(1,:));                         % Span of axial domain
         sps = wx/(nx-1);                                        % Spacing of the samples in x (span/(nx-1) = dx; was wx/nx)
@@ -97,6 +111,12 @@ function [k1,k2,k3,k_x,k_spectrum_complex] = get_wavenumber(x,y,y_D,y_width,data
         peaks_idx_12 = all_peaks_idx_sorted(all_peaks_idx_sorted>30);
         peaks_idx_12 = peaks_idx_12(1:end); % ks1, ks2, ks3 and ks4 % peaks_idx_12(1:2); ks1, ks2
 
+        if isempty(peaks_idx_12)
+            % no clear shock-cell peak in the mean profile (e.g. subsonic jets)
+            warning('get_wavenumber: no shock-cell peak in the mean-field profile; k_s1, k_s2 set to NaN.');
+            k1 = NaN; k2 = NaN; k3 = 1000; k_x = 0; k_spectrum_complex = [];
+            return
+        end
         if length(peaks_idx_12)<2
             peaks_idx_12(2) = peaks_idx_12(1);
         end

@@ -168,10 +168,13 @@ Fix in a copy here, never in the repo; tell the user so they can fix upstream.
   - `match_folders` (folder wildcards);
   - `load_fields_time_major` (stored-class, time-first loading).
 - **CCA** is computed in the POD subspace, so there are no n_pix² matrices.
+- **Plot scripts never close their figures** (BMD, Hilbert, POD, SPOD, time-frequency, wavenumber and three `Functions/Misc` scripts): every plot opens a new window. On long runs this piles up hundreds of windows; `BMD_Plots` crashed Windows Explorer locally. The patch closes each figure once saved.
+- **`BMD_Plots_Symmetry_Enforced`** figure paths can pass the 260-character Windows limit (the patch drops the redundant `Symmetry_Imposed_` prefix from figure names).
+- Full run table and numbers: §7.7 of `Codebase_Notes/REVIEW_2026-10-22.md`.
 
 **Verified on Test_Data, 2026-10-22 (@ 024a470)**
 
-Full report: `Codebase_Patches/Schlieren_Processing_Scripts/REVIEW_2026-10-22.md`. Patched copies of the files are next to it. Test: `tests/test_spod_hpod_scaling.m`.
+Full report: `Codebase_Notes/REVIEW_2026-10-22.md` (moved from the patch folder). Patched copies of the files are in `Codebase/Codebase_Patches/Schlieren_Processing_Scripts`. Test: `tests/test_spod_hpod_scaling.m`.
 
 - `spod.m` is correct: Parseval is exact.
 - The "unverified" amplitude mismatch below is **confirmed**. `invspod` output is too small by sqrt(dt)·Σw/‖w‖ (×1/14 at nfft 1024, 150 kHz). The patch adds an optional `dt` argument.

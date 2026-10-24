@@ -77,7 +77,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Discover main folders (NPR/Mach conditions) matching wildcard pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];  % Filter for directories only
     main_folders = main_folders(sf);
     
@@ -101,7 +101,7 @@ for m = 1:length(parent_folders)
         % Discover SPOD result files matching naming pattern
         suffix = strcat('*Nfft*.mat');  % Pattern: {details}_Nfft{n}.mat
         case_list = dir(fullfile(SPOD_dir,suffix));
-        case_list = extractfield(case_list, 'name');  % case_list: {1, n_cases} cell array of filenames
+        case_list = {case_list.name};  % case_list: {1, n_cases} cell array of filenames
     
         % PARAMETERIZATION DETECTION: determine if files use NPR or Mach numbering
         if contains(case_list{1},'_NPR_')
@@ -189,9 +189,11 @@ for m = 1:length(parent_folders)
                 end
     
                 % SNAPSHOT DATA LOADING (memory-intensive operation)
-                im_data = file.im_data(:,:,1:n_snapshots);  % im_data: [n_y, n_x, n_snapshots] uint16, raw Schlieren images
-                im_data = cast(im_data,'single');  % Convert to single precision for computation efficiency
-                im_data = permute(im_data,[3,1,2]);  % Permute to [n_snapshots, n_y, n_x] for tcoeffs function
+                % PATCH 2026-10-23: read straight into [n_snapshots, n_y, n_x] in the stored
+                % class (int16); tcoeffs converts rows to single as it projects them.
+                % Casting to single and then permuting held two single copies (~330 GB
+                % peak for a 400k-frame, 200 x 512 px case).
+                [im_data, ~] = load_fields_time_major(file, n_snapshots);
         
                 %% =====================================================================
                 %% TIME-FREQUENCY EXPANSION COEFFICIENT COMPUTATION
@@ -252,7 +254,7 @@ for m = 1:length(parent_folders)
         % Generate pcolor plots of |a(St,t)| to visualize modal amplitude evolution
 
         case_list = dir(fullfile(save_file,'*.mat'));
-        case_list = extractfield(case_list, 'name');  % case_list: {1, n_cases} cell array of filenames
+        case_list = {case_list.name};  % case_list: {1, n_cases} cell array of filenames
 
         for i = 1:length(case_list)  
     
@@ -293,6 +295,7 @@ for m = 1:length(parent_folders)
        
             export_fig(fileout,'-m5');  % Export at 5× resolution
             savefig(strcat(extractBefore(fileout,'png'),'fig'))  % Save MATLAB .fig (WARNING: large files ~1.2GB)
+            close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
             
             % FIGURE 2: Sum of first n_modes (combined modal energy evolution)
             % RATIONALE: visualize total energy captured by leading modes (better SNR than single mode)
@@ -315,6 +318,7 @@ for m = 1:length(parent_folders)
        
             export_fig(fileout,'-m5');
             savefig(strcat(extractBefore(fileout,'png'),'fig'))  % Save MATLAB .fig (WARNING: large files ~1.2GB)
+            close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
         end
     end
 end

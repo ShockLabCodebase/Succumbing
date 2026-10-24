@@ -60,12 +60,13 @@ for n_y = [301 300]
     end
 end
 
-%%% "none": no axis search, full height, y = 0 at the frame centre
+%%% "none": no axis search; the user's y_0 (row 150 in make_fields) is kept as
+%%% the axis and the frame is cropped symmetrically about it (rows 1:299)
 for n_y = [301 300]
     [x,y,im_data] = make_fields(n_y,n_x,(n_y+1)/2 + 3.3,0,D_px,x0_col,n_t);
     dy = y(2,1) - y(1,1);
     [~,y_out,~,~,~,~,info] = quiet_align(x,y,mean(im_data,3),im_data,zeros(n_y,n_x),true,"none",0);
-    ok = isequal(info.rows,1:n_y) && max(abs(y_out(:,1) - ((1:n_y)' - (n_y+1)/2)*dy)) < 1e-9;
+    ok = isequal(info.rows(:)',1:299) && max(abs(y_out(:,1) - ((1:299)' - 150)*dy)) < 1e-9;
     n_fail = n_fail + ~ok;
     fprintf('"none", n_y = %d: rows kept %d, %s\n',n_y,numel(info.rows),pass_fail(ok))
 end
@@ -74,7 +75,9 @@ end
 for n_y = [301 300]
     [x,y,im_data] = make_fields(n_y,n_x,(n_y+1)/2 + 7.6,1.3,D_px,x0_col,n_t);
     [x_out,~,~,~,~,~,info] = quiet_align(x,y,mean(im_data,3),im_data,zeros(n_y,n_x),true,"both",0);
-    x_start = n_x - size(x_out,2) + 16;  % 15 px kept upstream of the detected exit
+    % 15 px are kept upstream of the detected exit; info.cols is the crop that
+    % removes the rotated corners (applied before the axial crop)
+    x_start = info.cols(1) - 1 + numel(info.cols) - size(x_out,2) + 16;
     ok = abs(x_start - x0_col) <= 1;
     n_fail = n_fail + ~ok;
     fprintf('"both", n_y = %d: exit found at column %d (true %d), %s\n',n_y,x_start,x0_col,pass_fail(ok))

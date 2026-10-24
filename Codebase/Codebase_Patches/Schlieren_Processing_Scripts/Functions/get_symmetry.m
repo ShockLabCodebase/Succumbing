@@ -184,26 +184,28 @@ else
 
     variable = zeros(y_size,size(data,2),size(data,3),size(data,4),out_class);
 
+    % PATCH 2026-10-23: done in chunks of snapshots (the whole-array version
+    % made two half-size temporary copies: out of memory on 10k-frame fields),
+    % and in out_class (int16 input was added and halved in int16, which
+    % saturates and rounds).
     for i = 1:length(flow_variables)
-    
-        if strcmp(flow_variables(i),"u") || strcmp(flow_variables(i),"pressure") || strcmp(flow_variables(i),"temperature") || strcmp(flow_variables(i),"light")
-            if strcmp(sym_type,'symmetric_')
-                variable(:,:,i,:) = 1/2*(data(y_pos,:,i,:) + flip(data(y_neg,:,i,:),1));
-            elseif strcmp(sym_type,'antisymmetric_')
-                variable(:,:,i,:) = 1/2*(data(y_pos,:,i,:) - flip(data(y_neg,:,i,:),1));
-            end
+
+        if strcmp(flow_variables(i),"u") || strcmp(flow_variables(i),"pressure") || strcmp(flow_variables(i),"temperature") || strcmp(flow_variables(i),"light") || strcmp(flow_variables(i),"w")
+            s = 1;   % symmetric: +, antisymmetric: -
         elseif strcmp(flow_variables(i),"v")
-            if strcmp(sym_type,'symmetric_')
-                variable(:,:,i,:) = 1/2*(data(y_pos,:,i,:) - flip(data(y_neg,:,i,:),1));
-            elseif strcmp(sym_type,'antisymmetric_')
-                variable(:,:,i,:) = 1/2*(data(y_pos,:,i,:) + flip(data(y_neg,:,i,:),1));
-            end
-        elseif strcmp(flow_variables(i),"w")
-            if strcmp(sym_type,'symmetric_')
-                variable(:,:,i,:) = 1/2*(data(y_pos,:,i,:) + flip(data(y_neg,:,i,:),1));
-            elseif strcmp(sym_type,'antisymmetric_')
-                variable(:,:,i,:) = 1/2*(data(y_pos,:,i,:) - flip(data(y_neg,:,i,:),1));
-            end
+            s = -1;  % v changes sign under the reflection
+        else
+            continue
+        end
+        if strcmp(sym_type,'antisymmetric_')
+            s = -s;
+        elseif ~strcmp(sym_type,'symmetric_')
+            continue
+        end
+        chunk = 500;
+        for t1 = 1:chunk:size(data,4)
+            tt = t1:min(size(data,4),t1+chunk-1);
+            variable(:,:,i,tt) = 1/2*(cast(data(y_pos,:,i,tt),out_class) + s*cast(flip(data(y_neg,:,i,tt),1),out_class));
         end
     end
 

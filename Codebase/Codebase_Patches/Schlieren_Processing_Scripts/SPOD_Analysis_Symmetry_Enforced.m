@@ -109,7 +109,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Discover main folders (nozzle configurations) matching pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];  % Keep directory entries only
     main_folders = main_folders(sf);
 
@@ -128,7 +128,7 @@ for m = 1:length(parent_folders)
         snapshot_dir = fullfile(main_folder,'Data');
         suffix = '*Fields.mat';
         case_list = dir(fullfile(snapshot_dir,suffix));
-        case_list = extractfield(case_list, 'name');  % case_list: string array of filenames
+        case_list = {case_list.name};  % case_list: string array of filenames
 
         %% Detect operating-parameter convention (NPR vs Mach number)
         % Heuristic: examine first case name for '_NPR_' or '_M_' delimiter
@@ -174,8 +174,8 @@ for m = 1:length(parent_folders)
             % Load image stack (first n_snapshots frames only) and spatial grids
             im_data = file.im_data(:,:,1:n_snapshots);  % im_data: [n_y,n_x,n_snapshots] uint8/uint16
             im_data = cast(im_data,'single');           % Cast to single for memory efficiency
-            x = file.x;      % x: [n_y,n_x] axial coordinate grid [mm]
-            y = file.y;      % y: [n_y,n_x] transverse coordinate grid [mm]
+            x = file.x;      % x: [n_y,n_x] axial coordinate grid [D]
+            y = file.y;      % y: [n_y,n_x] transverse coordinate grid [D]
             fps = file.fps;  % fps: scalar, frame rate [Hz]
             D = file.D;      % D: scalar, nozzle diameter [mm]
 
@@ -213,7 +213,8 @@ for m = 1:length(parent_folders)
             
             if set_frequencies
                 % Compute index ranges around each requested St
-                opts.savefft = true;  % Required for partial-frequency SPOD output
+                % PATCH 2026-10-23: spod honours opts.savefreqs in memory now, so
+                % savefft isn't needed (it was reset to false below anyway).
                 St_full_list = [];
                 for ss = 1:length(St_des)
                     St_ind = find(abs(St-St_des(ss)) == min(abs(St-St_des(ss))));
@@ -242,7 +243,8 @@ for m = 1:length(parent_folders)
             dt            = 1/fps;         % dt: scalar, sampling interval [s]
             modes_to_keep = 4;             % modes_to_keep: int, number of SPOD modes to retain
 
-            opts.savefft  = false;         % default: compute full SPOD (overridden if set_frequencies=true)
+            opts.savefft  = false;         % FFT blocks kept in memory
+            St_all = St;                   % full St axis (St is cut to St_full_list after each SPOD)
             opts.savedir  = fullfile(save_folder,'SPOD_Results','Temp');  % temp directory for FFT storage
             opts.nsave    = modes_to_keep; % Save only top modes_to_keep modes per frequency
 
@@ -253,6 +255,11 @@ for m = 1:length(parent_folders)
             % Symmetric modes: coupled coherent structures aligned with jet axis
             % Antisymmetric modes: counter-rotating vortex pairs (fundamental instability)
             
+            % PATCH 2026-10-23: keep the full grids; after undo_symmetry the
+            % saved x, y and im_mean are the rows the modes cover
+            % (2*y_size - y_odd rows about the axis), which differ from the
+            % full frame when it isn't symmetric about the axis.
+            x_full = x; y_full = y; im_mean_full = im_mean;
             for sym = 1:symmetry_regions
                 clearvars im_data_sym L P A    % free the previous symmetry's arrays before building the next
 
@@ -260,11 +267,12 @@ for m = 1:length(parent_folders)
                     %% 2-region symmetry: symmetric/antisymmetric about y=0 (jet centerline)
                     % Locate symmetry axis and compute data extent for mirroring
                     
-                    dy     = y(2,1) - y(1,1);
-                    c_h    = round(2*(1 - y(1,1)/dy))/2;          % axis row, snapped to whole/half row
+                    dy     = y_full(2,1) - y_full(1,1);
+                    c_h    = round(2*(1 - y_full(1,1)/dy))/2;          % axis row, snapped to whole/half row
                     y_zero = floor(c_h);
                     y_odd  = double(c_h == y_zero);               % 1 if the axis is on a row
-                    y_size = min(y_zero, size(y,1) - ceil(c_h) + 1);
+                    y_size = min(y_zero, size(y_full,1) - ceil(c_h) + 1);
+                    y_rows = y_zero-y_size+1:y_zero+y_size-y_odd; % rows undo_symmetry returns
                     % Choose symmetry label for saving filenames and metadata
                     if sym == 1
                         sym_type = "symmetric_";         % sym_type: descriptor for data storage
@@ -281,7 +289,7 @@ for m = 1:length(parent_folders)
 
                 else
                     % 4-region symmetry: not supported for schlieren (placeholder)
-                    fprintf('4 symmetry regions? In Schlieren? I just want to win a game...')
+                    error('4 symmetry regions are not implemented for schlieren')
                 end
 
                 %% SPOD expects time along first dimension: (t,y,x)
@@ -295,6 +303,7 @@ for m = 1:length(parent_folders)
                 % Design intent: extract dominant spatial structures and their frequencies
                 
                 [L,P,f,~,A] = spod(im_data_sym,nfft,intWeights,nOvlp,dt,opts);
+                St = St_all;   % PATCH 2026-10-23: the second symmetry cut St a second time
                 % L: [n_freq, n_modes] eigenvalues (energy ranking per frequency)
                 % P: [n_freq, n_modes, n_y_half, n_x] complex mode shapes
                 % f: [n_freq] frequency axis [Hz]
@@ -314,7 +323,7 @@ for m = 1:length(parent_folders)
                     % Reconstruct full P, L, A arrays with only selected frequencies
                     for iii = St_full_list
                         count = count + 1;
-                        for jjj = 1:modes_to_keep
+                        for jjj = 1:min(modes_to_keep,size(L,2))
                             P(count,:,:,jjj) = P_func(iii,jjj);  % Copy to contiguous array
                             L_temp(count,jjj) = L(iii,jjj);
                         end
@@ -327,8 +336,16 @@ for m = 1:length(parent_folders)
                     L = L_temp;
                 else
                     % Keep only the requested number of modes; cast to single precision
-                    P = cast(P(:,:,:,1:modes_to_keep),'single');
+                    P = cast(P(:,:,:,1:min(modes_to_keep,size(P,4))),'single');  % PATCH 2026-10-23: fewer modes than blocks on short records
                     % P: [n_freq, n_y_half, n_x, n_modes] single precision
+                    if set_frequencies
+                        % keep only the requested frequencies (the others are zero)
+                        P = P(St_full_list,:,:,:);
+                        L = L(St_full_list,:);
+                        A = A(St_full_list,:,:);
+                        St = St(St_full_list);
+                        f = f(St_full_list);
+                    end
                 end
 
                 %% ===================== UNDO SYMMETRY: RECONSTRUCT FULL-DOMAIN MODES =====================
@@ -338,6 +355,7 @@ for m = 1:length(parent_folders)
                 
                 P = squeeze(undo_symmetry(P,sym_type,[],y_odd,[]));
                 % P: [n_freq, n_y, n_x, n_modes] full-domain modal shapes
+                x = x_full(y_rows,:); y = y_full(y_rows,:); im_mean = im_mean_full(y_rows,:);
 
                 %% ===================== SAVE SPOD RESULTS ========================
                 % Persist computed SPOD results (eigenvalues, modes, metadata) to MAT file

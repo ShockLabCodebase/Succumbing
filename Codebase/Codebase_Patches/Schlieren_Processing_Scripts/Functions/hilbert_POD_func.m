@@ -56,15 +56,15 @@ else
     end
 
     if sum(x_roi ~= 0) > 0
-        ind_x1 = find(abs(x(1,:)-x_roi(1)) == min(abs(x(1,:)-x_roi(1))));
-        ind_x2 = find(abs(x(1,:)-x_roi(2)) == min(abs(x(1,:)-x_roi(2))));
+        ind_x1 = find(abs(x(1,:)-x_roi(1)) == min(abs(x(1,:)-x_roi(1))),1); % first of any tie (PATCH 2026-10-23)
+        ind_x2 = find(abs(x(1,:)-x_roi(2)) == min(abs(x(1,:)-x_roi(2))),1); % first of any tie (PATCH 2026-10-23)
     else
         ind_x1 = 1;
         ind_x2 = size(x,2);
     end
     if sum(y_roi ~= 0) > 0
-        ind_y1 = find(abs(y(:,1)-y_roi(1)) == min(abs(y(:,1)-y_roi(1))));
-        ind_y2 = find(abs(y(:,1)-y_roi(2)) == min(abs(y(:,1)-y_roi(2))));
+        ind_y1 = find(abs(y(:,1)-y_roi(1)) == min(abs(y(:,1)-y_roi(1))),1); % first of any tie (PATCH 2026-10-23)
+        ind_y2 = find(abs(y(:,1)-y_roi(2)) == min(abs(y(:,1)-y_roi(2))),1); % first of any tie (PATCH 2026-10-23)
     else
         ind_y1 = 1;
         ind_y2 = size(y,1);
@@ -185,8 +185,12 @@ else
     
     end
 
-    phi = Uall * a_n(:,1:num_modes);
-    a_n = conj(a_n(:,1:num_modes));   % U = phi*a.' needs conj(V)
+    % PATCH 2026-10-23: same scaling as the other branches (unit-norm phi,
+    % amplitude in a_n); it returned phi = U*S and unit-norm a_n
+    tmp = Uall * a_n(:,1:num_modes);
+    tmp_norm = vecnorm(tmp);
+    phi = tmp./tmp_norm;
+    a_n = conj(a_n(:,1:num_modes)).*tmp_norm;   % U = phi*a.' needs conj(V)
 
     Energy = diag(Sigma.^2)./total_energy.*100;   % was normalised by the retained modes only
     Mode = [1:extra_modes];

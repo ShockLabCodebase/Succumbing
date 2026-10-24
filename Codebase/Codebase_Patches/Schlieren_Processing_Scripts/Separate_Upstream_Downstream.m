@@ -65,7 +65,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Find all subfolders matching main_folder_str pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -82,7 +82,7 @@ for m = 1:length(parent_folders)
         %% Discover SPOD result files matching pattern
         suffix = strcat('*.mat');  % suffix: string, pattern to match SPOD filenames
         case_list = dir(fullfile(main_folder,suffix));
-        case_list = extractfield(case_list, 'name');  % case_list: cell array of filenames
+        case_list = {case_list.name};  % case_list: cell array of filenames
     
         %% Detect operating condition parameterization (NPR vs. Mach)
         % RATIONALE: NPR (Nozzle Pressure Ratio) for heated jets, Mach for ideally-expanded jets
@@ -131,7 +131,8 @@ for m = 1:length(parent_folders)
 
         %% ===================== PER-CASE PROCESSING LOOP =====================
         % For each operating condition: load SPOD, filter, reconstruct, save        
-        for ii = 1:length(case_list) 
+        for ii = 1:length(case_list)
+            clearvars L_peaks_inds St_peaks im_data_multiple   % PATCH 2026-10-23: kept entries from the previous case
 
             filename = case_list{ii};
             full_filename = fullfile(main_folder,filename);

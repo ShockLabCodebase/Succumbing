@@ -1,4 +1,13 @@
 %%% simple POD
+%%%
+%%% PATCH 2026-10-22: Energy (%) is the share of the total variance
+%%% (trace(R), or ||U||_F^2 for svds), not of the 500 retained eigenvalues.
+%%% PATCH 2026-10-23:
+%%% - svds branch (ROI > 0 with fewer pixels than snapshots) now scales like
+%%%   the other branches: phi has unit-norm columns and a_n carries the
+%%%   amplitude (it returned phi = U*S unnormalised and a_n = V unit-norm).
+%%% - ROI bounds that fall exactly between two grid points no longer give two
+%%%   indices (find(...,1)); the ROI rows/columns are put in increasing order.
 function [POD_modes, a_n, Energy, phi, Mode, x, y] = simple_POD_func(im_data, ROI, x_roi, y_roi, x, y) 
 
 im_data = cast(im_data,'single');
@@ -24,19 +33,21 @@ else
     end
 
     if sum(x_roi ~= 0) > 0
-        ind_x1 = find(abs(x(1,:)-x_roi(1)) == min(abs(x(1,:)-x_roi(1))));
-        ind_x2 = find(abs(x(1,:)-x_roi(2)) == min(abs(x(1,:)-x_roi(2))));
+        ind_x1 = find(abs(x(1,:)-x_roi(1)) == min(abs(x(1,:)-x_roi(1))),1);
+        ind_x2 = find(abs(x(1,:)-x_roi(2)) == min(abs(x(1,:)-x_roi(2))),1);
     else
         ind_x1 = 1;
         ind_x2 = size(x,2);
     end
     if sum(y_roi ~= 0) > 0
-        ind_y1 = find(abs(y(:,1)-y_roi(1)) == min(abs(y(:,1)-y_roi(1))));
-        ind_y2 = find(abs(y(:,1)-y_roi(2)) == min(abs(y(:,1)-y_roi(2))));
+        ind_y1 = find(abs(y(:,1)-y_roi(1)) == min(abs(y(:,1)-y_roi(1))),1);
+        ind_y2 = find(abs(y(:,1)-y_roi(2)) == min(abs(y(:,1)-y_roi(2))),1);
     else
         ind_y1 = 1;
         ind_y2 = size(y,1);
     end
+    [ind_x1, ind_x2] = deal(min(ind_x1,ind_x2), max(ind_x1,ind_x2));
+    [ind_y1, ind_y2] = deal(min(ind_y1,ind_y2), max(ind_y1,ind_y2));
 
     im_data_fluc = im_data_fluc(ind_y1:ind_y2,ind_x1:ind_x2,:);
     S1 = size(im_data_fluc,1);
@@ -157,8 +168,10 @@ else
     
     end
 
-    phi = Uall * a_n(:,1:num_modes);
-    a_n = a_n(:,1:num_modes);
+    tmp = Uall * a_n(:,1:num_modes);       % = U*S over the (full) field
+    tmp_norm = vecnorm(tmp);
+    phi = tmp./tmp_norm;                   % unit-norm modes, as in the other branches
+    a_n = a_n(:,1:num_modes).*tmp_norm;    % coefficients carry the amplitude
 
     Energy = diag(Sigma.^2)./total_energy.*100;   % was normalised by the retained modes only
     Mode = [1:extra_modes];

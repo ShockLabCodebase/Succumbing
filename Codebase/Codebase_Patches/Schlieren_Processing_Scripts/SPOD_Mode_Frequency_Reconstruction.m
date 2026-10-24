@@ -10,7 +10,7 @@
 %
 % HIGH-LEVEL WORKFLOW:
 %   1. Discover SPOD result MAT files in {main_folder}/SPOD_Results/Data/
-%   2. Load SPOD modes P [n_freq, n_modes, n_y, n_x] and eigenvalues L [n_freq, n_modes]
+%   2. Load SPOD modes P [n_freq, n_y, n_x, n_modes] and eigenvalues L [n_freq, n_modes]
 %   3. Load SPOD expansion coefficients A [n_freq, n_modes, n_blocks]
 %   4. Apply frequency/mode filtering to A:
 %      a) BANDPASS mode: set A=0 outside [St_highpass, St_lowpass] band
@@ -29,7 +29,7 @@
 %   Saved Variables:
 %     - im_data: [n_time, n_y, n_x] single, reconstructed flow field snapshots
 %     - im_mean: [n_y, n_x] double, mean flow field (add to im_data for absolute field)
-%     - x, y: [1, n_x], [1, n_y] double, spatial grid coordinates [mm]
+%     - x, y: [1, n_x], [1, n_y] double, spatial grid coordinates [D]
 %     - St, f: [1, n_freq] double, Strouhal numbers and frequencies [Hz]
 %     - L: [n_freq, n_modes] double, SPOD eigenvalues (modal energy)
 %     - n_modes_recon: scalar int, number of modes used in reconstruction (default 4)
@@ -145,7 +145,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Find all subfolders matching main_folder_str pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -173,7 +173,7 @@ for m = 1:length(parent_folders)
         %% Discover SPOD result files matching pattern
         suffix = strcat('*Nfft*.mat');  % suffix: string, pattern to match SPOD filenames
         case_list = dir(fullfile(SPOD_dir,suffix));
-        case_list = extractfield(case_list, 'name');  % case_list: cell array of filenames
+        case_list = {case_list.name};  % case_list: cell array of filenames
     
         %% Detect operating condition parameterization (NPR vs. Mach)
         % RATIONALE: NPR (Nozzle Pressure Ratio) for heated jets, Mach for ideally-expanded jets
@@ -223,12 +223,12 @@ for m = 1:length(parent_folders)
 
             for St_loop = 1:St_loop_size
 
-                % P: [n_freq, n_modes, n_y, n_x] complex double, SPOD spatial modes
+                % P: [n_freq, n_y, n_x, n_modes] complex double, SPOD spatial modes
                 % A: [n_freq, n_modes, n_blocks] complex double, SPOD expansion coefficients (freq domain)
                 % L: [n_freq, n_modes] double, SPOD eigenvalues (modal energy)
                 % St: [1, n_freq] double, Strouhal numbers
                 % f: [1, n_freq] double, frequencies [Hz]
-                % x, y: [1, n_x], [1, n_y] double, spatial grid [mm]
+                % x, y: [1, n_x], [1, n_y] double, spatial grid [D]
                 % im_mean: [n_y, n_x] double, temporal mean flow field
     
                 %% ===================== FREQUENCY/MODE FILTERING =====================
@@ -327,7 +327,7 @@ for m = 1:length(parent_folders)
                 im_data = invspod(P,A_passed,nfft,nOvlp,n_modes_recon,n_blocks,1/fps);  % dt gives the data's own amplitude
                 % invspod: inverse transform function from SPOD toolbox
                 % INPUTS:
-                %   P: [n_freq, n_modes, n_y, n_x] spatial modes
+                %   P: [n_freq, n_y, n_x, n_modes] spatial modes
                 %   A_passed: [n_freq, n_modes, n_blocks] filtered coefficients
                 %   nfft: FFT window length
                 %   nOvlp: overlap length (samples)
@@ -341,7 +341,7 @@ for m = 1:length(parent_folders)
                 % RATIONALE: single precision sufficient for visualization; reduces file size by 50%
                 
                 % Permute dimensions to [time, y, x] for standard indexing
-                im_data              = permute(im_data,[2,3,1]);  % im_data: [n_time, n_y, n_x] single
+                im_data              = permute(im_data,[2,3,1]);  % im_data: [n_y, n_x, n_time] single (invspod returns [n_time, n_y, n_x])
                 % RATIONALE: time-first indexing standard for snapshot sequences (easier to index im_data(t,:,:))
                 %% ===================== SAVE RECONSTRUCTED SNAPSHOTS =====================
                 % One save for all modes and both parameterisations (NPR or M). Files

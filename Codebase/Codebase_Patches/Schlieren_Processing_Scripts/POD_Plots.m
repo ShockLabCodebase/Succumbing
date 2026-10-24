@@ -68,7 +68,7 @@ for m = 1:length(parent_folders)
     parent_folder = fullfile(parent_folders(m).folder,parent_folders(m).name);
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
     
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -123,6 +123,11 @@ for m = 1:length(parent_folders)
             
             % Skip ROI files if not requested
             if ~ROI && contains(condition,'ROI')
+                continue
+            elseif contains(condition,'Hilbert')
+                % PATCH 2026-10-23: *POD_Modes.mat also matches the complex
+                % *_CCA_Hilbert_POD_Modes.mat files (pcolor fails on complex
+                % data); those are plotted by Hilbert_POD_Plots.
                 continue
             else
                 load_file = fullfile(main_folder, [condition,'.mat']);
@@ -245,6 +250,7 @@ for m = 1:length(parent_folders)
                 c = colorbar;
                 export_fig(f_outmode,'-m5');
                 savefig(strrep(f_outmode,'png','fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
 
             end
 
@@ -278,6 +284,7 @@ for m = 1:length(parent_folders)
             f_outmode = fullfile(save_file,[condition,'_POD_Mode_Energy.png']);
             export_fig(f_outmode,'-m5');
             savefig(strrep(f_outmode,'png','fig'))
+            close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
         end
     end
 end

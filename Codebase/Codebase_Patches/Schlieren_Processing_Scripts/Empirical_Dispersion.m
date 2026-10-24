@@ -88,7 +88,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Find all subfolders matching main_folder_str pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -106,7 +106,7 @@ for m = 1:length(parent_folders)
         suffix = case_suffix;
         case_list = dir(fullfile(snapshot_dir,suffix));
     
-        case_list = extractfield(case_list, 'name'); % case_list: [n_cases, 1] cell array of filenames
+        case_list = {case_list.name}; % case_list: [n_cases, 1] cell array of filenames
     
         % Detect parametrization type: NPR (pressure ratio) or Mj (Mach number)
         if contains(case_list{1},'_NPR_')
@@ -151,7 +151,7 @@ for m = 1:length(parent_folders)
             else
                 % Automatic: map fractional domain positions to pixel indices
                 for N = 1:n_lines
-                    y1(N) = find(abs(y(:,1)-line_locs(N)) == min(abs(y(:,1)-line_locs(N))));
+                    y1(N) = find(abs(y(:,1)-line_locs(N)) == min(abs(y(:,1)-line_locs(N))),1);
                 end
             end
 
@@ -228,7 +228,9 @@ for m = 1:length(parent_folders)
                 fs = 1/ps;              % fs: scalar, temporal sampling frequency [1/nondim_time]
                 
                 % Windowing and overlap configuration
-                overlap=0;              % overlap: scalar, 0/50/75 percent temporal overlap in blocks
+                overlap=50;             % overlap: scalar, 0/50/75 percent temporal overlap in blocks
+                                        % (PATCH 2026-10-23: was 0, which drops up to nfft-1 frames
+                                        % and gives few blocks: 2 blocks from 10k frames at nfft 4096)
                 windowtype='han';       % windowtype: string, 'han' (Hann), 'nowindow', etc.
                 
                 % Define FFT length for temporal transform (typically smaller than spatial)
@@ -342,11 +344,13 @@ for m = 1:length(parent_folders)
     
                 % Construct output filename with case name and analysis line position
                 fileout = fullfile(savefolder,[case_list{ii}(1:end-4),'_Dispersion_Relation_',sprintf('yD_%1.3f',round(line_locs(N),2))]);
-                if using_npr
-                    title_text = strcat(sprintf('$y/D_e = %1.2f$',round(line_locs(N),2)));
+                % PATCH 2026-10-23: D_e only for non-round nozzles (ONR, Ellip, Rect), as elsewhere
+                if contains(case_list{ii},'ONR') || contains(case_list{ii},'Ellip') || contains(case_list{ii},'Rect')
+                    D_label = 'D_e';
                 else
-                    title_text = strcat(sprintf('$y/D_e = %1.2f$',round(line_locs(N),2)));
+                    D_label = 'D';
                 end
+                title_text = sprintf('$y/%s = %1.2f$',D_label,round(line_locs(N),2));
     
 
                 kx_lim = [-20,20]; % Wavenumber range: -20 to +20 rad/De (includes positive/negative k)
@@ -369,7 +373,7 @@ for m = 1:length(parent_folders)
                 plot(omega(1:nfft/2),St,'w') % White line at ω = St*2π*Mj (reference)
                 plot(-omega(1:nfft/2),St,'w') % Negative wavenumber mirror
                 title(title_text,'interpreter','LaTeX')
-                xlabel('$k_xD_e$','FontSize',16,'FontName','Times New Roman','FontAngle','italic','rot',0,'interpreter','LaTeX');
+                xlabel(sprintf('$k_x%s$',D_label),'FontSize',16,'FontName','Times New Roman','FontAngle','italic','rot',0,'interpreter','LaTeX');
                 ylabel('$St$','FontSize',16,'FontName','Times New Roman','FontAngle','italic','rot',90,'interpreter','LaTeX');
                 % savefig(strcat(fileout,'.fig')) % Uncomment to save editable .fig
                 export_fig(strcat(fileout,'.png'),'-m5'); % Save publication-ready PNG (5x resolution)

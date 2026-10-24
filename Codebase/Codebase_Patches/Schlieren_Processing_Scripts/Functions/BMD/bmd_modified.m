@@ -83,7 +83,8 @@ if nargin==6
         opts.regions    = [1 2];
     end
     if isfield(opts,'precision')
-        if strncmpi(opts.precision,'single',6)
+        % PATCH 2026-10-23: opts.precision = true (as documented) now selects single
+        if (islogical(opts.precision) && opts.precision) || strncmpi(opts.precision,'single',6)
             single_prec = true;
         end
     end

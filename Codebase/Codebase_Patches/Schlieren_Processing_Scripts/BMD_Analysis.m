@@ -31,7 +31,7 @@ addpath(genpath("Functions"))
 
 % Detect execution environment: 1 if on HPC cluster (Linux), 0 if Windows PC
 using_MASSIVE = 1-ispc;
-using_Market = true;  % Whether to use Market (shared network drive) for data storage
+using_Market = false;  % Whether to use Market (shared network drive) for data storage (PATCH 2026-10-23: was left true, which on MASSIVE looks for the gvfs mount)
 
 % =====================================================================
 % DIRECTORY CONFIGURATION
@@ -72,7 +72,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Find all subfolders matching main_folder_str pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -92,7 +92,7 @@ for m = 1:length(parent_folders)
         suffix = '*Fields.mat';
         case_list = dir(fullfile(snapshot_dir,suffix));
     
-        case_list = extractfield(case_list, 'name');  % Extract filenames only
+        case_list = {case_list.name};  % Extract filenames only
     
         % Determine operating condition from filename: NPR (pressure ratio) or Mj (Mach)
         if contains(case_list{1},'_NPR_')

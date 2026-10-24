@@ -57,7 +57,13 @@ for m = 1:length(parent_folders)
     % Locate all BMD files (containing 'Nfft' parameter in filename)
     suffix = strcat('*Nfft*.mat');
     case_list = dir(fullfile(BMD_dir,suffix));
-    case_list = extractfield(case_list, 'name');  % Extract filenames only
+    case_list = {case_list.name};  % Extract filenames only
+    if isempty(case_list)
+        % PATCH 2026-10-23: BMD_Analysis skips cases with no SPOD peaks, so a
+        % folder can be empty
+        warning("No %s files in %s", suffix, BMD_dir);
+        continue
+    end
 
     % =====================================================================
     % DETERMINE OPERATING CONDITION TYPE
@@ -182,6 +188,7 @@ for m = 1:length(parent_folders)
                 fileout = fullfile(savefile,[case_list{i}(1:end-4),'_Bispectrum']);
                 savefig(strcat(fileout,'.fig'))
                 export_fig(strcat(fileout,'.png'),'-m5');  % 5x upsampling for high DPI
+                close(gcf)   % PATCH 2026-10-23: figures were never closed; hundreds piled up
             else
                 % =========================================================
                 % CONTOUR PLOT: Full bispectrum from unrestricted BMD
@@ -211,6 +218,7 @@ for m = 1:length(parent_folders)
                 fileout = fullfile(savefile,[case_list{i}(1:end-4),'_Bispectrum']);
                 savefig(strcat(fileout,'.fig'))
                 export_fig(strcat(fileout,'.png'),'-m5');
+                close(gcf)   % PATCH 2026-10-23: figures were never closed; hundreds piled up
             end
         end
 
@@ -281,6 +289,7 @@ for m = 1:length(parent_folders)
                 fileout = fullfile(savefile,[case_list{i}(1:end-4),'_Bispectral_Mode_Peak_',num2str(ii)]);
                 savefig(strcat(fileout,'.fig'))
                 export_fig(strcat(fileout,'.png'),'-m5');
+                close(gcf)   % PATCH 2026-10-23: figures were never closed; hundreds piled up
 
                 % =========================================================
                 % SUBPLOT 2: MAGNITUDE OF BISPECTRAL MODE
@@ -300,6 +309,7 @@ for m = 1:length(parent_folders)
                 fileout = fullfile(savefile,[case_list{i}(1:end-4),'_Bispectral_Mode_Peak_',num2str(ii),'_abs']);
                 savefig(strcat(fileout,'.fig'))
                 export_fig(strcat(fileout,'.png'),'-m5');
+                close(gcf)   % PATCH 2026-10-23: figures were never closed; hundreds piled up
                 % =========================================================
                 % SUBPLOT 3: INTERACTION MAP (Real part)
                 % =========================================================
@@ -321,6 +331,7 @@ for m = 1:length(parent_folders)
                 fileout = fullfile(savefile,[case_list{i}(1:end-4),'_Interaction_Map_Peak_',num2str(ii)]);
                 savefig(strcat(fileout,'.fig'))
                 export_fig(strcat(fileout,'.png'),'-m5');
+                close(gcf)   % PATCH 2026-10-23: figures were never closed; hundreds piled up
 
                 % =========================================================
                 % SUBPLOT 4: INTERACTION MAP (Magnitude)
@@ -341,6 +352,7 @@ for m = 1:length(parent_folders)
                 fileout = fullfile(savefile,[case_list{i}(1:end-4),'_Interaction_Map_Peak_',num2str(ii),'_abs']);
                 savefig(strcat(fileout,'.fig'))
                 export_fig(strcat(fileout,'.png'),'-m5');
+                close(gcf)   % PATCH 2026-10-23: figures were never closed; hundreds piled up
             end
         end
     end

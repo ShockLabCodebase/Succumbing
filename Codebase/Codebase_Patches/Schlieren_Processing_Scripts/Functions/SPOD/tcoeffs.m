@@ -1,4 +1,4 @@
-function [a] = tcoeffs(X_full,P,window,weight,nModes,St_ind)
+function [a] = tcoeffs(X_full,P,window,weight,nModes,St_ind,first_bin)
 %TCOEFFS Continuously-discrete temporal expansion coefficients of SPOD modes
 
 %   [A] = TCOEFFS(X_full,P,WINDOW,WEIGHT,NMODES) returns the
@@ -20,6 +20,20 @@ function [a] = tcoeffs(X_full,P,window,weight,nModes,St_ind)
 
 % Last revision:     04-Aug-2023 Tianyi Chu <tic173@eng.ucsd.edu>
 
+% Phase reference (23-Oct-2026): a(f,t) is referenced to time step t, the
+% centre of its window. It was referenced to the window start (as an FFT of
+% the segment is), t - nDFT/2, which multiplies bin b by e^{-i 2 pi (b-1)/2}
+% = (-1)^(b-1): no effect on |a| or on the phase evolution of one bin, but
+% sums over neighbouring bins (a band field sum_f P(f) a(f,t)) cancelled
+% instead of adding.
+%
+% X_full may be an integer array (e.g. int16 as stored); rows are converted to
+% single as they are projected (23-Oct-2026).
+%
+% Optional first_bin (added 23-Oct-2026): the FFT bin (1-based, 1 = 0 Hz) of
+% P(1,...), so P can hold only a band of frequencies (St_ind then indexes P's
+% rows). Default 1 (P holds all frequencies from 0 Hz).
+%
 % Patched 22-Oct-2026 (Codebase_Patches): coefficients no longer conjugated;
 % projection only onto St_ind; mean removed per row block without full copies
 % of X; per-time-step FFTs replaced by one sliding-DFT convolution per
@@ -41,6 +55,9 @@ function [a] = tcoeffs(X_full,P,window,weight,nModes,St_ind)
 
 
 
+if nargin < 7 || isempty(first_bin)
+    first_bin = 1;
+end
 window = window(:); weight = weight(:);
 
 % default window size and type
@@ -89,7 +106,7 @@ for j = 1:n_blocks
     else
         X       = reshape(X_full(j_start:j_end,:,:),nt,nGrid);
     end
-    x_mean      = mean(X,1);                % mean removed per row block below (no full copy)
+    x_mean      = single(sum(X,1,'double')/nt);   % mean removed per row block below (no full copy; works for integer X)
 
     % inner product weight
     if isempty(weight)
@@ -123,7 +140,7 @@ for j = 1:n_blocks
     blocksize  = 1024;
     for r0 = 1:blocksize:nt
         rows = r0:min(r0+blocksize-1,nt);
-        X_proj(:,pad + rows) = P1'*(weight'.*transpose(X(rows,:) - x_mean));
+        X_proj(:,pad + rows) = P1'*(weight'.*transpose(single(X(rows,:)) - x_mean));
     end
     clearvars X
     X_proj     = reshape(X_proj, nModes, nSt, nt + 2*pad);
@@ -157,12 +174,19 @@ for j = 1:n_blocks
     % That is a sliding DFT, so each (frequency, mode) is one convolution
     % rather than an nDFT-point FFT per time step (which kept one bin per
     % frequency and needed a parallel pool with a copy of X_proj per worker).
+    % The convolutions are done with FFTs (direct conv costs nt*nDFT per
+    % frequency and mode: hours for 400k snapshots with nDFT = 4096).
     n_vec = (0:nDFT-1)';
+    n_conv = size(X_proj,3);                                 % nt + 2*pad
+    n_fft_conv = 2^nextpow2(n_conv + nDFT - 1);
+    valid = nDFT:n_conv;                                     % 'valid' part of the full convolution
     for kk = 1:nSt
-        b      = St_ind(1) + kk - 1;                         % FFT bin (1-based) of this frequency
-        kernel = flipud(window.*exp(-2i*pi*(b-1)*n_vec/nDFT));
+        b      = first_bin + St_ind(1) + kk - 2;             % FFT bin (1-based) of this frequency
+        kernel = flipud(window.*exp(-2i*pi*(b-1)*(n_vec - pad)/nDFT));   % phase referenced to the window centre (time step i)
+        K_hat  = fft(kernel, n_fft_conv);
         for jm = 1:nModes
-            c = conv(double(squeeze(X_proj(jm,kk,:))), kernel, 'valid');
+            c = ifft(fft(double(squeeze(X_proj(jm,kk,:))), n_fft_conv).*K_hat);
+            c = c(valid);
             a_temp(kk,jm,1:n_out) = corr.*winCorr_fac.*c(1:n_out);
         end
     end

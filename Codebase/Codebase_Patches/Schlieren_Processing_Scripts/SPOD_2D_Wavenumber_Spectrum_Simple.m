@@ -83,7 +83,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Find all subfolders matching main_folder_str pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -108,7 +108,7 @@ for m = 1:length(parent_folders)
         % Discover all SPOD result files matching pattern (suffix set above; it was
         % overwritten here with '*Nfft*.mat', which also matched the other symmetry files)
         case_list = dir(fullfile(SPOD_dir,suffix));
-        case_list = extractfield(case_list, 'name');  % case_list: string array of filenames
+        case_list = {case_list.name};  % case_list: string array of filenames
 
 
         %% Detect operating-parameter convention (NPR vs Mach number)
@@ -141,7 +141,7 @@ for m = 1:length(parent_folders)
     
             %% Load SPOD result file using matfile (efficient partial read)
             % Supports two SPOD output formats:
-            %   Format A (standard): P tensor [n_freq,n_modes,n_y,n_x]
+            %   Format A (standard): P tensor [n_freq, n_y, n_x, n_modes]
             %   Format B (alternative): SPOD_mode_store (cell array), significant_St (vector)
             
             load_file = fullfile(SPOD_dir,case_list{i});
@@ -152,8 +152,8 @@ for m = 1:length(parent_folders)
             St = file.St;    % St: [n_freq] Strouhal numbers = f·D/u_exit
             fps = file.fps;  % fps: scalar, acquisition frame rate [Hz]
             D = file.D;      % D: scalar, nozzle diameter [mm]
-            x = file.x;      % x: [n_y,n_x] axial coordinate grid [mm]
-            y = file.y;      % y: [n_y,n_x] transverse coordinate grid [mm]
+            x = file.x;      % x: [n_y,n_x] axial coordinate grid [D]
+            y = file.y;      % y: [n_y,n_x] transverse coordinate grid [D]
             nfft = file.nfft;% nfft: scalar, size of Welch window used in SPOD processing 
     
             modes_oi = [1,2];  % modes_oi: [int] mode indices to process (top 2 modes)
@@ -202,7 +202,7 @@ for m = 1:length(parent_folders)
                 % Constants (unused but present for reference)
                 cinf = 340;  % cinf: scalar, ambient sound speed [m/s] (not used in k_acoustic calc)
                 
-                wx = (max(x(1,:))-min(x(1,:)));  % wx: scalar, x-domain span [mm]
+                wx = (max(x(1,:))-min(x(1,:)));  % wx: scalar, x-domain span [D]
                 sps = wx/nx;                      % sps: scalar, grid spacing [mm/point]
                 sfs = 1/sps;                      % sfs: scalar, spatial sampling frequency [1/mm]
                 NFFT = 2^nextpow2(nx)*16;        % NFFT: scalar int, FFT size = 2^(ceil(log2(nx)))*16

@@ -70,7 +70,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Discover all main folders matching regex pattern within this parent
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf); % main_folders: [n_cases] struct array of directory listings
     
@@ -178,7 +178,7 @@ for m = 1:length(parent_folders)
     
                 % Plot Real, Imaginary, and Magnitude Parts of Spatial Modes
                 % Generate 3 figures per mode (k=1:6), one per flow variable
-                for k = 1:6 % k: loop over first 6 modes (highest energy)
+                for k = 1:min(6, size(POD_modes,3)) % k: loop over first 6 modes (highest energy)
                     for j = 1:length(flow_variables) % j: loop over flow components
                         %% Figure 1: Real Part
                         % Real part of complex mode φ = φ_R + i*φ_I represents phase quadrature
@@ -334,7 +334,10 @@ for m = 1:length(parent_folders)
                 % Dual y-axis plot: left = specific energy (scatter), right = cumulative (line)
                 % Rationale: Emphasize individual mode strengths (scatter) vs. cumulative
                 % importance (line). Different y-scales optimized for each metric.
-                [hAx,hLine1,hLine2] = plotyy(Mode(1:20), Energy(1:20), [1:20], Cum_Energy(1:20), ...
+                % PATCH 2026-10-23: files may hold fewer than 20 modes (the
+                % spod_tcoeffs route saves n_out modes)
+                n_show = min(20, numel(Energy));
+                [hAx,hLine1,hLine2] = plotyy(Mode(1:n_show), Energy(1:n_show), 1:n_show, Cum_Energy(1:n_show), ...
                     'scatter', 'plot');
                 
                 % Customize scatter markers for specific energy (left axis)
@@ -363,6 +366,7 @@ for m = 1:length(parent_folders)
                 f_outmode = fullfile(save_file,[case_condition,'_POD_Mode_Energy.png']);
                 export_fig(f_outmode,'-m5');
                 savefig(strrep(f_outmode,'png','fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
         
             end
         
@@ -429,6 +433,7 @@ for m = 1:length(parent_folders)
                 end
                 export_fig(f_outmode1, '-m5');
                 savefig(strcat(extractBefore(f_outmode1, 'png'), 'fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
                     
                 %% SUBSECTION 4b: Instantaneous Frequency Time Series
                 % Shows frequency modulation of the dominant POD mode vs. time
@@ -449,6 +454,7 @@ for m = 1:length(parent_folders)
                 end
                 export_fig(f_outmode1, '-m5');
                 savefig(strcat(extractBefore(f_outmode1, 'png'), 'fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
                 
                 %% SUBSECTION 4c: Strouhal Number Time Series
                 % Dimensionless frequency: St = f * (D/U_j)
@@ -468,6 +474,7 @@ for m = 1:length(parent_folders)
                 end
                 export_fig(f_outmode1, '-m5');
                 savefig(strcat(extractBefore(f_outmode1, 'png'), 'fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
                 
                 %% SUBSECTION 4d: Strouhal vs. Time with Amplitude Colormap
                 % 2D scatter plot: (time, St) with color = amplitude
@@ -498,6 +505,7 @@ for m = 1:length(parent_folders)
                 end
                 export_fig(f_outmode1, '-m5');
                 savefig(strcat(extractBefore(f_outmode1, 'png'), 'fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
         
                 %% SUBSECTION 4e: 2D Spectrogram (Time-Frequency-Amplitude)
                 % Visualize energy distribution across time and frequency simultaneously
@@ -542,6 +550,7 @@ for m = 1:length(parent_folders)
                 end
                 export_fig(f_outmode1, '-m5'); % 5x resolution for publication quality
                 savefig(strcat(extractBefore(f_outmode1, 'png'), 'fig'))
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
             end
         end
         

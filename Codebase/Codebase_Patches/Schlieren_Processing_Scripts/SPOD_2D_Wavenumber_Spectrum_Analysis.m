@@ -90,16 +90,33 @@ main_folder_str = ["*SPOD_Nfft*"];         % main_folder_str: regex pattern (sel
 n_snapshots = 50000;  % n_snapshots: scalar, expected snapshot count per condition
                       % (used only for FFT size heuristic; may not match actual data)
 
+% PATCH 2026-10-23 (Codebase_Patches):
+%   - The data file is saved per peak (..._Peak_<n>_Wavenumber_Spectrum.mat);
+%     one file was overwritten by every peak.
+%   - y_width, use_mean_band and band_range had no effect (get_wavenumber
+%     ignored them). They are now rows averaged either side of the
+%     extraction rows: y_width_rows for the mode spectrum (|.| averaged over
+%     +/- y_width_rows rows around +/- y_D) and band_range for the mean-field
+%     profile when use_mean_band is true. Defaults keep the old single-row
+%     behaviour.
+%   - Log plot: log(|spectrum|/max) with clim([-6 0]). clim([-5 1]) on the
+%     unnormalised log spectrum depended on the intensity scale.
+%   - Twin/Canted jets in a Major view: the default y_D is the outer lip
+%     line of each jet, y = +/-(s/2 + 0.5), and the mean-field shock
+%     wavenumbers are taken on a jet axis, y = s/2. Both were between the
+%     jets. In other views of twin jets (the jets overlap in projection) y_D
+%     is 0.5 (it used the AR2 rectangular value). set_own_y_D now defaults to
+%     0 (use these), since 0.5 overrode them for every nozzle.
+
 % Radial analysis plane (y/D_e coordinate where wavenumber spectrum is extracted)
-set_own_y_D = 0.5;   % set_own_y_D: scalar, y-location override [D_e units]
+set_own_y_D = 0;     % set_own_y_D: scalar, y-location override [D_e units]
                      % If set_own_y_D ~= 0, use this value instead of auto-detected location
                      % Typical values: 0.5 (jet center), 1.0 (jet radius), 0.25 (inner shear)
+y_width_rows = 0;    % y_width_rows: rows either side of +/- y_D over which |k spectrum| is averaged (0 = single row)
 
-% Frequency band smoothing: average spectrum over neighboring frequencies
-use_mean_band = true;  % use_mean_band: boolean, apply frequency-domain smoothing
-band_range = 13;       % band_range: scalar int, width of averaging window [frequency bins]
-                       % Rationale: Reduces variance from narrow-band SPOD peaks;
-                       %   tradeoff: loses fine frequency resolution
+% Mean-field (shock wavenumber) profile: average over rows either side of the axis
+use_mean_band = false; % use_mean_band: boolean, average the mean-field profile over +/- band_range rows
+band_range = 13;       % band_range: scalar int, rows either side of the mean-field row
 
 n_peaks = 4;           % n_peaks: scalar int, number of dominant frequency peaks to process
                        % Rationale: Avoid low-energy spurious modes; process only top 4
@@ -124,7 +141,7 @@ for m = 1:length(parent_folders)
     save_folder_upper = fullfile(save_folders(m).folder,save_folders(m).name);
 
     % Find all subfolders matching main_folder_str pattern
-    main_folders = dir(fullfile(parent_folder,main_folder_str));
+    main_folders = match_folders(parent_folder,main_folder_str);  % PATCH 2026-10-23: exact names no longer list the folder contents
     sf = [main_folders.isdir];
     main_folders = main_folders(sf);
     
@@ -153,9 +170,13 @@ for m = 1:length(parent_folders)
         
         % Retrieve all SPOD result files matching pattern
         case_list = dir(fullfile(SPOD_dir,suffix));
-        case_list = extractfield(case_list, 'name');  % case_list: string array of filenames
-    
-    
+        case_list = {case_list.name};  % case_list: string array of filenames
+        if isempty(case_list)
+            warning("No %s files in %s", suffix, SPOD_dir);
+            continue
+        end
+
+
         %% Detect operating-parameter convention (NPR vs Mach number)
         % Heuristic: examine first case filename for '_NPR_' or '_M_' delimiter
         if contains(case_list{1},'_NPR_')
@@ -186,16 +207,18 @@ for m = 1:length(parent_folders)
         %   adjust location based on geometric symmetry; also account for Major vs Minor views
         % NOTE: Manual inspection recommended; user prompted if Twin nozzle detected
         
-        if contains(case_list{1},'Twin')
-            fprintf('Check y_D value is set correctly');
-            pause(1)
-            
-            % For twin nozzles: AR2 rectangular, minor view
-            y_D = 1/(4)*sqrt(pi/2);   % y_D: scalar, extraction location [D_e units]
-            % Adjust for Major view (top-down) vs Minor view (side-on)
-            if contains(case_list{1},'Major')
-                y_D = y_D*2;  % Double for Major view (aperture-averaged location)
-            end
+        y_mean = 0;   % y_mean: row (y/D) of the mean-field profile for the shock wavenumbers
+        if (contains(case_list{1},'Twin') || contains(case_list{1},'Canted')) && contains(case_list{1},'Major') ...
+                && ~isempty(regexp(case_list{1},'_sD_\d+_','once'))
+            % Twin round jets seen side by side: outer lip line of each jet,
+            % and the shock cells on a jet axis (y = s/2)
+            sD = regexp(case_list{1},'_sD_(\d+)_','tokens','once');
+            s_D = str2double(sD{1})/10^(length(sD{1})-1);
+            y_D = s_D/2 + 0.5;
+            y_mean = s_D/2;
+        elseif contains(case_list{1},'Twin')
+            % Twin round jets in another view overlap in projection: lip line
+            y_D = 0.5;
         elseif contains(case_list{1},'ONR') || contains(case_list{1},'Rect')
             % Chevron or rectangular nozzles: AR2 aspect ratio, minor view
             y_D = 1/(4)*sqrt(pi/2);
@@ -236,7 +259,7 @@ for m = 1:length(parent_folders)
             %% Load SPOD result file using matfile (efficient partial read)
             % SPOD format: L (eigenvalues, shape [n_freq,n_modes])
             %              St (Strouhal numbers, shape [n_freq])
-            %              P (mode tensor, shape [n_freq,n_modes,n_y,n_x])
+            %              P (mode tensor, shape [n_freq, n_y, n_x, n_modes])
             %              x, y (spatial grids [n_y,n_x])
             %              fps (frame rate [Hz]), D (nozzle diameter [mm])
             
@@ -245,8 +268,8 @@ for m = 1:length(parent_folders)
     
             L = file.L;      % L: [n_freq,n_modes] eigenvalues (energy per mode)
             St = file.St;    % St: [n_freq] Strouhal numbers = f·D/u_exit
-            x = file.x;      % x: [n_y,n_x] axial coordinate grid [mm]
-            y = file.y;      % y: [n_y,n_x] transverse coordinate grid [mm]
+            x = file.x;      % x: [n_y,n_x] axial coordinate grid [D]
+            y = file.y;      % y: [n_y,n_x] transverse coordinate grid [D]
             fps = file.fps;  % fps: scalar, acquisition frame rate [Hz]
             D = file.D;      % D: scalar, nozzle diameter [mm]
             nfft = file.nfft;% nfft: scalar, size of Welch window used in SPOD processing 
@@ -270,10 +293,13 @@ for m = 1:length(parent_folders)
             mode_peaks = mode_peaks(sort_inds);
             mode_peak_index = mode_peak_index(sort_inds);
     
-            % Remove spurious low-frequency peaks (index < 50, typically low-frequency noise)
-            mode_peak_prominence(mode_peak_index < 50) = [];
-            mode_peaks(mode_peak_index < 50) = [];
-            mode_peak_index(mode_peak_index < 50) = [];
+            % Remove spurious low-frequency peaks (St < St_min). PATCH 2026-10-23:
+            % was bin index < 50, whose St depends on nfft and fps.
+            St_min = 0.05;
+            low = St(mode_peak_index) < St_min;
+            mode_peak_prominence(low) = [];
+            mode_peaks(low) = [];
+            mode_peak_index(low) = [];
     
             %% ===================== PER-FREQUENCY PEAK LOOP =====================
             % Process the top n_peaks most energetic frequencies
@@ -286,7 +312,7 @@ for m = 1:length(parent_folders)
                 disp(St_peak)
         
                 %% Load SPOD mode shape at this frequency (mode 1 = most energetic)
-                % P: [n_freq, n_modes, n_y, n_x] tensor
+                % P: [n_freq, n_y, n_x, n_modes] tensor
                 % Extract P[peak_index, mode_1, :, :] → spod_mode [n_y,n_x]
                 % Rationale: Most energetic mode typically contains dominant coherent structure
                 
@@ -320,8 +346,7 @@ for m = 1:length(parent_folders)
                 % Returns: k_kh (Kelvin-Helmholtz wavenumber), k_up_1/k_up_2 (upstream peaks),
                 %          k_x (axial wavenumber grid), k_spectrum_complex [n_y,n_kx]
                 
-                y_width = 3;  % y_width: scalar, spatial window height [D_e units]
-                [k_kh,k_up_1,k_up_2,k_x,k_spectrum_complex] = get_wavenumber(x,y,y_D,y_width,...
+                [k_kh,k_up_1,k_up_2,k_x,k_spectrum_complex] = get_wavenumber(x,y,y_D,y_width_rows,...
                     spod_mode,true);
                 % k_kh: scalar, Kelvin-Helmholtz wavenumber [rad/D_e]
                 % k_up_1, k_up_2: upstream phase speeds (typically ~0.3–0.4 c_ambient)
@@ -333,9 +358,11 @@ for m = 1:length(parent_folders)
                 % If use_mean_band: use band_range frequency bins instead of y_width=3
                 
                 if use_mean_band
-                    y_width = band_range;  % Smooth over band_range frequencies
+                    mean_rows = band_range;  % average the mean profile over +/- band_range rows
+                else
+                    mean_rows = 0;
                 end
-                [k_s1,k_s2,k_s3,~,~] = get_wavenumber(x,y,0.0,y_width,data_mean,false);
+                [k_s1,k_s2,k_s3,~,~] = get_wavenumber(x,y,y_mean,mean_rows,data_mean,false);
                 % k_s1, k_s2, k_s3: dominant wavenumbers from mean field spectrum
             
             
@@ -368,9 +395,9 @@ for m = 1:length(parent_folders)
         
                 figure 
                 set(gcf,'Color',[1,1,1])
-                pcolor(k_xD,y,log(abs(k_spectrum_complex)))  % Log scale for contrast
+                pcolor(k_xD,y,log(abs(k_spectrum_complex)/max(abs(k_spectrum_complex),[],"all")))  % Log scale for contrast
                 shading interp   % Smooth color interpolation
-                clim([-5 1])     % Color limits: log scale emphasizes weak features
+                clim([-6 0])     % Color limits: e^-6 to 1 of the peak
                 colormap(sCMRmap)  % Sequential colormap for log energy
                 hold on
         
@@ -405,6 +432,7 @@ for m = 1:length(parent_folders)
                 file_out = fullfile(save_folder_figs,[strcat(condition_extra)]);
                 export_fig(strcat(file_out,'.png'),'-m5');  % -m5: 5× magnification for crisp text
                 savefig(strcat(file_out,'.fig'))  % Also save MATLAB figure file for editing
+                close(gcf)   % PATCH 2026-10-23: close each figure once saved (they piled up)
         
                 %% ===================== FIGURE 2: NORMALIZED WAVENUMBER SPECTRUM =====================
                 % Generate second diagnostic figure with normalized (0–1) amplitude scale
@@ -452,7 +480,7 @@ for m = 1:length(parent_folders)
 
                 
                 % Construct output filename encoding case parameters
-                mat_file = strcat(condition,'_Wavenumber_Spectrum.mat');
+                mat_file = strcat(condition,'_Peak_',num2str(peak_oi),'_Wavenumber_Spectrum.mat');
                 save_folder_data = fullfile(save_folder,'Wavenumber_Spectrum','Data');
                 mkdir(save_folder_data);
                 save_file = fullfile(save_folder_data,mat_file);
@@ -469,7 +497,7 @@ for m = 1:length(parent_folders)
                 %            M_j [scalar] convection Mach number (for k_a calculation)
                 save(save_file,'k_up_1','k_up_2','k_s1','k_s2','k_kh_s1','k_kh_s2',...
                                 'k_spectrum_complex',...
-                                'k_kh','k_xD','y_D','peak_oi','data_mean','spod_mode', ...
+                                'k_kh','k_xD','y_D','y_mean','peak_oi','data_mean','spod_mode', ...
                                 'St_peak','M_j','D','x','y', ...
                                 '-v7.3');  % -v7.3: HDF5 format for large arrays and compatibility
     
