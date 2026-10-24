@@ -196,6 +196,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 
 ## Papers
 - [Krothapalli et al. 1999](../Notes/krothapalli-1999-flow-field-noise-supersonic-impinging-jet.md): M 1.5 C-D jet (NPR 3.7) on a ground plane under a lift plate: PIV u_c 0.52–0.56 rises with h/d; staged tones fit Powell's loop only with p = −0.4; OASPL +8 dB (synthesis pending).
+- [Prasad 2000](../Notes/prasad-2000-stereoscopic-piv-review.md): Stereo PIV review: translation vs Scheimpflug angular set-ups, σ_Δz/σ_Δx = 1/tan θ, geometric vs 2-D/3-D (Soloff) calibration; target–sheet misregistration unanalysed (synthesis pending)
 - [Henderson et al. 2002](../Notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): PIV binned by microphone phase; olive-oil and smoke seeding; NASA Glenn dome (not tagged).
 - [Alkislar et al. 2003](../Notes/alkislar-2003-screeching-rectangular-jet-stereo-piv.md): microphone-triggered stereo PIV with half-cycle mirroring and about 35 pairs per phase; fine jet seeding checked against probes.
 - [Viswanathan 2004](../Notes/viswanathan-2004-aeroacoustics-hot-jets.md): Hot subsonic jets, 3 nozzle sizes: the 'dipole' hump is a low-Re effect (Re_crit ≈ 4×10⁵); no V⁶; OAPWL exponent 8.74→7.98 with TR; rig noise faked old trends (synthesis pending)
@@ -233,3 +234,7 @@ Which diagnostic suits which analysis, following the CLAUDE.md workflow:
 - [Raiola & Kriegseis 2025](../Notes/raiola-2025-hilbert-pod.md): space-only HPOD for non-TR PIV (not tagged).
 - [Farghadan et al. 2026](../Notes/farghadan-2026-wave-interactions-screeching-jet.md): large-sensor PIV with paraffin seeding (not tagged).
 - [Mazharmanesh et al. 2026](../Notes/mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md): reference TR-schlieren settings (not tagged).
+
+- [Willert & Gharib 1991](../Notes/willert-1991-digital-particle-image-velocimetry.md): Founding FFT cross-correlation DPIV: 32² px windows, N/3 shift limit, 3-point Gaussian sub-pixel fit, ≈0.01 px floor, 1000:1 range; 30 Hz video of a vortex ring (synthesis pending)
+- [Soloff et al. 1997](../Notes/soloff-1997-distortion-compensation-generalized-stereoscopic-piv.md): Soloff method: per-camera polynomial map X = F(x), cubic in x1,x2 and quadratic in x3 from 3 target planes; 3C displacement by least squares on 4×3 ∇F system (synthesis pending)
+- [Willert 1997](../Notes/willert-1997-stereoscopic-dpiv-wind-tunnel-flows.md): Two-camera Scheimpflug stereo PIV for non-symmetric set-ups: general 3C geometry, projective dewarping, multi-pass offset windows; ~6 µm in-plane, 10 µm out-of-plane (synthesis pending)

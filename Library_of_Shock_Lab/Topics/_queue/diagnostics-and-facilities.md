@@ -97,3 +97,65 @@ What it adds:
   - Add a short "rig-noise checks" item (raw-frequency plots, nozzle-size scaling, similarity-shape comparison, overall levels hide contamination, contraction ratio not sufficient).
   - Add the hot-jet caveat to the N(f) > 7 check.
 - **Not tagged, suggested for simulation-methods.** The Re ≥ 4 × 10⁵ threshold (stagnation-ν definition) puts the PyFR staging run (Re_D = 10⁵) four or more times below. The effect is on broadband shape near the peak, not tone frequency, and may be an exit-layer effect.
+
+## prasad-2000-stereoscopic-piv-review (queued 2026-10-25)
+
+- **What it adds.** Prasad 2000 is the page's first general reference on stereo PIV, and it supplies the error budget that the "Calibration, stereo and stitching" section lacks.
+  - Planar PIV carries a perspective error w tan θ at off-axis angle θ: about 10% at a 5° field edge when the in- and out-of-plane displacements are similar (eq. 2, p. 104).
+  - A stereo pair removes that error. Its out-of-plane to in-plane error ratio is 1/tan θ for both translation and Scheimpflug systems: 3–4 at the θ ≈ 15° typical of translation rigs, and 1 at 45° (eq. 9, p. 105, 110–111).
+- **Agreement with existing notes.** The θ ≈ 45° Alkislar et al. 2003 rig (`alkislar-2003-screeching-rectangular-jet-stereo-piv`, about 90° between the camera axes, p. 126–127) sits at the error-balanced angle. The Pprime cross-planes of `cavalieri-2013-wavepackets-velocity-field-turbulent-jets` use Willert's either-side, forward-scatter arrangement (p. 107–108).
+- **Calibration methods.** The review classifies reconstruction as geometric, 2-D calibration or 3-D calibration (Soloff et al. 1997; three or more target planes, no geometry needed; p. 111–115) and states the field's trend: Scheimpflug, digital cameras and calibration-based reconstruction (p. 115).
+- **The open problem it leaves.** No study of target–sheet misalignment existed. Willert (1997) found that a rotation below 0.6° gave 10 px, i.e. 1 mm, of misregistration even though the grids overlapped to better than 1 px, and Prasad calls for a "thorough error-analysis" (p. 115). This frames `shehzad-2021-laser-sheet-alignment-piv` as the later answer, along with self-calibration (Wieneke 2005; PDF held, not yet indexed).
+- **Mapping order** (Willert's higher-order map was no better with low-distortion lenses, p. 114) is consistent with `sun-2021-distortion-correction-large-sensor-piv` finding a bicubic map necessary for a strongly distorting large-sensor lens. The two together say the map order should follow the lens.
+- **Suggested additions to the page** (my assessment, in the note's Relevance section):
+  - Willert's 1 mm misregistration is 0.07–0.1D for the group's 10–15 mm nozzles, several times the 0.025D windows, and Prasad notes misregistration worsens in strong gradients (p. 111). Stereo near shocks therefore needs sheet alignment or self-calibration plus a cross-camera check.
+  - For flapping and helical modes, planar PIV mixes w′ tan θ (7–14% of w′ at a 4–8° field edge) into the POD pairs.
+  - A tentative open question: how large is the perspective error in the group's planar POD pairs of helical and flapping modes? A synthetic-image test from LES would settle it.
+- **Wave-mates.** The page should link the companion notes now being indexed: Soloff et al. 1997 (3-D calibration details), Willert 1997 (the misalignment test, the 35° either-side rig, the projective and rational maps) and Willert & Gharib 1991 (the DPIV correlation that interrogates each stereo view). Prasad summarises the first two; their notes should be checked for agreement with his account (p. 107–108, 113–115). Prasad cites Willert & Gharib 1992 (three-pinhole defocusing), not the 1991 DPIV paper.
+
+## soloff-1997-distortion-compensation-generalized-stereoscopic-piv (queued 2026-10-25)
+
+- **What it adds.** This is the founding reference for calibration-based stereo-PIV reconstruction, the "Soloff polynomial" that [shehzad-2021-laser-sheet-alignment-piv] uses as its eq. 1 without derivation.
+  - Each camera gets an empirical map X = F(x), fitted by least squares from target images at three x₃ planes. It is cubic in x₁ and x₂ and quadratic in x₃, with 19 vector coefficients (eq. 18, p. 1447).
+  - The displacement is linearised as ΔX ≃ ∇F Δx with a 2 × 3 magnification matrix (eqs. 5–6, 10), and the two cameras' 4 × 3 system is solved by least squares / generalized inverse (eqs. 15–16, Fig. 5).
+  - A user-defined grid in the fluid is mapped forward into each image plane, so the inverse map is never needed (p. 1450–1452).
+- **Calibration and stereo subsection.** The page could add a short "reconstruction" paragraph: calibration-based (this paper; displacements from the raw images converted through ∇F) against image dewarping followed by geometric reconstruction (Willert 1997, as used by Shehzad et al.).
+- **Perspective error belongs on the page.** For a single camera, dropping the perspective column contaminates in-plane velocity by (x_I/d_o)·w, up to about 10% of w at the edge of a 100 mm field at d_o = 500 mm (eq. 12, p. 1446).
+  - This is the only notes-backed number for perspective error in planar PIV. [sun-2021-distortion-correction-large-sensor-piv] (p. 4) mentions perspective but gives only a 0.03 px example.
+  - It bears on the group's wide stitched planar fields of helical or flapping modes, whose w is large. The notes do not record the group's object distances, so this is an open check for the page's "Relevance" list.
+- **Agrees with [sun-2021-distortion-correction-large-sensor-piv].** Sun's P3 bicubic map is eq. 18 at x₃ = 0, and their "Method II" (PIV on raw images, then remapping) is this paper's processes A–B route.
+- **Gap filled by [shehzad-2021-laser-sheet-alignment-piv].** This paper only asks that the target be aligned "as precisely as possible" with the sheet centre (p. 1448), and its bench tests have no light sheet, so the misalignment error is untested.
+- **Accuracy.** Mapping residuals are 0.53 px (single camera) and 1.1–1.2 px (stereo) (p. 1452–1453). The fluctuating displacement errors are about 0.1 px in-plane, and the out-of-plane absolute error is 4 × the in-plane one (Figs. 8–13, p. 1453; px conversions are the note's arithmetic).
+  - So the position residual of F matters much less than its gradient. As a fraction of the imposed displacement, the errors are 0.4–2.8% in-plane and about 5% out-of-plane (note's arithmetic), much larger than the 10⁻⁴ "relative to domain" figures the paper quotes.
+  - Shehzad et al.'s modern 3-C uncertainties (0.05–0.09 px) are similar in pixels.
+- **Effect on current understanding.** It does not change claim 2 ("Calibration errors are larger than random PIV error if they are ignored, and both are cheap to remove") and gives it its methodological basis. Suggest adding "Soloff et al. 1997" to the Calibration paragraph and the Papers list: "polynomial mapping functions and ∇F least-squares 3-C reconstruction; perspective error (x/d_o)·w in planar PIV".
+- **Cross-links to make** once the wave-mates' keys exist: Willert 1997 (dewarping, viewing-angle reconstruction and misalignment correction), Prasad 2000 (stereo-PIV review) and Willert & Gharib 1991 (digital cross-correlation, process A). Add them to this note's `related` and replace the "(PDFs held, not yet indexed; being indexed in the same batch)" text with links. Wieneke 2005 (self-calibration) is also held as a PDF but is not among the named wave-mates, so it is cited as "(PDF held, not yet indexed)".
+
+## willert-1991-digital-particle-image-velocimetry (queued 2026-10-25)
+
+- **What it adds.** This is the founding paper of FFT-based cross-correlation PIV, and the page so far has no note on the correlation algorithm itself, which the group's Soria multigrid processing builds on. The method (p. 182–185):
+  - two single-exposure frames, which removes the directional ambiguity without image shifting;
+  - N × N windows correlated by FFT (F G*, then inverse FFT);
+  - integer peak plus a three-point Gaussian fit in x and y separately, preferred to centre-of-mass centroiding;
+  - usable displacement about N/3 (Nyquist N/2);
+  - a digital window offset for mean convection, which is the seed of multigrid offsets.
+- **Error budget** (p. 185–186):
+  - about 0.01 px best uncertainty with 32² windows (translation-stage test), and a 0.002 px floor from 8-bit quantisation;
+  - about 1000:1 dynamic range;
+  - roughly double the uncertainty with 16² windows (more truncated and unpaired particle images);
+  - uncertainty falls with seeding, levelling off above about 36 particles per 32² window (Fig. 6).
+- **Window as filter.** The window is a moving-average low-pass filter (Fig. 7, a sinc-like response with zeros at λ = N, 0.64 at λ = 2N; the formula is my reconstruction), and at 75% overlap only 240 of 3,500 vectors are independent (p. 187).
+- **Fit with the group's numbers.**
+  - The group's quoted 0.1 px minimum displacement ([Tan et al. 2017](../Notes/tan-2017-broadband-velocity-fluctuations-screeching-jets.md) p. 2324; [Weightman 2019](../Notes/weightman-2019-sound-production-impinging-supersonic-jets.md)) is ten times WG's ideal value, as expected for real jet images.
+  - The group's 50% overlap gives 1 in 4 independent vectors, not WG's 1 in 16.
+  - WG's moving-average argument agrees with the Δx/L < 0.1 criterion of Tan et al. 2017 (Table 4, p. 2332).
+- **Gradients.** WG's remark that gradients broaden and split the correlation peak (p. 183, 186, 188) is formalised by [Mitchell et al. 2011](../Notes/mitchell-2011-particle-relaxation-piv-cross-correlation.md), whose eq. 3 (self plus cross terms) is the explicit form of WG eq. 5c, applied to a shock inside the window.
+- **What it does not change.** The current understanding (shock-induced artefacts, tracer lag, calibration) stands.
+- **Suggested additions to the page:**
+  - a short "Correlation algorithm" subsection under PIV in shock-containing jets: the N/3 rule, three-point Gaussian fit, window transfer function, overlap and independence;
+  - a pointer that peak locking (not discussed by WG, whose particle images are about 4–6 px across) is a risk for the group's 1.2 px images (Tan et al. 2017, p. 2324);
+  - a "Relevance" line: filter LES with the window's top-hat before comparing RMS, POD or spectra with PIV.
+
+## willert-1997-stereoscopic-dpiv-wind-tunnel-flows (queued 2026-10-25)
+
+Willert 1997 is the origin of the general, non-symmetric stereo-PIV reconstruction (eqs. 1–5, p. 1467) that the page's stereo work already relies on: `shehzad-2021-laser-sheet-alignment-piv` uses it as its 3C reconstruction (their eq. 4, p. 12) and lists Willert's correction (0.34 px residual) among the post-hoc misalignment fixes it replaces (their Table 1, p. 4). The paper confirms the page's claim 2, that calibration errors outweigh random error: a calibration grid tilted by less than 0.6° gave a 10 px (1 mm) mismatch between the two dewarped views, a third of a 32 px window, although the grids themselves overlapped to better than 1 px (p. 1470, Fig. 4). Willert could only remove a uniform 6 px offset and called for a calibration that guarantees grid–sheet alignment, which is exactly what Shehzad et al. 2021 supply and Wieneke 2005 self-calibration (PDF held, being indexed) addresses. Its uncertainty budget from quiescent-flow images is a useful benchmark for the "Calibration, stereo and stitching" section: 6.3 µm (0.063 px) in plane and 10.3 µm (0.103 px) out of plane at a 70° opening angle, with in-plane error about 1/√2 of a single camera's and out-of-plane about 1.65 times the in-plane, more than the 1/tan 35° = 1.43 that error propagation predicts (Table 3, p. 1476, 1478). It also shows that dewarping stretched 3 px particle images to above 4 px, raising the uncertainty along the stretched direction (p. 1469, 1476), which bears on the group's small final windows in shocked jets. Its multi-pass, window-offset interrogation recovers displacements beyond the final window's Nyquist limit and cut outliers from about 100 to 0–2 per 12,000 vectors with preconditioning (Table 2, p. 1471); it is the ancestor of the multigrid schemes on the page. Compared with `alkislar-2003-screeching-rectangular-jet-stereo-piv` (Scheimpflug, ≈90°, same-side and opposite-side modes), Willert argues for opposite-side forward-scatter viewing, which gives brighter images (at least ten times) and matching trapezoidal fields (p. 1473, 1477). It does not change an open question on the page; it adds historical grounding and a reference error budget, and pairs with Soloff et al. 1997 and Prasad 2000 from the same batch.

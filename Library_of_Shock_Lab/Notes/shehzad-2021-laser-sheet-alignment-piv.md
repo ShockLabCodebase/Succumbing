@@ -19,8 +19,8 @@ flow: ["generic"]
 phenomena: []
 params: {}
 topics: ["diagnostics-and-facilities"]
-related: ["sun-2021-distortion-correction-large-sensor-piv", "davey-2025-hpod-sphere-wake", "ragni-2011-particle-tracer-response-shocks-piv"]
-cites: []
+related: ["sun-2021-distortion-correction-large-sensor-piv", "davey-2025-hpod-sphere-wake", "ragni-2011-particle-tracer-response-shocks-piv", "willert-1997-stereoscopic-dpiv-wind-tunnel-flows", "soloff-1997-distortion-compensation-generalized-stereoscopic-piv"]
+cites: ["prasad-2000-stereoscopic-piv-review", "soloff-1997-distortion-compensation-generalized-stereoscopic-piv", "willert-1997-stereoscopic-dpiv-wind-tunnel-flows"]
 summary: "Aligns the laser sheet to the calibration target before calibrating (slit + three photodetectors), removing the need for self-calibration; SPIV uncertainty < 5.9 µm (0.09 px)"
 ---
 # On assuring the accurate parallel alignment of a laser sheet for planar and stereoscopic particle image velocimetry
@@ -65,7 +65,7 @@ Planar (2C-2D) and stereo (3C-2D) PIV calibration assumes the calibration target
   $x_i = a_1 + a_2X_i + a_3Y_i + a_4Z_i + a_5X_i^2 + a_6X_iY_i + a_7Y_i^2 + a_8X_iZ_i + a_9Y_iZ_i + a_{10}Z_i^{2?} + a_{11}X_i^3 + a_{12}X_i^2Y_i + a_{13}X_iY_i^2 + a_{14}Y_i^3 + a_{15}X_i^2Z_i + a_{16}X_iY_iZ_i + a_{17}Y_i^2Z_i + a_{18}X_iZ_i^2 + a_{19}Y_iZ_i^2$, and the same form for $y_i$ with $a_{21}\ldots a_{39}$.
   > The PDF prints the a₁₀ and a₃₀ terms as $Z_i^3$, while the text says "second order in Z". The standard Soloff form has $Z^2$ there, so this is probably a typo in the paper. Check p. 10 before reusing.
 - **Fit residual** (eqs. 2–3, p. 11): $E_x = \frac{1}{N}\sum_{i=1}^N(\hat{x}_i - x_i)$, $\sigma_x = \sqrt{\frac{1}{N}\sum_{i=1}^N(\hat{x}_i - x_i - E_x)^2}$, with $\hat{x}_i$ the mapped image coordinate of the i-th object point.
-- **Stereo 3C reconstruction** (Willert 1997; eq. 4, p. 12):
+- **Stereo 3C reconstruction** ([Willert 1997](willert-1997-stereoscopic-dpiv-wind-tunnel-flows.md); eq. 4, p. 12):
   $U = \dfrac{u_1\tan\alpha_2 - u_2\tan\alpha_1}{\tan\alpha_2 - \tan\alpha_1}$,
   $V = \dfrac{v_1+v_2}{2} + \dfrac{u_2+u_1}{2}\left(\dfrac{\tan\beta_2 - \tan\beta_1}{\tan\alpha_1 - \tan\alpha_2}\right)$,
   $W = \dfrac{u_2-u_1}{\tan\alpha_1 - \tan\alpha_2} = \dfrac{v_2-v_1}{\tan\beta_1 - \tan\beta_2}$.

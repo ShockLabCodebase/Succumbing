@@ -20,7 +20,7 @@ phenomena: ["coherent-structures", "noise-control"]
 params: {}
 topics: ["simulation-methods"]
 related: ["taira-2017-modal-analysis-fluid-flows-overview", "taira-2020-modal-analysis-applications-outlook", "rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "molnar-2023-physics-informed-bos-supersonic", "towne-2022-database-reduced-complexity-modeling", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i"]
-cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview"]
+cites: ["rowley-2009-spectral-analysis-nonlinear-flows-koopman", "schmid-2010-dynamic-mode-decomposition", "sirovich-1987-turbulence-dynamics-coherent-structures-part-i", "taira-2017-modal-analysis-fluid-flows-overview", "willert-1991-digital-particle-image-velocimetry"]
 summary: "Review of ML in fluids: POD as linear autoencoder, cluster ROMs, DMD/Koopman, SINDy, PIV superresolution, closures, MLC/RL control; models interpolate, not extrapolate"
 ---
 # Machine Learning for Fluid Mechanics
