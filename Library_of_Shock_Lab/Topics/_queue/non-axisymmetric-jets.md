@@ -12,3 +12,20 @@ The review is the pre-1995 China Lake summary of why non-circular supersonic jet
   - The lowest-M_j AR 3 data (1.11–1.21) lie on the round A1/A2 curve and are labelled B′ without mode evidence, so a varicose stage near choking is not excluded.
 - **Tabs.** Two delta tabs on the short edges of the rectangle reduce screech "drastically" and shift its frequency (≈13.9 kHz, read). They give the best spreading per thrust loss, ṁ/ṁ_e 3.12 → 5.63 at x/D = 14 for C_f 0.948, while the same tabs on the long edges interfere and resist axis switching (Table 1, p. 222, 225).
 - **Elliptic against rectangular.** The ellipse beats the rectangle at the B′ peaks but not at M_j 1.63 or subsonically (Fig. 13, read). That is mixed evidence against [Gutmark 1995]'s "ellipse spreads slightly faster" (p. 395).
+
+## suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model (queued 2026-10-25)
+
+- **What the paper adds.** Suzuki, Nogueira & Edgington-Mitchell (2023, AIAA J) give the first compressible vortex-sheet stability model of an elliptical jet. It uses Mathieu series inside the sheet and modified Mathieu–Hankel functions outside, with a 6 × 6 matching system solved by lsqnonlin (p. 2572–2573). It maps ce₀ (varicose), se₁ (flapping across the minor axis) and ce₁ (wagging) over M 0–2, AR 1–2 and St 0.2–0.6.
+- **Growth.** ce₀ and ce₁ growth falls with AR and se₁ growth rises, so se₁ is usually the most unstable mode for AR > 1.5 (Fig. 5, p. 2575).
+  - This agrees with Floquet LSA and the experiments in `ivelja-2024-modal-analysis-screeching-elliptical-jets`.
+  - It agrees with flapping dominance in `mazharmanesh-2025-screech-modes-non-axisymmetric-jets` and `suzuki-2026-coherent-structures-axis-switching-elliptical-jets`.
+  - It is now shown without shocks and down to M = 0.
+- **Phase velocity** (Fig. 6, p. 2575–2576). It falls with AR for ce₀ and se₁ and rises for ce₁. `suzuki-2026-coherent-structures-axis-switching-elliptical-jets` already cites this for the ce₁ wavenumber trend.
+- **Far field.** This is the first single-elliptical-jet far-field result on the page, which has no acoustics section for single ellipses yet.
+  - At M 0.6, St 0.2 and equal unit amplitude, ce₀ radiates 15–40 dB more than se₁ or ce₁ (my readings). Its azimuthal pattern varies by less than 1 dB even at AR 3, and its efficiency barely changes with AR (Figs. 7, 12, p. 2576–2578).
+  - se₁ efficiency falls with AR (≈ −7 dB from AR 1 to 3 on the free ring) and ce₁ efficiency rises (≈ +11 dB) (Fig. 12, p. 2578).
+  - So "most unstable ≠ loudest" in elliptical jets. The authors conclude that the measured noise reductions of elliptical jets (Kinzie & McLaughlin 1999) probably come from lower wavepacket amplitude, not lower efficiency (p. 2579).
+- **Suggested addition to "Passive control by nozzle shape":**
+  - For an installed AR 2 jet, rotating the major axis from parallel to normal to the wing cuts se₁ by ≈ 8 dB and raises ce₁ by ≈ 11 dB. ce₀ is invariant (Figs. 14–15, p. 2578–2579).
+  - The authors therefore recommend the normal orientation if flapping dominates. This agrees with Proença & Lawrence 2022 (not held).
+- **Open question it creates:** whether the ce₀-dominated, near-axisymmetric mixing noise survives once real amplitudes and jitter are included. The model sets every amplitude to 1 and the source is fully coherent.

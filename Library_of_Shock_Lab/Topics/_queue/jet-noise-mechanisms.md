@@ -26,3 +26,16 @@ This is the first laboratory study in the library of whether jet noise steepens 
   - Add the low-Re (or exit-state) origin of the "dipole" hump, as a disputed point.
   - Add the aft-peak scaling conflict with tam-2008 to the disagreements.
   - Add the density-effect crossover at V_j/a ≈ 0.75.
+
+## suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model (queued 2026-10-25)
+
+- **Wavepacket model carried to a non-round, installed jet.** The kinematic wavepacket source (T₁₁ only, Gaussian envelope, fixed k_h) moves from a round cylinder to an equal-area elliptical cylinder. The azimuthal shape is the Mathieu pressure eigenfunction rather than e^{imφ}. Sound is radiated with the free-field Green's function or the Ffowcs Williams & Hall half-plane Green's function (p. 2571–2572).
+- **Validation.** It reproduces the round installed-jet results of Nogueira, Cavalieri & Jordan (2017, JSV) at AR 1.001 (Fig. 2, p. 2572).
+- **Scattering findings that extend round-jet results:**
+  - Scattered sound decays exponentially with jet–plate distance for every mode: ≈ 6, 10 and 7 dB per D for ce₀, se₁ and ce₁ at θ = −150° (Fig. 9). The ce₀ slope rises only slightly with AR: ≈ 5.6 → 5.9 dB per D for AR 1–5 at −90° (Fig. 10, p. 2577). This agrees with Cavalieri et al. 2014 (not held).
+  - Moving the packet downstream of the trailing edge deepens the cancellation lobe near θ ≈ −30° for ce₀ and ce₁, but not for se₁ (Fig. 11, p. 2577).
+- **Efficiency and phase speed.** The paper attributes efficiency changes to phase velocity (p. 2576, 2578), in line with `cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation` (p. 10–12) and `jaunet-2017-two-point-coherence-wave-packets-turbulent-jets`.
+  - My checks suggest radial compactness explains most of the ce₀ lead: k r_cyl ≈ 0.38, giving J₁/J₀ ≈ −15 dB at the ring and −24 dB at θ = 20°. That is the m = 0–2 compactness argument of `jordan-2013-wave-packets-turbulent-jet-noise` (p. 176).
+  - Phase speed alone gives only ≈ 6.5 dB, and the source's extent along r_y or r_z alone gives ≈ ∓4.8 dB over AR 1–3. Mark these as the note's estimates, not the paper's.
+- **Caveat for the page.** The source has no jitter, while `cavalieri-2019-wave-packet-models-jet-dynamics-sound-radiation` (p. 15) finds jitter adds ≈ 30 dB for subsonic jets. Absolute efficiency ratios between modes are therefore model-dependent.
+- **Existing claim.** This supports the page's line that non-axisymmetric exhausts have azimuth-dependent directivity, but sharpens it: in this model the varicose mode is nearly axisymmetric. The azimuthal dependence comes from se₁ and ce₁, with nulls at φ = 0/180° and 90/270°, and from the plate's own silent plane.

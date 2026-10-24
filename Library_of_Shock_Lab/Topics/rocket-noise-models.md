@@ -184,3 +184,7 @@ No model uses modal decomposition or anything time-resolved beyond slow-time lev
 - [Mathews & Gee 2025](../Notes/mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets.md): OAPWL and OASPL_max from exit-flow variables with a ground factor; RMSE < 2 dB; Falcon 9 angle revised to 71°.
 - [Mathews 2025 thesis](../Notes/mathews-2025-thesis-supersonic-jet-rocket-noise-saturn.md): SATURN, an open SP-8072 replacement built on Atlas V data; about 1 dB RMSE within 20 km on Alpha and Starship.
 - [Kellison 2026](../Notes/kellison-2026-falcon-9-noise-two-campaigns.md): near-pad Falcon 9 sound power (η 0.30%), 64° directivity, SATURN validation, η saturation.
+
+- [Ikawa & Laspesa 1985](../Notes/ikawa-1985-ignition-duct-overpressure-space-shuttle-srm.md): Shuttle SRB ignition overpressure model (wall jet as shock-tube piston): N-wave IOP ∝ p̈_c, later DOP from duct exits; fits STS-1/3; mixed in 6.4% tests (synthesis pending)
+- [McInerny 1996](../Notes/mcinerny-1996-launch-vehicle-acoustics-overall-levels-spectra.md): Scout/Delta/Peacekeeper/Titan IV at 0.3–16 km: origin of the η 0.5% + 8 dB OASPL_max model (rms 4 dB); 70° launch directivity; HF falls slower than absorption (synthesis pending)
+- [Stark 2013](../Notes/stark-2013-flow-separation-rocket-nozzles-overview.md): Rocket-nozzle separation history (FSS/RSS, cap shock, side loads); 8 criteria vs a ~90-series database: turbulent p_sep/p_a ≈ 1/Ma_sep, Schmucker an upper bound (synthesis pending)

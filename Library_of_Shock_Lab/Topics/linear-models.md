@@ -171,6 +171,7 @@ For BBSAN the wavepacket multiplies the shock cells, so envelope length, radial 
 - [Nogueira 2022, PFE](../Notes/nogueira-2021-wavepacket-modulation-shock-containing-jets.md): shock harmonics lengthen the envelope (on shock-cell models).
 - [Rodríguez 2023](../Notes/rodriguez-2023-preferred-flapping-round-twin-jets.md): twin-jet KH splitting; flapping preferred.
 - [Stavropoulos 2023](../Notes/stavropoulos-2023-axisymmetric-screech-round-twin-jets-lsa.md): twin-jet vortex-sheet and Floquet A1/A2 models.
+- [Suzuki et al. 2023](../Notes/suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model.md): Compressible elliptic vortex sheet (Mathieu modes) + wavepacket/half-plane Green's function, M 0.6: ce₀ far more efficient; se₁ quieter, ce₁ louder as AR rises (synthesis pending)
 - [Ivelja 2024](../Notes/ivelja-2024-modal-analysis-screeching-elliptical-jets.md): Floquet LSA of an elliptic jet.
 - [Nogueira 2024](../Notes/nogueira-2024-guided-jet-waves.md): physics of the guided-jet wave.
 - [Stavropoulos 2024](../Notes/stavropoulos-2024-upstream-waves-merging-twin-jets.md): guided mode of merging twin jets.

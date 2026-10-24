@@ -214,6 +214,7 @@ Discussed but not tagged with this topic:
 - [Mathews et al. 2021](../Notes/mathews-2021-falcon-9-far-field-noise.md) (not tagged): Falcon 9 peak angle against Oertel M_c; κ ≈ 0.31; flight shift.
 - [Lubert et al. 2022](../Notes/lubert-2022-supersonic-jet-noise-launch-vehicles-review.md) (not tagged): rocket review; no BBSAN or screech at full scale.
 - [Nogueira et al. 2022](../Notes/nogueira-2021-wavepacket-modulation-shock-containing-jets.md) (not tagged): shock modulation of wavepackets, left out of BBSAN models.
+- [Suzuki et al. 2023](../Notes/suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model.md): Compressible elliptic vortex sheet (Mathieu modes) + wavepacket/half-plane Green's function, M 0.6: ce₀ far more efficient; se₁ quieter, ce₁ louder as AR rises (synthesis pending)
 - [Edgington-Mitchell et al. 2025](../Notes/edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance.md) (not tagged): lab upstream waves that are shocks at birth.
 - [Mathews & Gee 2025](../Notes/mathews-2025-predicting-sound-power-oaspl-heated-supersonic-jets.md) (not tagged): modified large-scale spectrum; revised Falcon 9 angle.
 - [Kellison et al. 2026](../Notes/kellison-2026-falcon-9-noise-two-campaigns.md) (not tagged): Falcon 9 directivity, Sr ≈ 0.010, crackle-laden waveforms.

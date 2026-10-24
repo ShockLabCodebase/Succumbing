@@ -107,6 +107,7 @@ A second jet breaks axisymmetry as an ellipse does and adds coupling: steady sym
 - [Edgington-Mitchell 2019](../Notes/edgington-mitchell-2019-aeroacoustic-resonance-review.md): resonance review; thick-lipped rectangular nozzles stage; locked flapping makes directivity azimuthal.
 - [Edgington-Mitchell 2022](../Notes/edgington-mitchell-2022-unifying-theory-jet-screech.md): staging in AR 2 elliptical jets; none at AR 4.
 - [Rodríguez 2023](../Notes/rodriguez-2023-preferred-flapping-round-twin-jets.md): why a second jet turns helices into flapping.
+- [Suzuki et al. 2023](../Notes/suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model.md): Compressible elliptic vortex sheet (Mathieu modes) + wavepacket/half-plane Green's function, M 0.6: ce₀ far more efficient; se₁ quieter, ce₁ louder as AR rises (synthesis pending)
 - [Ivelja 2024](../Notes/ivelja-2024-modal-analysis-screeching-elliptical-jets.md): se₁ KH and guided mode in an elliptical jet; guided-mode existence varies along x.
 - [Mazharmanesh 2025](../Notes/mazharmanesh-2025-screech-modes-non-axisymmetric-jets.md): multi-view SPOD; bi-axial flapping and quasi-helical modes.
 - [Nogueira 2025](../Notes/nogueira-2025-screech-military-style-rectangular-nozzles.md): sharp-throat AR 2 C-D jet; four coexisting tones; weakest-link LSA predicts the flapping tone.

@@ -97,6 +97,8 @@ No paper uses SPOD, wavelets or Hilbert envelopes, so intermittent features (cra
 
 ## Papers
 
+- [Ikawa & Laspesa 1985](../Notes/ikawa-1985-ignition-duct-overpressure-space-shuttle-srm.md): Shuttle SRB ignition overpressure model (wall jet as shock-tube piston): N-wave IOP ∝ p̈_c, later DOP from duct exits; fits STS-1/3; mixed in 6.4% tests (synthesis pending)
+- [McInerny 1996](../Notes/mcinerny-1996-launch-vehicle-acoustics-overall-levels-spectra.md): Scout/Delta/Peacekeeper/Titan IV at 0.3–16 km: origin of the η 0.5% + 8 dB OASPL_max model (rms 4 dB); 70° launch directivity; HF falls slower than absorption (synthesis pending)
 - [Varnier 2001](../Notes/varnier-2001-rocket-engine-freejet-noise-model.md): SP-8072 near-field fix from ONERA static rockets: core constant 3.45→1.75 with D_j, M_j; peak source ≈11D not 26D; η 0.6–0.7% size-independent; L_P tied to L_S (synthesis pending)
 - [McInerny & Ölçmen 2005](../Notes/mcinerny-2005-high-intensity-rocket-noise-nonlinear-propagation.md): Titan IV and Scout launch waveforms obey the weak-shock rise-rate law out to 15 km; propagation must carry shocks (synthesis pending).
 - [Gee 2008](../Notes/gee-2008-nonlinear-propagation-noise-high-power-jet-aircraft.md): F-22A run-ups; first full-scale demonstration of nonlinear propagation (Burgers vs linear model).

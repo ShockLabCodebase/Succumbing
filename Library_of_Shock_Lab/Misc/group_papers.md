@@ -67,7 +67,7 @@ Status checked 2026-10-23 against the notes and every folder of `Paper_PDFs/`. P
 | # | Paper | DOI | Where |
 |---|---|---|---|
 | 5 | Willert et al. 2012, *An assessment of high-power light-emitting diodes for high frame rate schlieren imaging*, Experiments in Fluids | 10.1007/s00348-012-1297-1 | `_Unprocessed/` |
-| 58 | Suzuki et al. 2023, *Analysis of Elliptical-Jet Acoustic Directivity and Efficiency Using a Vortex-Sheet-Based Wave-Packet Model*, AIAA Journal | 10.2514/1.j062541 | `_Unprocessed/` |
+| 58 | Suzuki et al. 2023, *Analysis of Elliptical-Jet Acoustic Directivity and Efficiency Using a Vortex-Sheet-Based Wave-Packet Model*, AIAA Journal | 10.2514/1.j062541 | [suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model](../Notes/suzuki-2023-elliptical-jet-directivity-efficiency-wave-packet-model.md) |
 
 ## PDF held, off-topic (in `Paper_PDFs/_Off_Topic/`, never indexed) (13)
 
