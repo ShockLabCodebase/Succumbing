@@ -5,12 +5,12 @@ authors: ["Raiola, M.", "Kriegseis, J."]
 year: 2025
 type: "preprint"
 venue: "arXiv:2507.02487"
-bib: {"note": "arXiv:2507.02487v1 [physics.flu-dyn]"}
+bib: {"note": "arXiv:2507.02487v1 [physics.flu-dyn]; published as Phys. Rev. Fluids (2026), doi:10.1103/bhlm-qwfh"}
 doi: ""
 arxiv: "2507.02487"
 pdf: "time-frequency-methods/Raiola-Kriegseis_2025_Hilbert-Proper-Orthogonal-Decomposition-A-Tool-For-Educing-Advective-Wavepackets.pdf"
 version: "preprint"
-unverified: []
+unverified: ["published version (Phys. Rev. Fluids 2026, doi 10.1103/bhlm-qwfh, title \"Hilbert proper orthogonal decomposition: A tool for educing advective wave packets from flow field data\") from Crossref, not from the held preprint PDF"]
 group: false
 facility: ""
 data: ["DNS", "LES", "PIV"]
@@ -26,7 +26,7 @@ summary: "HPOD = POD of the analytic signal; new space-only version (Hilbert in 
 # Hilbert Proper Orthogonal Decomposition: a tool for educing advective wavepackets from flow field data
 
 - **Authors:** M. Raiola (Universidad Carlos III de Madrid; KIT), J. Kriegseis (Karlsruhe Institute of Technology)
-- **Source:** arXiv:2507.02487v1 [physics.flu-dyn] (preprint, 3 Jul 2025; JFM style)
+- **Source:** arXiv:2507.02487v1 [physics.flu-dyn] (preprint, 3 Jul 2025; JFM style). Published version: Phys. Rev. Fluids (2026), "Hilbert proper orthogonal decomposition: A tool for educing advective wave packets from flow field data", doi:10.1103/bhlm-qwfh (Crossref, issued 2026-04-06; not checked against the published PDF, so this note follows the preprint)
 - **PDF:** `Library_of_Shock_Lab/Paper_PDFs/time-frequency-methods/Raiola-Kriegseis_2025_Hilbert-Proper-Orthogonal-Decomposition-A-Tool-For-Educing-Advective-Wavepackets.pdf` (30 pp.)
 - **Tags:** Hilbert POD (HPOD), analytic signal, Hilbert transform, complex POD, space-only HPOD, travelling wavepackets, instantaneous frequency and amplitude, intermittency, SPOD comparison, non-time-resolved PIV, cylinder wake DNS, turbulent jet LES, jet PIV
 

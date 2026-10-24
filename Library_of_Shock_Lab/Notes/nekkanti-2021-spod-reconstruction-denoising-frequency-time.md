@@ -12,7 +12,7 @@ pdf: "time-frequency-methods/Nekkanti-Schmidt_2021_Frequency-Time-Analysis-Low-R
 version: "preprint"
 unverified: ["JFM volume, article number and DOI from memory, not in this arXiv PDF"]
 group: false
-facility: "Charles LES (Brès & Lele 2019 database)"
+facility: "Charles LES (M 0.9 jet of Brès et al. 2018 / Schmidt et al. 2018; the paper cites Brès & Lele 2019)"
 data: ["LES"]
 methods: ["SPOD", "PSD", "spectrogram"]
 flow: ["round-jet", "subsonic"]
@@ -73,7 +73,7 @@ The paper turns SPOD from a purely analytic tool into a basis for rebuilding dat
 | Item | Value | Page |
 |---|---|---|
 | Flow | isothermal subsonic round jet, M_j = 0.4, Re = ρ_jU_jD/μ_j = 0.45 × 10⁶, T_j/T∞ = 1 | 8 |
-| Source | LES of Brès & Lele (2019), compressible unstructured finite-volume solver "Charles" ([Brès et al. 2017](bres-2017-unstructured-les-supersonic-jets.md)) | 8 |
+| Source | LES cited by the paper as Brès & Lele (2019) ([review](bres-2019-modelling-jet-noise-les-perspective.md), which documents no database of its own; the M 0.9 Charles LES is from Brès et al. 2018, JFM 851, and Schmidt et al. 2018), compressible unstructured finite-volume solver "Charles" ([Brès et al. 2017](bres-2017-unstructured-les-supersonic-jets.md)) | 8 |
 | Snapshots | n_t = 10,000 at Δt c∞/D = 0.2 | 8 |
 | Domain | interpolated to cylindrical grid, x ∈ [0, 30], r ∈ [0, 6] (D units) | 8 |
 | Variable | pressure only, azimuthal Fourier component m = 1 (complex data) | 8 |

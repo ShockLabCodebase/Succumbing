@@ -132,7 +132,7 @@ Data dependence (my comments): the method needs time-resolved images, but each b
   - Back-calculation (mine), taking h = z and c = 340 m/s and using the Fig. 8 points: u_c ≈ 270–306 m/s, i.e. 0.55–0.62 of the paper's U_j, or 0.65–0.74 of the isentropic U_j. The paper does not state its u_c, so treat this as indicative.
 - **Gain criterion** (eq. 2, p. 1):
   $$q_h\,\eta_s\,\eta_t\,\eta_d \ge 1$$
-  q_h: amplification of lip disturbances along the shear layer; η_s: efficiency of sound production at the plate; η_t: transmission efficiency back to the nozzle; η_d: efficiency of creating a flow disturbance at the lip. Both eqs must hold for a tone (Powell 1953). Not evaluated here. When several frequencies satisfy eq. 2 the jet can be multimodal (Henderson & Powell 1993); a thinner lip lowers η_d and screech intensity ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md)) (p. 2).
+  q_h: amplification of lip disturbances along the shear layer; η_s: efficiency of sound production at the plate; η_t: transmission efficiency back to the nozzle; η_d: efficiency of creating a flow disturbance at the lip. Both eqs must hold for a tone (Powell 1953). Not evaluated here. When several frequencies satisfy eq. 2 the jet can be multimodal (Henderson & Powell 1993); a thinner lip lowers η_d and screech intensity ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md), for stages A and C, not B: Norum p. 238–240) (p. 2).
 - **Strouhal number** (p. 3): Sr = f D_j/U_j with D_j = 16.88 mm, U_j = 492.3 m/s.
 
 ## Data tables

@@ -71,7 +71,7 @@ The paper explains how a shock-cell reflection inside a supersonic jet can radia
 - **Implications drawn for screech** (§5, p. 164):
   - Experiments put the strongest shock noise between the 2nd and 4th shock cells (Walker & Thomas 1997; Panda 1999). The authors explain this: leakage needs well-developed vortices, while further downstream smaller eddies destroy the organised saddle points and the tone weakens.
   - Shock fronts are far thinner than any vortical scale, so turbulence scatters them easily (Lee, Lele & Moin 1993), giving broadband shock noise instead.
-  - Disrupting the organised large-scale structure, e.g. by the streamwise vortices of tabs, slots or trailing-edge modifications ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md); Krothapalli et al. 1990; Samimy et al. 1998), should reduce shock noise. Small exit changes that alter the initial instability waves could change screech amplitude strongly.
+  - Disrupting the organised large-scale structure, e.g. by the streamwise vortices of tabs, slots or trailing-edge modifications ([Norum 1983](norum-1983-screech-suppression-supersonic-jets.md); Krothapalli et al. 1990; Samimy et al. 1998), should reduce shock noise. (This grouping is Suzuki & Lele's reading: Norum attributes his large cuts from long slots and the bevel to breaking the axisymmetric shock train, not to streamwise vortices, and his thin lip leaves the first cells unchanged; [Norum 1983](norum-1983-screech-suppression-supersonic-jets.md), p. 239.) Small exit changes that alter the initial instability waves could change screech amplitude strongly.
 
 ## Setup / method
 **Theory: weak shocks as geometrical acoustics** (§2.1, p. 142–145)
