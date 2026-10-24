@@ -12,3 +12,6 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## settles-2017-recent-developments-schlieren-shadowgraph
 - (topic revision schlieren-and-density-imaging, 2026-10-25) The note says Karami et al. 2020 built x–t diagrams from LES density; the karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets note shows velocity and pressure. Check against the Karami note and correct.
+
+## lubert-2022-supersonic-jet-noise-launch-vehicles-review
+- [PDF] (add-paper mcinerny-1996-launch-vehicle-acoustics-overall-levels-spectra, 2026-10-25) The note gives L_c 16–25 D_e (McInerny 1996a); McInerny 1996 Part 1 prints 16–20 D_e (p. 511). Check Lubert p. 13: a transcription slip, Lubert's own figure, or another McInerny paper. If it is McInerny 1996 Part 1, link [McInerny 1996](mcinerny-1996-launch-vehicle-acoustics-overall-levels-spectra.md).
