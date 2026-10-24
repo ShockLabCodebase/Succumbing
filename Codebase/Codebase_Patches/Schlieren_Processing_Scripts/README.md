@@ -15,7 +15,7 @@ A complete, runnable copy of the group's `Schlieren_Processing_Scripts` with the
 | Changed top-level scripts | All 24 top-level scripts. |
 | Changed functions | `align_fields`, `CCA_POD_func`, `correct_phase_between_halves`, `get_background`, `get_filename_params`, `get_ideal_jet_velocity_diameter`, `get_parent_path`, `get_specs`, `get_symmetry`, `get_wavenumber`, `hilbert_POD_func`, `Read_mraw`, `Read_slow`, `savgol_diff`, `separate_flow_direction_function`, `simple_POD_func`, `SPOD_imposed_projection_func`, `undo_symmetry*`, `SPOD/spod`, `SPOD/spod_adapt`, `SPOD/tcoeffs`, `SPOD/invspod`, `BMD/bmd_modified`, `BMD/bmd_modified_Symmetry`, `Misc/load_mean_field_wavenumber` |
 | Changed `Functions/Misc` scripts | `Generate_Twin_Half_Slices_POD_HPOD_Fields`, `Half_Slices_Hilbert_POD_Analysis` (rewritten), `Half_Slices_SPOD_Imposed_POD_Analysis`, `Schlieren_Hilbert_POD_Plots_Compare_Modes`, `Centreline_Comparison`, `Schlieren_Adjust_xy_Old_mat` |
-| New functions | `find_nozzle_exit` (x = 0 without a background), `hpod_from_spod_tcoeffs` (HPOD of an SPOD-isolated band), `match_folders` (folder wildcards) |
+| New functions | `find_nozzle_exit` (x = 0 without a background), `hpod_from_spod_tcoeffs` (HPOD of an SPOD-isolated band), `match_folders` (folder wildcards), `load_fields_time_major` (int16, time-first loading), `available_memory_GB` (memory budget for `max_memory_GB = "auto"`) |
 | Unchanged copies | `CMRmap`, `pogmap`, `histweighted`, `export_fig/`, `BMD/LICENSE.txt` and `README.md` |
 | Tests | `tests/` (below) |
 
@@ -32,7 +32,7 @@ Run any test from `tests/` in MATLAB (`run test_cca_pod`, etc.). Each prints its
 | `test_cca_pod` | The patched CCA (POD-subspace form) matches the original dense formulation, gives +f with `do_hilbert`, and handles ROI = 1. |
 | `test_half_slices_phase` | A known phase lag between two halves is recovered as ψ by HPOD + `correct_phase_between_halves`, even when half 2's mode carries an arbitrary phase. |
 | `test_hpod_tcoeffs` | HPOD of an SPOD band isolated with `tcoeffs` tracks a frequency-modulated tone (0.56 Hz rms against 2.80 Hz for HPOD of the raw data). |
-| `test_spod_freq_batches` | `spod` with frequency batches (`opts.freq_batches` or `opts.max_memory_GB`) and int16 input gives the same L and P as the single-batch, single-precision run. |
+| `test_spod_freq_batches` | `spod` with frequency batches (`opts.freq_batches`, `opts.max_memory_GB` as a number or `"auto"`) and int16 input gives the same L and P as the single-batch, single-precision run. |
 
 ## Behaviour changes to be aware of
 
@@ -48,6 +48,6 @@ Run any test from `tests/` in MATLAB (`run test_cca_pod`, etc.). Each prints its
   - `set_own_y_D` defaults to 0, so the nozzle-based y_D is used.
   - There is one data file per peak.
 - **`Empirical_Dispersion`:** overlap defaults to 50%.
-- **`spod` / `SPOD_Analysis`:** new `max_memory_GB` (0 = no cap) splits the frequencies into batches to stay under that budget; data stay in their stored class (int16) until each block is used. `restrict_memory` (`savefft`) still works but is not recommended (§7.5 of the review).
+- **`spod` / `SPOD_Analysis`:** new `max_memory_GB` splits the frequencies into batches to stay under a memory budget; data stay in their stored class (int16) until each block is used. It takes a number in GB, 0 (no cap, one batch) or `"auto"`, now the `SPOD_Analysis` default: 85% of what `available_memory_GB` finds (MATLAB's use + free memory, capped by the SLURM allocation or cgroup limit on MASSIVE). Results are identical however many batches are used. `restrict_memory` (`savefft`) still works but is not recommended (§7.5 of the review).
 - **Plot scripts:** each figure is closed once saved. Before, the BMD, Hilbert, POD, SPOD and time-frequency plot scripts left every figure open, and long runs piled up hundreds of windows.
 - **`BMD_Plots_Symmetry_Enforced`:** figure names drop the `Symmetry_Imposed_` prefix (the folder already says it), keeping paths under the 260-character Windows limit.

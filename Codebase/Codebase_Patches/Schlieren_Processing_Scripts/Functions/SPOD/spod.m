@@ -116,6 +116,9 @@ function [L,P,f,Lc,A] = spod(X,varargin)
 %     frequencies and only that batch is kept, so the FFT blocks take
 %     1/n_batches of the memory, with no temporary files. Results are
 %     identical to one batch. A memory estimate is printed either way.
+%     opts.max_memory_GB = "auto" sets the budget to 85% of what
+%     available_memory_GB finds (MATLAB's use + free memory, capped by the
+%     SLURM allocation or cgroup limit).
 %   - X can be an integer array (e.g. int16 as stored): blocks are converted
 %     to single as they are used, so no single-precision copy of all the
 %     data is needed. The mean is accumulated in double in chunks.
@@ -291,6 +294,23 @@ end
 Q_bytes = numel(opts.savefreqs)*nx*nSamples_all*8;
 P_bytes = nFreq*nx*opts.nsave*8;
 work_bytes = 3*nDFT*nx*8;                           % block, windowed block and its FFT
+if isfield(opts,'max_memory_GB') && (isstring(opts.max_memory_GB) || ischar(opts.max_memory_GB))
+    % "auto": 85% of the memory MATLAB can reach (its use + what is free,
+    % capped by the SLURM allocation / cgroup limit); the rest is headroom
+    % for MATLAB itself and the caller's other variables
+    if ~strcmpi(opts.max_memory_GB,'auto')
+        error('spod: opts.max_memory_GB must be a number (GB) or "auto".');
+    end
+    [mem_total, mem_info] = available_memory_GB();
+    if isnan(mem_total)
+        warning('spod: could not read the available memory; using one frequency batch.');
+        opts.max_memory_GB = 0;
+    else
+        opts.max_memory_GB = 0.85*mem_total;
+        fprintf('Memory budget (auto): %.1f GB = 85%% of %.1f GB (%s)\n', ...
+            opts.max_memory_GB, mem_total, mem_info.source);
+    end
+end
 if opts.savefft
     n_batches = 1;
 elseif isfield(opts,'freq_batches') && ~isempty(opts.freq_batches) && opts.freq_batches > 1
@@ -325,7 +345,11 @@ else
 end
 disp('------------------------------------')
 if ~opts.savefft
-    Q_hat = complex(zeros(n_bf,nx,nSamples_all,'single'));
+    % Free the previous batch's FFT blocks first: assigning the new array
+    % straight over Q_hat holds both for a moment (2 batches' worth). The
+    % 'like' form allocates the complex array directly, without a real copy.
+    clear Q_hat
+    Q_hat = zeros(n_bf,nx,nSamples_all,'like',complex(single(0)));
 end
 Q_blk       = zeros(nDFT,nx,'single');
 for iBlk    = 1:nBlks

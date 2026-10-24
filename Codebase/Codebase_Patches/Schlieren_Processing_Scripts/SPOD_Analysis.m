@@ -80,8 +80,10 @@ St_des = [0.25,0.29];    % Target Strouhal numbers (if set_frequencies=true)
 % FFT blocks don't fit, spod splits the frequencies into batches and recomputes the
 % block FFTs for each batch: no temporary files, same result, one extra pass over the
 % data per batch. 0 = no cap (one batch). A memory estimate is printed either way.
-% e.g. a 1.4 TB MASSIVE desktop: max_memory_GB = 1200 (leave room for MATLAB itself)
-max_memory_GB = 0;
+% "auto" = 85% of what this MATLAB can reach (its own use + free memory, capped by
+% the SLURM allocation on MASSIVE); it only batches when one batch wouldn't fit.
+% Or a number in GB, e.g. max_memory_GB = 1200 on a 1.4 TB MASSIVE desktop.
+max_memory_GB = "auto";
 
 % Older low-memory route (temporary FFT files on disk). It writes the FFT blocks of the
 % whole record (~2x the single-precision data) plus one file per frequency, and re-reads

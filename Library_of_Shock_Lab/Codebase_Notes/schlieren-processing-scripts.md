@@ -161,7 +161,7 @@ Fix in a copy here, never in the repo; tell the user so they can fix upstream.
 - **`correct_phase_between_halves`** uses +θ, which is right only with the old conjugated HPOD modes.
 - **`align_fields` "none"** discards `y_0`. The patch keeps it.
 - **`opts.savefft` / `restrict_memory`** writes about 2× the data to disk plus one file per frequency (never deleted) and re-reads every block file per frequency (100× slower on a small test).
-  - The patch adds frequency batches (`max_memory_GB`) and int16 loading instead. The 400k-frame SPOD on M3 peaked at 501 GB; it is expected to need about 175 GB with 4 batches.
+  - The patch adds frequency batches (`max_memory_GB`: a number in GB or `"auto"`, the default, from `available_memory_GB`) and int16 loading instead. The 400k-frame SPOD on M3 went from 501 GB to 416 GB (1 batch), 177 GB (4) and 138 GB (8), with identical results; 8 batches take 1.7× as long.
 - **New in the patched copy:**
   - `find_nozzle_exit` (x = 0 without a background; `axial_method = "lip"`);
   - `hpod_from_spod_tcoeffs` (`data_source = "spod_tcoeffs"` in Hilbert_POD_Analysis);
