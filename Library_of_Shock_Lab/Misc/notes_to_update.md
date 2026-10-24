@@ -15,3 +15,6 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## lubert-2022-supersonic-jet-noise-launch-vehicles-review
 - [PDF] (add-paper mcinerny-1996-launch-vehicle-acoustics-overall-levels-spectra, 2026-10-25) The note gives L_c 16–25 D_e (McInerny 1996a); McInerny 1996 Part 1 prints 16–20 D_e (p. 511). Check Lubert p. 13: a transcription slip, Lubert's own figure, or another McInerny paper. If it is McInerny 1996 Part 1, link [McInerny 1996](mcinerny-1996-launch-vehicle-acoustics-overall-levels-spectra.md).
+
+## reichman-2018-qm2-srm-far-field-acoustics
+- [PDF] (topic revision rocket-noise-measurements, 2026-10-25) This note gives the derivative-skewness shock threshold as Sk{∂p/∂t} ≥ 5; the langenais-2019-hot-supersonic-jet-noise-simulation-nonlinear-propagation note gives > 1.5. Both cite Reichman et al. 2016. Check both PDFs and record which threshold means what (e.g. "significant shocks" against "shock presence").
