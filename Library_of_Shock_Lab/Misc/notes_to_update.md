@@ -9,3 +9,6 @@ One section per note, headed `## <note key>`. Each item is one bullet: `- (<sour
 
 ## shehzad-2021-laser-sheet-alignment-piv
 - [PDF] (add-paper wieneke-2005-stereo-piv-self-calibration-particle-images, 2026-10-25) Key findings attribute to Wieneke 2005 "a 20 px Z offset with a 5% velocity gradient gives 5% error in the 3C displacement". Wieneke (p. 269) gives a 1 px change in displacement, not a percentage; check Shehzad p. 3 and reword or link the Wieneke note.
+
+## settles-2017-recent-developments-schlieren-shadowgraph
+- (topic revision schlieren-and-density-imaging, 2026-10-25) The note says Karami et al. 2020 built x–t diagrams from LES density; the karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets note shows velocity and pressure. Check against the Karami note and correct.
