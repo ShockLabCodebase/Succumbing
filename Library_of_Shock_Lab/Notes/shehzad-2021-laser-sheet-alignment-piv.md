@@ -20,7 +20,7 @@ phenomena: []
 params: {}
 topics: ["diagnostics-and-facilities"]
 related: ["sun-2021-distortion-correction-large-sensor-piv", "davey-2025-hpod-sphere-wake", "ragni-2011-particle-tracer-response-shocks-piv", "willert-1997-stereoscopic-dpiv-wind-tunnel-flows", "soloff-1997-distortion-compensation-generalized-stereoscopic-piv"]
-cites: ["prasad-2000-stereoscopic-piv-review", "soloff-1997-distortion-compensation-generalized-stereoscopic-piv", "willert-1997-stereoscopic-dpiv-wind-tunnel-flows"]
+cites: ["prasad-2000-stereoscopic-piv-review", "soloff-1997-distortion-compensation-generalized-stereoscopic-piv", "wieneke-2005-stereo-piv-self-calibration-particle-images", "willert-1997-stereoscopic-dpiv-wind-tunnel-flows"]
 summary: "Aligns the laser sheet to the calibration target before calibrating (slit + three photodetectors), removing the need for self-calibration; SPIV uncertainty < 5.9 µm (0.09 px)"
 ---
 # On assuring the accurate parallel alignment of a laser sheet for planar and stereoscopic particle image velocimetry

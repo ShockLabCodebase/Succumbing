@@ -20,7 +20,7 @@ phenomena: ["jet-merging"]
 params: {"orifice": "2 × 0.22 mm (twin), 0.33 mm (single)", "propellant": "HFA-134a + 15% w/w ethanol", "f_s": "5 kHz"}
 topics: ["schlieren-and-density-imaging"]
 related: ["nogueira-2021-twin-jet-coupling-spatial-lsa", "esfahani-2021-coupling-modes-twin-rectangular-jets", "edgington-mitchell-2018-upstream-acoustic-modes-screech-closure", "tan-2015-bos-density-axisymmetric-jets"]
-cites: []
+cites: ["willert-2012-high-power-led-high-frame-rate-schlieren"]
 summary: "Twin 0.22 mm pMDI orifices raise FPF 75% over a 0.33 mm Bespak; 5 kHz extinction imaging shows one merged plume; half-velocity distance x_1/2 predicts FPF (R² 0.997)"
 ---
 # Increasing the fine particle fraction of pressurised metered dose inhaler solutions with novel actuator shapes

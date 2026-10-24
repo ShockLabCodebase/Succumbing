@@ -20,7 +20,7 @@ phenomena: []
 params: {"NPR": "2–4", "Re": "230; 6000–9000", "D": "20 mm; 0.5 mm", "gas": "helium"}
 topics: ["schlieren-and-density-imaging"]
 related: ["raffel-2015-background-oriented-schlieren-review", "molnar-2023-physics-informed-bos-supersonic", "edgington-mitchell-2020-waves-in-screeching-jets", "edgington-mitchell-2023-screeching-jet-seen-from-all-sides"]
-cites: []
+cites: ["willert-2012-high-power-led-high-frame-rate-schlieren"]
 summary: "Single-camera BOS → adaptive Fourier–Hankel Abel inversion → Gladstone–Dale mean density; average before inverting; synthetic error maps; He jets 4–9% error"
 ---
 # Measurement of density in axisymmetric jets using a novel background-oriented schlieren (BOS) technique

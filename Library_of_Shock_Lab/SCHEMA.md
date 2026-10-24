@@ -209,6 +209,7 @@ Use these values only. To add a value, add it here first (with a one-line meanin
 - `numerics`: development of a numerical scheme or solver
 - `facility-design`
 - `calibration`: optical alignment, distortion correction, tracer response
+- `PIV-processing`: PIV/PTV interrogation algorithms (image cross-correlation, sub-pixel peak fitting, window offset or deformation, vector validation) and their error assessment
 - `optical-modelling`: synthetic schlieren / BOS images, light-ray tracing, numerical schlieren from CFD
 - `feature-tracking`: edge detection or fitting of shocks, fronts or interfaces in images, giving position time series
 - `vortex-identification`: vortex detection and tracking (swirling strength λ_ci, Q, Γ criteria)

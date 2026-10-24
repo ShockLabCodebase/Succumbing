@@ -20,7 +20,7 @@ phenomena: ["shock-diffraction"]
 params: {"M_s": "1.61", "D": "8.5 mm", "width ratio": "1, 2, 4"}
 topics: ["simulation-methods"]
 related: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "thethy-2022-shock-diffraction-non-quiescent-medium", "greenshields-2010-central-schemes-polyhedral-fv"]
-cites: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet"]
+cites: ["rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "willert-2012-high-power-led-high-frame-rate-schlieren"]
 summary: "M_s 1.61 shock split by a two-branch duct (width ratio 1/2/4): 2D cut-cell Euler and GSD vs 210 kHz schlieren; separation 0.53→1.37 D at a 5–20% total-pressure loss"
 ---
 # Numerical and experimental evaluation of shock dividers

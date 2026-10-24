@@ -19,8 +19,8 @@ flow: ["generic", "round-jet", "subsonic", "impinging-jet", "supersonic", "shock
 phenomena: ["shock-waves", "shock-cells"]
 params: {"cameras": "CMOS ≤ 20 kfps at 1 Mpx, ≥ 1 Mfps segmented; 5–10 Mfps for 100–few hundred frames", "LED pulse": "down to ~100 ns", "BOS dots": "2–5 px", "velocimetry example": "propane jet d 0.75 mm, U_j 54.8 m/s, Re_d 7460, 3000 fps, Δt 1 ms"}
 topics: ["schlieren-and-density-imaging", "diagnostics-and-facilities"]
-related: ["raffel-2015-background-oriented-schlieren-review", "tan-2015-bos-density-axisymmetric-jets", "molnar-2023-physics-informed-bos-supersonic", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets", "powis-2016-impingement-tones-shock-instabilities-plug-nozzle", "rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "johnston-2016-underexpanded-jet-intrusive-tab-visualisation", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech"]
-cites: ["raffel-2015-background-oriented-schlieren-review"]
+related: ["raffel-2015-background-oriented-schlieren-review", "tan-2015-bos-density-axisymmetric-jets", "molnar-2023-physics-informed-bos-supersonic", "knast-2018-coupling-modes-underexpanded-twin-axisymmetric-jet", "karami-2020-acoustic-hydrodynamic-waves-underexpanded-impinging-jets", "powis-2016-impingement-tones-shock-instabilities-plug-nozzle", "rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet", "edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance", "mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren", "johnston-2016-underexpanded-jet-intrusive-tab-visualisation", "mercier-2017-screech-feedback-loop-underexpanded-round-jets", "berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet", "mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech", "willert-2012-high-power-led-high-frame-rate-schlieren"]
+cites: ["raffel-2015-background-oriented-schlieren-review", "willert-2012-high-power-led-high-frame-rate-schlieren"]
 summary: "Schlieren/shadowgraph since 2001: CMOS cameras, ≤100 ns LEDs, BOS practice, digital x–t streaks, path-biased schlieren velocimetry, calibrated and CFD schlieren"
 ---
 # A review of recent developments in schlieren and shadowgraph techniques
@@ -189,7 +189,7 @@ TR schlieren is the lab's main diagnostic (CLAUDE.md), and this review is the st
 - **Light source.** The group's TR-schlieren rigs use overdriven, pulsed Luminus/Phlatlight CBT-120 LEDs:
   - [Mitchell et al. 2012](mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md), [Johnston & Edgington-Mitchell 2016](johnston-2016-underexpanded-jet-intrusive-tab-visualisation.md) and [Berry et al. 2017](berry-2017-pod-time-resolved-schlieren-multi-stream-rectangular-jet.md) name the LED;
   - pulses of 0.5–1 µs are used in [Mazharmanesh et al. 2026](mazharmanesh-2026-triadic-interaction-mean-flow-deformation-screech.md) and [Rezay Haghdoost et al. 2020](rezay-haghdoost-2020-transient-supersonic-trailing-jet-shocklet.md).
-  - The review's ref. 18, which assesses exactly this LED for high-frame-rate schlieren, is the group's own Willert, Mitchell & Soria 2012 (Exp. Fluids 53; PDF held, not yet indexed).
+  - The review's ref. 18, which assesses exactly this LED for high-frame-rate schlieren, is the group's own [Willert, Mitchell & Soria 2012](willert-2012-high-power-led-high-frame-rate-schlieren.md) (Exp. Fluids 53).
   - The review confirms the choice: suitable for schlieren, too large for shadowgraphy (p. 5), and pulses to about 100 ns are possible (p. 5).
 - **Shadowgraph from a schlieren rig.** The rule that a shadowgram needs the knife edge removed *and* the camera defocused (p. 3) is what [Edgington-Mitchell et al. 2025](edgington-mitchell-2025-vortices-shocks-nonlinear-waves-impinging-jet-resonance.md) did (p. 7). The review adds that the shadowgram resolves vortex cores and shocks better (p. 17, 19).
 - **Digital streak (x–t) images** are already a group tool:
@@ -226,7 +226,7 @@ TR schlieren is the lab's main diagnostic (CLAUDE.md), and this review is the st
 
 **Related works cited, candidates for `/add-paper`:**
 - Settles 2001 (*Schlieren and Shadowgraph Techniques*, Springer, the base reference).
-- Willert, Mitchell & Soria 2012 (Exp. Fluids 53, 413–421; group LED paper; PDF held, not yet indexed); Willert et al. 2010 (MST 21, 075402).
+- Willert, Mitchell & Soria 2012 (Exp. Fluids 53, 413–421; group LED paper; now [indexed](willert-2012-high-power-led-high-frame-rate-schlieren.md)); Willert et al. 2010 (MST 21, 075402).
 - Jonassen, Settles & Tronosky 2006 (Opt. Lasers Eng. 44, schlieren "PIV"); Hargather et al. 2011 (AIAA J 49, seedless schlieren velocimetry); Hargather & Settles 2012 (Opt. Lasers Eng. 50, three quantitative schlieren techniques).
 - Thurow et al. 2008 (Phys. Fluids 20, 066101, convective velocity of large structures); Doty & McLaughlin 2005 (Exp. Fluids 38, space–time correlations of high-speed jets by optical deflectometry); Garg & Settles 1998 and Garg & Cattafesta 2001 (focusing / quantitative schlieren of coherent structures).
 - Dauptain, Cuenot & Gicquel 2010 (AIAA J 48, LES of an impinging supersonic jet); Hadjadj & Kudryavtsev 2005 (J. Turbul. 6); Yates 1993 (AIAA J 31, images from computed flowfields).

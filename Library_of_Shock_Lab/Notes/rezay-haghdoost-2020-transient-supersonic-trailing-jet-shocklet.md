@@ -20,7 +20,7 @@ phenomena: ["Mach-disk", "shock-leakage", "shock-diffraction", "shocklet"]
 params: {"M_s": "1.71–2.15", "D": "30 mm"}
 topics: ["simulation-methods"]
 related: ["rezay-haghdoost-2022-shock-dividers", "thethy-2022-shock-diffraction-non-quiescent-medium", "edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "weightman-2019-sound-production-impinging-supersonic-jets", "edgington-mitchell-2022-unifying-theory-jet-screech"]
-cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2019-aeroacoustic-resonance-review"]
+cites: ["edgington-mitchell-2014-underexpanded-jet-mach-disk-shear-layer", "edgington-mitchell-2019-aeroacoustic-resonance-review", "willert-2012-high-power-led-high-frame-rate-schlieren"]
 summary: "Shock-tube starting jet, M_s 1.71–2.15: TR schlieren and cut-cell Euler show a second triple point and shocklet, set by reflected-shock rotation (transient oblique-shock model)"
 ---
 # Dynamic evolution of a transient supersonic trailing jet induced by a strong incident shock wave

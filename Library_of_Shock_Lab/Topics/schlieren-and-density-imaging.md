@@ -175,6 +175,7 @@ Which imaging suits which analysis, following the CLAUDE.md workflow:
 - [Samimy et al. 1998](../Notes/samimy-1998-rectangular-jet-trailing-edge-control.md): condensation imaging, per-nozzle normalisation (not tagged).
 - [Henderson et al. 2002](../Notes/henderson-2002-flow-structure-supersonic-impinging-jets.md): phase-locked spark shadowgraph (not tagged).
 - [Mitchell et al. 2012](../Notes/mitchell-2012-visualization-acoustic-feedback-loop-impinging-jet-schlieren.md): the group's first ultra-high-speed (Shimadzu HPV-1) schlieren; line-profile normalisation resolves λ ≈ 0.05d lip disturbances (synthesis pending).
+- [Willert et al. 2012](../Notes/willert-2012-high-power-led-high-frame-rate-schlieren.md): Overdriven pulsed CBT-120 LED (≥120 A, 0.5–2 µs) as schlieren source: 102-frame MHz bursts of NPR 5.2 impinging jet; 1 kHz two-point correlations at NPR 2.93 (synthesis pending)
 - [Raffel 2015](../Notes/raffel-2015-background-oriented-schlieren-review.md): BOS review; recipe, accuracy, reconstruction routes, TR BOS.
 - [Tan et al. 2015](../Notes/tan-2015-bos-density-axisymmetric-jets.md): group BOS → Abel → mean density recipe with synthetic error map.
 - [Mason-Smith et al. 2015](../Notes/mason-smith-2015-underexpanded-jet-impinging-cylindrical-sections.md): high-speed schlieren of impingement on curved surfaces; views along and across the cylinder axis (synthesis pending).
